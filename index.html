@@ -1,58 +1,36 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Awesome empty page</title>
-</head>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/base.css">
+    <title>Bloodytrinkets</title>
+    <script type="text/javascript">
+      var state = 1;
+      function switch_chart() {
+        state = state + 1;
+        if (state > 2) {
+          state = 1;
+        }
+        var container = document.getElementsByClassName("container");
+        for (var i = container.length - 1; i >= 0; i--) {
+          if (container[i].style.display === 'none') {
+            container[i].style.display = 'block';
+          } else {
+            container[i].style.display = 'none';
+          }
+        }
+      }
+    </script>
+  </head>
 <body>
-Be amazed!
-<div id="container"></div>
+<h1></h1>
+
+<button onclick="switch_chart()">Switch chart</button>
+<div class="container" id="container1" ></div>
+<div class="container" id="container2" style="display: none;" ></div>
 <script src="https://code.highcharts.com/highcharts.js"></script>
-<script type="text/javascript">
-  Highcharts.chart('container', {
-
-    title: {
-        text: 'Solar Employment Growth by Sector, 2010-2016'
-    },
-
-    subtitle: {
-        text: 'Source: thesolarfoundation.com'
-    },
-
-    yAxis: {
-        title: {
-            text: 'Number of Employees'
-        }
-    },
-    legend: {
-        layout: 'vertical',
-        align: 'right',
-        verticalAlign: 'middle'
-    },
-
-    plotOptions: {
-        series: {
-            pointStart: 2010
-        }
-    },
-
-    series: [{
-        name: 'Installation',
-        data: [43934, 52503, 57177, 69658, 97031, 119931, 137133, 154175]
-    }, {
-        name: 'Manufacturing',
-        data: [24916, 24064, 29742, 29851, 32490, 30282, 38121, 40434]
-    }, {
-        name: 'Sales & Distribution',
-        data: [11744, 17722, 16005, 19771, 20185, 24377, 32147, 39387]
-    }, {
-        name: 'Project Development',
-        data: [null, null, 7988, 12169, 15112, 22452, 34400, 34227]
-    }, {
-        name: 'Other',
-        data: [12908, 5948, 8105, 11248, 8989, 11816, 18274, 18111]
-    }]
-
-  });
-</script>
+<script src="./js/container1.js"></script>
+<script src="./js/container2.js"></script>
 </body>
 </html>
