@@ -84,6 +84,7 @@ nav ul {
   background-color: #343434;
   text-align: center;
   -webkit-padding-start: 0px;
+  margin-top:0px;
 }
 
 nav li {
@@ -115,4 +116,142 @@ nav a:hover, nav span:hover {
 
 form {
   margin-top: 15px;
+}
+
+.div-table {
+  display: table;
+  margin: 0 auto;
+}
+
+.div-row {
+  display: table-row;
+}
+
+.div-cell {
+  display: table-cell;
+}
+
+.btn-group button {
+    padding: 10px 24px; /* Some padding */
+    cursor: pointer; /* Pointer/hand icon */
+    width: 100%; /* Set a width if needed */
+    display: block; /* Make the buttons appear below each other */
+}
+
+.btn-group button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+    background-color: #3e8e41;
+}
+
+
+.dk button {
+  color: white;
+  border: 1px solid red;
+  background-color: #C41F3B;
+}
+.dk button:hover {
+  background-color: #9C132a;
+}
+
+.dh button {
+  color: white;
+  border: 1px solid darkmagenta;
+  background-color: #A330C9;
+}
+.dh button:hover {
+  background-color: #731c90;
+}
+
+.druid button {
+  color: white;
+  border: 1px solid darkorange;
+  background-color: #FF7D0A;
+}
+.druid button:hover {
+  background-color: #D66400;
+}
+
+.hunter button {
+  color: black;
+  border: 1px solid #799a4c;
+  background-color: #ABD473;
+}
+.hunter button:hover {
+  background-color: #799a4c;
+}
+
+.mage button {
+  color: black;
+  border: 1px solid lightblue;
+  background-color: #69CCF0;
+}
+.mage button:hover {
+  background-color: #56c6d4;
+}
+
+.monk button {
+  color: black;
+  border: 1px solid turquoise;
+  background-color: #00FF96;
+}
+.monk button:hover {
+  background-color: #03ce7a;
+}
+
+.paladin button {
+  color: black;
+  border: 1px solid pink;
+  background-color: #F58CBA;
+}
+.paladin button:hover {
+  background-color: #d878a2;
+}
+
+.priest button {
+  color:black;
+  border: 1px solid black;
+  background-color: #ffffff;
+}
+.priest button:hover {
+  background-color: #cccccc;
+}
+
+.rogue button {
+  color: black;
+  border: 1px solid yellow;
+  background-color: #FFF569;
+}
+.rogue button:hover {
+  background-color: #d6cc52;
+}
+
+.shaman button {
+  color: white;
+  border: 1px solid blue;
+  background-color: #0070DE;
+}
+.shaman button:hover {
+  background-color: #1744d0;
+}
+
+.warlock button {
+  color: white;
+  border: 1px solid #7463a9;
+  background-color: #9482C9;
+}
+.warlock button:hover {
+  background-color: #7463a9;
+}
+
+.warrior button {
+  color: white;
+  border: 1px solid tan;
+  background-color: #C79C6E;
+}
+.warrior button:hover {
+  background-color: #ad8862;
 }

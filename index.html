@@ -1,20 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" >
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/base.css">
     <title>Bloodytrinkets</title>
     <script type="text/javascript">
-      var state = 1;
-      function switch_chart() {
-        state = state + 1;
-        if (state > 2) {
-          state = 1;
-        }
+      function switch_chart_to(spec) {
         var container = document.getElementsByClassName("container");
         for (var i = container.length - 1; i >= 0; i--) {
-          if (container[i].style.display === 'none') {
+          if (container[i].id === spec) {
             container[i].style.display = 'block';
           } else {
             container[i].style.display = 'none';
@@ -23,14 +18,150 @@
       }
     </script>
   </head>
-<body>
-<h1></h1>
+  <body>
+  <nav>
+    <ul>
+      <li><a href="./">Bloodmallet</a></li>
+    </ul>
+  </nav>
 
-<button onclick="switch_chart()">Switch chart</button>
-<div class="container" id="container1" ></div>
-<div class="container" id="container2" style="display: none;" ></div>
-<script src="https://code.highcharts.com/highcharts.js"></script>
-<script src="./js/container1.js"></script>
-<script src="./js/container2.js"></script>
-</body>
+
+    <h1>Stacked trinket charts</h1>
+
+    <p>Please notice that these values are all generated using the highest (read: difficulty level) available <a href="http://www.simulationcraft.org/">SimulationCraft</a> profiles. Each trinket was simulated without a second one. Furthermore all limitations applying to SimulationCraft apply to these graphs as well. Your own equipment, legendaries and talents quite quite possibly would change these graphs. Therefore: directly simming different trinkets directly against each other is the best way to be sure. The easiest way to do so is by heading to <a href="https://www.raidbots.com/simbot">RAIDBOTS</a> which uses SimulationCraft for you. Try it out.</p>
+
+    <div class="div-table">
+      <div class="div-row">
+        <div class="div-cell">
+          <div class="btn-group dk">
+            <button onclick="switch_chart_to('death_knight_frost')">death_knight_frost</button>
+            <button onclick="switch_chart_to('death_knight_unholy')">death_knight_unholy</button>
+          </div>
+        </div>
+        <div class="div-cell">
+          <div class="btn-group dh">
+            <button onclick="switch_chart_to('deamon_hunter_havoc')">deamon_hunter_havoc</button>
+          </div>
+        </div>
+        <div class="div-cell">
+          <div class="btn-group druid">
+            <button onclick="switch_chart_to('druid_balance')">druid_balance</button>
+            <button onclick="switch_chart_to('druid_feral')">druid_feral</button>
+          </div>
+        </div>
+      </div>
+      <div class="div-row">
+        <div class="div-cell">
+          <div class="btn-group hunter">
+            <button onclick="switch_chart_to('hunter_beast_master')">hunter_beast_master</button>
+            <button onclick="switch_chart_to('hunter_marksmanship')">hunter_marksmanship</button>
+            <button onclick="switch_chart_to('hunter_survival')">hunter_survival</button>
+          </div>
+        </div>
+        <div class="div-cell">
+          <div class="btn-group mage">
+            <button onclick="switch_chart_to('mage_arcane')">mage_arcane</button>
+            <button onclick="switch_chart_to('mage_fire')">mage_fire</button>
+            <button onclick="switch_chart_to('mage_frost')">mage_frost</button>
+          </div>
+        </div>
+        <div class="div-cell">
+          <div class="btn-group monk">
+            <button onclick="switch_chart_to('monk_windwalker')">monk_windwalker</button>
+          </div>
+        </div>
+      </div>
+      <div class="div-row">
+        <div class="div-cell">
+          <div class="btn-group paladin">
+            <button onclick="switch_chart_to('paladin_retribution')">paladin_retribution</button>
+          </div>
+        </div>
+        <div class="div-cell">
+          <div class="btn-group priest">
+            <button onclick="switch_chart_to('priest_shadow')">priest_shadow</button>
+          </div>
+        </div>
+        <div class="div-cell">
+          <div class="btn-group rogue">
+            <button onclick="switch_chart_to('rogue_assassination')">rogue_assassination</button>
+            <button onclick="switch_chart_to('rogue_outlaw')">rogue_outlaw</button>
+            <button onclick="switch_chart_to('rogue_subtlety')">rogue_subtlety</button>
+          </div>
+        </div>
+      </div>
+      <div class="div-row">
+        <div class="div-cell">
+          <div class="btn-group shaman">
+            <button onclick="switch_chart_to('shaman_elemental')">shaman_elemental</button>
+            <button onclick="switch_chart_to('shaman_enhancement')">shaman_enhancement</button>
+          </div>
+        </div>
+        <div class="div-cell">
+          <div class="btn-group warlock">
+            <button onclick="switch_chart_to('warlock_affliction')">warlock_affliction</button>
+            <button onclick="switch_chart_to('warlock_demonology')">warlock_demonology</button>
+            <button onclick="switch_chart_to('warlock_destruction')">warlock_destruction</button>
+          </div>
+        </div>
+        <div class="div-cell">
+          <div class="btn-group warrior">
+            <button onclick="switch_chart_to('warrior_arms')">warrior_arms</button>
+            <button onclick="switch_chart_to('warrior_fury')">warrior_fury</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container" id="death_knight_frost" style="display: none;" ></div>
+    <div class="container" id="death_knight_unholy" style="display: none;" ></div>
+    <div class="container" id="deamon_hunter_havoc" style="display: none;" ></div>
+    <div class="container" id="druid_balance" style="display: none;" ></div>
+    <div class="container" id="druid_feral" style="display: none;" ></div>
+    <div class="container" id="hunter_beast_master" style="display: none;" ></div>
+    <div class="container" id="hunter_marksmanship" style="display: none;" ></div>
+    <div class="container" id="hunter_survival" style="display: none;" ></div>
+    <div class="container" id="mage_arcane" style="display: none;" ></div>
+    <div class="container" id="mage_fire" style="display: none;" ></div>
+    <div class="container" id="mage_frost" style="display: none;" ></div>
+    <div class="container" id="monk_windwalker" style="display: none;" ></div>
+    <div class="container" id="paladin_retribution" style="display: none;" ></div>
+    <div class="container" id="priest_shadow" style="display: none;" ></div>
+    <div class="container" id="rogue_assassination" style="display: none;" ></div>
+    <div class="container" id="rogue_outlaw" style="display: none;" ></div>
+    <div class="container" id="rogue_subtlety" style="display: none;" ></div>
+    <div class="container" id="shaman_elemental" style="display: none;" ></div>
+    <div class="container" id="shaman_enhancement" style="display: none;" ></div>
+    <div class="container" id="warlock_affliction" style="display: none;" ></div>
+    <div class="container" id="warlock_demonology" style="display: none;" ></div>
+    <div class="container" id="warlock_destruction" style="display: none;" ></div>
+    <div class="container" id="warrior_arms" style="display: none;" ></div>
+    <div class="container" id="warrior_fury" style="display: none;" ></div>
+
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="./js/death_knight_frost.js"></script>
+    <script src="./js/death_knight_unholy.js"></script>
+    <script src="./js/deamon_hunter_havoc.js"></script>
+    <script src="./js/druid_balance.js"></script>
+    <script src="./js/druid_feral.js"></script>
+    <script src="./js/hunter_beast_master.js"></script>
+    <script src="./js/hunter_marksmanship.js"></script>
+    <script src="./js/hunter_survival.js"></script>
+    <script src="./js/mage_arcane.js"></script>
+    <script src="./js/mage_fire.js"></script>
+    <script src="./js/mage_frost.js"></script>
+    <script src="./js/monk_windwalker.js"></script>
+    <script src="./js/paladin_retribution.js"></script>
+    <script src="./js/priest_shadow.js"></script>
+    <script src="./js/rogue_assassination.js"></script>
+    <script src="./js/rogue_outlaw.js"></script>
+    <script src="./js/rogue_subtlety.js"></script>
+    <script src="./js/shaman_elemental.js"></script>
+    <script src="./js/shaman_enhancement.js"></script>
+    <script src="./js/warlock_affliction.js"></script>
+    <script src="./js/warlock_demonology.js"></script>
+    <script src="./js/warlock_destruction.js"></script>
+    <script src="./js/warrior_arms.js"></script>
+    <script src="./js/warrior_fury.js"></script>
+  </body>
 </html>
