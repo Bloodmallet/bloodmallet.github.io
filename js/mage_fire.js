@@ -3,7 +3,7 @@ Highcharts.chart('mage_fire', {
             type: 'bar'
         },
         title: {
-            text: 'Mage Fire'
+            text: 'Mage - Fire - Patchwerk'
         },
         subtitle: {
             text: 'Last generated: 2017-07-19 11:51:29.787249'

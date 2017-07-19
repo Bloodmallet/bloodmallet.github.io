@@ -33,8 +33,11 @@ h1 {
   text-align: center;
 }
 
-h2 {
+h3 {
   margin-top: 50px;
+  text-align: center;
+  font-weight: 275;
+  font-size: 32px;
 }
 
 .text-center {
@@ -53,6 +56,9 @@ p {
 
 ul li {
   font-weight: 200;
+}
+ul.sim-settings {
+  margin-left: 10%;
 }
 
 a {

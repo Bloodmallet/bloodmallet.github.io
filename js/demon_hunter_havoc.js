@@ -3,7 +3,7 @@ Highcharts.chart('demon_hunter_havoc', {
             type: 'bar'
         },
         title: {
-            text: 'Demon Hunter Havoc'
+            text: 'Demon Hunter - Havoc - Patchwerk'
         },
         subtitle: {
             text: 'Last generated: 2017-07-19 10:14:21.777490'

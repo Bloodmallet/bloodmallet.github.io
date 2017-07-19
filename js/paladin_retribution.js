@@ -3,7 +3,7 @@ Highcharts.chart('paladin_retribution', {
             type: 'bar'
         },
         title: {
-            text: 'Paladin Retribution'
+            text: 'Paladin - Retribution - Patchwerk'
         },
         subtitle: {
             text: 'Last generated: 2017-07-19 14:37:49.985412'

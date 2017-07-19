@@ -3,7 +3,7 @@ Highcharts.chart('priest_shadow', {
             type: 'bar'
         },
         title: {
-            text: 'Priest Shadow'
+            text: 'Priest - Shadow - Patchwerk'
         },
         subtitle: {
             text: 'Last generated: 2017-07-19 14:49:19.039451'

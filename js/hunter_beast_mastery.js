@@ -3,7 +3,7 @@ Highcharts.chart('hunter_beast_mastery', {
             type: 'bar'
         },
         title: {
-            text: 'Hunter Beast Mastery'
+            text: 'Hunter - Beast Mastery - Patchwerk'
         },
         subtitle: {
             text: 'Last generated: 2017-07-19 11:04:34.303930'

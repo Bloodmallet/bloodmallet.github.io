@@ -3,7 +3,7 @@ Highcharts.chart('monk_windwalker', {
             type: 'bar'
         },
         title: {
-            text: 'Monk Windwalker'
+            text: 'Monk - Windwalker - Patchwerk'
         },
         subtitle: {
             text: 'Last generated: 2017-07-19 14:27:35.482411'

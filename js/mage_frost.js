@@ -3,7 +3,7 @@ Highcharts.chart('mage_frost', {
             type: 'bar'
         },
         title: {
-            text: 'Mage Frost'
+            text: 'Mage - Frost - Patchwerk'
         },
         subtitle: {
             text: 'Last generated: 2017-07-19 14:03:48.299491'

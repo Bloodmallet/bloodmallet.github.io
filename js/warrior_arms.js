@@ -1,12 +1,15 @@
-    Highcharts.chart('warrior_arms', {
+Highcharts.chart('warrior_arms', {
         chart: {
             type: 'bar'
         },
         title: {
-            text: 'Arms T20M Trinket Sims 7.2.5'
+            text: 'Warrior - Arms - Patchwerk'
+        },
+        subtitle: {
+            text: 'Last generated: 2017-07-19 18:29:46.484776'
         },
         xAxis: {
-      categories: ["Kil'jaeden's Burning Wish","Unstable Arcano Crystal","Cradle of Anguish","Engine of Eradication","PVP Badge of Victory","Chaos Talisman","Stat Stick (Mastery)","Gift of Radiance","Eye of Command","The Devilsaur's Bite","Stat Stick (Haste)","Memento of Angerboda","Entwined Elemental Foci","Ettin Fingernail","Vial of Ceaseless Toxins","Chrono Shard","Stat Stick (Versatility)","Nightmare Egg Shell","Claw of the Crystalline Scorpid","Hunger of the Pack","Stat Stick (Crit)","Fel-Oiled Infernal Machine","Horn of Valor","Bloodstained Handkerchief","Spontaneous Appendages","Toe Knee's Promise","Ursoc's Rending Paw","PVP Insignia of Victory","Infernal Cinders","Tiny Oozeling in a Jar","Umbral Moonglaives","Might of Krosus","Terrorbound Nexus","Faulty Countermeasure","Spiked Counterweight","Nature's Call","Convergence of Fates","Windscar Whetstone","Ravaged Seed Pod","Mark of Dargrul","Giant Ornamental Pearl","Draught of Souls"]
+      categories: ["Kil'jaeden's Burning Wish","Unstable Arcano Crystal","Cradle of Anguish","Chaos Talisman","Engine of Eradication","PVP Badge of Victory","Stat Stick (Mastery)","Gift of Radiance","Stat Stick (Haste)","Eye of Command","The Devilsaur's Bite","Entwined Elemental Foci","Vial of Ceaseless Toxins","Chrono Shard","Memento of Angerboda","Ettin Fingernail","Stat Stick (Versatility)","Nightmare Egg Shell","Fel-Oiled Infernal Machine","Claw of the Crystalline Scorpid","Stat Stick (Crit)","Hunger of the Pack","Horn of Valor","Spontaneous Appendages","Bloodstained Handkerchief","Toe Knee's Promise","Ursoc's Rending Paw","PVP Insignia of Victory","Tiny Oozeling in a Jar","Infernal Cinders","Terrorbound Nexus","Might of Krosus","Umbral Moonglaives","Faulty Countermeasure","Spiked Counterweight","Nature's Call","Infernal Alchemist Stone","Darkmoon Deck: Dominion","Convergence of Fates","Ravaged Seed Pod","Windscar Whetstone","Mark of Dargrul","Giant Ornamental Pearl","Draught of Souls"]
         },
         yAxis: {
             min: 0,
@@ -39,13 +42,13 @@
         tooltip: {
             headerFormat: '<b>{point.x}</b>',
             formatter: function() {
-                var s = '<b>'+ this.x +'</b>';
+                var s = '<b>'+ this.x +'</b>',
                 cumulative_amount = 0;
                 for (var i = this.points.length - 1 ; i >= 0 ; i--) {
-                    cumulative_amount += this.points[i].y;
-                    if (this.points[i].y !== 0){
-                        s += '<br/>'+ this.points[i].series.name +': ' + cumulative_amount; 
-                    }
+                  cumulative_amount += this.points[i].y;
+                  if (this.points[i].y !== 0){
+                    s += '<br/>'+ this.points[i].series.name +': ' + cumulative_amount; 
+                  }
                 }
                 return s;
             },
@@ -67,30 +70,30 @@
                 series: [{
             name: '940',
             color: '#00E676',
-            data: [153217,6222,8154,7890,6416,8047,8300,8045,7395,7405,7451,7635,7563,7088,8986,7471,5784,6372,8672,7105,5862,6245,4101,7149,3513,4567,8258,5869,4277,4837,4473,8570,5486,6427,4472,1556,4756,3465,3883,2649,1831,2188]
+            data: [152221,5297,6258,9177,6158,6954,7832,6708,7361,4813,6225,7469,8134,7510,5842,6965,4817,8145,7094,8509,7852,6650,6829,5601,6151,6477,8939,4891,4893,4842,4668,7228,4166,7302,4209,1915,0,0,6340,3831,2032,3044,1666,2466]
         }, {
             name: '930',
             color: '#db843d',
-            data: [0,3733,7801,6410,9139,5712,6350,8387,7440,6893,5768,7205,5025,6546,6236,7679,6590,5936,7551,5898,4179,5799,6482,7650,6899,6916,6913,6224,6324,4314,5289,4069,4854,5918,2396,4752,6019,4221,3148,3857,2738,622]
+            data: [0,3885,7433,6885,8951,6663,6403,6533,5628,8546,6444,6754,8455,6727,7481,6914,6990,5982,7244,7911,5601,5338,5066,5613,8934,4872,5433,4635,4973,4778,4472,6167,3689,3082,3263,5767,0,0,2468,2909,3564,3093,2245,2442]
         }, {
             name: '920',
             color: '#4198af',
-            data: [0,4001,5749,6057,6558,7031,5690,5525,6406,5745,5744,3932,6358,6121,8181,5894,6376,6072,7069,5888,7222,6492,4572,6495,4849,4957,4412,4770,5857,6324,5220,7743,4265,3752,4704,3725,3622,3314,3092,2850,2676,3829]
+            data: [0,4177,5433,5381,5128,6170,5670,7362,6623,5148,5990,4731,8503,4821,5445,4196,6047,4721,6365,6123,6195,6625,6348,4318,5622,5021,6339,5623,3111,5618,4639,6306,5406,5959,4900,914,0,0,5502,3231,5634,2788,3047,376]
         }, {
             name: '910',
             color: '#71588f',
-            data: [0,5560,7429,6700,4190,5245,6144,5086,5319,6254,4511,5072,5966,6702,6770,4772,5196,5720,4867,3411,4948,4664,5292,6091,3326,3658,6694,3596,2970,5127,3939,4738,2967,4600,3783,2870,4307,3083,4297,3078,2034,814]
+            data: [0,4959,6425,6442,7052,5133,6254,5295,4887,6702,5812,6535,5917,4953,5243,6852,5192,5396,3218,6263,4643,4631,4092,3977,4307,3761,5007,4150,5570,4707,4493,5524,3726,3501,1838,1897,0,0,4683,2594,2271,1459,1814,1798]
         }, {
             name: '900',
             color: '#89a54e',
-            data: [0,1532,4868,4598,5984,4254,3666,5047,5079,3512,6877,7320,2580,4799,5166,3373,4363,3561,6559,6682,3711,5194,5501,4879,5687,4335,4827,4344,4944,1865,3766,5193,4205,3939,3016,2547,3786,3059,2703,2699,1182,2564]
+            data: [0,3975,5335,3874,4267,6449,4431,4390,5888,3788,4049,4494,6158,6003,5872,4115,4021,5040,5190,5751,4555,5272,3980,5669,7198,4432,5346,3572,3185,4200,2956,4296,4234,3759,3164,4083,6862,2941,4310,2993,3941,3772,2307,2351]
         }, {
             name: '890',
             color: '#aa4643',
-            data: [0,4065,75936,75304,5271,4725,6311,5394,4087,6186,2471,4265,8124,3634,63140,4826,4803,4834,4316,2942,6372,3519,4283,5645,2952,2230,4440,2909,58305,4915,58458,5712,3705,2863,2218,1137,4096,1273,2017,1722,857,1414]
+            data: [0,3455,75503,5285,73741,4373,6129,6314,4291,5297,5183,4379,61398,4895,3078,5808,3804,4262,4444,4863,3766,3354,4093,2393,4185,2303,5122,4133,4108,56164,4194,4811,57052,4261,3813,1900,2625,3399,2879,2746,1820,2234,209,2719]
         }, {
             name: '880',
             color: '#4572a7',
-            data: [0,101426,0,0,68620,70796,68495,66673,68077,66495,68186,64059,63490,63903,0,64401,65072,61247,53072,59252,58047,58370,58611,50168,60358,59579,49736,56409,0,54932,0,44846,55038,50696,54622,55578,40729,48287,46919,38940,37675,24574]
+            data: [0,98831,0,69308,0,68733,66543,64596,66385,66568,65777,64590,0,62911,64831,61753,65044,61068,59476,51847,57740,57662,58128,59271,49953,59327,48438,55128,55098,0,53954,44945,0,48487,53351,54246,60125,60376,39171,46846,45279,37232,35715,23007]
         }]
-    });
+});

@@ -3,7 +3,7 @@ Highcharts.chart('mage_arcane', {
             type: 'bar'
         },
         title: {
-            text: 'Mage Arcane'
+            text: 'Mage - Arcane - Patchwerk'
         },
         subtitle: {
             text: 'Last generated: 2017-07-19 11:42:13.044551'

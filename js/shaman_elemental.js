@@ -3,7 +3,7 @@
             type: 'bar'
         },
         title: {
-            text: 'Elemental Shaman'
+            text: 'Shaman - Elemental - Patchwerk'
         },
         subtitle: {
             text: 'Last generated: 2017-07-18 18:58:27.553048'

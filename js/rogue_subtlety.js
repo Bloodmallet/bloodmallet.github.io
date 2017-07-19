@@ -3,7 +3,7 @@ Highcharts.chart('rogue_subtlety', {
             type: 'bar'
         },
         title: {
-            text: 'Rogue Subtlety'
+            text: 'Rogue - Subtlety - Patchwerk'
         },
         subtitle: {
             text: 'Last generated: 2017-07-19 17:00:48.786360'

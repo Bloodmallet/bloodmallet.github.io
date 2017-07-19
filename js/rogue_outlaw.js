@@ -3,7 +3,7 @@ Highcharts.chart('rogue_outlaw', {
             type: 'bar'
         },
         title: {
-            text: 'Rogue Outlaw'
+            text: 'Rogue - Outlaw - Patchwerk'
         },
         subtitle: {
             text: 'Last generated: 2017-07-19 16:26:44.209235'

@@ -3,7 +3,7 @@ Highcharts.chart('hunter_marksmanship', {
             type: 'bar'
         },
         title: {
-            text: 'Hunter Beast Marksmanship'
+            text: 'Hunter - Marksmanship - Patchwerk'
         },
         subtitle: {
             text: 'Last generated: 2017-07-19 11:20:40.019684'

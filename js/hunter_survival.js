@@ -3,7 +3,7 @@ Highcharts.chart('hunter_survival', {
             type: 'bar'
         },
         title: {
-            text: 'Hunter Beast Survival'
+            text: 'Hunter - Survival - Patchwerk'
         },
         subtitle: {
             text: 'Last generated: 2017-07-19 11:34:05.258662'

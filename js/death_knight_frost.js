@@ -3,7 +3,7 @@ Highcharts.chart('death_knight_frost', {
             type: 'bar'
         },
         title: {
-            text: 'Death Knight Frost'
+            text: 'Death Knight - Frost - Patchwerk'
         },
         subtitle: {
             text: 'Last generated: 2017-07-19 09:34:11.407921'

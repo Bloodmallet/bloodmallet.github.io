@@ -3,7 +3,7 @@ Highcharts.chart('druid_feral', {
             type: 'bar'
         },
         title: {
-            text: 'Druid Feral'
+            text: 'Druid - Feral - Patchwerk'
         },
         subtitle: {
             text: 'Last generated: 2017-07-19 10:40:47.046260'

@@ -3,7 +3,7 @@ Highcharts.chart('shaman_enhancement', {
             type: 'bar'
         },
         title: {
-            text: 'Shaman Enhancement'
+            text: 'Shaman - Enhancement - Patchwerk'
         },
         subtitle: {
             text: 'Last generated: 2017-07-19 18:03:46.839831'

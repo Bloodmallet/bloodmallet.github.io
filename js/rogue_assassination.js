@@ -3,7 +3,7 @@ Highcharts.chart('rogue_assassination', {
             type: 'bar'
         },
         title: {
-            text: 'Rogue Assassination'
+            text: 'Rogue - Assassination - Patchwerk'
         },
         subtitle: {
             text: 'Last generated: 2017-07-19 15:27:56.331231'

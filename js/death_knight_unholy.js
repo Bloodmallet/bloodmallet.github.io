@@ -3,7 +3,7 @@ Highcharts.chart('death_knight_unholy', {
             type: 'bar'
         },
         title: {
-            text: 'Death Knight Unholy'
+            text: 'Death Knight - Unholy - Patchwerk'
         },
         subtitle: {
             text: 'Last generated: 2017-07-19 09:50:09.986676'

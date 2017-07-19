@@ -3,7 +3,7 @@ Highcharts.chart('druid_balance', {
             type: 'bar'
         },
         title: {
-            text: 'Druid Balance'
+            text: 'Druid - Balance - Patchwerk'
         },
         subtitle: {
             text: 'Last generated: 2017-07-19 10:21:45.335894'
