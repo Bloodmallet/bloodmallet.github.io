@@ -31,14 +31,15 @@
   <body>
   <nav>
     <ul>
-      <li><a href="./">Bloodmallet</a></li>
+      <li><a href="./">Bloodytrinkets</a></li>
     </ul>
   </nav>
 
 
     <h1>Stacked trinket charts</h1>
 
-    <p>Please notice that these values are all generated using the highest (read: difficulty level) available <a href="http://www.simulationcraft.org/">SimulationCraft</a> profiles. Each trinket was simulated without a second one. Furthermore all limitations applying to SimulationCraft apply to these graphs as well. Your own equipment, legendaries and talents quite quite possibly would change these graphs. Therefore: directly simming different trinkets directly against each other is the best way to be sure. The easiest way to do so is by heading to <a href="https://www.raidbots.com/simbot">RAIDBOTS</a> which uses SimulationCraft for you. Try it out.</p>
+    <p>Please notice that these values are all generated using the highest (read: difficulty level) available <a href="http://www.simulationcraft.org/">SimulationCraft</a> profiles which are currently the T20M profiles. Each trinket was simulated without a second one. The profiles already contain two legendaries, so please be aware that the legendary trinket would be a third legendary in most cases, which isn't realistic. Furthermore all limitations applying to SimulationCraft apply to these graphs as well. This means that the accuracy of these graphs depends on the quality of the maintained action priority list (APL). A good APL does not necessarily support all trinkets equally. So please make sure to double check information with your theorycrafters resources, because their answers are worked out specifically for your spec. I'm simply running a lot of gear comparisons without in-depth spec knowledge. </p>
+    <p>Your own equipment, legendaries and talents quite possibly would change the order of trinkets for your character. Therefore: simming different trinkets against each other is the best way to be sure. The easiest way to do so is by heading to <a href="https://www.raidbots.com/simbot">RAIDBOTS</a> which uses SimulationCraft for you. Try it out. </p>
 
     <div class="div-table">
       <div class="div-row">
@@ -50,7 +51,7 @@
         </div>
         <div class="div-cell">
           <div class="btn-group dh">
-            <button onclick="switch_chart_to('deamon_hunter_havoc')">deamon_hunter_havoc</button>
+            <button onclick="switch_chart_to('demon_hunter_havoc')">demon_hunter_havoc</button>
           </div>
         </div>
         <div class="div-cell">
@@ -63,7 +64,7 @@
       <div class="div-row">
         <div class="div-cell">
           <div class="btn-group hunter">
-            <button onclick="switch_chart_to('hunter_beast_master')">hunter_beast_master</button>
+            <button onclick="switch_chart_to('hunter_beast_mastery')">hunter_beast_mastery</button>
             <button onclick="switch_chart_to('hunter_marksmanship')">hunter_marksmanship</button>
             <button onclick="switch_chart_to('hunter_survival')">hunter_survival</button>
           </div>
@@ -125,10 +126,10 @@
 
     <div class="container" id="death_knight_frost" style="display: none;" ></div>
     <div class="container" id="death_knight_unholy" style="display: none;" ></div>
-    <div class="container" id="deamon_hunter_havoc" style="display: none;" ></div>
+    <div class="container" id="demon_hunter_havoc" style="display: none;" ></div>
     <div class="container" id="druid_balance" style="display: none;" ></div>
     <div class="container" id="druid_feral" style="display: none;" ></div>
-    <div class="container" id="hunter_beast_master" style="display: none;" ></div>
+    <div class="container" id="hunter_beast_mastery" style="display: none;" ></div>
     <div class="container" id="hunter_marksmanship" style="display: none;" ></div>
     <div class="container" id="hunter_survival" style="display: none;" ></div>
     <div class="container" id="mage_arcane" style="display: none;" ></div>
@@ -151,10 +152,10 @@
     <script src="https://code.highcharts.com/highcharts.js"></script>
     <script src="./js/death_knight_frost.js"></script>
     <script src="./js/death_knight_unholy.js"></script>
-    <script src="./js/deamon_hunter_havoc.js"></script>
+    <script src="./js/demon_hunter_havoc.js"></script>
     <script src="./js/druid_balance.js"></script>
     <script src="./js/druid_feral.js"></script>
-    <script src="./js/hunter_beast_master.js"></script>
+    <script src="./js/hunter_beast_mastery.js"></script>
     <script src="./js/hunter_marksmanship.js"></script>
     <script src="./js/hunter_survival.js"></script>
     <script src="./js/mage_arcane.js"></script>
@@ -173,5 +174,10 @@
     <script src="./js/warlock_destruction.js"></script>
     <script src="./js/warrior_arms.js"></script>
     <script src="./js/warrior_fury.js"></script>
+
+    <p>If a trinket is missing (except for timewalking ones, if you have some of those, you have to sim them yourself) please contact me via <a href="https://github.com/Bloodmallet/bloodytrinkets/issues">GitHub - Issues</a> and create an issue there. I'll make sure to add it later on. </p>
+    <p>As you might've guessed, I'm the author of this tool, that enables the user to create the here presented data quite easily. If you want to know more or get the tool, visit my <a href="https://github.com/Bloodmallet/bloodytrinkets">Github - repository</a>. </p>
+    <p>Yours sincerely<br/>Bloodmallet(EU)#8246 - Discord<br/>Blood(y) - official WoW forums<br/> <a href="https://worldofwarcraft.com/en-gb/character/die-aldor/bloodmallet">Bloodmallet</a> - WoW character </p>
+    <p><br/>PS: If you like this resource and for some reason want to <a href="https://www.paypal.me/bloodmallet">make a gift</a>, you can do so now. But please be aware of that I'm doing this for fun, for free and supporting me wont give you any rewards, extra features or special handling. Nonetheless I'd be very happy to see you like this resource. </p>
   </body>
 </html>
