@@ -47,7 +47,6 @@ h2 {
 
 p {
   font-weight: 200;
-  margin-bottom: 20px;
   margin-right: 10%;
   margin-left: 10%;
 }
@@ -83,6 +82,23 @@ span.code {
   background-color: #ddd;
 }
 
+span.signout {
+  margin-left: 15px;
+  font-size: 16px;
+}
+
+div.class-table {
+  text-align: center;
+  font-weight: 250;
+  margin-bottom: 3px;
+  background-color: #343434;
+  padding-top: 3px;
+  padding-bottom: 7px;
+  padding-left: 12px;
+  padding-right: 12px;
+  font-size: 21px;
+}
+
 nav ul {
   background-color: #343434;
   text-align: center;
@@ -110,56 +126,56 @@ nav a:hover, nav span:hover {
   transition: background-color .01s ease-in;
 }
 
-#map {
-  min-height: 400px;
-  width: 100%;
-  min-width: 350px;
-  background-color: grey;
-}
-
-form {
-  margin-top: 15px;
-}
 
 .div-table {
   display: table;
   margin: 0 auto;
 }
+.div-table div.div-row:not(:last-child) {
+  border-bottom: none; /* Prevent double borders */
+}
 
 .div-row {
   display: table-row;
 }
-
-.div-cell {
-  display: table-cell;
-  padding-right: 7px;
-  padding-bottom: 7px;
+.div-row div:not(:last-child) {
+    border-right: none; /* Prevent double borders */
 }
 
+.div-cell {
+  border: 1px solid #bbb;
+  padding: 3px;
+  display: table-cell;
+}
+
+
 .btn-group button {
-    padding: 10px 24px; /* Some padding */
-    cursor: pointer; /* Pointer/hand icon */
-    width: 100%; /* Set a width if needed */
-    display: block; /* Make the buttons appear below each other */
+  padding: 10px 15px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  width: 100%; /* Set a width if needed */
+  display: block; /* Make the buttons appear below each other */
 }
 
 .btn-group button:not(:last-child) {
-    border-bottom: none; /* Prevent double borders */
+  border-bottom: none; /* Prevent double borders */
 }
 
 /* Add a background color on hover */
 .btn-group button:hover {
-    background-color: #3e8e41;
+  background-color: #3e8e41;
 }
 
 
 .dk button {
   color: white;
-  border: 1px solid red;
+  border: 1px solid #af1630;
   background-color: #C41F3B;
 }
 .dk button:hover {
   background-color: #9C132a;
+}
+.dk div.class-table {
+  color: #C41F3B;
 }
 
 .dh button {
@@ -170,14 +186,20 @@ form {
 .dh button:hover {
   background-color: #731c90;
 }
+.dh div.class-table {
+  color: #A330C9;
+}
 
 .druid button {
   color: white;
-  border: 1px solid darkorange;
+  border: 1px solid #de6e0a;
   background-color: #FF7D0A;
 }
 .druid button:hover {
   background-color: #D66400;
+}
+.druid div.class-table {
+  color: #FF7D0A;
 }
 
 .hunter button {
@@ -188,32 +210,44 @@ form {
 .hunter button:hover {
   background-color: #799a4c;
 }
+.hunter div.class-table {
+  color: #ABD473;
+}
 
 .mage button {
   color: black;
-  border: 1px solid lightblue;
+  border: 1px solid #56b5d8;
   background-color: #69CCF0;
 }
 .mage button:hover {
   background-color: #4dabce;
 }
+.mage div.class-table {
+  color: #69CCF0;
+}
 
 .monk button {
   color: black;
-  border: 1px solid turquoise;
+  border: 1px solid #02e688;
   background-color: #00FF96;
 }
 .monk button:hover {
   background-color: #03ce7a;
 }
+.monk div.class-table {
+  color: #00FF96;
+}
 
 .paladin button {
   color: black;
-  border: 1px solid pink;
+  border: 1px solid #e2a5b0;
   background-color: #F58CBA;
 }
 .paladin button:hover {
   background-color: #d878a2;
+}
+.paladin div.class-table {
+  color: #F58CBA;
 }
 
 .priest button {
@@ -224,14 +258,20 @@ form {
 .priest button:hover {
   background-color: #cccccc;
 }
+.priest div.class-table {
+  color: #ffffff;
+}
 
 .rogue button {
   color: black;
-  border: 1px solid yellow;
+  border: 1px solid #dcd352;
   background-color: #FFF569;
 }
 .rogue button:hover {
   background-color: #d6cc52;
+}
+.rogue div.class-table {
+  color: #FFF569;
 }
 
 .shaman button {
@@ -242,6 +282,9 @@ form {
 .shaman button:hover {
   background-color: #1744d0;
 }
+.shaman div.class-table {
+  color: #0070DE;
+}
 
 .warlock button {
   color: white;
@@ -251,67 +294,54 @@ form {
 .warlock button:hover {
   background-color: #7463a9;
 }
+.warlock div.class-table {
+  color: #9482C9;
+}
 
 .warrior button {
   color: white;
-  border: 1px solid tan;
+  border: 1px solid #ab845a;
   background-color: #C79C6E;
 }
 .warrior button:hover {
   background-color: #ad8862;
 }
+.warrior div.class-table {
+  color: #C79C6E;
+}
+
+
 
 .highcharts-root text {
-
-  font-family: 'Liberation Sans', sans-serif !important;
-
+  font-family: "Helvetica Neue", "Segoe UI", Segoe, Helvetica, Arial, "Lucida Grande", sans-serif;
 }
-
 
 .highcharts-background {
-
-  fill: #222222;
-
-  stroke: #080808;
-
-  stroke-width: 1px;
-
-  color: #EEEEEE;
-
+  fill: #eee;
+  color: black;
 }
-
 
 .highcharts-axis text {
-
-  fill: #9d9d9d !important;
-
+  fill: black;
 }
-
 
 .highcharts-axis-labels text{
-
-  fill: #9d9d9d !important;
-
+  fill: black;
 }
-
 
 .highcharts-title {
-
-  fill: #9d9d9d !important;
-
+  fill: black;
 }
 
-
 .highcharts-legend-box {
-
-  fill: #222222;
-
-  stroke: #9d9d9d;
-
+  fill: #eee;
+  stroke: #bbb;
 }
 
 .highcharts-legend-item text {
+  fill: black;
+}
 
-  fill: #9d9d9d !important;
-
+.highcharts-tick, .highcharts-grid path {
+  stroke: #bbb;
 }

@@ -40,85 +40,96 @@
 
     <p>Please notice that these values are all generated using the highest (read: difficulty level) available <a href="http://www.simulationcraft.org/">SimulationCraft</a> profiles which are currently the T20M profiles. Each trinket was simulated without a second one. The profiles already contain two legendaries, so please be aware that the legendary trinket would be a third legendary in most cases, which isn't realistic. Furthermore all limitations applying to SimulationCraft apply to these graphs as well. This means that the accuracy of these graphs depends on the quality of the maintained action priority list (APL). A good APL does not necessarily support all trinkets equally. So please make sure to double check information with your theorycrafters resources, because their answers are worked out specifically for your spec. I'm simply running a lot of gear comparisons without in-depth spec knowledge. </p>
     <p>Your own equipment, legendaries and talents quite possibly would change the order of trinkets for your character. Therefore: simming different trinkets against each other is the best way to be sure. The easiest way to do so is by heading to <a href="https://www.raidbots.com/simbot">RAIDBOTS</a> which uses SimulationCraft for you. Try it out. </p>
+    <p>Until I push an update the <strong>legendary trinket is simmed with itemlevel 970</strong> but is shown with itemlevel 940.</p>
 
     <div class="div-table">
       <div class="div-row">
         <div class="div-cell">
           <div class="btn-group dk">
-            <button onclick="switch_chart_to('death_knight_frost')">death_knight_frost</button>
-            <button onclick="switch_chart_to('death_knight_unholy')">death_knight_unholy</button>
+            <div class="class-table">Death Knight</div>
+            <button onclick="switch_chart_to('death_knight_frost')">Frost</button>
+            <button onclick="switch_chart_to('death_knight_unholy')">Unholy</button>
           </div>
         </div>
         <div class="div-cell">
           <div class="btn-group dh">
-            <button onclick="switch_chart_to('demon_hunter_havoc')">demon_hunter_havoc</button>
+            <div class="class-table">Demon Hunter</div>
+            <button onclick="switch_chart_to('demon_hunter_havoc')">Havoc</button>
           </div>
         </div>
         <div class="div-cell">
           <div class="btn-group druid">
-            <button onclick="switch_chart_to('druid_balance')">druid_balance</button>
-            <button onclick="switch_chart_to('druid_feral')">druid_feral</button>
+            <div class="class-table">Druid</div>
+            <button onclick="switch_chart_to('druid_balance')">Balance</button>
+            <button onclick="switch_chart_to('druid_feral')">Feral</button>
+          </div>
+        </div>
+        <div class="div-cell">
+          <div class="btn-group hunter">
+            <div class="class-table">Hunter</div>
+            <button onclick="switch_chart_to('hunter_beast_mastery')">Beast Mastery</button>
+            <button onclick="switch_chart_to('hunter_marksmanship')">Marksmanship</button>
+            <button onclick="switch_chart_to('hunter_survival')">Survival</button>
           </div>
         </div>
       </div>
       <div class="div-row">
         <div class="div-cell">
-          <div class="btn-group hunter">
-            <button onclick="switch_chart_to('hunter_beast_mastery')">hunter_beast_mastery</button>
-            <button onclick="switch_chart_to('hunter_marksmanship')">hunter_marksmanship</button>
-            <button onclick="switch_chart_to('hunter_survival')">hunter_survival</button>
-          </div>
-        </div>
-        <div class="div-cell">
           <div class="btn-group mage">
-            <button onclick="switch_chart_to('mage_arcane')">mage_arcane</button>
-            <button onclick="switch_chart_to('mage_fire')">mage_fire</button>
-            <button onclick="switch_chart_to('mage_frost')">mage_frost</button>
+            <div class="class-table">Mage</div>
+            <button onclick="switch_chart_to('mage_arcane')">Arcane</button>
+            <button onclick="switch_chart_to('mage_fire')">Fire</button>
+            <button onclick="switch_chart_to('mage_frost')">Frost</button>
           </div>
         </div>
         <div class="div-cell">
           <div class="btn-group monk">
-            <button onclick="switch_chart_to('monk_windwalker')">monk_windwalker</button>
+            <div class="class-table">Monk</div>
+            <button onclick="switch_chart_to('monk_windwalker')">Windwalker</button>
           </div>
         </div>
-      </div>
-      <div class="div-row">
         <div class="div-cell">
           <div class="btn-group paladin">
-            <button onclick="switch_chart_to('paladin_retribution')">paladin_retribution</button>
+            <div class="class-table">Paladin</div>
+            <button onclick="switch_chart_to('paladin_retribution')">Retribution</button>
           </div>
         </div>
         <div class="div-cell">
           <div class="btn-group priest">
-            <button onclick="switch_chart_to('priest_shadow')">priest_shadow</button>
-          </div>
-        </div>
-        <div class="div-cell">
-          <div class="btn-group rogue">
-            <button onclick="switch_chart_to('rogue_assassination')">rogue_assassination</button>
-            <button onclick="switch_chart_to('rogue_outlaw')">rogue_outlaw</button>
-            <button onclick="switch_chart_to('rogue_subtlety')">rogue_subtlety</button>
+            <div class="class-table">Priest</div>
+            <button onclick="switch_chart_to('priest_shadow')">Shadow</button>
           </div>
         </div>
       </div>
       <div class="div-row">
         <div class="div-cell">
+          <div class="btn-group rogue">
+            <div class="class-table">Rogue</div>
+            <button onclick="switch_chart_to('rogue_assassination')">Assassination</button>
+            <button onclick="switch_chart_to('rogue_outlaw')">Outlaw</button>
+            <button onclick="switch_chart_to('rogue_subtlety')">Subtlety</button>
+          </div>
+        </div>
+        <div class="div-cell">
           <div class="btn-group shaman">
-            <button onclick="switch_chart_to('shaman_elemental')">shaman_elemental</button>
-            <button onclick="switch_chart_to('shaman_enhancement')">shaman_enhancement</button>
+            <div class="class-table">Shaman</div>
+            <button onclick="switch_chart_to('shaman_elemental')">Elemental</button>
+            <button onclick="switch_chart_to('shaman_enhancement')">Enhancement</button>
           </div>
         </div>
         <div class="div-cell">
           <div class="btn-group warlock">
-            <button onclick="switch_chart_to('warlock_affliction')">warlock_affliction</button>
-            <button onclick="switch_chart_to('warlock_demonology')">warlock_demonology</button>
-            <button onclick="switch_chart_to('warlock_destruction')">warlock_destruction</button>
+            <div class="class-table">Warlock</div>
+            <button onclick="switch_chart_to('warlock_affliction')">Affliction</button>
+            <button onclick="switch_chart_to('warlock_demonology')">Demonology</button>
+            <button onclick="switch_chart_to('warlock_destruction')">Destruction</button>
           </div>
         </div>
         <div class="div-cell">
           <div class="btn-group warrior">
-            <button onclick="switch_chart_to('warrior_arms')">warrior_arms</button>
-            <button onclick="switch_chart_to('warrior_fury')">warrior_fury</button>
+            <div class="class-table">Warrior</div>
+            <button onclick="switch_chart_to('warrior_arms')">Arms</button>
+            <button onclick="switch_chart_to('warrior_fury')">Fury</button>
           </div>
         </div>
       </div>
@@ -150,34 +161,34 @@
     <div class="container" id="warrior_fury" style="display: none;" ></div>
 
     <script src="https://code.highcharts.com/highcharts.js"></script>
-    <script src="./js/death_knight_frost.js"></script>
-    <script src="./js/death_knight_unholy.js"></script>
-    <script src="./js/demon_hunter_havoc.js"></script>
-    <script src="./js/druid_balance.js"></script>
-    <script src="./js/druid_feral.js"></script>
-    <script src="./js/hunter_beast_mastery.js"></script>
-    <script src="./js/hunter_marksmanship.js"></script>
-    <script src="./js/hunter_survival.js"></script>
-    <script src="./js/mage_arcane.js"></script>
-    <script src="./js/mage_fire.js"></script>
-    <script src="./js/mage_frost.js"></script>
-    <script src="./js/monk_windwalker.js"></script>
-    <script src="./js/paladin_retribution.js"></script>
-    <script src="./js/priest_shadow.js"></script>
-    <script src="./js/rogue_assassination.js"></script>
-    <script src="./js/rogue_outlaw.js"></script>
-    <script src="./js/rogue_subtlety.js"></script>
-    <script src="./js/shaman_elemental.js"></script>
-    <script src="./js/shaman_enhancement.js"></script>
-    <script src="./js/warlock_affliction.js"></script>
-    <script src="./js/warlock_demonology.js"></script>
-    <script src="./js/warlock_destruction.js"></script>
-    <script src="./js/warrior_arms.js"></script>
-    <script src="./js/warrior_fury.js"></script>
+    <script src="./js/death_knight_frost.js" async></script>
+    <script src="./js/death_knight_unholy.js" async></script>
+    <script src="./js/demon_hunter_havoc.js" async></script>
+    <script src="./js/druid_balance.js" async></script>
+    <script src="./js/druid_feral.js" async></script>
+    <script src="./js/hunter_beast_mastery.js" async></script>
+    <script src="./js/hunter_marksmanship.js" async></script>
+    <script src="./js/hunter_survival.js" async></script>
+    <script src="./js/mage_arcane.js" async></script>
+    <script src="./js/mage_fire.js" async></script>
+    <script src="./js/mage_frost.js" async></script>
+    <script src="./js/monk_windwalker.js" async></script>
+    <script src="./js/paladin_retribution.js" async></script>
+    <script src="./js/priest_shadow.js" async></script>
+    <script src="./js/rogue_assassination.js" async></script>
+    <script src="./js/rogue_outlaw.js" async></script>
+    <script src="./js/rogue_subtlety.js" async></script>
+    <script src="./js/shaman_elemental.js" async></script>
+    <script src="./js/shaman_enhancement.js" async></script>
+    <script src="./js/warlock_affliction.js" async></script>
+    <script src="./js/warlock_demonology.js" async></script>
+    <script src="./js/warlock_destruction.js" async></script>
+    <script src="./js/warrior_arms.js" async></script>
+    <script src="./js/warrior_fury.js" async></script>
 
     <p>If a trinket is missing (except for timewalking ones, if you have some of those, you have to sim them yourself) please contact me via <a href="https://github.com/Bloodmallet/bloodytrinkets/issues">GitHub - Issues</a> and create an issue there. I'll make sure to add it later on. </p>
     <p>As you might've guessed, I'm the author of this tool, that enables the user to create the here presented data quite easily. If you want to know more or get the tool, visit my <a href="https://github.com/Bloodmallet/bloodytrinkets">Github - repository</a>. </p>
-    <p>Yours sincerely<br/>Bloodmallet(EU)#8246 - Discord<br/>Blood(y) - official WoW forums<br/> <a href="https://worldofwarcraft.com/en-gb/character/die-aldor/bloodmallet">Bloodmallet</a> - WoW character </p>
+    <p>Yours sincerely<br/><span class="signout">Bloodmallet(EU)#8246 - Discord<span><br/><span class="signout">Blood(y) - official WoW forums<span><br/><span class="signout"><a href="https://worldofwarcraft.com/en-gb/character/die-aldor/bloodmallet">Bloodmallet</a> - WoW character<span> </p>
     <p><br/>PS: If you like this resource and for some reason want to <a href="https://www.paypal.me/bloodmallet">make a gift</a>, you can do so now. But please be aware of that I'm doing this for fun, for free and supporting me wont give you any rewards, extra features or special handling. Nonetheless I'd be very happy to see you like this resource. </p>
   </body>
 </html>
