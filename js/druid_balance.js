@@ -1,12 +1,15 @@
-    Highcharts.chart('druid_balance', {
+Highcharts.chart('druid_balance', {
         chart: {
             type: 'bar'
         },
         title: {
-            text: 'Balance T20M Trinket Sims 7.2.5'
+            text: 'Druid Balance'
+        },
+        subtitle: {
+            text: 'Last generated: 2017-07-19 10:21:45.335894'
         },
         xAxis: {
-      categories: ["Kil'jaeden's Burning Wish","Tarnished Sentinel Medallion","Unstable Arcano Crystal","Whispers in the Dark","Stat Stick (Mastery)","Terror From Below","Stormsinger Fulmination Charge","Dreadstone of Endless Shadows","Tome of Unraveling Sanity","Padawsen's Unlucky Charm","Erratic Metronome","Stat Stick (Versatility)","Stat Stick (Crit)","Stat Stick (Haste)","Charm of the Rising Tide","PVP Badge of Dominance","Chrono Shard","Infernal Writ","Naraxas' Spiked Tongue","Star Gate","Moonlit Prism","PVP Insignia of Dominance","Horn of Valor","Deteriorated Construct Core","Fury of the Burning Sky","Obelisk of the Void","Devilsaur Shock-Baton","Bough of Corruption","Spectral Thurible","Twisting Wind","Portable Manacracker","Swarming Plaguehive","Oakheart's Gnarled Root","Aran's Relaxing Ruby","Icon of Rot","Caged Horror","Corrupted Starlight","Mrrgria's Favor","Pharameres Forbidden Grimoire","Wriggling Sinew","Eye of Skovald","Elementium Bomb Squirrel Generator","Unstable Horrorslime","Figurehead of the Naglfar"]
+      categories: ["Kil'jaeden's Burning Wish","Tarnished Sentinel Medallion","Unstable Arcano Crystal","Whispers in the Dark","Stat Stick (Mastery)","Terror From Below","Dreadstone of Endless Shadows","Stormsinger Fulmination Charge","Padawsen's Unlucky Charm","Erratic Metronome","Tome of Unraveling Sanity","Stat Stick (Versatility)","Stat Stick (Crit)","Stat Stick (Haste)","Charm of the Rising Tide","PVP Badge of Dominance","Chrono Shard","Infernal Writ","Naraxas' Spiked Tongue","Star Gate","PVP Insignia of Dominance","Moonlit Prism","Horn of Valor","Deteriorated Construct Core","Fury of the Burning Sky","Obelisk of the Void","Devilsaur Shock-Baton","Bough of Corruption","Twisting Wind","Darkmoon Deck: Hellfire","Portable Manacracker","Spectral Thurible","Swarming Plaguehive","Oakheart's Gnarled Root","Aran's Relaxing Ruby","Infernal Alchemist Stone","Icon of Rot","Caged Horror","Corrupted Starlight","Mrrgria's Favor","Pharameres Forbidden Grimoire","Wriggling Sinew","Eye of Skovald","Elementium Bomb Squirrel Generator","Unstable Horrorslime","Figurehead of the Naglfar"]
         },
         yAxis: {
             min: 0,
@@ -67,30 +70,30 @@
                 series: [{
             name: '940',
             color: '#00E676',
-            data: [133124,9487,3419,5952,6438,6803,7537,6607,7529,6306,6580,6918,7203,6301,5066,5415,5805,6635,4836,6550,5554,4342,5164,6600,5136,4663,4642,6403,5304,4593,5183,4085,4118,3355,4331,3547,2628,2902,3724,3334,2634,2885,2332,1942]
+            data: [132744,8905,3309,6937,6927,7417,7305,8041,6266,7956,6393,4812,5803,6021,7261,5544,6711,6127,4209,7228,6485,5037,5740,7162,5037,4551,4005,7240,5862,0,6134,2465,5327,4466,3905,0,4040,3545,3226,2876,3491,3886,3067,1628,1102,834]
         }, {
             name: '930',
             color: '#db843d',
-            data: [0,8721,5197,5739,6399,6732,6223,6660,6354,6859,5496,6369,5868,6342,5909,5780,5394,4175,5223,6844,4508,5392,6141,6144,3368,4036,4333,4502,4120,7068,7142,3943,5674,3173,2902,1007,2335,3798,1193,2422,1874,1918,1400,1050]
+            data: [0,8394,4182,5214,5103,5652,6260,5461,5217,5097,7439,6582,6283,5941,5088,6231,5205,5613,5003,6637,3272,4939,4615,7082,3857,5018,5312,5885,6140,0,4639,5602,2721,3452,3179,0,4141,2814,3004,4279,2568,1858,2542,2181,1971,1386]
         }, {
             name: '920',
             color: '#4198af',
-            data: [0,6923,3514,6884,6041,6071,5016,4609,6978,4944,5988,4833,5358,4652,5320,5931,5019,5692,5061,5434,4566,3795,3214,5445,4224,4832,4454,6153,4182,4444,5509,4381,1684,3134,3745,3739,3187,2605,4037,3223,1890,1584,2015,995]
+            data: [0,6929,5224,5552,5885,6061,4822,5195,5475,4745,5593,6173,4085,4979,5298,5421,5190,5642,4796,5498,5220,5429,4237,4170,3613,4051,3314,4952,4656,0,5480,2986,4627,4130,2679,0,2799,1708,2495,2381,2558,3484,2489,2785,1798,1851]
         }, {
             name: '910',
             color: '#71588f',
-            data: [0,6449,3342,3689,5023,5458,5266,6305,5707,5770,4435,5266,4712,4787,4943,4214,5093,5902,3850,6158,4640,3519,3560,4228,3998,3697,2862,5019,3033,6401,4539,2821,2856,3063,3167,2417,2523,2363,1939,2669,3004,2135,1243,718]
+            data: [0,7120,3494,4446,6692,5281,5742,4523,5589,5149,5731,4986,6081,5519,4552,5304,4454,3619,3647,5052,4509,2640,3839,5499,3687,4496,3987,4746,4841,0,5078,4026,1749,3513,3450,0,3278,2485,1784,2975,3218,1063,1407,1957,1244,509]
         }, {
             name: '900',
             color: '#89a54e',
-            data: [0,6955,4270,4455,4405,5681,4780,3998,66582,4434,4900,5526,5480,5151,5122,5510,4142,4825,3898,3784,2445,4726,3578,5639,3563,3885,3656,3594,2739,3840,3263,3930,4858,2806,1960,1574,1342,2948,2646,1119,1399,2033,546,1045]
+            data: [0,6279,3540,3759,4340,5797,5213,6048,4380,4827,66734,4728,4683,3756,4901,4700,4652,4899,4643,4847,3552,4836,4614,3947,3600,3005,3952,4062,4570,4211,4420,3327,4573,3069,2164,3947,3288,2336,2127,2215,1682,2286,1580,621,1637,1025]
         }, {
             name: '890',
             color: '#aa4643',
-            data: [0,82794,2764,5123,4704,67347,5718,4643,0,3586,3887,3844,2661,4024,61475,2318,5092,3168,3735,4214,4582,3810,3367,3692,2961,3117,3698,4475,50569,3918,5153,1505,1706,1961,3611,2657,2578,2454,1787,2925,2807,2001,2621,921]
+            data: [0,83115,3171,5237,5364,67738,4039,3447,4718,4339,0,3238,4716,4732,61567,2895,3694,4525,3940,4993,2576,3551,1748,5288,3324,3362,2796,4043,4447,4651,3105,50184,2942,2684,2784,4018,2491,2490,2757,2049,1833,2229,3963,3554,690,1553]
         }, {
             name: '880',
             color: '#4572a7',
-            data: [0,0,92071,67944,66037,0,61011,62019,0,61172,59780,58031,58968,58594,0,56978,55456,54475,56219,44690,49621,50140,50303,42485,50458,48628,47539,39901,0,39576,39016,45685,44196,45734,41126,41455,41580,37683,36624,34232,33982,32204,32445,24144]
+            data: [0,0,91337,68692,64818,0,61845,62497,60845,59893,0,58880,57691,58370,0,56640,56370,54717,56053,43826,51394,49799,50564,42083,50397,48567,47916,40152,39520,60365,40181,0,44939,44041,45425,54981,41174,41481,41235,38327,36767,35122,33270,31528,33614,23600]
         }]
-    });
+});
