@@ -47,12 +47,14 @@ Highcharts.chart('rogue_outlaw', {
             for (var i = this.points.length - 1 ; i >= 0 ; i--) {
                 cumulative_amount += this.points[i].y;
                 if (this.points[i].y !== 0){
-                    s += '<br/>'+ this.points[i].series.name +': ' + cumulative_amount; 
+                    s += '<br/><span style="color: ' + this.points[i].series.color + '; font-weight: bold;">' + this.points[i].series.name +'</span>: ' + cumulative_amount; 
                 }
             }
             return s;
         },
-        shared: true
+        shared: true,
+        backgroundColor: '#eee',
+        borderColor: '#bbb'
     },
     plotOptions: {
         series: {
