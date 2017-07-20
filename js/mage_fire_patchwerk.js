@@ -1,99 +1,107 @@
 Highcharts.chart('mage_fire', {
-        chart: {
-            type: 'bar'
-        },
+    chart: {
+        type: 'bar'
+    },
+    title: {
+        text: 'Mage - Fire - Patchwerk'
+    },
+    subtitle: {
+        text: 'Last generated: 2017-07-20 02:41:10.719110'
+    },
+    xAxis: {
+        categories: ["Tarnished Sentinel Medallion","Kil'jaeden's Burning Wish","Terror From Below","Unstable Arcano Crystal","Whispers in the Dark","Stat Stick (Mastery)","Dreadstone of Endless Shadows","Stat Stick (Versatility)","Horn of Valor","Charm of the Rising Tide","Stormsinger Fulmination Charge","Stat Stick (Crit)","Padawsen's Unlucky Charm","Erratic Metronome","Tome of Unraveling Sanity","Chrono Shard","Stat Stick (Haste)","Infernal Writ","Obelisk of the Void","PVP Badge of Dominance","Star Gate","Portable Manacracker","Naraxas' Spiked Tongue","Fury of the Burning Sky","Deteriorated Construct Core","PVP Insignia of Dominance","Spectral Thurible","Bough of Corruption","Twisting Wind","Moonlit Prism","Devilsaur Shock-Baton","Oakheart's Gnarled Root","Darkmoon Deck: Hellfire","Icon of Rot","Aran's Relaxing Ruby","Swarming Plaguehive","Infernal Alchemist Stone","Mrrgria's Favor","Wriggling Sinew","Pharameres Forbidden Grimoire","Caged Horror","Corrupted Starlight","Eye of Skovald","Elementium Bomb Squirrel Generator","Unstable Horrorslime","Figurehead of the Naglfar"]
+    },
+    yAxis: {
+        min: 0,
         title: {
-            text: 'Mage - Fire - Patchwerk'
+            text: '\u0394 Damage per second'
         },
-        subtitle: {
-            text: 'Last generated: 2017-07-19 11:51:29.787249'
+        labels: {
+            enabled: true
         },
-        xAxis: {
-      categories: ["Tarnished Sentinel Medallion","Kil'jaeden's Burning Wish","Terror From Below","Unstable Arcano Crystal","Whispers in the Dark","Stat Stick (Mastery)","Dreadstone of Endless Shadows","Horn of Valor","Padawsen's Unlucky Charm","Stat Stick (Versatility)","Erratic Metronome","Stormsinger Fulmination Charge","Tome of Unraveling Sanity","Stat Stick (Crit)","Charm of the Rising Tide","Chrono Shard","Stat Stick (Haste)","Infernal Writ","Obelisk of the Void","PVP Badge of Dominance","Star Gate","Portable Manacracker","Fury of the Burning Sky","Naraxas' Spiked Tongue","Deteriorated Construct Core","Spectral Thurible","Twisting Wind","PVP Insignia of Dominance","Bough of Corruption","Moonlit Prism","Devilsaur Shock-Baton","Oakheart's Gnarled Root","Darkmoon Deck: Hellfire","Swarming Plaguehive","Icon of Rot","Aran's Relaxing Ruby","Infernal Alchemist Stone","Mrrgria's Favor","Wriggling Sinew","Pharameres Forbidden Grimoire","Corrupted Starlight","Caged Horror","Eye of Skovald","Elementium Bomb Squirrel Generator","Unstable Horrorslime","Figurehead of the Naglfar"]
-        },
-        yAxis: {
-            min: 0,
-            title: {
-                text: '\u0394 Damage per second'
-            },
-            labels: {
-                enabled: true
-            },
-            stackLabels: {
-                enabled: false,
-                style: {
-                    fontWeight: 'bold',
-                    color: (Highcharts.theme && Highcharts.theme.textColor) || 'white'
-                }
+        stackLabels: {
+            enabled: false,
+            style: {
+                fontWeight: 'bold',
+                color: (Highcharts.theme && Highcharts.theme.textColor) || 'white'
             }
-        },
-        legend: {
-            align: 'right',
-            x: 0,
-            verticalAlign: 'bottom',
-            y: 0,
-            floating: false,
-            backgroundColor: (Highcharts.theme && Highcharts.theme.background2) || 'white',
-            borderColor: '#CCC',
-            borderWidth: 1,
-            shadow: false,
-            reversed: true
-        },
-        tooltip: {
-            headerFormat: '<b>{point.x}</b>',
-            formatter: function() {
-                var s = '<b>'+ this.x +'</b>',
-                cumulative_amount = 0;
-                for (var i = this.points.length - 1 ; i >= 0 ; i--) {
-                  cumulative_amount += this.points[i].y;
-                  if (this.points[i].y !== 0){
+        }
+    },
+    legend: {
+        align: 'right',
+        x: 0,
+        verticalAlign: 'bottom',
+        y: 0,
+        floating: false,
+        backgroundColor: (Highcharts.theme && Highcharts.theme.background2) || 'white',
+        borderColor: '#CCC',
+        borderWidth: 1,
+        shadow: false,
+        reversed: true
+    },
+    tooltip: {
+        headerFormat: '<b>{point.x}</b>',
+        formatter: function() {
+            var s = '<b>'+ this.x +'</b>',
+            cumulative_amount = 0;
+            for (var i = this.points.length - 1 ; i >= 0 ; i--) {
+                cumulative_amount += this.points[i].y;
+                if (this.points[i].y !== 0){
                     s += '<br/>'+ this.points[i].series.name +': ' + cumulative_amount; 
-                  }
                 }
-                return s;
-            },
-            shared: true
+            }
+            return s;
         },
-        plotOptions: {
-            series: {
-                borderColor: '#151515'
-
-            },
-            bar: {
-                stacking: 'normal',
-                dataLabels: {
-                    enabled: false,
-                    color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white'
+        shared: true
+    },
+    plotOptions: {
+        series: {
+            borderColor: '#151515',
+            events: {
+                legendItemClick: function () {
+                    return false; 
                 }
             }
         },
-                series: [{
-            name: '940',
-            color: '#00E676',
-            data: [10500,123934,6555,3390,6198,5650,7246,5414,8180,6585,5443,6575,7604,6234,7040,6557,6627,6869,6065,5942,6967,6907,4711,3202,5936,4631,6926,5171,5270,4797,5870,4967,0,3657,3872,2234,0,4822,3369,3554,2546,2033,3520,2325,1415,2192]
-        }, {
-            name: '930',
-            color: '#db843d',
-            data: [9909,0,6972,3260,5942,4630,4669,6028,5507,5215,5939,4689,6441,5214,4039,6296,5428,5019,6201,5626,6334,6470,4106,6193,6145,4531,5634,4262,7660,5367,3914,3458,0,4461,3940,3529,0,2607,2566,2482,2616,1492,1991,2220,1867,585]
-        }, {
-            name: '920',
-            color: '#4198af',
-            data: [9132,0,5893,3388,4242,7556,6465,7128,4137,4650,4972,6090,5196,4798,5668,4542,5370,6188,5237,4741,6324,4775,5481,3116,5294,4759,5000,5296,4992,3466,3860,3697,0,3435,3096,2784,0,2891,3846,4083,3660,2380,3758,3435,919,1767]
-        }, {
-            name: '910',
-            color: '#71588f',
-            data: [9164,0,5644,3077,4815,3477,3845,3068,5209,5359,5567,3957,5703,6013,4020,4997,3824,3521,3539,4616,4712,5960,3749,4123,5678,4414,4392,3967,4260,4045,2442,4391,0,3569,3074,3527,0,1170,1483,2546,2292,3637,2146,1328,761,644]
-        }, {
-            name: '900',
-            color: '#89a54e',
-            data: [6839,0,4847,3127,4614,4879,4053,5329,4702,4680,4979,5230,58831,3745,5438,4415,4426,4613,4841,3201,4842,3301,3745,3785,3180,3255,5360,2398,3877,2990,5656,2971,3646,3590,3522,3239,4360,4443,3122,1607,1874,1680,1400,1535,1610,133]
-        }, {
-            name: '890',
-            color: '#aa4643',
-            data: [92081,0,63569,3683,3238,4026,4372,2881,2746,3008,3805,2687,0,4126,57001,3499,4110,4724,4556,4849,4711,5183,2666,3912,4895,50897,3632,3413,4180,3688,1596,3552,4730,1639,2532,2854,4668,1656,1740,1693,1407,3051,1541,2191,894,1028]
-        }, {
-            name: '880',
-            color: '#4572a7',
-            data: [0,0,0,72020,60502,57490,55409,55581,54320,55000,53589,54789,0,53193,0,51999,52015,50811,50136,50673,45177,42743,49902,49500,42504,0,41292,47313,41413,44078,43658,43810,55220,40604,40891,41832,50731,36295,36321,35487,36080,35221,33809,29592,29268,20538]
-        }]
+        bar: {
+            stacking: 'normal',
+            dataLabels: {
+                enabled: false,
+                color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white'
+            }
+        },
+    },
+    series: [{
+        name: '970',
+        color: '#ffeb3b',
+        data : [0,123233,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+    }, {
+        name: '940',
+        color: '#00E676',
+        data: [9773,0,7143,3119,5900,7355,5504,6827,4874,7109,6128,6523,5548,5516,7314,5712,5509,5426,6936,4678,5985,7694,5524,5714,5821,5706,4563,6855,5989,5550,7084,4543,0,5363,5260,4736,0,3686,3329,3687,3229,2732,1023,1884,1502,1420]
+    }, {
+        name: '930',
+        color: '#db843d',
+        data: [11044,0,6929,3996,6923,5357,6139,4319,5476,5263,6104,4626,6153,5485,4997,5746,6623,7321,4560,6772,6465,6058,4955,4053,5783,4093,5497,4945,4982,3846,1562,3914,0,3481,2100,3607,0,3768,2956,2027,1866,3282,3755,3645,1097,0]
+    }, {
+        name: '920',
+        color: '#4198af',
+        data: [9535,0,5657,2996,3319,5210,5005,6449,6075,6147,4799,5635,4432,5056,6359,5497,4009,3220,5394,4422,5895,5203,4496,4705,6597,5501,3073,5283,5620,3896,5084,5238,0,4020,3724,3033,0,2390,2544,3985,3081,1153,2328,2001,1463,1782]
+    }, {
+        name: '910',
+        color: '#71588f',
+        data: [6845,0,6006,3901,5201,4635,4848,4028,5129,4371,5196,4743,5739,4909,5158,4282,6321,3863,4805,4558,5246,5629,3118,4447,3889,2972,4724,5247,4953,5990,3630,2087,0,3215,3387,4469,0,2912,2917,3026,1811,2579,3230,1207,1441,1218]
+    }, {
+        name: '900',
+        color: '#89a54e',
+        data: [8527,0,3928,2958,5556,4768,5018,4686,3491,4863,4149,4140,3845,4032,59461,4644,3229,5952,4286,3778,5603,3954,3983,1984,4561,4179,3343,4348,4578,1844,2143,3953,3547,2366,3058,2334,4146,2320,3254,1429,1385,2186,2080,2645,0,333]
+    }, {
+        name: '890',
+        color: '#aa4643',
+        data: [91678,0,64259,3942,2196,4721,3833,4225,3500,56442,3675,4492,3779,4014,0,3528,3342,4208,3736,3826,3884,4694,4450,4761,4208,2845,51137,4369,4176,3126,4733,2515,4653,2688,2245,3345,3800,3231,1645,3465,3256,2173,1397,1827,1888,1077]
+    }, {
+        name: '880',
+        color: '#4572a7',
+        data: [0,0,0,71021,60427,57123,55405,54559,55939,0,54119,53521,54157,54280,0,52282,52612,51011,50811,51391,45715,42846,49346,49228,42258,47148,0,40647,40681,44565,43603,44936,55437,41253,42386,40044,51398,35620,35782,34223,36171,35943,34152,29148,29452,20096]
+    }]
 });
