@@ -6,11 +6,35 @@
     <link rel="stylesheet" href="css/base.css">
     <title>Bloodytrinkets</title>
     <script type="text/javascript">
+      var fight_style = "patchwerk";
+      var active_spec = "";
+
+      function switch_fight_style() {
+        if (fight_style == "patchwerk") {
+          fight_style = "beastlord";
+          document.getElementById("fight_style_button").innerHTML = "&lt; Switch to patchwerk";
+        } else if (fight_style=="beastlord") {
+          fight_style = "patchwerk";
+          document.getElementById("fight_style_button").innerHTML = "Switch to beastlord &gt;";
+        } else {
+          fight_style = "patchwerk";
+          document.getElementById("fight_style_button").innerHTML = "Switch to beastlord &gt;";
+        }
+        switch_chart_to(active_spec);
+      }
+
       function switch_chart_to(spec) {
+        if (spec == "") {
+          return;
+        }
+
+        document.getElementById("fight_style_button").style.display = 'block';
+
         var container = document.getElementsByClassName("container");
         for (var i = container.length - 1; i >= 0; i--) {
-          if (container[i].id === spec) {
+          if (container[i].id === spec + "_" + fight_style) {
             container[i].style.display = 'block';
+            active_spec = spec;
           } else {
             container[i].style.display = 'none';
           }
@@ -42,14 +66,13 @@
 
     <h3>Used settings</h3>
     <ul class="sim-settings" type="square">
-      <li>fight_style: patchwerk</li>
+      <li>fight_style: <a href="https://github.com/simulationcraft/simc/wiki/RaidEvents">patchwerk and beastlord</a></li>
       <li>fight_length: 300sec</li>
-      <li>target_error: 0.1</li>
-      <li>base profiles: <a href="http://www.simulationcraft.org/reports/Raid_T20M.html" target="blank">T20M</a> (no special profiles like DfA or gambling were used)</li>
+      <li>target_error: 0.1% (patchwerk) and 0.25% (beastlord)</li>
       <li>ptr: false</li>
-      <li>no second trinket was used for the simulations</li>
+      <li>base profiles: <a href="http://www.simulationcraft.org/reports/Raid_T20M.html" target="blank">T20M</a> (no special profiles like DfA or gambling were used)</li>
+      <li>a versatility stat stick was used in conjunction with the ones in the graph</li>
     </ul>
-    <p>I'm going to add more fight styles later. (I plan on adding at least one multi-target fight style.)</p>
 
     <div class="div-table">
       <div class="div-row">
@@ -143,32 +166,59 @@
         </div>
       </div>
     </div>
+    <div style="height: 40px;"></div>
 
-    <div class="container" id="death_knight_frost" style="display: none;" ></div>
-    <div class="container" id="death_knight_unholy" style="display: none;" ></div>
-    <div class="container" id="demon_hunter_havoc" style="display: none;" ></div>
-    <div class="container" id="druid_balance" style="display: none;" ></div>
-    <div class="container" id="druid_feral" style="display: none;" ></div>
-    <div class="container" id="hunter_beast_mastery" style="display: none;" ></div>
-    <div class="container" id="hunter_marksmanship" style="display: none;" ></div>
-    <div class="container" id="hunter_survival" style="display: none;" ></div>
-    <div class="container" id="mage_arcane" style="display: none;" ></div>
-    <div class="container" id="mage_fire" style="display: none;" ></div>
-    <div class="container" id="mage_frost" style="display: none;" ></div>
-    <div class="container" id="monk_windwalker" style="display: none;" ></div>
-    <div class="container" id="paladin_retribution" style="display: none;" ></div>
-    <div class="container" id="priest_shadow" style="display: none;" ></div>
-    <div class="container" id="rogue_assassination" style="display: none;" ></div>
-    <div class="container" id="rogue_outlaw" style="display: none;" ></div>
-    <div class="container" id="rogue_subtlety" style="display: none;" ></div>
-    <div class="container" id="shaman_elemental" style="display: none;" ></div>
-    <div class="container" id="shaman_enhancement" style="display: none;" ></div>
-    <div class="container" id="warlock_affliction" style="display: none;" ></div>
-    <div class="container" id="warlock_demonology" style="display: none;" ></div>
-    <div class="container" id="warlock_destruction" style="display: none;" ></div>
-    <div class="container" id="warrior_arms" style="display: none;" ></div>
-    <div class="container" id="warrior_fury" style="display: none;" ></div>
+    <button id="fight_style_button" onclick="switch_fight_style()" style="display: none;" >Switch to beastlord &gt;</button>
 
+    <div class="container" id="death_knight_frost_patchwerk" style="display: none;" ></div>
+    <div class="container" id="death_knight_unholy_patchwerk" style="display: none;" ></div>
+    <div class="container" id="demon_hunter_havoc_patchwerk" style="display: none;" ></div>
+    <div class="container" id="druid_balance_patchwerk" style="display: none;" ></div>
+    <div class="container" id="druid_feral_patchwerk" style="display: none;" ></div>
+    <div class="container" id="hunter_beast_mastery_patchwerk" style="display: none;" ></div>
+    <div class="container" id="hunter_marksmanship_patchwerk" style="display: none;" ></div>
+    <div class="container" id="hunter_survival_patchwerk" style="display: none;" ></div>
+    <div class="container" id="mage_arcane_patchwerk" style="display: none;" ></div>
+    <div class="container" id="mage_fire_patchwerk" style="display: none;" ></div>
+    <div class="container" id="mage_frost_patchwerk" style="display: none;" ></div>
+    <div class="container" id="monk_windwalker_patchwerk" style="display: none;" ></div>
+    <div class="container" id="paladin_retribution_patchwerk" style="display: none;" ></div>
+    <div class="container" id="priest_shadow_patchwerk" style="display: none;" ></div>
+    <div class="container" id="rogue_assassination_patchwerk" style="display: none;" ></div>
+    <div class="container" id="rogue_outlaw_patchwerk" style="display: none;" ></div>
+    <div class="container" id="rogue_subtlety_patchwerk" style="display: none;" ></div>
+    <div class="container" id="shaman_elemental_patchwerk" style="display: none;" ></div>
+    <div class="container" id="shaman_enhancement_patchwerk" style="display: none;" ></div>
+    <div class="container" id="warlock_affliction_patchwerk" style="display: none;" ></div>
+    <div class="container" id="warlock_demonology_patchwerk" style="display: none;" ></div>
+    <div class="container" id="warlock_destruction_patchwerk" style="display: none;" ></div>
+    <div class="container" id="warrior_arms_patchwerk" style="display: none;" ></div>
+    <div class="container" id="warrior_fury_patchwerk" style="display: none;" ></div>
+
+    <div class="container" id="death_knight_frost_beastlord" style="display: none;" ></div>
+    <div class="container" id="death_knight_unholy_beastlord" style="display: none;" ></div>
+    <div class="container" id="demon_hunter_havoc_beastlord" style="display: none;" ></div>
+    <div class="container" id="druid_balance_beastlord" style="display: none;" ></div>
+    <div class="container" id="druid_feral_beastlord" style="display: none;" ></div>
+    <div class="container" id="hunter_beast_mastery_beastlord" style="display: none;" ></div>
+    <div class="container" id="hunter_marksmanship_beastlord" style="display: none;" ></div>
+    <div class="container" id="hunter_survival_beastlord" style="display: none;" ></div>
+    <div class="container" id="mage_arcane_beastlord" style="display: none;" ></div>
+    <div class="container" id="mage_fire_beastlord" style="display: none;" ></div>
+    <div class="container" id="mage_frost_beastlord" style="display: none;" ></div>
+    <div class="container" id="monk_windwalker_beastlord" style="display: none;" ></div>
+    <div class="container" id="paladin_retribution_beastlord" style="display: none;" ></div>
+    <div class="container" id="priest_shadow_beastlord" style="display: none;" ></div>
+    <div class="container" id="rogue_assassination_beastlord" style="display: none;" ></div>
+    <div class="container" id="rogue_outlaw_beastlord" style="display: none;" ></div>
+    <div class="container" id="rogue_subtlety_beastlord" style="display: none;" ></div>
+    <div class="container" id="shaman_elemental_beastlord" style="display: none;" ></div>
+    <div class="container" id="shaman_enhancement_beastlord" style="display: none;" ></div>
+    <div class="container" id="warlock_affliction_beastlord" style="display: none;" ></div>
+    <div class="container" id="warlock_demonology_beastlord" style="display: none;" ></div>
+    <div class="container" id="warlock_destruction_beastlord" style="display: none;" ></div>
+    <div class="container" id="warrior_arms_beastlord" style="display: none;" ></div>
+    <div class="container" id="warrior_fury_beastlord" style="display: none;" ></div>
     
 
     <p>If a trinket is missing (but not timewalking trinkets, which you have to sim yourself) please contact me via <a href="https://github.com/Bloodmallet/bloodytrinkets/issues" target="blank">GitHub - Issues</a> and create an issue there. I'll make sure to add it later on. </p>
@@ -180,6 +230,7 @@
 
 
     <script src="https://code.highcharts.com/highcharts.js"></script>
+
     <script src="./js/death_knight_frost_patchwerk.js"></script>
     <script src="./js/death_knight_unholy_patchwerk.js"></script>
     <script src="./js/demon_hunter_havoc_patchwerk.js"></script>
@@ -204,5 +255,31 @@
     <script src="./js/warlock_destruction_patchwerk.js"></script>
     <script src="./js/warrior_arms_patchwerk.js"></script>
     <script src="./js/warrior_fury_patchwerk.js"></script>
+
+    <script src="./js/death_knight_frost_beastlord.js"></script>
+    <script src="./js/death_knight_unholy_beastlord.js"></script>
+    <script src="./js/demon_hunter_havoc_beastlord.js"></script>
+    <script src="./js/druid_balance_beastlord.js"></script>
+    <script src="./js/druid_feral_beastlord.js"></script>
+    <script src="./js/hunter_beast_mastery_beastlord.js"></script>
+    <script src="./js/hunter_marksmanship_beastlord.js"></script>
+    <script src="./js/hunter_survival_beastlord.js"></script>
+    <script src="./js/mage_arcane_beastlord.js"></script>
+    <script src="./js/mage_fire_beastlord.js"></script>
+    <script src="./js/mage_frost_beastlord.js"></script>
+    <script src="./js/monk_windwalker_beastlord.js"></script>
+    <script src="./js/paladin_retribution_beastlord.js"></script>
+    <script src="./js/priest_shadow_beastlord.js"></script>
+    <script src="./js/rogue_assassination_beastlord.js"></script>
+    <script src="./js/rogue_outlaw_beastlord.js"></script>
+    <script src="./js/rogue_subtlety_beastlord.js"></script>
+    <script src="./js/shaman_elemental_beastlord.js"></script>
+    <script src="./js/shaman_enhancement_beastlord.js"></script>
+    <script src="./js/warlock_affliction_beastlord.js"></script>
+    <script src="./js/warlock_demonology_beastlord.js"></script>
+    <script src="./js/warlock_destruction_beastlord.js"></script>
+    <script src="./js/warrior_arms_beastlord.js"></script>
+    <script src="./js/warrior_fury_beastlord.js"></script>
+
   </body>
 </html>
