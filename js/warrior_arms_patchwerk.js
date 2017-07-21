@@ -1,4 +1,4 @@
-Highcharts.chart('warrior_arms', {
+Highcharts.chart('warrior_arms_patchwerk', {
     chart: {
         type: 'bar'
     },

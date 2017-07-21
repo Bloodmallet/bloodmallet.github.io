@@ -1,4 +1,4 @@
-Highcharts.chart('hunter_marksmanship', {
+Highcharts.chart('hunter_marksmanship_patchwerk', {
     chart: {
         type: 'bar'
     },
@@ -6,10 +6,10 @@ Highcharts.chart('hunter_marksmanship', {
         text: 'Hunter - Marksmanship - Patchwerk'
     },
     subtitle: {
-        text: 'Last generated: 2017-07-20 10:45:20.573881'
+        text: 'Last generated: 2017-07-21 08:27:36.123114'
     },
     xAxis: {
-        categories: ["Kil'jaeden's Burning Wish","Tarnished Sentinel Medallion","Unstable Arcano Crystal","Convergence of Fates","Terror From Below","Bloodthirsty Instinct","Engine of Eradication","Stat Stick (Mastery)","Thrice-Accursed Compass","Cradle of Anguish","Stormsinger Fulmination Charge","Stat Stick (Crit)","Stat Stick (Haste)","Chrono Shard","Stat Stick (Versatility)","Six-Feather Fan","PVP Badge of Conquest","Naraxas' Spiked Tongue","Tirathon's Betrayal","Fury of the Burning Sky","Nightblooming Frond","Moonlit Prism","Obelisk of the Void","Horn of Valor","PVP Insignia of Conquest","Spectral Thurible","Deteriorated Construct Core","Tempered Egg of Serpentrix","Icon of Rot","Twisting Wind","Aran's Relaxing Ruby","Oakheart's Gnarled Root","Splinters of Agronax","Mrrgria's Favor","Infernal Alchemist Stone","Caged Horror","Arcanogolem Digit","Eye of Skovald","Corrupted Starlight","Elementium Bomb Squirrel Generator","Unstable Horrorslime","Figurehead of the Naglfar","Ley Spark"]
+        categories: ["Kil'jaeden's Burning Wish","Tarnished Sentinel Medallion","Unstable Arcano Crystal","Convergence of Fates","Terror From Below","Engine of Eradication","Bloodthirsty Instinct","Stat Stick (Mastery)","Thrice-Accursed Compass","Cradle of Anguish","Stormsinger Fulmination Charge","Stat Stick (Crit)","Stat Stick (Haste)","Chrono Shard","Six-Feather Fan","PVP Badge of Conquest","Naraxas' Spiked Tongue","Tirathon's Betrayal","Fury of the Burning Sky","Nightblooming Frond","Moonlit Prism","Obelisk of the Void","PVP Insignia of Conquest","Horn of Valor","Deteriorated Construct Core","Spectral Thurible","Icon of Rot","Tempered Egg of Serpentrix","Aran's Relaxing Ruby","Twisting Wind","Oakheart's Gnarled Root","Splinters of Agronax","Mrrgria's Favor","Caged Horror","Infernal Alchemist Stone","Eye of Skovald","Arcanogolem Digit","Corrupted Starlight","Elementium Bomb Squirrel Generator","Unstable Horrorslime","Figurehead of the Naglfar","Ley Spark"]
     },
     yAxis: {
         min: 0,
@@ -54,7 +54,10 @@ Highcharts.chart('hunter_marksmanship', {
         },
         shared: true,
         backgroundColor: '#eee',
-        borderColor: '#bbb'
+        borderColor: '#bbb',
+        style: {
+            color: 'black'
+        }
     },
     plotOptions: {
         series: {
@@ -76,34 +79,34 @@ Highcharts.chart('hunter_marksmanship', {
     series: [{
         name: '970',
         color: '#ffeb3b',
-        data : [159474,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+        data : [162723,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
     }, {
         name: '940',
         color: '#00E676',
-        data: [0,10353,4315,7273,8270,8512,7752,7928,8261,8345,7936,8171,7913,7440,6553,7138,6394,5697,9494,5442,7230,7134,5812,6049,5623,4431,7100,7822,5131,7542,4461,5229,5180,5502,0,1622,4769,2528,3948,4089,1748,1349,1200]
+        data: [0,9923,3671,7116,9434,6946,7224,6350,7831,11625,7258,7930,7920,7153,7745,8774,5338,9355,5153,8805,7521,6646,6550,5791,9176,3867,6052,6968,4992,5598,5943,5486,5590,4812,0,3368,6959,3501,3088,1467,1994,0]
     }, {
         name: '930',
         color: '#db843d',
-        data: [0,10289,4063,5159,7450,6936,5646,7874,6672,7926,4990,5886,7832,7039,7005,8158,5891,6415,7404,4388,7280,6133,6502,4727,4827,5735,8459,6790,3968,5246,5285,4154,6607,3357,0,4617,5037,4150,1791,1144,3317,889,2185]
+        data: [0,9994,3379,4071,7177,9161,7872,7377,6379,6262,6766,6003,7336,6342,9212,6356,4699,7336,5249,6817,6557,6526,5830,6953,5564,5654,3389,6965,4863,6940,3311,6435,4200,2085,0,4148,3043,3727,3355,2764,438,622]
     }, {
         name: '920',
         color: '#4198af',
-        data: [0,8640,3958,5334,6825,4957,7748,5591,6431,7222,6972,7690,6605,6145,6038,7572,6574,4651,6587,5323,7152,6694,6141,5847,5567,4285,5083,5589,4486,6006,2344,5291,5067,3131,0,2447,4660,1833,3910,3580,497,2246,0]
+        data: [0,9480,6074,5359,6855,6378,7149,7749,8055,8475,6930,6514,7156,6178,7427,4484,6761,7496,5411,7414,7250,5965,2996,2815,7279,4042,5861,6218,2621,6787,5472,4559,3505,4685,0,3615,5997,342,1075,2149,2510,86]
     }, {
         name: '910',
         color: '#71588f',
-        data: [0,7336,4386,3871,6372,5809,5367,5050,5624,5138,6079,3651,5640,5108,6092,6887,4625,4355,4837,4827,5902,3143,4128,4444,3867,4745,4625,5760,3311,4844,3514,3409,3172,4469,0,3022,4628,3133,630,2053,960,1952,0]
+        data: [0,8351,4867,3573,6539,5944,4680,6240,4775,6757,6411,6683,4520,4454,6308,7272,4739,5789,4284,5638,2930,4972,4784,4607,4415,6382,2961,5353,4555,5053,4176,5456,3673,1956,0,3018,4288,5638,3519,1682,166,1971]
     }, {
         name: '900',
         color: '#89a54e',
-        data: [0,8324,3531,3043,3274,4798,5446,6057,5769,4513,5152,5708,3041,5346,3828,6366,4842,4719,6531,2403,5452,3021,2100,3607,4329,4436,4769,4116,4834,5553,4418,3529,4574,3852,5973,4021,3868,4253,5090,2529,2215,210,2103]
+        data: [0,7550,2720,5054,6700,4739,6125,5886,5902,4082,4880,4911,5952,5306,7406,4016,3401,5393,3408,4741,4108,3551,5303,4699,5450,4114,4200,3785,3515,5042,3207,3292,4096,3586,4977,2184,4742,0,1339,1616,2665,0]
     }, {
         name: '890',
         color: '#aa4643',
-        data: [0,101673,3505,3669,82799,5315,81239,5815,4173,73911,3975,4415,4548,3178,4519,5203,4410,2996,5862,3426,4108,2235,3395,4218,2917,58077,5378,5364,2220,5258,1175,2806,4095,1290,2964,576,2975,0,0,2588,1675,1214,1254]
+        data: [0,105136,2812,3740,82468,83998,5083,4785,6104,74428,4915,5233,2152,5594,4849,4656,4784,5806,3990,6812,1526,1771,4073,4222,3615,58320,3240,5923,2470,5266,3962,5314,3341,3636,3688,2028,3206,4217,3163,1144,1689,1796]
     }, {
         name: '880',
         color: '#4572a7',
-        data: [0,0,112321,90837,0,77135,0,73202,73941,0,70158,69720,64733,65021,64787,56043,61532,64137,50602,62024,50225,56375,55821,54914,56177,0,45669,45117,55444,43908,56254,51594,46627,51209,60094,50562,35962,46001,46060,40956,42547,33169,33448]
+        data: [0,0,117505,93128,0,0,78195,76240,75145,0,71502,71151,67287,65665,56669,62024,65322,51074,63098,49546,58289,57524,55760,55838,47342,0,56020,46079,57165,44392,51522,46438,51443,50208,61087,47024,35202,45926,42514,43665,33323,35125]
     }]
 });

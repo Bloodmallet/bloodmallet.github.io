@@ -1,4 +1,4 @@
-Highcharts.chart('warlock_demonology', {
+Highcharts.chart('warlock_demonology_patchwerk', {
     chart: {
         type: 'bar'
     },

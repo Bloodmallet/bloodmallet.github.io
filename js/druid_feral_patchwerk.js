@@ -1,4 +1,4 @@
-Highcharts.chart('druid_feral', {
+Highcharts.chart('druid_feral_patchwerk', {
     chart: {
         type: 'bar'
     },
@@ -6,10 +6,10 @@ Highcharts.chart('druid_feral', {
         text: 'Druid - Feral - Patchwerk'
     },
     subtitle: {
-        text: 'Last generated: 2017-07-20 01:50:23.485304'
+        text: 'Last generated: 2017-07-21 08:06:08.158069'
     },
     xAxis: {
-        categories: ["Kil'jaeden's Burning Wish","Specter of Betrayal","Eye of Command","Vial of Ceaseless Toxins","Nightblooming Frond","Engine of Eradication","Stat Stick (Mastery)","Six-Feather Fan","Chaos Talisman","Convergence of Fates","Stat Stick (Crit)","Stat Stick (Versatility)","Cradle of Anguish","Entwined Elemental Foci","PVP Badge of Conquest","Thrice-Accursed Compass","Memento of Angerboda","Bloodthirsty Instinct","Gift of Radiance","Tirathon's Betrayal","Arcanogolem Digit","Chrono Shard","Stat Stick (Haste)","Nightmare Egg Shell","Bloodstained Handkerchief","Umbral Moonglaives","Infernal Cinders","Unstable Arcano Crystal","Tempered Egg of Serpentrix","Splinters of Agronax","PVP Insignia of Conquest","Draught of Souls","Horn of Valor","Darkmoon Deck: Dominion","Infernal Alchemist Stone","The Devilsaur's Bite","Faulty Countermeasure","Spontaneous Appendages","Terrorbound Nexus","Nature's Call","Mark of Dargrul","Tiny Oozeling in a Jar","Spiked Counterweight","Windscar Whetstone","Toe Knee's Promise","Giant Ornamental Pearl","Ravaged Seed Pod","Ley Spark"]
+        categories: ["Kil'jaeden's Burning Wish","Specter of Betrayal","Eye of Command","Engine of Eradication","Nightblooming Frond","Vial of Ceaseless Toxins","Stat Stick (Mastery)","Six-Feather Fan","Stat Stick (Crit)","Convergence of Fates","Cradle of Anguish","Memento of Angerboda","Chaos Talisman","Entwined Elemental Foci","Bloodthirsty Instinct","Thrice-Accursed Compass","PVP Badge of Conquest","Gift of Radiance","Tirathon's Betrayal","Arcanogolem Digit","Stat Stick (Haste)","Chrono Shard","Nightmare Egg Shell","Unstable Arcano Crystal","Bloodstained Handkerchief","Umbral Moonglaives","Infernal Cinders","Tempered Egg of Serpentrix","Splinters of Agronax","PVP Insignia of Conquest","Draught of Souls","Darkmoon Deck: Dominion","Horn of Valor","Infernal Alchemist Stone","The Devilsaur's Bite","Faulty Countermeasure","Spontaneous Appendages","Terrorbound Nexus","Nature's Call","Tiny Oozeling in a Jar","Mark of Dargrul","Windscar Whetstone","Spiked Counterweight","Toe Knee's Promise","Giant Ornamental Pearl","Ravaged Seed Pod","Ley Spark"]
     },
     yAxis: {
         min: 0,
@@ -54,7 +54,10 @@ Highcharts.chart('druid_feral', {
         },
         shared: true,
         backgroundColor: '#eee',
-        borderColor: '#bbb'
+        borderColor: '#bbb',
+        style: {
+            color: 'black'
+        }
     },
     plotOptions: {
         series: {
@@ -76,34 +79,34 @@ Highcharts.chart('druid_feral', {
     series: [{
         name: '970',
         color: '#ffeb3b',
-        data : [146705,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+        data : [151675,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
     }, {
         name: '940',
         color: '#00E676',
-        data: [0,12587,8133,11393,9717,8271,9440,9310,9615,7578,8221,8507,8891,7373,9129,8461,6697,6420,8654,7816,8444,8251,6562,8803,7795,6108,6777,2083,7231,6533,6607,6313,6189,0,0,4593,3678,4369,2698,2844,3090,1279,3920,2871,2976,2072,2211,711]
+        data: [0,11847,8737,10538,11222,10738,9662,10654,8413,6602,9456,8358,7871,7379,8652,7738,9247,8085,9796,9472,7271,8032,7023,3270,8767,6130,6272,8335,8318,6244,7054,0,5360,0,3647,4301,4214,4373,595,1291,3126,2066,3810,2987,970,1025,416]
     }, {
         name: '930',
         color: '#db843d',
-        data: [0,12262,7809,7393,10004,7350,7952,8479,7435,5268,6790,6981,7732,7346,6594,6512,7756,8574,7066,8800,8022,7165,7428,5416,8572,6186,6522,3705,7293,7117,5996,6382,5765,0,0,4892,4025,2628,3109,1401,2643,3078,2622,831,2412,1208,2109,1303]
+        data: [0,10970,7276,8361,9137,7896,6560,9106,6767,6163,7864,7514,6546,7629,7346,8220,6807,6916,9154,7939,7117,7928,6770,5580,7478,7093,5998,7311,6724,7348,4861,0,5384,0,5702,4166,3140,3850,3202,2749,2402,2746,2308,2756,2841,3032,2409]
     }, {
         name: '920',
         color: '#4198af',
-        data: [0,8669,8477,8842,8636,7901,6992,8362,6386,6660,7619,6443,6938,6744,7270,7194,6089,5141,5947,6944,6555,6285,6151,6433,4789,5415,4669,3905,7171,5502,5233,6155,4345,0,0,3450,3294,4695,3111,2186,865,2341,3032,2207,1443,2015,1499,0]
+        data: [0,10576,8280,7092,9339,8324,7922,8919,7861,6490,5888,6280,9477,7136,7897,6173,7455,6961,6336,7850,6225,6400,7664,2549,6950,5618,5982,7356,6078,3735,7195,0,5685,0,4041,3306,3758,404,2347,3507,2273,1398,2803,1173,2740,2589,0]
     }, {
         name: '910',
         color: '#71588f',
-        data: [0,7394,6339,8062,6523,6667,4732,8770,6808,5395,5668,5891,5505,5420,5996,6649,6025,7010,5836,6418,7409,5101,5519,5808,7219,5055,5442,1324,4612,7360,4449,4802,5235,0,0,3117,3639,2761,1802,2710,3273,1702,1152,2037,3428,2922,2690,1312]
+        data: [0,9824,6968,6219,7546,8487,7123,6846,6441,5761,7218,7428,4913,5910,5608,6133,6147,6206,7478,5899,5814,5190,5115,2441,7083,5003,3959,6603,5701,6192,5604,0,5299,0,2445,2147,2132,4546,2394,978,2024,2893,2405,4257,1725,566,1296]
     }, {
         name: '900',
         color: '#89a54e',
-        data: [0,94105,6484,6166,7317,5886,6929,6189,6431,5928,5652,6129,7055,7194,4928,5323,5943,5212,5459,5854,5979,5954,5652,5322,5737,4387,4997,2863,6087,2870,4884,4609,2752,6777,6255,4149,3303,2523,2560,891,82,2319,2217,1814,2185,0,1683,0]
+        data: [0,94147,4023,6662,8109,8302,4544,6379,6801,4602,6555,5498,6093,5305,4914,5404,4883,5435,6222,6888,5200,6780,5540,4694,5299,3768,5722,3731,5148,4065,2985,5978,2798,5245,2652,4478,3726,1710,2618,2666,2267,927,1383,2152,1669,1545,0]
     }, {
         name: '890',
         color: '#aa4643',
-        data: [0,0,4762,73385,7401,76234,5574,5872,4564,2461,4174,5265,68645,5223,4463,4167,4937,5749,4786,5727,5087,4574,5599,5513,4889,61948,60569,3165,5208,5470,4984,4232,4375,4622,4639,2713,1916,1969,3184,2811,3096,1190,2213,1944,2188,2548,648,615]
+        data: [0,0,6428,78661,6135,72952,4580,5725,4486,4187,70335,4593,5280,6418,5356,5946,5664,4005,4897,4973,6053,2838,4989,1232,6213,63832,62861,6090,4627,4788,5329,6499,2994,5123,3744,1241,1819,3399,600,1439,1395,924,2380,2931,879,840,434]
     }, {
         name: '880',
         color: '#4572a7',
-        data: [0,0,76703,0,64255,0,67800,60836,65229,72644,67339,66183,0,64848,65503,64858,65204,63369,62494,56758,55046,58101,57932,56581,54159,0,0,71911,50709,53152,55799,52965,51446,68269,61048,45580,41053,41383,37951,39345,33052,33968,28799,31608,27722,28964,25736,21739]
+        data: [0,0,80175,0,65666,0,71998,62121,68603,74400,0,67572,66960,67022,66336,66353,65605,64854,57570,55597,59988,60100,58524,75812,53517,0,0,51127,53928,57370,54364,69491,53620,62635,47733,43445,43364,39901,42336,35557,34556,34446,29823,28183,29968,26867,22730]
     }]
 });

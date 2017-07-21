@@ -1,4 +1,4 @@
-Highcharts.chart('shaman_elemental', {
+Highcharts.chart('shaman_elemental_patchwerk', {
     chart: {
         type: 'bar'
     },
@@ -6,10 +6,10 @@ Highcharts.chart('shaman_elemental', {
         text: 'Shaman - Elemental - Patchwerk'
     },
     subtitle: {
-        text: 'Last generated: 2017-07-20 05:03:03.954082'
+        text: 'Last generated: 2017-07-21 11:24:02.679604'
     },
     xAxis: {
-        categories: ["Kil'jaeden's Burning Wish","Unstable Arcano Crystal","Tarnished Sentinel Medallion","Whispers in the Dark","Stat Stick (Mastery)","Terror From Below","Dreadstone of Endless Shadows","Tome of Unraveling Sanity","Stat Stick (Crit)","Stat Stick (Versatility)","PVP Badge of Dominance","Padawsen's Unlucky Charm","Charm of the Rising Tide","Infernal Writ","Stormsinger Fulmination Charge","Stat Stick (Haste)","Erratic Metronome","Chrono Shard","Horn of Valor","Star Gate","Naraxas' Spiked Tongue","PVP Insignia of Dominance","Deteriorated Construct Core","Obelisk of the Void","Twisting Wind","Bough of Corruption","Darkmoon Deck: Hellfire","Fury of the Burning Sky","Portable Manacracker","Devilsaur Shock-Baton","Spectral Thurible","Moonlit Prism","Oakheart's Gnarled Root","Icon of Rot","Infernal Alchemist Stone","Aran's Relaxing Ruby","Swarming Plaguehive","Mrrgria's Favor","Caged Horror","Corrupted Starlight","Wriggling Sinew","Eye of Skovald","Pharameres Forbidden Grimoire","Elementium Bomb Squirrel Generator","Unstable Horrorslime","Figurehead of the Naglfar"]
+        categories: ["Kil'jaeden's Burning Wish","Unstable Arcano Crystal","Tarnished Sentinel Medallion","Whispers in the Dark","Stat Stick (Mastery)","Terror From Below","Dreadstone of Endless Shadows","Stat Stick (Crit)","Tome of Unraveling Sanity","Charm of the Rising Tide","Padawsen's Unlucky Charm","PVP Badge of Dominance","Infernal Writ","Stormsinger Fulmination Charge","Stat Stick (Haste)","Erratic Metronome","Chrono Shard","Naraxas' Spiked Tongue","Horn of Valor","PVP Insignia of Dominance","Star Gate","Obelisk of the Void","Deteriorated Construct Core","Darkmoon Deck: Hellfire","Bough of Corruption","Fury of the Burning Sky","Twisting Wind","Portable Manacracker","Devilsaur Shock-Baton","Spectral Thurible","Moonlit Prism","Icon of Rot","Oakheart's Gnarled Root","Infernal Alchemist Stone","Aran's Relaxing Ruby","Swarming Plaguehive","Mrrgria's Favor","Caged Horror","Corrupted Starlight","Wriggling Sinew","Eye of Skovald","Pharameres Forbidden Grimoire","Elementium Bomb Squirrel Generator","Unstable Horrorslime","Figurehead of the Naglfar"]
     },
     yAxis: {
         min: 0,
@@ -54,7 +54,10 @@ Highcharts.chart('shaman_elemental', {
         },
         shared: true,
         backgroundColor: '#eee',
-        borderColor: '#bbb'
+        borderColor: '#bbb',
+        style: {
+            color: 'black'
+        }
     },
     plotOptions: {
         series: {
@@ -76,34 +79,34 @@ Highcharts.chart('shaman_elemental', {
     series: [{
         name: '970',
         color: '#ffeb3b',
-        data : [129879,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+        data : [133407,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
     }, {
         name: '940',
         color: '#00E676',
-        data: [0,4285,7021,7399,7424,6207,8088,6674,6384,6342,6609,5994,6413,5888,5782,6000,5790,5795,4491,7754,4981,5603,7443,5930,6917,7250,0,5233,5038,4377,4794,5415,4761,5228,0,2993,4859,4343,2660,3357,3695,2343,3920,3363,2581,79]
+        data: [0,3724,8964,6652,7542,7750,6617,6552,5861,7765,6963,7159,6744,6207,6893,7405,5308,5697,6445,5023,7221,4459,6471,0,6962,4598,6370,7313,4992,3775,4512,3868,2895,0,3513,5047,4576,4301,2318,2206,2737,2193,1982,911,823]
     }, {
         name: '930',
         color: '#db843d',
-        data: [0,3795,6828,5089,6145,7842,6279,7053,6007,5717,6274,6909,6948,4668,5062,6331,5620,5652,4792,6215,5066,4864,5211,5563,6069,5145,0,4700,6486,4143,2656,3394,4284,1907,0,3537,2892,3280,3612,2662,2563,3102,2410,3234,0,2577]
+        data: [0,4246,5919,7023,5741,4875,6569,5742,7488,6854,7228,6587,5872,5468,5387,5267,6082,4806,4552,5504,5844,5922,6783,0,5503,4329,5619,5082,4316,4152,4167,3059,4858,0,3084,1612,2064,3464,3749,3122,2887,3279,2500,3064,2090]
     }, {
         name: '920',
         color: '#4198af',
-        data: [0,4493,6958,5697,4699,5262,5038,7851,4155,6119,4338,4393,4497,6445,6280,3973,6208,5656,6173,4923,4019,4239,7677,4134,5118,5292,0,3134,5582,4340,3870,3686,1639,4837,0,4441,3313,1512,1943,1813,1571,2142,2638,1745,2832,116]
+        data: [0,4375,7599,5238,6903,6645,4878,5039,5958,5828,4337,3966,5053,4914,6807,6134,5739,5318,3098,4247,6651,3809,5648,0,4935,4270,5731,6098,4128,3564,4771,4294,3158,0,5179,7062,3540,208,3863,3007,2232,3252,1970,380,606]
     }, {
         name: '910',
         color: '#71588f',
-        data: [0,3068,4984,4953,5532,4164,4899,5030,5687,5467,6221,5863,4867,3983,3262,6103,4178,4734,3244,5028,3674,3412,1557,3180,4740,4652,0,2872,4477,2990,5143,5012,4576,2962,0,989,3560,3005,1964,2905,2773,2919,3097,2079,937,256]
+        data: [0,3935,5316,4233,4990,5761,6430,5476,5986,3551,5368,5230,4784,3899,3895,4396,5324,2804,4457,4731,4259,4225,3778,0,5643,4361,5073,4176,3415,4703,3868,4155,3959,0,2720,2253,1825,3443,878,1212,2229,3611,2358,2105,1340]
     }, {
         name: '900',
         color: '#89a54e',
-        data: [0,3544,4643,6119,5137,5761,4562,66400,5567,4263,4863,5716,4546,5134,4942,5188,4038,3619,3763,5590,4179,4164,6069,4297,5278,4680,3620,3845,4474,2123,3086,2166,3262,2689,4087,3779,2950,2805,1751,2271,2739,1520,1569,2408,2229,417]
+        data: [0,3963,5650,6587,5531,3618,3550,4474,69297,5686,5337,6173,4543,4538,5081,4450,4035,3140,4247,2573,5138,4791,5432,4735,4665,1627,3721,3356,3741,3103,4278,2582,2975,4959,1895,2689,3452,3869,2941,2268,1464,2107,2891,459,0]
     }, {
         name: '890',
         color: '#aa4643',
-        data: [0,3609,72135,3552,3951,66286,4531,0,5179,4452,3085,2590,61551,3528,3759,3470,4424,4340,2922,2716,2959,3004,4528,3569,4628,4499,5396,3324,3558,5586,50199,3827,2912,2666,3602,2430,2261,2473,2624,2397,1885,1682,1910,400,714,1899]
+        data: [0,3177,74097,4491,2901,70190,5524,5790,0,63693,4159,2959,5395,4670,3921,4952,4031,4454,4277,4184,4161,3571,4328,4546,3496,4236,3764,5484,3325,52017,3827,3381,4157,3174,1755,3393,2754,515,1612,3580,3561,2140,1054,1920,1979]
     }, {
         name: '880',
         color: '#4572a7',
-        data: [0,84960,0,67859,63096,0,60164,0,58771,57267,58012,57871,0,56769,57296,54765,54599,53743,51484,44531,51587,50727,42215,47434,39803,39996,62241,48109,40820,46499,0,44636,44170,44548,54578,42055,40151,39054,39172,37865,36759,37030,34585,35522,34572,26760]
+        data: [0,88850,0,70365,65735,0,62147,61685,0,0,59074,59913,58105,59146,56827,56116,55900,53358,52279,52401,44927,49198,43177,64655,42416,50132,43047,41539,48899,0,45107,45776,44592,56276,45445,40889,40595,40672,40807,37930,37643,35173,36871,36079,27794]
     }]
 });
