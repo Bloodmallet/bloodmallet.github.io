@@ -20,6 +20,12 @@
           fight_style = "patchwerk";
           document.getElementById("fight_style_button").innerHTML = "Switch to beastlord &gt;";
         }
+        // hide/show beastlord disclaimer
+        if (fight_style == "beastlord") {
+          document.getElementById("beastlord-disclaimer").style.display = 'block';
+        } else {
+          document.getElementById("beastlord-disclaimer").style.display = 'none';
+        }
         switch_chart_to(active_spec);
       }
 
@@ -30,6 +36,7 @@
 
         document.getElementById("fight_style_button").style.display = 'block';
 
+        // hide/show charts
         var container = document.getElementsByClassName("container");
         for (var i = container.length - 1; i >= 0; i--) {
           if (container[i].id === spec + "_" + fight_style) {
@@ -37,6 +44,15 @@
             active_spec = spec;
           } else {
             container[i].style.display = 'none';
+          }
+        }
+        // hide/show TC-resource and Discord of the spec
+        var tc_boxes = document.getElementsByClassName("tc-box");
+        for (var i = tc_boxes.length - 1; i >= 0; i--) {
+          if (tc_boxes[i].id === spec) {
+            tc_boxes[i].style.display = 'block';
+          } else {
+            tc_boxes[i].style.display = 'none';
           }
         }
         ga('send', 'event', 'spec', 'show ' + fight_style + ' chart', active_spec);
@@ -57,6 +73,7 @@
     <nav>
       <ul>
         <li><a href="./">Bloodytrinkets</a></li>
+        <li><a href="https://github.com/Bloodmallet/bloodmallet.github.io/commits/master">Changelog</a> </li>
       </ul>
     </nav>
 
@@ -67,14 +84,14 @@
 
     <h3>Used settings</h3>
     <ul class="sim-settings" type="square">
-      <li>fight_style: <a href="https://github.com/simulationcraft/simc/wiki/RaidEvents">patchwerk and beastlord</a></li>
+      <li>fight_style: <a href="https://github.com/simulationcraft/simc/wiki/RaidEvents" target="blank">patchwerk and beastlord</a></li>
       <li>fight_length: 300sec</li>
       <li>target_error: 0.1% (patchwerk) and 0.25% (beastlord)</li>
       <li>ptr: false</li>
       <li>base profiles: <a href="http://www.simulationcraft.org/reports/Raid_T20M.html" target="blank">T20M</a> (no special profiles like DfA or gambling were used)</li>
       <li>a versatility stat stick at ilevel 880 was used in conjunction with the ones in the graph</li>
     </ul>
-    <p>I might add <strong>tank specs</strong> in the near future. But still only dps charts and therefore dps trinkets. As tank specs are supported quite differently, beware of strange results because of that. As long as there are no standard tank profiles, I won't be able to simulate their trinkets.</p>
+    <p>I might add dps-trinket charts for <strong>tank specs</strong> in the near future. Because tank specs are supported quite differently, beware of strange results. As long as there are no standard tank profiles (T20M), I won't be able to create these charts.</p>
 
     <div class="div-table">
       <div class="div-row">
@@ -197,6 +214,9 @@
     <div class="container" id="warrior_arms_patchwerk" style="display: none;" ></div>
     <div class="container" id="warrior_fury_patchwerk" style="display: none;" ></div>
 
+    <div id="beastlord-disclaimer" style="display: none;">
+      <p><strong>Disclaimer:</strong> Beastlord simulations suffer from multiple weaknesses and these graphs should be taken with a huge boulder of salt. The standard profiles are most likely optimized for single target; itemwise (secondaries) and talentwise. As I don't change either it's very much possible that the results you see here, don't reflect the potential for your spec. In addition it's possible that the standard APL does not consider AoE fights. Make sure to check out your theorycrafters resources!</p>
+    </div>
     <div class="container" id="death_knight_frost_beastlord" style="display: none;" ></div>
     <div class="container" id="death_knight_unholy_beastlord" style="display: none;" ></div>
     <div class="container" id="demon_hunter_havoc_beastlord" style="display: none;" ></div>
@@ -221,13 +241,161 @@
     <div class="container" id="warlock_destruction_beastlord" style="display: none;" ></div>
     <div class="container" id="warrior_arms_beastlord" style="display: none;" ></div>
     <div class="container" id="warrior_fury_beastlord" style="display: none;" ></div>
+
+    <!-- TC resource area -->
+    <div class="tc-box" id="death_knight_frost" style="display: none;" >
+      <ul type="square">
+        <li>Theorycrafter resource: <a href="" target="blank"></a></li>
+        <li>Discord: <a href="https://discord.gg/hq6HwSB" target="blank">Acherus</a></li>
+      </ul>
+    </div>
+    </div>
+    <div class="tc-box" id="death_knight_unholy" style="display: none;" >
+      <ul type="square">
+        <li>Theorycrafter resource: <a href="" target="blank"></a></li>
+        <li>Discord: <a href="https://discord.gg/hq6HwSB" target="blank">Acherus</a></li>
+      </ul>
+    </div>
+    <div class="tc-box" id="demon_hunter_havoc" style="display: none;" >
+      <ul type="square">
+        <li>Theorycrafter resource: <a href="" target="blank"></a></li>
+        <li>Discord: <a href="https://discord.gg/b6AvnjM" target="blank">Mardum</a></li>
+      </ul>
+    </div>
+    <div class="tc-box" id="druid_balance" style="display: none;" >
+      <ul type="square">
+        <li>Theorycrafter resource: <a href="" target="blank"></a></li>
+        <li>Discord: <a href="http://discord.gg/dreamgrove" target="blank">Dreamgrove</a></li>
+      </ul>
+    </div>
+    <div class="tc-box" id="druid_feral" style="display: none;" >
+      <ul type="square">
+        <li>Theorycrafter resource: <a href="" target="blank"></a></li>
+        <li>Discord: <a href="http://discord.gg/dreamgrove" target="blank">Dreamgrove</a></li>
+      </ul>
+    </div>
+    <div class="tc-box" id="hunter_beast_mastery" style="display: none;" >
+      <ul type="square">
+        <li>Theorycrafter resource: <a href="" target="blank"></a></li>
+        <li>Discord: <a href="https://discord.gg/AERaAXd" target="blank">Warcraft Hunter's Union</a></li>
+      </ul>
+    </div>
+    <div class="tc-box" id="hunter_marksmanship" style="display: none;" >
+      <ul type="square">
+        <li>Theorycrafter resource: <a href="" target="blank"></a></li>
+        <li>Discord: <a href="https://discord.gg/AERaAXd" target="blank">Warcraft Hunter's Union</a></li>
+      </ul>
+    </div>
+    <div class="tc-box" id="hunter_survival" style="display: none;" >
+      <ul type="square">
+        <li>Theorycrafter resource: <a href="" target="blank"></a></li>
+        <li>Discord: <a href="https://discord.gg/AERaAXd" target="blank">Warcraft Hunter's Union</a></li>
+      </ul>
+    </div>
+    <div class="tc-box" id="mage_arcane" style="display: none;" >
+      <ul type="square">
+        <li>Theorycrafter resource: <a href="" target="blank"></a></li>
+        <li>Discord: <a href="https://discord.gg/0gLMHikX2aZ23VdA" target="blank">Hall of the Guardians</a></li>
+      </ul>
+    </div>
+    <div class="tc-box" id="mage_fire" style="display: none;" >
+      <ul type="square">
+        <li>Theorycrafter resource: <a href="" target="blank"></a></li>
+        <li>Discord: <a href="https://discord.gg/0gLMHikX2aZ23VdA" target="blank">Hall of the Guardians</a></li>
+      </ul>
+    </div>
+    <div class="tc-box" id="mage_frost" style="display: none;" >
+      <ul type="square">
+        <li>Theorycrafter resource: <a href="" target="blank"></a></li>
+        <li>Discord: <a href="https://discord.gg/0gLMHikX2aZ23VdA" target="blank">Hall of the Guardians</a></li>
+      </ul>
+    </div>
+    <div class="tc-box" id="monk_windwalker" style="display: none;" >
+      <ul type="square">
+        <li>Theorycrafter resource: <a href="" target="blank"></a></li>
+        <li>Discord: <a href="https://discord.gg/0dkfBMAxzTkWj21F" target="blank">PeakOfSerenity</a></li>
+      </ul>
+    </div>
+    <div class="tc-box" id="paladin_retribution" style="display: none;" >
+      <ul type="square">
+        <li>Theorycrafter resource: <a href="" target="blank"></a></li>
+        <li>Discord: <a href="https://discord.gg/0dvRDgpa5xZHFfnD" target="blank">Hammer of Wrath</a></li>
+      </ul>
+    </div>
+    <div class="tc-box" id="priest_shadow" style="display: none;" >
+      <ul type="square">
+        <li>Theorycrafter resource: <a href="" target="blank"></a></li>
+        <li>Discord: <a href="https://discord.gg/HowToPriest" target="blank">H2P - The Priest Community</a></li>
+      </ul>
+    </div>
+    <div class="tc-box" id="rogue_assassination" style="display: none;" >
+      <ul type="square">
+        <li>Theorycrafter resource: <a href="" target="blank"></a></li>
+        <li>Discord: <a href="https://discord.gg/xDbdHby" target="blank">Ravenholdt</a></li>
+      </ul>
+    </div>
+    <div class="tc-box" id="rogue_outlaw" style="display: none;" >
+      <ul type="square">
+        <li>Theorycrafter resource: <a href="" target="blank"></a></li>
+        <li>Discord: <a href="https://discord.gg/xDbdHby" target="blank">Ravenholdt</a></li>
+      </ul>
+    </div>
+    <div class="tc-box" id="rogue_subtlety" style="display: none;" >
+      <ul type="square">
+        <li>Theorycrafter resource: <a href="" target="blank"></a></li>
+        <li>Discord: <a href="https://discord.gg/xDbdHby" target="blank">Ravenholdt</a></li>
+      </ul>
+    </div>
+    <div class="tc-box" id="shaman_elemental" style="display: none;" >
+      <ul type="square">
+        <li>Theorycrafter resource: <a href="https://www.stormearthandlava.com/" target="blank">StormEarthAndLava</a></li>
+        <li>Discord: <a href="https://discord.gg/earthshrine" target="blank">Earthshrine</a></li>
+      </ul>
+    </div>
+    <div class="tc-box" id="shaman_enhancement" style="display: none;" >
+      <ul type="square">
+        <li>Theorycrafter resource: <a href="" target="blank"></a></li>
+        <li>Discord: <a href="https://discord.gg/earthshrine" target="blank">Earthshrine</a></li>
+      </ul>
+    </div>
+    <div class="tc-box" id="warlock_affliction" style="display: none;" >
+      <ul type="square">
+        <li>Theorycrafter resource: <a href="" target="blank"></a></li>
+        <li>Discord: <a href="https://discord.gg/0onXDymd9Wpc2CEu" target="blank">Council of the Black Harvest</a></li>
+      </ul>
+    </div>
+    <div class="tc-box" id="warlock_demonology" style="display: none;" >
+      <ul type="square">
+        <li>Theorycrafter resource: <a href="" target="blank"></a></li>
+        <li>Discord: <a href="https://discord.gg/0onXDymd9Wpc2CEu" target="blank">Council of the Black Harvest</a></li>
+      </ul>
+    </div>
+    <div class="tc-box" id="warlock_destruction" style="display: none;" >
+      <ul type="square">
+        <li>Theorycrafter resource: <a href="" target="blank"></a></li>
+        <li>Discord: <a href="https://discord.gg/0onXDymd9Wpc2CEu" target="blank">Council of the Black Harvest</a></li>
+      </ul>
+    </div>
+    <div class="tc-box" id="warrior_arms" style="display: none;" >
+      <ul type="square">
+        <li>Theorycrafter resource: <a href="" target="blank"></a></li>
+        <li>Discord: <a href="https://discord.gg/0pYY7932lTH4FHW6" target="blank">Skyhold</a></li>
+      </ul>
+    </div>
+    <div class="tc-box" id="warrior_fury" style="display: none;" >
+      <ul type="square">
+        <li>Theorycrafter resource: <a href="" target="blank"></a></li>
+        <li>Discord: <a href="https://discord.gg/0pYY7932lTH4FHW6" target="blank">Skyhold</a></li>
+      </ul>
+    </div>
     
 
     <p>If a trinket is missing (but not timewalking trinkets, which you have to sim yourself) please contact me via <a href="https://github.com/Bloodmallet/bloodytrinkets/issues" target="blank">GitHub - Issues</a> and create an issue there. I'll make sure to add it later on. </p>
     <p>As you might've guessed, I'm the author of this tool, which enables the user to create the data presented here quite easily. If you want to know more or get the tool, visit my <a href="https://github.com/Bloodmallet/bloodytrinkets" target="blank">Github - Repository</a>. </p>
-    <p>Yours sincerely,<br/><span class="signout"><a href="https://discord.gg/tFR2uvK">Bloodmallet(EU)#8246</a> - Discord (channel: #bloodytools)<span><br/><span class="signout"><a href="https://worldofwarcraft.com/en-gb/character/die-aldor/bloodmallet" target="blank">Bloodmallet</a> - WoW character<span> </p>
+    <p>If you want to leave a comment, a suggestion for improvement, or found something noteworthy add an <a href="https://github.com/Bloodmallet/bloodmallet.github.io/issues" target="blank">issue at the repository</a> of this site.</p>
+    <p>Yours sincerely,<br/><span class="signout"><a href="https://discord.gg/tFR2uvK" target="blank">Bloodmallet(EU)#8246</a> - Discord (channel: #bloodytools)<span><br/><span class="signout"><a href="https://worldofwarcraft.com/en-gb/character/die-aldor/bloodmallet" target="blank">Bloodmallet</a> - WoW character<span> </p>
     <br/>
-    <p>P.S. If you like this resource and for some reason want to <a href="https://www.paypal.me/bloodmallet">make a gift</a>, you can do so. But please be aware  that I'm doing this for fun and for free, supporting me won't give you any rewards, extra features or special handling. Nonetheless, I'd be very happy to see that you like this resource. </p>
+    <p>P.S. If you like this resource and for some reason want to <a href="https://www.paypal.me/bloodmallet" target="blank">make a gift</a>, you can do so. But please be aware  that I'm doing this for fun and for free, supporting me won't give you any rewards, extra features or special handling. Nonetheless, I'd be very happy to see that you like this resource. </p>
 
 
 
