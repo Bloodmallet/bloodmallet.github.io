@@ -1,112 +1,506 @@
-Highcharts.chart('death_knight_frost_beastlord', {
-    "chart": {
-        type: 'bar'
+Highcharts.chart('death_knight_frost_beastlord', 
+{
+    chart: {
+        type: "bar"
+    },
+    legend: {
+        align: "right",
+        backgroundColor: (Highcharts.theme && Highcharts.theme.background2) || 'white',
+        borderColor: "#CCC",
+        borderWidth: 1,
+        floating: false,
+        reversed: true,
+        shadow: false,
+        verticalAlign: "bottom",
+        x: 0,
+        y: 0
+    },
+    plotOptions: {
+        bar: {
+            dataLabels: {
+                color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
+                enabled: false
+            },
+            stacking: "normal"
+        },
+        series: {
+            borderColor: "#151515",
+            events: {
+                legendItemClick: function() { return false; }
+            }
+        }
+    },
+    series: [
+        {
+            color: "#ffeb3b",
+            data: [
+                321999,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            name: "970"
+        },
+        {
+            color: "#00E676",
+            data: [
+                0,
+                11663,
+                15440,
+                17797,
+                17155,
+                19989,
+                11919,
+                22860,
+                6326,
+                20651,
+                25055,
+                10038,
+                8847,
+                13351,
+                20557,
+                9309,
+                16715,
+                12593,
+                19462,
+                1740,
+                16670,
+                15999,
+                23124,
+                22357,
+                0,
+                20475,
+                7604,
+                0,
+                15263,
+                24429,
+                5853,
+                8718,
+                2669,
+                9753,
+                5783,
+                6409,
+                13812,
+                0,
+                12460,
+                0,
+                0,
+                0,
+                2399
+            ],
+            name: "940"
+        },
+        {
+            color: "#db843d",
+            data: [
+                0,
+                13869,
+                25190,
+                20467,
+                11627,
+                16818,
+                27475,
+                9422,
+                7623,
+                7862,
+                10503,
+                16581,
+                18824,
+                11989,
+                8804,
+                25432,
+                7602,
+                13557,
+                14662,
+                13518,
+                17257,
+                15134,
+                13173,
+                9916,
+                0,
+                9004,
+                17407,
+                0,
+                1417,
+                4292,
+                10891,
+                5486,
+                15854,
+                5288,
+                11519,
+                11331,
+                2019,
+                5523,
+                6318,
+                6907,
+                10003,
+                10632,
+                5399
+            ],
+            name: "930"
+        },
+        {
+            color: "#4198af",
+            data: [
+                0,
+                13868,
+                11166,
+                16671,
+                14217,
+                14614,
+                12313,
+                17829,
+                9105,
+                20020,
+                12685,
+                9608,
+                12472,
+                12357,
+                15877,
+                15843,
+                20104,
+                12229,
+                12024,
+                19304,
+                6555,
+                8560,
+                6240,
+                11142,
+                0,
+                12015,
+                14863,
+                0,
+                3296,
+                3888,
+                0,
+                7578,
+                0,
+                0,
+                1241,
+                0,
+                2368,
+                3623,
+                0,
+                5092,
+                4456,
+                0,
+                6853
+            ],
+            name: "920"
+        },
+        {
+            color: "#71588f",
+            data: [
+                0,
+                2098,
+                12480,
+                15284,
+                16741,
+                15264,
+                9950,
+                10693,
+                8870,
+                11933,
+                1931,
+                16129,
+                13618,
+                13738,
+                12877,
+                2531,
+                10917,
+                18295,
+                14144,
+                11065,
+                11295,
+                8443,
+                15514,
+                8695,
+                0,
+                11214,
+                4786,
+                0,
+                7721,
+                2272,
+                8067,
+                4428,
+                15325,
+                5320,
+                5783,
+                15213,
+                12693,
+                10424,
+                10073,
+                0,
+                4634,
+                3164,
+                55
+            ],
+            name: "910"
+        },
+        {
+            color: "#89a54e",
+            data: [
+                0,
+                14086,
+                18372,
+                9539,
+                16203,
+                9390,
+                8123,
+                9084,
+                505,
+                1916,
+                19106,
+                11702,
+                12057,
+                10528,
+                8115,
+                19274,
+                7149,
+                2951,
+                11501,
+                5824,
+                128200,
+                8711,
+                8052,
+                11070,
+                5104,
+                8360,
+                9223,
+                13734,
+                844,
+                13160,
+                13407,
+                6362,
+                4383,
+                12405,
+                16945,
+                0,
+                0,
+                1735,
+                4146,
+                15709,
+                0,
+                833,
+                254
+            ],
+            name: "900"
+        },
+        {
+            color: "#aa4643",
+            data: [
+                0,
+                7234,
+                6818,
+                18656,
+                164590,
+                7469,
+                14746,
+                155480,
+                12024,
+                16229,
+                10121,
+                9876,
+                3738,
+                11980,
+                12698,
+                2867,
+                8772,
+                10209,
+                12809,
+                11145,
+                0,
+                10390,
+                101343,
+                12219,
+                18104,
+                5964,
+                13592,
+                11142,
+                5791,
+                3600,
+                2404,
+                0,
+                0,
+                79964,
+                0,
+                4200,
+                77101,
+                2625,
+                2362,
+                0,
+                3771,
+                6940,
+                3196
+            ],
+            name: "890"
+        },
+        {
+            color: "#4572a7",
+            data: [
+                0,
+                246798,
+                159504,
+                148273,
+                0,
+                151750,
+                145769,
+                0,
+                178563,
+                135785,
+                134486,
+                139373,
+                142178,
+                137025,
+                128904,
+                131821,
+                135763,
+                136582,
+                111546,
+                117939,
+                0,
+                110694,
+                0,
+                87830,
+                136373,
+                91980,
+                86824,
+                121214,
+                102203,
+                79923,
+                92504,
+                80742,
+                76038,
+                0,
+                73668,
+                75107,
+                0,
+                77663,
+                68614,
+                80141,
+                74684,
+                65392,
+                63842
+            ],
+            name: "880"
+        }
+    ],
+    subtitle: {
+        text: "Last generated: 2017-08-07 08:29:25"
     },
     title: {
-        text: 'Death_Knight - Frost - Beastlord'
+        text: "Death_Knight - Frost - Beastlord"
     },
-    subtitle: {
-        text: 'Last generated: 2017-07-21 14:08:58.545162'
+    tooltip: {
+        backgroundColor: "#eee",
+        borderColor: "#bbb",
+        formatter: function() {        var s = '<b>'+ this.x +'</b>';        var cumulative_amount = 0;        for (var i = this.points.length - 1 ; i >= 0 ; i--) {            cumulative_amount += this.points[i].y;            if (this.points[i].y !== 0){                s += '<br/><span style=\"color: ' + this.points[i].series.color + '; font-weight: bold;\">' + this.points[i].series.name +'</span>: ' + cumulative_amount;            }        }        return s;      },
+        headerFormat: "<b>{point.x}</b>",
+        shared: true,
+        style: {
+            color: "black"
+        }
     },
     xAxis: {
-        categories: ["Kil'jaeden's Burning Wish","Convergence of Fates","Horn of Valor","Chaos Talisman","Cradle of Anguish","Eye of Command","Unstable Arcano Crystal","Engine of Eradication","Stat Stick (Haste)","Entwined Elemental Foci","Stat Stick (Mastery)","Fel-Oiled Infernal Machine","Memento of Angerboda","Chrono Shard","Stat Stick (Crit)","Ettin Fingernail","Nightmare Egg Shell","PVP Badge of Victory","Claw of the Crystalline Scorpid","Gift of Radiance","Specter of Betrayal","PVP Insignia of Victory","Vial of Ceaseless Toxins","Darkmoon Deck: Dominion","Might of Krosus","Bloodstained Handkerchief","Ursoc's Rending Paw","Infernal Alchemist Stone","Terrorbound Nexus","Nature's Call","Giant Ornamental Pearl","Umbral Moonglaives","Tiny Oozeling in a Jar","Faulty Countermeasure","Toe Knee's Promise","Mark of Dargrul","Infernal Cinders","Spiked Counterweight","Draught of Souls","Ravaged Seed Pod","The Devilsaur's Bite","Spontaneous Appendages","Windscar Whetstone"]
+        categories: [
+            "Kil'jaeden's Burning Wish",
+            "Convergence of Fates",
+            "Chaos Talisman",
+            "Horn of Valor",
+            "Cradle of Anguish",
+            "Eye of Command",
+            "Stat Stick (Haste)",
+            "Engine of Eradication",
+            "Unstable Arcano Crystal",
+            "Chrono Shard",
+            "Nightmare Egg Shell",
+            "Stat Stick (Mastery)",
+            "Entwined Elemental Foci",
+            "Memento of Angerboda",
+            "Stat Stick (Crit)",
+            "Fel-Oiled Infernal Machine",
+            "PVP Badge of Victory",
+            "Ettin Fingernail",
+            "Claw of the Crystalline Scorpid",
+            "Gift of Radiance",
+            "Specter of Betrayal",
+            "PVP Insignia of Victory",
+            "Vial of Ceaseless Toxins",
+            "Ursoc's Rending Paw",
+            "Darkmoon Deck: Dominion",
+            "Might of Krosus",
+            "Bloodstained Handkerchief",
+            "Infernal Alchemist Stone",
+            "Nature's Call",
+            "Giant Ornamental Pearl",
+            "Terrorbound Nexus",
+            "Tiny Oozeling in a Jar",
+            "Draught of Souls",
+            "Umbral Moonglaives",
+            "Faulty Countermeasure",
+            "Mark of Dargrul",
+            "Infernal Cinders",
+            "Toe Knee's Promise",
+            "The Devilsaur's Bite",
+            "Spiked Counterweight",
+            "Ravaged Seed Pod",
+            "Spontaneous Appendages",
+            "Windscar Whetstone"
+        ]
     },
     yAxis: {
-        min: 0,
-        title: {
-            text: '\u0394 Damage per second'
-        },
         labels: {
             enabled: true
         },
+        min: 0,
         stackLabels: {
             enabled: false,
             style: {
-                fontWeight: 'bold',
-                color: (Highcharts.theme && Highcharts.theme.textColor) || 'white'
+                color: (Highcharts.theme && Highcharts.theme.textColor) || 'white',
+                fontWeight: "bold"
             }
+        },
+        title: {
+            text: "\u0394 Damage per second"
         }
-    },
-    legend: {
-        align: 'right',
-        x: 0,
-        verticalAlign: 'bottom',
-        y: 0,
-        floating: false,
-        "backgroundColor": (Highcharts.theme && Highcharts.theme.background2) || 'white',
-        borderColor: '#CCC',
-        borderWidth: 1,
-        shadow: false,
-        reversed: true
-    },
-    tooltip: {
-        headerFormat: '<b>{point.x}</b>',
-        "formatter": function() {
-            var s = '<b>'+ this.x +'</b>',
-            cumulative_amount = 0;
-            for (var i = this.points.length - 1 ; i >= 0 ; i--) {
-                cumulative_amount += this.points[i].y;
-                if (this.points[i].y !== 0){
-                    s += '<br/><span style="color: ' + this.points[i].series.color + '; font-weight: bold;">' + this.points[i].series.name +'</span>: ' + cumulative_amount; 
-                }
-            }
-            return s;
-        },
-        "shared": true,
-        backgroundColor: '#eee',
-        borderColor: '#bbb',
-        style: {
-            color: 'black'
-        }
-    },
-    plotOptions: {
-        series: {
-            borderColor: '#151515',
-            events: {
-                legendItemClick: function () {
-                    return false; 
-                }
-            }
-        },
-        bar: {
-            stacking: 'normal',
-            dataLabels: {
-                enabled: false,
-                color: "(Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white'"
-            }
-        },
-    },
-    series: [{
-        name: '970',
-        color: '#ffeb3b',
-        data : [323405,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
-    }, {
-        name: '940',
-        color: '#00E676',
-        data: [0,16011,24990,21307,20735,22217,11014,19010,8260,12981,17297,21195,12876,16739,19348,16932,13311,16552,18835,19085,13930,9944,15259,0,15134,14264,8598,0,4345,0,4129,8937,5665,3095,0,0,0,4850,7653,976,2389,2715,4152]
-    }, {
-        name: '930',
-        color: '#db843d',
-        data: [0,8918,17769,22044,19770,14596,3201,20914,12968,16337,13678,15859,17491,13548,4954,7758,18676,13156,18474,14850,11612,10894,6383,0,8511,15493,9756,0,13271,4771,15801,7758,11831,3648,8027,9757,8065,9701,8829,11435,2416,6095,10371]
-    }, {
-        name: '920',
-        color: '#4198af',
-        data: [0,14395,21269,7365,11439,13011,14358,10193,25963,12555,18427,21889,5258,18292,21544,12347,9820,13590,9453,14701,11550,10861,17506,0,22014,5997,13509,0,6147,12518,9526,9531,4383,6900,4550,12627,715,0,8655,2253,5191,9062,2223]
-    }, {
-        name: '910',
-        color: '#71588f',
-        data: [0,7568,4675,22445,21870,11219,1997,16676,7677,12843,2911,3992,18598,12010,13608,14557,11239,12237,14085,1466,14374,10508,8693,0,3174,16203,10237,0,7726,8627,250,2458,4592,9368,9270,0,3641,9016,0,3851,11618,5289,0]
-    }, {
-        name: '900',
-        color: '#89a54e',
-        data: [0,14997,16682,5634,7973,15413,8056,3104,13213,8996,11900,10936,13262,7743,9656,12228,15324,24292,21607,12486,121992,12784,18834,16642,7698,3400,10133,13468,7645,0,12934,7332,0,0,0,6838,7155,0,5439,2795,0,0,10387]
-    }, {
-        name: '890',
-        color: '#aa4643',
-        data: [0,7327,12743,3955,158250,7391,6867,151437,10939,10996,13028,11010,5409,7264,6661,15174,9842,0,0,6721,0,1862,88482,0,11444,7734,5401,8859,365,4000,0,75099,11448,13850,6113,3614,73988,7175,9127,0,8342,3485,0]
-    }, {
-        name: '880',
-        color: '#4572a7',
-        data: [0,252619,148635,162506,0,145262,178439,0,138494,136213,133627,125598,137174,132866,130469,126700,126838,125717,109805,118330,0,112189,0,139557,84377,89168,90634,115770,87921,100045,79676,0,75760,68127,71999,71256,0,67769,54619,71313,65683,62987,58345]
-    }]
+    }
 });
