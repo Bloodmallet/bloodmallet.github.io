@@ -1,5 +1,5 @@
 Highcharts.chart('death_knight_frost_beastlord', {
-    chart: {
+    "chart": {
         type: 'bar'
     },
     title: {
@@ -33,7 +33,7 @@ Highcharts.chart('death_knight_frost_beastlord', {
         verticalAlign: 'bottom',
         y: 0,
         floating: false,
-        backgroundColor: (Highcharts.theme && Highcharts.theme.background2) || 'white',
+        "backgroundColor": (Highcharts.theme && Highcharts.theme.background2) || 'white',
         borderColor: '#CCC',
         borderWidth: 1,
         shadow: false,
@@ -41,7 +41,7 @@ Highcharts.chart('death_knight_frost_beastlord', {
     },
     tooltip: {
         headerFormat: '<b>{point.x}</b>',
-        formatter: function() {
+        "formatter": function() {
             var s = '<b>'+ this.x +'</b>',
             cumulative_amount = 0;
             for (var i = this.points.length - 1 ; i >= 0 ; i--) {
@@ -52,7 +52,7 @@ Highcharts.chart('death_knight_frost_beastlord', {
             }
             return s;
         },
-        shared: true,
+        "shared": true,
         backgroundColor: '#eee',
         borderColor: '#bbb',
         style: {
@@ -72,7 +72,7 @@ Highcharts.chart('death_knight_frost_beastlord', {
             stacking: 'normal',
             dataLabels: {
                 enabled: false,
-                color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white'
+                color: "(Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white'"
             }
         },
     },
