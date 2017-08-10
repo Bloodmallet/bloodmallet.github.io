@@ -85,7 +85,7 @@
 
     <p>I might add dps-trinket charts for tank specs in the future. But as long as there are no standard tank profiles (T20M), this won't happen.</p>
 
-    <div class="div-table">
+    <div class="div-table desktop">
       <div class="div-row">
         <div class="div-cell">
           <div class="btn-group dk">
@@ -177,6 +177,104 @@
         </div>
       </div>
     </div>
+
+    <p class="mobile">Note: If you don't see all classes below, try moving the table.</p>
+    <div class="div-table mobile">
+      <div class="div-row">
+        <div class="div-cell">
+          <div class="btn-group dk">
+            <div class="class-table">Death Knight</div>
+            <button onclick="switch_chart_to('death_knight_frost')">Frost</button>
+            <button onclick="switch_chart_to('death_knight_unholy')">Unholy</button>
+          </div>
+        </div>
+        <div class="div-cell">
+          <div class="btn-group dh">
+            <div class="class-table">Demon Hunter</div>
+            <button onclick="switch_chart_to('demon_hunter_havoc')">Havoc</button>
+          </div>
+        </div>
+        <div class="div-cell">
+          <div class="btn-group druid">
+            <div class="class-table">Druid</div>
+            <button onclick="switch_chart_to('druid_balance')">Balance</button>
+            <button onclick="switch_chart_to('druid_feral')">Feral</button>
+          </div>
+        </div>
+      </div>
+      <div class="div-row">
+        <div class="div-cell">
+          <div class="btn-group hunter">
+            <div class="class-table">Hunter</div>
+            <button onclick="switch_chart_to('hunter_beast_mastery')">Beast Mastery</button>
+            <button onclick="switch_chart_to('hunter_marksmanship')">Marksmanship</button>
+            <button onclick="switch_chart_to('hunter_survival')">Survival</button>
+          </div>
+        </div>
+        <div class="div-cell">
+          <div class="btn-group mage">
+            <div class="class-table">Mage</div>
+            <button onclick="switch_chart_to('mage_arcane')">Arcane</button>
+            <button onclick="switch_chart_to('mage_fire')">Fire</button>
+            <button onclick="switch_chart_to('mage_frost')">Frost</button>
+          </div>
+        </div>
+        <div class="div-cell">
+          <div class="btn-group monk">
+            <div class="class-table">Monk</div>
+            <button onclick="switch_chart_to('monk_windwalker')">Windwalker</button>
+          </div>
+        </div>
+      </div>
+      <div class="div-row">
+        <div class="div-cell">
+          <div class="btn-group paladin">
+            <div class="class-table">Paladin</div>
+            <button onclick="switch_chart_to('paladin_retribution')">Retribution</button>
+          </div>
+        </div>
+        <div class="div-cell">
+          <div class="btn-group priest">
+            <div class="class-table">Priest</div>
+            <button onclick="switch_chart_to('priest_shadow')">Shadow</button>
+          </div>
+        </div>
+        <div class="div-cell">
+          <div class="btn-group rogue">
+            <div class="class-table">Rogue</div>
+            <button onclick="switch_chart_to('rogue_assassination')">Assassination</button>
+            <button onclick="switch_chart_to('rogue_outlaw')">Outlaw</button>
+            <button onclick="switch_chart_to('rogue_subtlety')">Subtlety</button>
+          </div>
+        </div>
+      </div>
+      <div class="div-row">
+        <div class="div-cell">
+          <div class="btn-group shaman">
+            <div class="class-table">Shaman</div>
+            <button onclick="switch_chart_to('shaman_elemental')">Elemental</button>
+            <button onclick="switch_chart_to('shaman_enhancement')">Enhancement</button>
+          </div>
+        </div>
+        <div class="div-cell">
+          <div class="btn-group warlock">
+            <div class="class-table">Warlock</div>
+            <button onclick="switch_chart_to('warlock_affliction')">Affliction</button>
+            <button onclick="switch_chart_to('warlock_demonology')">Demonology</button>
+            <button onclick="switch_chart_to('warlock_destruction')">Destruction</button>
+          </div>
+        </div>
+        <div class="div-cell">
+          <div class="btn-group warrior">
+            <div class="class-table">Warrior</div>
+            <button onclick="switch_chart_to('warrior_arms')">Arms</button>
+            <button onclick="switch_chart_to('warrior_fury')">Fury</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
     <div style="height: 40px;"></div>
 
     <button id="fight_style_button" onclick="switch_fight_style()" style="display: none;" >Switch to beastlord &gt;</button>
