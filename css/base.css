@@ -211,19 +211,14 @@ nav a:hover, nav span:hover {
   div.div-table div.mobile {
     display: table;
   }
+  .desktop {
+    display: none;
+  }
 }
 @media only screen and (min-width: 501px) {
   .mobile {
     display: none;
   }
-}
-
-@media only screen and (max-width: 500px) {
-  p.desktop {
-    display: none;
-  }
-}
-@media only screen and (min-width: 501px) {
   p.desktop {
     display: block;
   }
@@ -231,7 +226,6 @@ nav a:hover, nav span:hover {
     display: table;
   }
 }
-
 
 .dk button {
   color: white;
