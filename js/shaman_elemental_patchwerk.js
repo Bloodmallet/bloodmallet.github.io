@@ -21,7 +21,22 @@ Highcharts.chart('shaman_elemental_patchwerk',
                 color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
                 enabled: false
             },
-            stacking: "normal"
+            stacking: "normal",
+            point: {
+                events: {
+                    click: function (event) {
+                        var chart = this.series.yAxis;
+                        chart.removePlotLine("helperLine");
+                        chart.addPlotLine({
+                            value: this.stackY,
+                            color: '#000',
+                            width: 2,
+                            id: 'helperLine', // prev. vertLine
+                            zIndex: 9999
+                        });
+                    }
+                }                
+            }
         },
         series: {
             borderColor: "#151515",
@@ -507,18 +522,30 @@ Highcharts.chart('shaman_elemental_patchwerk',
     },
     yAxis: {
         labels: {
-            enabled: true
+            enabled: false
         },
         min: 0,
         stackLabels: {
             enabled: false,
             style: {
-                color: (Highcharts.theme && Highcharts.theme.textColor) || 'white',
-                fontWeight: "bold"
+                color: (Highcharts.theme && Highcharts.theme.textColor) || 'white'
+                //fontWeight: "bold"
+            },
+            formatter: function() {
+                // I need to figure out how to get the mean value here,
+                // to allow the percent diff to mean as label
+                //console.log(this);
+                return;
             }
         },
         title: {
             text: "\u0394 Damage per second"
-        }
+        },
+        plotLines: [{
+            color: '#1E90FF',
+            width: 2,
+            zIndex: 2,
+            value: 85000
+        }]
     }
 });
