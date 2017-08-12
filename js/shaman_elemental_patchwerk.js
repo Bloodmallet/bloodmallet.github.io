@@ -32,7 +32,14 @@ Highcharts.chart('shaman_elemental_patchwerk',
                             color: '#000',
                             width: 2,
                             id: 'helperLine', // prev. vertLine
-                            zIndex: 9999
+                            zIndex: 5,
+                            label: {
+                                text: this.category + " " + this.series.name,
+                                align: "left",
+                                verticalAlign: "bottom",
+                                rotation: 0,
+                                y: -7
+                            }
                         });
                     }
                 }                
