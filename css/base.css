@@ -1,408 +1,482 @@
 body {
-  /*background: linear-gradient(90deg, white, gray);*/
-  color: black;
-  background-color: #eee;
+    /*background: linear-gradient(90deg, white, gray);*/
+    color: black;
+    background-color: #eee;
 }
 
-body, h1 {
-  font-family: "Helvetica Neue", "Segoe UI", Segoe, Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-weight: normal;
-  font-size: 18px;
-  margin: 0;
-  padding: 0;
+body,
+h1 {
+    font-family: "Helvetica Neue", "Segoe UI", Segoe, Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: normal;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
 }
 
-.container {
-  margin-left:  10%;
-  margin-right:  10%;
-  margin-top: 15px;
-  /*padding-right: 15px;
-  padding-left: 15px;*/
-  height: 1000px;
-}
+
+/*.container {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 15px;
+    /*padding-right: 15px;
+  padding-left: 15px;
+    height: 1000px;
+}*/
 
 .tc-box {
-  margin-left:  10%;
-  margin-right:  10%;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 #fight_style_button {
-  margin: 0 auto;
-  color: white;
-  border: 1px solid grey;
-  text-align: center;
-  font-weight: 200;
-  background-color: #343434;
-  padding-top: 7px;
-  padding-bottom: 7px;
-  padding-left: 12px;
-  padding-right: 12px;
-  cursor: pointer;
+    margin: 0 auto;
+    color: white;
+    border: 1px solid grey;
+    text-align: center;
+    font-weight: 200;
+    background-color: #343434;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 12px;
+    padding-right: 12px;
+    cursor: pointer;
 }
 
-.row:before, .row:after {
-  display: table;
-  content: " ";
+.row:before,
+.row:after {
+    display: table;
+    content: " ";
 }
 
 h1 {
-  font-size: 48px;
-  font-weight: 400;
-  margin: 0 0 20px 0;
-  text-align: center;
+    font-size: 48px;
+    font-weight: 400;
+    margin: 0 0 20px 0;
+    text-align: center;
 }
 
 h3 {
-  margin-top: 50px;
-  text-align: center;
-  font-weight: 300;
-  font-size: 32px;
+    margin-top: 50px;
+    text-align: center;
+    font-weight: 300;
+    font-size: 32px;
 }
 
 h4 {
-  margin-left: 10%;
-  margin-right: 10%;
-  margin-top: 45px;
-  margin-bottom: 0px;
-  font-weight: 200;
-  text-align: left;
-  font-size: 28px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 45px;
+    margin-bottom: 0px;
+    font-weight: 200;
+    text-align: left;
+    font-size: 28px;
 }
 
 .text-center {
-  text-align: center;
+    text-align: center;
 }
 
 .text-right {
-  text-align: right;
+    text-align: right;
 }
 
 p {
-  font-weight: 200;
-  margin-right: 10%;
-  margin-left: 10%;
+    font-weight: 200;
+    margin: 0 10% 0 10%;
 }
 
 ul li {
-  font-weight: 200;
+    font-weight: 200;
 }
+
 ul.sim-settings {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  margin-left: 10%;
-  margin-right: 10%;
-  /*background-color: #ddd;*/
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 10%;
+    margin-right: 10%;
+    /*background-color: #ddd;*/
 }
 
 a {
-  color: #3282e6;
-  text-decoration: none;
-  transition: background-color .25s ease-in;
+    color: #3282e6;
+    text-decoration: none;
+    transition: background-color .25s ease-in;
 }
 
 a:hover {
-  background-color: #ccc;
-  transition: background-color .01s ease-in;
+    background-color: #ccc;
+    transition: background-color .01s ease-in;
 }
 
 ul.changelog {
-  list-style: none;
+    list-style: none;
 }
 
 img {
-  margin-bottom: 35px;
+    margin-bottom: 35px;
 }
 
 span.question {
-  font-weight: bold;
+    font-weight: bold;
 }
 
 span.code {
-  background-color: #ddd;
+    background-color: #ddd;
 }
 
 span.signout {
-  margin-left: 15px;
-  font-size: 16px;
+    margin-left: 15px;
+    font-size: 16px;
 }
 
 .class-table {
-  text-align: center;
-  font-weight: 400;
-  margin-bottom: 3px;
-  background-color: #343434;
-  padding-top: 3px;
-  padding-bottom: 7px;
-  padding-left: 12px;
-  padding-right: 12px;
-  font-size: 21px;
+    text-align: center;
+    font-weight: 400;
+    margin-bottom: 3px;
+    background-color: #343434;
+    padding-top: 3px;
+    padding-bottom: 7px;
+    padding-left: 12px;
+    padding-right: 12px;
+    font-size: 21px;
 }
 
 nav ul {
-  background-color: #343434;
-  text-align: center;
-  -webkit-padding-start: 0px;
-  margin-top:0px;
+    background-color: #343434;
+    text-align: center;
+    -webkit-padding-start: 0px;
+    margin-top: 0px;
 }
 
 nav li {
-  border-left: solid 1px;
-  border-right: solid 1px;
-  border-color: #eee;
-  display: inline-block;
+    border-left: solid 1px;
+    border-right: solid 1px;
+    border-color: #eee;
+    display: inline-block;
 }
 
-nav a, nav span {
-  padding: 7px 15px 7px 15px;
-  display: block;
-  color: #eee;
-  transition: background-color .25s ease-in;
+nav a,
+nav span {
+    padding: 7px 15px 7px 15px;
+    display: block;
+    color: #eee;
+    transition: background-color .25s ease-in;
 }
 
-nav a:hover, nav span:hover {
-  color: #000;
-  background-color: #eee;
-  transition: background-color .01s ease-in;
+nav a:hover,
+nav span:hover {
+    color: #000;
+    background-color: #eee;
+    transition: background-color .01s ease-in;
 }
-
 
 .div-table {
-  display: table;
-  margin: 0 auto;
+    display: table;
+    margin: 0 auto;
 }
+
 .div-table div.div-row:not(:last-child) {
-  border-bottom: none; /* Prevent double borders */
+    border-bottom: none;
+    /* Prevent double borders */
 }
 
 .div-row {
-  display: table-row;
+    display: table-row;
 }
+
 .div-row div:not(:last-child) {
-    border-right: none; /* Prevent double borders */
+    border-right: none;
+    /* Prevent double borders */
 }
 
 .div-cell {
-  border: 1px solid #bbb;
-  padding: 3px;
-  display: table-cell;
+    border: 1px solid #bbb;
+    padding: 3px;
+    display: table-cell;
 }
 
-
 .btn-group button {
-  padding: 10px 15px; /* Some padding */
-  cursor: pointer; /* Pointer/hand icon */
-  width: 100%; /* Set a width if needed */
-  display: block; /* Make the buttons appear below each other */
+    padding: 10px 15px;
+    /* Some padding */
+    cursor: pointer;
+    /* Pointer/hand icon */
+    width: 100%;
+    /* Set a width if needed */
+    display: block;
+    /* Make the buttons appear below each other */
 }
 
 .btn-group button:not(:last-child) {
-  border-bottom: none; /* Prevent double borders */
+    border-bottom: none;
+    /* Prevent double borders */
 }
 
+
 /* Add a background color on hover */
+
 .btn-group button:hover {
-  background-color: #3e8e41;
+    background-color: #3e8e41;
 }
 
 @media only screen and (max-width: 500px) {
-  p.mobile {
-    display: block;
-  }
-  div.div-table div.mobile {
-    display: table;
-  }
-  .desktop {
-    display: none;
-  }
+    p.mobile {
+        display: block;
+    }
+    div.div-table div.mobile {
+        display: table;
+    }
+    .desktop {
+        display: none;
+    }
 }
+
 @media only screen and (min-width: 501px) {
-  .mobile {
-    display: none;
-  }
-  p.desktop {
-    display: block;
-  }
-  div.div-table div.desktop {
-    display: table;
-  }
+    .mobile {
+        display: none;
+    }
+    p.desktop {
+        display: block;
+    }
+    div.div-table div.desktop {
+        display: table;
+    }
 }
 
 .dk button {
-  color: white;
-  border: 1px solid #af1630;
-  background-color: #C41F3B;
+    color: white;
+    border: 1px solid #af1630;
+    background-color: #C41F3B;
 }
+
 .dk button:hover {
-  background-color: #9C132a;
+    background-color: #9C132a;
 }
+
 .dk div.class-table {
-  color: #C41F3B;
+    color: #C41F3B;
 }
 
 .dh button {
-  color: white;
-  border: 1px solid darkmagenta;
-  background-color: #A330C9;
+    color: white;
+    border: 1px solid darkmagenta;
+    background-color: #A330C9;
 }
+
 .dh button:hover {
-  background-color: #731c90;
+    background-color: #731c90;
 }
+
 .dh div.class-table {
-  color: #A330C9;
+    color: #A330C9;
 }
 
 .druid button {
-  color: white;
-  border: 1px solid #de6e0a;
-  background-color: #FF7D0A;
+    color: white;
+    border: 1px solid #de6e0a;
+    background-color: #FF7D0A;
 }
+
 .druid button:hover {
-  background-color: #D66400;
+    background-color: #D66400;
 }
+
 .druid div.class-table {
-  color: #FF7D0A;
+    color: #FF7D0A;
 }
 
 .hunter button {
-  color: black;
-  border: 1px solid #799a4c;
-  background-color: #ABD473;
+    color: black;
+    border: 1px solid #799a4c;
+    background-color: #ABD473;
 }
+
 .hunter button:hover {
-  background-color: #799a4c;
+    background-color: #799a4c;
 }
+
 .hunter div.class-table {
-  color: #ABD473;
+    color: #ABD473;
 }
 
 .mage button {
-  color: black;
-  border: 1px solid #56b5d8;
-  background-color: #69CCF0;
+    color: black;
+    border: 1px solid #56b5d8;
+    background-color: #69CCF0;
 }
+
 .mage button:hover {
-  background-color: #4dabce;
+    background-color: #4dabce;
 }
+
 .mage div.class-table {
-  color: #69CCF0;
+    color: #69CCF0;
 }
 
 .monk button {
-  color: black;
-  border: 1px solid #02e688;
-  background-color: #00FF96;
+    color: black;
+    border: 1px solid #02e688;
+    background-color: #00FF96;
 }
+
 .monk button:hover {
-  background-color: #03ce7a;
+    background-color: #03ce7a;
 }
+
 .monk div.class-table {
-  color: #00FF96;
+    color: #00FF96;
 }
 
 .paladin button {
-  color: black;
-  border: 1px solid #e2a5b0;
-  background-color: #F58CBA;
+    color: black;
+    border: 1px solid #e2a5b0;
+    background-color: #F58CBA;
 }
+
 .paladin button:hover {
-  background-color: #d878a2;
+    background-color: #d878a2;
 }
+
 .paladin div.class-table {
-  color: #F58CBA;
+    color: #F58CBA;
 }
 
 .priest button {
-  color:black;
-  border: 1px solid #ccc;
-  background-color: #ffffff;
+    color: black;
+    border: 1px solid #ccc;
+    background-color: #ffffff;
 }
+
 .priest button:hover {
-  background-color: #cccccc;
+    background-color: #cccccc;
 }
+
 .priest div.class-table {
-  color: #ffffff;
+    color: #ffffff;
 }
 
 .rogue button {
-  color: black;
-  border: 1px solid #dcd352;
-  background-color: #FFF569;
+    color: black;
+    border: 1px solid #dcd352;
+    background-color: #FFF569;
 }
+
 .rogue button:hover {
-  background-color: #d6cc52;
+    background-color: #d6cc52;
 }
+
 .rogue div.class-table {
-  color: #FFF569;
+    color: #FFF569;
 }
 
 .shaman button {
-  color: white;
-  border: 1px solid blue;
-  background-color: #0070DE;
+    color: white;
+    border: 1px solid blue;
+    background-color: #0070DE;
 }
+
 .shaman button:hover {
-  background-color: #1744d0;
+    background-color: #1744d0;
 }
+
 .shaman div.class-table {
-  color: #0070DE;
+    color: #0070DE;
 }
 
 .warlock button {
-  color: white;
-  border: 1px solid #7463a9;
-  background-color: #9482C9;
+    color: white;
+    border: 1px solid #7463a9;
+    background-color: #9482C9;
 }
+
 .warlock button:hover {
-  background-color: #7463a9;
+    background-color: #7463a9;
 }
+
 .warlock div.class-table {
-  color: #9482C9;
+    color: #9482C9;
 }
 
 .warrior button {
-  color: white;
-  border: 1px solid #ab845a;
-  background-color: #C79C6E;
+    color: white;
+    border: 1px solid #ab845a;
+    background-color: #C79C6E;
 }
+
 .warrior button:hover {
-  background-color: #ad8862;
+    background-color: #ad8862;
 }
+
 .warrior div.class-table {
-  color: #C79C6E;
+    color: #C79C6E;
 }
-
-
 
 .highcharts-root text {
-  font-family: "Helvetica Neue", "Segoe UI", Segoe, Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-family: "Helvetica Neue", "Segoe UI", Segoe, Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 
 .highcharts-background {
-  fill: #eee;
-  color: black;
+    fill: #eee;
+    color: black;
 }
 
 .highcharts-axis text {
-  fill: black;
+    fill: black;
 }
 
-.highcharts-axis-labels text{
-  fill: black;
+.highcharts-axis-labels text {
+    fill: black;
 }
 
 .highcharts-title {
-  fill: black;
+    fill: black;
 }
 
 .highcharts-legend-box {
-  fill: #eee;
-  stroke: #bbb;
+    fill: #eee;
+    stroke: #bbb;
 }
 
 .highcharts-legend-item text {
-  fill: black;
+    fill: black;
 }
 
-.highcharts-tick, .highcharts-grid path {
-  stroke: #bbb;
+.highcharts-tick,
+.highcharts-grid path {
+    stroke: #bbb;
+}
+
+.badge-new {
+    background-color: #b94a48 !important;
+}
+
+
+/* Override bootstrap button group display */
+
+.btn-group {
+    display: initial !important;
+}
+
+.top-buffer {
+    margin-top: 20px;
+}
+
+#result {
+    max-width: 60%;
+    min-height: 2%;
+}
+
+#compare_button {
+    margin-bottom: 10px;
+}
+
+.trinket-message {
+    margin: 0 auto;
+    display: block;
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #555555;
+}
+
+hr {
+    border-top: 1px solid #8c8b8b;
 }
