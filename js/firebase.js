@@ -89,6 +89,7 @@ var firebase_connection = new function() {
 
 
 function compare() {
+    var t0 = performance.now();
     /* Make a comparison between trinkets and deliver the decision message. Called when the Compare button is clicked.  */
     var result_elem = document.getElementById("result");
     result_elem.innerText = "";
@@ -111,9 +112,13 @@ function compare() {
         trinket2['dps'] = parseInt(values[1]);
 
         var decision = compare_trinket_values(trinket1, trinket2);
-        result_elem.innerHTML = decision;
+
+        var t1 = performance.now();
+        var time_string = "<p> Data fetched in " + Math.round(t1 - t0) + " ms.</p>";
+        if (firebase_connection.debug) { result_elem.innerHTML = decision + time_string; } else { result_elem.innerHTML = decision };
         result_elem.style.visibility = "visible";
     });
+
 }
 
 function compare_trinket_values(trinket1, trinket2) {
@@ -209,7 +214,6 @@ function handle_spec_name(input) {
     output = input.toString().replace(/,/i, " ");
     return output
 }
-
 
 function remove_options(caller) {
     caller.innerHTML = "<option value='' disabled selected hidden>Select one...</option>";
