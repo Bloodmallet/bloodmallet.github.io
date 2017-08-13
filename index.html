@@ -5,59 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/base.css">
     <title>Bloodytrinkets</title>
-    <script type="text/javascript">
-      var fight_style = "patchwerk";
-      var active_spec = "";
-
-      function switch_fight_style() {
-        if (fight_style == "patchwerk") {
-          fight_style = "beastlord";
-          document.getElementById("fight_style_button").innerHTML = "&lt; Switch to patchwerk";
-        } else if (fight_style=="beastlord") {
-          fight_style = "patchwerk";
-          document.getElementById("fight_style_button").innerHTML = "Switch to beastlord &gt;";
-        } else {
-          fight_style = "patchwerk";
-          document.getElementById("fight_style_button").innerHTML = "Switch to beastlord &gt;";
-        }
-        // hide/show beastlord disclaimer
-        if (fight_style == "beastlord") {
-          document.getElementById("beastlord-disclaimer").style.display = 'block';
-        } else {
-          document.getElementById("beastlord-disclaimer").style.display = 'none';
-        }
-        switch_chart_to(active_spec);
-      }
-
-      function switch_chart_to(spec) {
-        if (spec == "") {
-          return;
-        }
-
-        document.getElementById("fight_style_button").style.display = 'block';
-
-        // hide/show charts
-        var container = document.getElementsByClassName("container");
-        for (var i = container.length - 1; i >= 0; i--) {
-          if (container[i].id === spec + "_" + fight_style) {
-            container[i].style.display = 'block';
-            active_spec = spec;
-          } else {
-            container[i].style.display = 'none';
-          }
-        }
-        // hide/show TC-resource and Discord of the spec
-        var tc_boxes = document.getElementsByClassName("tc-box");
-        for (var i = tc_boxes.length - 1; i >= 0; i--) {
-          if (tc_boxes[i].id === spec) {
-            tc_boxes[i].style.display = 'block';
-          } else {
-            tc_boxes[i].style.display = 'none';
-          }
-        }
-        ga('send', 'event', 'spec', 'show ' + fight_style + ' chart', active_spec);
-      }
-    </script>
+    <script type="text/javascript" src="js/index.js"></script>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -81,8 +29,6 @@
     <h1>Bloodytrinkets</h1>
 
     <p>This site provides an overview of all available trinkets for all specs in World of Warcraft using SimulationCraft with <a href="https://github.com/Bloodmallet/bloodytrinkets" target="blank">Bloodytrinkets</a>. Please use the trinket analysis of your spec's theorycrafters for more accuracy.</p>
-    <p>To get to know more about this site, please read the <a href="./faq.html">FAQ</a>.</p>
-
     <p>I might add dps-trinket charts for tank specs in the future. But as long as there are no standard tank profiles (T20M), this won't happen.</p>
 
     <div class="div-table desktop">
@@ -513,8 +459,6 @@
       <li>neat click functionality in main charts to more easily compare lines (testing in progress in elemental shamans chart)</li>
     </ul>
     <p>Yours sincerely,<br/><span class="signout"><a href="https://discord.gg/tFR2uvK" target="blank">Bloodmallet(EU)#8246</a> - Discord (channel: #bloodytools)<span><br/><span class="signout"><a href="https://worldofwarcraft.com/en-gb/character/die-aldor/bloodmallet" target="blank">Bloodmallet</a> - WoW character<span> </p>
-    <br/>
-    <p>P.S. If you like this resource and for some reason want to <a href="https://www.paypal.me/bloodmallet" target="blank">make a gift</a>, you can do so. But please be aware that I'm doing this for fun and for free, supporting me won't give you any rewards, extra features or special handling. Nonetheless, I'd be very happy to see that you like this resource. </p>
 
 
 
