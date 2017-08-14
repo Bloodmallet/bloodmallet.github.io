@@ -43,6 +43,20 @@ function switch_chart_to(spec) {
 
   document.getElementById("fight_style_button").style.display = 'block';
 
+  // load scripts/data of the wanted chart if it's not already present
+  var already_loaded = false;
+  var scripts = document.scripts
+  for (var i = scripts.length - 1; i >= 0; i--) {
+    // if a script already is loaded for the fight style and spec, don't load again
+    if (~scripts[i].src.indexOf("js/" + spec + "_" + fight_style + ".js")) {
+      already_loaded = true;
+    }
+  }
+  if ( ! already_loaded) {
+    getScript("js/" + spec + "_" + fight_style + ".js");
+  }
+
+
   // hide/show charts
   var container = document.getElementsByClassName("container");
   for (var i = container.length - 1; i >= 0; i--) {
@@ -64,4 +78,13 @@ function switch_chart_to(spec) {
   }
 
   ga('send', 'event', 'spec', 'show ' + fight_style + ' chart', active_spec);
+}
+
+// allows a callback on script load. not necessary but maybe nice to have
+function getScript(source, callback) {
+  var script = document.createElement('script');
+  script.onload = callback;
+  script.src = source;
+  
+  document.body.appendChild(script);
 }
