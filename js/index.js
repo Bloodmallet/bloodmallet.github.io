@@ -1,22 +1,21 @@
 var fight_style = "patchwerk";
 var active_spec = "";
 
+// add listeners after document finished loading
 document.addEventListener("DOMContentLoaded", addButtonListeners);
 document.addEventListener("DOMContentLoaded", addLinkListeners);
 
+// add tracking listeners to links, so i'm able to see which resources are beeing used
 function addLinkListeners() {
   var links = document.links;
   for (var i = links.length - 1; i >= 0; i--) {
     links[i].addEventListener("click", function(e) {
-      clickLink(e);
+      ga('send', 'event', 'outgoing', 'click', e.target.href);
     } );
   }
 }
 
-function clickLink(argument) {
-  ga('send', 'event', 'outgoing', 'click', argument.target.href);
-}
-
+// add the show chart functionality to all buttons 
 function addButtonListeners() {
   // add spec buttons
   var specSwitchButtons = document.getElementsByClassName("spec-switch-button");
@@ -30,6 +29,7 @@ function addButtonListeners() {
   document.getElementById("fight_style_button").addEventListener("click", switch_fight_style );
 }
 
+// switches fightstyle between patchwerk and beastlord
 function switch_fight_style() {
   if (fight_style == "patchwerk") {
     fight_style = "beastlord";
@@ -50,6 +50,7 @@ function switch_fight_style() {
   switch_chart_to(active_spec);
 }
 
+// loads and activates spec chart, deactivates all other charts
 function switch_chart_to(spec) {
   if (spec == "") {
     return;
