@@ -1,18 +1,19 @@
 var fight_style = "patchwerk";
 var active_spec = "";
 
-document.addEventListener("DOMContentLoaded", addSpecButtonListeners);
+document.addEventListener("DOMContentLoaded", addButtonListeners);
 
-function addSpecButtonListeners() {
+function addButtonListeners() {
+  // add spec buttons
   var specSwitchButtons = document.getElementsByClassName("spec-switch-button");
-  console.log(specSwitchButtons.length);
   for (var i = specSwitchButtons.length - 1; i >= 0; i--) {
-    var j = i;
-    specSwitchButtons[j].addEventListener("click", function() { 
-      console.log(specSwitchButtons[j].name);
-      switch_chart_to(specSwitchButtons[j].name);
+    specSwitchButtons[i].addEventListener("click", function(e) { 
+      switch_chart_to(e.target.name);
     } );
   }
+
+  // add fight style switch button
+  document.getElementById("fight_style_button").addEventListener("click", switch_fight_style );
 }
 
 function switch_fight_style() {
