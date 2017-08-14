@@ -1,6 +1,21 @@
 var fight_style = "patchwerk";
 var active_spec = "";
 
+document.addEventListener("DOMContentLoaded", addButtonListeners);
+
+function addButtonListeners() {
+  // add spec buttons
+  var specSwitchButtons = document.getElementsByClassName("spec-switch-button");
+  for (var i = specSwitchButtons.length - 1; i >= 0; i--) {
+    specSwitchButtons[i].addEventListener("click", function(e) { 
+      switch_chart_to(e.target.name);
+    } );
+  }
+
+  // add fight style switch button
+  document.getElementById("fight_style_button").addEventListener("click", switch_fight_style );
+}
+
 function switch_fight_style() {
   if (fight_style == "patchwerk") {
     fight_style = "beastlord";
@@ -41,11 +56,12 @@ function switch_chart_to(spec) {
   // hide/show TC-resource and Discord of the spec
   var tc_boxes = document.getElementsByClassName("tc-box");
   for (var i = tc_boxes.length - 1; i >= 0; i--) {
-    if (tc_boxes[i].id === spec) {
+    if (tc_boxes[i].id === "tc_" + spec) {
       tc_boxes[i].style.display = 'block';
     } else {
       tc_boxes[i].style.display = 'none';
     }
   }
+
   ga('send', 'event', 'spec', 'show ' + fight_style + ' chart', active_spec);
 }
