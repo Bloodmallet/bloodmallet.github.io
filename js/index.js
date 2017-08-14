@@ -2,6 +2,20 @@ var fight_style = "patchwerk";
 var active_spec = "";
 
 document.addEventListener("DOMContentLoaded", addButtonListeners);
+document.addEventListener("DOMContentLoaded", addLinkListeners);
+
+function addLinkListeners() {
+  var links = document.links;
+  for (var i = links.length - 1; i >= 0; i--) {
+    links[i].addEventListener("click", function(e) {
+      clickLink(e);
+    } );
+  }
+}
+
+function clickLink(argument) {
+  ga('send', 'event', 'outgoing', 'click', argument.target.href);
+}
 
 function addButtonListeners() {
   // add spec buttons
