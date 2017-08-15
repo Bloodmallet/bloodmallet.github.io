@@ -31,8 +31,14 @@ ul.todo {
   margin-right: 5%;
 }
 
+#pre_chart_options {
+  text-align: center;
+}
+#pre_chart_aligner {
+  display: inline-block;
+}
+
 #fight_style_button {
-  margin: 0 auto;
   color: white;
   border: 1px solid grey;
   text-align: center;
@@ -42,6 +48,19 @@ ul.todo {
   padding-bottom: 7px;
   padding-left: 12px;
   padding-right: 12px;
+  cursor: pointer;
+}
+
+#select_language {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 7px;
+  padding-right: 7px;
+  color: white;
+  border: 1px solid grey;
+  text-align: center;
+  font-weight: 200;
+  background-color: #343434;
   cursor: pointer;
 }
 
