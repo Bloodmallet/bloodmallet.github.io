@@ -110,23 +110,13 @@ p {
 ul li {
   font-weight: 200;
 }
+
 ul.sim-settings {
   padding-top: 10px;
   padding-bottom: 10px;
   margin-left: 5%;
   margin-right: 5%;
   /*background-color: #ddd;*/
-}
-
-a {
-  color: #3282e6;
-  text-decoration: none;
-  transition: background-color .25s ease-in;
-}
-
-a:hover {
-  background-color: #ccc;
-  transition: background-color .01s ease-in;
 }
 
 ul.changelog {
@@ -162,7 +152,18 @@ span.signout {
   font-size: 21px;
 }
 
+div.central_aligner_outer {
+  text-align: center;
+  background-color: #343434;
+  line-height: 1;
+}
+div.central_aligner_inner {
+  display: inline-block;
+}
+
 nav ul {
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
   background-color: #343434;
   text-align: center;
   -webkit-padding-start: 0px;
@@ -171,9 +172,14 @@ nav ul {
 
 nav li {
   border-left: solid 1px;
-  border-right: solid 1px;
   border-color: #eee;
   display: inline-block;
+  float: left;
+}
+
+nav li:last-child {
+  border-right: solid 1px;
+  border-color: #eee;
 }
 
 nav a, nav span {
@@ -186,6 +192,17 @@ nav a, nav span {
 nav a:hover, nav span:hover {
   color: #000;
   background-color: #eee;
+  transition: background-color .01s ease-in;
+}
+
+a {
+  color: #3282e6;
+  text-decoration: none;
+  transition: background-color .25s ease-in;
+}
+
+a:hover {
+  background-color: #ccc;
   transition: background-color .01s ease-in;
 }
 
