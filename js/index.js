@@ -32,7 +32,7 @@ function addLanguageListener() {
 
 function switchLanguage(new_language) {
   // little sanity check
-  if (new_language == "EN" || new_language == "FR") {
+  if (new_language == "EN" || new_language == "FR" || new_language == "DE" || new_language == "KO") {
     if (new_language != language && new_language != "EN") {
       // load new language file
       var xhttp_getlanguage = new XMLHttpRequest();
