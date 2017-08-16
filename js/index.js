@@ -1,12 +1,14 @@
 var fight_style = "patchwerk";
 var active_spec = "";
+
 var language = "EN";
+var translator = {};
 
 // add listeners after document finished loading
 document.addEventListener("DOMContentLoaded", addButtonListeners);
 document.addEventListener("DOMContentLoaded", addLanguageListener);
 
-// add the show chart functionality to all buttons 
+// add the show chart functionality to all buttons
 function addButtonListeners() {
   // add spec buttons
   var specSwitchButtons = document.getElementsByClassName("spec-switch-button");
@@ -20,6 +22,7 @@ function addButtonListeners() {
   document.getElementById("fight_style_button").addEventListener("click", switch_fight_style );
 }
 
+// replaces all known trinket names with the ones from the translation file
 function addLanguageListener() {
   document.getElementById("select_language").addEventListener("change", function() {
     switchLanguage(this.options[this.selectedIndex].value);
@@ -27,9 +30,30 @@ function addLanguageListener() {
 }
 
 function switchLanguage(new_language) {
-  if (new_language == "EN" || new_language == "DE" || new_language == "FR") {
-    language = new_language;
+  // little sanity check
+  if (new_language == "EN" || new_language == "FR") {
+    if (new_language != language && new_language != "EN") {
+      // load new language file
+      var xhttp_getlanguage = new XMLHttpRequest();
+      xhttp_getlanguage.open("GET", "./translations/" + new_language.toLowerCase() + ".json", true);
+      xhttp_getlanguage.setRequestHeader("Content-type", "application/json");
+
+      xhttp_getlanguage.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          //console.log(JSON.parse(xhttp_getlanguage.responseText));
+          translator = JSON.parse(xhttp_getlanguage.responseText);
+        }
+      }
+      xhttp_getlanguage.send();
+      // set new language
+      language = new_language;
+    } else if (new_language != language && new_language == "EN") {
+      reset_translations();
+      language = new_language;
+    }
   }
+
+  // translate charts with new language
   setTimeout(translate_charts, 100);
 }
 
@@ -102,7 +126,6 @@ function switch_chart_to(spec) {
     //console.log("Starting translation process.");
     setTimeout(translate_charts, 100);
   }
-
 }
 
 // allows a callback on script load. not necessary but maybe nice to have
@@ -116,17 +139,23 @@ function getScript(source, callback) {
 
 
 function translate_charts() {
-  var tspans = document.getElementsByTagName("tspan");
-
-  var wait_counter = 0;
-  while(tspans.length == 0 && wait_counter < 3000) {
-    setTimeout(function() {  }, 5);
-    wait_counter += 5;
-    tspans = document.getElementsByTagName("tspan");
+  if (language=="EN") {
+    return;
   }
 
+  var tspans = document.getElementsByTagName("tspan");
+
   for (var i = tspans.length - 1; i >= 0; i--) {
-    var translation = translate_trinket(tspans[i].innerHTML);
+    var translation = false;
+    if (tspans[i].name) {
+      translation = translate_trinket(tspans[i].name);
+    } else {
+      translation = translate_trinket(tspans[i].innerHTML);
+      if (translation) {
+        tspans[i].name = tspans[i].innerHTML;
+      }
+    }
+
     if (translation) {
       tspans[i].innerHTML = translation;
     }
@@ -134,403 +163,17 @@ function translate_charts() {
 }
 
 function translate_trinket(trinket) {
-  var translate_heap = {
-    "Kil'jaeden's Burning Wish": {
-      "DE": "Schnitzel",
-      "FR": "Croissant"
-    },
-    "Chrono Shard": {
-      "DE": "Schnitzel",
-      "FR": "Croissant"
-    },
-    "Horn of Valor": {
-      "DE": "Schnitzel",
-      "FR": "Croissant"
-    },
-    "Toe Knee's Promise": {
-      "DE": "Schnitzel",
-      "FR": "Croissant"
-    },
-    "Infernal Alchemist Stone": {
-      "DE": "Schnitzel",
-      "FR": "Croissant"
-    },
-    "Unstable Arcanocrystal": {
-      "DE": "Schnitzel",
-      "FR": "Croissant"
-    },
-    "Darkmoon Deck: Dominion": {
-      "DE": "Schnitzel",
-      "FR": "Croissant"
-    },
-    "Bloodstained Handkerchief": {
-      "DE": "Schnitzel",
-      "FR": "Croissant"
-    },
-    "Chaos Talisman": {
-      "DE": "Schnitzel",
-      "FR": "Croissant"
-    },
-    "Eye of Command": {
-      "DE": "Schnitzel",
-      "FR": "Croissant"
-    },
-    "Faulty Countermeasure": {
-      "DE": "Schnitzel",
-      "FR": "Croissant"
-    },
-    "Gift of Radiance": {
-      "DE": "Schnitzel",
-      "FR": "Croissant"
-    },
-    "Giant Ornamental Pearl": {
-      "DE": "Schnitzel",
-      "FR": "Croissant"
-    },
-    "Mark of Dargrul": {
-      "DE": "Schnitzel",
-      "FR": "Croissant"
-    },
-    "Memento of Angerboda": {
-      "DE": "Schnitzel",
-      "FR": "Croissant"
-    },
-    "Nightmare Egg Shell": {
-      "DE": "Schnitzel",
-      "FR": "Croissant"
-    },
-    "Spiked Counterweight": {
-      "DE": "Schnitzel",
-      "FR": "Croissant"
-    },
-    "Terrorbound Nexus": {
-      "DE": "Schnitzel",
-      "FR": "Croissant"
-    },
-    "Tiny Oozeling in a Jar": {
-      "DE": "Schnitzel",
-      "FR": "Croissant"
-    },
-    "Windscar Whetstone": {
-      "DE": "Schnitzel",
-      "FR": "Croissant"
-    },
-    "Nature's Call": {
-      "DE": "Schnitzel",
-      "FR": "Croissant"
-    },
-    "Ravaged Seed Pod": {
-      "DE": "Schnitzel",
-      "FR": "Croissant"
-    },
-    "Spontaneous Appendages": {
-      "DE": "Schnitzel",
-      "FR": "Croissant"
-    },
-    "Draught of Souls": {
-      "DE": "Schnitzel",
-      "FR": "Croissant"
-    },
-    "Entwined Elemental Foci": {
-      "DE": "Schnitzel",
-      "FR": "Croissant"
-    },
-    "Infernal Cinders": {
-      "DE": "Schnitzel",
-      "FR": "Croissant"
-    },
-    "Umbral Moonglaives": {
-      "DE": "Schnitzel",
-      "FR": "Croissant"
-    },
-    "Vial of Ceaseless Toxins": {
-      "DE": "Schnitzel",
-      "FR": "Croissant"
-    },
-    "Specter of Betrayal": {
-      "DE": "Schnitzel",
-      "FR": "Croissant"
-    },
-    "The Devilsaur's Bite": {
-      "DE": "Schnitzel",
-      "FR": "Croissant"
-    },
-    "Aran's Relaxing Ruby": {
-      "DE": "Schnitzel",
-      "FR": "Croissant"
-    },
-    "Caged Horror": {
-      "DE": "Schnitzel",
-      "FR": "Croissant"
-    },
-    "Corrupted Starlight": {
-      "DE": "Schnitzel",
-      "FR": "Croissant"
-    },
-    "Deteriorated Construct Core": {
-      "DE": "Schnitzel",
-      "FR": "Croissant"
-    },       
-    "Elementium Bomb Squirrel Generator": {
-      "DE": "Schnitzel",
-      "FR": "Croissant"
-    },
-    "Eye of Skovald": {
-      "DE": "Schnitzel",
-      "FR": "Croissant"
-    },
-    "Figurehead of the Naglfar": {
-      "DE": "Schnitzel",
-      "FR": "Croissant"
-    },
-    "Moonlit Prism": {
-      "DE": "Schnitzel",
-      "FR": "Croissant"
-    },
-    "Mrrgria's Favor": {
-      "DE": "Schnitzel",
-      "FR": "Croissant"
-    },
-    "Naraxas' Spiked Tongue": {
-      "DE": "Schnitzel",
-      "FR": "Croissant"
-    },
-    "Oakheart's Gnarled Root": {
-      "DE": "Schnitzel",
-      "FR": "Croissant"
-    },
-    "Obelisk of the Void": {
-      "DE": "Schnitzel",
-      "FR": "Croissant"
-    },
-    "Stormsinger Fulmination Charge": {
-      "DE": "Schnitzel",
-      "FR": "Croissant"
-    },
-    "Twisting Wind": {
-      "DE": "Schnitzel",
-      "FR": "Croissant"
-    },
-    "Unstable Horrorslime": {
-      "DE": "Schnitzel",
-      "FR": "Croissant"
-    },
-    "Fury of the Burning Sky": {
-      "DE": "Schnitzel",
-      "FR": "Croissant"
-    },
-    "Icon of Rot": {
-      "DE": "Schnitzel",
-      "FR": "Croissant"
-    },
-    "Spectral Thurible": {
-      "DE": "Schnitzel",
-      "FR": "Croissant"
-    },
-    "Tarnished Sentinel Medallion": {
-      "DE": "Schnitzel",
-      "FR": "Croissant"
-    },
-    "Terror From Below": {
-      "DE": "Schnitzel",
-      "FR": "Croissant"
-    },
-    "Splinters of Agronax": {
-      "DE": "Schnitzel",
-      "FR": "Croissant"
-    },
-    "Tempered Egg of Serpentrix": {
-      "DE": "Schnitzel",
-      "FR": "Croissant"
-    },
-    "Tirathon's Betrayal": {
-      "DE": "Schnitzel",
-      "FR": "Croissant"
-    },
-    "Bloodthirsty Instinct": {
-      "DE": "Schnitzel",
-      "FR": "Croissant"
-    },
-    "Arcanogolem Digit": {
-      "DE": "Schnitzel",
-      "FR": "Croissant"
-    },
-    "Convergence of Fates": {
-      "DE": "Schnitzel",
-      "FR": "Croissant"
-    },
-    "Nightblooming Frond": {
-      "DE": "Schnitzel",
-      "FR": "Croissant"
-    },
-    "PVP Insignia of Conquest": {
-      "DE": "Schnitzel",
-      "FR": "Croissant"
-    },
-    "PVP Badge of Conquest": {
-      "DE": "Schnitzel",
-      "FR": "Croissant"
-    },
-    "Cradle of Anguish": {
-      "DE": "Schnitzel",
-      "FR": "Croissant"
-    },
-    "Engine of Eradication": {
-      "DE": "Schnitzel",
-      "FR": "Croissant"
-    },
-    "Ley Spark": {
-      "DE": "Schnitzel",
-      "FR": "Croissant"
-    },
-    "Six-Feather Fan": {
-      "DE": "Schnitzel",
-      "FR": "Croissant"
-    },
-    "Thrice-Accursed Compass": {
-      "DE": "Schnitzel",
-      "FR": "Croissant"
-    },
-    "Darkmoon Deck: Hellfire": {
-      "DE": "Schnitzel",
-      "FR": "Croissant"
-    },
-    "Dreadstone of Endless Shadows": {
-      "DE": "Schnitzel",
-      "FR": "Croissant"
-    },
-    "Infernal Writ": {
-      "DE": "Schnitzel",
-      "FR": "Croissant"
-    },
-    "Portable Manacracker": {
-      "DE": "Schnitzel",
-      "FR": "Croissant"
-    },
-    "Bough of Corruption": {
-      "DE": "Schnitzel",
-      "FR": "Croissant"
-    },
-    "Swarming Plaguehive": {
-      "DE": "Schnitzel",
-      "FR": "Croissant"
-    },
-    "Twisting Wind": {
-      "DE": "Schnitzel",
-      "FR": "Croissant"
-    },
-    "Unstable Horrorslime": {
-      "DE": "Schnitzel",
-      "FR": "Croissant"
-    },
-    "Wriggling Sinew": {
-      "DE": "Schnitzel",
-      "FR": "Croissant"
-    },
-    "Erratic Metronome": {
-      "DE": "Schnitzel",
-      "FR": "Croissant"
-    },
-    "Pharameres Forbidden Grimoire": {
-      "DE": "Schnitzel",
-      "FR": "Croissant"
-    },
-    "Star Gate": {
-      "DE": "Schnitzel",
-      "FR": "Croissant"
-    },
-    "Whispers in the Dark": {
-      "DE": "Schnitzel",
-      "FR": "Croissant"
-    },
-    "PVP Insignia of Dominance": {
-      "DE": "Schnitzel",
-      "FR": "Croissant"
-    },
-    "PVP Badge of Dominance": {
-      "DE": "Schnitzel",
-      "FR": "Croissant"
-    },
-    "Charm of the Rising Tide": {
-      "DE": "Schnitzel",
-      "FR": "Croissant"
-    },
-    "Tome of Unraveling Sanity": {
-      "DE": "Schnitzel",
-      "FR": "Croissant"
-    },
-    "Devilsaur Shock-Baton": {
-      "DE": "Schnitzel",
-      "FR": "Croissant"
-    },
-    "Eyasu's Mulligan": {
-      "DE": "Schnitzel",
-      "FR": "Croissant"
-    },
-    "Padawsen's Unlucky Charm": {
-      "DE": "Schnitzel",
-      "FR": "Croissant"
-    },
-    "Stat Stick (Crit)": {
-      "DE": "Schnitzel",
-      "FR": "Croissant"
-    },
-    "Stat Stick (Haste)": {
-      "DE": "Schnitzel",
-      "FR": "Croissant"
-    },
-    "Stat Stick (Mastery)": {
-      "DE": "Schnitzel",
-      "FR": "Croissant"
-    },
-    "Stat Stick (Versatility)": {
-      "DE": "Schnitzel",
-      "FR": "Croissant"
-    },
-    "Fel-Oiled Infernal Machine": {
-      "DE": "Schnitzel",
-      "FR": "Croissant"
-    },
-    "Ursoc's Rending Paw": {
-      "DE": "Schnitzel",
-      "FR": "Croissant"
-    },
-    "Claw of the Crystalline Scorpid": {
-      "DE": "Schnitzel",
-      "FR": "Croissant"
-    },
-    "Convergence of Fates": {
-      "DE": "Schnitzel",
-      "FR": "Croissant"
-    },
-    "Might of Krosus": {
-      "DE": "Schnitzel",
-      "FR": "Croissant"
-    },
-    "PVP Insignia of Victory": {
-      "DE": "Schnitzel",
-      "FR": "Croissant"
-    },
-    "PVP Badge of Victory": {
-      "DE": "Schnitzel",
-      "FR": "Croissant"
-    },
-    "Cradle of Anguish": {
-      "DE": "Schnitzel",
-      "FR": "Croissant"
-    },
-    "Engine of Eradication": {
-      "DE": "Schnitzel",
-      "FR": "Croissant"
-    },
-    "Ettin Fingernail": {
-      "DE": "Schnitzel",
-      "FR": "Croissant"
-    }
-  };
-
-  if (translate_heap[trinket] && translate_heap[trinket][language]) {
-    return translate_heap[trinket][language];
+  if (translator[trinket] && translator[trinket] != "") {
+    return translator[trinket];
   }
   return false;
+}
+
+function reset_translations() {
+  var tspans = document.getElementsByTagName("tspan");
+  for (var i = tspans.length - 1; i >= 0; i--) {
+    if (tspans[i].name) {
+      tspans[i].innerHTML = tspans[i].name;
+    }
+  }
 }
