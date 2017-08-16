@@ -60,7 +60,7 @@ function switchLanguage(new_language) {
   }
 
   // translate charts with new language
-  setTimeout(translate_charts, 100);
+  setTimeout(translate_charts, 200);
 }
 
 // switches fightstyle between patchwerk and beastlord
@@ -130,7 +130,7 @@ function switch_chart_to(spec) {
 
   if (language != "EN") {
     //console.log("Starting translation process.");
-    setTimeout(translate_charts, 100);
+    setTimeout(translate_charts, 200);
   }
 }
 
