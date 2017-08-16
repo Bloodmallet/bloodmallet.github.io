@@ -26,6 +26,7 @@ function addButtonListeners() {
 function addLanguageListener() {
   document.getElementById("select_language").addEventListener("change", function() {
     switchLanguage(this.options[this.selectedIndex].value);
+    ga('send', 'event', 'switch_language', this.options[this.selectedIndex].value);
   });
 }
 
