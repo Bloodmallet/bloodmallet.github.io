@@ -31,6 +31,16 @@ var firebase_connection = new function() {
         }
     };
 
+    this.get_baseline = function() {
+        /* Returns a promise for the baseline DPS of the selected spec */
+        return new Promise((resolve, reject) => {
+            let data = firebase.database().ref(this.spec_query + 'baseline').once('value').then(function(snapshot) {
+                resolve(snapshot.val()['860']);
+            });
+            setTimeout(reject, 5000, "Could not retrieve data in time.");
+        })
+    };
+
     this.update_fight_style_query = function(fight_style) {
         this.query = "/fight_style/" + fight_style + '/classes/';
     };
@@ -88,7 +98,7 @@ var firebase_connection = new function() {
 };
 
 function check_valid_trinket_combination() {
-    /* Checks if all fields are completed with valid entries (a non-zero length string is OK).
+    /* Checks if all fields are completed with valid entries (a disabled field is OK).
         Enables the compare button if all fields are valid. */
     var trinket1_name = document.getElementById("trinket1_name");
     var trinket1_ilvl = document.getElementById("trinket1_ilvl");
@@ -98,7 +108,7 @@ function check_valid_trinket_combination() {
 
     var valid_combination = true;
     Array(trinket1_name, trinket1_ilvl, trinket2_name, trinket2_ilvl).forEach(function(element) {
-        if (element.selectedOptions[0].value.length <= 0) {
+        if (element.selectedOptions[0].disabled) {
             valid_combination = false;
         }
     });
@@ -123,12 +133,14 @@ function compare() {
 
     let trinket1_promise = firebase_connection.get_trinket_dps_value(trinket1['name'], trinket1['ilvl']);
     let trinket2_promise = firebase_connection.get_trinket_dps_value(trinket2['name'], trinket2['ilvl']);
+    let baseline_promise = firebase_connection.get_baseline();
 
-    Promise.all([trinket1_promise, trinket2_promise]).then(values => {
+    Promise.all([trinket1_promise, trinket2_promise, baseline_promise]).then(values => {
         trinket1['dps'] = parseInt(values[0]);
         trinket2['dps'] = parseInt(values[1]);
+        var baseline = parseInt(values[2]);
 
-        var decision = compare_trinket_values(trinket1, trinket2);
+        var decision = compare_trinket_values(trinket1, trinket2, baseline);
 
         var t1 = performance.now();
         var time_string = "<p> Data fetched in " + Math.round(t1 - t0) + " ms.</p>";
@@ -138,14 +150,14 @@ function compare() {
 
 }
 
-function compare_trinket_values(trinket1, trinket2) {
+function compare_trinket_values(trinket1, trinket2, baseline) {
     /* Generates the comparison/decision string from given trinket DPS values trinket1 and trinket2 */
     var difference = Math.abs(trinket1['dps'] - trinket2['dps']).toLocaleString();
-    var difference_perc = Math.round(Math.abs(1 - (trinket1['dps'] / trinket2['dps'])) * 100);
+    var difference_percentage = Math.round(Math.abs(((trinket1['dps'] - baseline) * 100) / ((trinket2['dps'] - baseline) * 100)));
     if (trinket1['dps'] > trinket2['dps']) {
-        return "<p>Your " + trinket1['ilvl'] + " ilvl " + trinket1['name'] + " is <strong>" + difference + " DPS (~" + difference_perc + "%) better</strong> than your " + trinket2['ilvl'] + " ilvl " + trinket2['name'] + ".</p>";
+        return "<p>Your " + trinket1['ilvl'] + " ilvl " + trinket1['name'] + " is <strong>" + difference + " DPS (~" + difference_percentage + "%) better</strong> than your " + trinket2['ilvl'] + " ilvl " + trinket2['name'] + ".</p>";
     } else {
-        return "<p>Your " + trinket2['ilvl'] + " ilvl " + trinket2['name'] + " is <strong>" + difference + " DPS (~" + difference_perc + "%) better</strong> than your " + trinket1['ilvl'] + " ilvl " + trinket1['name'] + ".</p>";
+        return "<p>Your " + trinket2['ilvl'] + " ilvl " + trinket2['name'] + " is <strong>" + difference + " DPS (~" + difference_percentage + "%) better</strong> than your " + trinket1['ilvl'] + " ilvl " + trinket1['name'] + ".</p>";
     }
 }
 
@@ -205,26 +217,30 @@ function form_enabler() {
 
 
     trinket1_name.addEventListener('change', function(e) {
-        check_valid_trinket_combination();
         var query_string = firebase_connection.spec_query + e.target.selectedOptions[0].value + "/"
         firebase_connection.populate_options("trinket1_ilvl", query_string);
         if (trinket1_ilvl.children.length > 1 || trinket1_ilvl.children[0].value == "970") remove_options(trinket1_ilvl);
         trinket1_ilvl.disabled = false;
+        compare_button.disabled = true;
+        check_valid_trinket_combination();
     }, false);
 
     trinket2_name.addEventListener('change', function(e) {
-        check_valid_trinket_combination();
         var query_string = firebase_connection.spec_query + e.target.selectedOptions[0].value + "/"
         firebase_connection.populate_options("trinket2_ilvl", query_string);
         if (trinket2_ilvl.children.length > 1 || trinket2_ilvl.children[0].value == "970") remove_options(trinket2_ilvl);
         trinket2_ilvl.disabled = false;
+        compare_button.disabled = true;
+        check_valid_trinket_combination();
     }, false);
 
     trinket1_ilvl.addEventListener('change', function() {
+        compare_button.disabled = true;
         check_valid_trinket_combination();
     });
 
     trinket2_ilvl.addEventListener('change', function() {
+        compare_button.disabled = true;
         check_valid_trinket_combination();
     });
 
