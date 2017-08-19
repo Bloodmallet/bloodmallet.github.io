@@ -87,6 +87,23 @@ var firebase_connection = new function() {
     };
 };
 
+function check_valid_trinket_combination() {
+    /* Checks if all fields are completed with valid entries (a non-zero length string is OK).
+        Enables the compare button if all fields are valid. */
+    var trinket1_name = document.getElementById("trinket1_name");
+    var trinket1_ilvl = document.getElementById("trinket1_ilvl");
+    var trinket2_name = document.getElementById("trinket2_name");
+    var trinket2_ilvl = document.getElementById("trinket2_ilvl");
+    var compare_button = document.getElementById("compare_button");
+
+    var valid_combination = true;
+    Array(trinket1_name, trinket1_ilvl, trinket2_name, trinket2_ilvl).forEach(function(element) {
+        if (element.selectedOptions[0].value.length <= 0) {
+            valid_combination = false;
+        }
+    });
+    if (valid_combination) compare_button.disabled = false;
+}
 
 function compare() {
     var t0 = performance.now();
@@ -149,6 +166,7 @@ function form_enabler() {
     });
 
     class_name.addEventListener('change', function(e) {
+        compare_button.disabled = true;
         var query_string = firebase_connection.query + e.target.selectedOptions[0].value + "/"
         firebase_connection.populate_options("spec_name", query_string);
         if (spec_name.disabled == false) {
@@ -172,36 +190,43 @@ function form_enabler() {
     });
 
     spec_name.addEventListener('change', function(e) {
+        compare_button.disabled = true;
         firebase_connection.update_class_spec_query(class_name.selectedOptions[0].value, e.target.selectedOptions[0].value);
         var query_string = firebase_connection.class_query + e.target.selectedOptions[0].value + "/";
         firebase_connection.populate_options("trinket1_name", query_string);
         firebase_connection.populate_options("trinket2_name", query_string);
         if (trinket1_name.children.length > 1) remove_options(trinket1_name);
+        if (trinket2_name.children.length > 1) remove_options(trinket2_name);
+        remove_options(trinket1_ilvl);
+        remove_options(trinket2_ilvl);
         trinket1_name.disabled = false;
+        trinket2_name.disabled = false;
     });
 
 
     trinket1_name.addEventListener('change', function(e) {
+        check_valid_trinket_combination();
         var query_string = firebase_connection.spec_query + e.target.selectedOptions[0].value + "/"
         firebase_connection.populate_options("trinket1_ilvl", query_string);
         if (trinket1_ilvl.children.length > 1 || trinket1_ilvl.children[0].value == "970") remove_options(trinket1_ilvl);
         trinket1_ilvl.disabled = false;
     }, false);
 
-    trinket1_ilvl.addEventListener('change', function(e) {
-        trinket2_name.disabled = false;
-    }, false);
-
     trinket2_name.addEventListener('change', function(e) {
+        check_valid_trinket_combination();
         var query_string = firebase_connection.spec_query + e.target.selectedOptions[0].value + "/"
         firebase_connection.populate_options("trinket2_ilvl", query_string);
         if (trinket2_ilvl.children.length > 1 || trinket2_ilvl.children[0].value == "970") remove_options(trinket2_ilvl);
         trinket2_ilvl.disabled = false;
     }, false);
 
-    trinket2_ilvl.addEventListener('change', function(e) {
-        compare_button.disabled = false;
-    }, false);
+    trinket1_ilvl.addEventListener('change', function() {
+        check_valid_trinket_combination();
+    });
+
+    trinket2_ilvl.addEventListener('change', function() {
+        check_valid_trinket_combination();
+    });
 
     compare_button.addEventListener("click", compare, false);
 }
