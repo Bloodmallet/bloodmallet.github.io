@@ -160,6 +160,8 @@ function form_enabler() {
             Promise.all([trinket1_promise]).then(values => {
                 remove_options(trinket1_name);
                 remove_options(trinket2_name);
+                remove_options(trinket1_ilvl);
+                remove_options(trinket2_ilvl);
                 firebase_connection.populate_options("trinket1_name", query_string + values[0] + '/');
                 firebase_connection.populate_options("trinket2_name", query_string + values[0] + '/');
                 firebase_connection.update_class_spec_query(class_name.selectedOptions[0].value, values[0]);
