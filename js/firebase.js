@@ -119,6 +119,8 @@ function compare() {
     var t0 = performance.now();
     /* Make a comparison between trinkets and deliver the decision message. Called when the Compare button is clicked.  */
     var result_elem = document.getElementById("result");
+    var trinket1_result = document.getElementById("trinket1_result");
+    var trinket2_result = document.getElementById("trinket2_result");
     result_elem.innerText = "";
     result_elem.style.visibility = "hidden";
 
@@ -140,6 +142,26 @@ function compare() {
         trinket2['dps'] = parseInt(values[1]);
         var baseline = parseInt(values[2]);
 
+
+        trinket1_result.innerText = trinket1['name'] + " is worth " + (trinket1['dps'] - baseline) + " DPS.";
+
+        trinket2_result.innerText = trinket2['name'] + " is worth " + (trinket2['dps'] - baseline) + " DPS.";
+
+        if (trinket1['dps'] > trinket2['dps']) {
+            trinket1_result.classList.add("alert-success");
+            trinket1_result.classList.remove("alert-danger");
+            trinket2_result.classList.add("alert-danger");
+            trinket2_result.classList.remove("alert-success");
+        } else {
+            trinket2_result.classList.add("alert-success");
+            trinket2_result.classList.remove("alert-danger");
+            trinket1_result.classList.add("alert-danger");
+            trinket1_result.classList.remove("alert-success");
+        }
+
+        trinket1_result.style.visibility = "visible";
+        trinket2_result.style.visibility = "visible";
+
         var decision = compare_trinket_values(trinket1, trinket2, baseline);
 
         var t1 = performance.now();
@@ -155,8 +177,10 @@ function compare_trinket_values(trinket1, trinket2, baseline) {
     var difference = Math.abs(trinket1['dps'] - trinket2['dps']).toLocaleString();
     var difference_percentage = Math.round(Math.abs(((trinket1['dps'] - baseline) * 100) / ((trinket2['dps'] - baseline) * 100)));
     if (trinket1['dps'] > trinket2['dps']) {
+        var difference_percentage = Math.round((((trinket1['dps'] - baseline) * 100) / (trinket2['dps'] - baseline)) - 100);
         return "<p>Your " + trinket1['ilvl'] + " ilvl " + trinket1['name'] + " is <strong>" + difference + " DPS (~" + difference_percentage + "%) better</strong> than your " + trinket2['ilvl'] + " ilvl " + trinket2['name'] + ".</p>";
     } else {
+        var difference_percentage = Math.round((((trinket2['dps'] - baseline) * 100) / (trinket1['dps'] - baseline)) - 100);
         return "<p>Your " + trinket2['ilvl'] + " ilvl " + trinket2['name'] + " is <strong>" + difference + " DPS (~" + difference_percentage + "%) better</strong> than your " + trinket1['ilvl'] + " ilvl " + trinket1['name'] + ".</p>";
     }
 }

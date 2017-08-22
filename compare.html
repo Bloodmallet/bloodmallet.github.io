@@ -34,7 +34,7 @@
             <li><a href="./index.html">Bloodytrinkets</a></li>
             <li><a href="./faq.html">FAQ</a></li>
             <li><a href="https://github.com/Bloodmallet/bloodmallet.github.io/commits/master">Changelog</a> </li>
-            <li><a href="./compare.html">Trinket Compare <span class="badge badge-new">NEW</span></a></li>
+            <li><a href="./compare.html">Trinket Compare Tool <span class="badge badge-new">NEW</span></a></li>
         </ul>
     </nav>
 
@@ -170,13 +170,31 @@
         </div>
 
         <div class="row top-buffer">
+
+            <div class="col-md-2">
+            </div>
+
+            <div class="col-md-4 text-center">
+                <p align=center class="trinket-message" id="trinket1_result" style="visibility: hidden"></p>
+            </div>
+
+            <div class="col-md-4 text-center">
+                <p align=center class="trinket-message" id="trinket2_result" style="visibility: hidden"></p>
+            </div>
+
+            <div class="col-md-2">
+            </div>
+
+        </div>
+
+        <div class="row top-buffer">
             <div class="col-md-6 col-md-offset-3 text-center">
 
                 <button type="button" id="compare_button" class="btn btn-default" disabled data-loading-text="Loading...">
                 Compare
             </button>
 
-                <p align=center class="bg-success trinket-message" id="result" style="visibility: hidden;"></p>
+                <p align=center class="alert-info trinket-message" id="result" style="visibility: hidden;"></p>
             </div>
         </div>
     </div>
