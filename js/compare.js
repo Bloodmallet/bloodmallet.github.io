@@ -112,7 +112,9 @@ function check_valid_trinket_combination() {
             valid_combination = false;
         }
     });
-    if (valid_combination) compare_button.disabled = false;
+    if (valid_combination) {
+        compare_button.disabled = false;
+    }
 }
 
 function compare() {
@@ -170,18 +172,20 @@ function compare() {
         result_elem.style.visibility = "visible";
     });
 
+    ga('send', 'event', 'comparison', document.getElementById("fight_style").selectedOptions[0].value, document.getElementById("class_name").selectedOptions[0].value + "_" + document.getElementById("spec_name").selectedOptions[0].value);
 }
 
 function compare_trinket_values(trinket1, trinket2, baseline) {
     /* Generates the comparison/decision string from given trinket DPS values trinket1 and trinket2 */
     var difference = Math.abs(trinket1['dps'] - trinket2['dps']).toLocaleString();
-    var difference_percentage = Math.round(Math.abs(((trinket1['dps'] - baseline) * 100) / ((trinket2['dps'] - baseline) * 100)));
     if (trinket1['dps'] > trinket2['dps']) {
-        var difference_percentage = Math.round((((trinket1['dps'] - baseline) * 100) / (trinket2['dps'] - baseline)) - 100);
+        var difference_percentage = Math.round((((trinket1['dps'] - baseline) * 100) / (trinket2['dps'] - baseline)) - 100 );
         return "<p>Your " + trinket1['ilvl'] + " ilvl " + trinket1['name'] + " is <strong>" + difference + " DPS (~" + difference_percentage + "%) better</strong> than your " + trinket2['ilvl'] + " ilvl " + trinket2['name'] + ".</p>";
-    } else {
-        var difference_percentage = Math.round((((trinket2['dps'] - baseline) * 100) / (trinket1['dps'] - baseline)) - 100);
+    } else if (trinket2['dps'] > trinket1['dps']) {
+        var difference_percentage = Math.round((((trinket2['dps'] - baseline) * 100) / (trinket1['dps'] - baseline)) - 100 );
         return "<p>Your " + trinket2['ilvl'] + " ilvl " + trinket2['name'] + " is <strong>" + difference + " DPS (~" + difference_percentage + "%) better</strong> than your " + trinket1['ilvl'] + " ilvl " + trinket1['name'] + ".</p>";
+    } else {
+        return "<p>Both trinkets have the exact same DPS value. You might've tried to compare a trinket with itself.</p>";
     }
 }
 
@@ -197,17 +201,20 @@ function form_enabler() {
     var spec_name = document.getElementById("spec_name");
 
     fight_style.addEventListener('change', function(e) {
+        hide_results();
         firebase_connection.update_fight_style_query(fight_style.selectedOptions[0].value);
-        firebase_connection.update_class_spec_query(class_name.selectedOptions[0].value, spec_name.selectedOptions[0].value)
+        firebase_connection.update_class_spec_query(class_name.selectedOptions[0].value, spec_name.selectedOptions[0].value);
     });
 
     class_name.addEventListener('change', function(e) {
+        disable_selectors();
+        hide_results();
         compare_button.disabled = true;
         var query_string = firebase_connection.query + e.target.selectedOptions[0].value + "/"
         firebase_connection.populate_options("spec_name", query_string);
         if (spec_name.disabled == false) {
             trinket1_name.disabled = trinket2_name.disabled = trinket1_ilvl.disabled = trinket2_ilvl.disabled = compare_button.disabled = true
-                // User has already selected a spec before
+            // User has already selected a spec before
             if (spec_name.children.length > 1 && spec_name.children[1].value !== "") remove_options(spec_name);
             firebase_connection.update_class_spec_query(class_name.selectedOptions[0].value, "");
             var trinket1_promise = firebase_connection.spec_name_promise();
@@ -226,6 +233,8 @@ function form_enabler() {
     });
 
     spec_name.addEventListener('change', function(e) {
+        disable_selectors();
+        hide_results();
         compare_button.disabled = true;
         firebase_connection.update_class_spec_query(class_name.selectedOptions[0].value, e.target.selectedOptions[0].value);
         var query_string = firebase_connection.class_query + e.target.selectedOptions[0].value + "/";
@@ -241,6 +250,7 @@ function form_enabler() {
 
 
     trinket1_name.addEventListener('change', function(e) {
+        hide_results();
         var query_string = firebase_connection.spec_query + e.target.selectedOptions[0].value + "/"
         firebase_connection.populate_options("trinket1_ilvl", query_string);
         if (trinket1_ilvl.children.length > 1 || trinket1_ilvl.children[0].value == "970") remove_options(trinket1_ilvl);
@@ -250,6 +260,7 @@ function form_enabler() {
     }, false);
 
     trinket2_name.addEventListener('change', function(e) {
+        hide_results();
         var query_string = firebase_connection.spec_query + e.target.selectedOptions[0].value + "/"
         firebase_connection.populate_options("trinket2_ilvl", query_string);
         if (trinket2_ilvl.children.length > 1 || trinket2_ilvl.children[0].value == "970") remove_options(trinket2_ilvl);
@@ -259,11 +270,13 @@ function form_enabler() {
     }, false);
 
     trinket1_ilvl.addEventListener('change', function() {
+        hide_results();
         compare_button.disabled = true;
         check_valid_trinket_combination();
     });
 
     trinket2_ilvl.addEventListener('change', function() {
+        hide_results();
         compare_button.disabled = true;
         check_valid_trinket_combination();
     });
@@ -284,6 +297,20 @@ function handle_spec_name(input) {
 
 function remove_options(caller) {
     caller.innerHTML = "<option value='' disabled selected hidden>Select one...</option>";
+}
+
+function hide_results() {
+    document.getElementById("trinket1_result").style.visibility = "hidden";
+    document.getElementById("trinket2_result").style.visibility = "hidden";
+    document.getElementById("result").style.visibility = "hidden";
+}
+
+function disable_selectors() {
+    document.getElementById("trinket1_result").disabled = true;
+    document.getElementById("trinket1_ilvl").disabled = true;
+    document.getElementById("trinket2_result").disabled = true;
+    document.getElementById("trinket2_ilvl").disabled = true;
+    document.getElementById("result").disabled = true;
 }
 
 firebase_connection.establish_connection();
