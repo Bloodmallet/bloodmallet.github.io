@@ -29,14 +29,18 @@
 </head>
 
 <body>
-    <nav>
-        <ul>
-            <li><a href="./index.html">Bloodytrinkets</a></li>
+    <div class="central_aligner_outer">
+      <div class="central_aligner_inner">
+        <nav>
+          <ul>
+            <li><a href="./index.html">Charts</a></li>
+            <li><a href="./compare.html">Comparison tool <span class="badge badge-new">NEW</span></a></li>
             <li><a href="./faq.html">FAQ</a></li>
             <li><a href="https://github.com/Bloodmallet/bloodmallet.github.io/commits/master">Changelog</a> </li>
-            <li><a href="./compare.html">Trinket Compare Tool <span class="badge badge-new">NEW</span></a></li>
-        </ul>
-    </nav>
+          </ul>
+        </nav>
+      </div>
+    </div>
 
 
     <div class="container">
@@ -79,20 +83,20 @@
                 <div class="ui-widget">
                     <label>Class</label>
                     <select class="form-control" id="class_name">
-            <option value="" disabled selected hidden>Select one...</option>
-            <option value="death_knight">Death Knight</option>
-            <option value="demon_hunter">Demon Hunter</option>
-            <option value="druid">Druid</option>
-            <option value="hunter">Hunter</option>
-            <option value="mage">Mage</option>
-            <option value="monk">Monk</option>
-            <option value="paladin">Paladin</option>
-            <option value="priest">Priest</option>
-            <option value="rogue">Rogue</option>
-            <option value="shaman">Shaman</option>
-            <option value="warlock">Warlock</option>
-            <option value="warrior">Warrior</option>
-        </select>
+                        <option value="" disabled selected hidden>Select one...</option>
+                        <option value="death_knight">Death Knight</option>
+                        <option value="demon_hunter">Demon Hunter</option>
+                        <option value="druid">Druid</option>
+                        <option value="hunter">Hunter</option>
+                        <option value="mage">Mage</option>
+                        <option value="monk">Monk</option>
+                        <option value="paladin">Paladin</option>
+                        <option value="priest">Priest</option>
+                        <option value="rogue">Rogue</option>
+                        <option value="shaman">Shaman</option>
+                        <option value="warlock">Warlock</option>
+                        <option value="warrior">Warrior</option>
+                    </select>
                 </div>
                 <br>
 
@@ -123,8 +127,8 @@
                 <div class="ui-widget">
                     <label>Name</label>
                     <select class="form-control" id="trinket1_name" disabled aria-describedby="trinket1_help">
-            <option value="" disabled selected hidden>Select one...</option>
-        </select>
+                        <option value="" disabled selected hidden>Select one...</option>
+                    </select>
                     <small id="trinket1_help" class="text-muted">
                         Select the name of the first trinket you'd like to compare.
                     </small>
@@ -133,8 +137,8 @@
                 <div class="ui-widget">
                     <label>Item level</label>
                     <select class="form-control" id="trinket1_ilvl" disabled aria-describedby="trinket1ilvl_help">
-                <option value="" disabled selected hidden>Select one...</option>
-            </select>
+                        <option value="" disabled selected hidden>Select one...</option>
+                    </select>
                     <small id="trinket1ilvl_help" class="text-muted">
                         Select the item level of the first trinket you'd like to compare.
                     </small>
@@ -146,8 +150,8 @@
                 <div class="ui-widget">
                     <label>Name</label>
                     <select class="form-control" id="trinket2_name" disabled aria-describedby="trinket2_help">
-                <option value="" disabled selected hidden>Select one...</option>
-            </select>
+                        <option value="" disabled selected hidden>Select one...</option>
+                    </select>
                     <small id="trinket2_help" class="text-muted">
                         Select the name of the second trinket you'd like to compare.
                     </small>
@@ -156,8 +160,8 @@
                 <div class="ui-widget">
                     <label>Item level</label>
                     <select class="form-control" id="trinket2_ilvl" disabled aria-describedby="trinket2ilvl_help">
-                <option value="" disabled selected hidden>Select one...</option>
-            </select>
+                        <option value="" disabled selected hidden>Select one...</option>
+                    </select>
                     <small id="trinket2ilvl_help" class="text-muted">
                         Select the item level of the second trinket you'd like to compare.
                     </small>
@@ -198,7 +202,7 @@
             </div>
         </div>
     </div>
-    <script src="js/firebase.js"></script>
+    <script src="js/compare.js"></script>
 
 
 </body>

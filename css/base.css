@@ -205,6 +205,7 @@ a {
 a:hover {
   background-color: #ccc;
   transition: background-color .01s ease-in;
+  text-decoration: none;
 }
 
 
@@ -449,39 +450,46 @@ a:hover {
   stroke: #bbb;
 }
 
+
 .badge-new {
-    background-color: #b94a48 !important;
+  background-color: #b94a48;
+  vertical-align: top;
+}
+
+a:hover .badge-new {
+  color: #fff;
+  background-color: #b94a48;
 }
 
 
 /* Override bootstrap button group display */
 
 .btn-group {
-    display: initial !important;
+  display: initial;
 }
 
 .top-buffer {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 #result {
-    max-width: 60%;
-    min-height: 2%;
+  max-width: 60%;
+  min-height: 2%;
 }
 
 #compare_button {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .trinket-message {
-    margin: 0 auto;
-    display: block;
-    width: 80%;
-    padding: 10px;
-    border: 1px solid #555555;
-    margin-bottom: 2%;
+  margin: 0 auto;
+  display: block;
+  width: 80%;
+  padding: 10px;
+  border: 1px solid #555555;
+  margin-bottom: 2%;
 }
 
 hr {
-    border-top: 1px solid #8c8b8b;
+  border-top: 1px solid #8c8b8b;
 }
