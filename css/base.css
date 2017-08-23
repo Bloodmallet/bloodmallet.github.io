@@ -448,3 +448,40 @@ a:hover {
 .highcharts-tick, .highcharts-grid path {
   stroke: #bbb;
 }
+
+.badge-new {
+    background-color: #b94a48 !important;
+}
+
+
+/* Override bootstrap button group display */
+
+.btn-group {
+    display: initial !important;
+}
+
+.top-buffer {
+    margin-top: 20px;
+}
+
+#result {
+    max-width: 60%;
+    min-height: 2%;
+}
+
+#compare_button {
+    margin-bottom: 10px;
+}
+
+.trinket-message {
+    margin: 0 auto;
+    display: block;
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #555555;
+    margin-bottom: 2%;
+}
+
+hr {
+    border-top: 1px solid #8c8b8b;
+}
