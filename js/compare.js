@@ -145,9 +145,9 @@ function compare() {
         var baseline = parseInt(values[2]);
 
 
-        trinket1_result.innerText = trinket1['name'] + " is worth " + (trinket1['dps'] - baseline) + " DPS.";
+        trinket1_result.innerText = trinket1['name'] + " is worth " + (trinket1['dps'] - baseline).toLocaleString() + " DPS.";
 
-        trinket2_result.innerText = trinket2['name'] + " is worth " + (trinket2['dps'] - baseline) + " DPS.";
+        trinket2_result.innerText = trinket2['name'] + " is worth " + (trinket2['dps'] - baseline).toLocaleString() + " DPS.";
 
         if (trinket1['dps'] > trinket2['dps']) {
             trinket1_result.classList.add("alert-success");
