@@ -37,6 +37,8 @@ function switchLanguage(new_language) {
     new_language == "DE" || 
     new_language == "KO" ||
     new_language == "CN" ||
+    new_language == "ES" ||
+    new_language == "PT" ||
     new_language == "RU" ) {
     if (new_language != language && new_language != "EN") {
       // load new language file
