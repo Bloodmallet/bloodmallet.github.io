@@ -50,19 +50,18 @@ function switchLanguage(new_language) {
         if (this.readyState == 4 && this.status == 200) {
           //console.log(JSON.parse(xhttp_getlanguage.responseText));
           translator = JSON.parse(xhttp_getlanguage.responseText);
+          // set new language
+          language = new_language;
+          translate_charts();
         }
       }
       xhttp_getlanguage.send();
-      // set new language
-      language = new_language;
     } else if (new_language != language && new_language == "EN") {
       reset_translations();
       language = new_language;
+      translate_charts();
     }
   }
-
-  // translate charts with new language
-  setTimeout(translate_charts, 200);
 }
 
 // switches fightstyle between patchwerk and beastlord
