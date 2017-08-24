@@ -15,6 +15,10 @@ var firebase_connection = new function() {
     };
 
     this.connection_error = function(err) {
+        var error_element = document.getElementById("connection_error");
+        error_element.innerText = err;
+        error_element.style.visibility = "visible";
+        error_element.style.display = "block";
         console.log(err);
     };
 
@@ -37,7 +41,7 @@ var firebase_connection = new function() {
             let data = firebase.database().ref(this.spec_query + 'baseline').once('value').then(function(snapshot) {
                 resolve(snapshot.val()['860']);
             });
-            setTimeout(reject, 5000, "Could not retrieve data in time.");
+            setTimeout(reject, 5000, this.connection_error("Could not retrieve data in time. The database connection may be down. Try again later. =("));
         })
     };
 
@@ -82,7 +86,7 @@ var firebase_connection = new function() {
                     }
                 });
             });
-            setTimeout(reject, 5000, "Could not retrieve data in time.");
+            setTimeout(reject, 5000, this.connection_error("Could not retrieve data in time. The database connection may be down. Try again later. =("));
         });
     };
 
@@ -92,7 +96,7 @@ var firebase_connection = new function() {
             let data = firebase.database().ref(this.spec_query + trinket_name + '/' + trinket_ilvl).once('value').then(function(snapshot) {
                 resolve(snapshot.val());
             });
-            setTimeout(reject, 5000, "Could not retrieve data in time.");
+            setTimeout(reject, 5000, this.connection_error("Could not retrieve data in time. The database connection may be down. Try again later. =("));
         });
     };
 };
@@ -179,10 +183,10 @@ function compare_trinket_values(trinket1, trinket2, baseline) {
     /* Generates the comparison/decision string from given trinket DPS values trinket1 and trinket2 */
     var difference = Math.abs(trinket1['dps'] - trinket2['dps']).toLocaleString();
     if (trinket1['dps'] > trinket2['dps']) {
-        var difference_percentage = Math.round((((trinket1['dps'] - baseline) * 100) / (trinket2['dps'] - baseline)) - 100 );
+        var difference_percentage = Math.round((((trinket1['dps'] - baseline) * 100) / (trinket2['dps'] - baseline)) - 100);
         return "<p>Your " + trinket1['ilvl'] + " ilvl " + trinket1['name'] + " is <strong>" + difference + " DPS (~" + difference_percentage + "%) better</strong> than your " + trinket2['ilvl'] + " ilvl " + trinket2['name'] + ".</p>";
     } else if (trinket2['dps'] > trinket1['dps']) {
-        var difference_percentage = Math.round((((trinket2['dps'] - baseline) * 100) / (trinket1['dps'] - baseline)) - 100 );
+        var difference_percentage = Math.round((((trinket2['dps'] - baseline) * 100) / (trinket1['dps'] - baseline)) - 100);
         return "<p>Your " + trinket2['ilvl'] + " ilvl " + trinket2['name'] + " is <strong>" + difference + " DPS (~" + difference_percentage + "%) better</strong> than your " + trinket1['ilvl'] + " ilvl " + trinket1['name'] + ".</p>";
     } else {
         return "<p>Both trinkets have the exact same DPS value. You might've tried to compare a trinket with itself.</p>";
@@ -214,7 +218,7 @@ function form_enabler() {
         firebase_connection.populate_options("spec_name", query_string);
         if (spec_name.disabled == false) {
             trinket1_name.disabled = trinket2_name.disabled = trinket1_ilvl.disabled = trinket2_ilvl.disabled = compare_button.disabled = true
-            // User has already selected a spec before
+                // User has already selected a spec before
             if (spec_name.children.length > 1 && spec_name.children[1].value !== "") remove_options(spec_name);
             firebase_connection.update_class_spec_query(class_name.selectedOptions[0].value, "");
             var trinket1_promise = firebase_connection.spec_name_promise();
