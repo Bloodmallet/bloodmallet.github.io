@@ -40,7 +40,7 @@ var firebase_connection = new function() {
             let data = firebase.database().ref(this.spec_query + 'baseline').once('value').then(function(snapshot) {
                 resolve(snapshot.val()['860']);
             });
-            setTimeout(reject, 5000, this.connection_error("Could not retrieve data in time. The database connection may be down. Try again later. =("));
+            setTimeout(reject, 5000, "Could not retrieve data in time. The database connection may be down.");
         })
     };
 
@@ -85,7 +85,7 @@ var firebase_connection = new function() {
                     }
                 });
             });
-            setTimeout(reject, 5000, this.connection_error("Could not retrieve data in time. The database connection may be down. Try again later. =("));
+            setTimeout(reject, 5000, "Could not retrieve data in time. The database connection may be down. ");
         });
     };
 
@@ -95,7 +95,7 @@ var firebase_connection = new function() {
             let data = firebase.database().ref(this.spec_query + trinket_name + '/' + trinket_ilvl).once('value').then(function(snapshot) {
                 resolve(snapshot.val());
             });
-            setTimeout(reject, 5000, this.connection_error("Could not retrieve data in time. The database connection may be down. Try again later. =("));
+            setTimeout(reject, 5000, "Could not retrieve data in time. The database connection may be down.");
         });
     };
 };
