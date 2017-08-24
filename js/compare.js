@@ -18,6 +18,7 @@ var firebase_connection = new function() {
         var error_element = document.getElementById("connection_error");
         error_element.innerText = err;
         error_element.style.visibility = "visible";
+        error_element.style.display = "block";
         console.log(err);
     };
 
