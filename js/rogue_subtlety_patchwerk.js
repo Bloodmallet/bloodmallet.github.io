@@ -489,7 +489,7 @@ Highcharts.chart('rogue_subtlety_patchwerk',
         text: "Last generated: 2017-09-01 15:58:49"
     },
     title: {
-        text: "Rogue - Subtlety - Patchwerk"
+        text: "Rogue - Subtlety DfA - Patchwerk"
     },
     tooltip: {
         backgroundColor: "#eee",

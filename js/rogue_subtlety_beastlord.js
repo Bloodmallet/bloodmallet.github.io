@@ -489,7 +489,7 @@ Highcharts.chart('rogue_subtlety_beastlord',
         text: "Last generated: 2017-09-01 16:04:00"
     },
     title: {
-        text: "Rogue - Subtlety - Beastlord"
+        text: "Rogue - Subtlety DfA - Beastlord"
     },
     tooltip: {
         backgroundColor: "#eee",
