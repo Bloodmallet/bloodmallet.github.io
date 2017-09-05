@@ -39,7 +39,7 @@ var firebase_connection = new function() {
         /* Returns a promise for the baseline DPS of the selected spec */
         return new Promise((resolve, reject) => {
             let data = firebase.database().ref(this.spec_query + 'baseline').once('value').then(function(snapshot) {
-                resolve(snapshot.val()['860']);
+                resolve(snapshot.val()['880']);
             });
             setTimeout(reject, 5000, "Could not retrieve data in time. The database connection may be down.");
         })
