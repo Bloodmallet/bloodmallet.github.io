@@ -7,6 +7,24 @@ var translator = {};
 // add listeners after document finished loading
 document.addEventListener("DOMContentLoaded", addButtonListeners);
 document.addEventListener("DOMContentLoaded", addLanguageListener);
+document.addEventListener('DOMContentLoaded', function() {
+  if (window.location.hash == "") {
+    return;
+  }
+  var start_chart =  window.location.hash.split("#")[1].split("_");
+  if (start_chart.length == 3 || start_chart.length == 4) {
+    var temp_spec = start_chart[0] + "_" + start_chart[1];
+    if (start_chart.length == 4) {
+      temp_spec += "_" + start_chart[2];
+    }
+    switch_chart_to(temp_spec);
+
+    if (start_chart[start_chart.length-1] != fight_style) {
+      switch_fight_style();
+    }
+  }
+}, false);
+
 
 // add the show chart functionality to all buttons
 function addButtonListeners() {
@@ -20,6 +38,7 @@ function addButtonListeners() {
 
   // add fight style switch button
   document.getElementById("fight_style_button").addEventListener("click", switch_fight_style );
+  document.getElementById("chart_linker").addEventListener("click", copy_chart_link );
 }
 
 // replaces all known trinket names with the ones from the translation file
@@ -28,6 +47,17 @@ function addLanguageListener() {
     switchLanguage(this.options[this.selectedIndex].value);
     ga('send', 'event', 'switch_language', this.options[this.selectedIndex].value);
   });
+}
+
+function copy_chart_link() {
+  var path = window.location.origin;
+  path += window.location.pathname;
+  path += "#" + active_spec + "_" + fight_style;
+  document.getElementById("chart_linker_content").innerHTML = path;
+  document.getElementById("chart_linker_content").style.display = "block";
+  window.getSelection().selectAllChildren( document.getElementById( "chart_linker_content" ) );
+  document.execCommand('copy');
+  document.getElementById("chart_linker_content").style.display = "none";
 }
 
 function switchLanguage(new_language) {
@@ -76,6 +106,7 @@ function switch_fight_style() {
     fight_style = "patchwerk";
     document.getElementById("fight_style_button").innerHTML = "Switch to beastlord &gt;";
   }
+
   // hide/show beastlord disclaimer
   if (fight_style == "beastlord") {
     document.getElementById("beastlord-disclaimer").style.display = 'block';
@@ -106,7 +137,6 @@ function switch_chart_to(spec) {
     getScript("js/" + spec + "_" + fight_style + ".js");
   }
 
-
   // hide/show charts
   var container = document.getElementsByClassName("container");
   for (var i = container.length - 1; i >= 0; i--) {
@@ -117,6 +147,7 @@ function switch_chart_to(spec) {
       container[i].style.display = 'none';
     }
   }
+
   // hide/show TC-resource and Discord of the spec
   var tc_boxes = document.getElementsByClassName("tc-box");
   for (var i = tc_boxes.length - 1; i >= 0; i--) {
@@ -143,7 +174,6 @@ function getScript(source, callback) {
   
   document.body.appendChild(script);
 }
-
 
 function translate_charts() {
   if (language=="EN") {
