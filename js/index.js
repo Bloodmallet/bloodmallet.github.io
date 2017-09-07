@@ -58,6 +58,10 @@ function copy_chart_link() {
   window.getSelection().selectAllChildren( document.getElementById( "chart_linker_content" ) );
   document.execCommand('copy');
   document.getElementById("chart_linker_content").style.display = "none";
+
+  var success_message = document.getElementById("copy_success")
+  success_message.className = "show";
+  setTimeout(function(){ success_message.className = success_message.className.replace("show", ""); }, 3000);
 }
 
 function switchLanguage(new_language) {
