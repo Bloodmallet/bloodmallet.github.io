@@ -491,7 +491,7 @@ function switch_chart_to(spec) {
     }
   }
 
-  ga('send', 'event', 'chart', fight_style, active_spec);
+  ga('send', 'event', 'relics', fight_style, active_spec);
 
   if (language != "EN") {
     //console.log("Starting translation process.");
