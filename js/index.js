@@ -8,6 +8,20 @@ var translator = {};
 document.addEventListener("DOMContentLoaded", addButtonListeners);
 document.addEventListener("DOMContentLoaded", addLanguageListener);
 document.addEventListener('DOMContentLoaded', function() {
+
+  // switch charts to language
+  if (window.location.search) {
+    if (window.location.search.split("lang=")[1]) {
+      var new_language = window.location.search.split("lang=")[1];
+      // set new language for the website
+      switchLanguage(new_language);
+
+      // set language selector to the new starting language
+      document.getElementById("select_language").value = new_language;
+    }
+  }
+
+  // jump directly to chart
   if (window.location.hash == "") {
     return;
   }
@@ -52,6 +66,9 @@ function addLanguageListener() {
 function copy_chart_link() {
   var path = window.location.origin;
   path += window.location.pathname;
+  if (language != "EN") {
+    path += "?lang=" + language
+  }
   path += "#" + active_spec + "_" + fight_style;
   document.getElementById("chart_linker_content").innerHTML = path;
   document.getElementById("chart_linker_content").style.display = "block";
@@ -86,7 +103,7 @@ function switchLanguage(new_language) {
           translator = JSON.parse(xhttp_getlanguage.responseText);
           // set new language
           language = new_language;
-          translate_charts();
+          setTimeout(translate_charts, 200);
         }
       }
       xhttp_getlanguage.send();
@@ -95,6 +112,10 @@ function switchLanguage(new_language) {
       language = new_language;
       translate_charts();
     }
+  } else {
+    reset_translations();
+    language = "EN";
+    translate_charts();
   }
 }
 

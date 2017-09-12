@@ -1,330 +1,3 @@
-/*
-Highcharts.chart('bl-container', {
-    chart: {
-        type: 'column'
-    },
-    title: {
-        text: 'Beastlord Relics'
-    },
-    subtitle: {
-        text: ''
-    },
-    xAxis: {
-        categories: [
-    'Electric Discharge',
-    'The Ground Trembles',
-    '+3 weapon item levels',
-    'Elemental Destabilization',
-    '+2 weapon item levels',
-    "Firestorm",
-    "Call the Thunder",
-    "+1 item level",
-    'Lava Imbued',
-    "Molten Blast",
-    "Earthen Attunement"
-        ],
-        crosshair: false
-    },
-    yAxis: {
-        min: 0,
-        title: {
-            text: '% DPS Gain'
-        }
-    },
-    tooltip: {
-        headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
-        pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
-            '<td style="padding:0"><b>{point.y:.1f} dps</b></td></tr>',
-        footerFormat: '</table>',
-        shared: true,
-        useHTML: true
-    },
-    plotOptions: {
-        column: {
-            pointPadding: 0.2,
-            borderWidth: 0
-        }
-    },
-    series: [ {
-        name: 'Ascendance',
-        color: '#F44336',
-        data: [1.1,1.2,1.1,1,0.7,0.3,0.3,0.4,0.2,0.1,0.05]
-    }, {
-        name: 'Lightning Rod',
-        color: '#18FFFF',
-        data: [1.4,1.1,1.1,1.1,0.7,0.4,0.5,0.3,0.2,0.2,0.1]
-    }, {
-        name: 'Icefury',
-        color: '#448AFF',
-        data: [1,1.2,1.1,1,0.7,0.4,0.3,0.3,0.2,0.1,0.1]
-
-    } ]
-});
-
-
-
-
-Highcharts.chart('st-asc-container', {
-    chart: {
-        type: 'column'
-    },
-    title: {
-        text: 'Patchwerk relics and Shadow/Light traits'
-    },
-    subtitle: {
-        text: ''
-    },
-    xAxis: {
-        categories: [
-            'Murderous Intent',
-            'Master of Shadows',
-            'Shocklight',
-            'Light Speed',
-            'Elemental Destabilization',
-            '+3 weapon item levels',
-            'Secure in the Light',
-            'Infusion of Light',
-            'Torment the Weak',
-            'Chaotic Darkness',
-            '+2 weapon item levels',
-            'Lava Imbued',
-            'Shadowbind',
-            "Firestorm",
-            "Molten Blast",
-            "Earthen Attunement",
-            "+1 item level",
-            "Call the Thunder",
-            'Dark Sorrow',
-        ],
-        crosshair: false
-    },
-    yAxis: {
-        min: 0,
-        title: {
-            text: '% DPS Gain'
-        }
-    },
-    tooltip: {
-        headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
-        pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
-            '<td style="padding:0"><b>{point.y:.1f} dps</b></td></tr>',
-        footerFormat: '</table>',
-        shared: true,
-        useHTML: true
-    },
-    plotOptions: {
-        column: {
-            pointPadding: 0.2,
-            borderWidth: 0
-        }
-    },
-    series: [ {
-        name: 'Ascendance',
-        color: '#F44336',
-        data: [1.20,1.19,1.16,1.15,1.14,1.07,1.03,0.96,0.86,0.75,0.74,0.70,0.67,0.63,0.57,0.45,0.33,0.31,0.23]
-    } ]
-});
-
-Highcharts.chart('st-if-container', {
-    chart: {
-        type: 'column'
-    },
-    title: {
-        text: 'Patchwerk relics and Shadow/Light traits'
-    },
-    subtitle: {
-        text: ''
-    },
-    xAxis: {
-        categories: [
-            'Shocklight',
-            'Murderous Intent',
-            'Master of Shadows',
-            'Elemental Destabilization',
-            '+3 weapon item levels',
-            'Light Speed',
-            'Secure in the Light',
-            'Infusion of Light',
-            'Torment the Weak',
-            'Chaotic Darkness',
-            '+2 weapon item levels',
-            "Firestorm",
-            'Shadowbind',
-            'Lava Imbued',
-            "Molten Blast",
-            "+1 item level",
-            "Earthen Attunement",
-            "Call the Thunder",
-            'Dark Sorrow',
-        ],
-        crosshair: false
-    },
-    yAxis: {
-        min: 0,
-        title: {
-            text: '% DPS Gain'
-        }
-    },
-    tooltip: {
-        headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
-        pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
-            '<td style="padding:0"><b>{point.y:.1f} dps</b></td></tr>',
-        footerFormat: '</table>',
-        shared: true,
-        useHTML: true
-    },
-    plotOptions: {
-        column: {
-            pointPadding: 0.2,
-            borderWidth: 0
-        }
-    },
-    series: [ {
-        name: 'Icefury',
-        color: '#448AFF',
-        data: [1.32,1.14,1.12,1.09,1.04,1.04,1.02,1.00,0.87,0.80,0.78,0.74,0.72,0.58,0.42,0.41,0.39,0.35,0.32]
-    } ]
-});
-
-
-
-Highcharts.chart('st-lr-container', {
-    chart: {
-        type: 'column'
-    },
-    title: {
-        text: 'Patchwerk relics and Shadow/Light traits'
-    },
-    subtitle: {
-        text: ''
-    },
-    xAxis: {
-        categories: [
-            'Master of Shadows',
-            'Shocklight',
-            'Light Speed',
-            'Murderous Intent',
-            'Secure in the Light',
-            'Elemental Destabilization',
-            'Infusion of Light',
-            '+3 weapon item levels',
-            'Torment the Weak',
-            'Chaotic Darkness',
-            'Shadowbind',
-            "Firestorm",
-            '+2 weapon item levels',
-            'Lava Imbued',
-            "Call the Thunder",
-            "Earthen Attunement",
-            "Molten Blast",
-            "+1 item level",
-            'Dark Sorrow',
-        ],
-        crosshair: false
-    },
-    yAxis: {
-        min: 0,
-        title: {
-            text: '% DPS Gain'
-        }
-    },
-    tooltip: {
-        headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
-        pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
-            '<td style="padding:0"><b>{point.y:.1f} dps</b></td></tr>',
-        footerFormat: '</table>',
-        shared: true,
-        useHTML: true
-    },
-    plotOptions: {
-        column: {
-            pointPadding: 0.2,
-            borderWidth: 0
-        }
-    },
-    series: [ {
-        name: 'Lightning Rod',
-        color: '#18FFFF',
-        data: [1.31,1.19,1.11,1.10,1.06,1.04,1.02,0.96,0.88,0.76,0.72,0.65,0.65,0.53,0.49,0.47,0.39,0.30,0.24]
-    } ]
-});
-
-
-Highcharts.chart('st-container', {
-    chart: {
-        type: 'column'
-    },
-    title: {
-        text: 'Patchwerk relics and Shadow/Light traits'
-    },
-    subtitle: {
-        text: ''
-    },
-
-    yAxis: {
-        min: 0,
-        title: {
-            text: '% DPS Gain'
-        }
-    },
-    tooltip: {
-        headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
-        pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
-            '<td style="padding:0"><b>{point.y:.1f} dps</b></td></tr>',
-        footerFormat: '</table>',
-        shared: true,
-        useHTML: true
-    },
-    plotOptions: {
-        column: {
-            pointPadding: 0.2,
-            borderWidth: 0
-        }
-    },
-    xAxis: {
-        categories: [
-            'Shocklight',
-            'Murderous Intent',
-            'Master of Shadows',
-            'Elemental Destabilization',
-            '+3 weapon item levels',
-            'Light Speed',
-            'Secure in the Light',
-            'Infusion of Light',
-            'Torment the Weak',
-            'Chaotic Darkness',
-            '+2 weapon item levels',
-            "Firestorm",
-            'Shadowbind',
-            'Lava Imbued',
-            "Molten Blast",
-            "+1 item level",
-            "Earthen Attunement",
-            "Call the Thunder",
-            'Dark Sorrow',
-        ],
-        crosshair: false
-    },
-    series: [ {
-        name: 'Ascendance',
-        color: '#F44336',
-        data: [1.16,1.20,1.19,1.14,1.07,1.15,1.03,0.96,0.86,0.75,0.74,0.63,0.67,0.70,0.57,0.33,0.45,0.31,0.23]
-    }, {
-        name: 'Lightning Rod',
-        color: '#18FFFF',
-        data: [1.19,1.10,1.31,1.04,0.96,1.11,1.06,1.02,0.88,0.76,0.65,0.65,0.72,0.53,0.39,0.30,0.47,0.49,0.24]
-    }, {
-        name: 'Icefury',
-        color: '#448AFF',
-        data: [1.32,1.14,1.12,1.09,1.04,1.04,1.02,1.00,0.87,0.80,0.78,0.74,0.72,0.58,0.42,0.41,0.39,0.35,0.32]
-    } ]
-}); */
-
-
-
-
-
-
 var fight_style = "patchwerk";
 var active_spec = "";
 
@@ -335,6 +8,20 @@ var translator = {};
 document.addEventListener("DOMContentLoaded", addButtonListeners);
 document.addEventListener("DOMContentLoaded", addLanguageListener);
 document.addEventListener('DOMContentLoaded', function() {
+
+  // switch charts to language
+  if (window.location.search) {
+    if (window.location.search.split("lang=")[1]) {
+      var new_language = window.location.search.split("lang=")[1];
+      // set new language for the website
+      switchLanguage(new_language);
+
+      // set language selector to the new starting language
+      document.getElementById("select_language").value = new_language;
+    }
+  }
+
+  // jump directly to chart
   if (window.location.hash == "") {
     return;
   }
@@ -380,6 +67,9 @@ function addLanguageListener() {
 function copy_chart_link() {
   var path = window.location.origin;
   path += window.location.pathname;
+  if (language != "EN") {
+    path += "?lang=" + language
+  }
   path += "#crucible_" + active_spec + "_" + fight_style;
   document.getElementById("chart_linker_content").innerHTML = path;
   document.getElementById("chart_linker_content").style.display = "block";
@@ -415,7 +105,7 @@ function switchLanguage(new_language) {
           translator = JSON.parse(xhttp_getlanguage.responseText);
           // set new language
           language = new_language;
-          translate_charts();
+          setTimeout(translate_charts, 200);
         }
       }
       xhttp_getlanguage.send();
@@ -424,6 +114,10 @@ function switchLanguage(new_language) {
       language = new_language;
       translate_charts();
     }
+  } else {
+    reset_translations();
+    language = "EN";
+    translate_charts();
   }
 }
 
