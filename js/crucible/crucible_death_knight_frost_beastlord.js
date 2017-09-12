@@ -58,7 +58,7 @@ Highcharts.chart('crucible_death_knight_frost_beastlord',
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-11 23:34 SimC build: 43201b2"
+        text: "UTC 2017-09-11 23:34 SimC build: 34fd229"
     },
     title: {
         text: "Death_Knight - Frost - Beastlord"
