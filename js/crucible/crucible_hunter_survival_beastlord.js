@@ -39,26 +39,27 @@ Highcharts.chart('crucible_hunter_survival_beastlord',
         {
             color: "#4572a7",
             data: [
-                28278,
-                25931,
-                23945,
-                22829,
-                22220,
-                21251,
-                20328,
-                19400,
-                18975,
-                16678,
-                16661,
-                15558,
-                10372,
-                5186
+                20579,
+                18180,
+                16688,
+                16198,
+                16054,
+                15256,
+                14578,
+                14051,
+                12874,
+                12347,
+                12272,
+                8966,
+                8231,
+                4115
             ],
-            name: 1
+            name: 1,
+            showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-11 23:34 SimC build: 34fd229"
+        text: "UTC 2017-09-12 15:00 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c56773bf9e4845bb68b68dccb8ce6015ee67375a\" target=\"blank\">c56773b</a>"
     },
     title: {
         text: "Hunter - Survival - Beastlord"
@@ -75,18 +76,18 @@ Highcharts.chart('crucible_hunter_survival_beastlord',
     },
     xAxis: {
         categories: [
-            "Murderous Intent",
             "+5 itemlevel",
-            "Dark Sorrows",
-            "Torment the Weak",
-            "Secure in the Light",
-            "Light Speed",
             "Shocklight",
-            "Infusion of Light",
-            "Chaotic Darkness",
-            "Master of Shadows",
+            "Secure in the Light",
             "Shadowbind",
+            "Torment the Weak",
+            "Light Speed",
+            "Murderous Intent",
+            "Dark Sorrows",
+            "Chaotic Darkness",
             "+3 itemlevel",
+            "Infusion of Light",
+            "Master of Shadows",
             "+2 itemlevel",
             "+1 itemlevel"
         ]

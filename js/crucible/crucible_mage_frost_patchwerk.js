@@ -39,26 +39,27 @@ Highcharts.chart('crucible_mage_frost_patchwerk',
         {
             color: "#4572a7",
             data: [
-                29088,
-                27122,
-                25231,
-                24547,
-                24002,
-                22261,
-                17452,
-                15812,
-                14513,
-                13425,
-                11635,
-                9343,
-                7283,
-                5817
+                26445,
+                24669,
+                24450,
+                23543,
+                23143,
+                21588,
+                15867,
+                14128,
+                13325,
+                12057,
+                10578,
+                7572,
+                7334,
+                5289
             ],
-            name: 1
+            name: 1,
+            showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-11 23:34 SimC build: 34fd229"
+        text: "UTC 2017-09-12 15:00 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c56773bf9e4845bb68b68dccb8ce6015ee67375a\" target=\"blank\">c56773b</a>"
     },
     title: {
         text: "Mage - Frost - Patchwerk"
@@ -77,8 +78,8 @@ Highcharts.chart('crucible_mage_frost_patchwerk',
         categories: [
             "+5 itemlevel",
             "Torment the Weak",
-            "Infusion of Light",
             "Secure in the Light",
+            "Infusion of Light",
             "Shadowbind",
             "Chaotic Darkness",
             "+3 itemlevel",
@@ -86,8 +87,8 @@ Highcharts.chart('crucible_mage_frost_patchwerk',
             "Light Speed",
             "Shocklight",
             "+2 itemlevel",
-            "Master of Shadows",
             "Dark Sorrows",
+            "Master of Shadows",
             "+1 itemlevel"
         ]
     },

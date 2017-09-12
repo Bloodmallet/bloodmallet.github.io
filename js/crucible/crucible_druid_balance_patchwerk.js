@@ -39,26 +39,27 @@ Highcharts.chart('crucible_druid_balance_patchwerk',
         {
             color: "#4572a7",
             data: [
-                24480,
-                20304,
-                19557,
-                19413,
-                19294,
-                17350,
-                15353,
-                14688,
-                14357,
-                14128,
-                14070,
-                9792,
-                6745,
-                4896
+                24143,
+                19529,
+                18895,
+                18478,
+                18245,
+                16401,
+                14848,
+                14485,
+                13290,
+                12648,
+                12435,
+                9657,
+                5848,
+                4828
             ],
-            name: 1
+            name: 1,
+            showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-11 23:34 SimC build: 34fd229"
+        text: "UTC 2017-09-12 15:00 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c56773bf9e4845bb68b68dccb8ce6015ee67375a\" target=\"blank\">c56773b</a>"
     },
     title: {
         text: "Druid - Balance - Patchwerk"
@@ -77,15 +78,15 @@ Highcharts.chart('crucible_druid_balance_patchwerk',
         categories: [
             "+5 itemlevel",
             "Torment the Weak",
+            "Infusion of Light",
             "Secure in the Light",
             "Shadowbind",
-            "Infusion of Light",
             "Chaotic Darkness",
             "Master of Shadows",
             "+3 itemlevel",
             "Murderous Intent",
-            "Light Speed",
             "Shocklight",
+            "Light Speed",
             "+2 itemlevel",
             "Dark Sorrows",
             "+1 itemlevel"

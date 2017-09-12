@@ -39,26 +39,27 @@ Highcharts.chart('crucible_druid_feral_patchwerk',
         {
             color: "#4572a7",
             data: [
-                20439,
-                18953,
-                18086,
-                17706,
-                16946,
-                15214,
-                13136,
-                10663,
-                10328,
-                8553,
-                6397,
-                5513,
-                4265,
-                2132
+                19607,
+                18921,
+                18492,
+                17354,
+                16022,
+                14160,
+                12635,
+                10817,
+                10755,
+                8450,
+                6490,
+                6056,
+                4326,
+                2163
             ],
-            name: 1
+            name: 1,
+            showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-11 23:34 SimC build: 34fd229"
+        text: "UTC 2017-09-12 15:00 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c56773bf9e4845bb68b68dccb8ce6015ee67375a\" target=\"blank\">c56773b</a>"
     },
     title: {
         text: "Druid - Feral - Patchwerk"

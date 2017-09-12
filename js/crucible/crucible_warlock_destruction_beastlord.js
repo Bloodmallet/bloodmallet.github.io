@@ -39,26 +39,27 @@ Highcharts.chart('crucible_warlock_destruction_beastlord',
         {
             color: "#4572a7",
             data: [
-                30349,
-                20868,
-                19112,
-                18958,
-                18473,
-                18209,
-                18179,
-                17379,
-                17033,
-                16896,
-                16135,
-                13119,
-                12139,
-                6069
+                25173,
+                18849,
+                18316,
+                17723,
+                16177,
+                15379,
+                15103,
+                14370,
+                14232,
+                13809,
+                12295,
+                12051,
+                10069,
+                5034
             ],
-            name: 1
+            name: 1,
+            showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-11 23:34 SimC build: 34fd229"
+        text: "UTC 2017-09-12 15:00 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c56773bf9e4845bb68b68dccb8ce6015ee67375a\" target=\"blank\">c56773b</a>"
     },
     title: {
         text: "Warlock - Destruction - Beastlord"
@@ -76,17 +77,17 @@ Highcharts.chart('crucible_warlock_destruction_beastlord',
     xAxis: {
         categories: [
             "+5 itemlevel",
-            "Secure in the Light",
             "Dark Sorrows",
-            "Murderous Intent",
             "Shadowbind",
-            "+3 itemlevel",
             "Shocklight",
-            "Master of Shadows",
-            "Chaotic Darkness",
-            "Light Speed",
+            "Murderous Intent",
+            "Secure in the Light",
+            "+3 itemlevel",
             "Infusion of Light",
+            "Master of Shadows",
+            "Light Speed",
             "Torment the Weak",
+            "Chaotic Darkness",
             "+2 itemlevel",
             "+1 itemlevel"
         ]

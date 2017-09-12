@@ -39,26 +39,27 @@ Highcharts.chart('crucible_warlock_destruction_patchwerk',
         {
             color: "#4572a7",
             data: [
-                23136,
-                19179,
-                17724,
-                16853,
-                16711,
-                15774,
-                15272,
-                14846,
-                14023,
-                13897,
-                13881,
-                9254,
-                5700,
-                4627
+                23547,
+                18750,
+                17215,
+                16948,
+                16870,
+                16686,
+                15716,
+                14462,
+                14128,
+                13184,
+                13157,
+                9418,
+                4922,
+                4709
             ],
-            name: 1
+            name: 1,
+            showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-11 23:34 SimC build: 34fd229"
+        text: "UTC 2017-09-12 15:00 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c56773bf9e4845bb68b68dccb8ce6015ee67375a\" target=\"blank\">c56773b</a>"
     },
     title: {
         text: "Warlock - Destruction - Patchwerk"
@@ -77,15 +78,15 @@ Highcharts.chart('crucible_warlock_destruction_patchwerk',
         categories: [
             "+5 itemlevel",
             "Torment the Weak",
-            "Secure in the Light",
-            "Shadowbind",
             "Infusion of Light",
+            "Secure in the Light",
             "Shocklight",
+            "Shadowbind",
             "Chaotic Darkness",
             "Murderous Intent",
-            "Light Speed",
-            "Master of Shadows",
             "+3 itemlevel",
+            "Master of Shadows",
+            "Light Speed",
             "+2 itemlevel",
             "Dark Sorrows",
             "+1 itemlevel"

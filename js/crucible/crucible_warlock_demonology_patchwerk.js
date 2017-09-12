@@ -39,26 +39,27 @@ Highcharts.chart('crucible_warlock_demonology_patchwerk',
         {
             color: "#4572a7",
             data: [
-                24688,
-                19956,
-                19114,
-                17855,
-                17852,
-                17406,
-                17002,
-                15723,
-                15688,
-                15218,
-                14812,
-                9875,
-                4937,
-                4562
+                24863,
+                18876,
+                18699,
+                15874,
+                15827,
+                15416,
+                15385,
+                14977,
+                14917,
+                14284,
+                13816,
+                9945,
+                4972,
+                4213
             ],
-            name: 1
+            name: 1,
+            showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-11 23:34 SimC build: 34fd229"
+        text: "UTC 2017-09-12 15:00 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c56773bf9e4845bb68b68dccb8ce6015ee67375a\" target=\"blank\">c56773b</a>"
     },
     title: {
         text: "Warlock - Demonology - Patchwerk"
@@ -76,16 +77,16 @@ Highcharts.chart('crucible_warlock_demonology_patchwerk',
     xAxis: {
         categories: [
             "+5 itemlevel",
-            "Light Speed",
             "Torment the Weak",
+            "Light Speed",
             "Shadowbind",
             "Secure in the Light",
-            "Master of Shadows",
             "Infusion of Light",
+            "Master of Shadows",
             "Chaotic Darkness",
+            "+3 itemlevel",
             "Murderous Intent",
             "Shocklight",
-            "+3 itemlevel",
             "+2 itemlevel",
             "+1 itemlevel",
             "Dark Sorrows"

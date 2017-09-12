@@ -39,26 +39,27 @@ Highcharts.chart('crucible_death_knight_frost_beastlord',
         {
             color: "#4572a7",
             data: [
-                29593,
-                29406,
-                25647,
-                21568,
-                21220,
-                20136,
-                17722,
-                16424,
-                15603,
-                14498,
-                13704,
-                10633,
-                7088,
-                3544
+                28815,
+                27828,
+                26713,
+                19124,
+                17158,
+                17105,
+                14321,
+                14282,
+                13544,
+                12602,
+                9008,
+                8126,
+                5417,
+                2708
             ],
-            name: 1
+            name: 1,
+            showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-11 23:34 SimC build: 34fd229"
+        text: "UTC 2017-09-12 15:00 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c56773bf9e4845bb68b68dccb8ce6015ee67375a\" target=\"blank\">c56773b</a>"
     },
     title: {
         text: "Death_Knight - Frost - Beastlord"
@@ -75,17 +76,17 @@ Highcharts.chart('crucible_death_knight_frost_beastlord',
     },
     xAxis: {
         categories: [
-            "Light Speed",
             "Master of Shadows",
+            "Light Speed",
             "Murderous Intent",
-            "Secure in the Light",
-            "Dark Sorrows",
             "Shocklight",
-            "+5 itemlevel",
-            "Infusion of Light",
-            "Torment the Weak",
             "Shadowbind",
+            "Dark Sorrows",
+            "Secure in the Light",
+            "Infusion of Light",
+            "+5 itemlevel",
             "Chaotic Darkness",
+            "Torment the Weak",
             "+3 itemlevel",
             "+2 itemlevel",
             "+1 itemlevel"

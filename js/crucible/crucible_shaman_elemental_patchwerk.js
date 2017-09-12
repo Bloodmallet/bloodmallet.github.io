@@ -39,26 +39,27 @@ Highcharts.chart('crucible_shaman_elemental_patchwerk',
         {
             color: "#4572a7",
             data: [
-                24004,
-                19911,
-                19853,
-                18809,
-                18798,
-                16135,
-                14458,
-                14433,
-                14402,
-                13773,
-                13471,
-                9601,
-                6013,
-                4800
+                22222,
+                19016,
+                18410,
+                18242,
+                17909,
+                16101,
+                13982,
+                13764,
+                13333,
+                12472,
+                12266,
+                8888,
+                4796,
+                4444
             ],
-            name: 1
+            name: 1,
+            showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-11 23:34 SimC build: 34fd229"
+        text: "UTC 2017-09-12 15:00 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c56773bf9e4845bb68b68dccb8ce6015ee67375a\" target=\"blank\">c56773b</a>"
     },
     title: {
         text: "Shaman - Elemental - Patchwerk"
@@ -76,16 +77,16 @@ Highcharts.chart('crucible_shaman_elemental_patchwerk',
     xAxis: {
         categories: [
             "+5 itemlevel",
-            "Secure in the Light",
             "Torment the Weak",
-            "Shadowbind",
+            "Secure in the Light",
             "Infusion of Light",
+            "Shadowbind",
             "Chaotic Darkness",
             "Shocklight",
             "Murderous Intent",
             "+3 itemlevel",
-            "Master of Shadows",
             "Light Speed",
+            "Master of Shadows",
             "+2 itemlevel",
             "Dark Sorrows",
             "+1 itemlevel"

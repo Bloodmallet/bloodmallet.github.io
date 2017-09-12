@@ -39,26 +39,27 @@ Highcharts.chart('crucible_warrior_fury_beastlord',
         {
             color: "#4572a7",
             data: [
-                30327,
-                24881,
-                24840,
-                23290,
-                22801,
-                21072,
-                20902,
-                20678,
-                20474,
-                16285,
-                7698,
-                4618,
-                3079,
-                1539
+                25529,
+                22160,
+                20292,
+                19680,
+                17806,
+                17415,
+                17294,
+                16448,
+                15861,
+                9604,
+                1602,
+                961,
+                640,
+                320
             ],
-            name: 1
+            name: 1,
+            showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-11 23:34 SimC build: 34fd229"
+        text: "UTC 2017-09-12 15:00 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c56773bf9e4845bb68b68dccb8ce6015ee67375a\" target=\"blank\">c56773b</a>"
     },
     title: {
         text: "Warrior - Fury - Beastlord"
@@ -76,14 +77,14 @@ Highcharts.chart('crucible_warrior_fury_beastlord',
     xAxis: {
         categories: [
             "Dark Sorrows",
-            "Shadowbind",
-            "Infusion of Light",
             "Master of Shadows",
+            "Shadowbind",
             "Secure in the Light",
             "Light Speed",
-            "Murderous Intent",
-            "Torment the Weak",
             "Chaotic Darkness",
+            "Murderous Intent",
+            "Infusion of Light",
+            "Torment the Weak",
             "Shocklight",
             "+5 itemlevel",
             "+3 itemlevel",

@@ -39,26 +39,27 @@ Highcharts.chart('crucible_rogue_outlaw_beastlord',
         {
             color: "#4572a7",
             data: [
-                23554,
-                22930,
-                22060,
-                21265,
-                20850,
-                18678,
-                16479,
-                14364,
-                12735,
-                12161,
-                11487,
-                7296,
-                4864,
-                2432
+                32516,
+                28898,
+                27268,
+                26779,
+                26366,
+                26308,
+                25489,
+                25460,
+                19632,
+                17010,
+                15198,
+                9118,
+                6079,
+                3039
             ],
-            name: 1
+            name: 1,
+            showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-11 23:34 SimC build: 34fd229"
+        text: "UTC 2017-09-12 15:00 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c56773bf9e4845bb68b68dccb8ce6015ee67375a\" target=\"blank\">c56773b</a>"
     },
     title: {
         text: "Rogue - Outlaw - Beastlord"
@@ -75,17 +76,17 @@ Highcharts.chart('crucible_rogue_outlaw_beastlord',
     },
     xAxis: {
         categories: [
-            "Dark Sorrows",
             "Torment the Weak",
-            "Secure in the Light",
-            "Murderous Intent",
-            "Infusion of Light",
             "Shadowbind",
             "Light Speed",
+            "Secure in the Light",
+            "Dark Sorrows",
+            "Infusion of Light",
+            "Murderous Intent",
             "Chaotic Darkness",
             "Shocklight",
-            "+5 itemlevel",
             "Master of Shadows",
+            "+5 itemlevel",
             "+3 itemlevel",
             "+2 itemlevel",
             "+1 itemlevel"

@@ -39,26 +39,27 @@ Highcharts.chart('crucible_demon_hunter_havoc_patchwerk',
         {
             color: "#4572a7",
             data: [
-                24920,
-                22859,
-                22026,
-                21857,
-                20768,
-                19681,
-                19239,
-                15087,
-                14475,
-                12460,
-                10843,
-                8307,
-                7751,
-                4153
+                24190,
+                23350,
+                22833,
+                22619,
+                20497,
+                14571,
+                12535,
+                12470,
+                8742,
+                8476,
+                7064,
+                5828,
+                3874,
+                2914
             ],
-            name: 1
+            name: 1,
+            showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-11 23:34 SimC build: 34fd229"
+        text: "UTC 2017-09-12 15:00 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c56773bf9e4845bb68b68dccb8ce6015ee67375a\" target=\"blank\">c56773b</a>"
     },
     title: {
         text: "Demon_Hunter - Havoc - Patchwerk"
@@ -76,18 +77,18 @@ Highcharts.chart('crucible_demon_hunter_havoc_patchwerk',
     xAxis: {
         categories: [
             "Torment the Weak",
-            "Infusion of Light",
-            "Secure in the Light",
             "Shadowbind",
-            "+5 itemlevel",
+            "Secure in the Light",
+            "Infusion of Light",
             "Chaotic Darkness",
-            "Shocklight",
+            "+5 itemlevel",
             "Murderous Intent",
-            "Light Speed",
+            "Shocklight",
             "+3 itemlevel",
             "Master of Shadows",
-            "+2 itemlevel",
             "Dark Sorrows",
+            "+2 itemlevel",
+            "Light Speed",
             "+1 itemlevel"
         ]
     },

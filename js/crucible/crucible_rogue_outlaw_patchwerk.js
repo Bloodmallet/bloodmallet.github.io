@@ -39,26 +39,27 @@ Highcharts.chart('crucible_rogue_outlaw_patchwerk',
         {
             color: "#4572a7",
             data: [
-                25401,
-                22954,
-                22865,
-                22582,
-                20010,
-                14728,
-                12204,
-                11469,
-                8353,
-                8253,
-                7015,
-                4951,
-                3301,
-                1650
+                24607,
+                23122,
+                22252,
+                21403,
+                20963,
+                15432,
+                12380,
+                9909,
+                9280,
+                9275,
+                6744,
+                5565,
+                3710,
+                1855
             ],
-            name: 1
+            name: 1,
+            showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-11 23:34 SimC build: 34fd229"
+        text: "UTC 2017-09-12 15:00 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c56773bf9e4845bb68b68dccb8ce6015ee67375a\" target=\"blank\">c56773b</a>"
     },
     title: {
         text: "Rogue - Outlaw - Patchwerk"
@@ -77,8 +78,8 @@ Highcharts.chart('crucible_rogue_outlaw_patchwerk',
         categories: [
             "Torment the Weak",
             "Secure in the Light",
-            "Shadowbind",
             "Infusion of Light",
+            "Shadowbind",
             "Chaotic Darkness",
             "Murderous Intent",
             "Light Speed",

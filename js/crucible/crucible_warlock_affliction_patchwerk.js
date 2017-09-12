@@ -39,26 +39,27 @@ Highcharts.chart('crucible_warlock_affliction_patchwerk',
         {
             color: "#4572a7",
             data: [
-                23211,
-                22297,
-                21543,
-                20650,
-                19804,
-                19419,
-                16863,
-                16153,
-                15735,
-                15020,
-                13378,
-                8918,
-                5818,
-                4459
+                24214,
+                23999,
+                21690,
+                20246,
+                20239,
+                19166,
+                16695,
+                16566,
+                15867,
+                15296,
+                14528,
+                9685,
+                7682,
+                4842
             ],
-            name: 1
+            name: 1,
+            showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-11 23:34 SimC build: 34fd229"
+        text: "UTC 2017-09-12 15:00 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c56773bf9e4845bb68b68dccb8ce6015ee67375a\" target=\"blank\">c56773b</a>"
     },
     title: {
         text: "Warlock - Affliction - Patchwerk"
@@ -75,14 +76,14 @@ Highcharts.chart('crucible_warlock_affliction_patchwerk',
     },
     xAxis: {
         categories: [
-            "Torment the Weak",
             "+5 itemlevel",
+            "Torment the Weak",
             "Shadowbind",
-            "Secure in the Light",
             "Infusion of Light",
+            "Secure in the Light",
             "Chaotic Darkness",
-            "Shocklight",
             "Light Speed",
+            "Shocklight",
             "Master of Shadows",
             "Murderous Intent",
             "+3 itemlevel",

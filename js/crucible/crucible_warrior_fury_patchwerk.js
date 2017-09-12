@@ -39,26 +39,27 @@ Highcharts.chart('crucible_warrior_fury_patchwerk',
         {
             color: "#4572a7",
             data: [
-                22533,
-                20694,
-                20597,
-                20080,
-                18503,
-                15266,
-                14908,
-                13146,
-                10945,
-                6698,
-                -56,
-                -112,
-                -167,
-                -278
+                23796,
+                22595,
+                21669,
+                20608,
+                19081,
+                16553,
+                15606,
+                15600,
+                11877,
+                8261,
+                40,
+                24,
+                16,
+                8
             ],
-            name: 1
+            name: 1,
+            showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-11 23:34 SimC build: 34fd229"
+        text: "UTC 2017-09-12 15:00 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c56773bf9e4845bb68b68dccb8ce6015ee67375a\" target=\"blank\">c56773b</a>"
     },
     title: {
         text: "Warrior - Fury - Patchwerk"
@@ -77,18 +78,18 @@ Highcharts.chart('crucible_warrior_fury_patchwerk',
         categories: [
             "Torment the Weak",
             "Secure in the Light",
-            "Infusion of Light",
             "Shadowbind",
+            "Infusion of Light",
             "Chaotic Darkness",
             "Master of Shadows",
             "Murderous Intent",
             "Light Speed",
             "Shocklight",
             "Dark Sorrows",
-            "+1 itemlevel",
-            "+2 itemlevel",
+            "+5 itemlevel",
             "+3 itemlevel",
-            "+5 itemlevel"
+            "+2 itemlevel",
+            "+1 itemlevel"
         ]
     },
     yAxis: {
