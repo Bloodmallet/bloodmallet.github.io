@@ -39,22 +39,26 @@ Highcharts.chart('crucible_paladin_retribution_patchwerk',
         {
             color: "#4572a7",
             data: [
-                14782,
-                14503,
-                14298,
-                14292,
-                11148,
-                10837,
-                10643,
-                7961,
-                7948,
-                2413
+                26310,
+                24705,
+                24492,
+                24293,
+                22720,
+                22224,
+                13744,
+                13632,
+                12750,
+                12592,
+                12583,
+                9088,
+                8049,
+                4544
             ],
             name: 1
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-11 18:41 SimC build: 43201b2"
+        text: "UTC 2017-09-11 23:34 SimC build: 43201b2"
     },
     title: {
         text: "Paladin - Retribution - Patchwerk"
@@ -71,16 +75,20 @@ Highcharts.chart('crucible_paladin_retribution_patchwerk',
     },
     xAxis: {
         categories: [
-            "Murderous Intent",
-            "Light Speed",
-            "Master of Shadows",
-            "Shocklight",
-            "Infusion of Light",
             "Torment the Weak",
             "Secure in the Light",
             "Shadowbind",
+            "Infusion of Light",
+            "+5 itemlevel",
             "Chaotic Darkness",
-            "Dark Sorrows"
+            "Murderous Intent",
+            "+3 itemlevel",
+            "Shocklight",
+            "Master of Shadows",
+            "Light Speed",
+            "+2 itemlevel",
+            "Dark Sorrows",
+            "+1 itemlevel"
         ]
     },
     yAxis: {

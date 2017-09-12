@@ -39,16 +39,20 @@ Highcharts.chart('crucible_warrior_fury_beastlord',
         {
             color: "#4572a7",
             data: [
-                24457,
-                22017,
-                18259,
-                16399,
-                14695,
-                12607,
-                10515,
-                9507,
-                8735,
-                1083
+                25403,
+                24296,
+                23542,
+                14086,
+                13779,
+                13766,
+                12172,
+                10183,
+                9243,
+                6645,
+                157,
+                94,
+                62,
+                31
             ],
             name: 1
         }
@@ -71,16 +75,20 @@ Highcharts.chart('crucible_warrior_fury_beastlord',
     },
     xAxis: {
         categories: [
-            "Master of Shadows",
             "Light Speed",
+            "Master of Shadows",
             "Murderous Intent",
-            "Shocklight",
-            "Infusion of Light",
-            "Dark Sorrows",
             "Secure in the Light",
+            "Shocklight",
             "Chaotic Darkness",
+            "Dark Sorrows",
+            "Infusion of Light",
+            "Torment the Weak",
             "Shadowbind",
-            "Torment the Weak"
+            "+5 itemlevel",
+            "+3 itemlevel",
+            "+2 itemlevel",
+            "+1 itemlevel"
         ]
     },
     yAxis: {

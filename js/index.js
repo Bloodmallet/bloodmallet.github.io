@@ -133,12 +133,12 @@ function switch_chart_to(spec) {
   var scripts = document.scripts
   for (var i = scripts.length - 1; i >= 0; i--) {
     // if a script already is loaded for the fight style and spec, don't load again
-    if (~scripts[i].src.indexOf("js/" + spec + "_" + fight_style + ".js")) {
+    if (~scripts[i].src.indexOf("js/trinkets/" + spec + "_" + fight_style + ".js")) {
       already_loaded = true;
     }
   }
   if ( ! already_loaded) {
-    getScript("js/" + spec + "_" + fight_style + ".js");
+    getScript("js/trinkets/" + spec + "_" + fight_style + ".js");
   }
 
   // hide/show charts

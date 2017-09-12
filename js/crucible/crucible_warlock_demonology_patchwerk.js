@@ -39,22 +39,26 @@ Highcharts.chart('crucible_warlock_demonology_patchwerk',
         {
             color: "#4572a7",
             data: [
-                26634,
-                23056,
-                18678,
-                17691,
-                11702,
-                10705,
-                10683,
-                7395,
-                7002,
-                2460
+                24688,
+                19956,
+                19114,
+                17855,
+                17852,
+                17406,
+                17002,
+                15723,
+                15688,
+                15218,
+                14812,
+                9875,
+                4937,
+                4562
             ],
             name: 1
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-11 18:41 SimC build: 43201b2"
+        text: "UTC 2017-09-11 23:34 SimC build: 43201b2"
     },
     title: {
         text: "Warlock - Demonology - Patchwerk"
@@ -71,15 +75,19 @@ Highcharts.chart('crucible_warlock_demonology_patchwerk',
     },
     xAxis: {
         categories: [
+            "+5 itemlevel",
             "Light Speed",
+            "Torment the Weak",
+            "Shadowbind",
+            "Secure in the Light",
             "Master of Shadows",
+            "Infusion of Light",
+            "Chaotic Darkness",
             "Murderous Intent",
             "Shocklight",
-            "Torment the Weak",
-            "Secure in the Light",
-            "Infusion of Light",
-            "Shadowbind",
-            "Chaotic Darkness",
+            "+3 itemlevel",
+            "+2 itemlevel",
+            "+1 itemlevel",
             "Dark Sorrows"
         ]
     },

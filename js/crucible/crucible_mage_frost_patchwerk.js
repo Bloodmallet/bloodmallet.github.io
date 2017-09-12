@@ -39,22 +39,26 @@ Highcharts.chart('crucible_mage_frost_patchwerk',
         {
             color: "#4572a7",
             data: [
-                18301,
-                17368,
-                13494,
-                12124,
-                11333,
-                11259,
-                11138,
-                10517,
-                8463,
-                4100
+                29088,
+                27122,
+                25231,
+                24547,
+                24002,
+                22261,
+                17452,
+                15812,
+                14513,
+                13425,
+                11635,
+                9343,
+                7283,
+                5817
             ],
             name: 1
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-11 18:41 SimC build: 43201b2"
+        text: "UTC 2017-09-11 23:34 SimC build: 43201b2"
     },
     title: {
         text: "Mage - Frost - Patchwerk"
@@ -71,16 +75,20 @@ Highcharts.chart('crucible_mage_frost_patchwerk',
     },
     xAxis: {
         categories: [
+            "+5 itemlevel",
+            "Torment the Weak",
+            "Infusion of Light",
+            "Secure in the Light",
+            "Shadowbind",
+            "Chaotic Darkness",
+            "+3 itemlevel",
             "Murderous Intent",
             "Light Speed",
             "Shocklight",
-            "Infusion of Light",
-            "Secure in the Light",
+            "+2 itemlevel",
             "Master of Shadows",
-            "Torment the Weak",
-            "Chaotic Darkness",
-            "Shadowbind",
-            "Dark Sorrows"
+            "Dark Sorrows",
+            "+1 itemlevel"
         ]
     },
     yAxis: {

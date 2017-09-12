@@ -39,22 +39,26 @@ Highcharts.chart('crucible_mage_fire_patchwerk',
         {
             color: "#4572a7",
             data: [
-                14901,
-                13924,
-                13144,
-                12580,
-                12173,
-                10185,
-                9741,
-                9536,
-                8826,
-                3735
+                22401,
+                21267,
+                21095,
+                20986,
+                20678,
+                18767,
+                13440,
+                11866,
+                11640,
+                11171,
+                8960,
+                7618,
+                5082,
+                4480
             ],
             name: 1
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-11 18:41 SimC build: 43201b2"
+        text: "UTC 2017-09-11 23:34 SimC build: 43201b2"
     },
     title: {
         text: "Mage - Fire - Patchwerk"
@@ -71,16 +75,20 @@ Highcharts.chart('crucible_mage_fire_patchwerk',
     },
     xAxis: {
         categories: [
-            "Murderous Intent",
-            "Master of Shadows",
-            "Shocklight",
-            "Infusion of Light",
-            "Secure in the Light",
-            "Light Speed",
-            "Chaotic Darkness",
-            "Torment the Weak",
+            "+5 itemlevel",
             "Shadowbind",
-            "Dark Sorrows"
+            "Secure in the Light",
+            "Torment the Weak",
+            "Infusion of Light",
+            "Chaotic Darkness",
+            "+3 itemlevel",
+            "Master of Shadows",
+            "Murderous Intent",
+            "Shocklight",
+            "+2 itemlevel",
+            "Light Speed",
+            "Dark Sorrows",
+            "+1 itemlevel"
         ]
     },
     yAxis: {

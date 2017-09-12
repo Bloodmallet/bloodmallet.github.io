@@ -39,22 +39,26 @@ Highcharts.chart('crucible_warlock_affliction_patchwerk',
         {
             color: "#4572a7",
             data: [
-                22064,
-                20587,
-                18891,
-                16684,
-                11553,
-                10887,
-                10142,
-                9310,
-                7984,
-                2914
+                23211,
+                22297,
+                21543,
+                20650,
+                19804,
+                19419,
+                16863,
+                16153,
+                15735,
+                15020,
+                13378,
+                8918,
+                5818,
+                4459
             ],
             name: 1
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-11 18:41 SimC build: 43201b2"
+        text: "UTC 2017-09-11 23:34 SimC build: 43201b2"
     },
     title: {
         text: "Warlock - Affliction - Patchwerk"
@@ -71,16 +75,20 @@ Highcharts.chart('crucible_warlock_affliction_patchwerk',
     },
     xAxis: {
         categories: [
-            "Light Speed",
-            "Master of Shadows",
-            "Shocklight",
-            "Murderous Intent",
+            "Torment the Weak",
+            "+5 itemlevel",
+            "Shadowbind",
             "Secure in the Light",
             "Infusion of Light",
-            "Torment the Weak",
             "Chaotic Darkness",
-            "Shadowbind",
-            "Dark Sorrows"
+            "Shocklight",
+            "Light Speed",
+            "Master of Shadows",
+            "Murderous Intent",
+            "+3 itemlevel",
+            "+2 itemlevel",
+            "Dark Sorrows",
+            "+1 itemlevel"
         ]
     },
     yAxis: {

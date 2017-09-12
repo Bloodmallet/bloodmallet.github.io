@@ -39,22 +39,26 @@ Highcharts.chart('crucible_rogue_subtlety_patchwerk',
         {
             color: "#4572a7",
             data: [
-                16416,
-                15275,
-                14010,
-                12101,
-                11818,
-                9418,
-                9235,
-                8980,
-                7762,
-                4182
+                22002,
+                20005,
+                18524,
+                18503,
+                16948,
+                15722,
+                14079,
+                12281,
+                10574,
+                7389,
+                6962,
+                6344,
+                4229,
+                2114
             ],
             name: 1
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-11 18:41 SimC build: 43201b2"
+        text: "UTC 2017-09-11 23:34 SimC build: 43201b2"
     },
     title: {
         text: "Rogue - Subtlety - Patchwerk"
@@ -71,16 +75,20 @@ Highcharts.chart('crucible_rogue_subtlety_patchwerk',
     },
     xAxis: {
         categories: [
-            "Master of Shadows",
-            "Murderous Intent",
-            "Shocklight",
-            "Secure in the Light",
-            "Infusion of Light",
-            "Light Speed",
             "Torment the Weak",
-            "Chaotic Darkness",
             "Shadowbind",
-            "Dark Sorrows"
+            "Infusion of Light",
+            "Secure in the Light",
+            "Chaotic Darkness",
+            "Murderous Intent",
+            "Master of Shadows",
+            "Shocklight",
+            "+5 itemlevel",
+            "Light Speed",
+            "Dark Sorrows",
+            "+3 itemlevel",
+            "+2 itemlevel",
+            "+1 itemlevel"
         ]
     },
     yAxis: {

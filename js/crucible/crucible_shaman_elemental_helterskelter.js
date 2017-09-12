@@ -1,4 +1,4 @@
-Highcharts.chart('crucible_warrior_fury_patchwerk', 
+Highcharts.chart('crucible_shaman_elemental_helterskelter', 
 {
     chart: {
         type: "bar"
@@ -39,29 +39,28 @@ Highcharts.chart('crucible_warrior_fury_patchwerk',
         {
             color: "#4572a7",
             data: [
-                22533,
-                20694,
-                20597,
-                20080,
-                18503,
-                15266,
-                14908,
-                13146,
-                10945,
-                6698,
-                -56,
-                -112,
-                -167,
-                -278
+                22604,
+                19571,
+                18082,
+                17451,
+                17074,
+                13562,
+                12502,
+                12417,
+                11486,
+                9711,
+                9485,
+                9041,
+                4520
             ],
             name: 1
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-11 23:34 SimC build: 43201b2"
+        text: "UTC 2017-09-11 20:33 SimC build: 43201b2"
     },
     title: {
-        text: "Warrior - Fury - Patchwerk"
+        text: "Shaman - Elemental - Patchwerk"
     },
     tooltip: {
         backgroundColor: "#eee",
@@ -75,20 +74,19 @@ Highcharts.chart('crucible_warrior_fury_patchwerk',
     },
     xAxis: {
         categories: [
-            "Torment the Weak",
-            "Secure in the Light",
+            "+5 itemlevel",
+            "Light Speed",
+            "Master of Shadows",
+            "Shocklight",
+            "Murderous Intent",
+            "+3 itemlevel",
             "Infusion of Light",
+            "Secure in the Light",
+            "Torment the Weak",
             "Shadowbind",
             "Chaotic Darkness",
-            "Master of Shadows",
-            "Murderous Intent",
-            "Light Speed",
-            "Shocklight",
-            "Dark Sorrows",
-            "+1 itemlevel",
             "+2 itemlevel",
-            "+3 itemlevel",
-            "+5 itemlevel"
+            "Dark Sorrows"
         ]
     },
     yAxis: {

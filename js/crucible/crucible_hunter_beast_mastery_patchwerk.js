@@ -39,22 +39,26 @@ Highcharts.chart('crucible_hunter_beast_mastery_patchwerk',
         {
             color: "#4572a7",
             data: [
-                20149,
-                19245,
-                18668,
-                17552,
-                14098,
-                13290,
-                12686,
-                10286,
-                9357,
-                4299
+                25708,
+                20909,
+                20868,
+                20105,
+                18139,
+                16188,
+                15726,
+                15599,
+                12682,
+                10221,
+                6776,
+                6132,
+                4088,
+                2044
             ],
             name: 1
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-11 18:41 SimC build: 43201b2"
+        text: "UTC 2017-09-11 23:34 SimC build: 43201b2"
     },
     title: {
         text: "Hunter - Beast_Mastery - Patchwerk"
@@ -71,16 +75,20 @@ Highcharts.chart('crucible_hunter_beast_mastery_patchwerk',
     },
     xAxis: {
         categories: [
-            "Master of Shadows",
-            "Shocklight",
-            "Murderous Intent",
-            "Light Speed",
             "Torment the Weak",
             "Infusion of Light",
             "Secure in the Light",
-            "Chaotic Darkness",
             "Shadowbind",
-            "Dark Sorrows"
+            "Chaotic Darkness",
+            "Murderous Intent",
+            "Shocklight",
+            "Master of Shadows",
+            "Light Speed",
+            "+5 itemlevel",
+            "Dark Sorrows",
+            "+3 itemlevel",
+            "+2 itemlevel",
+            "+1 itemlevel"
         ]
     },
     yAxis: {

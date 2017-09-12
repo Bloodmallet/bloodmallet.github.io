@@ -39,22 +39,26 @@ Highcharts.chart('crucible_death_knight_frost_patchwerk',
         {
             color: "#4572a7",
             data: [
-                20350,
-                19178,
-                18833,
-                18067,
-                12322,
-                12275,
-                11345,
-                9417,
-                9335,
-                4115
+                16350,
+                16248,
+                14746,
+                14468,
+                14410,
+                14370,
+                14041,
+                12961,
+                12210,
+                10954,
+                6572,
+                4422,
+                4381,
+                2190
             ],
             name: 1
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-11 18:41 SimC build: 43201b2"
+        text: "UTC 2017-09-11 23:34 SimC build: 43201b2"
     },
     title: {
         text: "Death_Knight - Frost - Patchwerk"
@@ -71,16 +75,20 @@ Highcharts.chart('crucible_death_knight_frost_patchwerk',
     },
     xAxis: {
         categories: [
-            "Light Speed",
-            "Murderous Intent",
-            "Shocklight",
-            "Master of Shadows",
-            "Secure in the Light",
-            "Infusion of Light",
             "Torment the Weak",
+            "Murderous Intent",
+            "Infusion of Light",
             "Shadowbind",
+            "Shocklight",
+            "Secure in the Light",
+            "Light Speed",
+            "Master of Shadows",
             "Chaotic Darkness",
-            "Dark Sorrows"
+            "+5 itemlevel",
+            "+3 itemlevel",
+            "Dark Sorrows",
+            "+2 itemlevel",
+            "+1 itemlevel"
         ]
     },
     yAxis: {

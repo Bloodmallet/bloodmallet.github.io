@@ -39,22 +39,26 @@ Highcharts.chart('crucible_warrior_arms_patchwerk',
         {
             color: "#4572a7",
             data: [
-                21600,
-                20667,
-                20188,
-                19871,
-                18376,
-                17424,
-                15585,
-                14418,
-                13697,
-                6645
+                19598,
+                18319,
+                17769,
+                16937,
+                16820,
+                14897,
+                14149,
+                13626,
+                11016,
+                4683,
+                -114,
+                -228,
+                -341,
+                -568
             ],
             name: 1
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-11 18:41 SimC build: 43201b2"
+        text: "UTC 2017-09-11 23:34 SimC build: 43201b2"
     },
     title: {
         text: "Warrior - Arms - Patchwerk"
@@ -71,16 +75,20 @@ Highcharts.chart('crucible_warrior_arms_patchwerk',
     },
     xAxis: {
         categories: [
-            "Secure in the Light",
             "Infusion of Light",
-            "Master of Shadows",
             "Torment the Weak",
-            "Light Speed",
-            "Murderous Intent",
+            "Secure in the Light",
             "Chaotic Darkness",
             "Shadowbind",
+            "Master of Shadows",
+            "Light Speed",
+            "Murderous Intent",
             "Shocklight",
-            "Dark Sorrows"
+            "Dark Sorrows",
+            "+1 itemlevel",
+            "+2 itemlevel",
+            "+3 itemlevel",
+            "+5 itemlevel"
         ]
     },
     yAxis: {

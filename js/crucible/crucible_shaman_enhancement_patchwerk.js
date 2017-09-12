@@ -39,22 +39,26 @@ Highcharts.chart('crucible_shaman_enhancement_patchwerk',
         {
             color: "#4572a7",
             data: [
-                18627,
-                17172,
-                17141,
-                16494,
-                11149,
-                10762,
-                9378,
-                8199,
-                6723,
-                2584
+                18369,
+                17161,
+                16778,
+                15094,
+                14885,
+                13667,
+                13370,
+                13365,
+                13080,
+                12573,
+                8022,
+                5348,
+                4655,
+                2674
             ],
             name: 1
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-11 18:41 SimC build: 43201b2"
+        text: "UTC 2017-09-11 23:34 SimC build: 43201b2"
     },
     title: {
         text: "Shaman - Enhancement - Patchwerk"
@@ -71,16 +75,20 @@ Highcharts.chart('crucible_shaman_enhancement_patchwerk',
     },
     xAxis: {
         categories: [
-            "Master of Shadows",
-            "Murderous Intent",
-            "Light Speed",
-            "Shocklight",
-            "Secure in the Light",
-            "Infusion of Light",
             "Torment the Weak",
-            "Chaotic Darkness",
+            "Infusion of Light",
             "Shadowbind",
-            "Dark Sorrows"
+            "Secure in the Light",
+            "Chaotic Darkness",
+            "Light Speed",
+            "+5 itemlevel",
+            "Murderous Intent",
+            "Master of Shadows",
+            "Shocklight",
+            "+3 itemlevel",
+            "+2 itemlevel",
+            "Dark Sorrows",
+            "+1 itemlevel"
         ]
     },
     yAxis: {
