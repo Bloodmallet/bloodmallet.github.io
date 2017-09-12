@@ -16,6 +16,8 @@ document.addEventListener('DOMContentLoaded', function() {
       // set new language for the website
       switchLanguage(new_language);
 
+      ga('send', 'event', 'switch_language', new_language);
+
       // set language selector to the new starting language
       document.getElementById("select_language").value = new_language;
     }
