@@ -39,22 +39,26 @@ Highcharts.chart('crucible_rogue_outlaw_beastlord',
         {
             color: "#4572a7",
             data: [
-                24056,
-                17971,
-                16695,
-                16379,
-                15144,
-                12716,
-                9450,
-                8085,
-                6366,
-                5232
+                23554,
+                22930,
+                22060,
+                21265,
+                20850,
+                18678,
+                16479,
+                14364,
+                12735,
+                12161,
+                11487,
+                7296,
+                4864,
+                2432
             ],
             name: 1
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-11 18:41 SimC build: 43201b2"
+        text: "UTC 2017-09-11 23:34 SimC build: 43201b2"
     },
     title: {
         text: "Rogue - Outlaw - Beastlord"
@@ -71,16 +75,20 @@ Highcharts.chart('crucible_rogue_outlaw_beastlord',
     },
     xAxis: {
         categories: [
-            "Light Speed",
-            "Shocklight",
-            "Master of Shadows",
-            "Murderous Intent",
-            "Secure in the Light",
-            "Infusion of Light",
             "Dark Sorrows",
             "Torment the Weak",
+            "Secure in the Light",
+            "Murderous Intent",
+            "Infusion of Light",
+            "Shadowbind",
+            "Light Speed",
             "Chaotic Darkness",
-            "Shadowbind"
+            "Shocklight",
+            "+5 itemlevel",
+            "Master of Shadows",
+            "+3 itemlevel",
+            "+2 itemlevel",
+            "+1 itemlevel"
         ]
     },
     yAxis: {

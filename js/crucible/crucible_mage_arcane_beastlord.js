@@ -39,22 +39,26 @@ Highcharts.chart('crucible_mage_arcane_beastlord',
         {
             color: "#4572a7",
             data: [
-                31370,
-                29984,
-                27943,
-                19723,
-                16263,
-                14487,
-                12803,
-                10670,
-                10446,
-                8519
+                54107,
+                32464,
+                28412,
+                26498,
+                24294,
+                24252,
+                22843,
+                21929,
+                21915,
+                21642,
+                20935,
+                14133,
+                12700,
+                10821
             ],
             name: 1
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-11 18:41 SimC build: 43201b2"
+        text: "UTC 2017-09-11 23:34 SimC build: 43201b2"
     },
     title: {
         text: "Mage - Arcane - Beastlord"
@@ -71,16 +75,20 @@ Highcharts.chart('crucible_mage_arcane_beastlord',
     },
     xAxis: {
         categories: [
-            "Murderous Intent",
-            "Master of Shadows",
-            "Shocklight",
-            "Light Speed",
-            "Infusion of Light",
+            "+5 itemlevel",
+            "+3 itemlevel",
             "Dark Sorrows",
+            "Murderous Intent",
+            "Shocklight",
+            "Infusion of Light",
+            "Master of Shadows",
+            "Shadowbind",
+            "Chaotic Darkness",
+            "+2 itemlevel",
             "Secure in the Light",
             "Torment the Weak",
-            "Chaotic Darkness",
-            "Shadowbind"
+            "Light Speed",
+            "+1 itemlevel"
         ]
     },
     yAxis: {

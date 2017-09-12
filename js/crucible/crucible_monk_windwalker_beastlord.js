@@ -39,22 +39,25 @@ Highcharts.chart('crucible_monk_windwalker_beastlord',
         {
             color: "#4572a7",
             data: [
-                26447,
-                22281,
-                21550,
-                10871,
-                5961,
-                3897,
-                2736,
-                1487,
-                1456,
-                170
+                28718,
+                23980,
+                21960,
+                19848,
+                18354,
+                15340,
+                14353,
+                14304,
+                14005,
+                8377,
+                5026,
+                3350,
+                1675
             ],
             name: 1
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-11 18:41 SimC build: 43201b2"
+        text: "UTC 2017-09-11 23:34 SimC build: 43201b2"
     },
     title: {
         text: "Monk - Windwalker - Beastlord"
@@ -72,15 +75,18 @@ Highcharts.chart('crucible_monk_windwalker_beastlord',
     xAxis: {
         categories: [
             "Shocklight",
-            "Master of Shadows",
             "Murderous Intent",
-            "Light Speed",
+            "Master of Shadows",
+            "Dark Sorrows",
             "Secure in the Light",
+            "Shadowbind",
+            "Light Speed",
             "Torment the Weak",
             "Infusion of Light",
-            "Chaotic Darkness",
-            "Shadowbind",
-            "Dark Sorrows"
+            "+5 itemlevel",
+            "+3 itemlevel",
+            "+2 itemlevel",
+            "+1 itemlevel"
         ]
     },
     yAxis: {

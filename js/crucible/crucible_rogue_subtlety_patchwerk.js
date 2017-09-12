@@ -61,7 +61,7 @@ Highcharts.chart('crucible_rogue_subtlety_patchwerk',
         text: "UTC 2017-09-11 23:34 SimC build: 43201b2"
     },
     title: {
-        text: "Rogue - Subtlety - Patchwerk"
+        text: "Rogue - Subtlety DfA - Patchwerk"
     },
     tooltip: {
         backgroundColor: "#eee",

@@ -39,26 +39,26 @@ Highcharts.chart('crucible_warrior_fury_beastlord',
         {
             color: "#4572a7",
             data: [
-                25403,
-                24296,
-                23542,
-                14086,
-                13779,
-                13766,
-                12172,
-                10183,
-                9243,
-                6645,
-                157,
-                94,
-                62,
-                31
+                30327,
+                24881,
+                24840,
+                23290,
+                22801,
+                21072,
+                20902,
+                20678,
+                20474,
+                16285,
+                7698,
+                4618,
+                3079,
+                1539
             ],
             name: 1
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-11 18:41 SimC build: 43201b2"
+        text: "UTC 2017-09-11 23:34 SimC build: 43201b2"
     },
     title: {
         text: "Warrior - Fury - Beastlord"
@@ -75,16 +75,16 @@ Highcharts.chart('crucible_warrior_fury_beastlord',
     },
     xAxis: {
         categories: [
-            "Light Speed",
-            "Master of Shadows",
-            "Murderous Intent",
-            "Secure in the Light",
-            "Shocklight",
-            "Chaotic Darkness",
             "Dark Sorrows",
-            "Infusion of Light",
-            "Torment the Weak",
             "Shadowbind",
+            "Infusion of Light",
+            "Master of Shadows",
+            "Secure in the Light",
+            "Light Speed",
+            "Murderous Intent",
+            "Torment the Weak",
+            "Chaotic Darkness",
+            "Shocklight",
             "+5 itemlevel",
             "+3 itemlevel",
             "+2 itemlevel",

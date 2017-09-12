@@ -39,22 +39,26 @@ Highcharts.chart('crucible_druid_balance_beastlord',
         {
             color: "#4572a7",
             data: [
-                16151,
-                14474,
-                14117,
-                11294,
-                10622,
-                10235,
-                9667,
-                6130,
-                5614,
-                5054
+                25644,
+                23369,
+                19187,
+                17889,
+                17792,
+                15386,
+                14575,
+                13051,
+                12819,
+                11942,
+                11536,
+                10257,
+                7848,
+                5128
             ],
             name: 1
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-11 18:41 SimC build: 43201b2"
+        text: "UTC 2017-09-11 23:34 SimC build: 43201b2"
     },
     title: {
         text: "Druid - Balance - Beastlord"
@@ -71,16 +75,20 @@ Highcharts.chart('crucible_druid_balance_beastlord',
     },
     xAxis: {
         categories: [
-            "Murderous Intent",
-            "Master of Shadows",
-            "Shocklight",
-            "Light Speed",
-            "Secure in the Light",
+            "+5 itemlevel",
             "Dark Sorrows",
-            "Infusion of Light",
-            "Chaotic Darkness",
+            "Secure in the Light",
             "Shadowbind",
-            "Torment the Weak"
+            "Infusion of Light",
+            "+3 itemlevel",
+            "Chaotic Darkness",
+            "Murderous Intent",
+            "Shocklight",
+            "Torment the Weak",
+            "Master of Shadows",
+            "+2 itemlevel",
+            "Light Speed",
+            "+1 itemlevel"
         ]
     },
     yAxis: {

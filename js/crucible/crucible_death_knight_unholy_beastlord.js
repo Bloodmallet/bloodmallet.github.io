@@ -39,22 +39,26 @@ Highcharts.chart('crucible_death_knight_unholy_beastlord',
         {
             color: "#4572a7",
             data: [
-                39796,
-                32414,
-                29417,
-                15123,
-                10248,
-                9263,
-                8747,
-                7919,
-                4933,
-                -81776
+                30299,
+                27160,
+                26799,
+                26303,
+                20686,
+                19381,
+                18308,
+                17039,
+                15334,
+                11628,
+                11516,
+                7752,
+                3876,
+                -89933
             ],
             name: 1
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-11 18:41 SimC build: 43201b2"
+        text: "UTC 2017-09-11 23:34 SimC build: 43201b2"
     },
     title: {
         text: "Death_Knight - Unholy - Beastlord"
@@ -72,14 +76,18 @@ Highcharts.chart('crucible_death_knight_unholy_beastlord',
     xAxis: {
         categories: [
             "Master of Shadows",
-            "Shocklight",
             "Murderous Intent",
-            "Secure in the Light",
             "Dark Sorrows",
+            "Shocklight",
             "Shadowbind",
-            "Infusion of Light",
-            "Chaotic Darkness",
+            "+5 itemlevel",
+            "Secure in the Light",
             "Torment the Weak",
+            "Chaotic Darkness",
+            "+3 itemlevel",
+            "Infusion of Light",
+            "+2 itemlevel",
+            "+1 itemlevel",
             "Light Speed"
         ]
     },

@@ -39,22 +39,26 @@ Highcharts.chart('crucible_demon_hunter_havoc_beastlord',
         {
             color: "#4572a7",
             data: [
-                23680,
-                22085,
-                21966,
-                11187,
-                11179,
-                10199,
-                7525,
-                6733,
-                5236,
-                2693
+                30526,
+                28623,
+                26188,
+                26110,
+                24540,
+                23753,
+                23374,
+                22995,
+                22974,
+                19647,
+                18315,
+                12210,
+                9460,
+                6105
             ],
             name: 1
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-11 18:41 SimC build: 43201b2"
+        text: "UTC 2017-09-11 23:34 SimC build: 43201b2"
     },
     title: {
         text: "Demon_Hunter - Havoc - Beastlord"
@@ -71,16 +75,20 @@ Highcharts.chart('crucible_demon_hunter_havoc_beastlord',
     },
     xAxis: {
         categories: [
-            "Shocklight",
+            "+5 itemlevel",
             "Murderous Intent",
+            "Shocklight",
             "Master of Shadows",
-            "Secure in the Light",
-            "Infusion of Light",
-            "Light Speed",
-            "Chaotic Darkness",
             "Torment the Weak",
+            "Chaotic Darkness",
+            "Shadowbind",
+            "Secure in the Light",
             "Dark Sorrows",
-            "Shadowbind"
+            "Infusion of Light",
+            "+3 itemlevel",
+            "+2 itemlevel",
+            "Light Speed",
+            "+1 itemlevel"
         ]
     },
     yAxis: {

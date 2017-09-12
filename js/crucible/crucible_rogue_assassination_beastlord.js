@@ -39,22 +39,26 @@ Highcharts.chart('crucible_rogue_assassination_beastlord',
         {
             color: "#4572a7",
             data: [
-                34044,
-                27866,
-                23519,
-                13837,
-                13429,
-                11883,
-                9946,
-                7450,
-                7225,
-                1234
+                24039,
+                23002,
+                20075,
+                19012,
+                18952,
+                17750,
+                15294,
+                14922,
+                11238,
+                8868,
+                8061,
+                5320,
+                3547,
+                1773
             ],
             name: 1
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-11 18:41 SimC build: 43201b2"
+        text: "UTC 2017-09-11 23:34 SimC build: 43201b2"
     },
     title: {
         text: "Rogue - Assassination - Beastlord"
@@ -73,14 +77,18 @@ Highcharts.chart('crucible_rogue_assassination_beastlord',
         categories: [
             "Master of Shadows",
             "Murderous Intent",
-            "Shocklight",
-            "Infusion of Light",
-            "Dark Sorrows",
             "Secure in the Light",
-            "Light Speed",
+            "Dark Sorrows",
+            "Shocklight",
             "Shadowbind",
             "Chaotic Darkness",
-            "Torment the Weak"
+            "Infusion of Light",
+            "Torment the Weak",
+            "+5 itemlevel",
+            "Light Speed",
+            "+3 itemlevel",
+            "+2 itemlevel",
+            "+1 itemlevel"
         ]
     },
     yAxis: {

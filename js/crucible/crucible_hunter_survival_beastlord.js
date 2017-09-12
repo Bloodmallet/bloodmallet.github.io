@@ -39,22 +39,26 @@ Highcharts.chart('crucible_hunter_survival_beastlord',
         {
             color: "#4572a7",
             data: [
-                22886,
-                22235,
-                21066,
-                13633,
-                12768,
-                11240,
-                10808,
-                7685,
-                6892,
-                4338
+                28278,
+                25931,
+                23945,
+                22829,
+                22220,
+                21251,
+                20328,
+                19400,
+                18975,
+                16678,
+                16661,
+                15558,
+                10372,
+                5186
             ],
             name: 1
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-11 18:41 SimC build: 43201b2"
+        text: "UTC 2017-09-11 23:34 SimC build: 43201b2"
     },
     title: {
         text: "Hunter - Survival - Beastlord"
@@ -72,15 +76,19 @@ Highcharts.chart('crucible_hunter_survival_beastlord',
     xAxis: {
         categories: [
             "Murderous Intent",
+            "+5 itemlevel",
+            "Dark Sorrows",
+            "Torment the Weak",
+            "Secure in the Light",
             "Light Speed",
             "Shocklight",
             "Infusion of Light",
-            "Torment the Weak",
-            "Master of Shadows",
-            "Secure in the Light",
-            "Dark Sorrows",
             "Chaotic Darkness",
-            "Shadowbind"
+            "Master of Shadows",
+            "Shadowbind",
+            "+3 itemlevel",
+            "+2 itemlevel",
+            "+1 itemlevel"
         ]
     },
     yAxis: {

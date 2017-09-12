@@ -39,22 +39,26 @@ Highcharts.chart('crucible_mage_fire_beastlord',
         {
             color: "#4572a7",
             data: [
-                31162,
-                25600,
-                19737,
-                13888,
-                13100,
-                10946,
-                9570,
-                7827,
-                6468,
-                2425
+                43026,
+                33759,
+                28112,
+                25815,
+                25323,
+                24513,
+                23014,
+                22807,
+                21078,
+                18223,
+                17743,
+                17210,
+                15453,
+                8605
             ],
             name: 1
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-11 18:41 SimC build: 43201b2"
+        text: "UTC 2017-09-11 23:34 SimC build: 43201b2"
     },
     title: {
         text: "Mage - Fire - Beastlord"
@@ -71,16 +75,20 @@ Highcharts.chart('crucible_mage_fire_beastlord',
     },
     xAxis: {
         categories: [
-            "Light Speed",
-            "Murderous Intent",
-            "Master of Shadows",
+            "+5 itemlevel",
             "Dark Sorrows",
+            "Light Speed",
+            "+3 itemlevel",
+            "Chaotic Darkness",
             "Infusion of Light",
+            "Shadowbind",
+            "Murderous Intent",
             "Secure in the Light",
             "Shocklight",
-            "Chaotic Darkness",
-            "Shadowbind",
-            "Torment the Weak"
+            "Master of Shadows",
+            "+2 itemlevel",
+            "Torment the Weak",
+            "+1 itemlevel"
         ]
     },
     yAxis: {

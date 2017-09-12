@@ -39,22 +39,26 @@ Highcharts.chart('crucible_hunter_marksmanship_beastlord',
         {
             color: "#4572a7",
             data: [
-                38179,
-                34179,
-                28076,
-                24637,
-                16621,
-                16422,
-                13652,
-                12499,
-                12351,
-                9256
+                35903,
+                27697,
+                27692,
+                27132,
+                26673,
+                26295,
+                26106,
+                25438,
+                24058,
+                23529,
+                21541,
+                20978,
+                14361,
+                7180
             ],
             name: 1
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-11 18:41 SimC build: 43201b2"
+        text: "UTC 2017-09-11 23:34 SimC build: 43201b2"
     },
     title: {
         text: "Hunter - Marksmanship - Beastlord"
@@ -71,16 +75,20 @@ Highcharts.chart('crucible_hunter_marksmanship_beastlord',
     },
     xAxis: {
         categories: [
-            "Shocklight",
+            "+5 itemlevel",
             "Master of Shadows",
-            "Murderous Intent",
-            "Light Speed",
             "Dark Sorrows",
-            "Secure in the Light",
-            "Infusion of Light",
+            "Murderous Intent",
             "Shadowbind",
+            "Infusion of Light",
+            "Shocklight",
+            "Light Speed",
+            "Chaotic Darkness",
             "Torment the Weak",
-            "Chaotic Darkness"
+            "+3 itemlevel",
+            "Secure in the Light",
+            "+2 itemlevel",
+            "+1 itemlevel"
         ]
     },
     yAxis: {

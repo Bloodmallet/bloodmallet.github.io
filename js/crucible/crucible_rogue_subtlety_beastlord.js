@@ -39,25 +39,29 @@ Highcharts.chart('crucible_rogue_subtlety_beastlord',
         {
             color: "#4572a7",
             data: [
-                27623,
-                23248,
-                19991,
-                12960,
-                10621,
-                9415,
-                9135,
-                7628,
-                7527,
-                4074
+                23596,
+                22623,
+                21616,
+                21233,
+                20979,
+                20090,
+                19571,
+                18489,
+                16768,
+                15980,
+                8398,
+                5038,
+                3359,
+                1679
             ],
             name: 1
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-11 18:41 SimC build: 43201b2"
+        text: "UTC 2017-09-11 23:34 SimC build: 43201b2"
     },
     title: {
-        text: "Rogue - Subtlety - Beastlord"
+        text: "Rogue - Subtlety DfA - Beastlord"
     },
     tooltip: {
         backgroundColor: "#eee",
@@ -71,16 +75,20 @@ Highcharts.chart('crucible_rogue_subtlety_beastlord',
     },
     xAxis: {
         categories: [
-            "Master of Shadows",
             "Murderous Intent",
-            "Shocklight",
             "Secure in the Light",
-            "Torment the Weak",
             "Dark Sorrows",
+            "Torment the Weak",
+            "Shocklight",
+            "Light Speed",
+            "Master of Shadows",
             "Infusion of Light",
             "Shadowbind",
-            "Light Speed",
-            "Chaotic Darkness"
+            "Chaotic Darkness",
+            "+5 itemlevel",
+            "+3 itemlevel",
+            "+2 itemlevel",
+            "+1 itemlevel"
         ]
     },
     yAxis: {

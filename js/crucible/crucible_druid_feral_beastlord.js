@@ -39,22 +39,26 @@ Highcharts.chart('crucible_druid_feral_beastlord',
         {
             color: "#4572a7",
             data: [
-                19047,
-                17898,
-                17019,
-                16346,
-                15662,
-                14648,
-                14460,
-                11182,
-                9642,
-                9099
+                19240,
+                17239,
+                16078,
+                14691,
+                13948,
+                12002,
+                11812,
+                11547,
+                11365,
+                7278,
+                6953,
+                4171,
+                2781,
+                1390
             ],
             name: 1
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-11 18:41 SimC build: 43201b2"
+        text: "UTC 2017-09-11 23:34 SimC build: 43201b2"
     },
     title: {
         text: "Druid - Feral - Beastlord"
@@ -71,16 +75,20 @@ Highcharts.chart('crucible_druid_feral_beastlord',
     },
     xAxis: {
         categories: [
+            "Dark Sorrows",
+            "Shadowbind",
+            "Infusion of Light",
+            "Secure in the Light",
+            "Torment the Weak",
+            "Shocklight",
+            "Chaotic Darkness",
             "Master of Shadows",
             "Murderous Intent",
-            "Shocklight",
-            "Infusion of Light",
             "Light Speed",
-            "Dark Sorrows",
-            "Secure in the Light",
-            "Chaotic Darkness",
-            "Torment the Weak",
-            "Shadowbind"
+            "+5 itemlevel",
+            "+3 itemlevel",
+            "+2 itemlevel",
+            "+1 itemlevel"
         ]
     },
     yAxis: {
