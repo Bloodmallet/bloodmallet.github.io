@@ -216,14 +216,14 @@ function translate_charts() {
     if (tspans[i].name) {
       translation = translate_trinket(tspans[i].name);
     } else {
+      tspans[i].name = tspans[i].innerHTML;
       translation = translate_trinket(tspans[i].innerHTML);
-      if (translation) {
-        tspans[i].name = tspans[i].innerHTML;
-      }
     }
 
     if (translation) {
       tspans[i].innerHTML = translation;
+    } else {
+      tspans[i].innerHTML = tspans[i].name;
     }
   }
 }
