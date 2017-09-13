@@ -39,27 +39,27 @@ Highcharts.chart('crucible_rogue_outlaw_beastlord',
         {
             color: "#4572a7",
             data: [
-                32516,
-                28898,
-                27268,
-                26779,
-                26366,
-                26308,
-                25489,
-                25460,
-                19632,
-                17010,
-                15198,
-                9118,
-                6079,
-                3039
+                25786,
+                25381,
+                25221,
+                25138,
+                24841,
+                23295,
+                21707,
+                20626,
+                19366,
+                19168,
+                16491,
+                11619,
+                7746,
+                3873
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-12 15:00 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c56773bf9e4845bb68b68dccb8ce6015ee67375a\" target=\"blank\">c56773b</a>"
+        text: "UTC 2017-09-13 09:27 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c1479132f9ba5b7d3d87182ac77bf1c57be84622\" target=\"blank\">c147913</a>"
     },
     title: {
         text: "Rogue - Outlaw - Beastlord"
@@ -77,16 +77,16 @@ Highcharts.chart('crucible_rogue_outlaw_beastlord',
     xAxis: {
         categories: [
             "Torment the Weak",
-            "Shadowbind",
-            "Light Speed",
-            "Secure in the Light",
             "Dark Sorrows",
-            "Infusion of Light",
+            "Light Speed",
+            "Shadowbind",
+            "Secure in the Light",
             "Murderous Intent",
+            "Infusion of Light",
             "Chaotic Darkness",
-            "Shocklight",
-            "Master of Shadows",
             "+5 itemlevel",
+            "Master of Shadows",
+            "Shocklight",
             "+3 itemlevel",
             "+2 itemlevel",
             "+1 itemlevel"

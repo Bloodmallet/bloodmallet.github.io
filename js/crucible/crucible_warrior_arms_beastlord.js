@@ -39,27 +39,27 @@ Highcharts.chart('crucible_warrior_arms_beastlord',
         {
             color: "#4572a7",
             data: [
-                30678,
-                22721,
-                18126,
-                17924,
-                17746,
-                17132,
-                15180,
-                14697,
-                14377,
-                11481,
-                3167,
-                1900,
-                1266,
-                633
+                23734,
+                22956,
+                18512,
+                18241,
+                17835,
+                17482,
+                16278,
+                16156,
+                15236,
+                13239,
+                -421,
+                -841,
+                -1261,
+                -2101
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-12 15:00 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c56773bf9e4845bb68b68dccb8ce6015ee67375a\" target=\"blank\">c56773b</a>"
+        text: "UTC 2017-09-13 09:27 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c1479132f9ba5b7d3d87182ac77bf1c57be84622\" target=\"blank\">c147913</a>"
     },
     title: {
         text: "Warrior - Arms - Beastlord"
@@ -78,18 +78,18 @@ Highcharts.chart('crucible_warrior_arms_beastlord',
         categories: [
             "Light Speed",
             "Murderous Intent",
-            "Shocklight",
             "Shadowbind",
+            "Shocklight",
+            "Chaotic Darkness",
+            "Dark Sorrows",
+            "Torment the Weak",
+            "Secure in the Light",
             "Infusion of Light",
             "Master of Shadows",
-            "Secure in the Light",
-            "Dark Sorrows",
-            "Chaotic Darkness",
-            "Torment the Weak",
-            "+5 itemlevel",
-            "+3 itemlevel",
+            "+1 itemlevel",
             "+2 itemlevel",
-            "+1 itemlevel"
+            "+3 itemlevel",
+            "+5 itemlevel"
         ]
     },
     yAxis: {

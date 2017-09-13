@@ -39,27 +39,27 @@ Highcharts.chart('crucible_rogue_assassination_patchwerk',
         {
             color: "#4572a7",
             data: [
-                18862,
-                18171,
-                17517,
-                16985,
-                15822,
-                15090,
-                14606,
-                14472,
-                7671,
-                6160,
-                4645,
-                4602,
-                3068,
-                1534
+                18761,
+                18077,
+                17382,
+                17104,
+                15841,
+                15015,
+                13551,
+                13452,
+                6952,
+                5119,
+                4222,
+                4171,
+                2780,
+                1390
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-12 15:00 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c56773bf9e4845bb68b68dccb8ce6015ee67375a\" target=\"blank\">c56773b</a>"
+        text: "UTC 2017-09-13 09:27 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c1479132f9ba5b7d3d87182ac77bf1c57be84622\" target=\"blank\">c147913</a>"
     },
     title: {
         text: "Rogue - Assassination - Patchwerk"
@@ -77,16 +77,16 @@ Highcharts.chart('crucible_rogue_assassination_patchwerk',
     xAxis: {
         categories: [
             "Torment the Weak",
-            "Secure in the Light",
-            "Shadowbind",
             "Infusion of Light",
-            "Chaotic Darkness",
+            "Shadowbind",
+            "Secure in the Light",
             "Master of Shadows",
+            "Chaotic Darkness",
             "Shocklight",
             "Murderous Intent",
             "+5 itemlevel",
-            "Dark Sorrows",
             "Light Speed",
+            "Dark Sorrows",
             "+3 itemlevel",
             "+2 itemlevel",
             "+1 itemlevel"

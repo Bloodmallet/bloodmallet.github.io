@@ -39,27 +39,27 @@ Highcharts.chart('crucible_mage_frost_patchwerk',
         {
             color: "#4572a7",
             data: [
-                26445,
-                24669,
-                24450,
-                23543,
-                23143,
-                21588,
-                15867,
-                14128,
-                13325,
-                12057,
-                10578,
-                7572,
-                7334,
-                5289
+                28749,
+                24702,
+                23599,
+                23180,
+                21789,
+                21127,
+                17249,
+                14642,
+                12988,
+                12074,
+                11499,
+                6457,
+                6093,
+                5749
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-12 15:00 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c56773bf9e4845bb68b68dccb8ce6015ee67375a\" target=\"blank\">c56773b</a>"
+        text: "UTC 2017-09-13 09:27 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c1479132f9ba5b7d3d87182ac77bf1c57be84622\" target=\"blank\">c147913</a>"
     },
     title: {
         text: "Mage - Frost - Patchwerk"

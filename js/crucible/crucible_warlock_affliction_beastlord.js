@@ -39,27 +39,27 @@ Highcharts.chart('crucible_warlock_affliction_beastlord',
         {
             color: "#4572a7",
             data: [
-                26925,
-                25443,
-                24513,
-                23334,
-                21527,
-                21421,
-                21414,
-                20474,
-                20014,
-                19587,
-                17144,
-                15265,
-                10177,
-                5088
+                27598,
+                27526,
+                25307,
+                23699,
+                23697,
+                23043,
+                21884,
+                20467,
+                20028,
+                17984,
+                17753,
+                16515,
+                11010,
+                5505
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-12 15:00 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c56773bf9e4845bb68b68dccb8ce6015ee67375a\" target=\"blank\">c56773b</a>"
+        text: "UTC 2017-09-13 09:27 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c1479132f9ba5b7d3d87182ac77bf1c57be84622\" target=\"blank\">c147913</a>"
     },
     title: {
         text: "Warlock - Affliction - Beastlord"
@@ -78,14 +78,14 @@ Highcharts.chart('crucible_warlock_affliction_beastlord',
         categories: [
             "Light Speed",
             "+5 itemlevel",
-            "Master of Shadows",
-            "Shocklight",
             "Dark Sorrows",
+            "Shocklight",
+            "Master of Shadows",
+            "Shadowbind",
             "Infusion of Light",
             "Secure in the Light",
-            "Chaotic Darkness",
             "Murderous Intent",
-            "Shadowbind",
+            "Chaotic Darkness",
             "Torment the Weak",
             "+3 itemlevel",
             "+2 itemlevel",

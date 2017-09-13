@@ -39,27 +39,27 @@ Highcharts.chart('crucible_hunter_survival_beastlord',
         {
             color: "#4572a7",
             data: [
-                20579,
-                18180,
-                16688,
-                16198,
-                16054,
-                15256,
+                19568,
+                18413,
+                17634,
+                16537,
+                16216,
+                16157,
+                14612,
                 14578,
-                14051,
-                12874,
-                12347,
-                12272,
-                8966,
-                8231,
-                4115
+                14457,
+                11070,
+                11047,
+                7365,
+                4877,
+                3682
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-12 15:00 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c56773bf9e4845bb68b68dccb8ce6015ee67375a\" target=\"blank\">c56773b</a>"
+        text: "UTC 2017-09-13 09:27 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c1479132f9ba5b7d3d87182ac77bf1c57be84622\" target=\"blank\">c147913</a>"
     },
     title: {
         text: "Hunter - Survival - Beastlord"
@@ -76,19 +76,19 @@ Highcharts.chart('crucible_hunter_survival_beastlord',
     },
     xAxis: {
         categories: [
+            "Murderous Intent",
             "+5 itemlevel",
             "Shocklight",
-            "Secure in the Light",
             "Shadowbind",
-            "Torment the Weak",
-            "Light Speed",
-            "Murderous Intent",
+            "Infusion of Light",
             "Dark Sorrows",
+            "Light Speed",
+            "Secure in the Light",
+            "Torment the Weak",
             "Chaotic Darkness",
             "+3 itemlevel",
-            "Infusion of Light",
-            "Master of Shadows",
             "+2 itemlevel",
+            "Master of Shadows",
             "+1 itemlevel"
         ]
     },

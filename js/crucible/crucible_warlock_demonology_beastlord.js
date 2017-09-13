@@ -39,27 +39,27 @@ Highcharts.chart('crucible_warlock_demonology_beastlord',
         {
             color: "#4572a7",
             data: [
-                30212,
-                28231,
-                23679,
-                22066,
-                21144,
-                19872,
-                18732,
-                18538,
-                18310,
-                16990,
-                16938,
-                14089,
-                11292,
-                5646
+                30879,
+                28869,
+                20953,
+                18841,
+                18817,
+                18788,
+                17321,
+                16334,
+                16283,
+                16126,
+                15225,
+                12530,
+                11547,
+                5773
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-12 15:00 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c56773bf9e4845bb68b68dccb8ce6015ee67375a\" target=\"blank\">c56773b</a>"
+        text: "UTC 2017-09-13 09:27 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c1479132f9ba5b7d3d87182ac77bf1c57be84622\" target=\"blank\">c147913</a>"
     },
     title: {
         text: "Warlock - Demonology - Beastlord"
@@ -80,13 +80,13 @@ Highcharts.chart('crucible_warlock_demonology_beastlord',
             "+5 itemlevel",
             "Dark Sorrows",
             "Shadowbind",
-            "Murderous Intent",
             "Master of Shadows",
             "Secure in the Light",
-            "Shocklight",
+            "+3 itemlevel",
             "Infusion of Light",
             "Chaotic Darkness",
-            "+3 itemlevel",
+            "Shocklight",
+            "Murderous Intent",
             "Torment the Weak",
             "+2 itemlevel",
             "+1 itemlevel"

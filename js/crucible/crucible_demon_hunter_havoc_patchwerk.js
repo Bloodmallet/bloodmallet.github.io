@@ -39,27 +39,27 @@ Highcharts.chart('crucible_demon_hunter_havoc_patchwerk',
         {
             color: "#4572a7",
             data: [
-                24190,
-                23350,
-                22833,
-                22619,
-                20497,
-                14571,
-                12535,
-                12470,
-                8742,
-                8476,
-                7064,
-                5828,
-                3874,
-                2914
+                25865,
+                23575,
+                23170,
+                23168,
+                22524,
+                21268,
+                20579,
+                18280,
+                14836,
+                13514,
+                12403,
+                9009,
+                7299,
+                4504
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-12 15:00 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c56773bf9e4845bb68b68dccb8ce6015ee67375a\" target=\"blank\">c56773b</a>"
+        text: "UTC 2017-09-13 09:27 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c1479132f9ba5b7d3d87182ac77bf1c57be84622\" target=\"blank\">c147913</a>"
     },
     title: {
         text: "Demon_Hunter - Havoc - Patchwerk"
@@ -77,18 +77,18 @@ Highcharts.chart('crucible_demon_hunter_havoc_patchwerk',
     xAxis: {
         categories: [
             "Torment the Weak",
-            "Shadowbind",
             "Secure in the Light",
+            "Shadowbind",
             "Infusion of Light",
-            "Chaotic Darkness",
             "+5 itemlevel",
-            "Murderous Intent",
+            "Chaotic Darkness",
             "Shocklight",
+            "Murderous Intent",
+            "Light Speed",
             "+3 itemlevel",
             "Master of Shadows",
-            "Dark Sorrows",
             "+2 itemlevel",
-            "Light Speed",
+            "Dark Sorrows",
             "+1 itemlevel"
         ]
     },

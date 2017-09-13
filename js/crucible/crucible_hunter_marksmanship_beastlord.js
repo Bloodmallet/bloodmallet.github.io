@@ -39,27 +39,27 @@ Highcharts.chart('crucible_hunter_marksmanship_beastlord',
         {
             color: "#4572a7",
             data: [
-                38200,
-                33883,
-                29407,
-                29156,
-                28272,
-                25986,
-                25712,
-                25586,
-                25330,
-                24117,
-                22920,
-                22840,
-                15280,
-                7640
+                31547,
+                23877,
+                21903,
+                21777,
+                20197,
+                19308,
+                18989,
+                18928,
+                17944,
+                17526,
+                16389,
+                15204,
+                12618,
+                6309
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-12 15:00 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c56773bf9e4845bb68b68dccb8ce6015ee67375a\" target=\"blank\">c56773b</a>"
+        text: "UTC 2017-09-13 09:27 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c1479132f9ba5b7d3d87182ac77bf1c57be84622\" target=\"blank\">c147913</a>"
     },
     title: {
         text: "Hunter - Marksmanship - Beastlord"
@@ -77,17 +77,17 @@ Highcharts.chart('crucible_hunter_marksmanship_beastlord',
     xAxis: {
         categories: [
             "+5 itemlevel",
-            "Shocklight",
             "Murderous Intent",
+            "Shocklight",
+            "Infusion of Light",
             "Dark Sorrows",
             "Master of Shadows",
-            "Torment the Weak",
             "Shadowbind",
-            "Infusion of Light",
-            "Secure in the Light",
-            "Light Speed",
             "+3 itemlevel",
+            "Light Speed",
             "Chaotic Darkness",
+            "Torment the Weak",
+            "Secure in the Light",
             "+2 itemlevel",
             "+1 itemlevel"
         ]

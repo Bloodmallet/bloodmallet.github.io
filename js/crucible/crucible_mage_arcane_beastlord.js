@@ -39,27 +39,27 @@ Highcharts.chart('crucible_mage_arcane_beastlord',
         {
             color: "#4572a7",
             data: [
-                53140,
-                31884,
-                30081,
-                27703,
-                27289,
-                26978,
-                25293,
-                25054,
-                24439,
-                22233,
-                21256,
-                20357,
-                16700,
-                10628
+                50509,
+                32011,
+                30305,
+                27868,
+                26705,
+                24606,
+                23330,
+                22419,
+                21763,
+                20329,
+                20203,
+                19083,
+                13656,
+                10101
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-12 15:00 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c56773bf9e4845bb68b68dccb8ce6015ee67375a\" target=\"blank\">c56773b</a>"
+        text: "UTC 2017-09-13 09:27 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c1479132f9ba5b7d3d87182ac77bf1c57be84622\" target=\"blank\">c147913</a>"
     },
     title: {
         text: "Mage - Arcane - Beastlord"
@@ -77,17 +77,17 @@ Highcharts.chart('crucible_mage_arcane_beastlord',
     xAxis: {
         categories: [
             "+5 itemlevel",
-            "+3 itemlevel",
-            "Shocklight",
-            "Murderous Intent",
-            "Master of Shadows",
-            "Dark Sorrows",
-            "Infusion of Light",
-            "Shadowbind",
             "Secure in the Light",
-            "Chaotic Darkness",
-            "+2 itemlevel",
+            "+3 itemlevel",
+            "Murderous Intent",
+            "Shocklight",
+            "Infusion of Light",
             "Torment the Weak",
+            "Master of Shadows",
+            "Shadowbind",
+            "Dark Sorrows",
+            "+2 itemlevel",
+            "Chaotic Darkness",
             "Light Speed",
             "+1 itemlevel"
         ]

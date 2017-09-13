@@ -39,27 +39,27 @@ Highcharts.chart('crucible_hunter_beast_mastery_beastlord',
         {
             color: "#4572a7",
             data: [
-                34342,
-                31263,
-                28919,
-                28281,
-                23988,
-                23391,
-                23026,
-                21089,
-                20083,
-                16717,
-                14304,
-                8582,
-                5721,
-                2860
+                39826,
+                35800,
+                35499,
+                32887,
+                26284,
+                23957,
+                22429,
+                22373,
+                21793,
+                21567,
+                21184,
+                13075,
+                8717,
+                4358
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-12 15:00 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c56773bf9e4845bb68b68dccb8ce6015ee67375a\" target=\"blank\">c56773b</a>"
+        text: "UTC 2017-09-13 09:27 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c1479132f9ba5b7d3d87182ac77bf1c57be84622\" target=\"blank\">c147913</a>"
     },
     title: {
         text: "Hunter - Beast_Mastery - Beastlord"
@@ -77,16 +77,16 @@ Highcharts.chart('crucible_hunter_beast_mastery_beastlord',
     xAxis: {
         categories: [
             "Shocklight",
-            "Light Speed",
             "Murderous Intent",
+            "Light Speed",
             "Master of Shadows",
+            "Shadowbind",
             "Dark Sorrows",
             "Infusion of Light",
-            "Secure in the Light",
-            "Chaotic Darkness",
-            "Shadowbind",
             "Torment the Weak",
             "+5 itemlevel",
+            "Chaotic Darkness",
+            "Secure in the Light",
             "+3 itemlevel",
             "+2 itemlevel",
             "+1 itemlevel"

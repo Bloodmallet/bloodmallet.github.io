@@ -39,27 +39,27 @@ Highcharts.chart('crucible_priest_shadow_beastlord',
         {
             color: "#4572a7",
             data: [
-                46854,
-                46148,
-                45516,
-                42131,
-                35951,
-                35037,
-                31757,
-                28310,
-                28103,
-                27531,
-                27309,
-                26212,
-                18206,
-                9103
+                42364,
+                41970,
+                40952,
+                32406,
+                28258,
+                27703,
+                27059,
+                26981,
+                25418,
+                23306,
+                22806,
+                17995,
+                16945,
+                8472
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-12 15:00 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c56773bf9e4845bb68b68dccb8ce6015ee67375a\" target=\"blank\">c56773b</a>"
+        text: "UTC 2017-09-13 09:27 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c1479132f9ba5b7d3d87182ac77bf1c57be84622\" target=\"blank\">c147913</a>"
     },
     title: {
         text: "Priest - Shadow - Beastlord"
@@ -76,18 +76,18 @@ Highcharts.chart('crucible_priest_shadow_beastlord',
     },
     xAxis: {
         categories: [
-            "Shadowbind",
-            "Dark Sorrows",
             "+5 itemlevel",
+            "Dark Sorrows",
+            "Shadowbind",
             "Chaotic Darkness",
             "Torment the Weak",
-            "Secure in the Light",
             "Infusion of Light",
-            "Master of Shadows",
-            "Shocklight",
+            "Secure in the Light",
             "Murderous Intent",
             "+3 itemlevel",
             "Light Speed",
+            "Master of Shadows",
+            "Shocklight",
             "+2 itemlevel",
             "+1 itemlevel"
         ]

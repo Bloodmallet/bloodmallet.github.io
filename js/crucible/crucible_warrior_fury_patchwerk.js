@@ -39,27 +39,27 @@ Highcharts.chart('crucible_warrior_fury_patchwerk',
         {
             color: "#4572a7",
             data: [
-                23796,
-                22595,
-                21669,
-                20608,
-                19081,
-                16553,
-                15606,
-                15600,
-                11877,
-                8261,
-                40,
-                24,
-                16,
-                8
+                21820,
+                21499,
+                20874,
+                20450,
+                18178,
+                15263,
+                14564,
+                12672,
+                11085,
+                6362,
+                9,
+                5,
+                3,
+                1
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-12 15:00 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c56773bf9e4845bb68b68dccb8ce6015ee67375a\" target=\"blank\">c56773b</a>"
+        text: "UTC 2017-09-13 09:27 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c1479132f9ba5b7d3d87182ac77bf1c57be84622\" target=\"blank\">c147913</a>"
     },
     title: {
         text: "Warrior - Fury - Patchwerk"
@@ -77,8 +77,8 @@ Highcharts.chart('crucible_warrior_fury_patchwerk',
     xAxis: {
         categories: [
             "Torment the Weak",
-            "Secure in the Light",
             "Shadowbind",
+            "Secure in the Light",
             "Infusion of Light",
             "Chaotic Darkness",
             "Master of Shadows",

@@ -39,27 +39,27 @@ Highcharts.chart('crucible_shaman_enhancement_beastlord',
         {
             color: "#4572a7",
             data: [
-                27887,
-                27120,
-                24622,
-                24490,
-                22332,
-                20573,
-                20338,
-                19539,
-                16732,
-                16165,
-                15766,
-                14090,
-                11154,
-                5577
+                27503,
+                25069,
+                23907,
+                23247,
+                21424,
+                20011,
+                19125,
+                17478,
+                17356,
+                16719,
+                15279,
+                14344,
+                9562,
+                4781
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-12 15:00 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c56773bf9e4845bb68b68dccb8ce6015ee67375a\" target=\"blank\">c56773b</a>"
+        text: "UTC 2017-09-13 09:27 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c1479132f9ba5b7d3d87182ac77bf1c57be84622\" target=\"blank\">c147913</a>"
     },
     title: {
         text: "Shaman - Enhancement - Beastlord"
@@ -76,18 +76,18 @@ Highcharts.chart('crucible_shaman_enhancement_beastlord',
     },
     xAxis: {
         categories: [
-            "+5 itemlevel",
             "Master of Shadows",
             "Murderous Intent",
+            "+5 itemlevel",
             "Shocklight",
-            "Dark Sorrows",
-            "Shadowbind",
             "Light Speed",
-            "Chaotic Darkness",
-            "+3 itemlevel",
+            "Dark Sorrows",
             "Torment the Weak",
+            "Chaotic Darkness",
             "Secure in the Light",
+            "Shadowbind",
             "Infusion of Light",
+            "+3 itemlevel",
             "+2 itemlevel",
             "+1 itemlevel"
         ]

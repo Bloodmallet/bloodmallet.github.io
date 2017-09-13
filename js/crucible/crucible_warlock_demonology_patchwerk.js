@@ -39,27 +39,27 @@ Highcharts.chart('crucible_warlock_demonology_patchwerk',
         {
             color: "#4572a7",
             data: [
-                24863,
-                18876,
-                18699,
-                15874,
-                15827,
-                15416,
-                15385,
-                14977,
-                14917,
-                14284,
-                13816,
-                9945,
-                4972,
-                4213
+                25896,
+                20751,
+                20377,
+                18031,
+                17390,
+                17282,
+                16620,
+                16179,
+                15989,
+                15664,
+                15537,
+                10358,
+                5993,
+                5179
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-12 15:00 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c56773bf9e4845bb68b68dccb8ce6015ee67375a\" target=\"blank\">c56773b</a>"
+        text: "UTC 2017-09-13 09:27 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c1479132f9ba5b7d3d87182ac77bf1c57be84622\" target=\"blank\">c147913</a>"
     },
     title: {
         text: "Warlock - Demonology - Patchwerk"
@@ -79,17 +79,17 @@ Highcharts.chart('crucible_warlock_demonology_patchwerk',
             "+5 itemlevel",
             "Torment the Weak",
             "Light Speed",
-            "Shadowbind",
-            "Secure in the Light",
-            "Infusion of Light",
             "Master of Shadows",
-            "Chaotic Darkness",
-            "+3 itemlevel",
+            "Shadowbind",
+            "Infusion of Light",
+            "Secure in the Light",
             "Murderous Intent",
             "Shocklight",
+            "Chaotic Darkness",
+            "+3 itemlevel",
             "+2 itemlevel",
-            "+1 itemlevel",
-            "Dark Sorrows"
+            "Dark Sorrows",
+            "+1 itemlevel"
         ]
     },
     yAxis: {

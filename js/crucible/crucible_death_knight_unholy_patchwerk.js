@@ -39,27 +39,27 @@ Highcharts.chart('crucible_death_knight_unholy_patchwerk',
         {
             color: "#4572a7",
             data: [
-                24578,
-                22735,
-                20053,
-                18213,
-                17047,
-                16940,
-                16686,
-                16321,
-                12129,
-                10896,
-                8464,
-                6537,
-                4358,
-                2179
+                23051,
+                22145,
+                19509,
+                16606,
+                15919,
+                15473,
+                15237,
+                14925,
+                9753,
+                8661,
+                6979,
+                5196,
+                3464,
+                1732
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-12 15:00 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c56773bf9e4845bb68b68dccb8ce6015ee67375a\" target=\"blank\">c56773b</a>"
+        text: "UTC 2017-09-13 09:27 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c1479132f9ba5b7d3d87182ac77bf1c57be84622\" target=\"blank\">c147913</a>"
     },
     title: {
         text: "Death_Knight - Unholy - Patchwerk"
@@ -79,10 +79,10 @@ Highcharts.chart('crucible_death_knight_unholy_patchwerk',
             "Torment the Weak",
             "Shadowbind",
             "Chaotic Darkness",
-            "Master of Shadows",
-            "Secure in the Light",
-            "Shocklight",
             "Infusion of Light",
+            "Master of Shadows",
+            "Shocklight",
+            "Secure in the Light",
             "Murderous Intent",
             "Light Speed",
             "+5 itemlevel",

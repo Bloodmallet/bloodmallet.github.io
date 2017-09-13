@@ -39,27 +39,27 @@ Highcharts.chart('crucible_priest_shadow_patchwerk',
         {
             color: "#4572a7",
             data: [
-                37863,
-                34349,
-                31527,
-                27290,
-                26002,
-                25375,
-                15225,
-                15131,
-                14937,
-                12868,
-                12680,
-                11212,
-                10150,
-                5075
+                38026,
+                34169,
+                32899,
+                28861,
+                26941,
+                26359,
+                16164,
+                15531,
+                14256,
+                14075,
+                13375,
+                11767,
+                10776,
+                5388
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-12 15:00 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c56773bf9e4845bb68b68dccb8ce6015ee67375a\" target=\"blank\">c56773b</a>"
+        text: "UTC 2017-09-13 09:27 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c1479132f9ba5b7d3d87182ac77bf1c57be84622\" target=\"blank\">c147913</a>"
     },
     title: {
         text: "Priest - Shadow - Patchwerk"
@@ -80,8 +80,8 @@ Highcharts.chart('crucible_priest_shadow_patchwerk',
             "Shadowbind",
             "Chaotic Darkness",
             "Secure in the Light",
-            "Infusion of Light",
             "+5 itemlevel",
+            "Infusion of Light",
             "+3 itemlevel",
             "Shocklight",
             "Murderous Intent",

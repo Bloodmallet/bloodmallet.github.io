@@ -39,27 +39,27 @@ Highcharts.chart('crucible_warlock_destruction_beastlord',
         {
             color: "#4572a7",
             data: [
-                25173,
-                18849,
-                18316,
-                17723,
-                16177,
-                15379,
-                15103,
-                14370,
-                14232,
-                13809,
-                12295,
-                12051,
-                10069,
-                5034
+                25866,
+                18057,
+                17279,
+                16977,
+                16596,
+                16198,
+                16119,
+                15519,
+                14827,
+                13908,
+                12028,
+                10346,
+                7795,
+                5173
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-12 15:00 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c56773bf9e4845bb68b68dccb8ce6015ee67375a\" target=\"blank\">c56773b</a>"
+        text: "UTC 2017-09-13 09:27 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c1479132f9ba5b7d3d87182ac77bf1c57be84622\" target=\"blank\">c147913</a>"
     },
     title: {
         text: "Warlock - Destruction - Beastlord"
@@ -78,17 +78,17 @@ Highcharts.chart('crucible_warlock_destruction_beastlord',
         categories: [
             "+5 itemlevel",
             "Dark Sorrows",
-            "Shadowbind",
-            "Shocklight",
             "Murderous Intent",
+            "Shadowbind",
             "Secure in the Light",
-            "+3 itemlevel",
-            "Infusion of Light",
-            "Master of Shadows",
             "Light Speed",
-            "Torment the Weak",
+            "Shocklight",
+            "+3 itemlevel",
+            "Master of Shadows",
+            "Infusion of Light",
             "Chaotic Darkness",
             "+2 itemlevel",
+            "Torment the Weak",
             "+1 itemlevel"
         ]
     },

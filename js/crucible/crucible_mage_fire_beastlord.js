@@ -39,27 +39,27 @@ Highcharts.chart('crucible_mage_fire_beastlord',
         {
             color: "#4572a7",
             data: [
-                43303,
-                29175,
-                25981,
-                24698,
-                23592,
-                23531,
-                23227,
-                23211,
-                20886,
-                20029,
-                17321,
-                13810,
-                12571,
-                8660
+                38288,
+                29222,
+                26522,
+                25755,
+                22972,
+                22155,
+                22099,
+                21593,
+                20206,
+                17763,
+                16770,
+                15315,
+                10497,
+                7657
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-12 15:00 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c56773bf9e4845bb68b68dccb8ce6015ee67375a\" target=\"blank\">c56773b</a>"
+        text: "UTC 2017-09-13 09:27 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c1479132f9ba5b7d3d87182ac77bf1c57be84622\" target=\"blank\">c147913</a>"
     },
     title: {
         text: "Mage - Fire - Beastlord"
@@ -78,17 +78,17 @@ Highcharts.chart('crucible_mage_fire_beastlord',
         categories: [
             "+5 itemlevel",
             "Dark Sorrows",
-            "+3 itemlevel",
-            "Murderous Intent",
             "Light Speed",
-            "Infusion of Light",
-            "Torment the Weak",
-            "Chaotic Darkness",
             "Secure in the Light",
+            "+3 itemlevel",
+            "Infusion of Light",
+            "Murderous Intent",
+            "Torment the Weak",
             "Shadowbind",
+            "Chaotic Darkness",
+            "Shocklight",
             "+2 itemlevel",
             "Master of Shadows",
-            "Shocklight",
             "+1 itemlevel"
         ]
     },

@@ -39,27 +39,27 @@ Highcharts.chart('crucible_death_knight_unholy_beastlord',
         {
             color: "#4572a7",
             data: [
-                29184,
-                23971,
-                22025,
-                21845,
-                21582,
-                16240,
-                15520,
-                13540,
-                10273,
-                8272,
-                4963,
-                3308,
-                1654,
-                -95484
+                33695,
+                31900,
+                29034,
+                27484,
+                25387,
+                21883,
+                19565,
+                16783,
+                16592,
+                16259,
+                9955,
+                6636,
+                3318,
+                -89230
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-12 15:00 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c56773bf9e4845bb68b68dccb8ce6015ee67375a\" target=\"blank\">c56773b</a>"
+        text: "UTC 2017-09-13 09:27 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c1479132f9ba5b7d3d87182ac77bf1c57be84622\" target=\"blank\">c147913</a>"
     },
     title: {
         text: "Death_Knight - Unholy - Beastlord"
@@ -76,16 +76,16 @@ Highcharts.chart('crucible_death_knight_unholy_beastlord',
     },
     xAxis: {
         categories: [
-            "Master of Shadows",
-            "Murderous Intent",
-            "Chaotic Darkness",
             "Dark Sorrows",
-            "Shocklight",
-            "Infusion of Light",
+            "Master of Shadows",
             "Shadowbind",
-            "Secure in the Light",
+            "Shocklight",
+            "Murderous Intent",
             "Torment the Weak",
+            "Chaotic Darkness",
+            "Secure in the Light",
             "+5 itemlevel",
+            "Infusion of Light",
             "+3 itemlevel",
             "+2 itemlevel",
             "+1 itemlevel",

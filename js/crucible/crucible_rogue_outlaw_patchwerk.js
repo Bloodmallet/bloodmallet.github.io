@@ -39,27 +39,27 @@ Highcharts.chart('crucible_rogue_outlaw_patchwerk',
         {
             color: "#4572a7",
             data: [
-                24607,
-                23122,
-                22252,
-                21403,
-                20963,
-                15432,
-                12380,
-                9909,
-                9280,
-                9275,
-                6744,
-                5565,
-                3710,
-                1855
+                24095,
+                23126,
+                22715,
+                22558,
+                19924,
+                13893,
+                13576,
+                10105,
+                9700,
+                8056,
+                7216,
+                5820,
+                3880,
+                1940
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-12 15:00 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c56773bf9e4845bb68b68dccb8ce6015ee67375a\" target=\"blank\">c56773b</a>"
+        text: "UTC 2017-09-13 09:27 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c1479132f9ba5b7d3d87182ac77bf1c57be84622\" target=\"blank\">c147913</a>"
     },
     title: {
         text: "Rogue - Outlaw - Patchwerk"
@@ -78,14 +78,14 @@ Highcharts.chart('crucible_rogue_outlaw_patchwerk',
         categories: [
             "Torment the Weak",
             "Secure in the Light",
-            "Infusion of Light",
             "Shadowbind",
+            "Infusion of Light",
             "Chaotic Darkness",
             "Murderous Intent",
             "Light Speed",
             "Shocklight",
-            "Master of Shadows",
             "+5 itemlevel",
+            "Master of Shadows",
             "Dark Sorrows",
             "+3 itemlevel",
             "+2 itemlevel",

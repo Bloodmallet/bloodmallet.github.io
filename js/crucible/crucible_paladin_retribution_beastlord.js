@@ -39,27 +39,27 @@ Highcharts.chart('crucible_paladin_retribution_beastlord',
         {
             color: "#4572a7",
             data: [
-                32721,
-                25872,
-                24451,
-                23653,
-                23304,
-                23065,
-                21308,
-                19632,
-                19134,
-                17772,
-                17391,
-                14857,
-                13088,
-                6544
+                31268,
+                28129,
+                23379,
+                21622,
+                21479,
+                21175,
+                20142,
+                19025,
+                18760,
+                18014,
+                14869,
+                12507,
+                12250,
+                6253
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-12 15:00 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c56773bf9e4845bb68b68dccb8ce6015ee67375a\" target=\"blank\">c56773b</a>"
+        text: "UTC 2017-09-13 09:27 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c1479132f9ba5b7d3d87182ac77bf1c57be84622\" target=\"blank\">c147913</a>"
     },
     title: {
         text: "Paladin - Retribution - Beastlord"
@@ -78,17 +78,17 @@ Highcharts.chart('crucible_paladin_retribution_beastlord',
         categories: [
             "+5 itemlevel",
             "Dark Sorrows",
-            "Secure in the Light",
-            "Infusion of Light",
             "Chaotic Darkness",
-            "Shadowbind",
-            "Murderous Intent",
-            "+3 itemlevel",
-            "Light Speed",
-            "Torment the Weak",
+            "Infusion of Light",
             "Shocklight",
-            "Master of Shadows",
+            "Secure in the Light",
+            "Shadowbind",
+            "Torment the Weak",
+            "+3 itemlevel",
+            "Murderous Intent",
+            "Light Speed",
             "+2 itemlevel",
+            "Master of Shadows",
             "+1 itemlevel"
         ]
     },

@@ -39,27 +39,27 @@ Highcharts.chart('crucible_demon_hunter_havoc_beastlord',
         {
             color: "#4572a7",
             data: [
-                26190,
-                25942,
-                25779,
-                22304,
-                22257,
-                22250,
-                21376,
-                20458,
-                19525,
-                18394,
-                17575,
-                12274,
-                8183,
-                4091
+                26165,
+                25138,
+                23970,
+                23759,
+                22804,
+                21616,
+                21463,
+                18967,
+                18413,
+                17582,
+                15082,
+                10055,
+                5027,
+                4485
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-12 15:00 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c56773bf9e4845bb68b68dccb8ce6015ee67375a\" target=\"blank\">c56773b</a>"
+        text: "UTC 2017-09-13 09:27 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c1479132f9ba5b7d3d87182ac77bf1c57be84622\" target=\"blank\">c147913</a>"
     },
     title: {
         text: "Demon_Hunter - Havoc - Beastlord"
@@ -76,20 +76,20 @@ Highcharts.chart('crucible_demon_hunter_havoc_beastlord',
     },
     xAxis: {
         categories: [
-            "Dark Sorrows",
-            "Light Speed",
-            "Secure in the Light",
-            "Torment the Weak",
-            "Infusion of Light",
-            "Shadowbind",
-            "Murderous Intent",
-            "+5 itemlevel",
-            "Master of Shadows",
-            "Chaotic Darkness",
             "Shocklight",
+            "+5 itemlevel",
+            "Murderous Intent",
+            "Dark Sorrows",
+            "Chaotic Darkness",
+            "Master of Shadows",
+            "Torment the Weak",
+            "Secure in the Light",
+            "Shadowbind",
+            "Infusion of Light",
             "+3 itemlevel",
             "+2 itemlevel",
-            "+1 itemlevel"
+            "+1 itemlevel",
+            "Light Speed"
         ]
     },
     yAxis: {

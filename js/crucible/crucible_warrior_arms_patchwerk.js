@@ -39,27 +39,27 @@ Highcharts.chart('crucible_warrior_arms_patchwerk',
         {
             color: "#4572a7",
             data: [
-                20374,
-                19983,
-                19747,
-                19313,
-                17523,
-                15574,
-                14828,
-                14607,
-                11191,
-                6136,
-                617,
-                370,
-                246,
-                123
+                20295,
+                19351,
+                19237,
+                18962,
+                16092,
+                15856,
+                14777,
+                14300,
+                10615,
+                5064,
+                -172,
+                -343,
+                -514,
+                -856
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-12 15:00 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c56773bf9e4845bb68b68dccb8ce6015ee67375a\" target=\"blank\">c56773b</a>"
+        text: "UTC 2017-09-13 09:27 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c1479132f9ba5b7d3d87182ac77bf1c57be84622\" target=\"blank\">c147913</a>"
     },
     title: {
         text: "Warrior - Arms - Patchwerk"
@@ -76,20 +76,20 @@ Highcharts.chart('crucible_warrior_arms_patchwerk',
     },
     xAxis: {
         categories: [
-            "Shadowbind",
             "Torment the Weak",
-            "Infusion of Light",
             "Secure in the Light",
+            "Infusion of Light",
+            "Shadowbind",
             "Chaotic Darkness",
             "Master of Shadows",
-            "Murderous Intent",
             "Light Speed",
+            "Murderous Intent",
             "Shocklight",
             "Dark Sorrows",
-            "+5 itemlevel",
-            "+3 itemlevel",
+            "+1 itemlevel",
             "+2 itemlevel",
-            "+1 itemlevel"
+            "+3 itemlevel",
+            "+5 itemlevel"
         ]
     },
     yAxis: {
