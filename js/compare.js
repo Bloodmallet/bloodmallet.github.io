@@ -1,105 +1,78 @@
-var firebase_connection = new function() {
-    "use strict";
-    this.connected = false;
+var database = new function() {
     this.debug = false;
-    this.query = "/fight_style/patchwerk/classes/";
-    this.class_query = this.query;
-    this.spec_query = this.query;
-    this.config = {
-        apiKey: "AIzaSyBX8fhpe9X4WufwbTxxMshqHnuzGrzde3A",
-        authDomain: "trinket-comparator.firebaseapp.com",
-        databaseURL: "https://trinket-comparator.firebaseio.com",
-        projectId: "trinket-comparator",
-        storageBucket: "trinket-comparator.appspot.com",
-        messagingSenderId: "1080367683209"
+    this.fightstyle = "patchwerk";
+    this.class = "";
+    this.spec = "";
+    this.trinkets = trinket_data;
+
+    this.get_baseline = function() {
+        return this.trinkets['fight_style'][this.fightstyle]['classes'][this.class][this.spec]['baseline']['860'];
     };
 
-    this.connection_error = function(err) {
-        var error_element = document.getElementById("connection_error");
-        error_element.innerText = err;
-        error_element.style.visibility = "visible";
-        error_element.style.display = "block";
-        console.log(err);
+    this.update_class_spec = function(class_name, spec_name) {
+        this.class = class_name;
+        this.spec = spec_name;
     };
 
-    this.establish_connection = function() {
-        try {
-            firebase.initializeApp(this.config);
-            // Fetch and KEEP data in local cache -- huge reduction in server load. DO NOT DELETE.
-            firebase.database().ref(this.query).on('value', function() {});
-            this.connected = true;
-            if (this.debug) console.log("Connection successful.");
-        } catch (e) {
-            this.connected = false;
-            this.connection_error(e);
+    this.update_fightstyle = function(fightstyle) {
+        this.fightstyle = fightstyle;
+    };
+
+    this.get_keys = function(query_type) {
+        if (this.debug) console.log(this.class, this.spec)
+        switch (query_type) {
+            case "fightstyles":
+                return Object.keys(this.trinkets['fight_style']);
+            case "classes":
+                return Object.keys(this.trinkets['fight_style'][this.fightstyle]['classes']);
+            case "specs":
+                return Object.keys(this.trinkets['fight_style'][this.fightstyle]['classes'][this.class]);
+            case "trinkets":
+                return Object.keys(this.trinkets['fight_style'][this.fightstyle]['classes'][this.class][this.spec]);
+            default:
+                return null;
         }
     };
 
-    this.get_baseline = function() {
-        /* Returns a promise for the baseline DPS of the selected spec */
-        return new Promise((resolve, reject) => {
-            let data = firebase.database().ref(this.spec_query + 'baseline').once('value').then(function(snapshot) {
-                resolve(snapshot.val()['860']);
-            });
-            setTimeout(reject, 5000, "Could not retrieve data in time. The database connection may be down.");
-        })
-    };
-
-    this.update_fight_style_query = function(fight_style) {
-        this.query = "/fight_style/" + fight_style + '/classes/';
-    };
-
-    this.update_class_spec_query = function(class_name, spec_name) {
-        this.class_query = this.query + class_name + '/';
-        this.spec_query = this.class_query + spec_name + '/';
-    };
-
-    this.populate_options = function(select_id, option_type_query_string) {
-        if (this.debug) console.log(select_id, option_type_query_string);
-        let data = firebase.database().ref(option_type_query_string).once('value').then(function(snapshot) {
-            let select = document.getElementById(select_id);
-            snapshot.forEach(function(childSnapshot) {
-                let datum = childSnapshot.key;
-                if (childSnapshot.val() !== "0" && datum !== "baseline") {
-                    let option = document.createElement("option");
-                    option.value = datum;
-                    option.innerText = (select_id === "spec_name") ? handle_spec_name(datum) : datum; // Special formatting because Beast Mastery...
-                    select.appendChild(option);
-                }
-            })
-        });
-    };
-
-    this.spec_name_promise = function() {
-        /* Ran into trouble with asynchronously grabbing spec name and changing class name. 
-        This resolves/rejects a promise so new trinket lists aren't accessed until a valid
-        spec for the selected class has been found.
-        */
-        return new Promise((resolve, reject) => {
-            let data = firebase.database().ref(this.class_query).once('value').then(function(snapshot) {
-                snapshot.forEach(function(childSnapshot) {
-                    let datum = childSnapshot.key;
-                    if (datum !== "") {
-                        resolve(datum);
-                    } else {
-                        reject();
-                    }
-                });
-            });
-            setTimeout(reject, 5000, "Could not retrieve data in time. The database connection may be down. ");
-        });
-    };
+    this.get_valid_ilvl = function(trinket_name) {
+        var itemlevels = Object.keys(this.trinkets['fight_style'][this.fightstyle]['classes'][this.class][this.spec][trinket_name]);
+        var return_list = []
+        for (itemlevel in itemlevels) {
+            let dps_value = this.trinkets['fight_style'][this.fightstyle]['classes'][this.class][this.spec][trinket_name][itemlevels[itemlevel]];
+            if (dps_value !== "0") {
+                return_list.push(itemlevels[itemlevel]);
+            }
+        }
+        return return_list
+    }
 
     this.get_trinket_dps_value = function(trinket_name, trinket_ilvl) {
-        // Grabs trinket DPS data from db, returning as a promise
-        return new Promise((resolve, reject) => {
-            let data = firebase.database().ref(this.spec_query + trinket_name + '/' + trinket_ilvl).once('value').then(function(snapshot) {
-                resolve(snapshot.val());
-            });
-            setTimeout(reject, 5000, "Could not retrieve data in time. The database connection may be down.");
-        });
+        return this.trinkets['fight_style'][this.fightstyle]['classes'][this.class][this.spec][trinket_name][trinket_ilvl];
     };
-};
+
+    this.populate_options = function(select_id, keys) {
+        let select = document.getElementById(select_id);
+        for (var k in keys) {
+            if (keys[k] !== "baseline") {
+                let option = document.createElement("option");
+                option.value = keys[k];
+                option.innerText = (select_id === "spec_name") ? handle_spec_name(keys[k]) : keys[k];
+                select.appendChild(option);
+            }
+        }
+    };
+}
+
+function handle_spec_name(input) {
+    /* Capitalise spec name, remove underscores (beast_mastery -> Beast Mastery) */
+    initial = input;
+    input = input.split('_');
+    for (word in input) {
+        input[word] = input[word].charAt(0).toUpperCase() + input[word].slice(1);
+    }
+    output = input.toString().replace(/,/i, " ");
+    return output
+}
 
 function check_valid_trinket_combination() {
     /* Checks if all fields are completed with valid entries (a disabled field is OK).
@@ -139,44 +112,39 @@ function compare() {
     trinket1['ilvl'] = document.getElementById("trinket1_ilvl").selectedOptions[0].value;
     trinket2['ilvl'] = document.getElementById("trinket2_ilvl").selectedOptions[0].value;
 
-    let trinket1_promise = firebase_connection.get_trinket_dps_value(trinket1['name'], trinket1['ilvl']);
-    let trinket2_promise = firebase_connection.get_trinket_dps_value(trinket2['name'], trinket2['ilvl']);
-    let baseline_promise = firebase_connection.get_baseline();
+    trinket1['dps'] = parseInt(database.get_trinket_dps_value(trinket1['name'], trinket1['ilvl']));
+    trinket2['dps'] = parseInt(database.get_trinket_dps_value(trinket2['name'], trinket2['ilvl']));
+    let baseline = parseInt(database.get_baseline());
 
-    Promise.all([trinket1_promise, trinket2_promise, baseline_promise]).then(values => {
-        trinket1['dps'] = parseInt(values[0]);
-        trinket2['dps'] = parseInt(values[1]);
-        var baseline = parseInt(values[2]);
+    trinket1_result.innerText = trinket1['name'] + " is worth " + (trinket1['dps'] - baseline).toLocaleString() + " DPS.";
+    trinket2_result.innerText = trinket2['name'] + " is worth " + (trinket2['dps'] - baseline).toLocaleString() + " DPS.";
 
+    if (trinket1['dps'] > trinket2['dps']) {
+        trinket1_result.classList.add("alert-success");
+        trinket1_result.classList.remove("alert-danger");
+        trinket2_result.classList.add("alert-danger");
+        trinket2_result.classList.remove("alert-success");
+    } else {
+        trinket2_result.classList.add("alert-success");
+        trinket2_result.classList.remove("alert-danger");
+        trinket1_result.classList.add("alert-danger");
+        trinket1_result.classList.remove("alert-success");
+    }
+    trinket1_result.style.visibility = "visible";
+    trinket2_result.style.visibility = "visible";
 
-        trinket1_result.innerText = trinket1['name'] + " is worth " + (trinket1['dps'] - baseline).toLocaleString() + " DPS.";
+    var decision = compare_trinket_values(trinket1, trinket2, baseline);
+    var t1 = performance.now();
+    var time_string = "<p> Data fetched in " + Math.round(t1 - t0) + " ms.</p>";
 
-        trinket2_result.innerText = trinket2['name'] + " is worth " + (trinket2['dps'] - baseline).toLocaleString() + " DPS.";
+    if (database.debug) {
+        result_elem.innerHTML = decision + time_string;
+    } else {
+        result_elem.innerHTML = decision
+    };
+    result_elem.style.visibility = "visible";
 
-        if (trinket1['dps'] > trinket2['dps']) {
-            trinket1_result.classList.add("alert-success");
-            trinket1_result.classList.remove("alert-danger");
-            trinket2_result.classList.add("alert-danger");
-            trinket2_result.classList.remove("alert-success");
-        } else {
-            trinket2_result.classList.add("alert-success");
-            trinket2_result.classList.remove("alert-danger");
-            trinket1_result.classList.add("alert-danger");
-            trinket1_result.classList.remove("alert-success");
-        }
-
-        trinket1_result.style.visibility = "visible";
-        trinket2_result.style.visibility = "visible";
-
-        var decision = compare_trinket_values(trinket1, trinket2, baseline);
-
-        var t1 = performance.now();
-        var time_string = "<p> Data fetched in " + Math.round(t1 - t0) + " ms.</p>";
-        if (firebase_connection.debug) { result_elem.innerHTML = decision + time_string; } else { result_elem.innerHTML = decision };
-        result_elem.style.visibility = "visible";
-    });
-
-    ga('send', 'event', 'comparison', document.getElementById("fight_style").selectedOptions[0].value, document.getElementById("class_name").selectedOptions[0].value + "_" + document.getElementById("spec_name").selectedOptions[0].value);
+    //ga('send', 'event', 'comparison', document.getElementById("fight_style").selectedOptions[0].value, document.getElementById("class_name").selectedOptions[0].value + "_" + document.getElementById("spec_name").selectedOptions[0].value);
 }
 
 function compare_trinket_values(trinket1, trinket2, baseline) {
@@ -206,48 +174,37 @@ function form_enabler() {
 
     fight_style.addEventListener('change', function(e) {
         hide_results();
-        firebase_connection.update_fight_style_query(fight_style.selectedOptions[0].value);
-        firebase_connection.update_class_spec_query(class_name.selectedOptions[0].value, spec_name.selectedOptions[0].value);
+        database.update_fightstyle(fight_style.selectedOptions[0].value);
+        database.update_class_spec(class_name.selectedOptions[0].value, spec_name.selectedOptions[0].value);
     });
 
     class_name.addEventListener('change', function(e) {
         disable_selectors();
         hide_results();
+        remove_options(spec_name);
         compare_button.disabled = true;
-        var query_string = firebase_connection.query + e.target.selectedOptions[0].value + "/"
-        firebase_connection.populate_options("spec_name", query_string);
-        if (spec_name.disabled == false) {
-            trinket1_name.disabled = trinket2_name.disabled = trinket1_ilvl.disabled = trinket2_ilvl.disabled = compare_button.disabled = true
-                // User has already selected a spec before
-            if (spec_name.children.length > 1 && spec_name.children[1].value !== "") remove_options(spec_name);
-            firebase_connection.update_class_spec_query(class_name.selectedOptions[0].value, "");
-            var trinket1_promise = firebase_connection.spec_name_promise();
-            Promise.all([trinket1_promise]).then(values => {
-                remove_options(trinket1_name);
-                remove_options(trinket2_name);
-                remove_options(trinket1_ilvl);
-                remove_options(trinket2_ilvl);
-                firebase_connection.populate_options("trinket1_name", query_string + values[0] + '/');
-                firebase_connection.populate_options("trinket2_name", query_string + values[0] + '/');
-                firebase_connection.update_class_spec_query(class_name.selectedOptions[0].value, values[0]);
-            });
-        }
-        if (spec_name.children.length > 1 && spec_name.children[1].value !== "") remove_options(spec_name);
+        database.update_class_spec(class_name.selectedOptions[0].value, spec_name.selectedOptions[0].value);
+        database.populate_options("spec_name", database.get_keys("specs"));
+        trinket1_name.disabled = trinket2_name.disabled = trinket1_ilvl.disabled = trinket2_ilvl.disabled = compare_button.disabled = true
+        remove_options(trinket1_name);
+        remove_options(trinket2_name);
+        remove_options(trinket1_ilvl);
+        remove_options(trinket2_ilvl);
         spec_name.disabled = false;
     });
 
     spec_name.addEventListener('change', function(e) {
         disable_selectors();
         hide_results();
-        compare_button.disabled = true;
-        firebase_connection.update_class_spec_query(class_name.selectedOptions[0].value, e.target.selectedOptions[0].value);
-        var query_string = firebase_connection.class_query + e.target.selectedOptions[0].value + "/";
-        firebase_connection.populate_options("trinket1_name", query_string);
-        firebase_connection.populate_options("trinket2_name", query_string);
         if (trinket1_name.children.length > 1) remove_options(trinket1_name);
         if (trinket2_name.children.length > 1) remove_options(trinket2_name);
         remove_options(trinket1_ilvl);
         remove_options(trinket2_ilvl);
+        compare_button.disabled = true;
+        database.update_class_spec(class_name.selectedOptions[0].value, e.target.selectedOptions[0].value);
+        let trinket_list = database.get_keys("trinkets");
+        database.populate_options("trinket1_name", trinket_list);
+        database.populate_options("trinket2_name", trinket_list);
         trinket1_name.disabled = false;
         trinket2_name.disabled = false;
     });
@@ -255,9 +212,8 @@ function form_enabler() {
 
     trinket1_name.addEventListener('change', function(e) {
         hide_results();
-        var query_string = firebase_connection.spec_query + e.target.selectedOptions[0].value + "/"
-        firebase_connection.populate_options("trinket1_ilvl", query_string);
         if (trinket1_ilvl.children.length > 1 || trinket1_ilvl.children[0].value == "970") remove_options(trinket1_ilvl);
+        database.populate_options("trinket1_ilvl", database.get_valid_ilvl(trinket1_name.selectedOptions[0].value));
         trinket1_ilvl.disabled = false;
         compare_button.disabled = true;
         check_valid_trinket_combination();
@@ -265,9 +221,8 @@ function form_enabler() {
 
     trinket2_name.addEventListener('change', function(e) {
         hide_results();
-        var query_string = firebase_connection.spec_query + e.target.selectedOptions[0].value + "/"
-        firebase_connection.populate_options("trinket2_ilvl", query_string);
         if (trinket2_ilvl.children.length > 1 || trinket2_ilvl.children[0].value == "970") remove_options(trinket2_ilvl);
+        database.populate_options("trinket2_ilvl", database.get_valid_ilvl(trinket2_name.selectedOptions[0].value));
         trinket2_ilvl.disabled = false;
         compare_button.disabled = true;
         check_valid_trinket_combination();
@@ -288,17 +243,6 @@ function form_enabler() {
     compare_button.addEventListener("click", compare, false);
 }
 
-function handle_spec_name(input) {
-    /* Capitalise spec name, remove underscores (beast_mastery -> Beast Mastery) */
-    initial = input;
-    input = input.split('_');
-    for (word in input) {
-        input[word] = input[word].charAt(0).toUpperCase() + input[word].slice(1);
-    }
-    output = input.toString().replace(/,/i, " ");
-    return output
-}
-
 function remove_options(caller) {
     caller.innerHTML = "<option value='' disabled selected hidden>Select one...</option>";
 }
@@ -317,5 +261,4 @@ function disable_selectors() {
     document.getElementById("result").disabled = true;
 }
 
-firebase_connection.establish_connection();
 form_enabler();
