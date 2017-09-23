@@ -39,27 +39,27 @@ Highcharts.chart('crucible_monk_windwalker_patchwerk',
         {
             color: "#4572a7",
             data: [
-                20384,
-                19135,
-                18515,
-                17986,
-                16822,
-                16609,
-                16140,
-                14989,
-                14501,
-                7947,
-                6929,
-                4768,
-                3178,
-                1589
+                19453,
+                19059,
+                18914,
+                18081,
+                17740,
+                17357,
+                16203,
+                14862,
+                14291,
+                8272,
+                6318,
+                4963,
+                3308,
+                1654
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-13 09:27 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c1479132f9ba5b7d3d87182ac77bf1c57be84622\" target=\"blank\">c147913</a>"
+        text: "UTC 2017-09-23 00:36 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7786884607bd22ed9ffb94c9e5b1f3e808d669af\" target=\"blank\">7786884</a>"
     },
     title: {
         text: "Monk - Windwalker - Patchwerk"
@@ -77,11 +77,11 @@ Highcharts.chart('crucible_monk_windwalker_patchwerk',
     xAxis: {
         categories: [
             "Torment the Weak",
-            "Secure in the Light",
             "Infusion of Light",
+            "Secure in the Light",
             "Shadowbind",
-            "Murderous Intent",
             "Chaotic Darkness",
+            "Murderous Intent",
             "Shocklight",
             "Light Speed",
             "Master of Shadows",

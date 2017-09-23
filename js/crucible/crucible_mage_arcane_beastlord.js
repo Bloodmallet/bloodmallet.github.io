@@ -39,27 +39,27 @@ Highcharts.chart('crucible_mage_arcane_beastlord',
         {
             color: "#4572a7",
             data: [
-                50509,
-                32011,
-                30305,
-                27868,
-                26705,
-                24606,
-                23330,
-                22419,
-                21763,
-                20329,
-                20203,
-                19083,
-                13656,
-                10101
+                49116,
+                29469,
+                27666,
+                24898,
+                24562,
+                24490,
+                23430,
+                22560,
+                19646,
+                19623,
+                19088,
+                17123,
+                12467,
+                9823
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-13 09:27 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c1479132f9ba5b7d3d87182ac77bf1c57be84622\" target=\"blank\">c147913</a>"
+        text: "UTC 2017-09-23 00:36 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7786884607bd22ed9ffb94c9e5b1f3e808d669af\" target=\"blank\">7786884</a>"
     },
     title: {
         text: "Mage - Arcane - Beastlord"
@@ -77,17 +77,17 @@ Highcharts.chart('crucible_mage_arcane_beastlord',
     xAxis: {
         categories: [
             "+5 itemlevel",
-            "Secure in the Light",
             "+3 itemlevel",
-            "Murderous Intent",
             "Shocklight",
-            "Infusion of Light",
-            "Torment the Weak",
-            "Master of Shadows",
-            "Shadowbind",
-            "Dark Sorrows",
-            "+2 itemlevel",
             "Chaotic Darkness",
+            "Dark Sorrows",
+            "Murderous Intent",
+            "Master of Shadows",
+            "Infusion of Light",
+            "+2 itemlevel",
+            "Secure in the Light",
+            "Shadowbind",
+            "Torment the Weak",
             "Light Speed",
             "+1 itemlevel"
         ]

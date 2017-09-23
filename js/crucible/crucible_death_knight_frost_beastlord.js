@@ -39,27 +39,27 @@ Highcharts.chart('crucible_death_knight_frost_beastlord',
         {
             color: "#4572a7",
             data: [
-                31692,
-                28815,
-                21596,
-                20475,
-                19298,
-                19251,
-                17497,
-                15295,
-                15166,
-                13453,
-                12686,
-                9177,
-                6118,
-                3059
+                24067,
+                23070,
+                22933,
+                15784,
+                15215,
+                14490,
+                13614,
+                12929,
+                12046,
+                8037,
+                7227,
+                6473,
+                4818,
+                2409
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-13 09:27 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c1479132f9ba5b7d3d87182ac77bf1c57be84622\" target=\"blank\">c147913</a>"
+        text: "UTC 2017-09-23 00:36 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7786884607bd22ed9ffb94c9e5b1f3e808d669af\" target=\"blank\">7786884</a>"
     },
     title: {
         text: "Death_Knight - Frost - Beastlord"
@@ -76,18 +76,18 @@ Highcharts.chart('crucible_death_knight_frost_beastlord',
     },
     xAxis: {
         categories: [
+            "Master of Shadows",
             "Light Speed",
             "Murderous Intent",
-            "Shocklight",
-            "Shadowbind",
-            "Master of Shadows",
             "Dark Sorrows",
+            "Shocklight",
             "Infusion of Light",
-            "+5 itemlevel",
-            "Torment the Weak",
             "Secure in the Light",
+            "Shadowbind",
+            "+5 itemlevel",
             "Chaotic Darkness",
             "+3 itemlevel",
+            "Torment the Weak",
             "+2 itemlevel",
             "+1 itemlevel"
         ]

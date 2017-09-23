@@ -39,27 +39,27 @@ Highcharts.chart('crucible_shaman_enhancement_patchwerk',
         {
             color: "#4572a7",
             data: [
-                19312,
-                18311,
-                18006,
-                17580,
-                15445,
-                15283,
-                15170,
-                15135,
-                14921,
-                13332,
-                9169,
-                6113,
-                5834,
-                3056
+                19984,
+                19723,
+                18471,
+                18213,
+                17446,
+                17102,
+                17035,
+                16266,
+                16128,
+                15963,
+                9759,
+                7520,
+                6506,
+                3253
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-13 09:27 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c1479132f9ba5b7d3d87182ac77bf1c57be84622\" target=\"blank\">c147913</a>"
+        text: "UTC 2017-09-23 00:36 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7786884607bd22ed9ffb94c9e5b1f3e808d669af\" target=\"blank\">7786884</a>"
     },
     title: {
         text: "Shaman - Enhancement - Patchwerk"
@@ -76,19 +76,19 @@ Highcharts.chart('crucible_shaman_enhancement_patchwerk',
     },
     xAxis: {
         categories: [
-            "Torment the Weak",
             "Secure in the Light",
-            "Shadowbind",
+            "Torment the Weak",
             "Infusion of Light",
-            "Master of Shadows",
-            "+5 itemlevel",
-            "Chaotic Darkness",
-            "Light Speed",
+            "Shadowbind",
             "Murderous Intent",
+            "Chaotic Darkness",
             "Shocklight",
+            "+5 itemlevel",
+            "Light Speed",
+            "Master of Shadows",
             "+3 itemlevel",
-            "+2 itemlevel",
             "Dark Sorrows",
+            "+2 itemlevel",
             "+1 itemlevel"
         ]
     },

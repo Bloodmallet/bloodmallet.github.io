@@ -39,27 +39,27 @@ Highcharts.chart('crucible_hunter_marksmanship_beastlord',
         {
             color: "#4572a7",
             data: [
-                31547,
-                23877,
-                21903,
-                21777,
-                20197,
-                19308,
-                18989,
-                18928,
-                17944,
-                17526,
-                16389,
-                15204,
-                12618,
-                6309
+                40240,
+                31522,
+                28667,
+                26717,
+                24562,
+                24144,
+                23007,
+                22842,
+                20538,
+                20488,
+                20300,
+                18728,
+                16096,
+                8048
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-13 09:27 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c1479132f9ba5b7d3d87182ac77bf1c57be84622\" target=\"blank\">c147913</a>"
+        text: "UTC 2017-09-23 00:36 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7786884607bd22ed9ffb94c9e5b1f3e808d669af\" target=\"blank\">7786884</a>"
     },
     title: {
         text: "Hunter - Marksmanship - Beastlord"
@@ -77,17 +77,17 @@ Highcharts.chart('crucible_hunter_marksmanship_beastlord',
     xAxis: {
         categories: [
             "+5 itemlevel",
-            "Murderous Intent",
             "Shocklight",
-            "Infusion of Light",
-            "Dark Sorrows",
             "Master of Shadows",
-            "Shadowbind",
-            "+3 itemlevel",
+            "Murderous Intent",
             "Light Speed",
+            "+3 itemlevel",
             "Chaotic Darkness",
-            "Torment the Weak",
+            "Dark Sorrows",
             "Secure in the Light",
+            "Infusion of Light",
+            "Shadowbind",
+            "Torment the Weak",
             "+2 itemlevel",
             "+1 itemlevel"
         ]

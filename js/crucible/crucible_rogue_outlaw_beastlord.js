@@ -39,27 +39,27 @@ Highcharts.chart('crucible_rogue_outlaw_beastlord',
         {
             color: "#4572a7",
             data: [
-                25786,
-                25381,
-                25221,
-                25138,
-                24841,
-                23295,
-                21707,
-                20626,
-                19366,
-                19168,
-                16491,
-                11619,
-                7746,
-                3873
+                27039,
+                25122,
+                24806,
+                24741,
+                23827,
+                22573,
+                22054,
+                20209,
+                15034,
+                13274,
+                11559,
+                6935,
+                4623,
+                2311
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-13 09:27 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c1479132f9ba5b7d3d87182ac77bf1c57be84622\" target=\"blank\">c147913</a>"
+        text: "UTC 2017-09-23 00:36 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7786884607bd22ed9ffb94c9e5b1f3e808d669af\" target=\"blank\">7786884</a>"
     },
     title: {
         text: "Rogue - Outlaw - Beastlord"
@@ -76,17 +76,17 @@ Highcharts.chart('crucible_rogue_outlaw_beastlord',
     },
     xAxis: {
         categories: [
-            "Torment the Weak",
+            "Secure in the Light",
             "Dark Sorrows",
+            "Infusion of Light",
+            "Murderous Intent",
+            "Torment the Weak",
+            "Chaotic Darkness",
             "Light Speed",
             "Shadowbind",
-            "Secure in the Light",
-            "Murderous Intent",
-            "Infusion of Light",
-            "Chaotic Darkness",
-            "+5 itemlevel",
-            "Master of Shadows",
             "Shocklight",
+            "Master of Shadows",
+            "+5 itemlevel",
             "+3 itemlevel",
             "+2 itemlevel",
             "+1 itemlevel"

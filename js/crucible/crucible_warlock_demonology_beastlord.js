@@ -39,27 +39,27 @@ Highcharts.chart('crucible_warlock_demonology_beastlord',
         {
             color: "#4572a7",
             data: [
-                30879,
-                28869,
-                20953,
-                18841,
-                18817,
-                18788,
-                17321,
-                16334,
-                16283,
-                16126,
-                15225,
-                12530,
-                11547,
-                5773
+                28510,
+                28412,
+                21271,
+                17644,
+                17364,
+                17106,
+                17069,
+                16555,
+                16160,
+                15953,
+                15082,
+                13880,
+                11404,
+                5702
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-13 09:27 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c1479132f9ba5b7d3d87182ac77bf1c57be84622\" target=\"blank\">c147913</a>"
+        text: "UTC 2017-09-23 00:36 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7786884607bd22ed9ffb94c9e5b1f3e808d669af\" target=\"blank\">7786884</a>"
     },
     title: {
         text: "Warlock - Demonology - Beastlord"
@@ -76,17 +76,17 @@ Highcharts.chart('crucible_warlock_demonology_beastlord',
     },
     xAxis: {
         categories: [
-            "Light Speed",
             "+5 itemlevel",
+            "Light Speed",
             "Dark Sorrows",
-            "Shadowbind",
-            "Master of Shadows",
-            "Secure in the Light",
-            "+3 itemlevel",
-            "Infusion of Light",
-            "Chaotic Darkness",
-            "Shocklight",
             "Murderous Intent",
+            "Master of Shadows",
+            "+3 itemlevel",
+            "Shadowbind",
+            "Chaotic Darkness",
+            "Secure in the Light",
+            "Infusion of Light",
+            "Shocklight",
             "Torment the Weak",
             "+2 itemlevel",
             "+1 itemlevel"

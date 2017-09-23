@@ -39,27 +39,27 @@ Highcharts.chart('crucible_rogue_subtlety_beastlord',
         {
             color: "#4572a7",
             data: [
-                26183,
-                23226,
-                22910,
-                22744,
-                21511,
-                20021,
-                19972,
-                18954,
-                17007,
-                13406,
-                12900,
-                7740,
-                5160,
-                2580
+                32468,
+                28172,
+                26314,
+                25592,
+                25492,
+                24613,
+                22927,
+                22416,
+                22261,
+                20377,
+                17115,
+                10269,
+                6846,
+                3423
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-13 09:27 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c1479132f9ba5b7d3d87182ac77bf1c57be84622\" target=\"blank\">c147913</a>"
+        text: "UTC 2017-09-23 01:19 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7786884607bd22ed9ffb94c9e5b1f3e808d669af\" target=\"blank\">7786884</a>"
     },
     title: {
         text: "Rogue - Subtlety DfA - Beastlord"
@@ -80,12 +80,12 @@ Highcharts.chart('crucible_rogue_subtlety_beastlord',
             "Murderous Intent",
             "Torment the Weak",
             "Shadowbind",
-            "Chaotic Darkness",
+            "Shocklight",
             "Infusion of Light",
             "Dark Sorrows",
-            "Shocklight",
-            "Light Speed",
             "Secure in the Light",
+            "Chaotic Darkness",
+            "Light Speed",
             "+5 itemlevel",
             "+3 itemlevel",
             "+2 itemlevel",

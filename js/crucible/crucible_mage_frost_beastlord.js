@@ -39,27 +39,27 @@ Highcharts.chart('crucible_mage_frost_beastlord',
         {
             color: "#4572a7",
             data: [
-                37059,
-                25778,
-                25120,
-                24162,
-                23721,
-                23006,
-                22235,
-                20415,
-                19782,
-                17195,
-                16796,
-                14823,
-                7411,
-                5772
+                36030,
+                25954,
+                25652,
+                23179,
+                22867,
+                21618,
+                21181,
+                20095,
+                18451,
+                18331,
+                14412,
+                11808,
+                7206,
+                5193
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-13 09:27 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c1479132f9ba5b7d3d87182ac77bf1c57be84622\" target=\"blank\">c147913</a>"
+        text: "UTC 2017-09-23 00:36 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7786884607bd22ed9ffb94c9e5b1f3e808d669af\" target=\"blank\">7786884</a>"
     },
     title: {
         text: "Mage - Frost - Beastlord"
@@ -78,16 +78,16 @@ Highcharts.chart('crucible_mage_frost_beastlord',
         categories: [
             "+5 itemlevel",
             "Infusion of Light",
-            "Secure in the Light",
             "Dark Sorrows",
-            "Shocklight",
             "Shadowbind",
+            "Shocklight",
             "+3 itemlevel",
-            "Chaotic Darkness",
+            "Secure in the Light",
             "Light Speed",
+            "Chaotic Darkness",
             "Murderous Intent",
-            "Torment the Weak",
             "+2 itemlevel",
+            "Torment the Weak",
             "+1 itemlevel",
             "Master of Shadows"
         ]

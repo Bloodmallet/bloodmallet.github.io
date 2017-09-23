@@ -39,27 +39,27 @@ Highcharts.chart('crucible_warlock_demonology_patchwerk',
         {
             color: "#4572a7",
             data: [
-                25896,
-                20751,
-                20377,
-                18031,
-                17390,
-                17282,
-                16620,
-                16179,
-                15989,
-                15664,
-                15537,
-                10358,
-                5993,
-                5179
+                25137,
+                20527,
+                19539,
+                17459,
+                16181,
+                15852,
+                15550,
+                15082,
+                14960,
+                14650,
+                14569,
+                10054,
+                5027,
+                4401
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-13 09:27 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c1479132f9ba5b7d3d87182ac77bf1c57be84622\" target=\"blank\">c147913</a>"
+        text: "UTC 2017-09-23 00:36 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7786884607bd22ed9ffb94c9e5b1f3e808d669af\" target=\"blank\">7786884</a>"
     },
     title: {
         text: "Warlock - Demonology - Patchwerk"
@@ -77,19 +77,19 @@ Highcharts.chart('crucible_warlock_demonology_patchwerk',
     xAxis: {
         categories: [
             "+5 itemlevel",
-            "Torment the Weak",
             "Light Speed",
-            "Master of Shadows",
+            "Torment the Weak",
             "Shadowbind",
-            "Infusion of Light",
             "Secure in the Light",
+            "Master of Shadows",
+            "Infusion of Light",
+            "+3 itemlevel",
+            "Chaotic Darkness",
             "Murderous Intent",
             "Shocklight",
-            "Chaotic Darkness",
-            "+3 itemlevel",
             "+2 itemlevel",
-            "Dark Sorrows",
-            "+1 itemlevel"
+            "+1 itemlevel",
+            "Dark Sorrows"
         ]
     },
     yAxis: {

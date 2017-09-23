@@ -39,27 +39,27 @@ Highcharts.chart('crucible_hunter_beast_mastery_patchwerk',
         {
             color: "#4572a7",
             data: [
-                22925,
-                20390,
-                19278,
-                19096,
-                17998,
-                16672,
-                16014,
-                15212,
-                12997,
-                9319,
-                6479,
-                5591,
-                3727,
-                1863
+                25517,
+                20752,
+                20350,
+                19233,
+                17994,
+                16911,
+                16695,
+                15742,
+                13793,
+                8839,
+                7305,
+                5303,
+                3535,
+                1767
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-13 09:27 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c1479132f9ba5b7d3d87182ac77bf1c57be84622\" target=\"blank\">c147913</a>"
+        text: "UTC 2017-09-23 00:36 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7786884607bd22ed9ffb94c9e5b1f3e808d669af\" target=\"blank\">7786884</a>"
     },
     title: {
         text: "Hunter - Beast_Mastery - Patchwerk"
@@ -81,8 +81,8 @@ Highcharts.chart('crucible_hunter_beast_mastery_patchwerk',
             "Infusion of Light",
             "Shadowbind",
             "Chaotic Darkness",
-            "Murderous Intent",
             "Shocklight",
+            "Murderous Intent",
             "Master of Shadows",
             "Light Speed",
             "+5 itemlevel",

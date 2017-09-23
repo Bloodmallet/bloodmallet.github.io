@@ -39,27 +39,27 @@ Highcharts.chart('crucible_rogue_subtlety_patchwerk',
         {
             color: "#4572a7",
             data: [
-                20943,
-                19813,
-                18862,
-                18705,
-                18583,
-                14345,
-                14216,
-                13416,
-                11875,
-                8417,
-                7125,
-                6683,
-                4750,
-                2375
+                21483,
+                19589,
+                19570,
+                19463,
+                18124,
+                14439,
+                14038,
+                11653,
+                11286,
+                8196,
+                6771,
+                6552,
+                4514,
+                2257
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-13 09:27 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c1479132f9ba5b7d3d87182ac77bf1c57be84622\" target=\"blank\">c147913</a>"
+        text: "UTC 2017-09-23 01:19 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7786884607bd22ed9ffb94c9e5b1f3e808d669af\" target=\"blank\">7786884</a>"
     },
     title: {
         text: "Rogue - Subtlety DfA - Patchwerk"
@@ -81,8 +81,8 @@ Highcharts.chart('crucible_rogue_subtlety_patchwerk',
             "Infusion of Light",
             "Secure in the Light",
             "Chaotic Darkness",
-            "Master of Shadows",
             "Murderous Intent",
+            "Master of Shadows",
             "Shocklight",
             "+5 itemlevel",
             "Light Speed",

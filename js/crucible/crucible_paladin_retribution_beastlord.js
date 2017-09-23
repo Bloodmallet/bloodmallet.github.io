@@ -39,27 +39,27 @@ Highcharts.chart('crucible_paladin_retribution_beastlord',
         {
             color: "#4572a7",
             data: [
-                31268,
-                28129,
-                23379,
-                21622,
-                21479,
-                21175,
-                20142,
-                19025,
-                18760,
-                18014,
-                14869,
-                12507,
-                12250,
-                6253
+                34731,
+                29584,
+                26923,
+                26451,
+                24327,
+                23849,
+                23120,
+                22542,
+                20838,
+                19269,
+                16653,
+                13892,
+                7071,
+                6946
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-13 09:27 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c1479132f9ba5b7d3d87182ac77bf1c57be84622\" target=\"blank\">c147913</a>"
+        text: "UTC 2017-09-23 00:36 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7786884607bd22ed9ffb94c9e5b1f3e808d669af\" target=\"blank\">7786884</a>"
     },
     title: {
         text: "Paladin - Retribution - Beastlord"
@@ -77,15 +77,15 @@ Highcharts.chart('crucible_paladin_retribution_beastlord',
     xAxis: {
         categories: [
             "+5 itemlevel",
-            "Dark Sorrows",
-            "Chaotic Darkness",
             "Infusion of Light",
-            "Shocklight",
+            "Dark Sorrows",
             "Secure in the Light",
-            "Shadowbind",
-            "Torment the Weak",
-            "+3 itemlevel",
             "Murderous Intent",
+            "Shocklight",
+            "Shadowbind",
+            "Chaotic Darkness",
+            "+3 itemlevel",
+            "Torment the Weak",
             "Light Speed",
             "+2 itemlevel",
             "Master of Shadows",

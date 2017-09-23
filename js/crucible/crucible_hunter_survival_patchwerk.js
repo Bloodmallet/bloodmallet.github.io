@@ -39,27 +39,27 @@ Highcharts.chart('crucible_hunter_survival_patchwerk',
         {
             color: "#4572a7",
             data: [
-                20170,
-                20014,
-                19953,
-                19826,
-                17997,
-                16124,
-                15453,
-                15366,
-                13374,
-                12030,
-                9219,
-                6819,
-                6146,
-                3073
+                21767,
+                19738,
+                19423,
+                18995,
+                15939,
+                15741,
+                15578,
+                14961,
+                14553,
+                11983,
+                8976,
+                5984,
+                5561,
+                2992
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-13 09:27 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c1479132f9ba5b7d3d87182ac77bf1c57be84622\" target=\"blank\">c147913</a>"
+        text: "UTC 2017-09-23 00:36 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7786884607bd22ed9ffb94c9e5b1f3e808d669af\" target=\"blank\">7786884</a>"
     },
     title: {
         text: "Hunter - Survival - Patchwerk"
@@ -76,8 +76,8 @@ Highcharts.chart('crucible_hunter_survival_patchwerk',
     },
     xAxis: {
         categories: [
-            "Infusion of Light",
             "Torment the Weak",
+            "Infusion of Light",
             "Shadowbind",
             "Secure in the Light",
             "Chaotic Darkness",
@@ -87,8 +87,8 @@ Highcharts.chart('crucible_hunter_survival_patchwerk',
             "Light Speed",
             "Master of Shadows",
             "+3 itemlevel",
-            "Dark Sorrows",
             "+2 itemlevel",
+            "Dark Sorrows",
             "+1 itemlevel"
         ]
     },

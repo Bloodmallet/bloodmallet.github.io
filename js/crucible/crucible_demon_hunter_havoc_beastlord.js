@@ -39,27 +39,27 @@ Highcharts.chart('crucible_demon_hunter_havoc_beastlord',
         {
             color: "#4572a7",
             data: [
-                26165,
-                25138,
-                23970,
-                23759,
-                22804,
-                21616,
-                21463,
-                18967,
-                18413,
-                17582,
-                15082,
-                10055,
-                5027,
-                4485
+                30803,
+                27282,
+                27008,
+                25968,
+                24078,
+                23671,
+                23340,
+                22823,
+                21606,
+                21276,
+                18481,
+                13698,
+                12321,
+                6160
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-13 09:27 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c1479132f9ba5b7d3d87182ac77bf1c57be84622\" target=\"blank\">c147913</a>"
+        text: "UTC 2017-09-23 00:36 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7786884607bd22ed9ffb94c9e5b1f3e808d669af\" target=\"blank\">7786884</a>"
     },
     title: {
         text: "Demon_Hunter - Havoc - Beastlord"
@@ -76,20 +76,20 @@ Highcharts.chart('crucible_demon_hunter_havoc_beastlord',
     },
     xAxis: {
         categories: [
-            "Shocklight",
             "+5 itemlevel",
-            "Murderous Intent",
-            "Dark Sorrows",
-            "Chaotic Darkness",
-            "Master of Shadows",
             "Torment the Weak",
+            "Shocklight",
+            "Infusion of Light",
+            "Master of Shadows",
+            "Dark Sorrows",
             "Secure in the Light",
             "Shadowbind",
-            "Infusion of Light",
+            "Murderous Intent",
+            "Chaotic Darkness",
             "+3 itemlevel",
+            "Light Speed",
             "+2 itemlevel",
-            "+1 itemlevel",
-            "Light Speed"
+            "+1 itemlevel"
         ]
     },
     yAxis: {

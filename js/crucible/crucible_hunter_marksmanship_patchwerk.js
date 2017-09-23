@@ -39,27 +39,27 @@ Highcharts.chart('crucible_hunter_marksmanship_patchwerk',
         {
             color: "#4572a7",
             data: [
-                26084,
-                26009,
-                24928,
-                23677,
-                22862,
-                21573,
-                20620,
-                20008,
-                17933,
-                17797,
-                15650,
-                10433,
-                7313,
-                5216
+                24058,
+                23346,
+                22578,
+                21785,
+                21113,
+                20566,
+                20233,
+                17744,
+                15675,
+                15608,
+                14434,
+                9623,
+                5810,
+                4811
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-13 09:27 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c1479132f9ba5b7d3d87182ac77bf1c57be84622\" target=\"blank\">c147913</a>"
+        text: "UTC 2017-09-23 00:36 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7786884607bd22ed9ffb94c9e5b1f3e808d669af\" target=\"blank\">7786884</a>"
     },
     title: {
         text: "Hunter - Marksmanship - Patchwerk"
@@ -78,9 +78,9 @@ Highcharts.chart('crucible_hunter_marksmanship_patchwerk',
         categories: [
             "+5 itemlevel",
             "Torment the Weak",
-            "Secure in the Light",
-            "Shadowbind",
             "Infusion of Light",
+            "Shadowbind",
+            "Secure in the Light",
             "Chaotic Darkness",
             "Shocklight",
             "Master of Shadows",

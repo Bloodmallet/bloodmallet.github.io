@@ -39,27 +39,27 @@ Highcharts.chart('crucible_death_knight_frost_patchwerk',
         {
             color: "#4572a7",
             data: [
-                16581,
-                15143,
-                14870,
-                14772,
-                14363,
-                14067,
-                13142,
-                12937,
-                12920,
-                11159,
-                6695,
-                4463,
-                3612,
-                2231
+                17043,
+                16234,
+                15996,
+                15994,
+                15710,
+                15452,
+                15409,
+                13389,
+                13044,
+                12423,
+                7453,
+                5313,
+                4969,
+                2484
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-13 09:27 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c1479132f9ba5b7d3d87182ac77bf1c57be84622\" target=\"blank\">c147913</a>"
+        text: "UTC 2017-09-23 00:36 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7786884607bd22ed9ffb94c9e5b1f3e808d669af\" target=\"blank\">7786884</a>"
     },
     title: {
         text: "Death_Knight - Frost - Patchwerk"
@@ -76,19 +76,19 @@ Highcharts.chart('crucible_death_knight_frost_patchwerk',
     },
     xAxis: {
         categories: [
-            "Murderous Intent",
             "Torment the Weak",
-            "Light Speed",
-            "Secure in the Light",
-            "Infusion of Light",
             "Shocklight",
+            "Secure in the Light",
+            "Murderous Intent",
+            "Infusion of Light",
+            "Light Speed",
             "Shadowbind",
             "Master of Shadows",
             "Chaotic Darkness",
             "+5 itemlevel",
             "+3 itemlevel",
-            "+2 itemlevel",
             "Dark Sorrows",
+            "+2 itemlevel",
             "+1 itemlevel"
         ]
     },

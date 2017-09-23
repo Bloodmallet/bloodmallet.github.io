@@ -39,27 +39,27 @@ Highcharts.chart('crucible_warrior_arms_beastlord',
         {
             color: "#4572a7",
             data: [
-                23734,
-                22956,
-                18512,
-                18241,
-                17835,
-                17482,
-                16278,
-                16156,
-                15236,
-                13239,
-                -421,
-                -841,
-                -1261,
-                -2101
+                23471,
+                21491,
+                21248,
+                19331,
+                19316,
+                17268,
+                17006,
+                15030,
+                14653,
+                14313,
+                -568,
+                -1136,
+                -1703,
+                -2838
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-13 09:27 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c1479132f9ba5b7d3d87182ac77bf1c57be84622\" target=\"blank\">c147913</a>"
+        text: "UTC 2017-09-23 00:36 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7786884607bd22ed9ffb94c9e5b1f3e808d669af\" target=\"blank\">7786884</a>"
     },
     title: {
         text: "Warrior - Arms - Beastlord"
@@ -76,16 +76,16 @@ Highcharts.chart('crucible_warrior_arms_beastlord',
     },
     xAxis: {
         categories: [
-            "Light Speed",
             "Murderous Intent",
+            "Light Speed",
+            "Secure in the Light",
+            "Infusion of Light",
             "Shadowbind",
+            "Master of Shadows",
             "Shocklight",
             "Chaotic Darkness",
             "Dark Sorrows",
             "Torment the Weak",
-            "Secure in the Light",
-            "Infusion of Light",
-            "Master of Shadows",
             "+1 itemlevel",
             "+2 itemlevel",
             "+3 itemlevel",

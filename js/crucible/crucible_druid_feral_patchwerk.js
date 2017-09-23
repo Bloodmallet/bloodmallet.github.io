@@ -39,27 +39,27 @@ Highcharts.chart('crucible_druid_feral_patchwerk',
         {
             color: "#4572a7",
             data: [
-                20003,
-                18856,
-                18216,
-                17256,
-                16605,
-                14533,
-                13210,
-                11264,
-                10539,
-                8038,
-                6758,
-                5695,
-                4505,
-                2252
+                18906,
+                18241,
+                17561,
+                17554,
+                16373,
+                15696,
+                14064,
+                10591,
+                10378,
+                8296,
+                6226,
+                5092,
+                4151,
+                2075
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-13 09:27 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c1479132f9ba5b7d3d87182ac77bf1c57be84622\" target=\"blank\">c147913</a>"
+        text: "UTC 2017-09-23 00:36 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7786884607bd22ed9ffb94c9e5b1f3e808d669af\" target=\"blank\">7786884</a>"
     },
     title: {
         text: "Druid - Feral - Patchwerk"
@@ -77,14 +77,14 @@ Highcharts.chart('crucible_druid_feral_patchwerk',
     xAxis: {
         categories: [
             "Torment the Weak",
-            "Secure in the Light",
-            "Shadowbind",
             "Infusion of Light",
+            "Shadowbind",
+            "Secure in the Light",
             "Chaotic Darkness",
             "Murderous Intent",
             "Shocklight",
-            "+5 itemlevel",
             "Master of Shadows",
+            "+5 itemlevel",
             "Light Speed",
             "+3 itemlevel",
             "Dark Sorrows",

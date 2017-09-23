@@ -39,27 +39,27 @@ Highcharts.chart('crucible_mage_arcane_patchwerk',
         {
             color: "#4572a7",
             data: [
-                24159,
-                24111,
-                23296,
-                22258,
-                21356,
-                21108,
-                14495,
-                13913,
-                12443,
-                11096,
-                9898,
-                9663,
-                6518,
-                4831
+                25702,
+                24846,
+                24803,
+                24169,
+                23908,
+                22238,
+                15514,
+                14881,
+                13973,
+                12631,
+                10724,
+                9921,
+                7248,
+                4960
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-13 09:27 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c1479132f9ba5b7d3d87182ac77bf1c57be84622\" target=\"blank\">c147913</a>"
+        text: "UTC 2017-09-23 00:36 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7786884607bd22ed9ffb94c9e5b1f3e808d669af\" target=\"blank\">7786884</a>"
     },
     title: {
         text: "Mage - Arcane - Patchwerk"
@@ -76,17 +76,17 @@ Highcharts.chart('crucible_mage_arcane_patchwerk',
     },
     xAxis: {
         categories: [
-            "+5 itemlevel",
             "Torment the Weak",
             "Infusion of Light",
+            "+5 itemlevel",
             "Shadowbind",
             "Secure in the Light",
             "Chaotic Darkness",
-            "+3 itemlevel",
             "Murderous Intent",
+            "+3 itemlevel",
             "Shocklight",
-            "Master of Shadows",
             "Light Speed",
+            "Master of Shadows",
             "+2 itemlevel",
             "Dark Sorrows",
             "+1 itemlevel"

@@ -39,27 +39,27 @@ Highcharts.chart('crucible_shaman_enhancement_beastlord',
         {
             color: "#4572a7",
             data: [
-                27503,
-                25069,
-                23907,
-                23247,
-                21424,
-                20011,
-                19125,
-                17478,
-                17356,
-                16719,
-                15279,
-                14344,
-                9562,
-                4781
+                31454,
+                30139,
+                27718,
+                27520,
+                26847,
+                21446,
+                21188,
+                21093,
+                20619,
+                20062,
+                18298,
+                16512,
+                11008,
+                5504
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-13 09:27 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c1479132f9ba5b7d3d87182ac77bf1c57be84622\" target=\"blank\">c147913</a>"
+        text: "UTC 2017-09-23 00:36 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7786884607bd22ed9ffb94c9e5b1f3e808d669af\" target=\"blank\">7786884</a>"
     },
     title: {
         text: "Shaman - Enhancement - Beastlord"
@@ -78,14 +78,14 @@ Highcharts.chart('crucible_shaman_enhancement_beastlord',
         categories: [
             "Master of Shadows",
             "Murderous Intent",
-            "+5 itemlevel",
             "Shocklight",
+            "+5 itemlevel",
             "Light Speed",
             "Dark Sorrows",
-            "Torment the Weak",
-            "Chaotic Darkness",
             "Secure in the Light",
+            "Torment the Weak",
             "Shadowbind",
+            "Chaotic Darkness",
             "Infusion of Light",
             "+3 itemlevel",
             "+2 itemlevel",

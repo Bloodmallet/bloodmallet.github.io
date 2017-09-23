@@ -39,27 +39,27 @@ Highcharts.chart('crucible_shaman_elemental_beastlord',
         {
             color: "#4572a7",
             data: [
-                44026,
-                36733,
-                30290,
-                26415,
-                25626,
-                22081,
-                19245,
-                18748,
-                17610,
-                16793,
-                15767,
-                14431,
-                14217,
-                8805
+                50503,
+                41049,
+                30301,
+                30155,
+                29929,
+                25511,
+                25258,
+                23508,
+                20201,
+                17807,
+                17731,
+                14561,
+                10100,
+                9770
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-13 09:27 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c1479132f9ba5b7d3d87182ac77bf1c57be84622\" target=\"blank\">c147913</a>"
+        text: "UTC 2017-09-23 00:36 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7786884607bd22ed9ffb94c9e5b1f3e808d669af\" target=\"blank\">7786884</a>"
     },
     title: {
         text: "Shaman - Elemental - Beastlord"
@@ -78,18 +78,18 @@ Highcharts.chart('crucible_shaman_elemental_beastlord',
         categories: [
             "+5 itemlevel",
             "Shocklight",
-            "Murderous Intent",
             "+3 itemlevel",
+            "Murderous Intent",
             "Light Speed",
             "Master of Shadows",
-            "Secure in the Light",
-            "Shadowbind",
-            "+2 itemlevel",
             "Infusion of Light",
+            "Secure in the Light",
+            "+2 itemlevel",
+            "Torment the Weak",
             "Dark Sorrows",
             "Chaotic Darkness",
-            "Torment the Weak",
-            "+1 itemlevel"
+            "+1 itemlevel",
+            "Shadowbind"
         ]
     },
     yAxis: {

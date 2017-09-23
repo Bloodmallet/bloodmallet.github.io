@@ -39,27 +39,27 @@ Highcharts.chart('crucible_rogue_assassination_beastlord',
         {
             color: "#4572a7",
             data: [
-                26661,
-                20529,
-                19487,
-                17746,
-                15398,
-                13885,
-                13693,
-                12052,
-                9950,
-                5087,
-                2568,
-                1540,
-                1027,
-                513
+                32155,
+                24598,
+                22703,
+                20417,
+                19825,
+                19733,
+                18131,
+                16455,
+                14958,
+                13361,
+                9873,
+                6582,
+                3291,
+                2404
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-13 09:27 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c1479132f9ba5b7d3d87182ac77bf1c57be84622\" target=\"blank\">c147913</a>"
+        text: "UTC 2017-09-23 00:36 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7786884607bd22ed9ffb94c9e5b1f3e808d669af\" target=\"blank\">7786884</a>"
     },
     title: {
         text: "Rogue - Assassination - Beastlord"
@@ -77,19 +77,19 @@ Highcharts.chart('crucible_rogue_assassination_beastlord',
     xAxis: {
         categories: [
             "Master of Shadows",
-            "Shocklight",
             "Murderous Intent",
             "Dark Sorrows",
-            "Infusion of Light",
-            "Secure in the Light",
             "Shadowbind",
+            "Secure in the Light",
+            "Shocklight",
             "Chaotic Darkness",
-            "Torment the Weak",
-            "Light Speed",
             "+5 itemlevel",
+            "Torment the Weak",
+            "Infusion of Light",
             "+3 itemlevel",
             "+2 itemlevel",
-            "+1 itemlevel"
+            "+1 itemlevel",
+            "Light Speed"
         ]
     },
     yAxis: {
