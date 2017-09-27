@@ -18,8 +18,9 @@ Highcharts.chart('crucible_shaman_elemental_beastlord',
     plotOptions: {
         bar: {
             dataLabels: {
+                align: "right",
                 color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
-                enabled: false
+                enabled: true
             },
             point: {
                 events: {
@@ -39,27 +40,35 @@ Highcharts.chart('crucible_shaman_elemental_beastlord',
         {
             color: "#4572a7",
             data: [
-                50503,
-                41049,
-                30301,
-                30155,
-                29929,
-                25511,
-                25258,
-                23508,
-                20201,
-                17807,
-                17731,
-                14561,
-                10100,
-                9770
+                45060,
+                37396,
+                35673,
+                30683,
+                28100,
+                27964,
+                27406,
+                27036,
+                25771,
+                21179,
+                19298,
+                19204,
+                18873,
+                18024,
+                17395,
+                16619,
+                10641,
+                10087,
+                9012,
+                8774,
+                8744,
+                6871
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-23 00:36 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7786884607bd22ed9ffb94c9e5b1f3e808d669af\" target=\"blank\">7786884</a>"
+        text: "UTC 2017-09-27 15:23 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/68e31d9f343d9da2bb75ce6aad219d205f34e0b3\" target=\"blank\">68e31d9</a>"
     },
     title: {
         text: "Shaman - Elemental - Beastlord"
@@ -78,18 +87,26 @@ Highcharts.chart('crucible_shaman_elemental_beastlord',
         categories: [
             "+5 itemlevel",
             "Shocklight",
-            "+3 itemlevel",
-            "Murderous Intent",
-            "Light Speed",
-            "Master of Shadows",
-            "Infusion of Light",
-            "Secure in the Light",
-            "+2 itemlevel",
-            "Torment the Weak",
             "Dark Sorrows",
+            "Electric Discharge",
+            "Murderous Intent",
+            "The Ground Trembles",
+            "Light Speed",
+            "+3 itemlevel",
+            "Elemental Destabilization",
+            "Master of Shadows",
+            "Shadowbind",
+            "Infusion of Light",
+            "Torment the Weak",
+            "+2 itemlevel",
             "Chaotic Darkness",
+            "Secure in the Light",
+            "Lava Imbued",
+            "Call the Thunder",
             "+1 itemlevel",
-            "Shadowbind"
+            "Firestorm",
+            "Molten Blast",
+            "Earthen Attunement"
         ]
     },
     yAxis: {

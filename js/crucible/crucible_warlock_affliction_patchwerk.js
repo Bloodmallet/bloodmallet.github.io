@@ -18,8 +18,9 @@ Highcharts.chart('crucible_warlock_affliction_patchwerk',
     plotOptions: {
         bar: {
             dataLabels: {
+                align: "right",
                 color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
-                enabled: false
+                enabled: true
             },
             point: {
                 events: {
@@ -39,27 +40,35 @@ Highcharts.chart('crucible_warlock_affliction_patchwerk',
         {
             color: "#4572a7",
             data: [
-                23434,
-                23413,
-                21281,
-                21270,
-                21180,
-                21047,
-                17549,
-                17243,
-                16146,
-                16125,
-                14047,
-                9365,
-                7240,
-                4682
+                23745,
+                22865,
+                22315,
+                22132,
+                21041,
+                20839,
+                20678,
+                20100,
+                20050,
+                18119,
+                17665,
+                16909,
+                16091,
+                15180,
+                13719,
+                10173,
+                9917,
+                9146,
+                8230,
+                7114,
+                4573,
+                0
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-23 00:36 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7786884607bd22ed9ffb94c9e5b1f3e808d669af\" target=\"blank\">7786884</a>"
+        text: "UTC 2017-09-27 15:23 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/68e31d9f343d9da2bb75ce6aad219d205f34e0b3\" target=\"blank\">68e31d9</a>"
     },
     title: {
         text: "Warlock - Affliction - Patchwerk"
@@ -76,20 +85,28 @@ Highcharts.chart('crucible_warlock_affliction_patchwerk',
     },
     xAxis: {
         categories: [
-            "Torment the Weak",
+            "Perdition",
             "+5 itemlevel",
             "Shadowbind",
+            "Torment the Weak",
+            "Inherently Unstable",
             "Secure in the Light",
             "Infusion of Light",
+            "Shadowy Incantations",
             "Chaotic Darkness",
-            "Light Speed",
+            "Winnowing",
             "Shocklight",
-            "Murderous Intent",
+            "Light Speed",
             "Master of Shadows",
+            "Murderous Intent",
             "+3 itemlevel",
-            "+2 itemlevel",
             "Dark Sorrows",
-            "+1 itemlevel"
+            "Inimitable Agony",
+            "+2 itemlevel",
+            "Hideous Corruption",
+            "Drained to a Husk",
+            "+1 itemlevel",
+            "Seeds of Doom"
         ]
     },
     yAxis: {

@@ -18,8 +18,9 @@ Highcharts.chart('crucible_hunter_survival_patchwerk',
     plotOptions: {
         bar: {
             dataLabels: {
+                align: "right",
                 color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
-                enabled: false
+                enabled: true
             },
             point: {
                 events: {
@@ -39,27 +40,35 @@ Highcharts.chart('crucible_hunter_survival_patchwerk',
         {
             color: "#4572a7",
             data: [
-                21767,
-                19738,
-                19423,
-                18995,
-                15939,
-                15741,
-                15578,
-                14961,
-                14553,
-                11983,
-                8976,
-                5984,
-                5561,
-                2992
+                20472,
+                20081,
+                20048,
+                19797,
+                17262,
+                16759,
+                15628,
+                15396,
+                14873,
+                14376,
+                12972,
+                12105,
+                10004,
+                8923,
+                5949,
+                5221,
+                3906,
+                2974,
+                2774,
+                2336,
+                0,
+                0
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-23 00:36 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7786884607bd22ed9ffb94c9e5b1f3e808d669af\" target=\"blank\">7786884</a>"
+        text: "UTC 2017-09-27 15:23 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/68e31d9f343d9da2bb75ce6aad219d205f34e0b3\" target=\"blank\">68e31d9</a>"
     },
     title: {
         text: "Hunter - Survival - Patchwerk"
@@ -77,19 +86,27 @@ Highcharts.chart('crucible_hunter_survival_patchwerk',
     xAxis: {
         categories: [
             "Torment the Weak",
-            "Infusion of Light",
             "Shadowbind",
+            "Infusion of Light",
             "Secure in the Light",
             "Chaotic Darkness",
             "Murderous Intent",
+            "Sharpened Fang",
             "Shocklight",
             "+5 itemlevel",
             "Light Speed",
             "Master of Shadows",
+            "Jaws of the Mongoose",
+            "Dark Sorrows",
             "+3 itemlevel",
             "+2 itemlevel",
-            "Dark Sorrows",
-            "+1 itemlevel"
+            "Fluffy, Go",
+            "My Beloved Monster",
+            "+1 itemlevel",
+            "Raptor's Cry",
+            "Lacerating Talons",
+            "Hellcarver",
+            "Explosive Force"
         ]
     },
     yAxis: {

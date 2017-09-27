@@ -18,8 +18,9 @@ Highcharts.chart('crucible_mage_frost_beastlord',
     plotOptions: {
         bar: {
             dataLabels: {
+                align: "right",
                 color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
-                enabled: false
+                enabled: true
             },
             point: {
                 events: {
@@ -39,27 +40,35 @@ Highcharts.chart('crucible_mage_frost_beastlord',
         {
             color: "#4572a7",
             data: [
-                36030,
-                25954,
-                25652,
-                23179,
-                22867,
-                21618,
-                21181,
-                20095,
-                18451,
-                18331,
-                14412,
-                11808,
-                7206,
-                5193
+                40022,
+                36675,
+                26523,
+                22719,
+                22504,
+                22419,
+                22005,
+                21419,
+                21415,
+                19620,
+                18769,
+                16392,
+                15052,
+                14670,
+                13455,
+                13304,
+                11393,
+                11223,
+                7335,
+                3480,
+                3313,
+                2311
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-23 00:36 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7786884607bd22ed9ffb94c9e5b1f3e808d669af\" target=\"blank\">7786884</a>"
+        text: "UTC 2017-09-27 15:23 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/68e31d9f343d9da2bb75ce6aad219d205f34e0b3\" target=\"blank\">68e31d9</a>"
     },
     title: {
         text: "Mage - Frost - Beastlord"
@@ -76,19 +85,27 @@ Highcharts.chart('crucible_mage_frost_beastlord',
     },
     xAxis: {
         categories: [
-            "+5 itemlevel",
-            "Infusion of Light",
             "Dark Sorrows",
-            "Shadowbind",
+            "+5 itemlevel",
             "Shocklight",
-            "+3 itemlevel",
-            "Secure in the Light",
-            "Light Speed",
             "Chaotic Darkness",
+            "Shadowbind",
+            "Infusion of Light",
+            "+3 itemlevel",
+            "Orbital Strike",
+            "Secure in the Light",
+            "Let It Go",
             "Murderous Intent",
+            "Light Speed",
+            "Obsidian Lance",
             "+2 itemlevel",
             "Torment the Weak",
+            "The Storm Rages",
+            "Clarity of Thought",
+            "Ice Age",
             "+1 itemlevel",
+            "Icy Caress",
+            "Frozen Veins",
             "Master of Shadows"
         ]
     },

@@ -18,8 +18,9 @@ Highcharts.chart('crucible_death_knight_frost_beastlord',
     plotOptions: {
         bar: {
             dataLabels: {
+                align: "right",
                 color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
-                enabled: false
+                enabled: true
             },
             point: {
                 events: {
@@ -39,27 +40,35 @@ Highcharts.chart('crucible_death_knight_frost_beastlord',
         {
             color: "#4572a7",
             data: [
-                24067,
-                23070,
-                22933,
-                15784,
-                15215,
-                14490,
-                13614,
-                12929,
-                12046,
-                8037,
-                7227,
-                6473,
-                4818,
-                2409
+                29200,
+                28574,
+                27441,
+                23811,
+                21243,
+                21179,
+                20828,
+                20746,
+                20524,
+                17869,
+                17386,
+                16502,
+                12546,
+                10931,
+                9901,
+                9305,
+                8146,
+                6740,
+                6600,
+                6022,
+                3821,
+                3300
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-23 00:36 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7786884607bd22ed9ffb94c9e5b1f3e808d669af\" target=\"blank\">7786884</a>"
+        text: "UTC 2017-09-27 15:23 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/68e31d9f343d9da2bb75ce6aad219d205f34e0b3\" target=\"blank\">68e31d9</a>"
     },
     title: {
         text: "Death_Knight - Frost - Beastlord"
@@ -76,19 +85,27 @@ Highcharts.chart('crucible_death_knight_frost_beastlord',
     },
     xAxis: {
         categories: [
-            "Master of Shadows",
             "Light Speed",
             "Murderous Intent",
-            "Dark Sorrows",
+            "Master of Shadows",
+            "Blast Radius",
             "Shocklight",
+            "Dark Sorrows",
+            "Dead of Winter",
+            "Cold as Ice",
+            "Ambidexterity",
             "Infusion of Light",
             "Secure in the Light",
-            "Shadowbind",
             "+5 itemlevel",
-            "Chaotic Darkness",
-            "+3 itemlevel",
             "Torment the Weak",
+            "Shadowbind",
+            "+3 itemlevel",
+            "Runefrost",
+            "Chaotic Darkness",
+            "Nothing but the Boots",
             "+2 itemlevel",
+            "Bad to the Bone",
+            "Over-Powered",
             "+1 itemlevel"
         ]
     },

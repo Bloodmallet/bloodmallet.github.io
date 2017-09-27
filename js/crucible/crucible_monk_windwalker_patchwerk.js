@@ -18,8 +18,9 @@ Highcharts.chart('crucible_monk_windwalker_patchwerk',
     plotOptions: {
         bar: {
             dataLabels: {
+                align: "right",
                 color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
-                enabled: false
+                enabled: true
             },
             point: {
                 events: {
@@ -39,27 +40,35 @@ Highcharts.chart('crucible_monk_windwalker_patchwerk',
         {
             color: "#4572a7",
             data: [
-                19453,
-                19059,
-                18914,
-                18081,
-                17740,
-                17357,
-                16203,
-                14862,
-                14291,
-                8272,
-                6318,
-                4963,
-                3308,
-                1654
+                21124,
+                21044,
+                18589,
+                18454,
+                18387,
+                17521,
+                15606,
+                15241,
+                14943,
+                13672,
+                13321,
+                8922,
+                7475,
+                4485,
+                4140,
+                3500,
+                2990,
+                2927,
+                1495,
+                1355,
+                0,
+                0
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-23 00:36 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7786884607bd22ed9ffb94c9e5b1f3e808d669af\" target=\"blank\">7786884</a>"
+        text: "UTC 2017-09-27 15:23 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/68e31d9f343d9da2bb75ce6aad219d205f34e0b3\" target=\"blank\">68e31d9</a>"
     },
     title: {
         text: "Monk - Windwalker - Patchwerk"
@@ -77,19 +86,27 @@ Highcharts.chart('crucible_monk_windwalker_patchwerk',
     xAxis: {
         categories: [
             "Torment the Weak",
-            "Infusion of Light",
+            "Rising Winds",
             "Secure in the Light",
             "Shadowbind",
-            "Chaotic Darkness",
+            "Infusion of Light",
             "Murderous Intent",
+            "Chaotic Darkness",
             "Shocklight",
-            "Light Speed",
             "Master of Shadows",
-            "+5 itemlevel",
+            "Fists of the Wind",
+            "Light Speed",
             "Dark Sorrows",
+            "+5 itemlevel",
             "+3 itemlevel",
+            "Inner Peace",
+            "Tiger Claws",
             "+2 itemlevel",
-            "+1 itemlevel"
+            "Strength of Xuen",
+            "+1 itemlevel",
+            "Power of a Thousand Cranes",
+            "Death Art",
+            "Split Personality"
         ]
     },
     yAxis: {

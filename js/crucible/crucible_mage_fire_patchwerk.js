@@ -18,8 +18,9 @@ Highcharts.chart('crucible_mage_fire_patchwerk',
     plotOptions: {
         bar: {
             dataLabels: {
+                align: "right",
                 color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
-                enabled: false
+                enabled: true
             },
             point: {
                 events: {
@@ -39,27 +40,35 @@ Highcharts.chart('crucible_mage_fire_patchwerk',
         {
             color: "#4572a7",
             data: [
-                23052,
-                22939,
-                22669,
-                22152,
-                21668,
-                19903,
-                13831,
-                12609,
-                11965,
-                11529,
-                9220,
-                8181,
-                7986,
-                4610
+                23414,
+                21802,
+                21680,
+                21334,
+                21259,
+                19543,
+                13008,
+                12036,
+                11601,
+                11233,
+                10622,
+                9904,
+                9642,
+                9491,
+                8672,
+                7315,
+                7220,
+                6113,
+                5267,
+                4336,
+                3380,
+                0
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-23 00:36 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7786884607bd22ed9ffb94c9e5b1f3e808d669af\" target=\"blank\">7786884</a>"
+        text: "UTC 2017-09-27 15:23 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/68e31d9f343d9da2bb75ce6aad219d205f34e0b3\" target=\"blank\">68e31d9</a>"
     },
     title: {
         text: "Mage - Fire - Patchwerk"
@@ -76,20 +85,28 @@ Highcharts.chart('crucible_mage_fire_patchwerk',
     },
     xAxis: {
         categories: [
-            "+5 itemlevel",
             "Torment the Weak",
-            "Shadowbind",
-            "Secure in the Light",
             "Infusion of Light",
+            "+5 itemlevel",
+            "Secure in the Light",
+            "Shadowbind",
             "Chaotic Darkness",
             "+3 itemlevel",
+            "Pyroclasmic Paranoia",
             "Murderous Intent",
             "Master of Shadows",
             "Shocklight",
-            "+2 itemlevel",
-            "Light Speed",
+            "Burning Gaze",
             "Dark Sorrows",
-            "+1 itemlevel"
+            "Everburning Consumption",
+            "+2 itemlevel",
+            "Pre-Ignited",
+            "Light Speed",
+            "Reignition Overdrive",
+            "Fire at Will",
+            "+1 itemlevel",
+            "Great Balls of Fire",
+            "Blue Flame Special"
         ]
     },
     yAxis: {

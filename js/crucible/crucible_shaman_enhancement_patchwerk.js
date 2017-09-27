@@ -18,8 +18,9 @@ Highcharts.chart('crucible_shaman_enhancement_patchwerk',
     plotOptions: {
         bar: {
             dataLabels: {
+                align: "right",
                 color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
-                enabled: false
+                enabled: true
             },
             point: {
                 events: {
@@ -39,27 +40,35 @@ Highcharts.chart('crucible_shaman_enhancement_patchwerk',
         {
             color: "#4572a7",
             data: [
-                19984,
-                19723,
-                18471,
-                18213,
-                17446,
-                17102,
-                17035,
-                16266,
-                16128,
-                15963,
-                9759,
-                7520,
-                6506,
-                3253
+                18833,
+                18415,
+                17058,
+                16509,
+                16370,
+                16279,
+                15861,
+                15681,
+                14931,
+                13564,
+                9557,
+                8138,
+                8064,
+                6132,
+                5759,
+                5425,
+                4474,
+                2712,
+                2235,
+                1288,
+                0,
+                0
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-23 00:36 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7786884607bd22ed9ffb94c9e5b1f3e808d669af\" target=\"blank\">7786884</a>"
+        text: "UTC 2017-09-27 15:23 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/68e31d9f343d9da2bb75ce6aad219d205f34e0b3\" target=\"blank\">68e31d9</a>"
     },
     title: {
         text: "Shaman - Enhancement - Patchwerk"
@@ -76,20 +85,28 @@ Highcharts.chart('crucible_shaman_enhancement_patchwerk',
     },
     xAxis: {
         categories: [
-            "Secure in the Light",
             "Torment the Weak",
+            "Secure in the Light",
             "Infusion of Light",
             "Shadowbind",
+            "Light Speed",
             "Murderous Intent",
+            "Master of Shadows",
             "Chaotic Darkness",
             "Shocklight",
             "+5 itemlevel",
-            "Light Speed",
-            "Master of Shadows",
+            "Wind Strikes",
             "+3 itemlevel",
             "Dark Sorrows",
+            "Gathering of the Maelstrom",
+            "Wind Surge",
             "+2 itemlevel",
-            "+1 itemlevel"
+            "Weapons of the Elements",
+            "+1 itemlevel",
+            "Crashing Hammer",
+            "Forged in Lava",
+            "Gathering Storms",
+            "Spirit of the Maelstrom"
         ]
     },
     yAxis: {

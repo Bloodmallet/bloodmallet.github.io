@@ -18,8 +18,9 @@ Highcharts.chart('crucible_rogue_assassination_patchwerk',
     plotOptions: {
         bar: {
             dataLabels: {
+                align: "right",
                 color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
-                enabled: false
+                enabled: true
             },
             point: {
                 events: {
@@ -39,27 +40,35 @@ Highcharts.chart('crucible_rogue_assassination_patchwerk',
         {
             color: "#4572a7",
             data: [
-                18755,
-                18680,
-                18000,
-                17473,
-                16371,
-                15919,
-                14486,
-                13631,
-                9077,
-                6861,
-                5446,
-                5374,
-                3630,
-                1815
+                19319,
+                19302,
+                18569,
+                17872,
+                17424,
+                15952,
+                15522,
+                15333,
+                9782,
+                9046,
+                8676,
+                8560,
+                5805,
+                5380,
+                5136,
+                5041,
+                4410,
+                4395,
+                3424,
+                1712,
+                0,
+                0
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-23 00:36 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7786884607bd22ed9ffb94c9e5b1f3e808d669af\" target=\"blank\">7786884</a>"
+        text: "UTC 2017-09-27 15:23 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/68e31d9f343d9da2bb75ce6aad219d205f34e0b3\" target=\"blank\">68e31d9</a>"
     },
     title: {
         text: "Rogue - Assassination - Patchwerk"
@@ -76,20 +85,28 @@ Highcharts.chart('crucible_rogue_assassination_patchwerk',
     },
     xAxis: {
         categories: [
-            "Torment the Weak",
-            "Infusion of Light",
             "Secure in the Light",
+            "Torment the Weak",
             "Shadowbind",
-            "Master of Shadows",
+            "Infusion of Light",
             "Chaotic Darkness",
-            "Shocklight",
+            "Master of Shadows",
             "Murderous Intent",
-            "+5 itemlevel",
+            "Shocklight",
+            "Master Alchemist",
             "Dark Sorrows",
+            "Toxic Blades",
+            "+5 itemlevel",
+            "Strangler",
+            "Gushing Wound",
             "+3 itemlevel",
             "Light Speed",
+            "Serrated Edge",
+            "Balanced Blades",
             "+2 itemlevel",
-            "+1 itemlevel"
+            "+1 itemlevel",
+            "Poison Knives",
+            "Master Assassin"
         ]
     },
     yAxis: {

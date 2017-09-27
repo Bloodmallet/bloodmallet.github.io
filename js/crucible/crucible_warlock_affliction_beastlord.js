@@ -18,8 +18,9 @@ Highcharts.chart('crucible_warlock_affliction_beastlord',
     plotOptions: {
         bar: {
             dataLabels: {
+                align: "right",
                 color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
-                enabled: false
+                enabled: true
             },
             point: {
                 events: {
@@ -39,27 +40,35 @@ Highcharts.chart('crucible_warlock_affliction_beastlord',
         {
             color: "#4572a7",
             data: [
-                30536,
-                30134,
-                26054,
-                24678,
-                24169,
-                23432,
-                23151,
-                22463,
-                22356,
-                22169,
-                18080,
-                16406,
-                12053,
-                6026
+                38117,
+                35690,
+                28730,
+                27905,
+                27103,
+                26923,
+                26798,
+                26125,
+                24106,
+                22957,
+                22802,
+                22379,
+                19379,
+                18893,
+                18413,
+                16153,
+                15082,
+                13629,
+                10769,
+                5384,
+                2710,
+                0
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-23 00:36 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7786884607bd22ed9ffb94c9e5b1f3e808d669af\" target=\"blank\">7786884</a>"
+        text: "UTC 2017-09-27 15:23 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/68e31d9f343d9da2bb75ce6aad219d205f34e0b3\" target=\"blank\">68e31d9</a>"
     },
     title: {
         text: "Warlock - Affliction - Beastlord"
@@ -76,20 +85,28 @@ Highcharts.chart('crucible_warlock_affliction_beastlord',
     },
     xAxis: {
         categories: [
+            "Perdition",
+            "Dark Sorrows",
+            "Shadowy Incantations",
             "Light Speed",
+            "Inherently Unstable",
             "+5 itemlevel",
             "Master of Shadows",
-            "Shadowbind",
+            "Winnowing",
             "Shocklight",
-            "Chaotic Darkness",
-            "Dark Sorrows",
             "Infusion of Light",
+            "Shadowbind",
             "Secure in the Light",
+            "Inimitable Agony",
+            "Chaotic Darkness",
             "Murderous Intent",
             "+3 itemlevel",
             "Torment the Weak",
+            "Hideous Corruption",
             "+2 itemlevel",
-            "+1 itemlevel"
+            "+1 itemlevel",
+            "Seeds of Doom",
+            "Drained to a Husk"
         ]
     },
     yAxis: {

@@ -18,8 +18,9 @@ Highcharts.chart('crucible_death_knight_frost_patchwerk',
     plotOptions: {
         bar: {
             dataLabels: {
+                align: "right",
                 color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
-                enabled: false
+                enabled: true
             },
             point: {
                 events: {
@@ -39,27 +40,35 @@ Highcharts.chart('crucible_death_knight_frost_patchwerk',
         {
             color: "#4572a7",
             data: [
-                17043,
-                16234,
-                15996,
-                15994,
-                15710,
-                15452,
-                15409,
-                13389,
-                13044,
-                12423,
-                7453,
-                5313,
-                4969,
-                2484
+                19191,
+                16808,
+                16222,
+                16098,
+                15790,
+                15255,
+                15145,
+                14422,
+                13607,
+                12920,
+                12864,
+                10298,
+                9842,
+                7752,
+                7557,
+                6328,
+                5601,
+                5168,
+                4375,
+                3791,
+                2584,
+                1770
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-23 00:36 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7786884607bd22ed9ffb94c9e5b1f3e808d669af\" target=\"blank\">7786884</a>"
+        text: "UTC 2017-09-27 15:23 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/68e31d9f343d9da2bb75ce6aad219d205f34e0b3\" target=\"blank\">68e31d9</a>"
     },
     title: {
         text: "Death_Knight - Frost - Patchwerk"
@@ -76,20 +85,28 @@ Highcharts.chart('crucible_death_knight_frost_patchwerk',
     },
     xAxis: {
         categories: [
-            "Torment the Weak",
-            "Shocklight",
-            "Secure in the Light",
+            "Ambidexterity",
             "Murderous Intent",
             "Infusion of Light",
+            "Shocklight",
             "Light Speed",
+            "Torment the Weak",
             "Shadowbind",
+            "Secure in the Light",
             "Master of Shadows",
-            "Chaotic Darkness",
             "+5 itemlevel",
+            "Chaotic Darkness",
+            "Nothing but the Boots",
+            "Cold as Ice",
             "+3 itemlevel",
             "Dark Sorrows",
+            "Runefrost",
+            "Blast Radius",
             "+2 itemlevel",
-            "+1 itemlevel"
+            "Dead of Winter",
+            "Bad to the Bone",
+            "+1 itemlevel",
+            "Over-Powered"
         ]
     },
     yAxis: {

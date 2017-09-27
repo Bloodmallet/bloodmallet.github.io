@@ -18,8 +18,9 @@ Highcharts.chart('crucible_shaman_elemental_patchwerk',
     plotOptions: {
         bar: {
             dataLabels: {
+                align: "right",
                 color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
-                enabled: false
+                enabled: true
             },
             point: {
                 events: {
@@ -39,27 +40,35 @@ Highcharts.chart('crucible_shaman_elemental_patchwerk',
         {
             color: "#4572a7",
             data: [
-                25450,
-                20994,
-                19734,
-                19234,
-                19203,
-                18198,
-                15650,
-                15634,
-                15577,
-                15270,
-                14863,
-                10180,
-                6559,
-                5090
+                21366,
+                17623,
+                17337,
+                17204,
+                16730,
+                15283,
+                14601,
+                12819,
+                12814,
+                12784,
+                12555,
+                11829,
+                9150,
+                8546,
+                7459,
+                7159,
+                6499,
+                4946,
+                4340,
+                4273,
+                0,
+                0
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-23 00:36 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7786884607bd22ed9ffb94c9e5b1f3e808d669af\" target=\"blank\">7786884</a>"
+        text: "UTC 2017-09-27 15:23 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/68e31d9f343d9da2bb75ce6aad219d205f34e0b3\" target=\"blank\">68e31d9</a>"
     },
     title: {
         text: "Shaman - Elemental - Patchwerk"
@@ -77,19 +86,27 @@ Highcharts.chart('crucible_shaman_elemental_patchwerk',
     xAxis: {
         categories: [
             "+5 itemlevel",
-            "Secure in the Light",
             "Torment the Weak",
-            "Shadowbind",
             "Infusion of Light",
+            "Shadowbind",
+            "Secure in the Light",
+            "Elemental Destabilization",
             "Chaotic Darkness",
-            "Master of Shadows",
-            "Shocklight",
-            "Murderous Intent",
             "+3 itemlevel",
+            "Murderous Intent",
+            "Shocklight",
+            "Master of Shadows",
             "Light Speed",
+            "Lava Imbued",
             "+2 itemlevel",
+            "Firestorm",
+            "Molten Blast",
             "Dark Sorrows",
-            "+1 itemlevel"
+            "Earthen Attunement",
+            "Call the Thunder",
+            "+1 itemlevel",
+            "Electric Discharge",
+            "The Ground Trembles"
         ]
     },
     yAxis: {

@@ -18,8 +18,9 @@ Highcharts.chart('crucible_warrior_fury_beastlord',
     plotOptions: {
         bar: {
             dataLabels: {
+                align: "right",
                 color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
-                enabled: false
+                enabled: true
             },
             point: {
                 events: {
@@ -39,27 +40,35 @@ Highcharts.chart('crucible_warrior_fury_beastlord',
         {
             color: "#4572a7",
             data: [
-                26685,
-                22682,
-                22451,
-                22352,
-                19437,
-                18637,
-                18273,
-                17406,
-                17015,
-                10896,
-                1105,
-                663,
-                442,
-                221
+                33506,
+                33306,
+                22411,
+                21071,
+                19735,
+                17890,
+                17888,
+                17774,
+                17773,
+                16088,
+                14494,
+                12201,
+                12191,
+                7988,
+                2903,
+                2808,
+                1684,
+                1506,
+                1123,
+                0,
+                0,
+                0
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-23 00:36 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7786884607bd22ed9ffb94c9e5b1f3e808d669af\" target=\"blank\">7786884</a>"
+        text: "UTC 2017-09-27 15:23 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/68e31d9f343d9da2bb75ce6aad219d205f34e0b3\" target=\"blank\">68e31d9</a>"
     },
     title: {
         text: "Warrior - Fury - Beastlord"
@@ -76,20 +85,28 @@ Highcharts.chart('crucible_warrior_fury_beastlord',
     },
     xAxis: {
         categories: [
+            "Unrivaled Strength",
             "Dark Sorrows",
-            "Infusion of Light",
-            "Chaotic Darkness",
             "Shadowbind",
+            "Infusion of Light",
             "Secure in the Light",
-            "Torment the Weak",
             "Light Speed",
             "Murderous Intent",
             "Master of Shadows",
+            "Chaotic Darkness",
+            "Torment the Weak",
+            "Raging Berserker",
+            "Wrath and Fury",
             "Shocklight",
+            "Unstoppable",
+            "Pulse of Battle",
             "+5 itemlevel",
             "+3 itemlevel",
+            "Uncontrolled Rage",
             "+2 itemlevel",
-            "+1 itemlevel"
+            "+1 itemlevel",
+            "Wild Slashes",
+            "Deathdealer"
         ]
     },
     yAxis: {

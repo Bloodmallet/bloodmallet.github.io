@@ -18,8 +18,9 @@ Highcharts.chart('crucible_druid_balance_patchwerk',
     plotOptions: {
         bar: {
             dataLabels: {
+                align: "right",
                 color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
-                enabled: false
+                enabled: true
             },
             point: {
                 events: {
@@ -39,27 +40,35 @@ Highcharts.chart('crucible_druid_balance_patchwerk',
         {
             color: "#4572a7",
             data: [
-                24241,
-                18716,
-                18538,
-                18025,
-                17644,
-                15628,
-                14544,
-                14366,
-                12991,
-                12833,
-                11883,
-                9696,
-                5317,
-                4848
+                25003,
+                21554,
+                20518,
+                20004,
+                19617,
+                19438,
+                16851,
+                15440,
+                15001,
+                14717,
+                14551,
+                13839,
+                10001,
+                8845,
+                8492,
+                8014,
+                6522,
+                6156,
+                5640,
+                5111,
+                5000,
+                2582
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-23 00:36 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7786884607bd22ed9ffb94c9e5b1f3e808d669af\" target=\"blank\">7786884</a>"
+        text: "UTC 2017-09-27 15:23 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/68e31d9f343d9da2bb75ce6aad219d205f34e0b3\" target=\"blank\">68e31d9</a>"
     },
     title: {
         text: "Druid - Balance - Patchwerk"
@@ -77,19 +86,27 @@ Highcharts.chart('crucible_druid_balance_patchwerk',
     xAxis: {
         categories: [
             "+5 itemlevel",
+            "Scythe of the Stars",
             "Torment the Weak",
-            "Infusion of Light",
-            "Secure in the Light",
             "Shadowbind",
+            "Secure in the Light",
+            "Infusion of Light",
             "Chaotic Darkness",
-            "+3 itemlevel",
             "Master of Shadows",
-            "Light Speed",
+            "+3 itemlevel",
             "Murderous Intent",
+            "Light Speed",
             "Shocklight",
             "+2 itemlevel",
             "Dark Sorrows",
-            "+1 itemlevel"
+            "Solar Stabbing",
+            "Dark Side of the Moon",
+            "Empowerment",
+            "Sunfire Burns",
+            "Twilight Glow",
+            "Falling Star",
+            "+1 itemlevel",
+            "Light of the Evening Star"
         ]
     },
     yAxis: {

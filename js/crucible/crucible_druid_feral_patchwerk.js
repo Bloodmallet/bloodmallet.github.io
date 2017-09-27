@@ -18,8 +18,9 @@ Highcharts.chart('crucible_druid_feral_patchwerk',
     plotOptions: {
         bar: {
             dataLabels: {
+                align: "right",
                 color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
-                enabled: false
+                enabled: true
             },
             point: {
                 events: {
@@ -39,27 +40,35 @@ Highcharts.chart('crucible_druid_feral_patchwerk',
         {
             color: "#4572a7",
             data: [
-                18906,
-                18241,
-                17561,
-                17554,
-                16373,
-                15696,
-                14064,
-                10591,
-                10378,
-                8296,
-                6226,
-                5092,
-                4151,
-                2075
+                19425,
+                19423,
+                18211,
+                18150,
+                15908,
+                14488,
+                13943,
+                12838,
+                12632,
+                11544,
+                11161,
+                11141,
+                9451,
+                8694,
+                8234,
+                6696,
+                5646,
+                4464,
+                3502,
+                2232,
+                0,
+                0
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-23 00:36 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7786884607bd22ed9ffb94c9e5b1f3e808d669af\" target=\"blank\">7786884</a>"
+        text: "UTC 2017-09-27 15:23 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/68e31d9f343d9da2bb75ce6aad219d205f34e0b3\" target=\"blank\">68e31d9</a>"
     },
     title: {
         text: "Druid - Feral - Patchwerk"
@@ -76,20 +85,28 @@ Highcharts.chart('crucible_druid_feral_patchwerk',
     },
     xAxis: {
         categories: [
-            "Torment the Weak",
-            "Infusion of Light",
             "Shadowbind",
+            "Torment the Weak",
             "Secure in the Light",
+            "Infusion of Light",
             "Chaotic Darkness",
             "Murderous Intent",
+            "Tear the Flesh",
             "Shocklight",
-            "Master of Shadows",
+            "Razor Fangs",
+            "Feral Instinct",
             "+5 itemlevel",
+            "Master of Shadows",
+            "Feral Power",
             "Light Speed",
-            "+3 itemlevel",
             "Dark Sorrows",
+            "+3 itemlevel",
+            "Ashamane's Energy",
             "+2 itemlevel",
-            "+1 itemlevel"
+            "Powerful Bite",
+            "+1 itemlevel",
+            "Sharpened Claws",
+            "Thrashing Claws"
         ]
     },
     yAxis: {

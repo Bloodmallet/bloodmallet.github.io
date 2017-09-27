@@ -18,8 +18,9 @@ Highcharts.chart('crucible_mage_fire_beastlord',
     plotOptions: {
         bar: {
             dataLabels: {
+                align: "right",
                 color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
-                enabled: false
+                enabled: true
             },
             point: {
                 events: {
@@ -39,27 +40,35 @@ Highcharts.chart('crucible_mage_fire_beastlord',
         {
             color: "#4572a7",
             data: [
-                39939,
-                29518,
-                27251,
-                27030,
-                25415,
-                23963,
-                23634,
-                23459,
-                22584,
-                18544,
-                16524,
-                15975,
-                14490,
-                7987
+                42273,
+                40229,
+                29646,
+                25363,
+                22936,
+                22179,
+                21589,
+                20828,
+                19788,
+                18839,
+                18683,
+                16909,
+                14680,
+                11578,
+                11491,
+                8454,
+                8269,
+                7310,
+                2172,
+                1751,
+                1358,
+                1135
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-23 00:36 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7786884607bd22ed9ffb94c9e5b1f3e808d669af\" target=\"blank\">7786884</a>"
+        text: "UTC 2017-09-27 15:23 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/68e31d9f343d9da2bb75ce6aad219d205f34e0b3\" target=\"blank\">68e31d9</a>"
     },
     title: {
         text: "Mage - Fire - Beastlord"
@@ -78,18 +87,26 @@ Highcharts.chart('crucible_mage_fire_beastlord',
         categories: [
             "+5 itemlevel",
             "Dark Sorrows",
-            "Infusion of Light",
-            "Light Speed",
-            "Secure in the Light",
+            "Blue Flame Special",
             "+3 itemlevel",
-            "Shadowbind",
+            "Infusion of Light",
+            "Secure in the Light",
             "Murderous Intent",
-            "Torment the Weak",
-            "Shocklight",
             "Chaotic Darkness",
+            "Shadowbind",
+            "Light Speed",
+            "Torment the Weak",
             "+2 itemlevel",
+            "Burning Gaze",
             "Master of Shadows",
-            "+1 itemlevel"
+            "Shocklight",
+            "+1 itemlevel",
+            "Everburning Consumption",
+            "Pyroclasmic Paranoia",
+            "Great Balls of Fire",
+            "Pre-Ignited",
+            "Fire at Will",
+            "Reignition Overdrive"
         ]
     },
     yAxis: {

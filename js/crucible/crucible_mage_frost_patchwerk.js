@@ -18,8 +18,9 @@ Highcharts.chart('crucible_mage_frost_patchwerk',
     plotOptions: {
         bar: {
             dataLabels: {
+                align: "right",
                 color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
-                enabled: false
+                enabled: true
             },
             point: {
                 events: {
@@ -39,27 +40,35 @@ Highcharts.chart('crucible_mage_frost_patchwerk',
         {
             color: "#4572a7",
             data: [
-                28732,
-                26363,
-                23522,
-                22928,
-                22821,
-                21493,
-                17239,
-                16437,
-                13055,
-                12695,
-                11492,
-                8422,
-                8154,
-                5746
+                30154,
+                27138,
+                25557,
+                25445,
+                25146,
+                24247,
+                22904,
+                21334,
+                18092,
+                17102,
+                16184,
+                15790,
+                14739,
+                13410,
+                12098,
+                12061,
+                11300,
+                9641,
+                8228,
+                6366,
+                6030,
+                1113
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-23 00:36 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7786884607bd22ed9ffb94c9e5b1f3e808d669af\" target=\"blank\">7786884</a>"
+        text: "UTC 2017-09-27 15:23 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/68e31d9f343d9da2bb75ce6aad219d205f34e0b3\" target=\"blank\">68e31d9</a>"
     },
     title: {
         text: "Mage - Frost - Patchwerk"
@@ -78,18 +87,26 @@ Highcharts.chart('crucible_mage_frost_patchwerk',
         categories: [
             "+5 itemlevel",
             "Torment the Weak",
+            "Clarity of Thought",
+            "Infusion of Light",
             "Secure in the Light",
             "Shadowbind",
-            "Infusion of Light",
             "Chaotic Darkness",
+            "Let It Go",
             "+3 itemlevel",
             "Murderous Intent",
+            "Obsidian Lance",
             "Light Speed",
+            "Ice Age",
             "Shocklight",
-            "+2 itemlevel",
             "Dark Sorrows",
+            "+2 itemlevel",
+            "Icy Caress",
             "Master of Shadows",
-            "+1 itemlevel"
+            "Frozen Veins",
+            "Orbital Strike",
+            "+1 itemlevel",
+            "The Storm Rages"
         ]
     },
     yAxis: {

@@ -18,8 +18,9 @@ Highcharts.chart('crucible_warrior_arms_beastlord',
     plotOptions: {
         bar: {
             dataLabels: {
+                align: "right",
                 color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
-                enabled: false
+                enabled: true
             },
             point: {
                 events: {
@@ -39,27 +40,35 @@ Highcharts.chart('crucible_warrior_arms_beastlord',
         {
             color: "#4572a7",
             data: [
-                23471,
-                21491,
-                21248,
-                19331,
-                19316,
-                17268,
-                17006,
-                15030,
-                14653,
-                14313,
-                -568,
-                -1136,
-                -1703,
-                -2838
+                39146,
+                27519,
+                25058,
+                24970,
+                22034,
+                20628,
+                19717,
+                19531,
+                19377,
+                17351,
+                17148,
+                15414,
+                12186,
+                11622,
+                10500,
+                10227,
+                9811,
+                1130,
+                1003,
+                0,
+                0,
+                0
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-23 00:36 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7786884607bd22ed9ffb94c9e5b1f3e808d669af\" target=\"blank\">7786884</a>"
+        text: "UTC 2017-09-27 15:23 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/68e31d9f343d9da2bb75ce6aad219d205f34e0b3\" target=\"blank\">68e31d9</a>"
     },
     title: {
         text: "Warrior - Arms - Beastlord"
@@ -76,20 +85,28 @@ Highcharts.chart('crucible_warrior_arms_beastlord',
     },
     xAxis: {
         categories: [
-            "Murderous Intent",
+            "Many Will Fall",
+            "Dark Sorrows",
             "Light Speed",
-            "Secure in the Light",
-            "Infusion of Light",
             "Shadowbind",
+            "Infusion of Light",
+            "Murderous Intent",
             "Master of Shadows",
+            "Secure in the Light",
+            "One Against Many",
+            "Torment the Weak",
             "Shocklight",
             "Chaotic Darkness",
-            "Dark Sorrows",
-            "Torment the Weak",
-            "+1 itemlevel",
-            "+2 itemlevel",
+            "Storm of Swords",
+            "Unending Rage",
+            "Exploit the Weakness",
+            "Deathblow",
+            "Precise Strikes",
+            "+5 itemlevel",
+            "Crushing Blows",
             "+3 itemlevel",
-            "+5 itemlevel"
+            "+2 itemlevel",
+            "+1 itemlevel"
         ]
     },
     yAxis: {

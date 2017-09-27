@@ -18,8 +18,9 @@ Highcharts.chart('crucible_monk_windwalker_beastlord',
     plotOptions: {
         bar: {
             dataLabels: {
+                align: "right",
                 color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
-                enabled: false
+                enabled: true
             },
             point: {
                 events: {
@@ -39,27 +40,35 @@ Highcharts.chart('crucible_monk_windwalker_beastlord',
         {
             color: "#4572a7",
             data: [
-                30805,
-                27742,
-                24331,
-                19873,
-                18810,
-                18521,
-                18071,
-                16795,
-                16129,
-                14513,
-                12101,
-                7260,
-                4840,
-                2420
+                36157,
+                29011,
+                27283,
+                22988,
+                20483,
+                19677,
+                19049,
+                18805,
+                17589,
+                15179,
+                15028,
+                14527,
+                14232,
+                12677,
+                10976,
+                6585,
+                4390,
+                2195,
+                1834,
+                0,
+                0,
+                0
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-23 00:36 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7786884607bd22ed9ffb94c9e5b1f3e808d669af\" target=\"blank\">7786884</a>"
+        text: "UTC 2017-09-27 15:23 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/68e31d9f343d9da2bb75ce6aad219d205f34e0b3\" target=\"blank\">68e31d9</a>"
     },
     title: {
         text: "Monk - Windwalker - Beastlord"
@@ -76,20 +85,28 @@ Highcharts.chart('crucible_monk_windwalker_beastlord',
     },
     xAxis: {
         categories: [
-            "Murderous Intent",
+            "Fists of the Wind",
             "Shocklight",
-            "Dark Sorrows",
+            "Murderous Intent",
             "Master of Shadows",
+            "Dark Sorrows",
+            "Shadowbind",
             "Torment the Weak",
             "Secure in the Light",
-            "Chaotic Darkness",
-            "Shadowbind",
-            "Light Speed",
             "Infusion of Light",
+            "Inner Peace",
+            "Light Speed",
+            "Chaotic Darkness",
+            "Rising Winds",
+            "Power of a Thousand Cranes",
             "+5 itemlevel",
             "+3 itemlevel",
             "+2 itemlevel",
-            "+1 itemlevel"
+            "+1 itemlevel",
+            "Strength of Xuen",
+            "Death Art",
+            "Tiger Claws",
+            "Split Personality"
         ]
     },
     yAxis: {

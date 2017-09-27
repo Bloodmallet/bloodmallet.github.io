@@ -18,8 +18,9 @@ Highcharts.chart('crucible_rogue_assassination_beastlord',
     plotOptions: {
         bar: {
             dataLabels: {
+                align: "right",
                 color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
-                enabled: false
+                enabled: true
             },
             point: {
                 events: {
@@ -39,27 +40,35 @@ Highcharts.chart('crucible_rogue_assassination_beastlord',
         {
             color: "#4572a7",
             data: [
-                32155,
-                24598,
-                22703,
-                20417,
-                19825,
-                19733,
-                18131,
-                16455,
-                14958,
-                13361,
-                9873,
-                6582,
-                3291,
-                2404
+                74431,
+                40073,
+                28647,
+                26630,
+                25578,
+                21263,
+                20199,
+                20146,
+                18001,
+                14683,
+                14526,
+                10599,
+                9485,
+                8903,
+                8712,
+                8613,
+                6359,
+                5254,
+                4683,
+                4239,
+                2119,
+                1182
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-23 00:36 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7786884607bd22ed9ffb94c9e5b1f3e808d669af\" target=\"blank\">7786884</a>"
+        text: "UTC 2017-09-27 15:23 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/68e31d9f343d9da2bb75ce6aad219d205f34e0b3\" target=\"blank\">68e31d9</a>"
     },
     title: {
         text: "Rogue - Assassination - Beastlord"
@@ -76,20 +85,28 @@ Highcharts.chart('crucible_rogue_assassination_beastlord',
     },
     xAxis: {
         categories: [
+            "Poison Knives",
+            "Master Alchemist",
             "Master of Shadows",
-            "Murderous Intent",
             "Dark Sorrows",
-            "Shadowbind",
-            "Secure in the Light",
             "Shocklight",
-            "Chaotic Darkness",
-            "+5 itemlevel",
-            "Torment the Weak",
             "Infusion of Light",
+            "Secure in the Light",
+            "Murderous Intent",
+            "Shadowbind",
+            "Chaotic Darkness",
+            "Torment the Weak",
+            "+5 itemlevel",
+            "Light Speed",
+            "Master Assassin",
+            "Strangler",
+            "Gushing Wound",
             "+3 itemlevel",
+            "Toxic Blades",
+            "Serrated Edge",
             "+2 itemlevel",
             "+1 itemlevel",
-            "Light Speed"
+            "Balanced Blades"
         ]
     },
     yAxis: {

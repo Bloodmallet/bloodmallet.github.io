@@ -18,8 +18,9 @@ Highcharts.chart('crucible_warlock_demonology_patchwerk',
     plotOptions: {
         bar: {
             dataLabels: {
+                align: "right",
                 color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
-                enabled: false
+                enabled: true
             },
             point: {
                 events: {
@@ -39,27 +40,35 @@ Highcharts.chart('crucible_warlock_demonology_patchwerk',
         {
             color: "#4572a7",
             data: [
-                25137,
-                20527,
-                19539,
-                17459,
-                16181,
-                15852,
-                15550,
-                15082,
-                14960,
-                14650,
-                14569,
-                10054,
-                5027,
-                4401
+                25701,
+                25356,
+                21211,
+                19503,
+                16709,
+                16650,
+                16267,
+                16071,
+                15884,
+                15693,
+                15213,
+                14497,
+                10142,
+                10023,
+                7793,
+                7083,
+                5784,
+                5071,
+                4095,
+                2651,
+                2213,
+                0
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-23 00:36 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7786884607bd22ed9ffb94c9e5b1f3e808d669af\" target=\"blank\">7786884</a>"
+        text: "UTC 2017-09-27 15:23 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/68e31d9f343d9da2bb75ce6aad219d205f34e0b3\" target=\"blank\">68e31d9</a>"
     },
     title: {
         text: "Warlock - Demonology - Patchwerk"
@@ -76,20 +85,28 @@ Highcharts.chart('crucible_warlock_demonology_patchwerk',
     },
     xAxis: {
         categories: [
+            "Infernal Furnace",
             "+5 itemlevel",
             "Light Speed",
             "Torment the Weak",
             "Shadowbind",
             "Secure in the Light",
             "Master of Shadows",
-            "Infusion of Light",
-            "+3 itemlevel",
             "Chaotic Darkness",
             "Murderous Intent",
+            "Infusion of Light",
+            "+3 itemlevel",
             "Shocklight",
             "+2 itemlevel",
+            "Summoner's Prowess",
+            "Left Hand of Darkness",
+            "Dark Sorrows",
+            "Sharpened Dreadfangs",
             "+1 itemlevel",
-            "Dark Sorrows"
+            "The Doom of Azeroth",
+            "Dirty Hands",
+            "Maw of Shadows",
+            "Legionwrath"
         ]
     },
     yAxis: {

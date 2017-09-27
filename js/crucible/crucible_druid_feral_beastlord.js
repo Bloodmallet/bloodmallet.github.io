@@ -18,8 +18,9 @@ Highcharts.chart('crucible_druid_feral_beastlord',
     plotOptions: {
         bar: {
             dataLabels: {
+                align: "right",
                 color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
-                enabled: false
+                enabled: true
             },
             point: {
                 events: {
@@ -39,27 +40,35 @@ Highcharts.chart('crucible_druid_feral_beastlord',
         {
             color: "#4572a7",
             data: [
-                22997,
-                19813,
-                18082,
-                17653,
-                16913,
-                14671,
-                14490,
-                14259,
-                13090,
-                10240,
-                6761,
-                4056,
-                2704,
-                1352
+                31248,
+                20879,
+                19851,
+                17460,
+                17375,
+                16101,
+                15081,
+                14906,
+                13428,
+                13267,
+                12307,
+                11667,
+                9505,
+                8883,
+                7204,
+                6028,
+                5329,
+                4963,
+                4119,
+                3553,
+                1776,
+                0
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-23 00:36 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7786884607bd22ed9ffb94c9e5b1f3e808d669af\" target=\"blank\">7786884</a>"
+        text: "UTC 2017-09-27 15:23 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/68e31d9f343d9da2bb75ce6aad219d205f34e0b3\" target=\"blank\">68e31d9</a>"
     },
     title: {
         text: "Druid - Feral - Beastlord"
@@ -77,19 +86,27 @@ Highcharts.chart('crucible_druid_feral_beastlord',
     xAxis: {
         categories: [
             "Dark Sorrows",
-            "Shocklight",
-            "Secure in the Light",
             "Infusion of Light",
             "Shadowbind",
+            "Tear the Flesh",
+            "Secure in the Light",
             "Torment the Weak",
+            "Shocklight",
             "Murderous Intent",
+            "Light Speed",
             "Chaotic Darkness",
             "Master of Shadows",
-            "Light Speed",
+            "Ashamane's Energy",
+            "Feral Instinct",
             "+5 itemlevel",
+            "Sharpened Claws",
+            "Thrashing Claws",
             "+3 itemlevel",
+            "Feral Power",
+            "Razor Fangs",
             "+2 itemlevel",
-            "+1 itemlevel"
+            "+1 itemlevel",
+            "Powerful Bite"
         ]
     },
     yAxis: {

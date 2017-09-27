@@ -18,8 +18,9 @@ Highcharts.chart('crucible_demon_hunter_havoc_beastlord',
     plotOptions: {
         bar: {
             dataLabels: {
+                align: "right",
                 color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
-                enabled: false
+                enabled: true
             },
             point: {
                 events: {
@@ -39,27 +40,35 @@ Highcharts.chart('crucible_demon_hunter_havoc_beastlord',
         {
             color: "#4572a7",
             data: [
-                30803,
-                27282,
-                27008,
-                25968,
-                24078,
-                23671,
-                23340,
-                22823,
-                21606,
-                21276,
-                18481,
-                13698,
-                12321,
-                6160
+                33281,
+                31004,
+                24849,
+                23994,
+                22794,
+                20884,
+                18602,
+                18448,
+                17975,
+                17049,
+                16013,
+                13094,
+                12401,
+                8465,
+                6777,
+                6200,
+                4585,
+                3996,
+                2721,
+                1808,
+                1801,
+                0
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-23 00:36 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7786884607bd22ed9ffb94c9e5b1f3e808d669af\" target=\"blank\">7786884</a>"
+        text: "UTC 2017-09-27 15:23 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/68e31d9f343d9da2bb75ce6aad219d205f34e0b3\" target=\"blank\">68e31d9</a>"
     },
     title: {
         text: "Demon_Hunter - Havoc - Beastlord"
@@ -76,20 +85,28 @@ Highcharts.chart('crucible_demon_hunter_havoc_beastlord',
     },
     xAxis: {
         categories: [
-            "+5 itemlevel",
-            "Torment the Weak",
-            "Shocklight",
-            "Infusion of Light",
-            "Master of Shadows",
             "Dark Sorrows",
-            "Secure in the Light",
+            "+5 itemlevel",
+            "Shocklight",
             "Shadowbind",
             "Murderous Intent",
-            "Chaotic Darkness",
+            "Infusion of Light",
             "+3 itemlevel",
-            "Light Speed",
+            "Master of Shadows",
+            "Chaotic Darkness",
+            "Critical Chaos",
+            "Secure in the Light",
+            "Torment the Weak",
             "+2 itemlevel",
-            "+1 itemlevel"
+            "Unleashed Demons",
+            "Light Speed",
+            "+1 itemlevel",
+            "Wide Eyes",
+            "Contained Fury",
+            "Chaos Vision",
+            "Sharpened Glaives",
+            "Demon Rage",
+            "Overwhelming Power"
         ]
     },
     yAxis: {

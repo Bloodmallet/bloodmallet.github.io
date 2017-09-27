@@ -18,8 +18,9 @@ Highcharts.chart('crucible_priest_shadow_beastlord',
     plotOptions: {
         bar: {
             dataLabels: {
+                align: "right",
                 color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
-                enabled: false
+                enabled: true
             },
             point: {
                 events: {
@@ -39,27 +40,35 @@ Highcharts.chart('crucible_priest_shadow_beastlord',
         {
             color: "#4572a7",
             data: [
-                46360,
-                44559,
-                41823,
-                34405,
-                34222,
-                31670,
-                31268,
-                29019,
-                27497,
-                25093,
-                23478,
-                22996,
-                16729,
-                8364
+                62289,
+                44621,
+                41494,
+                41003,
+                36121,
+                30735,
+                29008,
+                26772,
+                26270,
+                23395,
+                23243,
+                22770,
+                19366,
+                18688,
+                17848,
+                17633,
+                11718,
+                8924,
+                6036,
+                1176,
+                0,
+                0
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-23 00:36 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7786884607bd22ed9ffb94c9e5b1f3e808d669af\" target=\"blank\">7786884</a>"
+        text: "UTC 2017-09-27 15:23 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/68e31d9f343d9da2bb75ce6aad219d205f34e0b3\" target=\"blank\">68e31d9</a>"
     },
     title: {
         text: "Priest - Shadow - Beastlord"
@@ -77,19 +86,27 @@ Highcharts.chart('crucible_priest_shadow_beastlord',
     xAxis: {
         categories: [
             "Dark Sorrows",
-            "Shadowbind",
             "+5 itemlevel",
+            "Shadowbind",
             "Chaotic Darkness",
-            "Torment the Weak",
-            "Infusion of Light",
-            "Shocklight",
-            "Master of Shadows",
             "Secure in the Light",
+            "Infusion of Light",
+            "Torment the Weak",
             "+3 itemlevel",
+            "Master of Shadows",
+            "To the Pain",
+            "Touch of Darkness",
+            "Shocklight",
             "Murderous Intent",
-            "Light Speed",
+            "Creeping Shadows",
             "+2 itemlevel",
-            "+1 itemlevel"
+            "Light Speed",
+            "Unleash the Shadows",
+            "+1 itemlevel",
+            "Mind Shattering",
+            "Death's Embrace",
+            "Void Corruption",
+            "Fiending Dark"
         ]
     },
     yAxis: {

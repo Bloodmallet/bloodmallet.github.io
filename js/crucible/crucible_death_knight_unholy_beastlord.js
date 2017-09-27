@@ -18,8 +18,9 @@ Highcharts.chart('crucible_death_knight_unholy_beastlord',
     plotOptions: {
         bar: {
             dataLabels: {
+                align: "right",
                 color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
-                enabled: false
+                enabled: true
             },
             point: {
                 events: {
@@ -39,27 +40,35 @@ Highcharts.chart('crucible_death_knight_unholy_beastlord',
         {
             color: "#4572a7",
             data: [
-                28818,
-                24102,
-                22676,
-                22286,
-                15673,
-                15397,
-                12572,
-                12076,
-                10072,
-                7135,
-                6043,
-                4028,
-                2014,
-                -90107
+                36233,
+                29794,
+                29448,
+                25007,
+                23491,
+                22967,
+                22389,
+                20986,
+                20942,
+                19992,
+                15194,
+                15061,
+                10637,
+                9116,
+                8784,
+                8607,
+                6077,
+                3211,
+                3038,
+                2102,
+                0,
+                0
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-23 00:36 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7786884607bd22ed9ffb94c9e5b1f3e808d669af\" target=\"blank\">7786884</a>"
+        text: "UTC 2017-09-27 15:23 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/68e31d9f343d9da2bb75ce6aad219d205f34e0b3\" target=\"blank\">68e31d9</a>"
     },
     title: {
         text: "Death_Knight - Unholy - Beastlord"
@@ -77,18 +86,26 @@ Highcharts.chart('crucible_death_knight_unholy_beastlord',
     xAxis: {
         categories: [
             "Dark Sorrows",
+            "Plaguebearer",
             "Master of Shadows",
             "Shocklight",
             "Murderous Intent",
-            "Shadowbind",
-            "Torment the Weak",
+            "The Darkest Crusade",
             "Chaotic Darkness",
-            "Secure in the Light",
-            "+5 itemlevel",
+            "Torment the Weak",
             "Infusion of Light",
+            "Shadowbind",
+            "+5 itemlevel",
+            "Secure in the Light",
+            "Scourge the Unbeliever",
             "+3 itemlevel",
+            "Runic Tattoos",
+            "Deadliest Coil",
             "+2 itemlevel",
+            "Rotten Touch",
             "+1 itemlevel",
+            "Lash of Shadows",
+            "Eternal Agony",
             "Light Speed"
         ]
     },

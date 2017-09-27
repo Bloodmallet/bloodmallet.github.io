@@ -18,8 +18,9 @@ Highcharts.chart('crucible_paladin_retribution_beastlord',
     plotOptions: {
         bar: {
             dataLabels: {
+                align: "right",
                 color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
-                enabled: false
+                enabled: true
             },
             point: {
                 events: {
@@ -39,27 +40,35 @@ Highcharts.chart('crucible_paladin_retribution_beastlord',
         {
             color: "#4572a7",
             data: [
-                34731,
-                29584,
-                26923,
-                26451,
-                24327,
-                23849,
-                23120,
-                22542,
-                20838,
-                19269,
-                16653,
-                13892,
-                7071,
-                6946
+                39950,
+                29521,
+                29279,
+                25844,
+                22138,
+                22125,
+                21351,
+                19812,
+                19568,
+                18265,
+                17712,
+                16061,
+                15061,
+                14752,
+                12014,
+                11808,
+                8855,
+                6715,
+                5904,
+                4893,
+                0,
+                0
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-23 00:36 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7786884607bd22ed9ffb94c9e5b1f3e808d669af\" target=\"blank\">7786884</a>"
+        text: "UTC 2017-09-27 15:23 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/68e31d9f343d9da2bb75ce6aad219d205f34e0b3\" target=\"blank\">68e31d9</a>"
     },
     title: {
         text: "Paladin - Retribution - Beastlord"
@@ -76,20 +85,28 @@ Highcharts.chart('crucible_paladin_retribution_beastlord',
     },
     xAxis: {
         categories: [
-            "+5 itemlevel",
-            "Infusion of Light",
             "Dark Sorrows",
+            "+5 itemlevel",
+            "Righteous Blade",
+            "Wrath of the Ashbringer",
             "Secure in the Light",
+            "Infusion of Light",
             "Murderous Intent",
-            "Shocklight",
-            "Shadowbind",
             "Chaotic Darkness",
+            "Shadowbind",
+            "Shocklight",
             "+3 itemlevel",
-            "Torment the Weak",
             "Light Speed",
+            "Deliver the Justice",
+            "Torment the Weak",
+            "Righteous Verdict",
             "+2 itemlevel",
             "Master of Shadows",
-            "+1 itemlevel"
+            "Highlord's Judgment",
+            "+1 itemlevel",
+            "Sharpened Edge",
+            "Protector of the Ashen Blade",
+            "Might of the Templar"
         ]
     },
     yAxis: {

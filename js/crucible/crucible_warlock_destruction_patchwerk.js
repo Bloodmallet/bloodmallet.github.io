@@ -18,8 +18,9 @@ Highcharts.chart('crucible_warlock_destruction_patchwerk',
     plotOptions: {
         bar: {
             dataLabels: {
+                align: "right",
                 color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
-                enabled: false
+                enabled: true
             },
             point: {
                 events: {
@@ -39,27 +40,36 @@ Highcharts.chart('crucible_warlock_destruction_patchwerk',
         {
             color: "#4572a7",
             data: [
-                24812,
-                20359,
-                18720,
-                18410,
-                17400,
-                16414,
-                16343,
-                16200,
-                14887,
-                14761,
-                14022,
-                9924,
-                6394,
-                4962
+                23516,
+                18723,
+                17328,
+                16536,
+                16472,
+                16454,
+                15018,
+                14994,
+                14109,
+                13374,
+                13175,
+                10770,
+                9406,
+                8200,
+                7094,
+                6783,
+                6329,
+                4703,
+                3709,
+                3701,
+                3214,
+                0,
+                0
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-23 00:36 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7786884607bd22ed9ffb94c9e5b1f3e808d669af\" target=\"blank\">7786884</a>"
+        text: "UTC 2017-09-27 15:23 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/68e31d9f343d9da2bb75ce6aad219d205f34e0b3\" target=\"blank\">68e31d9</a>"
     },
     title: {
         text: "Warlock - Destruction - Patchwerk"
@@ -80,16 +90,25 @@ Highcharts.chart('crucible_warlock_destruction_patchwerk',
             "Torment the Weak",
             "Infusion of Light",
             "Secure in the Light",
+            "Murderous Intent",
             "Shadowbind",
             "Shocklight",
             "Chaotic Darkness",
-            "Murderous Intent",
             "+3 itemlevel",
-            "Master of Shadows",
             "Light Speed",
+            "Master of Shadows",
+            "Burning Hunger",
             "+2 itemlevel",
+            "Chaotic Instability",
             "Dark Sorrows",
-            "+1 itemlevel"
+            "Residual Flames",
+            "Flames of Sargeras",
+            "+1 itemlevel",
+            "Fire and the Flames",
+            "Soulsnatcher",
+            "Master of Disaster",
+            "Devourer of Life",
+            "Fire From the Sky"
         ]
     },
     yAxis: {

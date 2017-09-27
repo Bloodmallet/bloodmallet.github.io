@@ -18,8 +18,9 @@ Highcharts.chart('crucible_rogue_outlaw_beastlord',
     plotOptions: {
         bar: {
             dataLabels: {
+                align: "right",
                 color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
-                enabled: false
+                enabled: true
             },
             point: {
                 events: {
@@ -39,27 +40,36 @@ Highcharts.chart('crucible_rogue_outlaw_beastlord',
         {
             color: "#4572a7",
             data: [
-                27039,
-                25122,
-                24806,
-                24741,
-                23827,
-                22573,
-                22054,
-                20209,
-                15034,
-                13274,
-                11559,
-                6935,
-                4623,
-                2311
+                41203,
+                38670,
+                28999,
+                26038,
+                25937,
+                25450,
+                23573,
+                22936,
+                22339,
+                21484,
+                20269,
+                19668,
+                18868,
+                18390,
+                16600,
+                15888,
+                15205,
+                12512,
+                10618,
+                9123,
+                7839,
+                6082,
+                3041
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-23 00:36 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7786884607bd22ed9ffb94c9e5b1f3e808d669af\" target=\"blank\">7786884</a>"
+        text: "UTC 2017-09-27 15:23 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/68e31d9f343d9da2bb75ce6aad219d205f34e0b3\" target=\"blank\">68e31d9</a>"
     },
     title: {
         text: "Rogue - Outlaw - Beastlord"
@@ -76,18 +86,27 @@ Highcharts.chart('crucible_rogue_outlaw_beastlord',
     },
     xAxis: {
         categories: [
-            "Secure in the Light",
+            "Blade Dancer",
             "Dark Sorrows",
-            "Infusion of Light",
-            "Murderous Intent",
             "Torment the Weak",
-            "Chaotic Darkness",
+            "Fatebringer",
+            "Infusion of Light",
             "Light Speed",
             "Shadowbind",
+            "Secure in the Light",
+            "Murderous Intent",
+            "Fate's Thirst",
             "Shocklight",
+            "Fortune Strikes",
+            "Chaotic Darkness",
+            "Fortune's Boon",
             "Master of Shadows",
+            "Sabermetrics",
             "+5 itemlevel",
+            "Fortune's Strike",
+            "Black Powder",
             "+3 itemlevel",
+            "Gunslinger",
             "+2 itemlevel",
             "+1 itemlevel"
         ]

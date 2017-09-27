@@ -18,8 +18,9 @@ Highcharts.chart('crucible_death_knight_unholy_patchwerk',
     plotOptions: {
         bar: {
             dataLabels: {
+                align: "right",
                 color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
-                enabled: false
+                enabled: true
             },
             point: {
                 events: {
@@ -39,27 +40,35 @@ Highcharts.chart('crucible_death_knight_unholy_patchwerk',
         {
             color: "#4572a7",
             data: [
-                24966,
-                23115,
-                19386,
-                17997,
-                16366,
-                16173,
-                15430,
-                14535,
-                10422,
-                7868,
-                7740,
-                4720,
-                3147,
-                1573
+                23059,
+                21314,
+                20725,
+                18065,
+                16563,
+                16249,
+                16229,
+                15533,
+                15151,
+                11900,
+                11516,
+                11248,
+                9739,
+                9674,
+                5843,
+                5287,
+                5178,
+                4595,
+                3895,
+                3409,
+                1947,
+                0
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-23 00:36 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7786884607bd22ed9ffb94c9e5b1f3e808d669af\" target=\"blank\">7786884</a>"
+        text: "UTC 2017-09-27 15:23 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/68e31d9f343d9da2bb75ce6aad219d205f34e0b3\" target=\"blank\">68e31d9</a>"
     },
     title: {
         text: "Death_Knight - Unholy - Patchwerk"
@@ -80,16 +89,24 @@ Highcharts.chart('crucible_death_knight_unholy_patchwerk',
             "Shadowbind",
             "Chaotic Darkness",
             "Master of Shadows",
-            "Secure in the Light",
-            "Murderous Intent",
-            "Infusion of Light",
             "Shocklight",
             "Light Speed",
+            "Infusion of Light",
+            "Secure in the Light",
+            "Murderous Intent",
+            "The Darkest Crusade",
+            "Plaguebearer",
+            "Deadliest Coil",
             "+5 itemlevel",
             "Dark Sorrows",
             "+3 itemlevel",
+            "Runic Tattoos",
+            "Lash of Shadows",
+            "Scourge the Unbeliever",
             "+2 itemlevel",
-            "+1 itemlevel"
+            "Rotten Touch",
+            "+1 itemlevel",
+            "Eternal Agony"
         ]
     },
     yAxis: {

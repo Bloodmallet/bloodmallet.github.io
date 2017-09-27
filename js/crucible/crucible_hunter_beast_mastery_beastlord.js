@@ -18,8 +18,9 @@ Highcharts.chart('crucible_hunter_beast_mastery_beastlord',
     plotOptions: {
         bar: {
             dataLabels: {
+                align: "right",
                 color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
-                enabled: false
+                enabled: true
             },
             point: {
                 events: {
@@ -39,27 +40,35 @@ Highcharts.chart('crucible_hunter_beast_mastery_beastlord',
         {
             color: "#4572a7",
             data: [
-                33702,
-                30126,
-                27898,
-                24934,
-                22363,
-                22212,
-                21263,
-                18785,
-                18585,
-                17654,
-                16202,
-                10592,
-                7061,
-                3530
+                58625,
+                34875,
+                32665,
+                29679,
+                28422,
+                27025,
+                26096,
+                20939,
+                18833,
+                18282,
+                17243,
+                16832,
+                16223,
+                15049,
+                14394,
+                11381,
+                7463,
+                6828,
+                4552,
+                3589,
+                2354,
+                2276
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-23 00:36 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7786884607bd22ed9ffb94c9e5b1f3e808d669af\" target=\"blank\">7786884</a>"
+        text: "UTC 2017-09-27 15:23 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/68e31d9f343d9da2bb75ce6aad219d205f34e0b3\" target=\"blank\">68e31d9</a>"
     },
     title: {
         text: "Hunter - Beast_Mastery - Beastlord"
@@ -76,19 +85,27 @@ Highcharts.chart('crucible_hunter_beast_mastery_beastlord',
     },
     xAxis: {
         categories: [
+            "Furious Swipes",
             "Shocklight",
-            "Master of Shadows",
+            "Slithering Serpents",
             "Light Speed",
+            "Master of Shadows",
             "Murderous Intent",
-            "Infusion of Light",
             "Dark Sorrows",
-            "Shadowbind",
-            "Torment the Weak",
-            "Secure in the Light",
-            "+5 itemlevel",
+            "Unleash the Beast",
             "Chaotic Darkness",
+            "Torment the Weak",
+            "Jaws of Thunder",
+            "Shadowbind",
+            "Secure in the Light",
+            "Wilderness Expert",
+            "Infusion of Light",
+            "+5 itemlevel",
+            "Pack Leader",
             "+3 itemlevel",
             "+2 itemlevel",
+            "Spitting Cobras",
+            "Focus of the Titans",
             "+1 itemlevel"
         ]
     },

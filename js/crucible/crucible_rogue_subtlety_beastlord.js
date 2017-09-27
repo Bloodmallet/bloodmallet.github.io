@@ -18,8 +18,9 @@ Highcharts.chart('crucible_rogue_subtlety_beastlord',
     plotOptions: {
         bar: {
             dataLabels: {
+                align: "right",
                 color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
-                enabled: false
+                enabled: true
             },
             point: {
                 events: {
@@ -39,27 +40,35 @@ Highcharts.chart('crucible_rogue_subtlety_beastlord',
         {
             color: "#4572a7",
             data: [
-                32468,
-                28172,
-                26314,
-                25592,
-                25492,
-                24613,
-                22927,
-                22416,
-                22261,
-                20377,
-                17115,
-                10269,
-                6846,
-                3423
+                30735,
+                29112,
+                27295,
+                22892,
+                21973,
+                18883,
+                18450,
+                18060,
+                16838,
+                15812,
+                15295,
+                14426,
+                12328,
+                10632,
+                9578,
+                9425,
+                9265,
+                7339,
+                6379,
+                4252,
+                2126,
+                1597
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-23 01:19 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7786884607bd22ed9ffb94c9e5b1f3e808d669af\" target=\"blank\">7786884</a>"
+        text: "UTC 2017-09-27 15:23 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/68e31d9f343d9da2bb75ce6aad219d205f34e0b3\" target=\"blank\">68e31d9</a>"
     },
     title: {
         text: "Rogue - Subtlety DfA - Beastlord"
@@ -76,20 +85,28 @@ Highcharts.chart('crucible_rogue_subtlety_beastlord',
     },
     xAxis: {
         categories: [
-            "Master of Shadows",
-            "Murderous Intent",
-            "Torment the Weak",
-            "Shadowbind",
-            "Shocklight",
-            "Infusion of Light",
+            "Gutripper",
             "Dark Sorrows",
+            "Master of Shadows",
+            "Shocklight",
+            "Murderous Intent",
             "Secure in the Light",
+            "Shadowbind",
             "Chaotic Darkness",
+            "Torment the Weak",
+            "Energetic Stabbing",
+            "Infusion of Light",
             "Light Speed",
+            "Soul Shadows",
             "+5 itemlevel",
+            "Demon's Kiss",
+            "Weak Point",
+            "Precision Strike",
+            "Fortune's Bite",
             "+3 itemlevel",
             "+2 itemlevel",
-            "+1 itemlevel"
+            "+1 itemlevel",
+            "The Quiet Knife"
         ]
     },
     yAxis: {

@@ -18,8 +18,9 @@ Highcharts.chart('crucible_rogue_subtlety_patchwerk',
     plotOptions: {
         bar: {
             dataLabels: {
+                align: "right",
                 color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
-                enabled: false
+                enabled: true
             },
             point: {
                 events: {
@@ -39,27 +40,35 @@ Highcharts.chart('crucible_rogue_subtlety_patchwerk',
         {
             color: "#4572a7",
             data: [
-                21483,
-                19589,
-                19570,
-                19463,
-                18124,
-                14439,
-                14038,
-                11653,
-                11286,
-                8196,
-                6771,
-                6552,
-                4514,
-                2257
+                21579,
+                21167,
+                20880,
+                20592,
+                19059,
+                18326,
+                16322,
+                15699,
+                15364,
+                15043,
+                14850,
+                12499,
+                12123,
+                11120,
+                9371,
+                9217,
+                8866,
+                8520,
+                7273,
+                6832,
+                4849,
+                2424
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-23 01:19 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7786884607bd22ed9ffb94c9e5b1f3e808d669af\" target=\"blank\">7786884</a>"
+        text: "UTC 2017-09-27 15:23 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/68e31d9f343d9da2bb75ce6aad219d205f34e0b3\" target=\"blank\">68e31d9</a>"
     },
     title: {
         text: "Rogue - Subtlety DfA - Patchwerk"
@@ -78,16 +87,24 @@ Highcharts.chart('crucible_rogue_subtlety_patchwerk',
         categories: [
             "Torment the Weak",
             "Shadowbind",
-            "Infusion of Light",
             "Secure in the Light",
+            "Infusion of Light",
             "Chaotic Darkness",
+            "Energetic Stabbing",
+            "Weak Point",
             "Murderous Intent",
-            "Master of Shadows",
             "Shocklight",
+            "Gutripper",
+            "Master of Shadows",
+            "Soul Shadows",
             "+5 itemlevel",
+            "Precision Strike",
             "Light Speed",
-            "+3 itemlevel",
+            "Demon's Kiss",
+            "The Quiet Knife",
             "Dark Sorrows",
+            "+3 itemlevel",
+            "Fortune's Bite",
             "+2 itemlevel",
             "+1 itemlevel"
         ]

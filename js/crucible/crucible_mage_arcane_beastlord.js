@@ -18,8 +18,9 @@ Highcharts.chart('crucible_mage_arcane_beastlord',
     plotOptions: {
         bar: {
             dataLabels: {
+                align: "right",
                 color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
-                enabled: false
+                enabled: true
             },
             point: {
                 events: {
@@ -39,27 +40,35 @@ Highcharts.chart('crucible_mage_arcane_beastlord',
         {
             color: "#4572a7",
             data: [
-                49116,
-                29469,
-                27666,
-                24898,
-                24562,
-                24490,
-                23430,
-                22560,
-                19646,
-                19623,
-                19088,
-                17123,
-                12467,
-                9823
+                55058,
+                50100,
+                48900,
+                33038,
+                33034,
+                26581,
+                25690,
+                24597,
+                23413,
+                22373,
+                22352,
+                22128,
+                22023,
+                19806,
+                19492,
+                18731,
+                11011,
+                10336,
+                8699,
+                7452,
+                5816,
+                1876
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-23 00:36 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7786884607bd22ed9ffb94c9e5b1f3e808d669af\" target=\"blank\">7786884</a>"
+        text: "UTC 2017-09-27 15:23 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/68e31d9f343d9da2bb75ce6aad219d205f34e0b3\" target=\"blank\">68e31d9</a>"
     },
     title: {
         text: "Mage - Arcane - Beastlord"
@@ -77,19 +86,27 @@ Highcharts.chart('crucible_mage_arcane_beastlord',
     xAxis: {
         categories: [
             "+5 itemlevel",
-            "+3 itemlevel",
-            "Shocklight",
-            "Chaotic Darkness",
+            "Aegwynn's Imperative",
+            "Arcane Purification",
             "Dark Sorrows",
-            "Murderous Intent",
+            "+3 itemlevel",
+            "Secure in the Light",
             "Master of Shadows",
+            "Murderous Intent",
+            "Shadowbind",
+            "Aegwynn's Wrath",
+            "Chaotic Darkness",
             "Infusion of Light",
             "+2 itemlevel",
-            "Secure in the Light",
-            "Shadowbind",
-            "Torment the Weak",
+            "Shocklight",
             "Light Speed",
-            "+1 itemlevel"
+            "Torment the Weak",
+            "+1 itemlevel",
+            "Aegwynn's Intensity",
+            "Torrential Barrage",
+            "Aegwynn's Fury",
+            "Blasting Rod",
+            "Ethereal Sensitivity"
         ]
     },
     yAxis: {

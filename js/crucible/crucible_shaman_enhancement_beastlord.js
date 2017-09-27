@@ -18,8 +18,9 @@ Highcharts.chart('crucible_shaman_enhancement_beastlord',
     plotOptions: {
         bar: {
             dataLabels: {
+                align: "right",
                 color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
-                enabled: false
+                enabled: true
             },
             point: {
                 events: {
@@ -39,27 +40,35 @@ Highcharts.chart('crucible_shaman_enhancement_beastlord',
         {
             color: "#4572a7",
             data: [
-                31454,
-                30139,
-                27718,
-                27520,
-                26847,
-                21446,
-                21188,
-                21093,
-                20619,
-                20062,
-                18298,
-                16512,
-                11008,
-                5504
+                28673,
+                28135,
+                26488,
+                24177,
+                21760,
+                21467,
+                20940,
+                17813,
+                17203,
+                13414,
+                12859,
+                12200,
+                11469,
+                11256,
+                10377,
+                8167,
+                5734,
+                3639,
+                2140,
+                1684,
+                0,
+                0
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-23 00:36 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7786884607bd22ed9ffb94c9e5b1f3e808d669af\" target=\"blank\">7786884</a>"
+        text: "UTC 2017-09-27 15:23 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/68e31d9f343d9da2bb75ce6aad219d205f34e0b3\" target=\"blank\">68e31d9</a>"
     },
     title: {
         text: "Shaman - Enhancement - Beastlord"
@@ -76,20 +85,28 @@ Highcharts.chart('crucible_shaman_enhancement_beastlord',
     },
     xAxis: {
         categories: [
-            "Master of Shadows",
-            "Murderous Intent",
-            "Shocklight",
             "+5 itemlevel",
-            "Light Speed",
             "Dark Sorrows",
+            "Master of Shadows",
+            "Crashing Hammer",
+            "Shocklight",
+            "Murderous Intent",
+            "Light Speed",
             "Secure in the Light",
-            "Torment the Weak",
-            "Shadowbind",
-            "Chaotic Darkness",
-            "Infusion of Light",
             "+3 itemlevel",
+            "Infusion of Light",
+            "Gathering Storms",
+            "Chaotic Darkness",
             "+2 itemlevel",
-            "+1 itemlevel"
+            "Shadowbind",
+            "Torment the Weak",
+            "Wind Strikes",
+            "+1 itemlevel",
+            "Wind Surge",
+            "Gathering of the Maelstrom",
+            "Weapons of the Elements",
+            "Forged in Lava",
+            "Spirit of the Maelstrom"
         ]
     },
     yAxis: {

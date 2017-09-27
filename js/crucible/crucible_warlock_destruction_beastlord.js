@@ -18,8 +18,9 @@ Highcharts.chart('crucible_warlock_destruction_beastlord',
     plotOptions: {
         bar: {
             dataLabels: {
+                align: "right",
                 color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
-                enabled: false
+                enabled: true
             },
             point: {
                 events: {
@@ -39,27 +40,36 @@ Highcharts.chart('crucible_warlock_destruction_beastlord',
         {
             color: "#4572a7",
             data: [
-                27901,
-                19283,
-                19244,
-                18302,
-                17943,
-                16850,
-                16740,
-                15171,
-                15127,
-                14327,
-                14001,
-                11160,
-                10142,
-                5580
+                32051,
+                28836,
+                28323,
+                20575,
+                20553,
+                19836,
+                19684,
+                17903,
+                17786,
+                17737,
+                16993,
+                16953,
+                15440,
+                13046,
+                12207,
+                11329,
+                5804,
+                5664,
+                3611,
+                3353,
+                3076,
+                1774,
+                0
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-23 00:36 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7786884607bd22ed9ffb94c9e5b1f3e808d669af\" target=\"blank\">7786884</a>"
+        text: "UTC 2017-09-27 15:23 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/68e31d9f343d9da2bb75ce6aad219d205f34e0b3\" target=\"blank\">68e31d9</a>"
     },
     title: {
         text: "Warlock - Destruction - Beastlord"
@@ -76,20 +86,29 @@ Highcharts.chart('crucible_warlock_destruction_beastlord',
     },
     xAxis: {
         categories: [
-            "+5 itemlevel",
-            "Shocklight",
+            "Burning Hunger",
             "Dark Sorrows",
-            "Master of Shadows",
-            "Light Speed",
-            "Secure in the Light",
-            "+3 itemlevel",
-            "Shadowbind",
-            "Infusion of Light",
-            "Chaotic Darkness",
+            "+5 itemlevel",
             "Murderous Intent",
-            "+2 itemlevel",
+            "Infusion of Light",
+            "Master of Shadows",
+            "Shocklight",
+            "Secure in the Light",
+            "Light Speed",
+            "Shadowbind",
+            "+3 itemlevel",
+            "Chaotic Darkness",
+            "Residual Flames",
             "Torment the Weak",
-            "+1 itemlevel"
+            "Fire From the Sky",
+            "+2 itemlevel",
+            "Flames of Sargeras",
+            "+1 itemlevel",
+            "Fire and the Flames",
+            "Chaotic Instability",
+            "Soulsnatcher",
+            "Master of Disaster",
+            "Devourer of Life"
         ]
     },
     yAxis: {

@@ -18,8 +18,9 @@ Highcharts.chart('crucible_rogue_outlaw_patchwerk',
     plotOptions: {
         bar: {
             dataLabels: {
+                align: "right",
                 color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
-                enabled: false
+                enabled: true
             },
             point: {
                 events: {
@@ -39,27 +40,36 @@ Highcharts.chart('crucible_rogue_outlaw_patchwerk',
         {
             color: "#4572a7",
             data: [
-                25131,
-                23715,
-                23038,
-                22840,
-                20377,
-                14112,
-                12023,
-                11437,
-                10484,
-                8978,
-                6559,
-                5386,
-                3591,
-                1795
+                26776,
+                25121,
+                24764,
+                23662,
+                21954,
+                16536,
+                14518,
+                13405,
+                12647,
+                12342,
+                11929,
+                11914,
+                11854,
+                11230,
+                11078,
+                10592,
+                10297,
+                9121,
+                7836,
+                6738,
+                4492,
+                2246,
+                0
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-23 00:36 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7786884607bd22ed9ffb94c9e5b1f3e808d669af\" target=\"blank\">7786884</a>"
+        text: "UTC 2017-09-27 15:23 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/68e31d9f343d9da2bb75ce6aad219d205f34e0b3\" target=\"blank\">68e31d9</a>"
     },
     title: {
         text: "Rogue - Outlaw - Patchwerk"
@@ -77,19 +87,28 @@ Highcharts.chart('crucible_rogue_outlaw_patchwerk',
     xAxis: {
         categories: [
             "Torment the Weak",
-            "Infusion of Light",
             "Secure in the Light",
+            "Infusion of Light",
             "Shadowbind",
             "Chaotic Darkness",
             "Murderous Intent",
             "Light Speed",
+            "Fortune's Boon",
+            "Fatebringer",
+            "Fate's Thirst",
             "Shocklight",
-            "Master of Shadows",
-            "+5 itemlevel",
+            "Fortune Strikes",
             "Dark Sorrows",
+            "+5 itemlevel",
+            "Black Powder",
+            "Sabermetrics",
+            "Master of Shadows",
+            "Gunslinger",
+            "Fortune's Strike",
             "+3 itemlevel",
             "+2 itemlevel",
-            "+1 itemlevel"
+            "+1 itemlevel",
+            "Blade Dancer"
         ]
     },
     yAxis: {

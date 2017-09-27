@@ -18,8 +18,9 @@ Highcharts.chart('crucible_hunter_marksmanship_patchwerk',
     plotOptions: {
         bar: {
             dataLabels: {
+                align: "right",
                 color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
-                enabled: false
+                enabled: true
             },
             point: {
                 events: {
@@ -39,27 +40,35 @@ Highcharts.chart('crucible_hunter_marksmanship_patchwerk',
         {
             color: "#4572a7",
             data: [
-                24058,
-                23346,
-                22578,
-                21785,
-                21113,
-                20566,
-                20233,
-                17744,
-                15675,
-                15608,
-                14434,
-                9623,
-                5810,
-                4811
+                27548,
+                26764,
+                24386,
+                24061,
+                23229,
+                23099,
+                21598,
+                20939,
+                19731,
+                18303,
+                17777,
+                16528,
+                16394,
+                12148,
+                11530,
+                11019,
+                9825,
+                5509,
+                4623,
+                3778,
+                1474,
+                0
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-23 00:36 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7786884607bd22ed9ffb94c9e5b1f3e808d669af\" target=\"blank\">7786884</a>"
+        text: "UTC 2017-09-27 15:23 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/68e31d9f343d9da2bb75ce6aad219d205f34e0b3\" target=\"blank\">68e31d9</a>"
     },
     title: {
         text: "Hunter - Marksmanship - Patchwerk"
@@ -81,15 +90,23 @@ Highcharts.chart('crucible_hunter_marksmanship_patchwerk',
             "Infusion of Light",
             "Shadowbind",
             "Secure in the Light",
-            "Chaotic Darkness",
             "Shocklight",
+            "Chaotic Darkness",
             "Master of Shadows",
-            "Murderous Intent",
+            "Marked for Death",
             "Light Speed",
+            "Murderous Intent",
             "+3 itemlevel",
-            "+2 itemlevel",
+            "Unerring Arrows",
+            "Deadly Aim",
             "Dark Sorrows",
-            "+1 itemlevel"
+            "+2 itemlevel",
+            "Quick Shot",
+            "+1 itemlevel",
+            "Precision",
+            "Windrunner's Guidance",
+            "Gust of Wind",
+            "Called Shot"
         ]
     },
     yAxis: {

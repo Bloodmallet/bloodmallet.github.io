@@ -18,8 +18,9 @@ Highcharts.chart('crucible_hunter_marksmanship_beastlord',
     plotOptions: {
         bar: {
             dataLabels: {
+                align: "right",
                 color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
-                enabled: false
+                enabled: true
             },
             point: {
                 events: {
@@ -39,27 +40,35 @@ Highcharts.chart('crucible_hunter_marksmanship_beastlord',
         {
             color: "#4572a7",
             data: [
-                40240,
-                31522,
-                28667,
-                26717,
-                24562,
-                24144,
-                23007,
-                22842,
-                20538,
-                20488,
-                20300,
-                18728,
-                16096,
-                8048
+                35138,
+                31259,
+                29252,
+                27285,
+                23819,
+                23241,
+                22383,
+                22264,
+                22201,
+                21205,
+                21082,
+                20137,
+                19561,
+                17664,
+                14589,
+                14055,
+                10122,
+                8496,
+                7027,
+                4382,
+                0,
+                0
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-23 00:36 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7786884607bd22ed9ffb94c9e5b1f3e808d669af\" target=\"blank\">7786884</a>"
+        text: "UTC 2017-09-27 15:23 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/68e31d9f343d9da2bb75ce6aad219d205f34e0b3\" target=\"blank\">68e31d9</a>"
     },
     title: {
         text: "Hunter - Marksmanship - Beastlord"
@@ -77,19 +86,27 @@ Highcharts.chart('crucible_hunter_marksmanship_beastlord',
     xAxis: {
         categories: [
             "+5 itemlevel",
-            "Shocklight",
+            "Dark Sorrows",
             "Master of Shadows",
+            "Shocklight",
             "Murderous Intent",
+            "Secure in the Light",
+            "Windrunner's Guidance",
+            "Torment the Weak",
+            "Precision",
             "Light Speed",
             "+3 itemlevel",
             "Chaotic Darkness",
-            "Dark Sorrows",
-            "Secure in the Light",
             "Infusion of Light",
             "Shadowbind",
-            "Torment the Weak",
+            "Marked for Death",
             "+2 itemlevel",
-            "+1 itemlevel"
+            "Deadly Aim",
+            "Unerring Arrows",
+            "+1 itemlevel",
+            "Called Shot",
+            "Gust of Wind",
+            "Quick Shot"
         ]
     },
     yAxis: {
