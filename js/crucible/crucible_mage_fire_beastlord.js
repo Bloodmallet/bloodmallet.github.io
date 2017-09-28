@@ -20,7 +20,7 @@ Highcharts.chart('crucible_mage_fire_beastlord',
             dataLabels: {
                 align: "right",
                 color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
-                enabled: true
+                enabled: false
             },
             point: {
                 events: {
@@ -38,37 +38,66 @@ Highcharts.chart('crucible_mage_fire_beastlord',
     },
     series: [
         {
-            color: "#4572a7",
+            color: "#343434",
             data: [
-                42273,
-                40229,
-                29646,
-                25363,
-                22936,
-                22179,
-                21589,
-                20828,
-                19788,
-                18839,
-                18683,
-                16909,
-                14680,
-                11578,
-                11491,
-                8454,
-                8269,
-                7310,
-                2172,
-                1751,
-                1358,
-                1135
+                45197,
+                38951,
+                0,
+                27118,
+                19928,
+                19910,
+                19828,
+                19103,
+                18594,
+                18078,
+                17741,
+                17217,
+                16381,
+                0,
+                11003,
+                0,
+                9039,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            name: 1,
+            showInLegend: false
+        },
+        {
+            color: "#69CCF0",
+            data: [
+                0,
+                0,
+                28839,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                16201,
+                0,
+                10234,
+                0,
+                8545,
+                7090,
+                4953,
+                3612,
+                1647
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-27 15:23 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/68e31d9f343d9da2bb75ce6aad219d205f34e0b3\" target=\"blank\">68e31d9</a>"
+        text: "UTC 2017-09-28 00:29 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/68e31d9f343d9da2bb75ce6aad219d205f34e0b3\" target=\"blank\">68e31d9</a>"
     },
     title: {
         text: "Mage - Fire - Beastlord"
@@ -89,24 +118,24 @@ Highcharts.chart('crucible_mage_fire_beastlord',
             "Dark Sorrows",
             "Blue Flame Special",
             "+3 itemlevel",
-            "Infusion of Light",
-            "Secure in the Light",
-            "Murderous Intent",
-            "Chaotic Darkness",
             "Shadowbind",
-            "Light Speed",
+            "Infusion of Light",
             "Torment the Weak",
+            "Secure in the Light",
+            "Chaotic Darkness",
             "+2 itemlevel",
+            "Murderous Intent",
+            "Light Speed",
+            "Shocklight",
             "Burning Gaze",
             "Master of Shadows",
-            "Shocklight",
-            "+1 itemlevel",
             "Everburning Consumption",
-            "Pyroclasmic Paranoia",
-            "Great Balls of Fire",
+            "+1 itemlevel",
             "Pre-Ignited",
             "Fire at Will",
-            "Reignition Overdrive"
+            "Pyroclasmic Paranoia",
+            "Reignition Overdrive",
+            "Great Balls of Fire"
         ]
     },
     yAxis: {
@@ -115,10 +144,9 @@ Highcharts.chart('crucible_mage_fire_beastlord',
         },
         min: 0,
         stackLabels: {
-            enabled: false,
-            formatter: function() {            /* I need to figure out how to get the mean value here,            ** to allow the percent diff to mean as label            ** console.log(this); */            return;          },
+            enabled: true,
             style: {
-                color: (Highcharts.theme && Highcharts.theme.textColor) || 'white',
+                color: (Highcharts.theme && Highcharts.theme.textColor) || 'black',
                 fontWeight: "bold"
             }
         },

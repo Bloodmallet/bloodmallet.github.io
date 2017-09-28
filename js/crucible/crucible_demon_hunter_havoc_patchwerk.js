@@ -20,7 +20,7 @@ Highcharts.chart('crucible_demon_hunter_havoc_patchwerk',
             dataLabels: {
                 align: "right",
                 color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
-                enabled: true
+                enabled: false
             },
             point: {
                 events: {
@@ -38,27 +38,56 @@ Highcharts.chart('crucible_demon_hunter_havoc_patchwerk',
     },
     series: [
         {
-            color: "#4572a7",
+            color: "#343434",
             data: [
-                23623,
-                22583,
-                21309,
-                20365,
-                20163,
-                18813,
-                18792,
-                18233,
-                14847,
-                13535,
-                12097,
-                11976,
-                11206,
-                10192,
-                8065,
-                4032,
-                3015,
+                23957,
+                22561,
+                22122,
+                22021,
+                21894,
+                0,
+                19868,
+                19539,
+                15948,
+                15143,
+                0,
+                13136,
+                12740,
+                10830,
+                8757,
+                4378,
                 0,
                 0,
+                0,
+                0,
+                0,
+                0
+            ],
+            name: 1,
+            showInLegend: false
+        },
+        {
+            color: "#A330C9",
+            data: [
+                0,
+                0,
+                0,
+                0,
+                0,
+                19977,
+                0,
+                0,
+                0,
+                0,
+                13414,
+                0,
+                0,
+                0,
+                0,
+                0,
+                3946,
+                1415,
+                1256,
                 0,
                 0,
                 0
@@ -68,7 +97,7 @@ Highcharts.chart('crucible_demon_hunter_havoc_patchwerk',
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-27 15:23 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/68e31d9f343d9da2bb75ce6aad219d205f34e0b3\" target=\"blank\">68e31d9</a>"
+        text: "UTC 2017-09-28 00:29 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/68e31d9f343d9da2bb75ce6aad219d205f34e0b3\" target=\"blank\">68e31d9</a>"
     },
     title: {
         text: "Demon_Hunter - Havoc - Patchwerk"
@@ -86,17 +115,17 @@ Highcharts.chart('crucible_demon_hunter_havoc_patchwerk',
     xAxis: {
         categories: [
             "Torment the Weak",
-            "Infusion of Light",
             "Secure in the Light",
+            "Infusion of Light",
             "Shadowbind",
             "+5 itemlevel",
-            "Chaotic Darkness",
             "Critical Chaos",
+            "Chaotic Darkness",
             "Shocklight",
             "Murderous Intent",
             "Light Speed",
-            "+3 itemlevel",
             "Unleashed Demons",
+            "+3 itemlevel",
             "Master of Shadows",
             "Dark Sorrows",
             "+2 itemlevel",
@@ -104,9 +133,9 @@ Highcharts.chart('crucible_demon_hunter_havoc_patchwerk',
             "Contained Fury",
             "Demon Rage",
             "Sharpened Glaives",
-            "Overwhelming Power",
             "Chaos Vision",
-            "Wide Eyes"
+            "Wide Eyes",
+            "Overwhelming Power"
         ]
     },
     yAxis: {
@@ -115,10 +144,9 @@ Highcharts.chart('crucible_demon_hunter_havoc_patchwerk',
         },
         min: 0,
         stackLabels: {
-            enabled: false,
-            formatter: function() {            /* I need to figure out how to get the mean value here,            ** to allow the percent diff to mean as label            ** console.log(this); */            return;          },
+            enabled: true,
             style: {
-                color: (Highcharts.theme && Highcharts.theme.textColor) || 'white',
+                color: (Highcharts.theme && Highcharts.theme.textColor) || 'black',
                 fontWeight: "bold"
             }
         },

@@ -20,7 +20,7 @@ Highcharts.chart('crucible_mage_frost_patchwerk',
             dataLabels: {
                 align: "right",
                 color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
-                enabled: true
+                enabled: false
             },
             point: {
                 events: {
@@ -38,37 +38,66 @@ Highcharts.chart('crucible_mage_frost_patchwerk',
     },
     series: [
         {
-            color: "#4572a7",
+            color: "#343434",
             data: [
-                30154,
-                27138,
-                25557,
-                25445,
-                25146,
-                24247,
-                22904,
-                21334,
-                18092,
-                17102,
-                16184,
-                15790,
-                14739,
-                13410,
-                12098,
-                12061,
-                11300,
-                9641,
-                8228,
-                6366,
-                6030,
-                1113
+                28900,
+                27263,
+                24937,
+                24835,
+                24510,
+                23580,
+                0,
+                0,
+                17340,
+                16740,
+                15136,
+                0,
+                0,
+                13756,
+                12090,
+                11560,
+                0,
+                8343,
+                0,
+                0,
+                5780,
+                0
+            ],
+            name: 1,
+            showInLegend: false
+        },
+        {
+            color: "#69CCF0",
+            data: [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                22307,
+                21981,
+                0,
+                0,
+                0,
+                14796,
+                14017,
+                0,
+                0,
+                0,
+                9651,
+                0,
+                6393,
+                5916,
+                0,
+                1624
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-27 15:23 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/68e31d9f343d9da2bb75ce6aad219d205f34e0b3\" target=\"blank\">68e31d9</a>"
+        text: "UTC 2017-09-28 00:29 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/68e31d9f343d9da2bb75ce6aad219d205f34e0b3\" target=\"blank\">68e31d9</a>"
     },
     title: {
         text: "Mage - Frost - Patchwerk"
@@ -87,16 +116,16 @@ Highcharts.chart('crucible_mage_frost_patchwerk',
         categories: [
             "+5 itemlevel",
             "Torment the Weak",
-            "Clarity of Thought",
             "Infusion of Light",
-            "Secure in the Light",
             "Shadowbind",
+            "Secure in the Light",
             "Chaotic Darkness",
+            "Clarity of Thought",
             "Let It Go",
             "+3 itemlevel",
             "Murderous Intent",
-            "Obsidian Lance",
             "Light Speed",
+            "Obsidian Lance",
             "Ice Age",
             "Shocklight",
             "Dark Sorrows",
@@ -115,10 +144,9 @@ Highcharts.chart('crucible_mage_frost_patchwerk',
         },
         min: 0,
         stackLabels: {
-            enabled: false,
-            formatter: function() {            /* I need to figure out how to get the mean value here,            ** to allow the percent diff to mean as label            ** console.log(this); */            return;          },
+            enabled: true,
             style: {
-                color: (Highcharts.theme && Highcharts.theme.textColor) || 'white',
+                color: (Highcharts.theme && Highcharts.theme.textColor) || 'black',
                 fontWeight: "bold"
             }
         },

@@ -20,7 +20,7 @@ Highcharts.chart('crucible_warlock_demonology_beastlord',
             dataLabels: {
                 align: "right",
                 color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
-                enabled: true
+                enabled: false
             },
             point: {
                 events: {
@@ -38,37 +38,66 @@ Highcharts.chart('crucible_warlock_demonology_beastlord',
     },
     series: [
         {
-            color: "#4572a7",
+            color: "#343434",
             data: [
-                28453,
-                27815,
-                26761,
-                22027,
-                19414,
-                19039,
-                18006,
-                17636,
-                17071,
-                16601,
-                16565,
-                14319,
-                13840,
-                12840,
-                11381,
-                10287,
-                9299,
-                5690,
-                5217,
-                4669,
-                1989,
-                1129
+                31679,
+                31617,
+                28586,
+                0,
+                19257,
+                18342,
+                0,
+                17961,
+                17744,
+                17151,
+                17072,
+                16526,
+                14543,
+                0,
+                13649,
+                11434,
+                0,
+                0,
+                5717,
+                0,
+                0,
+                0
+            ],
+            name: 1,
+            showInLegend: false
+        },
+        {
+            color: "#9482C9",
+            data: [
+                0,
+                0,
+                0,
+                20408,
+                0,
+                0,
+                17997,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                14055,
+                0,
+                0,
+                11432,
+                6307,
+                0,
+                5214,
+                0,
+                0
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-27 15:23 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/68e31d9f343d9da2bb75ce6aad219d205f34e0b3\" target=\"blank\">68e31d9</a>"
+        text: "UTC 2017-09-28 00:29 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/68e31d9f343d9da2bb75ce6aad219d205f34e0b3\" target=\"blank\">68e31d9</a>"
     },
     title: {
         text: "Warlock - Demonology - Beastlord"
@@ -85,28 +114,28 @@ Highcharts.chart('crucible_warlock_demonology_beastlord',
     },
     xAxis: {
         categories: [
-            "+5 itemlevel",
             "Dark Sorrows",
             "Light Speed",
+            "+5 itemlevel",
             "Summoner's Prowess",
             "Master of Shadows",
-            "Infusion of Light",
-            "Shadowbind",
-            "Shocklight",
-            "+3 itemlevel",
-            "Secure in the Light",
-            "Infernal Furnace",
-            "Murderous Intent",
-            "Left Hand of Darkness",
             "Chaotic Darkness",
-            "+2 itemlevel",
+            "Infernal Furnace",
+            "Shocklight",
+            "Infusion of Light",
+            "+3 itemlevel",
+            "Murderous Intent",
+            "Secure in the Light",
+            "Shadowbind",
+            "Left Hand of Darkness",
             "Torment the Weak",
+            "+2 itemlevel",
             "The Doom of Azeroth",
-            "+1 itemlevel",
             "Sharpened Dreadfangs",
+            "+1 itemlevel",
             "Dirty Hands",
-            "Maw of Shadows",
-            "Legionwrath"
+            "Legionwrath",
+            "Maw of Shadows"
         ]
     },
     yAxis: {
@@ -115,10 +144,9 @@ Highcharts.chart('crucible_warlock_demonology_beastlord',
         },
         min: 0,
         stackLabels: {
-            enabled: false,
-            formatter: function() {            /* I need to figure out how to get the mean value here,            ** to allow the percent diff to mean as label            ** console.log(this); */            return;          },
+            enabled: true,
             style: {
-                color: (Highcharts.theme && Highcharts.theme.textColor) || 'white',
+                color: (Highcharts.theme && Highcharts.theme.textColor) || 'black',
                 fontWeight: "bold"
             }
         },

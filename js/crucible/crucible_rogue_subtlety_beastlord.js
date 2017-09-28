@@ -20,7 +20,7 @@ Highcharts.chart('crucible_rogue_subtlety_beastlord',
             dataLabels: {
                 align: "right",
                 color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
-                enabled: true
+                enabled: false
             },
             point: {
                 events: {
@@ -38,37 +38,66 @@ Highcharts.chart('crucible_rogue_subtlety_beastlord',
     },
     series: [
         {
-            color: "#4572a7",
+            color: "#343434",
             data: [
-                30735,
-                29112,
-                27295,
-                22892,
-                21973,
-                18883,
-                18450,
-                18060,
-                16838,
-                15812,
-                15295,
-                14426,
-                12328,
-                10632,
-                9578,
-                9425,
-                9265,
-                7339,
-                6379,
-                4252,
-                2126,
-                1597
+                33166,
+                0,
+                27323,
+                26652,
+                23834,
+                23064,
+                21258,
+                21138,
+                20441,
+                19587,
+                0,
+                16797,
+                16494,
+                0,
+                0,
+                0,
+                0,
+                10078,
+                0,
+                6718,
+                0,
+                3359
+            ],
+            name: 1,
+            showInLegend: false
+        },
+        {
+            color: "#FFF569",
+            data: [
+                0,
+                28309,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                17296,
+                0,
+                0,
+                13295,
+                12023,
+                11673,
+                10592,
+                0,
+                7954,
+                0,
+                5155,
+                0
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-27 15:23 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/68e31d9f343d9da2bb75ce6aad219d205f34e0b3\" target=\"blank\">68e31d9</a>"
+        text: "UTC 2017-09-28 00:29 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/68e31d9f343d9da2bb75ce6aad219d205f34e0b3\" target=\"blank\">68e31d9</a>"
     },
     title: {
         text: "Rogue - Subtlety DfA - Beastlord"
@@ -85,28 +114,28 @@ Highcharts.chart('crucible_rogue_subtlety_beastlord',
     },
     xAxis: {
         categories: [
-            "Gutripper",
             "Dark Sorrows",
-            "Master of Shadows",
-            "Shocklight",
-            "Murderous Intent",
+            "Gutripper",
             "Secure in the Light",
-            "Shadowbind",
-            "Chaotic Darkness",
-            "Torment the Weak",
-            "Energetic Stabbing",
+            "Master of Shadows",
             "Infusion of Light",
+            "Murderous Intent",
+            "Shadowbind",
+            "Torment the Weak",
             "Light Speed",
-            "Soul Shadows",
+            "Chaotic Darkness",
+            "Energetic Stabbing",
             "+5 itemlevel",
-            "Demon's Kiss",
+            "Shocklight",
             "Weak Point",
-            "Precision Strike",
             "Fortune's Bite",
+            "Soul Shadows",
+            "Demon's Kiss",
             "+3 itemlevel",
+            "Precision Strike",
             "+2 itemlevel",
-            "+1 itemlevel",
-            "The Quiet Knife"
+            "The Quiet Knife",
+            "+1 itemlevel"
         ]
     },
     yAxis: {
@@ -115,10 +144,9 @@ Highcharts.chart('crucible_rogue_subtlety_beastlord',
         },
         min: 0,
         stackLabels: {
-            enabled: false,
-            formatter: function() {            /* I need to figure out how to get the mean value here,            ** to allow the percent diff to mean as label            ** console.log(this); */            return;          },
+            enabled: true,
             style: {
-                color: (Highcharts.theme && Highcharts.theme.textColor) || 'white',
+                color: (Highcharts.theme && Highcharts.theme.textColor) || 'black',
                 fontWeight: "bold"
             }
         },

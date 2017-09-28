@@ -20,7 +20,7 @@ Highcharts.chart('crucible_hunter_beast_mastery_patchwerk',
             dataLabels: {
                 align: "right",
                 color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
-                enabled: true
+                enabled: false
             },
             point: {
                 events: {
@@ -38,28 +38,57 @@ Highcharts.chart('crucible_hunter_beast_mastery_patchwerk',
     },
     series: [
         {
-            color: "#4572a7",
+            color: "#343434",
             data: [
-                24596,
-                21393,
-                20871,
-                19581,
-                17548,
-                16781,
-                16710,
-                16666,
-                15414,
-                14449,
-                13930,
-                13741,
-                12380,
-                10587,
-                10004,
-                7335,
-                6352,
-                6022,
-                4234,
-                2117,
+                22780,
+                21486,
+                21211,
+                20178,
+                16876,
+                15858,
+                0,
+                15507,
+                14863,
+                13169,
+                0,
+                0,
+                0,
+                10182,
+                9732,
+                0,
+                0,
+                5839,
+                3892,
+                1946,
+                0,
+                0
+            ],
+            name: 1,
+            showInLegend: false
+        },
+        {
+            color: "#ABD473",
+            data: [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                15846,
+                0,
+                0,
+                0,
+                13143,
+                12615,
+                11600,
+                0,
+                0,
+                6884,
+                5876,
+                0,
+                0,
+                0,
                 0,
                 0
             ],
@@ -68,7 +97,7 @@ Highcharts.chart('crucible_hunter_beast_mastery_patchwerk',
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-27 15:23 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/68e31d9f343d9da2bb75ce6aad219d205f34e0b3\" target=\"blank\">68e31d9</a>"
+        text: "UTC 2017-09-28 00:29 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/68e31d9f343d9da2bb75ce6aad219d205f34e0b3\" target=\"blank\">68e31d9</a>"
     },
     title: {
         text: "Hunter - Beast_Mastery - Patchwerk"
@@ -92,21 +121,21 @@ Highcharts.chart('crucible_hunter_beast_mastery_patchwerk',
             "Chaotic Darkness",
             "Shocklight",
             "Jaws of Thunder",
-            "Master of Shadows",
             "Murderous Intent",
+            "Master of Shadows",
             "Light Speed",
-            "Pack Leader",
             "Slithering Serpents",
+            "Pack Leader",
             "Unleash the Beast",
-            "+5 itemlevel",
             "Dark Sorrows",
+            "+5 itemlevel",
             "Spitting Cobras",
-            "+3 itemlevel",
             "Wilderness Expert",
+            "+3 itemlevel",
             "+2 itemlevel",
             "+1 itemlevel",
-            "Furious Swipes",
-            "Focus of the Titans"
+            "Focus of the Titans",
+            "Furious Swipes"
         ]
     },
     yAxis: {
@@ -115,10 +144,9 @@ Highcharts.chart('crucible_hunter_beast_mastery_patchwerk',
         },
         min: 0,
         stackLabels: {
-            enabled: false,
-            formatter: function() {            /* I need to figure out how to get the mean value here,            ** to allow the percent diff to mean as label            ** console.log(this); */            return;          },
+            enabled: true,
             style: {
-                color: (Highcharts.theme && Highcharts.theme.textColor) || 'white',
+                color: (Highcharts.theme && Highcharts.theme.textColor) || 'black',
                 fontWeight: "bold"
             }
         },

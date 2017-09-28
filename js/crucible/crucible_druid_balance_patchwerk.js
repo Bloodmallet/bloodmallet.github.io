@@ -20,7 +20,7 @@ Highcharts.chart('crucible_druid_balance_patchwerk',
             dataLabels: {
                 align: "right",
                 color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
-                enabled: true
+                enabled: false
             },
             point: {
                 events: {
@@ -38,37 +38,66 @@ Highcharts.chart('crucible_druid_balance_patchwerk',
     },
     series: [
         {
-            color: "#4572a7",
+            color: "#343434",
             data: [
-                25003,
-                21554,
-                20518,
-                20004,
-                19617,
-                19438,
-                16851,
-                15440,
-                15001,
-                14717,
-                14551,
-                13839,
-                10001,
-                8845,
-                8492,
-                8014,
-                6522,
-                6156,
-                5640,
-                5111,
-                5000,
-                2582
+                24695,
+                0,
+                19750,
+                19128,
+                18959,
+                18338,
+                17540,
+                15022,
+                14817,
+                14210,
+                14000,
+                13050,
+                9878,
+                8262,
+                0,
+                0,
+                0,
+                0,
+                0,
+                4939,
+                0,
+                0
+            ],
+            name: 1,
+            showInLegend: false
+        },
+        {
+            color: "#FF7D0A",
+            data: [
+                0,
+                20967,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                7615,
+                6870,
+                6025,
+                5539,
+                5423,
+                0,
+                4567,
+                1279
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-27 15:23 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/68e31d9f343d9da2bb75ce6aad219d205f34e0b3\" target=\"blank\">68e31d9</a>"
+        text: "UTC 2017-09-28 00:29 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/68e31d9f343d9da2bb75ce6aad219d205f34e0b3\" target=\"blank\">68e31d9</a>"
     },
     title: {
         text: "Druid - Balance - Patchwerk"
@@ -88,9 +117,9 @@ Highcharts.chart('crucible_druid_balance_patchwerk',
             "+5 itemlevel",
             "Scythe of the Stars",
             "Torment the Weak",
-            "Shadowbind",
             "Secure in the Light",
             "Infusion of Light",
+            "Shadowbind",
             "Chaotic Darkness",
             "Master of Shadows",
             "+3 itemlevel",
@@ -101,11 +130,11 @@ Highcharts.chart('crucible_druid_balance_patchwerk',
             "Dark Sorrows",
             "Solar Stabbing",
             "Dark Side of the Moon",
-            "Empowerment",
             "Sunfire Burns",
             "Twilight Glow",
-            "Falling Star",
+            "Empowerment",
             "+1 itemlevel",
+            "Falling Star",
             "Light of the Evening Star"
         ]
     },
@@ -115,10 +144,9 @@ Highcharts.chart('crucible_druid_balance_patchwerk',
         },
         min: 0,
         stackLabels: {
-            enabled: false,
-            formatter: function() {            /* I need to figure out how to get the mean value here,            ** to allow the percent diff to mean as label            ** console.log(this); */            return;          },
+            enabled: true,
             style: {
-                color: (Highcharts.theme && Highcharts.theme.textColor) || 'white',
+                color: (Highcharts.theme && Highcharts.theme.textColor) || 'black',
                 fontWeight: "bold"
             }
         },

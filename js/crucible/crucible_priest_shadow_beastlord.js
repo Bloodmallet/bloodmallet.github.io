@@ -20,7 +20,7 @@ Highcharts.chart('crucible_priest_shadow_beastlord',
             dataLabels: {
                 align: "right",
                 color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
-                enabled: true
+                enabled: false
             },
             point: {
                 events: {
@@ -38,37 +38,66 @@ Highcharts.chart('crucible_priest_shadow_beastlord',
     },
     series: [
         {
-            color: "#4572a7",
+            color: "#343434",
             data: [
-                62289,
-                44621,
-                41494,
-                41003,
-                36121,
-                30735,
-                29008,
-                26772,
-                26270,
-                23395,
-                23243,
-                22770,
-                19366,
-                18688,
-                17848,
-                17633,
-                11718,
-                8924,
-                6036,
-                1176,
+                60770,
+                41209,
+                38473,
+                38329,
+                34504,
+                33857,
+                28136,
+                26684,
+                24831,
+                22997,
+                21952,
+                0,
+                0,
+                0,
+                17669,
+                15331,
+                0,
+                7665,
+                0,
+                0,
                 0,
                 0
+            ],
+            name: 1,
+            showInLegend: false
+        },
+        {
+            color: "#FFFFFF",
+            data: [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                20048,
+                19426,
+                18346,
+                0,
+                0,
+                11810,
+                0,
+                7287,
+                3799,
+                2523,
+                1957
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-27 15:23 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/68e31d9f343d9da2bb75ce6aad219d205f34e0b3\" target=\"blank\">68e31d9</a>"
+        text: "UTC 2017-09-28 00:29 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/68e31d9f343d9da2bb75ce6aad219d205f34e0b3\" target=\"blank\">68e31d9</a>"
     },
     title: {
         text: "Priest - Shadow - Beastlord"
@@ -86,26 +115,26 @@ Highcharts.chart('crucible_priest_shadow_beastlord',
     xAxis: {
         categories: [
             "Dark Sorrows",
-            "+5 itemlevel",
             "Shadowbind",
             "Chaotic Darkness",
+            "+5 itemlevel",
             "Secure in the Light",
             "Infusion of Light",
             "Torment the Weak",
-            "+3 itemlevel",
             "Master of Shadows",
-            "To the Pain",
-            "Touch of Darkness",
             "Shocklight",
+            "+3 itemlevel",
             "Murderous Intent",
             "Creeping Shadows",
-            "+2 itemlevel",
+            "Touch of Darkness",
+            "To the Pain",
             "Light Speed",
+            "+2 itemlevel",
             "Unleash the Shadows",
             "+1 itemlevel",
             "Mind Shattering",
-            "Death's Embrace",
             "Void Corruption",
+            "Death's Embrace",
             "Fiending Dark"
         ]
     },
@@ -115,10 +144,9 @@ Highcharts.chart('crucible_priest_shadow_beastlord',
         },
         min: 0,
         stackLabels: {
-            enabled: false,
-            formatter: function() {            /* I need to figure out how to get the mean value here,            ** to allow the percent diff to mean as label            ** console.log(this); */            return;          },
+            enabled: true,
             style: {
-                color: (Highcharts.theme && Highcharts.theme.textColor) || 'white',
+                color: (Highcharts.theme && Highcharts.theme.textColor) || 'black',
                 fontWeight: "bold"
             }
         },

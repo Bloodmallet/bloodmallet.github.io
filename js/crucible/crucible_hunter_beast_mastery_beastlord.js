@@ -20,7 +20,7 @@ Highcharts.chart('crucible_hunter_beast_mastery_beastlord',
             dataLabels: {
                 align: "right",
                 color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
-                enabled: true
+                enabled: false
             },
             point: {
                 events: {
@@ -38,37 +38,66 @@ Highcharts.chart('crucible_hunter_beast_mastery_beastlord',
     },
     series: [
         {
-            color: "#4572a7",
+            color: "#343434",
             data: [
-                58625,
-                34875,
-                32665,
-                29679,
-                28422,
-                27025,
-                26096,
-                20939,
-                18833,
-                18282,
-                17243,
-                16832,
-                16223,
-                15049,
-                14394,
-                11381,
-                7463,
-                6828,
-                4552,
-                3589,
-                2354,
-                2276
+                0,
+                27380,
+                0,
+                25978,
+                23903,
+                21710,
+                20135,
+                19871,
+                19206,
+                16487,
+                16354,
+                0,
+                14592,
+                0,
+                0,
+                0,
+                9953,
+                5971,
+                3981,
+                1990,
+                0,
+                0
+            ],
+            name: 1,
+            showInLegend: false
+        },
+        {
+            color: "#ABD473",
+            data: [
+                52840,
+                0,
+                26428,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                14774,
+                0,
+                13872,
+                12502,
+                10210,
+                0,
+                0,
+                0,
+                0,
+                1960,
+                0
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-27 15:23 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/68e31d9f343d9da2bb75ce6aad219d205f34e0b3\" target=\"blank\">68e31d9</a>"
+        text: "UTC 2017-09-28 00:29 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/68e31d9f343d9da2bb75ce6aad219d205f34e0b3\" target=\"blank\">68e31d9</a>"
     },
     title: {
         text: "Hunter - Beast_Mastery - Beastlord"
@@ -86,27 +115,27 @@ Highcharts.chart('crucible_hunter_beast_mastery_beastlord',
     xAxis: {
         categories: [
             "Furious Swipes",
-            "Shocklight",
-            "Slithering Serpents",
-            "Light Speed",
-            "Master of Shadows",
-            "Murderous Intent",
             "Dark Sorrows",
-            "Unleash the Beast",
+            "Slithering Serpents",
+            "Shocklight",
+            "Master of Shadows",
+            "Light Speed",
+            "Secure in the Light",
+            "Murderous Intent",
+            "Shadowbind",
             "Chaotic Darkness",
+            "Infusion of Light",
+            "Unleash the Beast",
             "Torment the Weak",
             "Jaws of Thunder",
-            "Shadowbind",
-            "Secure in the Light",
             "Wilderness Expert",
-            "Infusion of Light",
-            "+5 itemlevel",
             "Pack Leader",
+            "+5 itemlevel",
             "+3 itemlevel",
             "+2 itemlevel",
-            "Spitting Cobras",
+            "+1 itemlevel",
             "Focus of the Titans",
-            "+1 itemlevel"
+            "Spitting Cobras"
         ]
     },
     yAxis: {
@@ -115,10 +144,9 @@ Highcharts.chart('crucible_hunter_beast_mastery_beastlord',
         },
         min: 0,
         stackLabels: {
-            enabled: false,
-            formatter: function() {            /* I need to figure out how to get the mean value here,            ** to allow the percent diff to mean as label            ** console.log(this); */            return;          },
+            enabled: true,
             style: {
-                color: (Highcharts.theme && Highcharts.theme.textColor) || 'white',
+                color: (Highcharts.theme && Highcharts.theme.textColor) || 'black',
                 fontWeight: "bold"
             }
         },

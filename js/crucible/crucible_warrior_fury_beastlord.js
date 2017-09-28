@@ -20,7 +20,7 @@ Highcharts.chart('crucible_warrior_fury_beastlord',
             dataLabels: {
                 align: "right",
                 color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
-                enabled: true
+                enabled: false
             },
             point: {
                 events: {
@@ -38,27 +38,56 @@ Highcharts.chart('crucible_warrior_fury_beastlord',
     },
     series: [
         {
-            color: "#4572a7",
+            color: "#343434",
             data: [
-                33506,
-                33306,
-                22411,
-                21071,
-                19735,
-                17890,
-                17888,
-                17774,
-                17773,
-                16088,
-                14494,
-                12201,
-                12191,
-                7988,
-                2903,
-                2808,
-                1684,
-                1506,
-                1123,
+                34018,
+                0,
+                23531,
+                21113,
+                19944,
+                18882,
+                18230,
+                17934,
+                17299,
+                17147,
+                0,
+                11655,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            name: 1,
+            showInLegend: false
+        },
+        {
+            color: "#C79C6E",
+            data: [
+                0,
+                30018,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                16286,
+                0,
+                10031,
+                8443,
+                4494,
+                1884,
+                0,
+                0,
+                0,
                 0,
                 0,
                 0
@@ -68,7 +97,7 @@ Highcharts.chart('crucible_warrior_fury_beastlord',
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-27 15:23 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/68e31d9f343d9da2bb75ce6aad219d205f34e0b3\" target=\"blank\">68e31d9</a>"
+        text: "UTC 2017-09-28 00:29 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/68e31d9f343d9da2bb75ce6aad219d205f34e0b3\" target=\"blank\">68e31d9</a>"
     },
     title: {
         text: "Warrior - Fury - Beastlord"
@@ -85,28 +114,28 @@ Highcharts.chart('crucible_warrior_fury_beastlord',
     },
     xAxis: {
         categories: [
-            "Unrivaled Strength",
             "Dark Sorrows",
-            "Shadowbind",
+            "Unrivaled Strength",
             "Infusion of Light",
+            "Shadowbind",
             "Secure in the Light",
-            "Light Speed",
-            "Murderous Intent",
-            "Master of Shadows",
             "Chaotic Darkness",
             "Torment the Weak",
+            "Master of Shadows",
+            "Murderous Intent",
+            "Light Speed",
             "Raging Berserker",
-            "Wrath and Fury",
             "Shocklight",
             "Unstoppable",
-            "Pulse of Battle",
-            "+5 itemlevel",
-            "+3 itemlevel",
+            "Wrath and Fury",
+            "Deathdealer",
             "Uncontrolled Rage",
-            "+2 itemlevel",
+            "Pulse of Battle",
             "+1 itemlevel",
             "Wild Slashes",
-            "Deathdealer"
+            "+2 itemlevel",
+            "+3 itemlevel",
+            "+5 itemlevel"
         ]
     },
     yAxis: {
@@ -115,10 +144,9 @@ Highcharts.chart('crucible_warrior_fury_beastlord',
         },
         min: 0,
         stackLabels: {
-            enabled: false,
-            formatter: function() {            /* I need to figure out how to get the mean value here,            ** to allow the percent diff to mean as label            ** console.log(this); */            return;          },
+            enabled: true,
             style: {
-                color: (Highcharts.theme && Highcharts.theme.textColor) || 'white',
+                color: (Highcharts.theme && Highcharts.theme.textColor) || 'black',
                 fontWeight: "bold"
             }
         },

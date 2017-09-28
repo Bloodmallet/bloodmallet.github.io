@@ -20,7 +20,7 @@ Highcharts.chart('crucible_warrior_arms_patchwerk',
             dataLabels: {
                 align: "right",
                 color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
-                enabled: true
+                enabled: false
             },
             point: {
                 events: {
@@ -38,25 +38,54 @@ Highcharts.chart('crucible_warrior_arms_patchwerk',
     },
     series: [
         {
-            color: "#4572a7",
+            color: "#343434",
             data: [
-                19931,
-                19326,
-                19007,
-                18765,
-                17607,
-                16412,
-                15435,
-                15389,
-                15038,
-                13524,
-                12919,
-                11091,
-                8555,
-                6153,
-                5565,
-                3270,
+                20201,
+                19151,
+                18793,
+                18791,
+                17233,
+                16057,
+                15149,
                 0,
+                0,
+                13594,
+                11979,
+                0,
+                8662,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            name: 1,
+            showInLegend: false
+        },
+        {
+            color: "#C79C6E",
+            data: [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                14752,
+                14487,
+                0,
+                0,
+                11388,
+                0,
+                7262,
+                6639,
+                2747,
+                1094,
                 0,
                 0,
                 0,
@@ -68,7 +97,7 @@ Highcharts.chart('crucible_warrior_arms_patchwerk',
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-27 15:23 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/68e31d9f343d9da2bb75ce6aad219d205f34e0b3\" target=\"blank\">68e31d9</a>"
+        text: "UTC 2017-09-28 00:29 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/68e31d9f343d9da2bb75ce6aad219d205f34e0b3\" target=\"blank\">68e31d9</a>"
     },
     title: {
         text: "Warrior - Arms - Patchwerk"
@@ -85,28 +114,28 @@ Highcharts.chart('crucible_warrior_arms_patchwerk',
     },
     xAxis: {
         categories: [
-            "Infusion of Light",
             "Torment the Weak",
             "Shadowbind",
+            "Infusion of Light",
             "Secure in the Light",
             "Chaotic Darkness",
             "Master of Shadows",
             "Light Speed",
+            "Exploit the Weakness",
             "Precise Strikes",
             "Murderous Intent",
-            "Exploit the Weakness",
-            "Many Will Fall",
             "Shocklight",
+            "Many Will Fall",
             "Dark Sorrows",
             "Deathblow",
             "Storm of Swords",
             "Unending Rage",
             "Crushing Blows",
             "One Against Many",
-            "+1 itemlevel",
-            "+2 itemlevel",
+            "+5 itemlevel",
             "+3 itemlevel",
-            "+5 itemlevel"
+            "+2 itemlevel",
+            "+1 itemlevel"
         ]
     },
     yAxis: {
@@ -115,10 +144,9 @@ Highcharts.chart('crucible_warrior_arms_patchwerk',
         },
         min: 0,
         stackLabels: {
-            enabled: false,
-            formatter: function() {            /* I need to figure out how to get the mean value here,            ** to allow the percent diff to mean as label            ** console.log(this); */            return;          },
+            enabled: true,
             style: {
-                color: (Highcharts.theme && Highcharts.theme.textColor) || 'white',
+                color: (Highcharts.theme && Highcharts.theme.textColor) || 'black',
                 fontWeight: "bold"
             }
         },

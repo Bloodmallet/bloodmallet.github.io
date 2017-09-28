@@ -20,7 +20,7 @@ Highcharts.chart('crucible_shaman_enhancement_beastlord',
             dataLabels: {
                 align: "right",
                 color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
-                enabled: true
+                enabled: false
             },
             point: {
                 events: {
@@ -38,37 +38,66 @@ Highcharts.chart('crucible_shaman_enhancement_beastlord',
     },
     series: [
         {
-            color: "#4572a7",
+            color: "#343434",
             data: [
-                28673,
-                28135,
-                26488,
-                24177,
-                21760,
-                21467,
-                20940,
-                17813,
-                17203,
-                13414,
-                12859,
-                12200,
-                11469,
-                11256,
-                10377,
-                8167,
-                5734,
-                3639,
-                2140,
-                1684,
+                35538,
+                0,
+                29752,
+                27850,
+                27736,
+                25232,
+                24650,
+                23573,
+                21966,
+                18562,
+                0,
+                17531,
+                16641,
+                14811,
+                0,
+                11094,
+                0,
+                0,
+                5547,
+                0,
                 0,
                 0
+            ],
+            name: 1,
+            showInLegend: false
+        },
+        {
+            color: "#0070DE",
+            data: [
+                0,
+                34786,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                18304,
+                0,
+                0,
+                0,
+                13280,
+                0,
+                9173,
+                7401,
+                0,
+                4296,
+                3091,
+                1055
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-27 15:23 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/68e31d9f343d9da2bb75ce6aad219d205f34e0b3\" target=\"blank\">68e31d9</a>"
+        text: "UTC 2017-09-28 00:29 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/68e31d9f343d9da2bb75ce6aad219d205f34e0b3\" target=\"blank\">68e31d9</a>"
     },
     title: {
         text: "Shaman - Enhancement - Beastlord"
@@ -85,28 +114,28 @@ Highcharts.chart('crucible_shaman_enhancement_beastlord',
     },
     xAxis: {
         categories: [
-            "+5 itemlevel",
-            "Dark Sorrows",
             "Master of Shadows",
             "Crashing Hammer",
+            "Dark Sorrows",
             "Shocklight",
-            "Murderous Intent",
+            "+5 itemlevel",
             "Light Speed",
-            "Secure in the Light",
-            "+3 itemlevel",
-            "Infusion of Light",
-            "Gathering Storms",
-            "Chaotic Darkness",
-            "+2 itemlevel",
+            "Murderous Intent",
             "Shadowbind",
+            "Infusion of Light",
+            "Chaotic Darkness",
+            "Gathering Storms",
             "Torment the Weak",
+            "+3 itemlevel",
+            "Secure in the Light",
             "Wind Strikes",
-            "+1 itemlevel",
+            "+2 itemlevel",
             "Wind Surge",
             "Gathering of the Maelstrom",
+            "+1 itemlevel",
             "Weapons of the Elements",
-            "Forged in Lava",
-            "Spirit of the Maelstrom"
+            "Spirit of the Maelstrom",
+            "Forged in Lava"
         ]
     },
     yAxis: {
@@ -115,10 +144,9 @@ Highcharts.chart('crucible_shaman_enhancement_beastlord',
         },
         min: 0,
         stackLabels: {
-            enabled: false,
-            formatter: function() {            /* I need to figure out how to get the mean value here,            ** to allow the percent diff to mean as label            ** console.log(this); */            return;          },
+            enabled: true,
             style: {
-                color: (Highcharts.theme && Highcharts.theme.textColor) || 'white',
+                color: (Highcharts.theme && Highcharts.theme.textColor) || 'black',
                 fontWeight: "bold"
             }
         },

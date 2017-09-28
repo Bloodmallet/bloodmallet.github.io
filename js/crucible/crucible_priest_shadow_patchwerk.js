@@ -20,7 +20,7 @@ Highcharts.chart('crucible_priest_shadow_patchwerk',
             dataLabels: {
                 align: "right",
                 color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
-                enabled: true
+                enabled: false
             },
             point: {
                 events: {
@@ -38,28 +38,57 @@ Highcharts.chart('crucible_priest_shadow_patchwerk',
     },
     series: [
         {
-            color: "#4572a7",
+            color: "#343434",
             data: [
-                37476,
-                36687,
-                32927,
-                27915,
-                27007,
-                25738,
-                17918,
-                16403,
-                15442,
-                14808,
-                14744,
-                14174,
-                10781,
-                10295,
-                9704,
-                9359,
-                9028,
-                7424,
-                5147,
-                4102,
+                38591,
+                37259,
+                34008,
+                28068,
+                27902,
+                27052,
+                17307,
+                16579,
+                16231,
+                15064,
+                14939,
+                14758,
+                0,
+                10820,
+                0,
+                0,
+                0,
+                0,
+                5410,
+                0,
+                0,
+                0
+            ],
+            name: 1,
+            showInLegend: false
+        },
+        {
+            color: "#FFFFFF",
+            data: [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                11011,
+                0,
+                10308,
+                9546,
+                8640,
+                8630,
+                0,
+                5110,
                 0,
                 0
             ],
@@ -68,7 +97,7 @@ Highcharts.chart('crucible_priest_shadow_patchwerk',
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-27 15:23 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/68e31d9f343d9da2bb75ce6aad219d205f34e0b3\" target=\"blank\">68e31d9</a>"
+        text: "UTC 2017-09-28 00:29 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/68e31d9f343d9da2bb75ce6aad219d205f34e0b3\" target=\"blank\">68e31d9</a>"
     },
     title: {
         text: "Priest - Shadow - Patchwerk"
@@ -91,11 +120,11 @@ Highcharts.chart('crucible_priest_shadow_patchwerk',
             "Secure in the Light",
             "Infusion of Light",
             "+5 itemlevel",
-            "Dark Sorrows",
             "Shocklight",
+            "Dark Sorrows",
             "+3 itemlevel",
-            "Master of Shadows",
             "Murderous Intent",
+            "Master of Shadows",
             "Light Speed",
             "Creeping Shadows",
             "+2 itemlevel",
@@ -105,8 +134,8 @@ Highcharts.chart('crucible_priest_shadow_patchwerk',
             "Fiending Dark",
             "+1 itemlevel",
             "Unleash the Shadows",
-            "Void Corruption",
-            "Death's Embrace"
+            "Death's Embrace",
+            "Void Corruption"
         ]
     },
     yAxis: {
@@ -115,10 +144,9 @@ Highcharts.chart('crucible_priest_shadow_patchwerk',
         },
         min: 0,
         stackLabels: {
-            enabled: false,
-            formatter: function() {            /* I need to figure out how to get the mean value here,            ** to allow the percent diff to mean as label            ** console.log(this); */            return;          },
+            enabled: true,
             style: {
-                color: (Highcharts.theme && Highcharts.theme.textColor) || 'white',
+                color: (Highcharts.theme && Highcharts.theme.textColor) || 'black',
                 fontWeight: "bold"
             }
         },

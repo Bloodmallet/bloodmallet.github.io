@@ -20,7 +20,7 @@ Highcharts.chart('crucible_death_knight_frost_beastlord',
             dataLabels: {
                 align: "right",
                 color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
-                enabled: true
+                enabled: false
             },
             point: {
                 events: {
@@ -38,37 +38,66 @@ Highcharts.chart('crucible_death_knight_frost_beastlord',
     },
     series: [
         {
-            color: "#4572a7",
+            color: "#343434",
             data: [
-                29200,
-                28574,
-                27441,
-                23811,
-                21243,
-                21179,
-                20828,
-                20746,
-                20524,
-                17869,
-                17386,
-                16502,
-                12546,
-                10931,
-                9901,
-                9305,
-                8146,
-                6740,
-                6600,
-                6022,
-                3821,
-                3300
+                31087,
+                25346,
+                0,
+                24297,
+                18761,
+                0,
+                16723,
+                0,
+                15563,
+                0,
+                14600,
+                14577,
+                13746,
+                13164,
+                0,
+                11268,
+                0,
+                8746,
+                5830,
+                0,
+                2915,
+                0
+            ],
+            name: 1,
+            showInLegend: false
+        },
+        {
+            color: "#C41F3B",
+            data: [
+                0,
+                0,
+                24496,
+                0,
+                0,
+                18459,
+                0,
+                16425,
+                0,
+                15012,
+                0,
+                0,
+                0,
+                0,
+                12283,
+                0,
+                11020,
+                0,
+                0,
+                4220,
+                0,
+                1944
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-27 15:23 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/68e31d9f343d9da2bb75ce6aad219d205f34e0b3\" target=\"blank\">68e31d9</a>"
+        text: "UTC 2017-09-28 00:29 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/68e31d9f343d9da2bb75ce6aad219d205f34e0b3\" target=\"blank\">68e31d9</a>"
     },
     title: {
         text: "Death_Knight - Frost - Beastlord"
@@ -85,28 +114,28 @@ Highcharts.chart('crucible_death_knight_frost_beastlord',
     },
     xAxis: {
         categories: [
-            "Light Speed",
             "Murderous Intent",
             "Master of Shadows",
             "Blast Radius",
+            "Light Speed",
             "Shocklight",
+            "Cold as Ice",
             "Dark Sorrows",
             "Dead of Winter",
-            "Cold as Ice",
-            "Ambidexterity",
-            "Infusion of Light",
             "Secure in the Light",
-            "+5 itemlevel",
-            "Torment the Weak",
+            "Ambidexterity",
             "Shadowbind",
-            "+3 itemlevel",
-            "Runefrost",
+            "+5 itemlevel",
+            "Infusion of Light",
             "Chaotic Darkness",
+            "Runefrost",
+            "Torment the Weak",
             "Nothing but the Boots",
+            "+3 itemlevel",
             "+2 itemlevel",
             "Bad to the Bone",
-            "Over-Powered",
-            "+1 itemlevel"
+            "+1 itemlevel",
+            "Over-Powered"
         ]
     },
     yAxis: {
@@ -115,10 +144,9 @@ Highcharts.chart('crucible_death_knight_frost_beastlord',
         },
         min: 0,
         stackLabels: {
-            enabled: false,
-            formatter: function() {            /* I need to figure out how to get the mean value here,            ** to allow the percent diff to mean as label            ** console.log(this); */            return;          },
+            enabled: true,
             style: {
-                color: (Highcharts.theme && Highcharts.theme.textColor) || 'white',
+                color: (Highcharts.theme && Highcharts.theme.textColor) || 'black',
                 fontWeight: "bold"
             }
         },

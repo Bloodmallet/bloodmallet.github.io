@@ -20,7 +20,7 @@ Highcharts.chart('crucible_rogue_assassination_beastlord',
             dataLabels: {
                 align: "right",
                 color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
-                enabled: true
+                enabled: false
             },
             point: {
                 events: {
@@ -38,37 +38,66 @@ Highcharts.chart('crucible_rogue_assassination_beastlord',
     },
     series: [
         {
-            color: "#4572a7",
+            color: "#343434",
             data: [
-                74431,
-                40073,
-                28647,
-                26630,
-                25578,
-                21263,
-                20199,
-                20146,
-                18001,
-                14683,
-                14526,
-                10599,
-                9485,
-                8903,
-                8712,
-                8613,
-                6359,
-                5254,
-                4683,
-                4239,
-                2119,
-                1182
+                0,
+                0,
+                35372,
+                33165,
+                26387,
+                25158,
+                22561,
+                20690,
+                19075,
+                17187,
+                16688,
+                13253,
+                0,
+                0,
+                0,
+                0,
+                7951,
+                0,
+                0,
+                5489,
+                5301,
+                2650
+            ],
+            name: 1,
+            showInLegend: false
+        },
+        {
+            color: "#FFF569",
+            data: [
+                77507,
+                37351,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                10746,
+                9996,
+                9580,
+                9111,
+                0,
+                7396,
+                6576,
+                0,
+                0,
+                0
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-09-27 15:23 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/68e31d9f343d9da2bb75ce6aad219d205f34e0b3\" target=\"blank\">68e31d9</a>"
+        text: "UTC 2017-09-28 00:29 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/68e31d9f343d9da2bb75ce6aad219d205f34e0b3\" target=\"blank\">68e31d9</a>"
     },
     title: {
         text: "Rogue - Assassination - Beastlord"
@@ -87,26 +116,26 @@ Highcharts.chart('crucible_rogue_assassination_beastlord',
         categories: [
             "Poison Knives",
             "Master Alchemist",
-            "Master of Shadows",
             "Dark Sorrows",
+            "Master of Shadows",
             "Shocklight",
-            "Infusion of Light",
-            "Secure in the Light",
             "Murderous Intent",
             "Shadowbind",
-            "Chaotic Darkness",
+            "Secure in the Light",
+            "Infusion of Light",
             "Torment the Weak",
+            "Chaotic Darkness",
             "+5 itemlevel",
-            "Light Speed",
             "Master Assassin",
             "Strangler",
-            "Gushing Wound",
-            "+3 itemlevel",
-            "Toxic Blades",
             "Serrated Edge",
+            "Toxic Blades",
+            "+3 itemlevel",
+            "Gushing Wound",
+            "Balanced Blades",
+            "Light Speed",
             "+2 itemlevel",
-            "+1 itemlevel",
-            "Balanced Blades"
+            "+1 itemlevel"
         ]
     },
     yAxis: {
@@ -115,10 +144,9 @@ Highcharts.chart('crucible_rogue_assassination_beastlord',
         },
         min: 0,
         stackLabels: {
-            enabled: false,
-            formatter: function() {            /* I need to figure out how to get the mean value here,            ** to allow the percent diff to mean as label            ** console.log(this); */            return;          },
+            enabled: true,
             style: {
-                color: (Highcharts.theme && Highcharts.theme.textColor) || 'white',
+                color: (Highcharts.theme && Highcharts.theme.textColor) || 'black',
                 fontWeight: "bold"
             }
         },
