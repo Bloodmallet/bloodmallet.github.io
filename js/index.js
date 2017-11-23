@@ -1,4 +1,5 @@
 var fight_style = "patchwerk";
+var pruned = false;
 var active_spec = "";
 
 var language = "EN";
@@ -28,6 +29,15 @@ document.addEventListener('DOMContentLoaded', function() {
     return;
   }
   var start_chart =  window.location.hash.split("#")[1].split("_");
+  // enable pruned if it was in the link
+  if (start_chart.length > 3 && start_chart[0] == "pruned") {
+    var to_prune = true;
+    for (var i = 0; i < start_chart.length - 1; i++) {
+      start_chart[i] = start_chart[i + 1];
+    }
+    start_chart.pop();
+  }
+
   if (start_chart.length == 3 || start_chart.length == 4) {
     var temp_spec = start_chart[0] + "_" + start_chart[1];
     if (start_chart.length == 4) {
@@ -35,7 +45,11 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     switch_chart_to(temp_spec);
 
-    if (start_chart[start_chart.length-1] != fight_style) {
+    if (to_prune) {
+      switch_pruning();
+    }
+
+    if (start_chart[start_chart.length - 1] != fight_style) {
       switch_fight_style();
     }
   }
@@ -47,13 +61,14 @@ function addButtonListeners() {
   // add spec buttons
   var specSwitchButtons = document.getElementsByClassName("spec-switch-button");
   for (var i = specSwitchButtons.length - 1; i >= 0; i--) {
-    specSwitchButtons[i].addEventListener("click", function(e) { 
+    specSwitchButtons[i].addEventListener("click", function(e) {
       switch_chart_to(e.target.name);
     } );
   }
 
   // add fight style switch button
   document.getElementById("fight_style_button").addEventListener("click", switch_fight_style );
+  document.getElementById("pruner").addEventListener("click", switch_pruning );
   document.getElementById("chart_linker").addEventListener("click", copy_chart_link );
 }
 
@@ -69,25 +84,29 @@ function copy_chart_link() {
   var path = window.location.origin;
   path += window.location.pathname;
   if (language != "EN") {
-    path += "?lang=" + language
+    path += "?lang=" + language;
   }
-  path += "#" + active_spec + "_" + fight_style;
+  path += "#";
+  if (pruned) {
+    path += "pruned_";
+  }
+  path += active_spec + "_" + fight_style;
   document.getElementById("chart_linker_content").innerHTML = path;
   document.getElementById("chart_linker_content").style.display = "block";
   window.getSelection().selectAllChildren( document.getElementById( "chart_linker_content" ) );
-  document.execCommand('copy');
+  document.execCommand("copy");
   document.getElementById("chart_linker_content").style.display = "none";
 
-  var success_message = document.getElementById("copy_success")
+  var success_message = document.getElementById("copy_success");
   success_message.className = "show";
   setTimeout(function(){ success_message.className = success_message.className.replace("show", ""); }, 3000);
 }
 
 function switchLanguage(new_language) {
   // little sanity check
-  if (new_language == "EN" || 
-    new_language == "FR" || 
-    new_language == "DE" || 
+  if (new_language == "EN" ||
+    new_language == "FR" ||
+    new_language == "DE" ||
     new_language == "KO" ||
     new_language == "CN" ||
     new_language == "ES" ||
@@ -143,6 +162,19 @@ function switch_fight_style() {
   switch_chart_to(active_spec);
 }
 
+// switches fightstyle between patchwerk and beastlord
+function switch_pruning() {
+  if (!pruned) {
+    document.getElementById("pruner").innerHTML = "&lt; Show full chart";
+  } else {
+    document.getElementById("pruner").innerHTML = "Show Top 20 &gt;";
+  }
+  pruned = !pruned;
+
+  // hide/show other charts
+  switch_chart_to(active_spec);
+}
+
 // loads and activates spec chart, deactivates all other charts
 function switch_chart_to(spec) {
   if (spec == "") {
@@ -151,9 +183,14 @@ function switch_chart_to(spec) {
 
   document.getElementById("pre_chart_options").style.display = 'block';
 
+  active_spec = spec;
+
+  if (pruned) {
+    spec = "pruned_" + spec;
+  }
   // load scripts/data of the wanted chart if it's not already present
   var already_loaded = false;
-  var scripts = document.scripts
+  var scripts = document.scripts;
   for (var i = scripts.length - 1; i >= 0; i--) {
     // if a script already is loaded for the fight style and spec, don't load again
     if (~scripts[i].src.indexOf("js/trinkets/" + spec + "_" + fight_style + ".js")) {
@@ -169,23 +206,28 @@ function switch_chart_to(spec) {
   for (var i = container.length - 1; i >= 0; i--) {
     if (container[i].id === spec + "_" + fight_style) {
       container[i].style.display = 'block';
-      active_spec = spec;
     } else {
       container[i].style.display = 'none';
     }
   }
 
+  // fix pruned chart height
+  if (pruned) {
+    document.getElementById(spec + "_" + fight_style).style.height = "500px";
+  }
+
   // hide/show TC-resource and Discord of the spec
   var tc_boxes = document.getElementsByClassName("tc-box");
+
   for (var i = tc_boxes.length - 1; i >= 0; i--) {
-    if (tc_boxes[i].id === "tc_" + spec) {
+    if (tc_boxes[i].id === "tc_" + active_spec) {
       tc_boxes[i].style.display = 'block';
     } else {
       tc_boxes[i].style.display = 'none';
     }
   }
 
-  ga('send', 'event', 'trinkets', fight_style, active_spec);
+  ga('send', 'event', 'trinkets', fight_style, spec);
 
   if (language != "EN") {
     //console.log("Starting translation process.");
@@ -198,7 +240,7 @@ function getScript(source, callback) {
   var script = document.createElement("script");
   script.onload = callback;
   script.src = source;
-  
+
   document.body.appendChild(script);
 }
 

@@ -19,7 +19,7 @@ body, h1 {
   /*padding-right: 15px;
   padding-left: 15px;*/
   width: auto;
-  height: 1000px;
+  height: 1100px;
 }
 
 .container-relics {
@@ -49,7 +49,7 @@ ul.todo {
   display: inline-block;
 }
 
-#fight_style_button, #chart_linker {
+#fight_style_button, #pruner, #chart_linker {
   color: white;
   border: 1px solid grey;
   text-align: center;
@@ -132,10 +132,6 @@ ul.sim-settings {
 
 ul.changelog {
   list-style: none;
-}
-
-img {
-  margin-bottom: 35px;
 }
 
 span.question {
@@ -525,7 +521,7 @@ hr {
 #copy_success.show {
     visibility: visible; /* Show the snackbar */
 
-/* Add animation: Take 0.5 seconds to fade in and out the snackbar. 
+/* Add animation: Take 0.5 seconds to fade in and out the snackbar.
 However, delay the fade out process for 2.5 seconds */
     -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
     animation: fadein 0.5s, fadeout 0.5s 2.5s;
@@ -533,7 +529,7 @@ However, delay the fade out process for 2.5 seconds */
 
 /* Animations to fade the snackbar in and out */
 @-webkit-keyframes fadein {
-    from {bottom: 0; opacity: 0;} 
+    from {bottom: 0; opacity: 0;}
     to {bottom: 30px; opacity: 1;}
 }
 
@@ -543,7 +539,7 @@ However, delay the fade out process for 2.5 seconds */
 }
 
 @-webkit-keyframes fadeout {
-    from {bottom: 30px; opacity: 1;} 
+    from {bottom: 30px; opacity: 1;}
     to {bottom: 0; opacity: 0;}
 }
 
