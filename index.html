@@ -94,6 +94,7 @@
         <div class="div-cell">
           <div class="btn-group monk">
             <div class="class-table">Monk</div>
+            <button class="spec-switch-button" name="monk_brewmaster">Brewmaster</button>
             <button class="spec-switch-button" name="monk_windwalker">Windwalker</button>
           </div>
         </div>
@@ -191,6 +192,7 @@
         <div class="div-cell">
           <div class="btn-group monk">
             <div class="class-table">Monk</div>
+            <button class="spec-switch-button" name="monk_brewmaster">Brewmaster</button>
             <button class="spec-switch-button" name="monk_windwalker">Windwalker</button>
           </div>
         </div>
@@ -278,6 +280,7 @@
     <div class="container" id="pruned_mage_arcane_patchwerk"           style="display: none;" ></div>
     <div class="container" id="pruned_mage_fire_patchwerk"             style="display: none;" ></div>
     <div class="container" id="pruned_mage_frost_patchwerk"            style="display: none;" ></div>
+    <div class="container" id="pruned_monk_brewmaster_patchwerk"       style="display: none;" ></div>
     <div class="container" id="pruned_monk_windwalker_patchwerk"       style="display: none;" ></div>
     <div class="container" id="pruned_paladin_protection_patchwerk"    style="display: none;" ></div>
     <div class="container" id="pruned_paladin_retribution_patchwerk"   style="display: none;" ></div>
@@ -306,6 +309,7 @@
     <div class="container" id="pruned_titanforged_mage_arcane_patchwerk"           style="display: none;" ></div>
     <div class="container" id="pruned_titanforged_mage_fire_patchwerk"             style="display: none;" ></div>
     <div class="container" id="pruned_titanforged_mage_frost_patchwerk"            style="display: none;" ></div>
+    <div class="container" id="pruned_titanforged_monk_brewmaster_patchwerk"       style="display: none;" ></div>
     <div class="container" id="pruned_titanforged_monk_windwalker_patchwerk"       style="display: none;" ></div>
     <div class="container" id="pruned_titanforged_paladin_protection_patchwerk"    style="display: none;" ></div>
     <div class="container" id="pruned_titanforged_paladin_retribution_patchwerk"   style="display: none;" ></div>
@@ -334,6 +338,7 @@
     <div class="container" id="mage_arcane_patchwerk"           style="display: none;" ></div>
     <div class="container" id="mage_fire_patchwerk"             style="display: none;" ></div>
     <div class="container" id="mage_frost_patchwerk"            style="display: none;" ></div>
+    <div class="container" id="monk_brewmaster_patchwerk"       style="display: none;" ></div>
     <div class="container" id="monk_windwalker_patchwerk"       style="display: none;" ></div>
     <div class="container" id="paladin_protection_patchwerk"    style="display: none;" ></div>
     <div class="container" id="paladin_retribution_patchwerk"   style="display: none;" ></div>
@@ -366,6 +371,7 @@
     <div class="container" id="pruned_mage_arcane_beastlord"           style="display: none;" ></div>
     <div class="container" id="pruned_mage_fire_beastlord"             style="display: none;" ></div>
     <div class="container" id="pruned_mage_frost_beastlord"            style="display: none;" ></div>
+    <div class="container" id="pruned_monk_brewmaster_beastlord"       style="display: none;" ></div>
     <div class="container" id="pruned_monk_windwalker_beastlord"       style="display: none;" ></div>
     <div class="container" id="pruned_paladin_protection_beastlord"    style="display: none;" ></div>
     <div class="container" id="pruned_paladin_retribution_beastlord"   style="display: none;" ></div>
@@ -394,6 +400,7 @@
     <div class="container" id="pruned_titanforged_mage_arcane_beastlord"           style="display: none;" ></div>
     <div class="container" id="pruned_titanforged_mage_fire_beastlord"             style="display: none;" ></div>
     <div class="container" id="pruned_titanforged_mage_frost_beastlord"            style="display: none;" ></div>
+    <div class="container" id="pruned_titanforged_monk_brewmaster_beastlord"       style="display: none;" ></div>
     <div class="container" id="pruned_titanforged_monk_windwalker_beastlord"       style="display: none;" ></div>
     <div class="container" id="pruned_titanforged_paladin_protection_beastlord"    style="display: none;" ></div>
     <div class="container" id="pruned_titanforged_paladin_retribution_beastlord"   style="display: none;" ></div>
@@ -422,6 +429,7 @@
     <div class="container" id="mage_arcane_beastlord"           style="display: none;" ></div>
     <div class="container" id="mage_fire_beastlord"             style="display: none;" ></div>
     <div class="container" id="mage_frost_beastlord"            style="display: none;" ></div>
+    <div class="container" id="monk_brewmaster_beastlord"       style="display: none;" ></div>
     <div class="container" id="monk_windwalker_beastlord"       style="display: none;" ></div>
     <div class="container" id="paladin_protection_beastlord"    style="display: none;" ></div>
     <div class="container" id="paladin_retribution_beastlord"   style="display: none;" ></div>
@@ -520,6 +528,13 @@
         <li>Please use the trinket analysis of your spec's theorycrafters for more accuracy.</li>
         <li>Theorycrafter resource: <a href="https://www.altered-time.com/forum/viewforum.php?f=5" target="blank">Altered Time</a></li>
         <li>Discord: <a href="https://discord.gg/0gLMHikX2aZ23VdA" target="blank">Hall of the Guardians</a></li>
+      </ul>
+    </div>
+    <div class="tc-box" id="tc_monk_brewmaster" style="display: none;" >
+      <ul type="square">
+        <li>Please use the trinket analysis of your spec's theorycrafters for more accuracy. My chart is <strong>ONLY FOR DPS</strong>.</li>
+        <li>Theorycrafter resource: <a href="http://www.peakofserenity.com/brewmaster/" target="blank">Peak of Serenity</a></li>
+        <li>Discord: <a href="https://discord.gg/0dkfBMAxzTkWj21F" target="blank">PeakOfSerenity</a></li>
       </ul>
     </div>
     <div class="tc-box" id="tc_monk_windwalker" style="display: none;" >
@@ -625,7 +640,6 @@
     <p>If you want to leave a comment, a suggestion for improvement, or found something noteworthy add an <a href="https://github.com/Bloodmallet/bloodmallet.github.io/issues" target="blank">issue at the repository</a> of this site. Or you could <a href="https://www.paypal.me/bloodmallet" target="blank"><img src="https://img.shields.io/badge/PayPal-donate-blue.svg"></a> too.</p>
     <p>TODO:</p>
     <ul class="todo" type="square">
-      <li>add Brewmaster</li>
       <li>add crucibles for tanks</li>
       <li>raid argus</li>
       <li>get awesome loot</li>
