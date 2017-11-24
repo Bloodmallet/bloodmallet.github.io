@@ -1,4 +1,4 @@
-Highcharts.chart('monk_windwalker_patchwerk', 
+Highcharts.chart('monk_windwalker_patchwerk',
 {
     chart: {
         type: "bar"
@@ -578,7 +578,7 @@ Highcharts.chart('monk_windwalker_patchwerk',
         }
     ],
     subtitle: {
-        text: "UTC 2017-11-24 01:59 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/83184853fbe2695894ec9cc2b135d309f2eb2f09\" target=\"blank\">8318485</a>"
+        text: "UTC 2017-11-24 01:59 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/bc371138b7e53df495f63d1eb1c2f8e2ced50341\" target=\"blank\">bc37113</a>"
     },
     title: {
         text: "Monk - Windwalker - Patchwerk"
