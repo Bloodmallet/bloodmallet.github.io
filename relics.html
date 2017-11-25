@@ -44,7 +44,7 @@
 
     <div class="row">
       <div class="col-xs-1"></div>
-      <div class="col-xs-10 alert alert-danger"><strong>I forgot to use T21 profiles for crucible data. The current data on this page is still T20! You can expect an update to T21 on monday. I very much apologise for the delay.</strong></div>
+      <div class="col-xs-10 alert alert-success"><strong>Crucible data reflects T21 (Antorus) now. I very much apologise for the delay.</strong></div>
     </div>
 
 
@@ -54,6 +54,7 @@
         <div class="div-cell">
           <div class="btn-group dk">
             <div class="class-table">Death Knight</div>
+            <button class="spec-switch-button" name="death_knight_blood">Blood</button>
             <button class="spec-switch-button" name="death_knight_frost">Frost</button>
             <button class="spec-switch-button" name="death_knight_unholy">Unholy</button>
           </div>
@@ -92,12 +93,14 @@
         <div class="div-cell">
           <div class="btn-group monk">
             <div class="class-table">Monk</div>
+            <button class="spec-switch-button" name="monk_brewmaster">Brewmaster</button>
             <button class="spec-switch-button" name="monk_windwalker">Windwalker</button>
           </div>
         </div>
         <div class="div-cell">
           <div class="btn-group paladin">
             <div class="class-table">Paladin</div>
+            <button class="spec-switch-button" name="paladin_protection">Protection</button>
             <button class="spec-switch-button" name="paladin_retribution">Retribution</button>
           </div>
         </div>
@@ -149,6 +152,7 @@
         <div class="div-cell">
           <div class="btn-group dk">
             <div class="class-table">Death Knight</div>
+            <button class="spec-switch-button" name="death_knight_blood">Blood</button>
             <button class="spec-switch-button" name="death_knight_frost">Frost</button>
             <button class="spec-switch-button" name="death_knight_unholy">Unholy</button>
           </div>
@@ -187,6 +191,7 @@
         <div class="div-cell">
           <div class="btn-group monk">
             <div class="class-table">Monk</div>
+            <button class="spec-switch-button" name="monk_brewmaster">Brewmaster</button>
             <button class="spec-switch-button" name="monk_windwalker">Windwalker</button>
           </div>
         </div>
@@ -195,6 +200,7 @@
         <div class="div-cell">
           <div class="btn-group paladin">
             <div class="class-table">Paladin</div>
+            <button class="spec-switch-button" name="paladin_protection">Protection</button>
             <button class="spec-switch-button" name="paladin_retribution">Retribution</button>
           </div>
         </div>
@@ -261,6 +267,7 @@
 
 
 
+    <div class="container-relics" id="crucible_death_knight_blood_patchwerk"    style="display: none;" ></div>
     <div class="container-relics" id="crucible_death_knight_frost_patchwerk"    style="display: none;" ></div>
     <div class="container-relics" id="crucible_death_knight_unholy_patchwerk"   style="display: none;" ></div>
     <div class="container-relics" id="crucible_demon_hunter_havoc_patchwerk"    style="display: none;" ></div>
@@ -272,7 +279,9 @@
     <div class="container-relics" id="crucible_mage_arcane_patchwerk"           style="display: none;" ></div>
     <div class="container-relics" id="crucible_mage_fire_patchwerk"             style="display: none;" ></div>
     <div class="container-relics" id="crucible_mage_frost_patchwerk"            style="display: none;" ></div>
+    <div class="container-relics" id="crucible_monk_brewmaster_patchwerk"       style="display: none;" ></div>
     <div class="container-relics" id="crucible_monk_windwalker_patchwerk"       style="display: none;" ></div>
+    <div class="container-relics" id="crucible_paladin_protection_patchwerk"    style="display: none;" ></div>
     <div class="container-relics" id="crucible_paladin_retribution_patchwerk"   style="display: none;" ></div>
     <div class="container-relics" id="crucible_priest_shadow_patchwerk"         style="display: none;" ></div>
     <div class="container-relics" id="crucible_rogue_assassination_patchwerk"   style="display: none;" ></div>
@@ -289,6 +298,7 @@
     <div id="beastlord-disclaimer" style="display: none;">
       <p><strong>Disclaimer:</strong> Beastlord simulations suffer from multiple weaknesses and these graphs should be taken with a huge boulder of salt. The standard profiles are most likely optimized for single target; itemwise (secondaries) and talentwise. As I don't change either it's very much possible that the results you see here, don't reflect the potential for your spec. In addition it's possible that the standard APL does not consider AoE fights. Make sure to check out your theorycrafters resources!</p>
     </div>
+    <div class="container-relics" id="crucible_death_knight_blood_beastlord"    style="display: none;" ></div>
     <div class="container-relics" id="crucible_death_knight_frost_beastlord"    style="display: none;" ></div>
     <div class="container-relics" id="crucible_death_knight_unholy_beastlord"   style="display: none;" ></div>
     <div class="container-relics" id="crucible_demon_hunter_havoc_beastlord"    style="display: none;" ></div>
@@ -300,7 +310,9 @@
     <div class="container-relics" id="crucible_mage_arcane_beastlord"           style="display: none;" ></div>
     <div class="container-relics" id="crucible_mage_fire_beastlord"             style="display: none;" ></div>
     <div class="container-relics" id="crucible_mage_frost_beastlord"            style="display: none;" ></div>
+    <div class="container-relics" id="crucible_monk_brewmaster_beastlord"       style="display: none;" ></div>
     <div class="container-relics" id="crucible_monk_windwalker_beastlord"       style="display: none;" ></div>
+    <div class="container-relics" id="crucible_paladin_protection_beastlord"    style="display: none;" ></div>
     <div class="container-relics" id="crucible_paladin_retribution_beastlord"   style="display: none;" ></div>
     <div class="container-relics" id="crucible_priest_shadow_beastlord"         style="display: none;" ></div>
     <div class="container-relics" id="crucible_rogue_assassination_beastlord"   style="display: none;" ></div>
@@ -315,10 +327,21 @@
     <div class="container-relics" id="crucible_warrior_fury_beastlord"          style="display: none;" ></div>
 
     <!-- TC resource area -->
+    <div class="tc-box" id="tc_death_knight_blood" style="display: none;" >
+      <ul type="square">
+        <li>Please use the crucible analysis of your spec's theorycrafters for more accuracy. My chart is <strong>ONLY FOR DPS</strong>.</li>
+        <li>Theorycrafter resource: <a href="https://docs.google.com/document/d/162vcG39rz4OJvd4zi7557KCfkRfuyT1aJp3KF076z5U" target="blank">Blood DK Guide</a></li>
+        <li>Discord: <a href="https://discord.gg/hq6HwSB" target="blank">Acherus</a></li>
+        <li>Single target Crucible Weight</li>
+        <pre><code><iframe src="js/crucible/crucible_death_knight_blood_patchwerk_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
+        <li>Beastlord Crucible Weight</li>
+        <pre><code><iframe src="js/crucible/crucible_death_knight_blood_beastlord_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
+      </ul>
+    </div>
     <div class="tc-box" id="tc_death_knight_frost" style="display: none;" >
       <ul type="square">
         <li>Please use the crucible analysis of your spec's theorycrafters for more accuracy.</li>
-        <li>Theorycrafter resource: <a href="https://docs.google.com/document/d/1aVoO3dkG-YJGTU1E0xju-F178HBdILT_2rSMR3F1x4o" target="blank">Frost DK FAQ 7.2.5</a></li>
+        <li>Theorycrafter resource: <a href="https://goo.gl/gVBHCW" target="blank">Frost DK FAQ</a></li>
         <li>Discord: <a href="https://discord.gg/hq6HwSB" target="blank">Acherus</a></li>
         <li>Single target Crucible Weight</li>
         <pre><code><iframe src="js/crucible/crucible_death_knight_frost_patchwerk_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
@@ -330,7 +353,7 @@
     <div class="tc-box" id="tc_death_knight_unholy" style="display: none;" >
       <ul type="square">
         <li>Please use the crucible analysis of your spec's theorycrafters for more accuracy.</li>
-        <li>Theorycrafter resource: <a href="http://www.wowhead.com/unholy-death-knight-guide" target="blank">Guide</a> / <a href="https://docs.google.com/spreadsheets/d/1efg3uitY4HDHjnBtUckq5RPJ1XyyZIzVbt52otMa8Uc/edit#gid=1479337307" target="blank">Trinkets</a> </li>
+        <li>Theorycrafter resource: <a href="https://goo.gl/SjcJ3n" target="blank">Guide</a> / <a href="https://docs.google.com/spreadsheets/d/1efg3uitY4HDHjnBtUckq5RPJ1XyyZIzVbt52otMa8Uc/edit#gid=1479337307" target="blank">Trinkets</a> </li>
         <li>Discord: <a href="https://discord.gg/hq6HwSB" target="blank">Acherus</a></li>
         <li>Single target Crucible Weight</li>
         <pre><code><iframe src="js/crucible/crucible_death_knight_unholy_patchwerk_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
@@ -352,7 +375,7 @@
     <div class="tc-box" id="tc_druid_balance" style="display: none;" >
       <ul type="square">
         <li>Please use the crucible analysis of your spec's theorycrafters for more accuracy.</li>
-        <li>Theorycrafter resource: <a href="https://docs.google.com/document/d/1c6-_akHl_Cja-uwg20Gt8R0f12pcw4_qtVcT7LyZW4A" target="blank">Guide</a> / <a href="https://docs.google.com/spreadsheets/d/1ju-9ZHs3Lh-4VGbLpNNqxHd-3-o8DqwmBGJ0jtNw4ts/htmlview" target="blank">Trinkets</a> </li>
+        <li>Theorycrafter resource: <a href="https://docs.google.com/document/d/1c6-_akHl_Cja-uwg20Gt8R0f12pcw4_qtVcT7LyZW4A" target="blank">Guide</a> / <a href="https://goo.gl/KtNjWy" target="blank">Trinkets</a> </li>
         <li>Discord: <a href="http://discord.gg/dreamgrove" target="blank">Dreamgrove</a></li>
         <li>Single target Crucible Weight</li>
         <pre><code><iframe src="js/crucible/crucible_druid_balance_patchwerk_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
@@ -437,6 +460,17 @@
         <pre><code><iframe src="js/crucible/crucible_mage_frost_beastlord_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
       </ul>
     </div>
+    <div class="tc-box" id="tc_monk_brewmaster" style="display: none;" >
+      <ul type="square">
+        <li>Please use the crucible analysis of your spec's theorycrafters for more accuracy. My chart is <strong>ONLY FOR DPS</strong>.</li>
+        <li>Theorycrafter resource: <a href="http://www.peakofserenity.com/brewmaster/" target="blank">Peak of Serenity</a></li>
+        <li>Discord: <a href="https://discord.gg/0dkfBMAxzTkWj21F" target="blank">PeakOfSerenity</a></li>
+        <li>Single target Crucible Weight</li>
+        <pre><code><iframe src="js/crucible/crucible_monk_brewmaster_patchwerk_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
+        <li>Beastlord Crucible Weight</li>
+        <pre><code><iframe src="js/crucible/crucible_monk_brewmaster_beastlord_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
+      </ul>
+    </div>
     <div class="tc-box" id="tc_monk_windwalker" style="display: none;" >
       <ul type="square">
         <li>Please use the crucible analysis of your spec's theorycrafters for more accuracy.</li>
@@ -446,6 +480,17 @@
         <pre><code><iframe src="js/crucible/crucible_monk_windwalker_patchwerk_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
         <li>Beastlord Crucible Weight</li>
         <pre><code><iframe src="js/crucible/crucible_monk_windwalker_beastlord_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
+      </ul>
+    </div>
+    <div class="tc-box" id="tc_paladin_protection" style="display: none;" >
+      <ul type="square">
+        <li>Please use the crucible analysis of your spec's theorycrafters for more accuracy. My chart is <strong>ONLY FOR DPS</strong>.</li>
+        <li>Theorycrafter resource: <a href="http://www.wowhead.com/protection-paladin-guide" target="blank">Protection Paladin Guide</a></li>
+        <li>Discord: <a href="https://discord.gg/0dvRDgpa5xZHFfnD" target="blank">Hammer of Wrath</a></li>
+        <li>Single target Crucible Weight</li>
+        <pre><code><iframe src="js/crucible/crucible_paladin_protection_patchwerk_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
+        <li>Beastlord Crucible Weight</li>
+        <pre><code><iframe src="js/crucible/crucible_paladin_protection_beastlord_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
       </ul>
     </div>
     <div class="tc-box" id="tc_paladin_retribution" style="display: none;" >
