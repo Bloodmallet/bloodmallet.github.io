@@ -28,13 +28,11 @@ document.addEventListener('DOMContentLoaded', function() {
   if (window.location.hash == "") {
     return;
   }
+
   var start_chart =  window.location.hash.split("#")[1].split("_");
   // enable pruned if it was in the link
-  if (start_chart.length > 3 && start_chart[0] == "pruned") {
+  if (start_chart.length > 3 && start_chart[start_chart.length - 1] == "pruned") {
     var to_prune = true;
-    for (var i = 0; i < start_chart.length - 1; i++) {
-      start_chart[i] = start_chart[i + 1];
-    }
     start_chart.pop();
   }
 
@@ -80,6 +78,7 @@ function addLanguageListener() {
   });
 }
 
+
 function copy_chart_link() {
   var path = window.location.origin;
   path += window.location.pathname;
@@ -87,10 +86,11 @@ function copy_chart_link() {
     path += "?lang=" + language;
   }
   path += "#";
-  if (pruned) {
-    path += "pruned_";
-  }
   path += active_spec + "_" + fight_style;
+  if (pruned) {
+    path += "_pruned";
+  }
+
   document.getElementById("chart_linker_content").innerHTML = path;
   document.getElementById("chart_linker_content").style.display = "block";
   window.getSelection().selectAllChildren( document.getElementById( "chart_linker_content" ) );
@@ -101,6 +101,7 @@ function copy_chart_link() {
   success_message.className = "show";
   setTimeout(function(){ success_message.className = success_message.className.replace("show", ""); }, 3000);
 }
+
 
 function switchLanguage(new_language) {
   // little sanity check
@@ -185,26 +186,31 @@ function switch_chart_to(spec) {
 
   active_spec = spec;
 
+  var pruned_addition = "";
+  var load_path = "js/trinkets/" + spec + "_" + fight_style;
   if (pruned) {
-    spec = "pruned_" + spec;
+    load_path += "_pruned";
+    pruned_addition = "_pruned";
   }
+  load_path += ".js";
+
   // load scripts/data of the wanted chart if it's not already present
   var already_loaded = false;
   var scripts = document.scripts;
   for (var i = scripts.length - 1; i >= 0; i--) {
     // if a script already is loaded for the fight style and spec, don't load again
-    if (~scripts[i].src.indexOf("js/trinkets/" + spec + "_" + fight_style + ".js")) {
+    if (~scripts[i].src.indexOf(load_path)) {
       already_loaded = true;
     }
   }
   if ( ! already_loaded) {
-    getScript("js/trinkets/" + spec + "_" + fight_style + ".js");
+    getScript(load_path);
   }
 
   // hide/show charts
   var container = document.getElementsByClassName("container");
   for (var i = container.length - 1; i >= 0; i--) {
-    if (container[i].id === spec + "_" + fight_style) {
+    if (container[i].id === spec + "_" + fight_style + pruned_addition) {
       container[i].style.display = 'block';
     } else {
       container[i].style.display = 'none';
@@ -213,7 +219,7 @@ function switch_chart_to(spec) {
 
   // fix pruned chart height
   if (pruned) {
-    document.getElementById(spec + "_" + fight_style).style.height = "500px";
+    document.getElementById(spec + "_" + fight_style + pruned_addition).style.height = "500px";
   }
 
   // hide/show TC-resource and Discord of the spec
@@ -227,7 +233,7 @@ function switch_chart_to(spec) {
     }
   }
 
-  ga('send', 'event', 'trinkets', fight_style, spec);
+  ga('send', 'event', 'trinkets', fight_style, spec + pruned_addition);
 
   if (language != "EN") {
     //console.log("Starting translation process.");
@@ -243,6 +249,7 @@ function getScript(source, callback) {
 
   document.body.appendChild(script);
 }
+
 
 function translate_charts() {
   if (language=="EN") {
@@ -268,12 +275,14 @@ function translate_charts() {
   }
 }
 
+
 function translate_trinket(trinket) {
   if (translator[trinket] && translator[trinket] != "") {
     return translator[trinket];
   }
   return false;
 }
+
 
 function reset_translations() {
   var tspans = document.getElementsByTagName("tspan");
