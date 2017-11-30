@@ -113,6 +113,9 @@ document.addEventListener("DOMContentLoaded",
   }
 );
 
+/**
+ * Triggers loading animation and load of all json data.
+ */
 function trigger_loading() {
   document.getElementById("load_data_button").removeEventListener("click", trigger_loading );
   loading("Loading...");
