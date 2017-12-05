@@ -8,7 +8,15 @@ var translator = {};
 // add listeners after document finished loading
 document.addEventListener("DOMContentLoaded", addButtonListeners);
 document.addEventListener("DOMContentLoaded", addLanguageListener);
+// enable direct links to charts
 document.addEventListener('DOMContentLoaded', function() {
+
+  //load tooltip script if viewport is large enough
+  var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+  var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+  if (w > 450 && h > 450) {
+    getScript("//wow.zamimg.com/widgets/power.js");
+  }
 
   // switch charts to language
   if (window.location.search) {
