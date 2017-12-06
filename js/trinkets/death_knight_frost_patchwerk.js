@@ -1,4 +1,4 @@
-Highcharts.chart('death_knight_frost_patchwerk', 
+Highcharts.chart('death_knight_frost_patchwerk',
 {
     chart: {
         type: "bar"
@@ -23,7 +23,7 @@ Highcharts.chart('death_knight_frost_patchwerk',
             },
             point: {
                 events: {
-                    click: function (event) {                var chart = this.series.yAxis;                chart.removePlotLine('helperLine');                chart.addPlotLine({                    value: this.stackY,                    color: '#000',                    width: 2,                    id: 'helperLine',                    zIndex: 5,                    label: {                      text: this.series.name + ' ' + this.category + ': ' + this.stackY,                      align: 'left',                      verticalAlign: 'bottom',                      rotation: 0,                      y: -5                    }                });              }
+                    click: function (event) {                var chart = this.series.yAxis;                chart.removePlotLine('helperLine');                chart.addPlotLine({                    value: this.stackY,                    color: '#000',                    width: 2,                    id: 'helperLine',                    zIndex: 5,                    label: {                      text: this.series.name + ' ' + this.category + ': ' + Intl.NumberFormat().format(this.stackY),                      align: 'left',                      verticalAlign: 'bottom',                      rotation: 0,                      y: -5                    }                });              }
                 }
             },
             stacking: "normal"
@@ -606,7 +606,7 @@ Highcharts.chart('death_knight_frost_patchwerk',
     tooltip: {
         backgroundColor: "#eee",
         borderColor: "#bbb",
-        formatter: function() {        var s = '<div style=\"background-color:#eee; padding:12px;\"><b>'+ this.x +'</b>';        var cumulative_amount = 0;        for (var i = this.points.length - 1 ; i >= 0 ; i--) {            cumulative_amount += this.points[i].y;            if (this.points[i].y !== 0){                s += '<br/><span style=\"color: ' + this.points[i].series.color + '; font-weight: bold;\">' + this.points[i].series.name +'</span>: ' + cumulative_amount;            }        }        s += '</div>';        return s;      },
+        formatter: function() {        var s = '<div style=\"background-color:#eee; padding:12px;\"><b>'+ this.x +'</b>';        var cumulative_amount = 0;        for (var i = this.points.length - 1 ; i >= 0 ; i--) {            cumulative_amount += this.points[i].y;            if (this.points[i].y !== 0){                s += '<br/><span style=\"color: ' + this.points[i].series.color + '; font-weight: bold;\">' + this.points[i].series.name +'</span>: ' + Intl.NumberFormat().format(cumulative_amount);            }        }        s += '</div>';        return s;      },
         headerFormat: "<b>{point.x}</b>",
         shared: true,
         style: {
@@ -690,7 +690,7 @@ Highcharts.chart('death_knight_frost_patchwerk',
                     style: {
                         color: "#0973DA"
                     },
-                    text: "mean: 167284",
+                    text: "mean: " + Intl.NumberFormat().format(167284),
                     verticalAlign: "bottom",
                     x: 10,
                     y: -23
@@ -704,6 +704,9 @@ Highcharts.chart('death_knight_frost_patchwerk',
             enabled: true,
             style: {
                 textOutline: false
+            },
+            formatter: function() {
+                return Intl.NumberFormat().format(this.total);
             }
         },
         title: {
