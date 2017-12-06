@@ -39,51 +39,13 @@ Highcharts.chart('monk_windwalker_patchwerk_pruned',
         {
             color: "#fdbf6f",
             data: [
-                254029,
-                246592,
-                189226,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
+                252302
             ],
             name: "1000"
         },
         {
             color: "#cab2d6",
             data: [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
                 0
             ],
             name: "980"
@@ -91,25 +53,6 @@ Highcharts.chart('monk_windwalker_patchwerk_pruned',
         {
             color: "#ff7f00",
             data: [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
                 0
             ],
             name: "970"
@@ -117,25 +60,6 @@ Highcharts.chart('monk_windwalker_patchwerk_pruned',
         {
             color: "#fb9a99",
             data: [
-                0,
-                0,
-                0,
-                0,
-                153595,
-                144191,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
                 0
             ],
             name: "960"
@@ -143,25 +67,6 @@ Highcharts.chart('monk_windwalker_patchwerk_pruned',
         {
             color: "#e31a1c",
             data: [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
                 0
             ],
             name: "950"
@@ -169,25 +74,6 @@ Highcharts.chart('monk_windwalker_patchwerk_pruned',
         {
             color: "#b2df8a",
             data: [
-                0,
-                0,
-                0,
-                156521,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
                 0
             ],
             name: "940"
@@ -195,25 +81,6 @@ Highcharts.chart('monk_windwalker_patchwerk_pruned',
         {
             color: "#33a02c",
             data: [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                141628,
-                0,
-                132507,
-                0,
-                129227,
-                127159,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
                 0
             ],
             name: "930"
@@ -221,25 +88,6 @@ Highcharts.chart('monk_windwalker_patchwerk_pruned',
         {
             color: "#a6cee3",
             data: [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
                 0
             ],
             name: "920"
@@ -247,40 +95,23 @@ Highcharts.chart('monk_windwalker_patchwerk_pruned',
         {
             color: "#1f78b4",
             data: [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                140262,
-                0,
-                132168,
-                0,
-                0,
-                122626,
-                121937,
-                120116,
-                116886,
-                116686,
-                114120,
-                113701,
-                112918
+                0
             ],
             name: "910"
         }
     ],
     subtitle: {
-        text: "UTC 2017-11-28 23:50 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/195d4ef51b95f5a68cbdb8507a51b6259e3a0bab\" target=\"blank\">195d4ef</a>"
+        text: "UTC 2017-12-06 01:48 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/954bf604f2c56271a369035c7f801169bb84f117\" target=\"blank\">954bf60</a>",
+        useHTML: true
     },
     title: {
-        text: "Monk - Windwalker - Patchwerk"
+        text: "Monk - Windwalker - Patchwerk",
+        useHTML: true
     },
     tooltip: {
         backgroundColor: "#eee",
         borderColor: "#bbb",
-        formatter: function() {        var s = '<b>'+ this.x +'</b>';        var cumulative_amount = 0;        for (var i = this.points.length - 1 ; i >= 0 ; i--) {            cumulative_amount += this.points[i].y;            if (this.points[i].y !== 0){                s += '<br/><span style=\"color: ' + this.points[i].series.color + '; font-weight: bold;\">' + this.points[i].series.name +'</span>: ' + cumulative_amount;            }        }        return s;      },
+        formatter: function() {        var s = '<div style=\"background-color:#eee; padding:12px;\"><b>'+ this.x +'</b>';        var cumulative_amount = 0;        for (var i = this.points.length - 1 ; i >= 0 ; i--) {            cumulative_amount += this.points[i].y;            if (this.points[i].y !== 0){                s += '<br/><span style=\"color: ' + this.points[i].series.color + '; font-weight: bold;\">' + this.points[i].series.name +'</span>: ' + cumulative_amount;            }        }        s += '</div>';        return s;      },
         headerFormat: "<b>{point.x}</b>",
         shared: true,
         style: {
@@ -289,27 +120,11 @@ Highcharts.chart('monk_windwalker_patchwerk_pruned',
     },
     xAxis: {
         categories: [
-            "Kil'jaeden's Burning Wish",
-            "Golganneth's Vitality",
-            "Aman'Thul's Vision",
-            "Specter of Betrayal",
-            "Shadow-Singed Fang",
-            "Seeping Scourgewing",
-            "Engine of Eradication",
-            "Eye of Command",
-            "Astral Alchemist Stone",
-            "Unstable Arcanocrystal",
-            "Cradle of Anguish",
-            "Vial of Ceaseless Toxins",
-            "Stat Stick (Crit)",
-            "Stat Stick (Versatility)",
-            "Stat Stick (Mastery)",
-            "Entwined Elemental Foci",
-            "PVP Badge of Conquest",
-            "Memento of Angerboda",
-            "Convergence of Fates",
-            "Thrice-Accursed Compass"
-        ]
+            "<a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\">Kil'jaeden's Burning Wish</a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a>"
+        ],
+        labels: {
+            useHTML: true
+        }
     },
     yAxis: {
         labels: {
@@ -325,12 +140,12 @@ Highcharts.chart('monk_windwalker_patchwerk_pruned',
                     style: {
                         color: "#0973DA"
                     },
-                    text: "mean: 144304",
+                    text: "mean: 252302",
                     verticalAlign: "bottom",
                     x: 10,
                     y: -23
                 },
-                value: 144304.75,
+                value: 252302.0,
                 width: 2,
                 zIndex: 2
             }

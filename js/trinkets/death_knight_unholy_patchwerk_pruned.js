@@ -39,51 +39,13 @@ Highcharts.chart('death_knight_unholy_patchwerk_pruned',
         {
             color: "#fdbf6f",
             data: [
-                267314,
-                251162,
-                228536,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
+                265912
             ],
             name: "1000"
         },
         {
             color: "#cab2d6",
             data: [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
                 0
             ],
             name: "980"
@@ -91,25 +53,6 @@ Highcharts.chart('death_knight_unholy_patchwerk_pruned',
         {
             color: "#ff7f00",
             data: [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
                 0
             ],
             name: "970"
@@ -117,25 +60,6 @@ Highcharts.chart('death_knight_unholy_patchwerk_pruned',
         {
             color: "#fb9a99",
             data: [
-                0,
-                0,
-                0,
-                177423,
-                0,
-                0,
-                155417,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
                 0
             ],
             name: "960"
@@ -143,25 +67,6 @@ Highcharts.chart('death_knight_unholy_patchwerk_pruned',
         {
             color: "#e31a1c",
             data: [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
                 0
             ],
             name: "950"
@@ -169,25 +74,6 @@ Highcharts.chart('death_knight_unholy_patchwerk_pruned',
         {
             color: "#b2df8a",
             data: [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                153815,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
                 0
             ],
             name: "940"
@@ -195,25 +81,6 @@ Highcharts.chart('death_knight_unholy_patchwerk_pruned',
         {
             color: "#33a02c",
             data: [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                148920,
-                0,
-                144252,
-                0,
-                129935,
-                0,
-                127620,
-                0,
-                0,
-                0,
-                0,
                 0
             ],
             name: "930"
@@ -221,25 +88,6 @@ Highcharts.chart('death_knight_unholy_patchwerk_pruned',
         {
             color: "#a6cee3",
             data: [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
                 0
             ],
             name: "920"
@@ -247,40 +95,23 @@ Highcharts.chart('death_knight_unholy_patchwerk_pruned',
         {
             color: "#1f78b4",
             data: [
-                0,
-                0,
-                0,
-                0,
-                163107,
-                159806,
-                0,
-                0,
-                0,
-                145275,
-                0,
-                143326,
-                0,
-                127795,
-                0,
-                126606,
-                126152,
-                125041,
-                122738,
-                122722
+                0
             ],
             name: "910"
         }
     ],
     subtitle: {
-        text: "UTC 2017-11-28 23:50 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/195d4ef51b95f5a68cbdb8507a51b6259e3a0bab\" target=\"blank\">195d4ef</a>"
+        text: "UTC 2017-12-06 01:48 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/954bf604f2c56271a369035c7f801169bb84f117\" target=\"blank\">954bf60</a>",
+        useHTML: true
     },
     title: {
-        text: "Death_Knight - Unholy - Patchwerk"
+        text: "Death_Knight - Unholy - Patchwerk",
+        useHTML: true
     },
     tooltip: {
         backgroundColor: "#eee",
         borderColor: "#bbb",
-        formatter: function() {        var s = '<b>'+ this.x +'</b>';        var cumulative_amount = 0;        for (var i = this.points.length - 1 ; i >= 0 ; i--) {            cumulative_amount += this.points[i].y;            if (this.points[i].y !== 0){                s += '<br/><span style=\"color: ' + this.points[i].series.color + '; font-weight: bold;\">' + this.points[i].series.name +'</span>: ' + cumulative_amount;            }        }        return s;      },
+        formatter: function() {        var s = '<div style=\"background-color:#eee; padding:12px;\"><b>'+ this.x +'</b>';        var cumulative_amount = 0;        for (var i = this.points.length - 1 ; i >= 0 ; i--) {            cumulative_amount += this.points[i].y;            if (this.points[i].y !== 0){                s += '<br/><span style=\"color: ' + this.points[i].series.color + '; font-weight: bold;\">' + this.points[i].series.name +'</span>: ' + cumulative_amount;            }        }        s += '</div>';        return s;      },
         headerFormat: "<b>{point.x}</b>",
         shared: true,
         style: {
@@ -289,27 +120,11 @@ Highcharts.chart('death_knight_unholy_patchwerk_pruned',
     },
     xAxis: {
         categories: [
-            "Kil'jaeden's Burning Wish",
-            "Khaz'goroths Courage",
-            "Aman'Thul's Vision",
-            "Seeping Scourgewing",
-            "Unstable Arcanocrystal",
-            "Convergence of Fates",
-            "Shadow-Singed Fang",
-            "Specter of Betrayal",
-            "Engine of Eradication",
-            "Eye of Command",
-            "Cradle of Anguish",
-            "Fel-Oiled Infernal Machine",
-            "Astral Alchemist Stone",
-            "Ettin Fingernail",
-            "Vial of Ceaseless Toxins",
-            "Entwined Elemental Foci",
-            "Stat Stick (Mastery)",
-            "Stat Stick (Crit)",
-            "Chaos Talisman",
-            "Memento of Angerboda"
-        ]
+            "<a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\">Kil'jaeden's Burning Wish</a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a>"
+        ],
+        labels: {
+            useHTML: true
+        }
     },
     yAxis: {
         labels: {
@@ -325,12 +140,12 @@ Highcharts.chart('death_knight_unholy_patchwerk_pruned',
                     style: {
                         color: "#0973DA"
                     },
-                    text: "mean: 157348",
+                    text: "mean: 265912",
                     verticalAlign: "bottom",
                     x: 10,
                     y: -23
                 },
-                value: 157348.1,
+                value: 265912.0,
                 width: 2,
                 zIndex: 2
             }

@@ -39,51 +39,13 @@ Highcharts.chart('death_knight_frost_patchwerk_pruned',
         {
             color: "#fdbf6f",
             data: [
-                241291,
-                214465,
-                202217,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
+                242637
             ],
             name: "1000"
         },
         {
             color: "#cab2d6",
             data: [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
                 0
             ],
             name: "980"
@@ -91,25 +53,6 @@ Highcharts.chart('death_knight_frost_patchwerk_pruned',
         {
             color: "#ff7f00",
             data: [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
                 0
             ],
             name: "970"
@@ -117,25 +60,6 @@ Highcharts.chart('death_knight_frost_patchwerk_pruned',
         {
             color: "#fb9a99",
             data: [
-                0,
-                0,
-                0,
-                0,
-                144891,
-                0,
-                140415,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
                 0
             ],
             name: "960"
@@ -143,25 +67,6 @@ Highcharts.chart('death_knight_frost_patchwerk_pruned',
         {
             color: "#e31a1c",
             data: [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
                 0
             ],
             name: "950"
@@ -169,25 +74,6 @@ Highcharts.chart('death_knight_frost_patchwerk_pruned',
         {
             color: "#b2df8a",
             data: [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                133021,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
                 0
             ],
             name: "940"
@@ -195,51 +81,13 @@ Highcharts.chart('death_knight_frost_patchwerk_pruned',
         {
             color: "#33a02c",
             data: [
-                0,
-                0,
-                0,
-                0,
-                0,
-                142263,
-                0,
-                135146,
-                0,
-                0,
-                0,
-                119742,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                110674
+                0
             ],
             name: "930"
         },
         {
             color: "#a6cee3",
             data: [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
                 0
             ],
             name: "920"
@@ -247,40 +95,23 @@ Highcharts.chart('death_knight_frost_patchwerk_pruned',
         {
             color: "#1f78b4",
             data: [
-                0,
-                0,
-                0,
-                151721,
-                0,
-                0,
-                0,
-                0,
-                0,
-                126476,
-                124083,
-                0,
-                115893,
-                115092,
-                114094,
-                113540,
-                112758,
-                112722,
-                111427,
                 0
             ],
             name: "910"
         }
     ],
     subtitle: {
-        text: "UTC 2017-11-28 23:50 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/195d4ef51b95f5a68cbdb8507a51b6259e3a0bab\" target=\"blank\">195d4ef</a>"
+        text: "UTC 2017-12-06 01:48 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/954bf604f2c56271a369035c7f801169bb84f117\" target=\"blank\">954bf60</a>",
+        useHTML: true
     },
     title: {
-        text: "Death_Knight - Frost - Patchwerk"
+        text: "Death_Knight - Frost - Patchwerk",
+        useHTML: true
     },
     tooltip: {
         backgroundColor: "#eee",
         borderColor: "#bbb",
-        formatter: function() {        var s = '<b>'+ this.x +'</b>';        var cumulative_amount = 0;        for (var i = this.points.length - 1 ; i >= 0 ; i--) {            cumulative_amount += this.points[i].y;            if (this.points[i].y !== 0){                s += '<br/><span style=\"color: ' + this.points[i].series.color + '; font-weight: bold;\">' + this.points[i].series.name +'</span>: ' + cumulative_amount;            }        }        return s;      },
+        formatter: function() {        var s = '<div style=\"background-color:#eee; padding:12px;\"><b>'+ this.x +'</b>';        var cumulative_amount = 0;        for (var i = this.points.length - 1 ; i >= 0 ; i--) {            cumulative_amount += this.points[i].y;            if (this.points[i].y !== 0){                s += '<br/><span style=\"color: ' + this.points[i].series.color + '; font-weight: bold;\">' + this.points[i].series.name +'</span>: ' + cumulative_amount;            }        }        s += '</div>';        return s;      },
         headerFormat: "<b>{point.x}</b>",
         shared: true,
         style: {
@@ -289,27 +120,11 @@ Highcharts.chart('death_knight_frost_patchwerk_pruned',
     },
     xAxis: {
         categories: [
-            "Kil'jaeden's Burning Wish",
-            "Aman'Thul's Vision",
-            "Khaz'goroths Courage",
-            "Unstable Arcanocrystal",
-            "Seeping Scourgewing",
-            "Cradle of Anguish",
-            "Shadow-Singed Fang",
-            "Engine of Eradication",
-            "Specter of Betrayal",
-            "Eye of Command",
-            "Chaos Talisman",
-            "Astral Alchemist Stone",
-            "Stat Stick (Haste)",
-            "Entwined Elemental Foci",
-            "Fel-Oiled Infernal Machine",
-            "Chrono Shard",
-            "Ettin Fingernail",
-            "Stat Stick (Mastery)",
-            "Memento of Angerboda",
-            "Vial of Ceaseless Toxins"
-        ]
+            "<a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\">Kil'jaeden's Burning Wish</a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a>"
+        ],
+        labels: {
+            useHTML: true
+        }
     },
     yAxis: {
         labels: {
@@ -325,12 +140,12 @@ Highcharts.chart('death_knight_frost_patchwerk_pruned',
                     style: {
                         color: "#0973DA"
                     },
-                    text: "mean: 139096",
+                    text: "mean: 242637",
                     verticalAlign: "bottom",
                     x: 10,
                     y: -23
                 },
-                value: 139096.55,
+                value: 242637.0,
                 width: 2,
                 zIndex: 2
             }

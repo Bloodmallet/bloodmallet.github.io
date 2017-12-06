@@ -39,51 +39,13 @@ Highcharts.chart('rogue_assassination_patchwerk_pruned',
         {
             color: "#fdbf6f",
             data: [
-                249765,
-                236303,
-                197905,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
+                257616
             ],
             name: "1000"
         },
         {
             color: "#cab2d6",
             data: [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
                 0
             ],
             name: "980"
@@ -91,25 +53,6 @@ Highcharts.chart('rogue_assassination_patchwerk_pruned',
         {
             color: "#ff7f00",
             data: [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
                 0
             ],
             name: "970"
@@ -117,25 +60,6 @@ Highcharts.chart('rogue_assassination_patchwerk_pruned',
         {
             color: "#fb9a99",
             data: [
-                0,
-                0,
-                0,
-                0,
-                148925,
-                0,
-                0,
-                0,
-                0,
-                136596,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
                 0
             ],
             name: "960"
@@ -143,25 +67,6 @@ Highcharts.chart('rogue_assassination_patchwerk_pruned',
         {
             color: "#e31a1c",
             data: [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
                 0
             ],
             name: "950"
@@ -169,25 +74,6 @@ Highcharts.chart('rogue_assassination_patchwerk_pruned',
         {
             color: "#b2df8a",
             data: [
-                0,
-                0,
-                0,
-                152946,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
                 0
             ],
             name: "940"
@@ -195,25 +81,6 @@ Highcharts.chart('rogue_assassination_patchwerk_pruned',
         {
             color: "#33a02c",
             data: [
-                0,
-                0,
-                0,
-                0,
-                0,
-                146110,
-                0,
-                0,
-                0,
-                0,
-                127712,
-                121900,
-                0,
-                118473,
-                0,
-                0,
-                0,
-                0,
-                0,
                 0
             ],
             name: "930"
@@ -221,25 +88,6 @@ Highcharts.chart('rogue_assassination_patchwerk_pruned',
         {
             color: "#a6cee3",
             data: [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
                 0
             ],
             name: "920"
@@ -247,40 +95,23 @@ Highcharts.chart('rogue_assassination_patchwerk_pruned',
         {
             color: "#1f78b4",
             data: [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                139700,
-                138270,
-                136737,
-                0,
-                0,
-                0,
-                121471,
-                0,
-                117394,
-                117354,
-                115985,
-                113963,
-                112513,
-                111997
+                0
             ],
             name: "910"
         }
     ],
     subtitle: {
-        text: "UTC 2017-11-28 23:50 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/195d4ef51b95f5a68cbdb8507a51b6259e3a0bab\" target=\"blank\">195d4ef</a>"
+        text: "UTC 2017-12-06 01:48 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/954bf604f2c56271a369035c7f801169bb84f117\" target=\"blank\">954bf60</a>",
+        useHTML: true
     },
     title: {
-        text: "Rogue - Assassination - Patchwerk"
+        text: "Rogue - Assassination - Patchwerk",
+        useHTML: true
     },
     tooltip: {
         backgroundColor: "#eee",
         borderColor: "#bbb",
-        formatter: function() {        var s = '<b>'+ this.x +'</b>';        var cumulative_amount = 0;        for (var i = this.points.length - 1 ; i >= 0 ; i--) {            cumulative_amount += this.points[i].y;            if (this.points[i].y !== 0){                s += '<br/><span style=\"color: ' + this.points[i].series.color + '; font-weight: bold;\">' + this.points[i].series.name +'</span>: ' + cumulative_amount;            }        }        return s;      },
+        formatter: function() {        var s = '<div style=\"background-color:#eee; padding:12px;\"><b>'+ this.x +'</b>';        var cumulative_amount = 0;        for (var i = this.points.length - 1 ; i >= 0 ; i--) {            cumulative_amount += this.points[i].y;            if (this.points[i].y !== 0){                s += '<br/><span style=\"color: ' + this.points[i].series.color + '; font-weight: bold;\">' + this.points[i].series.name +'</span>: ' + cumulative_amount;            }        }        s += '</div>';        return s;      },
         headerFormat: "<b>{point.x}</b>",
         shared: true,
         style: {
@@ -289,27 +120,11 @@ Highcharts.chart('rogue_assassination_patchwerk_pruned',
     },
     xAxis: {
         categories: [
-            "Kil'jaeden's Burning Wish",
-            "Golganneth's Vitality",
-            "Aman'Thul's Vision",
-            "Specter of Betrayal",
-            "Shadow-Singed Fang",
-            "Engine of Eradication",
-            "Eye of Command",
-            "Unstable Arcanocrystal",
-            "Convergence of Fates",
-            "Seeping Scourgewing",
-            "Cradle of Anguish",
-            "Astral Alchemist Stone",
-            "Stat Stick (Mastery)",
-            "Vial of Ceaseless Toxins",
-            "Entwined Elemental Foci",
-            "Stat Stick (Crit)",
-            "Memento of Angerboda",
-            "Thrice-Accursed Compass",
-            "Bloodthirsty Instinct",
-            "Stat Stick (Versatility)"
-        ]
+            "<a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\"><a href=\"http://www.wowhead.com/item=144259\">Kil'jaeden's Burning Wish</a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a>"
+        ],
+        labels: {
+            useHTML: true
+        }
     },
     yAxis: {
         labels: {
@@ -325,12 +140,12 @@ Highcharts.chart('rogue_assassination_patchwerk_pruned',
                     style: {
                         color: "#0973DA"
                     },
-                    text: "mean: 143100",
+                    text: "mean: 257616",
                     verticalAlign: "bottom",
                     x: 10,
                     y: -23
                 },
-                value: 143100.95,
+                value: 257616.0,
                 width: 2,
                 zIndex: 2
             }
