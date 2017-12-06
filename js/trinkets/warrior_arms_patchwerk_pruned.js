@@ -39,51 +39,13 @@ Highcharts.chart('warrior_arms_patchwerk_pruned',
         {
             color: "#fdbf6f",
             data: [
-                248970,
-                243942,
-                181725,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
+                248164
             ],
             name: "1000"
         },
         {
             color: "#cab2d6",
             data: [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
                 0
             ],
             name: "980"
@@ -91,25 +53,6 @@ Highcharts.chart('warrior_arms_patchwerk_pruned',
         {
             color: "#ff7f00",
             data: [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
                 0
             ],
             name: "970"
@@ -117,25 +60,6 @@ Highcharts.chart('warrior_arms_patchwerk_pruned',
         {
             color: "#fb9a99",
             data: [
-                0,
-                0,
-                0,
-                0,
-                162909,
-                132578,
-                0,
-                0,
-                0,
-                123347,
-                122040,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
                 0
             ],
             name: "960"
@@ -143,25 +67,6 @@ Highcharts.chart('warrior_arms_patchwerk_pruned',
         {
             color: "#e31a1c",
             data: [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
                 0
             ],
             name: "950"
@@ -169,25 +74,6 @@ Highcharts.chart('warrior_arms_patchwerk_pruned',
         {
             color: "#b2df8a",
             data: [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
                 0
             ],
             name: "940"
@@ -195,25 +81,6 @@ Highcharts.chart('warrior_arms_patchwerk_pruned',
         {
             color: "#33a02c",
             data: [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                131465,
-                127826,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                108479,
-                107286,
-                0,
-                0,
                 0
             ],
             name: "930"
@@ -221,25 +88,6 @@ Highcharts.chart('warrior_arms_patchwerk_pruned',
         {
             color: "#a6cee3",
             data: [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
                 0
             ],
             name: "920"
@@ -247,40 +95,23 @@ Highcharts.chart('warrior_arms_patchwerk_pruned',
         {
             color: "#1f78b4",
             data: [
-                0,
-                0,
-                0,
-                174161,
-                0,
-                0,
-                0,
-                0,
-                123710,
-                0,
-                0,
-                112567,
-                110434,
-                109540,
-                108946,
-                0,
-                0,
-                107062,
-                106878,
-                105296
+                0
             ],
             name: "910"
         }
     ],
     subtitle: {
-        text: "UTC 2017-11-28 23:50 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/195d4ef51b95f5a68cbdb8507a51b6259e3a0bab\" target=\"blank\">195d4ef</a>"
+        text: "UTC 2017-12-06 01:48 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/954bf604f2c56271a369035c7f801169bb84f117\" target=\"blank\">954bf60</a>",
+        useHTML: true
     },
     title: {
-        text: "Warrior - Arms - Patchwerk"
+        text: "Warrior - Arms - Patchwerk",
+        useHTML: true
     },
     tooltip: {
         backgroundColor: "#eee",
         borderColor: "#bbb",
-        formatter: function() {        var s = '<b>'+ this.x +'</b>';        var cumulative_amount = 0;        for (var i = this.points.length - 1 ; i >= 0 ; i--) {            cumulative_amount += this.points[i].y;            if (this.points[i].y !== 0){                s += '<br/><span style=\"color: ' + this.points[i].series.color + '; font-weight: bold;\">' + this.points[i].series.name +'</span>: ' + cumulative_amount;            }        }        return s;      },
+        formatter: function() {        var s = '<div style=\"background-color:#eee; padding:12px;\"><b>'+ this.x +'</b>';        var cumulative_amount = 0;        for (var i = this.points.length - 1 ; i >= 0 ; i--) {            cumulative_amount += this.points[i].y;            if (this.points[i].y !== 0){                s += '<br/><span style=\"color: ' + this.points[i].series.color + '; font-weight: bold;\">' + this.points[i].series.name +'</span>: ' + cumulative_amount;            }        }        s += '</div>';        return s;      },
         headerFormat: "<b>{point.x}</b>",
         shared: true,
         style: {
@@ -289,27 +120,11 @@ Highcharts.chart('warrior_arms_patchwerk_pruned',
     },
     xAxis: {
         categories: [
-            "Aman'Thul's Vision",
-            "Kil'jaeden's Burning Wish",
-            "Khaz'goroths Courage",
-            "Unstable Arcanocrystal",
-            "Seeping Scourgewing",
-            "Forgefiend's Fabricator",
-            "Engine of Eradication",
-            "Cradle of Anguish",
-            "Eye of Command",
-            "Shadow-Singed Fang",
-            "Gorshalach's Legacy",
-            "Stat Stick (Mastery)",
-            "Chaos Talisman",
-            "Gift of Radiance",
-            "Entwined Elemental Foci",
-            "Astral Alchemist Stone",
-            "Infernal Cinders",
-            "Ettin Fingernail",
-            "Memento of Angerboda",
-            "Stat Stick (Haste)"
-        ]
+            "<a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\">Aman'Thul's Vision</a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a>"
+        ],
+        labels: {
+            useHTML: true
+        }
     },
     yAxis: {
         labels: {
@@ -325,12 +140,12 @@ Highcharts.chart('warrior_arms_patchwerk_pruned',
                     style: {
                         color: "#0973DA"
                     },
-                    text: "mean: 137458",
+                    text: "mean: 248164",
                     verticalAlign: "bottom",
                     x: 10,
                     y: -23
                 },
-                value: 137458.05,
+                value: 248164.0,
                 width: 2,
                 zIndex: 2
             }

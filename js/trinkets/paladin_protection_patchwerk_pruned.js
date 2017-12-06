@@ -1,4 +1,4 @@
-Highcharts.chart('paladin_protection_patchwerk_pruned', 
+Highcharts.chart('paladin_protection_patchwerk_pruned',
 {
     chart: {
         type: "bar"
@@ -105,7 +105,7 @@ Highcharts.chart('paladin_protection_patchwerk_pruned',
         useHTML: true
     },
     title: {
-        text: "Paladin - Protection - Patchwerk",
+        text: "Paladin - Protection DPS - Patchwerk",
         useHTML: true
     },
     tooltip: {

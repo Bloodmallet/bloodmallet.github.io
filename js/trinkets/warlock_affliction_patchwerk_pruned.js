@@ -39,51 +39,13 @@ Highcharts.chart('warlock_affliction_patchwerk_pruned',
         {
             color: "#fdbf6f",
             data: [
-                260117,
-                226354,
-                218133,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
+                269387
             ],
             name: "1000"
         },
         {
             color: "#cab2d6",
             data: [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
                 0
             ],
             name: "980"
@@ -91,25 +53,6 @@ Highcharts.chart('warlock_affliction_patchwerk_pruned',
         {
             color: "#ff7f00",
             data: [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
                 0
             ],
             name: "970"
@@ -117,25 +60,6 @@ Highcharts.chart('warlock_affliction_patchwerk_pruned',
         {
             color: "#fb9a99",
             data: [
-                0,
-                0,
-                0,
-                196346,
-                0,
-                0,
-                137553,
-                137107,
-                125800,
-                123490,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
                 0
             ],
             name: "960"
@@ -143,25 +67,6 @@ Highcharts.chart('warlock_affliction_patchwerk_pruned',
         {
             color: "#e31a1c",
             data: [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
                 0
             ],
             name: "950"
@@ -169,25 +74,6 @@ Highcharts.chart('warlock_affliction_patchwerk_pruned',
         {
             color: "#b2df8a",
             data: [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                122319,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
                 0
             ],
             name: "940"
@@ -195,51 +81,13 @@ Highcharts.chart('warlock_affliction_patchwerk_pruned',
         {
             color: "#33a02c",
             data: [
-                0,
-                0,
-                0,
-                0,
-                0,
-                143694,
-                0,
-                0,
-                0,
-                0,
-                0,
-                120937,
-                119232,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                108385
+                0
             ],
             name: "930"
         },
         {
             color: "#a6cee3",
             data: [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
                 0
             ],
             name: "920"
@@ -247,40 +95,23 @@ Highcharts.chart('warlock_affliction_patchwerk_pruned',
         {
             color: "#1f78b4",
             data: [
-                0,
-                0,
-                0,
-                0,
-                181749,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                114162,
-                113623,
-                113584,
-                109818,
-                109756,
-                109043,
                 0
             ],
             name: "910"
         }
     ],
     subtitle: {
-        text: "UTC 2017-11-28 23:50 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/195d4ef51b95f5a68cbdb8507a51b6259e3a0bab\" target=\"blank\">195d4ef</a>"
+        text: "UTC 2017-12-06 01:48 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/954bf604f2c56271a369035c7f801169bb84f117\" target=\"blank\">954bf60</a>",
+        useHTML: true
     },
     title: {
-        text: "Warlock - Affliction - Patchwerk"
+        text: "Warlock - Affliction - Patchwerk",
+        useHTML: true
     },
     tooltip: {
         backgroundColor: "#eee",
         borderColor: "#bbb",
-        formatter: function() {        var s = '<b>'+ this.x +'</b>';        var cumulative_amount = 0;        for (var i = this.points.length - 1 ; i >= 0 ; i--) {            cumulative_amount += this.points[i].y;            if (this.points[i].y !== 0){                s += '<br/><span style=\"color: ' + this.points[i].series.color + '; font-weight: bold;\">' + this.points[i].series.name +'</span>: ' + cumulative_amount;            }        }        return s;      },
+        formatter: function() {        var s = '<div style=\"background-color:#eee; padding:12px;\"><b>'+ this.x +'</b>';        var cumulative_amount = 0;        for (var i = this.points.length - 1 ; i >= 0 ; i--) {            cumulative_amount += this.points[i].y;            if (this.points[i].y !== 0){                s += '<br/><span style=\"color: ' + this.points[i].series.color + '; font-weight: bold;\">' + this.points[i].series.name +'</span>: ' + cumulative_amount;            }        }        s += '</div>';        return s;      },
         headerFormat: "<b>{point.x}</b>",
         shared: true,
         style: {
@@ -289,27 +120,11 @@ Highcharts.chart('warlock_affliction_patchwerk_pruned',
     },
     xAxis: {
         categories: [
-            "Aman'Thul's Vision",
-            "Kil'jaeden's Burning Wish",
-            "Norgannon's Prowess",
-            "Acrid Catalyst Injector",
-            "Unstable Arcanocrystal",
-            "Tarnished Sentinel Medallion",
-            "Sheath of Asara",
-            "Prototype Personnel Decimator",
-            "Terminus Signaling Beacon",
-            "Vitality Resonator",
-            "Tome of Unraveling Sanity",
-            "Charm of the Rising Tide",
-            "Terror From Below",
-            "Stat Stick (Mastery)",
-            "Dreadstone of Endless Shadows",
-            "Whispers in the Dark",
-            "Erratic Metronome",
-            "Eyasu's Mulligan",
-            "Padawsen's Unlucky Charm",
-            "Astral Alchemist Stone"
-        ]
+            "<a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\">Aman'Thul's Vision</a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a>"
+        ],
+        labels: {
+            useHTML: true
+        }
     },
     yAxis: {
         labels: {
@@ -325,12 +140,12 @@ Highcharts.chart('warlock_affliction_patchwerk_pruned',
                     style: {
                         color: "#0973DA"
                     },
-                    text: "mean: 144560",
+                    text: "mean: 269387",
                     verticalAlign: "bottom",
                     x: 10,
                     y: -23
                 },
-                value: 144560.1,
+                value: 269387.0,
                 width: 2,
                 zIndex: 2
             }
