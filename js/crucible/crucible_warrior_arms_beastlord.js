@@ -1,4 +1,4 @@
-Highcharts.chart('crucible_warrior_arms_beastlord', 
+Highcharts.chart('crucible_warrior_arms_beastlord',
 {
     chart: {
         type: "bar"
@@ -41,22 +41,22 @@ Highcharts.chart('crucible_warrior_arms_beastlord',
             color: "#343434",
             data: [
                 0,
-                52332,
+                54915,
                 0,
-                31399,
-                30825,
-                25407,
-                24462,
-                22621,
-                22098,
-                21917,
-                20932,
-                19794,
-                16346,
-                15833,
-                15000,
-                10466,
+                32949,
+                27098,
+                26393,
+                23114,
+                23059,
+                21966,
+                19623,
+                17936,
+                17437,
+                16835,
+                13246,
+                13170,
                 0,
+                10983,
                 0,
                 0,
                 0,
@@ -69,11 +69,9 @@ Highcharts.chart('crucible_warrior_arms_beastlord',
         {
             color: "#C79C6E",
             data: [
-                63247,
+                61146,
                 0,
-                39700,
-                0,
-                0,
+                34671,
                 0,
                 0,
                 0,
@@ -85,9 +83,11 @@ Highcharts.chart('crucible_warrior_arms_beastlord',
                 0,
                 0,
                 0,
-                10016,
-                9474,
-                2132,
+                0,
+                11349,
+                0,
+                4704,
+                3022,
                 0,
                 0,
                 0
@@ -97,15 +97,17 @@ Highcharts.chart('crucible_warrior_arms_beastlord',
         }
     ],
     subtitle: {
-        text: "UTC 2017-11-25 17:18 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/69c1b460a165743cf53ad056e00fed6a17c3769e\" target=\"blank\">69c1b46</a>"
+        text: "UTC 2017-12-07 08:20 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/244a4bbf9d075993ae4f96b36189b7f58f55ebe0\" target=\"blank\">244a4bb</a>",
+        useHTML: true
     },
     title: {
-        text: "Warrior - Arms - Beastlord"
+        text: "Warrior - Arms - Beastlord",
+        useHTML: true
     },
     tooltip: {
         backgroundColor: "#eee",
         borderColor: "#bbb",
-        formatter: function() {        var s = '<b>'+ this.x +'</b>';        var cumulative_amount = 0;        for (var i = this.points.length - 1 ; i >= 0 ; i--) {            cumulative_amount += this.points[i].y;            if (this.points[i].y !== 0){                s += '<br/><span style=\"color: ' + this.points[i].series.color + '; font-weight: bold;\">' + this.points[i].series.name +'</span>: ' + cumulative_amount;            }        }        return s;      },
+        formatter: function() {        var s = '<b>'+ this.x +'</b>';        var cumulative_amount = 0;        for (var i = this.points.length - 1 ; i >= 0 ; i--) {            cumulative_amount += this.points[i].y;            if (this.points[i].y !== 0){                s += '<br/><span style=\"color: ' + this.points[i].series.color + '; font-weight: bold;\">' + this.points[i].series.name +'</span>: ' + Intl.NumberFormat().format(cumulative_amount);            }        }        return s;      },
         headerFormat: "<b>{point.x}</b>",
         shared: true,
         style: {
@@ -114,29 +116,32 @@ Highcharts.chart('crucible_warrior_arms_beastlord',
     },
     xAxis: {
         categories: [
-            "Many Will Fall",
-            "+5 itemlevel",
-            "One Against Many",
+            "<a href=\"http://www.wowhead.com/spell=216274\">Many Will Fall</a>",
+            "<a href=\"http://www.wowhead.com/spell=250879\">+5 itemlevel</a>",
+            "<a href=\"http://www.wowhead.com/spell=209462\">One Against Many</a>",
             "+3 itemlevel",
-            "Shocklight",
-            "Murderous Intent",
-            "Infusion of Light",
-            "Dark Sorrows",
-            "Master of Shadows",
-            "Light Speed",
+            "<a href=\"http://www.wowhead.com/spell=252922\">Dark Sorrows</a>",
+            "<a href=\"http://www.wowhead.com/spell=252191\">Murderous Intent</a>",
+            "<a href=\"http://www.wowhead.com/spell=252088\">Light Speed</a>",
+            "<a href=\"http://www.wowhead.com/spell=252799\">Shocklight</a>",
             "+2 itemlevel",
-            "Secure in the Light",
-            "Shadowbind",
-            "Chaotic Darkness",
-            "Torment the Weak",
+            "<a href=\"http://www.wowhead.com/spell=252091\">Master of Shadows</a>",
+            "<a href=\"http://www.wowhead.com/spell=253093\">Infusion of Light</a>",
+            "<a href=\"http://www.wowhead.com/spell=253070\">Secure in the Light</a>",
+            "<a href=\"http://www.wowhead.com/spell=252888\">Chaotic Darkness</a>",
+            "<a href=\"http://www.wowhead.com/spell=252906\">Torment the Weak</a>",
+            "<a href=\"http://www.wowhead.com/spell=252875\">Shadowbind</a>",
+            "<a href=\"http://www.wowhead.com/spell=248579\">Precise Strikes</a>",
             "+1 itemlevel",
-            "Precise Strikes",
-            "Exploit the Weakness",
-            "Deathblow",
-            "Storm of Swords",
-            "Crushing Blows",
-            "Unending Rage"
-        ]
+            "<a href=\"http://www.wowhead.com/spell=238075\">Storm of Swords</a>",
+            "<a href=\"http://www.wowhead.com/spell=209481\">Deathblow</a>",
+            "<a href=\"http://www.wowhead.com/spell=209472\">Crushing Blows</a>",
+            "<a href=\"http://www.wowhead.com/spell=209494\">Exploit the Weakness</a>",
+            "<a href=\"http://www.wowhead.com/spell=209459\">Unending Rage</a>"
+        ],
+        labels: {
+            useHTML: true
+        }
     },
     yAxis: {
         labels: {
@@ -145,6 +150,7 @@ Highcharts.chart('crucible_warrior_arms_beastlord',
         min: 0,
         stackLabels: {
             enabled: true,
+            formatter: function() {          return Intl.NumberFormat().format(this.total);        },
             style: {
                 color: (Highcharts.theme && Highcharts.theme.textColor) || 'black',
                 fontWeight: "bold"

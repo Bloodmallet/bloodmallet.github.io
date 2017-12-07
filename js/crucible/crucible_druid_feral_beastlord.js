@@ -1,4 +1,4 @@
-Highcharts.chart('crucible_druid_feral_beastlord', 
+Highcharts.chart('crucible_druid_feral_beastlord',
 {
     chart: {
         type: "bar"
@@ -40,28 +40,28 @@ Highcharts.chart('crucible_druid_feral_beastlord',
         {
             color: "#343434",
             data: [
-                37621,
+                37656,
                 0,
-                20049,
-                19501,
-                19495,
-                18540,
-                17256,
-                17216,
-                14956,
-                12767,
-                12731,
+                23047,
+                22427,
+                22362,
+                22044,
+                20584,
+                20383,
+                17950,
+                17917,
+                17742,
                 0,
-                10510,
-                7638,
-                0,
-                0,
-                5092,
+                13272,
                 0,
                 0,
                 0,
-                2546,
-                0
+                7963,
+                0,
+                0,
+                5308,
+                0,
+                2654
             ],
             name: 1,
             showInLegend: false
@@ -70,7 +70,7 @@ Highcharts.chart('crucible_druid_feral_beastlord',
             color: "#FF7D0A",
             data: [
                 0,
-                20552,
+                23926,
                 0,
                 0,
                 0,
@@ -80,32 +80,34 @@ Highcharts.chart('crucible_druid_feral_beastlord',
                 0,
                 0,
                 0,
-                11477,
+                16519,
                 0,
+                10395,
+                10387,
+                9649,
                 0,
-                6816,
-                5823,
+                7266,
+                7109,
                 0,
-                4638,
-                4332,
-                3688,
-                0,
-                2192
+                2713,
+                0
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-11-25 17:18 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/69c1b460a165743cf53ad056e00fed6a17c3769e\" target=\"blank\">69c1b46</a>"
+        text: "UTC 2017-12-07 08:20 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/244a4bbf9d075993ae4f96b36189b7f58f55ebe0\" target=\"blank\">244a4bb</a>",
+        useHTML: true
     },
     title: {
-        text: "Druid - Feral - Beastlord"
+        text: "Druid - Feral - Beastlord",
+        useHTML: true
     },
     tooltip: {
         backgroundColor: "#eee",
         borderColor: "#bbb",
-        formatter: function() {        var s = '<b>'+ this.x +'</b>';        var cumulative_amount = 0;        for (var i = this.points.length - 1 ; i >= 0 ; i--) {            cumulative_amount += this.points[i].y;            if (this.points[i].y !== 0){                s += '<br/><span style=\"color: ' + this.points[i].series.color + '; font-weight: bold;\">' + this.points[i].series.name +'</span>: ' + cumulative_amount;            }        }        return s;      },
+        formatter: function() {        var s = '<b>'+ this.x +'</b>';        var cumulative_amount = 0;        for (var i = this.points.length - 1 ; i >= 0 ; i--) {            cumulative_amount += this.points[i].y;            if (this.points[i].y !== 0){                s += '<br/><span style=\"color: ' + this.points[i].series.color + '; font-weight: bold;\">' + this.points[i].series.name +'</span>: ' + Intl.NumberFormat().format(cumulative_amount);            }        }        return s;      },
         headerFormat: "<b>{point.x}</b>",
         shared: true,
         style: {
@@ -114,29 +116,32 @@ Highcharts.chart('crucible_druid_feral_beastlord',
     },
     xAxis: {
         categories: [
-            "Dark Sorrows",
-            "Tear the Flesh",
-            "Secure in the Light",
-            "Infusion of Light",
-            "Torment the Weak",
-            "Shadowbind",
-            "Chaotic Darkness",
-            "Murderous Intent",
-            "Master of Shadows",
-            "Light Speed",
-            "+5 itemlevel",
-            "Feral Instinct",
-            "Shocklight",
+            "<a href=\"http://www.wowhead.com/spell=252922\">Dark Sorrows</a>",
+            "<a href=\"http://www.wowhead.com/spell=210593\">Tear the Flesh</a>",
+            "<a href=\"http://www.wowhead.com/spell=252875\">Shadowbind</a>",
+            "<a href=\"http://www.wowhead.com/spell=253093\">Infusion of Light</a>",
+            "<a href=\"http://www.wowhead.com/spell=253070\">Secure in the Light</a>",
+            "<a href=\"http://www.wowhead.com/spell=252799\">Shocklight</a>",
+            "<a href=\"http://www.wowhead.com/spell=252906\">Torment the Weak</a>",
+            "<a href=\"http://www.wowhead.com/spell=252888\">Chaotic Darkness</a>",
+            "<a href=\"http://www.wowhead.com/spell=252191\">Murderous Intent</a>",
+            "<a href=\"http://www.wowhead.com/spell=252088\">Light Speed</a>",
+            "<a href=\"http://www.wowhead.com/spell=252091\">Master of Shadows</a>",
+            "<a href=\"http://www.wowhead.com/spell=210631\">Feral Instinct</a>",
+            "<a href=\"http://www.wowhead.com/spell=250879\">+5 itemlevel</a>",
+            "<a href=\"http://www.wowhead.com/spell=210571\">Feral Power</a>",
+            "<a href=\"http://www.wowhead.com/spell=210570\">Razor Fangs</a>",
+            "<a href=\"http://www.wowhead.com/spell=210637\">Sharpened Claws</a>",
             "+3 itemlevel",
-            "Sharpened Claws",
-            "Feral Power",
+            "<a href=\"http://www.wowhead.com/spell=238048\">Thrashing Claws</a>",
+            "<a href=\"http://www.wowhead.com/spell=210579\">Ashamane's Energy</a>",
             "+2 itemlevel",
-            "Ashamane's Energy",
-            "Razor Fangs",
-            "Thrashing Claws",
-            "+1 itemlevel",
-            "Powerful Bite"
-        ]
+            "<a href=\"http://www.wowhead.com/spell=210575\">Powerful Bite</a>",
+            "+1 itemlevel"
+        ],
+        labels: {
+            useHTML: true
+        }
     },
     yAxis: {
         labels: {
@@ -145,6 +150,7 @@ Highcharts.chart('crucible_druid_feral_beastlord',
         min: 0,
         stackLabels: {
             enabled: true,
+            formatter: function() {          return Intl.NumberFormat().format(this.total);        },
             style: {
                 color: (Highcharts.theme && Highcharts.theme.textColor) || 'black',
                 fontWeight: "bold"

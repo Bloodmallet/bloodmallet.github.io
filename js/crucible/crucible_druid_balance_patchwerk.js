@@ -1,4 +1,4 @@
-Highcharts.chart('crucible_druid_balance_patchwerk', 
+Highcharts.chart('crucible_druid_balance_patchwerk',
 {
     chart: {
         type: "bar"
@@ -40,27 +40,27 @@ Highcharts.chart('crucible_druid_balance_patchwerk',
         {
             color: "#343434",
             data: [
-                42053,
+                38666,
                 0,
-                25231,
-                23488,
-                22704,
-                22703,
-                22519,
-                21922,
-                21384,
-                20746,
-                17774,
-                17203,
-                16821,
-                0,
-                0,
-                0,
-                9835,
+                23199,
+                20147,
+                19782,
+                19527,
+                19064,
+                19006,
+                18632,
+                18508,
+                18170,
+                17574,
+                15466,
                 0,
                 0,
+                8246,
                 0,
-                8410,
+                7733,
+                0,
+                0,
+                0,
                 0
             ],
             name: 1,
@@ -70,7 +70,7 @@ Highcharts.chart('crucible_druid_balance_patchwerk',
             color: "#FF7D0A",
             data: [
                 0,
-                33728,
+                33388,
                 0,
                 0,
                 0,
@@ -82,30 +82,32 @@ Highcharts.chart('crucible_druid_balance_patchwerk',
                 0,
                 0,
                 0,
-                13525,
-                12304,
-                10122,
+                11961,
+                9332,
                 0,
-                9029,
-                8900,
-                8412,
+                7935,
                 0,
-                3137
+                7678,
+                7035,
+                5942,
+                1166
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-11-25 17:18 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/69c1b460a165743cf53ad056e00fed6a17c3769e\" target=\"blank\">69c1b46</a>"
+        text: "UTC 2017-12-07 08:20 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/244a4bbf9d075993ae4f96b36189b7f58f55ebe0\" target=\"blank\">244a4bb</a>",
+        useHTML: true
     },
     title: {
-        text: "Druid - Balance - Patchwerk"
+        text: "Druid - Balance - Patchwerk",
+        useHTML: true
     },
     tooltip: {
         backgroundColor: "#eee",
         borderColor: "#bbb",
-        formatter: function() {        var s = '<b>'+ this.x +'</b>';        var cumulative_amount = 0;        for (var i = this.points.length - 1 ; i >= 0 ; i--) {            cumulative_amount += this.points[i].y;            if (this.points[i].y !== 0){                s += '<br/><span style=\"color: ' + this.points[i].series.color + '; font-weight: bold;\">' + this.points[i].series.name +'</span>: ' + cumulative_amount;            }        }        return s;      },
+        formatter: function() {        var s = '<b>'+ this.x +'</b>';        var cumulative_amount = 0;        for (var i = this.points.length - 1 ; i >= 0 ; i--) {            cumulative_amount += this.points[i].y;            if (this.points[i].y !== 0){                s += '<br/><span style=\"color: ' + this.points[i].series.color + '; font-weight: bold;\">' + this.points[i].series.name +'</span>: ' + Intl.NumberFormat().format(cumulative_amount);            }        }        return s;      },
         headerFormat: "<b>{point.x}</b>",
         shared: true,
         style: {
@@ -114,29 +116,32 @@ Highcharts.chart('crucible_druid_balance_patchwerk',
     },
     xAxis: {
         categories: [
-            "+5 itemlevel",
-            "Scythe of the Stars",
+            "<a href=\"http://www.wowhead.com/spell=250879\">+5 itemlevel</a>",
+            "<a href=\"http://www.wowhead.com/spell=202433\">Scythe of the Stars</a>",
             "+3 itemlevel",
-            "Infusion of Light",
-            "Shocklight",
-            "Master of Shadows",
-            "Shadowbind",
-            "Secure in the Light",
-            "Torment the Weak",
-            "Light Speed",
-            "Murderous Intent",
-            "Chaotic Darkness",
+            "<a href=\"http://www.wowhead.com/spell=252906\">Torment the Weak</a>",
+            "<a href=\"http://www.wowhead.com/spell=252799\">Shocklight</a>",
+            "<a href=\"http://www.wowhead.com/spell=252875\">Shadowbind</a>",
+            "<a href=\"http://www.wowhead.com/spell=253093\">Infusion of Light</a>",
+            "<a href=\"http://www.wowhead.com/spell=252088\">Light Speed</a>",
+            "<a href=\"http://www.wowhead.com/spell=252191\">Murderous Intent</a>",
+            "<a href=\"http://www.wowhead.com/spell=253070\">Secure in the Light</a>",
+            "<a href=\"http://www.wowhead.com/spell=252091\">Master of Shadows</a>",
+            "<a href=\"http://www.wowhead.com/spell=252888\">Chaotic Darkness</a>",
             "+2 itemlevel",
-            "Solar Stabbing",
-            "Dark Side of the Moon",
-            "Empowerment",
-            "Dark Sorrows",
-            "Sunfire Burns",
-            "Twilight Glow",
-            "Falling Star",
+            "<a href=\"http://www.wowhead.com/spell=202384\">Dark Side of the Moon</a>",
+            "<a href=\"http://www.wowhead.com/spell=202426\">Solar Stabbing</a>",
+            "<a href=\"http://www.wowhead.com/spell=252922\">Dark Sorrows</a>",
+            "<a href=\"http://www.wowhead.com/spell=202464\">Empowerment</a>",
             "+1 itemlevel",
-            "Light of the Evening Star"
-        ]
+            "<a href=\"http://www.wowhead.com/spell=202445\">Falling Star</a>",
+            "<a href=\"http://www.wowhead.com/spell=202466\">Sunfire Burns</a>",
+            "<a href=\"http://www.wowhead.com/spell=202386\">Twilight Glow</a>",
+            "<a href=\"http://www.wowhead.com/spell=238047\">Light of the Evening Star</a>"
+        ],
+        labels: {
+            useHTML: true
+        }
     },
     yAxis: {
         labels: {
@@ -145,6 +150,7 @@ Highcharts.chart('crucible_druid_balance_patchwerk',
         min: 0,
         stackLabels: {
             enabled: true,
+            formatter: function() {          return Intl.NumberFormat().format(this.total);        },
             style: {
                 color: (Highcharts.theme && Highcharts.theme.textColor) || 'black',
                 fontWeight: "bold"

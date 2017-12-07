@@ -1,4 +1,4 @@
-Highcharts.chart('crucible_warrior_arms_patchwerk', 
+Highcharts.chart('crucible_warrior_arms_patchwerk',
 {
     chart: {
         type: "bar"
@@ -40,24 +40,23 @@ Highcharts.chart('crucible_warrior_arms_patchwerk',
         {
             color: "#343434",
             data: [
-                41681,
+                38895,
                 0,
-                25128,
-                25008,
-                24600,
-                24536,
-                24188,
-                23781,
-                22208,
+                24119,
+                23948,
+                23800,
+                23337,
+                22911,
                 0,
-                21469,
-                21084,
+                21856,
                 0,
-                19563,
-                16672,
-                11225,
+                19747,
+                19369,
+                19001,
+                15558,
+                10185,
                 0,
-                8336,
+                7779,
                 0,
                 0,
                 0,
@@ -70,42 +69,43 @@ Highcharts.chart('crucible_warrior_arms_patchwerk',
             color: "#C79C6E",
             data: [
                 0,
-                28061,
+                24307,
                 0,
                 0,
                 0,
                 0,
                 0,
+                22842,
                 0,
-                0,
-                22198,
-                0,
-                0,
-                20950,
+                20392,
                 0,
                 0,
                 0,
-                9198,
                 0,
-                2668,
-                2375,
-                2249,
-                1715
+                0,
+                8131,
+                0,
+                1415,
+                0,
+                0,
+                0
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-11-25 17:18 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/69c1b460a165743cf53ad056e00fed6a17c3769e\" target=\"blank\">69c1b46</a>"
+        text: "UTC 2017-12-07 08:20 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/244a4bbf9d075993ae4f96b36189b7f58f55ebe0\" target=\"blank\">244a4bb</a>",
+        useHTML: true
     },
     title: {
-        text: "Warrior - Arms - Patchwerk"
+        text: "Warrior - Arms - Patchwerk",
+        useHTML: true
     },
     tooltip: {
         backgroundColor: "#eee",
         borderColor: "#bbb",
-        formatter: function() {        var s = '<b>'+ this.x +'</b>';        var cumulative_amount = 0;        for (var i = this.points.length - 1 ; i >= 0 ; i--) {            cumulative_amount += this.points[i].y;            if (this.points[i].y !== 0){                s += '<br/><span style=\"color: ' + this.points[i].series.color + '; font-weight: bold;\">' + this.points[i].series.name +'</span>: ' + cumulative_amount;            }        }        return s;      },
+        formatter: function() {        var s = '<b>'+ this.x +'</b>';        var cumulative_amount = 0;        for (var i = this.points.length - 1 ; i >= 0 ; i--) {            cumulative_amount += this.points[i].y;            if (this.points[i].y !== 0){                s += '<br/><span style=\"color: ' + this.points[i].series.color + '; font-weight: bold;\">' + this.points[i].series.name +'</span>: ' + Intl.NumberFormat().format(cumulative_amount);            }        }        return s;      },
         headerFormat: "<b>{point.x}</b>",
         shared: true,
         style: {
@@ -114,29 +114,31 @@ Highcharts.chart('crucible_warrior_arms_patchwerk',
     },
     xAxis: {
         categories: [
-            "+5 itemlevel",
-            "Many Will Fall",
-            "Master of Shadows",
+            "<a href=\"http://www.wowhead.com/spell=250879\">+5 itemlevel</a>",
+            "<a href=\"http://www.wowhead.com/spell=216274\">Many Will Fall</a>",
+            "<a href=\"http://www.wowhead.com/spell=252906\">Torment the Weak</a>",
+            "<a href=\"http://www.wowhead.com/spell=252875\">Shadowbind</a>",
+            "<a href=\"http://www.wowhead.com/spell=253070\">Secure in the Light</a>",
             "+3 itemlevel",
-            "Secure in the Light",
-            "Torment the Weak",
-            "Infusion of Light",
-            "Shadowbind",
-            "Chaotic Darkness",
-            "Exploit the Weakness",
-            "Murderous Intent",
-            "Light Speed",
-            "Precise Strikes",
-            "Shocklight",
+            "<a href=\"http://www.wowhead.com/spell=252091\">Master of Shadows</a>",
+            "<a href=\"http://www.wowhead.com/spell=209494\">Exploit the Weakness</a>",
+            "<a href=\"http://www.wowhead.com/spell=252888\">Chaotic Darkness</a>",
+            "<a href=\"http://www.wowhead.com/spell=248579\">Precise Strikes</a>",
+            "<a href=\"http://www.wowhead.com/spell=252088\">Light Speed</a>",
+            "<a href=\"http://www.wowhead.com/spell=252799\">Shocklight</a>",
+            "<a href=\"http://www.wowhead.com/spell=252191\">Murderous Intent</a>",
             "+2 itemlevel",
-            "Dark Sorrows",
-            "Deathblow",
+            "<a href=\"http://www.wowhead.com/spell=252922\">Dark Sorrows</a>",
+            "<a href=\"http://www.wowhead.com/spell=209481\">Deathblow</a>",
             "+1 itemlevel",
-            "One Against Many",
-            "Unending Rage",
-            "Storm of Swords",
-            "Crushing Blows"
-        ]
+            "<a href=\"http://www.wowhead.com/spell=238075\">Storm of Swords</a>",
+            "<a href=\"http://www.wowhead.com/spell=209459\">Unending Rage</a>",
+            "<a href=\"http://www.wowhead.com/spell=209472\">Crushing Blows</a>",
+            "<a href=\"http://www.wowhead.com/spell=209462\">One Against Many</a>"
+        ],
+        labels: {
+            useHTML: true
+        }
     },
     yAxis: {
         labels: {
@@ -145,6 +147,7 @@ Highcharts.chart('crucible_warrior_arms_patchwerk',
         min: 0,
         stackLabels: {
             enabled: true,
+            formatter: function() {          return Intl.NumberFormat().format(this.total);        },
             style: {
                 color: (Highcharts.theme && Highcharts.theme.textColor) || 'black',
                 fontWeight: "bold"

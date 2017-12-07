@@ -1,4 +1,4 @@
-Highcharts.chart('crucible_death_knight_frost_beastlord', 
+Highcharts.chart('crucible_death_knight_frost_beastlord',
 {
     chart: {
         type: "bar"
@@ -40,27 +40,27 @@ Highcharts.chart('crucible_death_knight_frost_beastlord',
         {
             color: "#343434",
             data: [
-                33667,
                 0,
-                28481,
+                27249,
+                26102,
+                25111,
+                23283,
+                19167,
+                17502,
+                17445,
                 0,
-                26993,
-                24809,
-                23023,
+                16655,
                 0,
-                20664,
-                20514,
-                19337,
+                15824,
                 0,
-                18442,
-                17283,
-                16177,
+                14616,
+                11500,
+                10908,
                 0,
-                13813,
                 0,
-                9209,
+                7666,
                 0,
-                4604,
+                3833,
                 0
             ],
             name: 1,
@@ -69,43 +69,45 @@ Highcharts.chart('crucible_death_knight_frost_beastlord',
         {
             color: "#C41F3B",
             data: [
-                0,
-                32776,
-                0,
-                27151,
+                27550,
                 0,
                 0,
                 0,
-                22216,
                 0,
                 0,
                 0,
-                19035,
+                0,
+                17011,
+                0,
+                15878,
+                0,
+                15694,
                 0,
                 0,
                 0,
-                15025,
+                9499,
+                9200,
                 0,
-                11472,
+                7208,
                 0,
-                6198,
-                0,
-                1157
+                0
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-11-25 18:24 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/69c1b460a165743cf53ad056e00fed6a17c3769e\" target=\"blank\">69c1b46</a>"
+        text: "UTC 2017-12-07 08:20 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/244a4bbf9d075993ae4f96b36189b7f58f55ebe0\" target=\"blank\">244a4bb</a>",
+        useHTML: true
     },
     title: {
-        text: "Death_Knight - Frost - Beastlord"
+        text: "Death_Knight - Frost - Beastlord",
+        useHTML: true
     },
     tooltip: {
         backgroundColor: "#eee",
         borderColor: "#bbb",
-        formatter: function() {        var s = '<b>'+ this.x +'</b>';        var cumulative_amount = 0;        for (var i = this.points.length - 1 ; i >= 0 ; i--) {            cumulative_amount += this.points[i].y;            if (this.points[i].y !== 0){                s += '<br/><span style=\"color: ' + this.points[i].series.color + '; font-weight: bold;\">' + this.points[i].series.name +'</span>: ' + cumulative_amount;            }        }        return s;      },
+        formatter: function() {        var s = '<b>'+ this.x +'</b>';        var cumulative_amount = 0;        for (var i = this.points.length - 1 ; i >= 0 ; i--) {            cumulative_amount += this.points[i].y;            if (this.points[i].y !== 0){                s += '<br/><span style=\"color: ' + this.points[i].series.color + '; font-weight: bold;\">' + this.points[i].series.name +'</span>: ' + Intl.NumberFormat().format(cumulative_amount);            }        }        return s;      },
         headerFormat: "<b>{point.x}</b>",
         shared: true,
         style: {
@@ -114,29 +116,32 @@ Highcharts.chart('crucible_death_knight_frost_beastlord',
     },
     xAxis: {
         categories: [
-            "Dark Sorrows",
-            "Ambidexterity",
-            "Master of Shadows",
-            "Dead of Winter",
-            "Murderous Intent",
-            "Shocklight",
-            "+5 itemlevel",
-            "Cold as Ice",
-            "Torment the Weak",
-            "Light Speed",
-            "Chaotic Darkness",
-            "Nothing but the Boots",
-            "Infusion of Light",
-            "Secure in the Light",
-            "Shadowbind",
-            "Runefrost",
+            "<a href=\"http://www.wowhead.com/spell=189092\">Ambidexterity</a>",
+            "<a href=\"http://www.wowhead.com/spell=252922\">Dark Sorrows</a>",
+            "<a href=\"http://www.wowhead.com/spell=252091\">Master of Shadows</a>",
+            "<a href=\"http://www.wowhead.com/spell=252191\">Murderous Intent</a>",
+            "<a href=\"http://www.wowhead.com/spell=252799\">Shocklight</a>",
+            "<a href=\"http://www.wowhead.com/spell=250879\">+5 itemlevel</a>",
+            "<a href=\"http://www.wowhead.com/spell=252888\">Chaotic Darkness</a>",
+            "<a href=\"http://www.wowhead.com/spell=253070\">Secure in the Light</a>",
+            "<a href=\"http://www.wowhead.com/spell=189164\">Dead of Winter</a>",
+            "<a href=\"http://www.wowhead.com/spell=252088\">Light Speed</a>",
+            "<a href=\"http://www.wowhead.com/spell=189080\">Cold as Ice</a>",
+            "<a href=\"http://www.wowhead.com/spell=253093\">Infusion of Light</a>",
+            "<a href=\"http://www.wowhead.com/spell=189144\">Nothing but the Boots</a>",
+            "<a href=\"http://www.wowhead.com/spell=252875\">Shadowbind</a>",
             "+3 itemlevel",
-            "Blast Radius",
+            "<a href=\"http://www.wowhead.com/spell=252906\">Torment the Weak</a>",
+            "<a href=\"http://www.wowhead.com/spell=189086\">Blast Radius</a>",
+            "<a href=\"http://www.wowhead.com/spell=238043\">Runefrost</a>",
             "+2 itemlevel",
-            "Over-Powered",
+            "<a href=\"http://www.wowhead.com/spell=189097\">Over-Powered</a>",
             "+1 itemlevel",
-            "Bad to the Bone"
-        ]
+            "<a href=\"http://www.wowhead.com/spell=189147\">Bad to the Bone</a>"
+        ],
+        labels: {
+            useHTML: true
+        }
     },
     yAxis: {
         labels: {
@@ -145,6 +150,7 @@ Highcharts.chart('crucible_death_knight_frost_beastlord',
         min: 0,
         stackLabels: {
             enabled: true,
+            formatter: function() {          return Intl.NumberFormat().format(this.total);        },
             style: {
                 color: (Highcharts.theme && Highcharts.theme.textColor) || 'black',
                 fontWeight: "bold"

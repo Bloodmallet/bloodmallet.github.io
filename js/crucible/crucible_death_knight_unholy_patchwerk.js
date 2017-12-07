@@ -1,4 +1,4 @@
-Highcharts.chart('crucible_death_knight_unholy_patchwerk', 
+Highcharts.chart('crucible_death_knight_unholy_patchwerk',
 {
     chart: {
         type: "bar"
@@ -40,28 +40,28 @@ Highcharts.chart('crucible_death_knight_unholy_patchwerk',
         {
             color: "#343434",
             data: [
-                25444,
-                23179,
-                22274,
-                22126,
-                21725,
-                21304,
+                24019,
+                23308,
+                23264,
+                21728,
+                21372,
+                20099,
+                0,
+                18640,
+                0,
+                14463,
+                12126,
+                10878,
+                0,
+                9454,
+                0,
+                6526,
+                0,
+                4351,
                 0,
                 0,
-                16914,
-                15680,
-                0,
-                14880,
-                12387,
-                11588,
-                0,
-                0,
-                7432,
-                0,
-                4954,
-                0,
-                0,
-                2477
+                2175,
+                0
             ],
             name: 1,
             showInLegend: false
@@ -75,37 +75,39 @@ Highcharts.chart('crucible_death_knight_unholy_patchwerk',
                 0,
                 0,
                 0,
-                20370,
-                17091,
+                19753,
                 0,
-                0,
-                15464,
+                15101,
                 0,
                 0,
                 0,
-                9275,
-                7712,
+                10779,
                 0,
-                5308,
+                7930,
                 0,
-                4654,
-                4553,
-                0
+                4907,
+                0,
+                4228,
+                2580,
+                0,
+                1523
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-11-25 17:04 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/69c1b460a165743cf53ad056e00fed6a17c3769e\" target=\"blank\">69c1b46</a>"
+        text: "UTC 2017-12-07 08:20 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/244a4bbf9d075993ae4f96b36189b7f58f55ebe0\" target=\"blank\">244a4bb</a>",
+        useHTML: true
     },
     title: {
-        text: "Death_Knight - Unholy - Patchwerk"
+        text: "Death_Knight - Unholy - Patchwerk",
+        useHTML: true
     },
     tooltip: {
         backgroundColor: "#eee",
         borderColor: "#bbb",
-        formatter: function() {        var s = '<b>'+ this.x +'</b>';        var cumulative_amount = 0;        for (var i = this.points.length - 1 ; i >= 0 ; i--) {            cumulative_amount += this.points[i].y;            if (this.points[i].y !== 0){                s += '<br/><span style=\"color: ' + this.points[i].series.color + '; font-weight: bold;\">' + this.points[i].series.name +'</span>: ' + cumulative_amount;            }        }        return s;      },
+        formatter: function() {        var s = '<b>'+ this.x +'</b>';        var cumulative_amount = 0;        for (var i = this.points.length - 1 ; i >= 0 ; i--) {            cumulative_amount += this.points[i].y;            if (this.points[i].y !== 0){                s += '<br/><span style=\"color: ' + this.points[i].series.color + '; font-weight: bold;\">' + this.points[i].series.name +'</span>: ' + Intl.NumberFormat().format(cumulative_amount);            }        }        return s;      },
         headerFormat: "<b>{point.x}</b>",
         shared: true,
         style: {
@@ -114,29 +116,32 @@ Highcharts.chart('crucible_death_knight_unholy_patchwerk',
     },
     xAxis: {
         categories: [
-            "Torment the Weak",
-            "Shadowbind",
-            "Shocklight",
-            "Master of Shadows",
-            "Chaotic Darkness",
-            "Murderous Intent",
-            "Deadliest Coil",
-            "The Darkest Crusade",
-            "Light Speed",
-            "Infusion of Light",
-            "Plaguebearer",
-            "Secure in the Light",
-            "+5 itemlevel",
-            "Dark Sorrows",
-            "Runic Tattoos",
-            "Lash of Shadows",
+            "<a href=\"http://www.wowhead.com/spell=252906\">Torment the Weak</a>",
+            "<a href=\"http://www.wowhead.com/spell=252088\">Light Speed</a>",
+            "<a href=\"http://www.wowhead.com/spell=252875\">Shadowbind</a>",
+            "<a href=\"http://www.wowhead.com/spell=252799\">Shocklight</a>",
+            "<a href=\"http://www.wowhead.com/spell=252091\">Master of Shadows</a>",
+            "<a href=\"http://www.wowhead.com/spell=252888\">Chaotic Darkness</a>",
+            "<a href=\"http://www.wowhead.com/spell=191419\">Deadliest Coil</a>",
+            "<a href=\"http://www.wowhead.com/spell=252191\">Murderous Intent</a>",
+            "<a href=\"http://www.wowhead.com/spell=191488\">The Darkest Crusade</a>",
+            "<a href=\"http://www.wowhead.com/spell=253093\">Infusion of Light</a>",
+            "<a href=\"http://www.wowhead.com/spell=253070\">Secure in the Light</a>",
+            "<a href=\"http://www.wowhead.com/spell=250879\">+5 itemlevel</a>",
+            "<a href=\"http://www.wowhead.com/spell=191485\">Plaguebearer</a>",
+            "<a href=\"http://www.wowhead.com/spell=252922\">Dark Sorrows</a>",
+            "<a href=\"http://www.wowhead.com/spell=239107\">Runic Tattoos</a>",
             "+3 itemlevel",
-            "Rotten Touch",
+            "<a href=\"http://www.wowhead.com/spell=238044\">Lash of Shadows</a>",
             "+2 itemlevel",
-            "Scourge the Unbeliever",
-            "Eternal Agony",
-            "+1 itemlevel"
-        ]
+            "<a href=\"http://www.wowhead.com/spell=191442\">Rotten Touch</a>",
+            "<a href=\"http://www.wowhead.com/spell=191494\">Scourge the Unbeliever</a>",
+            "+1 itemlevel",
+            "<a href=\"http://www.wowhead.com/spell=208598\">Eternal Agony</a>"
+        ],
+        labels: {
+            useHTML: true
+        }
     },
     yAxis: {
         labels: {
@@ -145,6 +150,7 @@ Highcharts.chart('crucible_death_knight_unholy_patchwerk',
         min: 0,
         stackLabels: {
             enabled: true,
+            formatter: function() {          return Intl.NumberFormat().format(this.total);        },
             style: {
                 color: (Highcharts.theme && Highcharts.theme.textColor) || 'black',
                 fontWeight: "bold"

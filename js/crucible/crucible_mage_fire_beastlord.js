@@ -1,4 +1,4 @@
-Highcharts.chart('crucible_mage_fire_beastlord', 
+Highcharts.chart('crucible_mage_fire_beastlord',
 {
     chart: {
         type: "bar"
@@ -40,25 +40,25 @@ Highcharts.chart('crucible_mage_fire_beastlord',
         {
             color: "#343434",
             data: [
-                46397,
-                41279,
-                39561,
-                36734,
+                43010,
+                40891,
+                37025,
+                0,
+                34461,
                 0,
                 0,
+                28987,
+                28839,
+                25806,
+                23475,
+                21795,
+                20688,
+                18783,
                 0,
-                28401,
-                27838,
-                27131,
-                24799,
-                19448,
-                19406,
                 0,
-                18558,
-                18422,
-                14787,
-                0,
-                9279,
+                17204,
+                17038,
+                8602,
                 0,
                 0,
                 0
@@ -72,40 +72,42 @@ Highcharts.chart('crucible_mage_fire_beastlord',
                 0,
                 0,
                 0,
+                34880,
                 0,
-                36539,
-                36476,
-                30011,
-                0,
-                0,
+                33650,
+                31498,
                 0,
                 0,
                 0,
                 0,
-                18941,
                 0,
                 0,
                 0,
-                12191,
+                18426,
+                18046,
                 0,
-                6220,
-                3316,
-                2883
+                0,
+                0,
+                7547,
+                5635,
+                2997
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-11-25 17:18 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/69c1b460a165743cf53ad056e00fed6a17c3769e\" target=\"blank\">69c1b46</a>"
+        text: "UTC 2017-12-07 08:20 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/244a4bbf9d075993ae4f96b36189b7f58f55ebe0\" target=\"blank\">244a4bb</a>",
+        useHTML: true
     },
     title: {
-        text: "Mage - Fire - Beastlord"
+        text: "Mage - Fire - Beastlord",
+        useHTML: true
     },
     tooltip: {
         backgroundColor: "#eee",
         borderColor: "#bbb",
-        formatter: function() {        var s = '<b>'+ this.x +'</b>';        var cumulative_amount = 0;        for (var i = this.points.length - 1 ; i >= 0 ; i--) {            cumulative_amount += this.points[i].y;            if (this.points[i].y !== 0){                s += '<br/><span style=\"color: ' + this.points[i].series.color + '; font-weight: bold;\">' + this.points[i].series.name +'</span>: ' + cumulative_amount;            }        }        return s;      },
+        formatter: function() {        var s = '<b>'+ this.x +'</b>';        var cumulative_amount = 0;        for (var i = this.points.length - 1 ; i >= 0 ; i--) {            cumulative_amount += this.points[i].y;            if (this.points[i].y !== 0){                s += '<br/><span style=\"color: ' + this.points[i].series.color + '; font-weight: bold;\">' + this.points[i].series.name +'</span>: ' + Intl.NumberFormat().format(cumulative_amount);            }        }        return s;      },
         headerFormat: "<b>{point.x}</b>",
         shared: true,
         style: {
@@ -114,29 +116,32 @@ Highcharts.chart('crucible_mage_fire_beastlord',
     },
     xAxis: {
         categories: [
-            "+5 itemlevel",
-            "Light Speed",
-            "Dark Sorrows",
-            "Shocklight",
-            "Blue Flame Special",
-            "Fire at Will",
-            "Pre-Ignited",
-            "Infusion of Light",
+            "<a href=\"http://www.wowhead.com/spell=250879\">+5 itemlevel</a>",
+            "<a href=\"http://www.wowhead.com/spell=252922\">Dark Sorrows</a>",
+            "<a href=\"http://www.wowhead.com/spell=252088\">Light Speed</a>",
+            "<a href=\"http://www.wowhead.com/spell=194224\">Fire at Will</a>",
+            "<a href=\"http://www.wowhead.com/spell=252799\">Shocklight</a>",
+            "<a href=\"http://www.wowhead.com/spell=210182\">Blue Flame Special</a>",
+            "<a href=\"http://www.wowhead.com/spell=238055\">Pre-Ignited</a>",
+            "<a href=\"http://www.wowhead.com/spell=252875\">Shadowbind</a>",
+            "<a href=\"http://www.wowhead.com/spell=253093\">Infusion of Light</a>",
             "+3 itemlevel",
-            "Shadowbind",
-            "Secure in the Light",
-            "Chaotic Darkness",
-            "Murderous Intent",
-            "Burning Gaze",
+            "<a href=\"http://www.wowhead.com/spell=252191\">Murderous Intent</a>",
+            "<a href=\"http://www.wowhead.com/spell=253070\">Secure in the Light</a>",
+            "<a href=\"http://www.wowhead.com/spell=252888\">Chaotic Darkness</a>",
+            "<a href=\"http://www.wowhead.com/spell=252906\">Torment the Weak</a>",
+            "<a href=\"http://www.wowhead.com/spell=194312\">Burning Gaze</a>",
+            "<a href=\"http://www.wowhead.com/spell=194314\">Everburning Consumption</a>",
             "+2 itemlevel",
-            "Torment the Weak",
-            "Master of Shadows",
-            "Everburning Consumption",
+            "<a href=\"http://www.wowhead.com/spell=252091\">Master of Shadows</a>",
             "+1 itemlevel",
-            "Pyroclasmic Paranoia",
-            "Great Balls of Fire",
-            "Reignition Overdrive"
-        ]
+            "<a href=\"http://www.wowhead.com/spell=194239\">Pyroclasmic Paranoia</a>",
+            "<a href=\"http://www.wowhead.com/spell=194313\">Great Balls of Fire</a>",
+            "<a href=\"http://www.wowhead.com/spell=194234\">Reignition Overdrive</a>"
+        ],
+        labels: {
+            useHTML: true
+        }
     },
     yAxis: {
         labels: {
@@ -145,6 +150,7 @@ Highcharts.chart('crucible_mage_fire_beastlord',
         min: 0,
         stackLabels: {
             enabled: true,
+            formatter: function() {          return Intl.NumberFormat().format(this.total);        },
             style: {
                 color: (Highcharts.theme && Highcharts.theme.textColor) || 'black',
                 fontWeight: "bold"

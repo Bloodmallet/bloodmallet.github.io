@@ -1,4 +1,4 @@
-Highcharts.chart('crucible_death_knight_blood_beastlord', 
+Highcharts.chart('crucible_death_knight_blood_beastlord',
 {
     chart: {
         type: "bar"
@@ -40,25 +40,25 @@ Highcharts.chart('crucible_death_knight_blood_beastlord',
         {
             color: "#343434",
             data: [
-                48322,
-                28593,
-                28510,
-                27650,
-                24414,
-                22804,
-                18948,
-                17616,
-                15624,
-                15066,
-                13953,
+                46925,
+                28037,
+                27824,
+                27710,
+                24323,
+                24062,
+                20377,
+                19095,
+                18155,
+                15193,
+                14286,
+                12226,
                 0,
-                10569,
-                7046,
-                0,
-                0,
+                8150,
                 0,
                 0,
-                3523
+                0,
+                0,
+                4075
             ],
             name: 1,
             showInLegend: false
@@ -77,13 +77,13 @@ Highcharts.chart('crucible_death_knight_blood_beastlord',
                 0,
                 0,
                 0,
-                10740,
                 0,
+                8627,
                 0,
-                6800,
-                5963,
-                5543,
-                3633,
+                5625,
+                5514,
+                5458,
+                4427,
                 0
             ],
             name: 1,
@@ -91,15 +91,17 @@ Highcharts.chart('crucible_death_knight_blood_beastlord',
         }
     ],
     subtitle: {
-        text: "UTC 2017-11-25 18:24 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/69c1b460a165743cf53ad056e00fed6a17c3769e\" target=\"blank\">69c1b46</a>"
+        text: "UTC 2017-12-07 08:20 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/244a4bbf9d075993ae4f96b36189b7f58f55ebe0\" target=\"blank\">244a4bb</a>",
+        useHTML: true
     },
     title: {
-        text: "Death_Knight - Blood - Beastlord"
+        text: "Death_Knight - Blood - Beastlord",
+        useHTML: true
     },
     tooltip: {
         backgroundColor: "#eee",
         borderColor: "#bbb",
-        formatter: function() {        var s = '<b>'+ this.x +'</b>';        var cumulative_amount = 0;        for (var i = this.points.length - 1 ; i >= 0 ; i--) {            cumulative_amount += this.points[i].y;            if (this.points[i].y !== 0){                s += '<br/><span style=\"color: ' + this.points[i].series.color + '; font-weight: bold;\">' + this.points[i].series.name +'</span>: ' + cumulative_amount;            }        }        return s;      },
+        formatter: function() {        var s = '<b>'+ this.x +'</b>';        var cumulative_amount = 0;        for (var i = this.points.length - 1 ; i >= 0 ; i--) {            cumulative_amount += this.points[i].y;            if (this.points[i].y !== 0){                s += '<br/><span style=\"color: ' + this.points[i].series.color + '; font-weight: bold;\">' + this.points[i].series.name +'</span>: ' + Intl.NumberFormat().format(cumulative_amount);            }        }        return s;      },
         headerFormat: "<b>{point.x}</b>",
         shared: true,
         style: {
@@ -108,26 +110,29 @@ Highcharts.chart('crucible_death_knight_blood_beastlord',
     },
     xAxis: {
         categories: [
-            "Dark Sorrows",
-            "Infusion of Light",
-            "Shadowbind",
-            "Secure in the Light",
-            "Chaotic Darkness",
-            "Torment the Weak",
-            "Master of Shadows",
-            "+5 itemlevel",
-            "Shocklight",
-            "Light Speed",
-            "Murderous Intent",
-            "Dance of Darkness",
+            "<a href=\"http://www.wowhead.com/spell=252922\">Dark Sorrows</a>",
+            "<a href=\"http://www.wowhead.com/spell=252875\">Shadowbind</a>",
+            "<a href=\"http://www.wowhead.com/spell=253070\">Secure in the Light</a>",
+            "<a href=\"http://www.wowhead.com/spell=253093\">Infusion of Light</a>",
+            "<a href=\"http://www.wowhead.com/spell=252906\">Torment the Weak</a>",
+            "<a href=\"http://www.wowhead.com/spell=252888\">Chaotic Darkness</a>",
+            "<a href=\"http://www.wowhead.com/spell=250879\">+5 itemlevel</a>",
+            "<a href=\"http://www.wowhead.com/spell=252799\">Shocklight</a>",
+            "<a href=\"http://www.wowhead.com/spell=252091\">Master of Shadows</a>",
+            "<a href=\"http://www.wowhead.com/spell=252088\">Light Speed</a>",
+            "<a href=\"http://www.wowhead.com/spell=252191\">Murderous Intent</a>",
             "+3 itemlevel",
+            "<a href=\"http://www.wowhead.com/spell=192514\">Dance of Darkness</a>",
             "+2 itemlevel",
-            "All-Consuming Rot",
-            "Veinrender",
-            "Coagulopathy",
-            "Bonebreaker",
+            "<a href=\"http://www.wowhead.com/spell=192464\">All-Consuming Rot</a>",
+            "<a href=\"http://www.wowhead.com/spell=192538\">Bonebreaker</a>",
+            "<a href=\"http://www.wowhead.com/spell=192460\">Coagulopathy</a>",
+            "<a href=\"http://www.wowhead.com/spell=192457\">Veinrender</a>",
             "+1 itemlevel"
-        ]
+        ],
+        labels: {
+            useHTML: true
+        }
     },
     yAxis: {
         labels: {
@@ -136,6 +141,7 @@ Highcharts.chart('crucible_death_knight_blood_beastlord',
         min: 0,
         stackLabels: {
             enabled: true,
+            formatter: function() {          return Intl.NumberFormat().format(this.total);        },
             style: {
                 color: (Highcharts.theme && Highcharts.theme.textColor) || 'black',
                 fontWeight: "bold"

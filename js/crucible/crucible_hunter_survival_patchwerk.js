@@ -1,4 +1,4 @@
-Highcharts.chart('crucible_hunter_survival_patchwerk', 
+Highcharts.chart('crucible_hunter_survival_patchwerk',
 {
     chart: {
         type: "bar"
@@ -40,25 +40,25 @@ Highcharts.chart('crucible_hunter_survival_patchwerk',
         {
             color: "#343434",
             data: [
-                24071,
-                23025,
-                22433,
-                21869,
-                21773,
-                21311,
-                19783,
-                19333,
-                17578,
-                15676,
+                23627,
+                23209,
+                21756,
+                20514,
+                20422,
+                19884,
+                18235,
+                18061,
+                17832,
+                16331,
                 0,
                 0,
-                13815,
+                14176,
+                11122,
+                9450,
                 0,
-                10036,
-                9210,
                 0,
                 0,
-                4605,
+                4725,
                 0,
                 0,
                 0
@@ -79,17 +79,17 @@ Highcharts.chart('crucible_hunter_survival_patchwerk',
                 0,
                 0,
                 0,
-                14864,
-                14842,
-                0,
-                10147,
+                15301,
+                14910,
                 0,
                 0,
-                7520,
-                5633,
                 0,
-                3799,
-                2379,
+                8824,
+                7103,
+                4804,
+                0,
+                2798,
+                0,
                 0
             ],
             name: 1,
@@ -97,15 +97,17 @@ Highcharts.chart('crucible_hunter_survival_patchwerk',
         }
     ],
     subtitle: {
-        text: "UTC 2017-11-25 17:18 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/69c1b460a165743cf53ad056e00fed6a17c3769e\" target=\"blank\">69c1b46</a>"
+        text: "UTC 2017-12-07 08:20 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/244a4bbf9d075993ae4f96b36189b7f58f55ebe0\" target=\"blank\">244a4bb</a>",
+        useHTML: true
     },
     title: {
-        text: "Hunter - Survival - Patchwerk"
+        text: "Hunter - Survival - Patchwerk",
+        useHTML: true
     },
     tooltip: {
         backgroundColor: "#eee",
         borderColor: "#bbb",
-        formatter: function() {        var s = '<b>'+ this.x +'</b>';        var cumulative_amount = 0;        for (var i = this.points.length - 1 ; i >= 0 ; i--) {            cumulative_amount += this.points[i].y;            if (this.points[i].y !== 0){                s += '<br/><span style=\"color: ' + this.points[i].series.color + '; font-weight: bold;\">' + this.points[i].series.name +'</span>: ' + cumulative_amount;            }        }        return s;      },
+        formatter: function() {        var s = '<b>'+ this.x +'</b>';        var cumulative_amount = 0;        for (var i = this.points.length - 1 ; i >= 0 ; i--) {            cumulative_amount += this.points[i].y;            if (this.points[i].y !== 0){                s += '<br/><span style=\"color: ' + this.points[i].series.color + '; font-weight: bold;\">' + this.points[i].series.name +'</span>: ' + Intl.NumberFormat().format(cumulative_amount);            }        }        return s;      },
         headerFormat: "<b>{point.x}</b>",
         shared: true,
         style: {
@@ -114,29 +116,32 @@ Highcharts.chart('crucible_hunter_survival_patchwerk',
     },
     xAxis: {
         categories: [
-            "Torment the Weak",
-            "+5 itemlevel",
-            "Infusion of Light",
-            "Murderous Intent",
-            "Shadowbind",
-            "Secure in the Light",
-            "Light Speed",
-            "Chaotic Darkness",
-            "Shocklight",
-            "Master of Shadows",
-            "Jaws of the Mongoose",
-            "Sharpened Fang",
+            "<a href=\"http://www.wowhead.com/spell=250879\">+5 itemlevel</a>",
+            "<a href=\"http://www.wowhead.com/spell=252906\">Torment the Weak</a>",
+            "<a href=\"http://www.wowhead.com/spell=253093\">Infusion of Light</a>",
+            "<a href=\"http://www.wowhead.com/spell=252875\">Shadowbind</a>",
+            "<a href=\"http://www.wowhead.com/spell=253070\">Secure in the Light</a>",
+            "<a href=\"http://www.wowhead.com/spell=252191\">Murderous Intent</a>",
+            "<a href=\"http://www.wowhead.com/spell=252088\">Light Speed</a>",
+            "<a href=\"http://www.wowhead.com/spell=252888\">Chaotic Darkness</a>",
+            "<a href=\"http://www.wowhead.com/spell=252799\">Shocklight</a>",
+            "<a href=\"http://www.wowhead.com/spell=252091\">Master of Shadows</a>",
+            "<a href=\"http://www.wowhead.com/spell=203566\">Sharpened Fang</a>",
+            "<a href=\"http://www.wowhead.com/spell=238053\">Jaws of the Mongoose</a>",
             "+3 itemlevel",
-            "Raptor's Cry",
-            "Dark Sorrows",
+            "<a href=\"http://www.wowhead.com/spell=252922\">Dark Sorrows</a>",
             "+2 itemlevel",
-            "Fluffy, Go",
-            "My Beloved Monster",
+            "<a href=\"http://www.wowhead.com/spell=203638\">Raptor's Cry</a>",
+            "<a href=\"http://www.wowhead.com/spell=203669\">Fluffy, Go</a>",
+            "<a href=\"http://www.wowhead.com/spell=203577\">My Beloved Monster</a>",
             "+1 itemlevel",
-            "Lacerating Talons",
-            "Explosive Force",
-            "Hellcarver"
-        ]
+            "<a href=\"http://www.wowhead.com/spell=203578\">Lacerating Talons</a>",
+            "<a href=\"http://www.wowhead.com/spell=203670\">Explosive Force</a>",
+            "<a href=\"http://www.wowhead.com/spell=203673\">Hellcarver</a>"
+        ],
+        labels: {
+            useHTML: true
+        }
     },
     yAxis: {
         labels: {
@@ -145,6 +150,7 @@ Highcharts.chart('crucible_hunter_survival_patchwerk',
         min: 0,
         stackLabels: {
             enabled: true,
+            formatter: function() {          return Intl.NumberFormat().format(this.total);        },
             style: {
                 color: (Highcharts.theme && Highcharts.theme.textColor) || 'black',
                 fontWeight: "bold"

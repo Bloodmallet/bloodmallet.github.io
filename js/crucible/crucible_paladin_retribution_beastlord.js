@@ -1,4 +1,4 @@
-Highcharts.chart('crucible_paladin_retribution_beastlord', 
+Highcharts.chart('crucible_paladin_retribution_beastlord',
 {
     chart: {
         type: "bar"
@@ -41,26 +41,26 @@ Highcharts.chart('crucible_paladin_retribution_beastlord',
             color: "#343434",
             data: [
                 0,
+                50510,
                 0,
-                53340,
-                40281,
-                37549,
-                36841,
-                32966,
-                32736,
-                32004,
-                31722,
-                28229,
+                35626,
+                32792,
+                31123,
                 0,
-                26854,
-                26646,
-                23512,
-                0,
-                21336,
-                0,
+                30306,
+                29211,
+                24189,
+                23953,
+                23467,
+                22317,
+                20692,
+                20204,
+                18923,
                 0,
                 0,
-                10668,
+                10102,
+                0,
+                0,
                 0
             ],
             name: 1,
@@ -69,8 +69,13 @@ Highcharts.chart('crucible_paladin_retribution_beastlord',
         {
             color: "#F58CBA",
             data: [
-                69760,
-                58102,
+                61053,
+                0,
+                49601,
+                0,
+                0,
+                0,
+                31047,
                 0,
                 0,
                 0,
@@ -80,32 +85,29 @@ Highcharts.chart('crucible_paladin_retribution_beastlord',
                 0,
                 0,
                 0,
-                27773,
+                14626,
+                14359,
                 0,
+                8135,
                 0,
-                0,
-                22241,
-                0,
-                18847,
-                11361,
-                10858,
-                0,
-                7861
+                0
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-11-25 17:18 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/69c1b460a165743cf53ad056e00fed6a17c3769e\" target=\"blank\">69c1b46</a>"
+        text: "UTC 2017-12-07 08:20 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/244a4bbf9d075993ae4f96b36189b7f58f55ebe0\" target=\"blank\">244a4bb</a>",
+        useHTML: true
     },
     title: {
-        text: "Paladin - Retribution - Beastlord"
+        text: "Paladin - Retribution - Beastlord",
+        useHTML: true
     },
     tooltip: {
         backgroundColor: "#eee",
         borderColor: "#bbb",
-        formatter: function() {        var s = '<b>'+ this.x +'</b>';        var cumulative_amount = 0;        for (var i = this.points.length - 1 ; i >= 0 ; i--) {            cumulative_amount += this.points[i].y;            if (this.points[i].y !== 0){                s += '<br/><span style=\"color: ' + this.points[i].series.color + '; font-weight: bold;\">' + this.points[i].series.name +'</span>: ' + cumulative_amount;            }        }        return s;      },
+        formatter: function() {        var s = '<b>'+ this.x +'</b>';        var cumulative_amount = 0;        for (var i = this.points.length - 1 ; i >= 0 ; i--) {            cumulative_amount += this.points[i].y;            if (this.points[i].y !== 0){                s += '<br/><span style=\"color: ' + this.points[i].series.color + '; font-weight: bold;\">' + this.points[i].series.name +'</span>: ' + Intl.NumberFormat().format(cumulative_amount);            }        }        return s;      },
         headerFormat: "<b>{point.x}</b>",
         shared: true,
         style: {
@@ -114,29 +116,32 @@ Highcharts.chart('crucible_paladin_retribution_beastlord',
     },
     xAxis: {
         categories: [
-            "Righteous Blade",
-            "Highlord's Judgment",
-            "+5 itemlevel",
-            "Master of Shadows",
-            "Shocklight",
-            "Dark Sorrows",
-            "Light Speed",
-            "Shadowbind",
+            "<a href=\"http://www.wowhead.com/spell=184843\">Righteous Blade</a>",
+            "<a href=\"http://www.wowhead.com/spell=250879\">+5 itemlevel</a>",
+            "<a href=\"http://www.wowhead.com/spell=186941\">Highlord's Judgment</a>",
+            "<a href=\"http://www.wowhead.com/spell=252922\">Dark Sorrows</a>",
+            "<a href=\"http://www.wowhead.com/spell=252191\">Murderous Intent</a>",
+            "<a href=\"http://www.wowhead.com/spell=252091\">Master of Shadows</a>",
+            "<a href=\"http://www.wowhead.com/spell=186945\">Wrath of the Ashbringer</a>",
             "+3 itemlevel",
-            "Murderous Intent",
-            "Infusion of Light",
-            "Wrath of the Ashbringer",
-            "Chaotic Darkness",
-            "Secure in the Light",
-            "Torment the Weak",
-            "Righteous Verdict",
+            "<a href=\"http://www.wowhead.com/spell=252799\">Shocklight</a>",
+            "<a href=\"http://www.wowhead.com/spell=253093\">Infusion of Light</a>",
+            "<a href=\"http://www.wowhead.com/spell=253070\">Secure in the Light</a>",
+            "<a href=\"http://www.wowhead.com/spell=252875\">Shadowbind</a>",
+            "<a href=\"http://www.wowhead.com/spell=252888\">Chaotic Darkness</a>",
+            "<a href=\"http://www.wowhead.com/spell=252088\">Light Speed</a>",
             "+2 itemlevel",
-            "Deliver the Justice",
-            "Sharpened Edge",
-            "Protector of the Ashen Blade",
+            "<a href=\"http://www.wowhead.com/spell=252906\">Torment the Weak</a>",
+            "<a href=\"http://www.wowhead.com/spell=186927\">Deliver the Justice</a>",
+            "<a href=\"http://www.wowhead.com/spell=238062\">Righteous Verdict</a>",
             "+1 itemlevel",
-            "Might of the Templar"
-        ]
+            "<a href=\"http://www.wowhead.com/spell=184759\">Sharpened Edge</a>",
+            "<a href=\"http://www.wowhead.com/spell=186944\">Protector of the Ashen Blade</a>",
+            "<a href=\"http://www.wowhead.com/spell=185368\">Might of the Templar</a>"
+        ],
+        labels: {
+            useHTML: true
+        }
     },
     yAxis: {
         labels: {
@@ -145,6 +150,7 @@ Highcharts.chart('crucible_paladin_retribution_beastlord',
         min: 0,
         stackLabels: {
             enabled: true,
+            formatter: function() {          return Intl.NumberFormat().format(this.total);        },
             style: {
                 color: (Highcharts.theme && Highcharts.theme.textColor) || 'black',
                 fontWeight: "bold"

@@ -1,4 +1,4 @@
-Highcharts.chart('crucible_warlock_destruction_patchwerk', 
+Highcharts.chart('crucible_warlock_destruction_patchwerk',
 {
     chart: {
         type: "bar"
@@ -40,26 +40,26 @@ Highcharts.chart('crucible_warlock_destruction_patchwerk',
         {
             color: "#343434",
             data: [
-                38743,
-                23694,
-                23253,
-                23245,
-                22666,
-                21429,
-                21394,
-                20959,
-                20883,
-                20194,
-                18794,
+                38565,
+                23139,
+                22110,
+                21922,
+                21123,
+                20927,
+                20769,
+                20677,
+                19154,
+                18921,
+                18238,
                 0,
-                15497,
+                15426,
                 0,
                 0,
                 0,
-                9863,
+                9994,
                 0,
-                7748,
                 0,
+                7713,
                 0,
                 0,
                 0
@@ -81,33 +81,35 @@ Highcharts.chart('crucible_warlock_destruction_patchwerk',
                 0,
                 0,
                 0,
-                17353,
+                17307,
                 0,
-                15327,
-                11765,
-                10907,
+                14367,
+                10652,
+                10009,
                 0,
-                9609,
+                8691,
+                8422,
                 0,
-                6885,
-                6805,
-                1454,
-                1079
+                6396,
+                0,
+                0
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-11-25 17:18 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/69c1b460a165743cf53ad056e00fed6a17c3769e\" target=\"blank\">69c1b46</a>"
+        text: "UTC 2017-12-07 08:20 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/244a4bbf9d075993ae4f96b36189b7f58f55ebe0\" target=\"blank\">244a4bb</a>",
+        useHTML: true
     },
     title: {
-        text: "Warlock - Destruction - Patchwerk"
+        text: "Warlock - Destruction - Patchwerk",
+        useHTML: true
     },
     tooltip: {
         backgroundColor: "#eee",
         borderColor: "#bbb",
-        formatter: function() {        var s = '<b>'+ this.x +'</b>';        var cumulative_amount = 0;        for (var i = this.points.length - 1 ; i >= 0 ; i--) {            cumulative_amount += this.points[i].y;            if (this.points[i].y !== 0){                s += '<br/><span style=\"color: ' + this.points[i].series.color + '; font-weight: bold;\">' + this.points[i].series.name +'</span>: ' + cumulative_amount;            }        }        return s;      },
+        formatter: function() {        var s = '<b>'+ this.x +'</b>';        var cumulative_amount = 0;        for (var i = this.points.length - 1 ; i >= 0 ; i--) {            cumulative_amount += this.points[i].y;            if (this.points[i].y !== 0){                s += '<br/><span style=\"color: ' + this.points[i].series.color + '; font-weight: bold;\">' + this.points[i].series.name +'</span>: ' + Intl.NumberFormat().format(cumulative_amount);            }        }        return s;      },
         headerFormat: "<b>{point.x}</b>",
         shared: true,
         style: {
@@ -116,30 +118,33 @@ Highcharts.chart('crucible_warlock_destruction_patchwerk',
     },
     xAxis: {
         categories: [
-            "+5 itemlevel",
-            "Murderous Intent",
-            "Torment the Weak",
+            "<a href=\"http://www.wowhead.com/spell=250879\">+5 itemlevel</a>",
             "+3 itemlevel",
-            "Shocklight",
-            "Light Speed",
-            "Infusion of Light",
-            "Master of Shadows",
-            "Secure in the Light",
-            "Shadowbind",
-            "Chaotic Darkness",
-            "Burning Hunger",
+            "<a href=\"http://www.wowhead.com/spell=252191\">Murderous Intent</a>",
+            "<a href=\"http://www.wowhead.com/spell=252906\">Torment the Weak</a>",
+            "<a href=\"http://www.wowhead.com/spell=253070\">Secure in the Light</a>",
+            "<a href=\"http://www.wowhead.com/spell=252799\">Shocklight</a>",
+            "<a href=\"http://www.wowhead.com/spell=252875\">Shadowbind</a>",
+            "<a href=\"http://www.wowhead.com/spell=253093\">Infusion of Light</a>",
+            "<a href=\"http://www.wowhead.com/spell=252091\">Master of Shadows</a>",
+            "<a href=\"http://www.wowhead.com/spell=252088\">Light Speed</a>",
+            "<a href=\"http://www.wowhead.com/spell=252888\">Chaotic Darkness</a>",
+            "<a href=\"http://www.wowhead.com/spell=196432\">Burning Hunger</a>",
             "+2 itemlevel",
-            "Chaotic Instability",
-            "Flames of Sargeras",
-            "Residual Flames",
-            "Dark Sorrows",
-            "Master of Disaster",
+            "<a href=\"http://www.wowhead.com/spell=196217\">Chaotic Instability</a>",
+            "<a href=\"http://www.wowhead.com/spell=196227\">Residual Flames</a>",
+            "<a href=\"http://www.wowhead.com/spell=238074\">Flames of Sargeras</a>",
+            "<a href=\"http://www.wowhead.com/spell=252922\">Dark Sorrows</a>",
+            "<a href=\"http://www.wowhead.com/spell=196222\">Fire and the Flames</a>",
+            "<a href=\"http://www.wowhead.com/spell=196211\">Master of Disaster</a>",
             "+1 itemlevel",
-            "Fire and the Flames",
-            "Soulsnatcher",
-            "Devourer of Life",
-            "Fire From the Sky"
-        ]
+            "<a href=\"http://www.wowhead.com/spell=196236\">Soulsnatcher</a>",
+            "<a href=\"http://www.wowhead.com/spell=196258\">Fire From the Sky</a>",
+            "<a href=\"http://www.wowhead.com/spell=196301\">Devourer of Life</a>"
+        ],
+        labels: {
+            useHTML: true
+        }
     },
     yAxis: {
         labels: {
@@ -148,6 +153,7 @@ Highcharts.chart('crucible_warlock_destruction_patchwerk',
         min: 0,
         stackLabels: {
             enabled: true,
+            formatter: function() {          return Intl.NumberFormat().format(this.total);        },
             style: {
                 color: (Highcharts.theme && Highcharts.theme.textColor) || 'black',
                 fontWeight: "bold"

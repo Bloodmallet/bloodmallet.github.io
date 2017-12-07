@@ -9,6 +9,13 @@ document.addEventListener("DOMContentLoaded", addButtonListeners);
 document.addEventListener("DOMContentLoaded", addLanguageListener);
 document.addEventListener('DOMContentLoaded', function() {
 
+  //load tooltip script if viewport is large enough
+  var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+  var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+  if (w > 450 && h > 450) {
+    getScript("//wow.zamimg.com/widgets/power.js");
+  }
+
   // switch charts to language
   if (window.location.search) {
     if (window.location.search.split("lang=")[1]) {
@@ -47,7 +54,7 @@ function addButtonListeners() {
   // add spec buttons
   var specSwitchButtons = document.getElementsByClassName("spec-switch-button");
   for (var i = specSwitchButtons.length - 1; i >= 0; i--) {
-    specSwitchButtons[i].addEventListener("click", function(e) { 
+    specSwitchButtons[i].addEventListener("click", function(e) {
       switch_chart_to(e.target.name);
     } );
   }
@@ -87,9 +94,9 @@ function copy_chart_link() {
 
 function switchLanguage(new_language) {
   // little sanity check
-  if (new_language == "EN" || 
-    new_language == "FR" || 
-    new_language == "DE" || 
+  if (new_language == "EN" ||
+    new_language == "FR" ||
+    new_language == "DE" ||
     new_language == "KO" ||
     new_language == "CN" ||
     new_language == "ES" ||
@@ -200,7 +207,7 @@ function getScript(source, callback) {
   var script = document.createElement("script");
   script.onload = callback;
   script.src = source;
-  
+
   document.body.appendChild(script);
 }
 

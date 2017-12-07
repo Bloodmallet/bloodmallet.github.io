@@ -1,4 +1,4 @@
-Highcharts.chart('crucible_monk_brewmaster_patchwerk', 
+Highcharts.chart('crucible_monk_brewmaster_patchwerk',
 {
     chart: {
         type: "bar"
@@ -41,24 +41,24 @@ Highcharts.chart('crucible_monk_brewmaster_patchwerk',
             color: "#343434",
             data: [
                 0,
-                28492,
-                26538,
-                24584,
-                24556,
-                22412,
-                12411,
-                12045,
-                11023,
-                10501,
+                25789,
+                23892,
+                23753,
+                23523,
+                21990,
+                11268,
+                10847,
+                10106,
+                9377,
                 0,
                 0,
+                5859,
                 0,
-                5643,
-                5539,
+                3521,
+                3515,
                 0,
-                3323,
-                2215,
-                1107
+                2343,
+                1171
             ],
             name: 1,
             showInLegend: false
@@ -66,7 +66,7 @@ Highcharts.chart('crucible_monk_brewmaster_patchwerk',
         {
             color: "#00FF96",
             data: [
-                31222,
+                28973,
                 0,
                 0,
                 0,
@@ -76,13 +76,13 @@ Highcharts.chart('crucible_monk_brewmaster_patchwerk',
                 0,
                 0,
                 0,
-                10163,
-                7910,
-                7846,
+                8793,
+                6804,
+                0,
+                5609,
                 0,
                 0,
-                5439,
-                0,
+                3345,
                 0,
                 0
             ],
@@ -91,15 +91,17 @@ Highcharts.chart('crucible_monk_brewmaster_patchwerk',
         }
     ],
     subtitle: {
-        text: "UTC 2017-11-25 17:18 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/69c1b460a165743cf53ad056e00fed6a17c3769e\" target=\"blank\">69c1b46</a>"
+        text: "UTC 2017-12-07 08:20 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/244a4bbf9d075993ae4f96b36189b7f58f55ebe0\" target=\"blank\">244a4bb</a>",
+        useHTML: true
     },
     title: {
-        text: "Monk - Brewmaster - Patchwerk"
+        text: "Monk - Brewmaster - Patchwerk",
+        useHTML: true
     },
     tooltip: {
         backgroundColor: "#eee",
         borderColor: "#bbb",
-        formatter: function() {        var s = '<b>'+ this.x +'</b>';        var cumulative_amount = 0;        for (var i = this.points.length - 1 ; i >= 0 ; i--) {            cumulative_amount += this.points[i].y;            if (this.points[i].y !== 0){                s += '<br/><span style=\"color: ' + this.points[i].series.color + '; font-weight: bold;\">' + this.points[i].series.name +'</span>: ' + cumulative_amount;            }        }        return s;      },
+        formatter: function() {        var s = '<b>'+ this.x +'</b>';        var cumulative_amount = 0;        for (var i = this.points.length - 1 ; i >= 0 ; i--) {            cumulative_amount += this.points[i].y;            if (this.points[i].y !== 0){                s += '<br/><span style=\"color: ' + this.points[i].series.color + '; font-weight: bold;\">' + this.points[i].series.name +'</span>: ' + Intl.NumberFormat().format(cumulative_amount);            }        }        return s;      },
         headerFormat: "<b>{point.x}</b>",
         shared: true,
         style: {
@@ -108,26 +110,29 @@ Highcharts.chart('crucible_monk_brewmaster_patchwerk',
     },
     xAxis: {
         categories: [
-            "Face Palm",
-            "Torment the Weak",
-            "Secure in the Light",
-            "Shadowbind",
-            "Infusion of Light",
-            "Chaotic Darkness",
-            "Dark Sorrows",
-            "Shocklight",
-            "Murderous Intent",
-            "Master of Shadows",
-            "Draught of Darkness",
-            "Hot Blooded",
-            "Gifted Student",
-            "Light Speed",
-            "+5 itemlevel",
-            "Obsidian Fists",
+            "<a href=\"http://www.wowhead.com/spell=213116\">Face Palm</a>",
+            "<a href=\"http://www.wowhead.com/spell=252906\">Torment the Weak</a>",
+            "<a href=\"http://www.wowhead.com/spell=252875\">Shadowbind</a>",
+            "<a href=\"http://www.wowhead.com/spell=253070\">Secure in the Light</a>",
+            "<a href=\"http://www.wowhead.com/spell=253093\">Infusion of Light</a>",
+            "<a href=\"http://www.wowhead.com/spell=252888\">Chaotic Darkness</a>",
+            "<a href=\"http://www.wowhead.com/spell=252799\">Shocklight</a>",
+            "<a href=\"http://www.wowhead.com/spell=252922\">Dark Sorrows</a>",
+            "<a href=\"http://www.wowhead.com/spell=252091\">Master of Shadows</a>",
+            "<a href=\"http://www.wowhead.com/spell=252191\">Murderous Intent</a>",
+            "<a href=\"http://www.wowhead.com/spell=238057\">Draught of Darkness</a>",
+            "<a href=\"http://www.wowhead.com/spell=213136\">Gifted Student</a>",
+            "<a href=\"http://www.wowhead.com/spell=250879\">+5 itemlevel</a>",
+            "<a href=\"http://www.wowhead.com/spell=239305\">Hot Blooded</a>",
+            "<a href=\"http://www.wowhead.com/spell=252088\">Light Speed</a>",
             "+3 itemlevel",
+            "<a href=\"http://www.wowhead.com/spell=213051\">Obsidian Fists</a>",
             "+2 itemlevel",
             "+1 itemlevel"
-        ]
+        ],
+        labels: {
+            useHTML: true
+        }
     },
     yAxis: {
         labels: {
@@ -136,6 +141,7 @@ Highcharts.chart('crucible_monk_brewmaster_patchwerk',
         min: 0,
         stackLabels: {
             enabled: true,
+            formatter: function() {          return Intl.NumberFormat().format(this.total);        },
             style: {
                 color: (Highcharts.theme && Highcharts.theme.textColor) || 'black',
                 fontWeight: "bold"

@@ -1,4 +1,4 @@
-Highcharts.chart('crucible_mage_fire_patchwerk', 
+Highcharts.chart('crucible_mage_fire_patchwerk',
 {
     chart: {
         type: "bar"
@@ -40,26 +40,26 @@ Highcharts.chart('crucible_mage_fire_patchwerk',
         {
             color: "#343434",
             data: [
-                37133,
-                27804,
-                27638,
-                26902,
-                26554,
+                38305,
+                29163,
+                28987,
+                27903,
+                27858,
+                0,
+                25536,
                 0,
                 0,
-                24049,
+                23523,
+                22983,
+                21073,
+                20109,
+                19646,
                 0,
-                22279,
-                21982,
-                19906,
-                19421,
-                18644,
-                0,
-                14853,
-                13795,
+                15322,
+                14090,
                 0,
                 0,
-                7426,
+                7661,
                 0,
                 0
             ],
@@ -74,38 +74,40 @@ Highcharts.chart('crucible_mage_fire_patchwerk',
                 0,
                 0,
                 0,
-                25247,
-                24297,
+                25629,
                 0,
-                22721,
-                0,
-                0,
+                25068,
+                24475,
                 0,
                 0,
                 0,
-                15356,
                 0,
                 0,
-                10878,
-                8746,
+                17363,
                 0,
-                5466,
-                0
+                0,
+                12115,
+                9694,
+                0,
+                4855,
+                1184
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-11-25 17:18 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/69c1b460a165743cf53ad056e00fed6a17c3769e\" target=\"blank\">69c1b46</a>"
+        text: "UTC 2017-12-07 08:20 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/244a4bbf9d075993ae4f96b36189b7f58f55ebe0\" target=\"blank\">244a4bb</a>",
+        useHTML: true
     },
     title: {
-        text: "Mage - Fire - Patchwerk"
+        text: "Mage - Fire - Patchwerk",
+        useHTML: true
     },
     tooltip: {
         backgroundColor: "#eee",
         borderColor: "#bbb",
-        formatter: function() {        var s = '<b>'+ this.x +'</b>';        var cumulative_amount = 0;        for (var i = this.points.length - 1 ; i >= 0 ; i--) {            cumulative_amount += this.points[i].y;            if (this.points[i].y !== 0){                s += '<br/><span style=\"color: ' + this.points[i].series.color + '; font-weight: bold;\">' + this.points[i].series.name +'</span>: ' + cumulative_amount;            }        }        return s;      },
+        formatter: function() {        var s = '<b>'+ this.x +'</b>';        var cumulative_amount = 0;        for (var i = this.points.length - 1 ; i >= 0 ; i--) {            cumulative_amount += this.points[i].y;            if (this.points[i].y !== 0){                s += '<br/><span style=\"color: ' + this.points[i].series.color + '; font-weight: bold;\">' + this.points[i].series.name +'</span>: ' + Intl.NumberFormat().format(cumulative_amount);            }        }        return s;      },
         headerFormat: "<b>{point.x}</b>",
         shared: true,
         style: {
@@ -114,29 +116,32 @@ Highcharts.chart('crucible_mage_fire_patchwerk',
     },
     xAxis: {
         categories: [
-            "+5 itemlevel",
-            "Infusion of Light",
-            "Torment the Weak",
-            "Secure in the Light",
-            "Shadowbind",
-            "Pyroclasmic Paranoia",
-            "Everburning Consumption",
-            "Chaotic Darkness",
-            "Pre-Ignited",
+            "<a href=\"http://www.wowhead.com/spell=250879\">+5 itemlevel</a>",
+            "<a href=\"http://www.wowhead.com/spell=252875\">Shadowbind</a>",
+            "<a href=\"http://www.wowhead.com/spell=253070\">Secure in the Light</a>",
+            "<a href=\"http://www.wowhead.com/spell=252906\">Torment the Weak</a>",
+            "<a href=\"http://www.wowhead.com/spell=253093\">Infusion of Light</a>",
+            "<a href=\"http://www.wowhead.com/spell=194239\">Pyroclasmic Paranoia</a>",
+            "<a href=\"http://www.wowhead.com/spell=252888\">Chaotic Darkness</a>",
+            "<a href=\"http://www.wowhead.com/spell=238055\">Pre-Ignited</a>",
+            "<a href=\"http://www.wowhead.com/spell=194314\">Everburning Consumption</a>",
+            "<a href=\"http://www.wowhead.com/spell=252799\">Shocklight</a>",
             "+3 itemlevel",
-            "Shocklight",
-            "Murderous Intent",
-            "Light Speed",
-            "Master of Shadows",
-            "Burning Gaze",
+            "<a href=\"http://www.wowhead.com/spell=252191\">Murderous Intent</a>",
+            "<a href=\"http://www.wowhead.com/spell=252091\">Master of Shadows</a>",
+            "<a href=\"http://www.wowhead.com/spell=252088\">Light Speed</a>",
+            "<a href=\"http://www.wowhead.com/spell=194312\">Burning Gaze</a>",
             "+2 itemlevel",
-            "Dark Sorrows",
-            "Fire at Will",
-            "Reignition Overdrive",
+            "<a href=\"http://www.wowhead.com/spell=252922\">Dark Sorrows</a>",
+            "<a href=\"http://www.wowhead.com/spell=194224\">Fire at Will</a>",
+            "<a href=\"http://www.wowhead.com/spell=194234\">Reignition Overdrive</a>",
             "+1 itemlevel",
-            "Great Balls of Fire",
-            "Blue Flame Special"
-        ]
+            "<a href=\"http://www.wowhead.com/spell=194313\">Great Balls of Fire</a>",
+            "<a href=\"http://www.wowhead.com/spell=210182\">Blue Flame Special</a>"
+        ],
+        labels: {
+            useHTML: true
+        }
     },
     yAxis: {
         labels: {
@@ -145,6 +150,7 @@ Highcharts.chart('crucible_mage_fire_patchwerk',
         min: 0,
         stackLabels: {
             enabled: true,
+            formatter: function() {          return Intl.NumberFormat().format(this.total);        },
             style: {
                 color: (Highcharts.theme && Highcharts.theme.textColor) || 'black',
                 fontWeight: "bold"
