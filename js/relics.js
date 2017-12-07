@@ -67,10 +67,7 @@ function addCrucibleListeners() {
   // add crucible copy function
   var crucible_iframes = document.getElementsByTagName("iframe");
   for (var i = crucible_iframes.length - 1; i >= 0; i--) {
-    //console.log(crucible_iframes[i]);
-    //var iframe_content = crucible_iframes[i].contentDocument.getElementsByTagName("pre")[0];
     var iframe_content = crucible_iframes[i].contentDocument;
-    //console.log(iframe_content);
     iframe_content.addEventListener("click", function(e) {
       copy_crucible_weights(e);
     } );
@@ -100,6 +97,7 @@ function copy_chart_link() {
 
 
 function copy_crucible_weights(element) {
+  console.log("Copy crucible weight to clipboard.");
   element.view.getSelection().selectAllChildren( element.view.document.getElementsByTagName("pre")[0].parentNode );
   element.view.document.execCommand('copy');
   var success_message = document.getElementById("crucible_copy_success");
