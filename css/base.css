@@ -503,7 +503,7 @@ hr {
 }
 
 /* The snackbar - position it at the bottom and in the middle of the screen */
-#copy_success {
+#copy_success, #link_copy_success, #crucible_copy_success {
     visibility: hidden; /* Hidden by default. Visible on click */
     min-width: 250px; /* Set a default minimum width */
     margin-left: -125px; /* Divide value of min-width by 2 */
@@ -519,7 +519,7 @@ hr {
 }
 
 /* Show the snackbar when clicking on a button (class added with JavaScript) */
-#copy_success.show {
+#copy_success.show, #link_copy_success.show, #crucible_copy_success.show {
     visibility: visible; /* Show the snackbar */
 
 /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
