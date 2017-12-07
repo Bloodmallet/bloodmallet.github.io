@@ -3,7 +3,9 @@ var active_spec = "";
 
 // add listeners after document finished loading
 document.addEventListener("DOMContentLoaded", addButtonListeners);
-document.addEventListener("DOMContentLoaded", addCrucibleListeners);
+document.addEventListener("DOMContentLoaded", function() {
+  setTimeout(addCrucibleListeners, 1500);
+});
 document.addEventListener('DOMContentLoaded', function() {
 
   //load tooltip script if viewport is large enough
@@ -100,6 +102,7 @@ function copy_crucible_weights(element) {
   console.log("Copy crucible weight to clipboard.");
   element.view.getSelection().selectAllChildren( element.view.document.getElementsByTagName("pre")[0].parentNode );
   element.view.document.execCommand('copy');
+  element.view.getSelection().removeAllRanges();
   var success_message = document.getElementById("crucible_copy_success");
   success_message.className = "show";
   setTimeout(function(){ success_message.className = success_message.className.replace("show", ""); }, 3000);
