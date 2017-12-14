@@ -1,4 +1,4 @@
-Highcharts.chart('rogue_subtlety_beastlord_pruned',
+Highcharts.chart('rogue_subtlety_beastlord_pruned', 
 {
     chart: {
         type: "bar"
@@ -23,7 +23,7 @@ Highcharts.chart('rogue_subtlety_beastlord_pruned',
             },
             point: {
                 events: {
-                    click: function (event) {                var chart = this.series.yAxis;                chart.removePlotLine('helperLine');                chart.addPlotLine({                    value: this.stackY,                    color: '#000',                    width: 2,                    id: 'helperLine',                    zIndex: 5,                    label: {                      text: this.series.name + ' ' + this.category + ': ' + this.stackY,                      align: 'left',                      verticalAlign: 'bottom',                      rotation: 0,                      y: -5                    }                });              }
+                    click: function (event) {                var chart = this.series.yAxis;                chart.removePlotLine('helperLine');                chart.addPlotLine({                    value: this.stackY,                    color: '#000',                    width: 2,                    id: 'helperLine',                    zIndex: 5,                    label: {                      text: this.series.name + ' ' + this.category + ': ' + Intl.NumberFormat().format(this.stackY),                      align: 'left',                      verticalAlign: 'bottom',                      rotation: 0,                      y: -5                    }                });              }
                 }
             },
             stacking: "normal"
@@ -39,12 +39,12 @@ Highcharts.chart('rogue_subtlety_beastlord_pruned',
         {
             color: "#fdbf6f",
             data: [
-                360085,
-                339252,
+                0,
+                365950,
+                333053,
                 0,
                 0,
-                0,
-                252650,
+                238338,
                 0,
                 0,
                 0,
@@ -117,14 +117,11 @@ Highcharts.chart('rogue_subtlety_beastlord_pruned',
         {
             color: "#fb9a99",
             data: [
+                378888,
                 0,
                 0,
-                318860,
-                278317,
-                261617,
-                0,
-                0,
-                0,
+                270161,
+                254223,
                 0,
                 0,
                 0,
@@ -134,8 +131,11 @@ Highcharts.chart('rogue_subtlety_beastlord_pruned',
                 0,
                 0,
                 0,
-                170725,
                 0,
+                0,
+                0,
+                0,
+                167932,
                 0
             ],
             name: "960"
@@ -176,8 +176,8 @@ Highcharts.chart('rogue_subtlety_beastlord_pruned',
                 0,
                 0,
                 0,
+                212432,
                 0,
-                217177,
                 0,
                 0,
                 0,
@@ -201,17 +201,17 @@ Highcharts.chart('rogue_subtlety_beastlord_pruned',
                 0,
                 0,
                 0,
-                226169,
-                219746,
+                226042,
+                0,
+                208057,
+                0,
+                192285,
                 0,
                 0,
-                190770,
                 0,
                 0,
                 0,
-                0,
-                176865,
-                0,
+                170912,
                 0,
                 0,
                 0
@@ -256,33 +256,33 @@ Highcharts.chart('rogue_subtlety_beastlord_pruned',
                 0,
                 0,
                 0,
-                199220,
+                197700,
                 0,
-                185549,
-                184469,
-                180214,
-                179495,
+                183463,
+                181963,
+                178545,
+                175831,
+                171499,
                 0,
-                171079,
+                169684,
                 0,
-                170638,
-                167904
+                166356
             ],
             name: "910"
         }
     ],
     subtitle: {
-        text: "UTC 2017-12-07 01:03 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/244a4bbf9d075993ae4f96b36189b7f58f55ebe0\" target=\"blank\">244a4bb</a>",
+        text: "UTC 2017-12-13 21:45 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/2143d84bc98dd1d780b61e851198f81cf756e317\" target=\"blank\">2143d84</a>",
         useHTML: true
     },
     title: {
-        text: "Rogue - Subtlety DfA - Beastlord",
+        text: "Rogue - Subtlety - Beastlord",
         useHTML: true
     },
     tooltip: {
         backgroundColor: "#eee",
         borderColor: "#bbb",
-        formatter: function() {        var s = '<div style=\"background-color:#eee; padding:12px;\"><b>'+ this.x +'</b>';        var cumulative_amount = 0;        for (var i = this.points.length - 1 ; i >= 0 ; i--) {            cumulative_amount += this.points[i].y;            if (this.points[i].y !== 0){                s += '<br/><span style=\"color: ' + this.points[i].series.color + '; font-weight: bold;\">' + this.points[i].series.name +'</span>: ' + cumulative_amount;            }        }        s += '</div>';        return s;      },
+        formatter: function() {        var s = '<div style=\"background-color:#eee; padding:12px;\"><b>'+ this.x +'</b>';        var cumulative_amount = 0;        for (var i = this.points.length - 1 ; i >= 0 ; i--) {            cumulative_amount += this.points[i].y;            if (this.points[i].y !== 0){                s += '<br/><span style=\"color: ' + this.points[i].series.color + '; font-weight: bold;\">' + this.points[i].series.name +'</span>: ' + Intl.NumberFormat().format(cumulative_amount);            }        }        s += '</div>';        return s;      },
         headerFormat: "<b>{point.x}</b>",
         shared: true,
         style: {
@@ -291,26 +291,26 @@ Highcharts.chart('rogue_subtlety_beastlord_pruned',
     },
     xAxis: {
         categories: [
+            "<a href=\"http://www.wowhead.com/item=151963\">Forgefiend's Fabricator</a>",
             "<a href=\"http://www.wowhead.com/item=144259\">Kil'jaeden's Burning Wish</a>",
             "<a href=\"http://www.wowhead.com/item=154174\">Golganneth's Vitality</a>",
-            "<a href=\"http://www.wowhead.com/item=151963\">Forgefiend's Fabricator</a>",
             "<a href=\"http://www.wowhead.com/item=152093\">Gorshalach's Legacy</a>",
             "<a href=\"http://www.wowhead.com/item=151968\">Shadow-Singed Fang</a>",
             "<a href=\"http://www.wowhead.com/item=154172\">Aman'Thul's Vision</a>",
             "<a href=\"http://www.wowhead.com/item=147015\">Engine of Eradication</a>",
-            "<a href=\"http://www.wowhead.com/item=147012\">Umbral Moonglaives</a>",
             "<a href=\"http://www.wowhead.com/item=151190\">Specter of Betrayal</a>",
+            "<a href=\"http://www.wowhead.com/item=147012\">Umbral Moonglaives</a>",
             "<a href=\"http://www.wowhead.com/item=142167\">Eye of Command</a>",
             "<a href=\"http://www.wowhead.com/item=151607\">Astral Alchemist Stone</a>",
-            "<a href=\"http://www.wowhead.com/item=151307\">Void Stalker's Contract</a>",
             "<a href=\"http://www.wowhead.com/item=142506,bonus_id=605\">Stat Stick (Mastery)</a>",
-            "<a href=\"http://www.wowhead.com/item=141482\">Unstable Arcanocrystal</a>",
+            "<a href=\"http://www.wowhead.com/item=151307\">Void Stalker's Contract</a>",
             "<a href=\"http://www.wowhead.com/item=142506,bonus_id=607\">Stat Stick (Versatility)</a>",
-            "<a href=\"http://www.wowhead.com/item=147010\">Cradle of Anguish</a>",
-            "<a href=\"http://www.wowhead.com/item=140794\">Arcanogolem Digit</a>",
+            "<a href=\"http://www.wowhead.com/item=141482\">Unstable Arcanocrystal</a>",
+            "<a href=\"http://www.wowhead.com/item=140806\">Convergence of Fates</a>",
+            "<a href=\"http://www.wowhead.com/item=147011\">Vial of Ceaseless Toxins</a>",
+            "<a href=\"http://www.wowhead.com/item=142506,bonus_id=603\">Stat Stick (Crit)</a>",
             "<a href=\"http://www.wowhead.com/item=151964\">Seeping Scourgewing</a>",
-            "<a href=\"http://www.wowhead.com/item=140796\">Entwined Elemental Foci</a>",
-            "<a href=\"http://www.wowhead.com/item=142506,bonus_id=603\">Stat Stick (Crit)</a>"
+            "<a href=\"http://www.wowhead.com/item=141537\">Thrice-Accursed Compass</a>"
         ],
         labels: {
             useHTML: true
@@ -330,18 +330,19 @@ Highcharts.chart('rogue_subtlety_beastlord_pruned',
                     style: {
                         color: "#0973DA"
                     },
-                    text: "mean: 222540",
+                    text: 'mean: ' + Intl.NumberFormat().format(222165),
                     verticalAlign: "bottom",
                     x: 10,
                     y: -23
                 },
-                value: 222540.05,
+                value: 222165.7,
                 width: 2,
                 zIndex: 2
             }
         ],
         stackLabels: {
             enabled: true,
+            formatter: function() {          return Intl.NumberFormat().format(this.total);        },
             style: {
                 textOutline: false
             }

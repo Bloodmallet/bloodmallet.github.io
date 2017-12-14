@@ -315,6 +315,7 @@ function fill_menu() {
       ],
       subtitle: {
           text: last_simulation,
+          useHTML: true,
       },
       title: {
           text: "Placeholder TRINKET",

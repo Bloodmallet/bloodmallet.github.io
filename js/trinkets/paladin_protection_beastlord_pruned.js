@@ -1,4 +1,4 @@
-Highcharts.chart('paladin_protection_beastlord_pruned',
+Highcharts.chart('paladin_protection_beastlord_pruned', 
 {
     chart: {
         type: "bar"
@@ -23,7 +23,7 @@ Highcharts.chart('paladin_protection_beastlord_pruned',
             },
             point: {
                 events: {
-                    click: function (event) {                var chart = this.series.yAxis;                chart.removePlotLine('helperLine');                chart.addPlotLine({                    value: this.stackY,                    color: '#000',                    width: 2,                    id: 'helperLine',                    zIndex: 5,                    label: {                      text: this.series.name + ' ' + this.category + ': ' + this.stackY,                      align: 'left',                      verticalAlign: 'bottom',                      rotation: 0,                      y: -5                    }                });              }
+                    click: function (event) {                var chart = this.series.yAxis;                chart.removePlotLine('helperLine');                chart.addPlotLine({                    value: this.stackY,                    color: '#000',                    width: 2,                    id: 'helperLine',                    zIndex: 5,                    label: {                      text: this.series.name + ' ' + this.category + ': ' + Intl.NumberFormat().format(this.stackY),                      align: 'left',                      verticalAlign: 'bottom',                      rotation: 0,                      y: -5                    }                });              }
                 }
             },
             stacking: "normal"
@@ -39,12 +39,11 @@ Highcharts.chart('paladin_protection_beastlord_pruned',
         {
             color: "#fdbf6f",
             data: [
-                444188,
-                382812,
-                292990,
-                267540,
-                0,
-                0,
+                278962,
+                216798,
+                183903,
+                161879,
+                149104,
                 0,
                 0,
                 0,
@@ -64,7 +63,6 @@ Highcharts.chart('paladin_protection_beastlord_pruned',
         {
             color: "#cab2d6",
             data: [
-                0,
                 0,
                 0,
                 0,
@@ -106,7 +104,6 @@ Highcharts.chart('paladin_protection_beastlord_pruned',
                 0,
                 0,
                 0,
-                0,
                 0
             ],
             name: "970"
@@ -119,13 +116,12 @@ Highcharts.chart('paladin_protection_beastlord_pruned',
                 0,
                 0,
                 0,
+                136449,
                 0,
                 0,
                 0,
                 0,
-                0,
-                0,
-                0,
+                104104,
                 0,
                 0,
                 0,
@@ -156,7 +152,6 @@ Highcharts.chart('paladin_protection_beastlord_pruned',
                 0,
                 0,
                 0,
-                0,
                 0
             ],
             name: "950"
@@ -170,11 +165,10 @@ Highcharts.chart('paladin_protection_beastlord_pruned',
                 0,
                 0,
                 0,
-                196016,
                 0,
                 0,
                 0,
-                0,
+                108798,
                 0,
                 0,
                 0,
@@ -193,18 +187,17 @@ Highcharts.chart('paladin_protection_beastlord_pruned',
                 0,
                 0,
                 0,
-                214001,
                 0,
                 0,
                 0,
-                188323,
-                0,
-                0,
+                117075,
                 0,
                 0,
                 0,
                 0,
                 0,
+                0,
+                98497,
                 0,
                 0,
                 0
@@ -214,7 +207,6 @@ Highcharts.chart('paladin_protection_beastlord_pruned',
         {
             color: "#a6cee3",
             data: [
-                0,
                 0,
                 0,
                 0,
@@ -244,36 +236,35 @@ Highcharts.chart('paladin_protection_beastlord_pruned',
                 0,
                 0,
                 0,
-                202494,
                 0,
-                192328,
+                120569,
                 0,
-                183965,
-                180086,
-                177608,
-                176144,
-                176058,
-                171991,
-                170703,
-                168004,
-                167397,
-                164182
+                112183,
+                0,
+                0,
+                101195,
+                99401,
+                98621,
+                0,
+                96058,
+                93499,
+                93330
             ],
             name: "910"
         }
     ],
     subtitle: {
-        text: "UTC 2017-12-07 01:03 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/244a4bbf9d075993ae4f96b36189b7f58f55ebe0\" target=\"blank\">244a4bb</a>",
+        text: "UTC 2017-12-13 21:45 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/2143d84bc98dd1d780b61e851198f81cf756e317\" target=\"blank\">2143d84</a>",
         useHTML: true
     },
     title: {
-        text: "Paladin - Protection DPS - Beastlord",
+        text: "Paladin - Protection - Beastlord",
         useHTML: true
     },
     tooltip: {
         backgroundColor: "#eee",
         borderColor: "#bbb",
-        formatter: function() {        var s = '<div style=\"background-color:#eee; padding:12px;\"><b>'+ this.x +'</b>';        var cumulative_amount = 0;        for (var i = this.points.length - 1 ; i >= 0 ; i--) {            cumulative_amount += this.points[i].y;            if (this.points[i].y !== 0){                s += '<br/><span style=\"color: ' + this.points[i].series.color + '; font-weight: bold;\">' + this.points[i].series.name +'</span>: ' + cumulative_amount;            }        }        s += '</div>';        return s;      },
+        formatter: function() {        var s = '<div style=\"background-color:#eee; padding:12px;\"><b>'+ this.x +'</b>';        var cumulative_amount = 0;        for (var i = this.points.length - 1 ; i >= 0 ; i--) {            cumulative_amount += this.points[i].y;            if (this.points[i].y !== 0){                s += '<br/><span style=\"color: ' + this.points[i].series.color + '; font-weight: bold;\">' + this.points[i].series.name +'</span>: ' + Intl.NumberFormat().format(cumulative_amount);            }        }        s += '</div>';        return s;      },
         headerFormat: "<b>{point.x}</b>",
         shared: true,
         style: {
@@ -284,23 +275,22 @@ Highcharts.chart('paladin_protection_beastlord_pruned',
         categories: [
             "<a href=\"http://www.wowhead.com/item=144259\">Kil'jaeden's Burning Wish</a>",
             "<a href=\"http://www.wowhead.com/item=144249\">Archimonde's Hatred Reborn</a>",
+            "<a href=\"http://www.wowhead.com/item=154173\">Aggramar's Conviction</a>",
             "<a href=\"http://www.wowhead.com/item=154176\">Khaz'goroths Courage</a>",
             "<a href=\"http://www.wowhead.com/item=154172\">Aman'Thul's Vision</a>",
+            "<a href=\"http://www.wowhead.com/item=152093\">Gorshalach's Legacy</a>",
+            "<a href=\"http://www.wowhead.com/item=137406\">Terrorbound Nexus</a>",
             "<a href=\"http://www.wowhead.com/item=147010\">Cradle of Anguish</a>",
             "<a href=\"http://www.wowhead.com/item=142167\">Eye of Command</a>",
             "<a href=\"http://www.wowhead.com/item=151190\">Specter of Betrayal</a>",
+            "<a href=\"http://www.wowhead.com/item=151963\">Forgefiend's Fabricator</a>",
             "<a href=\"http://www.wowhead.com/item=141482\">Unstable Arcanocrystal</a>",
-            "<a href=\"http://www.wowhead.com/item=151607\">Astral Alchemist Stone</a>",
             "<a href=\"http://www.wowhead.com/item=137459\">Chaos Talisman</a>",
-            "<a href=\"http://www.wowhead.com/item=142508,bonus_id=605\">Stat Stick (Mastery)</a>",
+            "<a href=\"http://www.wowhead.com/item=137357\">Mark of Dargrul</a>",
+            "<a href=\"http://www.wowhead.com/item=151607\">Astral Alchemist Stone</a>",
             "<a href=\"http://www.wowhead.com/item=142508,bonus_id=603\">Stat Stick (Crit)</a>",
-            "<a href=\"http://www.wowhead.com/item=133644\">Memento of Angerboda</a>",
             "<a href=\"http://www.wowhead.com/item=141535\">Ettin Fingernail</a>",
-            "<a href=\"http://www.wowhead.com/item=142508,bonus_id=607\">Stat Stick (Versatility)</a>",
-            "<a href=\"http://www.wowhead.com/item=142508,bonus_id=604\">Stat Stick (Haste)</a>",
-            "<a href=\"http://www.wowhead.com/item=137406\">Terrorbound Nexus</a>",
-            "<a href=\"http://www.wowhead.com/item=137419\">Chrono Shard</a>",
-            "<a href=\"http://www.wowhead.com/item=142669\">PVP Badge of Victory</a>"
+            "<a href=\"http://www.wowhead.com/item=137439\">Tiny Oozeling in a Jar</a>"
         ],
         labels: {
             useHTML: true
@@ -320,18 +310,19 @@ Highcharts.chart('paladin_protection_beastlord_pruned',
                     style: {
                         color: "#0973DA"
                     },
-                    text: "mean: 216675",
+                    text: 'mean: ' + Intl.NumberFormat().format(131690),
                     verticalAlign: "bottom",
                     x: 10,
                     y: -23
                 },
-                value: 216675.26315789475,
+                value: 131690.27777777778,
                 width: 2,
                 zIndex: 2
             }
         ],
         stackLabels: {
             enabled: true,
+            formatter: function() {          return Intl.NumberFormat().format(this.total);        },
             style: {
                 textOutline: false
             }

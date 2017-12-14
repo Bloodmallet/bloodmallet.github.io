@@ -23,7 +23,7 @@ Highcharts.chart('death_knight_frost_beastlord_pruned',
             },
             point: {
                 events: {
-                    click: function (event) {                var chart = this.series.yAxis;                chart.removePlotLine('helperLine');                chart.addPlotLine({                    value: this.stackY,                    color: '#000',                    width: 2,                    id: 'helperLine',                    zIndex: 5,                    label: {                      text: this.series.name + ' ' + this.category + ': ' + this.stackY,                      align: 'left',                      verticalAlign: 'bottom',                      rotation: 0,                      y: -5                    }                });              }
+                    click: function (event) {                var chart = this.series.yAxis;                chart.removePlotLine('helperLine');                chart.addPlotLine({                    value: this.stackY,                    color: '#000',                    width: 2,                    id: 'helperLine',                    zIndex: 5,                    label: {                      text: this.series.name + ' ' + this.category + ': ' + Intl.NumberFormat().format(this.stackY),                      align: 'left',                      verticalAlign: 'bottom',                      rotation: 0,                      y: -5                    }                });              }
                 }
             },
             stacking: "normal"
@@ -39,11 +39,11 @@ Highcharts.chart('death_knight_frost_beastlord_pruned',
         {
             color: "#fdbf6f",
             data: [
-                366260,
+                371250,
                 0,
                 0,
-                279195,
-                259632,
+                278730,
+                260990,
                 0,
                 0,
                 0,
@@ -118,14 +118,11 @@ Highcharts.chart('death_knight_frost_beastlord_pruned',
             color: "#fb9a99",
             data: [
                 0,
-                304131,
-                291820,
+                300841,
+                280838,
                 0,
                 0,
-                230338,
-                0,
-                0,
-                0,
+                219024,
                 0,
                 0,
                 0,
@@ -135,7 +132,10 @@ Highcharts.chart('death_knight_frost_beastlord_pruned',
                 0,
                 0,
                 0,
-                147723,
+                0,
+                0,
+                0,
+                149066,
                 0
             ],
             name: "960"
@@ -178,8 +178,8 @@ Highcharts.chart('death_knight_frost_beastlord_pruned',
                 0,
                 0,
                 0,
-                169946,
                 0,
+                163517,
                 0,
                 0,
                 0,
@@ -201,13 +201,13 @@ Highcharts.chart('death_knight_frost_beastlord_pruned',
                 0,
                 0,
                 0,
-                192273,
+                191426,
                 0,
-                180565,
+                185690,
                 0,
                 0,
                 0,
-                163559,
+                159401,
                 0,
                 0,
                 0,
@@ -254,25 +254,25 @@ Highcharts.chart('death_knight_frost_beastlord_pruned',
                 0,
                 0,
                 0,
-                189895,
+                186287,
                 0,
+                163738,
                 0,
-                167898,
-                164388,
+                160929,
                 0,
-                158603,
-                157891,
-                153499,
-                151750,
-                148441,
+                158940,
+                156039,
+                155292,
+                154656,
+                150611,
                 0,
-                146796
+                148549
             ],
             name: "910"
         }
     ],
     subtitle: {
-        text: "UTC 2017-12-07 01:03 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/244a4bbf9d075993ae4f96b36189b7f58f55ebe0\" target=\"blank\">244a4bb</a>",
+        text: "UTC 2017-12-13 21:45 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/2143d84bc98dd1d780b61e851198f81cf756e317\" target=\"blank\">2143d84</a>",
         useHTML: true
     },
     title: {
@@ -282,7 +282,7 @@ Highcharts.chart('death_knight_frost_beastlord_pruned',
     tooltip: {
         backgroundColor: "#eee",
         borderColor: "#bbb",
-        formatter: function() {        var s = '<div style=\"background-color:#eee; padding:12px;\"><b>'+ this.x +'</b>';        var cumulative_amount = 0;        for (var i = this.points.length - 1 ; i >= 0 ; i--) {            cumulative_amount += this.points[i].y;            if (this.points[i].y !== 0){                s += '<br/><span style=\"color: ' + this.points[i].series.color + '; font-weight: bold;\">' + this.points[i].series.name +'</span>: ' + cumulative_amount;            }        }        s += '</div>';        return s;      },
+        formatter: function() {        var s = '<div style=\"background-color:#eee; padding:12px;\"><b>'+ this.x +'</b>';        var cumulative_amount = 0;        for (var i = this.points.length - 1 ; i >= 0 ; i--) {            cumulative_amount += this.points[i].y;            if (this.points[i].y !== 0){                s += '<br/><span style=\"color: ' + this.points[i].series.color + '; font-weight: bold;\">' + this.points[i].series.name +'</span>: ' + Intl.NumberFormat().format(cumulative_amount);            }        }        s += '</div>';        return s;      },
         headerFormat: "<b>{point.x}</b>",
         shared: true,
         style: {
@@ -300,17 +300,17 @@ Highcharts.chart('death_knight_frost_beastlord_pruned',
             "<a href=\"http://www.wowhead.com/item=147015\">Engine of Eradication</a>",
             "<a href=\"http://www.wowhead.com/item=141482\">Unstable Arcanocrystal</a>",
             "<a href=\"http://www.wowhead.com/item=147010\">Cradle of Anguish</a>",
+            "<a href=\"http://www.wowhead.com/item=142508,bonus_id=605\">Stat Stick (Mastery)</a>",
             "<a href=\"http://www.wowhead.com/item=151190\">Specter of Betrayal</a>",
             "<a href=\"http://www.wowhead.com/item=142167\">Eye of Command</a>",
-            "<a href=\"http://www.wowhead.com/item=142508,bonus_id=605\">Stat Stick (Mastery)</a>",
             "<a href=\"http://www.wowhead.com/item=151607\">Astral Alchemist Stone</a>",
             "<a href=\"http://www.wowhead.com/item=137459\">Chaos Talisman</a>",
             "<a href=\"http://www.wowhead.com/item=144482\">Fel-Oiled Infernal Machine</a>",
-            "<a href=\"http://www.wowhead.com/item=142508,bonus_id=607\">Stat Stick (Versatility)</a>",
             "<a href=\"http://www.wowhead.com/item=140796\">Entwined Elemental Foci</a>",
             "<a href=\"http://www.wowhead.com/item=133644\">Memento of Angerboda</a>",
+            "<a href=\"http://www.wowhead.com/item=141535\">Ettin Fingernail</a>",
             "<a href=\"http://www.wowhead.com/item=151964\">Seeping Scourgewing</a>",
-            "<a href=\"http://www.wowhead.com/item=141535\">Ettin Fingernail</a>"
+            "<a href=\"http://www.wowhead.com/item=137419\">Chrono Shard</a>"
         ],
         labels: {
             useHTML: true
@@ -330,18 +330,19 @@ Highcharts.chart('death_knight_frost_beastlord_pruned',
                     style: {
                         color: "#0973DA"
                     },
-                    text: "mean: 201230",
+                    text: 'mean: ' + Intl.NumberFormat().format(199790),
                     verticalAlign: "bottom",
                     x: 10,
                     y: -23
                 },
-                value: 201230.15,
+                value: 199790.7,
                 width: 2,
                 zIndex: 2
             }
         ],
         stackLabels: {
             enabled: true,
+            formatter: function() {          return Intl.NumberFormat().format(this.total);        },
             style: {
                 textOutline: false
             }

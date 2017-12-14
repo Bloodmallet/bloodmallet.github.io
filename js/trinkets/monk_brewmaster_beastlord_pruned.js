@@ -23,7 +23,7 @@ Highcharts.chart('monk_brewmaster_beastlord_pruned',
             },
             point: {
                 events: {
-                    click: function (event) {                var chart = this.series.yAxis;                chart.removePlotLine('helperLine');                chart.addPlotLine({                    value: this.stackY,                    color: '#000',                    width: 2,                    id: 'helperLine',                    zIndex: 5,                    label: {                      text: this.series.name + ' ' + this.category + ': ' + this.stackY,                      align: 'left',                      verticalAlign: 'bottom',                      rotation: 0,                      y: -5                    }                });              }
+                    click: function (event) {                var chart = this.series.yAxis;                chart.removePlotLine('helperLine');                chart.addPlotLine({                    value: this.stackY,                    color: '#000',                    width: 2,                    id: 'helperLine',                    zIndex: 5,                    label: {                      text: this.series.name + ' ' + this.category + ': ' + Intl.NumberFormat().format(this.stackY),                      align: 'left',                      verticalAlign: 'bottom',                      rotation: 0,                      y: -5                    }                });              }
                 }
             },
             stacking: "normal"
@@ -39,12 +39,11 @@ Highcharts.chart('monk_brewmaster_beastlord_pruned',
         {
             color: "#fdbf6f",
             data: [
-                372074,
-                303706,
-                229464,
-                197373,
-                0,
-                0,
+                384077,
+                308017,
+                265256,
+                239314,
+                204005,
                 0,
                 0,
                 0,
@@ -64,7 +63,6 @@ Highcharts.chart('monk_brewmaster_beastlord_pruned',
         {
             color: "#cab2d6",
             data: [
-                0,
                 0,
                 0,
                 0,
@@ -106,7 +104,6 @@ Highcharts.chart('monk_brewmaster_beastlord_pruned',
                 0,
                 0,
                 0,
-                0,
                 0
             ],
             name: "970"
@@ -114,7 +111,6 @@ Highcharts.chart('monk_brewmaster_beastlord_pruned',
         {
             color: "#fb9a99",
             data: [
-                0,
                 0,
                 0,
                 0,
@@ -156,7 +152,6 @@ Highcharts.chart('monk_brewmaster_beastlord_pruned',
                 0,
                 0,
                 0,
-                0,
                 0
             ],
             name: "950"
@@ -170,11 +165,10 @@ Highcharts.chart('monk_brewmaster_beastlord_pruned',
                 0,
                 0,
                 0,
-                151115,
                 0,
                 0,
                 0,
-                0,
+                150069,
                 0,
                 0,
                 0,
@@ -193,15 +187,14 @@ Highcharts.chart('monk_brewmaster_beastlord_pruned',
                 0,
                 0,
                 0,
-                158644,
+                0,
+                160076,
                 0,
                 0,
                 0,
                 0,
-                139017,
                 0,
-                0,
-                0,
+                139738,
                 0,
                 0,
                 0,
@@ -231,7 +224,6 @@ Highcharts.chart('monk_brewmaster_beastlord_pruned',
                 0,
                 0,
                 0,
-                0,
                 0
             ],
             name: "920"
@@ -244,26 +236,25 @@ Highcharts.chart('monk_brewmaster_beastlord_pruned',
                 0,
                 0,
                 0,
-                152891,
                 0,
-                147274,
-                144265,
+                155119,
+                153277,
+                151040,
                 0,
-                137363,
-                133500,
-                129783,
-                128090,
-                127153,
-                123706,
-                121266,
-                119929,
-                119625
+                143620,
+                0,
+                136290,
+                135860,
+                134778,
+                128056,
+                127675,
+                126919
             ],
             name: "910"
         }
     ],
     subtitle: {
-        text: "UTC 2017-12-07 01:03 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/244a4bbf9d075993ae4f96b36189b7f58f55ebe0\" target=\"blank\">244a4bb</a>",
+        text: "UTC 2017-12-13 21:45 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/2143d84bc98dd1d780b61e851198f81cf756e317\" target=\"blank\">2143d84</a>",
         useHTML: true
     },
     title: {
@@ -273,7 +264,7 @@ Highcharts.chart('monk_brewmaster_beastlord_pruned',
     tooltip: {
         backgroundColor: "#eee",
         borderColor: "#bbb",
-        formatter: function() {        var s = '<div style=\"background-color:#eee; padding:12px;\"><b>'+ this.x +'</b>';        var cumulative_amount = 0;        for (var i = this.points.length - 1 ; i >= 0 ; i--) {            cumulative_amount += this.points[i].y;            if (this.points[i].y !== 0){                s += '<br/><span style=\"color: ' + this.points[i].series.color + '; font-weight: bold;\">' + this.points[i].series.name +'</span>: ' + cumulative_amount;            }        }        s += '</div>';        return s;      },
+        formatter: function() {        var s = '<div style=\"background-color:#eee; padding:12px;\"><b>'+ this.x +'</b>';        var cumulative_amount = 0;        for (var i = this.points.length - 1 ; i >= 0 ; i--) {            cumulative_amount += this.points[i].y;            if (this.points[i].y !== 0){                s += '<br/><span style=\"color: ' + this.points[i].series.color + '; font-weight: bold;\">' + this.points[i].series.name +'</span>: ' + Intl.NumberFormat().format(cumulative_amount);            }        }        s += '</div>';        return s;      },
         headerFormat: "<b>{point.x}</b>",
         shared: true,
         style: {
@@ -284,23 +275,22 @@ Highcharts.chart('monk_brewmaster_beastlord_pruned',
         categories: [
             "<a href=\"http://www.wowhead.com/item=144259\">Kil'jaeden's Burning Wish</a>",
             "<a href=\"http://www.wowhead.com/item=144249\">Archimonde's Hatred Reborn</a>",
+            "<a href=\"http://www.wowhead.com/item=154173\">Aggramar's Conviction</a>",
             "<a href=\"http://www.wowhead.com/item=154174\">Golganneth's Vitality</a>",
             "<a href=\"http://www.wowhead.com/item=154172\">Aman'Thul's Vision</a>",
             "<a href=\"http://www.wowhead.com/item=147010\">Cradle of Anguish</a>",
             "<a href=\"http://www.wowhead.com/item=141537\">Thrice-Accursed Compass</a>",
-            "<a href=\"http://www.wowhead.com/item=151190\">Specter of Betrayal</a>",
             "<a href=\"http://www.wowhead.com/item=142167\">Eye of Command</a>",
+            "<a href=\"http://www.wowhead.com/item=133644\">Memento of Angerboda</a>",
+            "<a href=\"http://www.wowhead.com/item=151190\">Specter of Betrayal</a>",
             "<a href=\"http://www.wowhead.com/item=141482\">Unstable Arcanocrystal</a>",
             "<a href=\"http://www.wowhead.com/item=151607\">Astral Alchemist Stone</a>",
-            "<a href=\"http://www.wowhead.com/item=133644\">Memento of Angerboda</a>",
             "<a href=\"http://www.wowhead.com/item=142506,bonus_id=607\">Stat Stick (Versatility)</a>",
-            "<a href=\"http://www.wowhead.com/item=142506,bonus_id=605\">Stat Stick (Mastery)</a>",
             "<a href=\"http://www.wowhead.com/item=142506,bonus_id=603\">Stat Stick (Crit)</a>",
-            "<a href=\"http://www.wowhead.com/item=139329\">Bloodthirsty Instinct</a>",
-            "<a href=\"http://www.wowhead.com/item=142773\">PVP Badge of Conquest</a>",
-            "<a href=\"http://www.wowhead.com/item=137459\">Chaos Talisman</a>",
+            "<a href=\"http://www.wowhead.com/item=142506,bonus_id=605\">Stat Stick (Mastery)</a>",
             "<a href=\"http://www.wowhead.com/item=137419\">Chrono Shard</a>",
-            "<a href=\"http://www.wowhead.com/item=137406\">Terrorbound Nexus</a>"
+            "<a href=\"http://www.wowhead.com/item=137312\">Nightmare Egg Shell</a>",
+            "<a href=\"http://www.wowhead.com/item=139329\">Bloodthirsty Instinct</a>"
         ],
         labels: {
             useHTML: true
@@ -320,18 +310,19 @@ Highcharts.chart('monk_brewmaster_beastlord_pruned',
                     style: {
                         color: "#0973DA"
                     },
-                    text: "mean: 165065",
+                    text: 'mean: ' + Intl.NumberFormat().format(180177),
                     verticalAlign: "bottom",
                     x: 10,
                     y: -23
                 },
-                value: 165065.15789473685,
+                value: 180177.0,
                 width: 2,
                 zIndex: 2
             }
         ],
         stackLabels: {
             enabled: true,
+            formatter: function() {          return Intl.NumberFormat().format(this.total);        },
             style: {
                 textOutline: false
             }

@@ -23,7 +23,7 @@ Highcharts.chart('druid_balance_patchwerk_pruned',
             },
             point: {
                 events: {
-                    click: function (event) {                var chart = this.series.yAxis;                chart.removePlotLine('helperLine');                chart.addPlotLine({                    value: this.stackY,                    color: '#000',                    width: 2,                    id: 'helperLine',                    zIndex: 5,                    label: {                      text: this.series.name + ' ' + this.category + ': ' + this.stackY,                      align: 'left',                      verticalAlign: 'bottom',                      rotation: 0,                      y: -5                    }                });              }
+                    click: function (event) {                var chart = this.series.yAxis;                chart.removePlotLine('helperLine');                chart.addPlotLine({                    value: this.stackY,                    color: '#000',                    width: 2,                    id: 'helperLine',                    zIndex: 5,                    label: {                      text: this.series.name + ' ' + this.category + ': ' + Intl.NumberFormat().format(this.stackY),                      align: 'left',                      verticalAlign: 'bottom',                      rotation: 0,                      y: -5                    }                });              }
                 }
             },
             stacking: "normal"
@@ -39,13 +39,51 @@ Highcharts.chart('druid_balance_patchwerk_pruned',
         {
             color: "#fdbf6f",
             data: [
-                227735
+                227619,
+                216071,
+                203669,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
             ],
             name: "1000"
         },
         {
             color: "#cab2d6",
             data: [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
                 0
             ],
             name: "980"
@@ -53,6 +91,25 @@ Highcharts.chart('druid_balance_patchwerk_pruned',
         {
             color: "#ff7f00",
             data: [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
                 0
             ],
             name: "970"
@@ -60,6 +117,25 @@ Highcharts.chart('druid_balance_patchwerk_pruned',
         {
             color: "#fb9a99",
             data: [
+                0,
+                0,
+                0,
+                170791,
+                0,
+                136602,
+                0,
+                128706,
+                0,
+                120706,
+                0,
+                0,
+                106744,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
                 0
             ],
             name: "960"
@@ -67,6 +143,25 @@ Highcharts.chart('druid_balance_patchwerk_pruned',
         {
             color: "#e31a1c",
             data: [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
                 0
             ],
             name: "950"
@@ -74,6 +169,25 @@ Highcharts.chart('druid_balance_patchwerk_pruned',
         {
             color: "#b2df8a",
             data: [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                111760,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
                 0
             ],
             name: "940"
@@ -81,6 +195,25 @@ Highcharts.chart('druid_balance_patchwerk_pruned',
         {
             color: "#33a02c",
             data: [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                134980,
+                0,
+                124682,
+                0,
+                114161,
+                0,
+                0,
+                0,
+                104387,
+                0,
+                0,
+                0,
+                0,
                 0
             ],
             name: "930"
@@ -88,6 +221,25 @@ Highcharts.chart('druid_balance_patchwerk_pruned',
         {
             color: "#a6cee3",
             data: [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
                 0
             ],
             name: "920"
@@ -95,13 +247,32 @@ Highcharts.chart('druid_balance_patchwerk_pruned',
         {
             color: "#1f78b4",
             data: [
-                0
+                0,
+                0,
+                0,
+                0,
+                161689,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                105700,
+                0,
+                103758,
+                103737,
+                103265,
+                101899,
+                100376
             ],
             name: "910"
         }
     ],
     subtitle: {
-        text: "UTC 2017-12-06 01:48 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/954bf604f2c56271a369035c7f801169bb84f117\" target=\"blank\">954bf60</a>",
+        text: "UTC 2017-12-13 21:45 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/2143d84bc98dd1d780b61e851198f81cf756e317\" target=\"blank\">2143d84</a>",
         useHTML: true
     },
     title: {
@@ -111,7 +282,7 @@ Highcharts.chart('druid_balance_patchwerk_pruned',
     tooltip: {
         backgroundColor: "#eee",
         borderColor: "#bbb",
-        formatter: function() {        var s = '<div style=\"background-color:#eee; padding:12px;\"><b>'+ this.x +'</b>';        var cumulative_amount = 0;        for (var i = this.points.length - 1 ; i >= 0 ; i--) {            cumulative_amount += this.points[i].y;            if (this.points[i].y !== 0){                s += '<br/><span style=\"color: ' + this.points[i].series.color + '; font-weight: bold;\">' + this.points[i].series.name +'</span>: ' + cumulative_amount;            }        }        s += '</div>';        return s;      },
+        formatter: function() {        var s = '<div style=\"background-color:#eee; padding:12px;\"><b>'+ this.x +'</b>';        var cumulative_amount = 0;        for (var i = this.points.length - 1 ; i >= 0 ; i--) {            cumulative_amount += this.points[i].y;            if (this.points[i].y !== 0){                s += '<br/><span style=\"color: ' + this.points[i].series.color + '; font-weight: bold;\">' + this.points[i].series.name +'</span>: ' + Intl.NumberFormat().format(cumulative_amount);            }        }        s += '</div>';        return s;      },
         headerFormat: "<b>{point.x}</b>",
         shared: true,
         style: {
@@ -120,7 +291,26 @@ Highcharts.chart('druid_balance_patchwerk_pruned',
     },
     xAxis: {
         categories: [
-            "<a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\"><a href=\"http://www.wowhead.com/item=154172\">Aman'Thul's Vision</a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a></a>"
+            "<a href=\"http://www.wowhead.com/item=154172\">Aman'Thul's Vision</a>",
+            "<a href=\"http://www.wowhead.com/item=144259\">Kil'jaeden's Burning Wish</a>",
+            "<a href=\"http://www.wowhead.com/item=154177\">Norgannon's Prowess</a>",
+            "<a href=\"http://www.wowhead.com/item=151955\">Acrid Catalyst Injector</a>",
+            "<a href=\"http://www.wowhead.com/item=141482\">Unstable Arcanocrystal</a>",
+            "<a href=\"http://www.wowhead.com/item=151971\">Sheath of Asara</a>",
+            "<a href=\"http://www.wowhead.com/item=147017\">Tarnished Sentinel Medallion</a>",
+            "<a href=\"http://www.wowhead.com/item=151962\">Prototype Personnel Decimator</a>",
+            "<a href=\"http://www.wowhead.com/item=147002\">Charm of the Rising Tide</a>",
+            "<a href=\"http://www.wowhead.com/item=151970\">Vitality Resonator</a>",
+            "<a href=\"http://www.wowhead.com/item=147016\">Terror From Below</a>",
+            "<a href=\"http://www.wowhead.com/item=147019\">Tome of Unraveling Sanity</a>",
+            "<a href=\"http://www.wowhead.com/item=151969\">Terminus Signaling Beacon</a>",
+            "<a href=\"http://www.wowhead.com/item=144480\">Dreadstone of Endless Shadows</a>",
+            "<a href=\"http://www.wowhead.com/item=151607\">Astral Alchemist Stone</a>",
+            "<a href=\"http://www.wowhead.com/item=140792\">Erratic Metronome</a>",
+            "<a href=\"http://www.wowhead.com/item=142507,bonus_id=605\">Stat Stick (Mastery)</a>",
+            "<a href=\"http://www.wowhead.com/item=142507,bonus_id=604\">Stat Stick (Haste)</a>",
+            "<a href=\"http://www.wowhead.com/item=141536\">Padawsen's Unlucky Charm</a>",
+            "<a href=\"http://www.wowhead.com/item=140809\">Whispers in the Dark</a>"
         ],
         labels: {
             useHTML: true
@@ -140,18 +330,19 @@ Highcharts.chart('druid_balance_patchwerk_pruned',
                     style: {
                         color: "#0973DA"
                     },
-                    text: "mean: 227735",
+                    text: 'mean: ' + Intl.NumberFormat().format(134065),
                     verticalAlign: "bottom",
                     x: 10,
                     y: -23
                 },
-                value: 227735.0,
+                value: 134065.1,
                 width: 2,
                 zIndex: 2
             }
         ],
         stackLabels: {
             enabled: true,
+            formatter: function() {          return Intl.NumberFormat().format(this.total);        },
             style: {
                 textOutline: false
             }
