@@ -1,4 +1,4 @@
-Highcharts.chart('death_knight_frost_patchwerk', 
+Highcharts.chart('death_knight_frost_patchwerk',
 {
     chart: {
         type: "bar"
@@ -604,14 +604,26 @@ Highcharts.chart('death_knight_frost_patchwerk',
         useHTML: true
     },
     tooltip: {
-        backgroundColor: "#eee",
+        backgroundColor: "#e0e",
         borderColor: "#bbb",
-        formatter: function() {        var s = '<div style=\"background-color:#eee; padding:12px;\"><b>'+ this.x +'</b>';        var cumulative_amount = 0;        for (var i = this.points.length - 1 ; i >= 0 ; i--) {            cumulative_amount += this.points[i].y;            if (this.points[i].y !== 0){                s += '<br/><span style=\"color: ' + this.points[i].series.color + '; font-weight: bold;\">' + this.points[i].series.name +'</span>: ' + Intl.NumberFormat().format(cumulative_amount);            }        }        s += '</div>';        return s;      },
+        formatter: function() {
+            var s = '<div style=\"padding:12px;\"><b>'+ this.x +'</b>';
+            var cumulative_amount = 0;
+            for (var i = this.points.length - 1 ; i >= 0 ; i--) {
+                cumulative_amount += this.points[i].y;
+                if (this.points[i].y !== 0){
+                    s += '<br/><span style=\"color: ' + this.points[i].series.color + '; font-weight: bold;\">' + this.points[i].series.name +'</span>: ' + Intl.NumberFormat().format(cumulative_amount);
+                }
+            }
+            s += '</div>';
+            return s;
+        },
         headerFormat: "<b>{point.x}</b>",
         shared: true,
         style: {
             color: "black"
-        }
+        },
+        useHTML: true,
     },
     xAxis: {
         categories: [

@@ -116,9 +116,9 @@ Highcharts.chart('crucible_death_knight_frost_beastlord',
     },
     xAxis: {
         categories: [
-            "<a href=\"http://www.wowhead.com/spell=189092\">Ambidexterity</a>",
-            "<a href=\"http://www.wowhead.com/spell=252922\">Dark Sorrows</a>",
-            "<a href=\"http://www.wowhead.com/spell=252091\">Master of Shadows</a>",
+            "<a href=\"http://CN.wowhead.com/spell=189092\">Ambidexterity</a>",
+            "<a href=\"http://CN.wowhead.com/spell=252922\">Dark Sorrows</a>",
+            "<a href=\"http://EN.wowhead.com/spell=252091\">Master of Shadows</a>",
             "<a href=\"http://www.wowhead.com/spell=252191\">Murderous Intent</a>",
             "<a href=\"http://www.wowhead.com/spell=252799\">Shocklight</a>",
             "<a href=\"http://www.wowhead.com/spell=250879\">+5 itemlevel</a>",
