@@ -1,4 +1,4 @@
-Highcharts.chart('crucible_death_knight_blood_beastlord',
+Highcharts.chart('crucible_death_knight_blood_beastlord', 
 {
     chart: {
         type: "bar"
@@ -40,25 +40,25 @@ Highcharts.chart('crucible_death_knight_blood_beastlord',
         {
             color: "#343434",
             data: [
-                46925,
-                28037,
-                27824,
-                27710,
-                24323,
-                24062,
-                20377,
-                19095,
-                18155,
-                15193,
-                14286,
-                12226,
+                47536,
+                26744,
+                26586,
+                26198,
+                22048,
+                19835,
+                15042,
+                14954,
+                14920,
+                12416,
+                11451,
+                8972,
                 0,
-                8150,
-                0,
-                0,
+                5981,
                 0,
                 0,
-                4075
+                2990,
+                0,
+                0
             ],
             name: 1,
             showInLegend: false
@@ -78,20 +78,20 @@ Highcharts.chart('crucible_death_knight_blood_beastlord',
                 0,
                 0,
                 0,
-                8627,
+                8519,
                 0,
-                5625,
-                5514,
-                5458,
-                4427,
-                0
+                5656,
+                5304,
+                0,
+                2597,
+                2055
             ],
             name: 1,
             showInLegend: false
         }
     ],
     subtitle: {
-        text: "UTC 2017-12-07 08:20 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/244a4bbf9d075993ae4f96b36189b7f58f55ebe0\" target=\"blank\">244a4bb</a>",
+        text: "UTC 2017-12-15 01:10 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/2143d84bc98dd1d780b61e851198f81cf756e317\" target=\"blank\">2143d84</a>",
         useHTML: true
     },
     title: {
@@ -111,24 +111,24 @@ Highcharts.chart('crucible_death_knight_blood_beastlord',
     xAxis: {
         categories: [
             "<a href=\"http://www.wowhead.com/spell=252922\">Dark Sorrows</a>",
-            "<a href=\"http://www.wowhead.com/spell=252875\">Shadowbind</a>",
             "<a href=\"http://www.wowhead.com/spell=253070\">Secure in the Light</a>",
             "<a href=\"http://www.wowhead.com/spell=253093\">Infusion of Light</a>",
-            "<a href=\"http://www.wowhead.com/spell=252906\">Torment the Weak</a>",
+            "<a href=\"http://www.wowhead.com/spell=252875\">Shadowbind</a>",
             "<a href=\"http://www.wowhead.com/spell=252888\">Chaotic Darkness</a>",
+            "<a href=\"http://www.wowhead.com/spell=252906\">Torment the Weak</a>",
+            "<a href=\"http://www.wowhead.com/spell=252091\">Master of Shadows</a>",
             "<a href=\"http://www.wowhead.com/spell=250879\">+5 itemlevel</a>",
             "<a href=\"http://www.wowhead.com/spell=252799\">Shocklight</a>",
-            "<a href=\"http://www.wowhead.com/spell=252091\">Master of Shadows</a>",
-            "<a href=\"http://www.wowhead.com/spell=252088\">Light Speed</a>",
             "<a href=\"http://www.wowhead.com/spell=252191\">Murderous Intent</a>",
+            "<a href=\"http://www.wowhead.com/spell=252088\">Light Speed</a>",
             "+3 itemlevel",
             "<a href=\"http://www.wowhead.com/spell=192514\">Dance of Darkness</a>",
             "+2 itemlevel",
             "<a href=\"http://www.wowhead.com/spell=192464\">All-Consuming Rot</a>",
-            "<a href=\"http://www.wowhead.com/spell=192538\">Bonebreaker</a>",
             "<a href=\"http://www.wowhead.com/spell=192460\">Coagulopathy</a>",
-            "<a href=\"http://www.wowhead.com/spell=192457\">Veinrender</a>",
-            "+1 itemlevel"
+            "+1 itemlevel",
+            "<a href=\"http://www.wowhead.com/spell=192538\">Bonebreaker</a>",
+            "<a href=\"http://www.wowhead.com/spell=192457\">Veinrender</a>"
         ],
         labels: {
             useHTML: true
