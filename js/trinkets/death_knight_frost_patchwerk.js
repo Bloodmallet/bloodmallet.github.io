@@ -604,7 +604,7 @@ Highcharts.chart('death_knight_frost_patchwerk',
         useHTML: true
     },
     tooltip: {
-        backgroundColor: "#e0e",
+        backgroundColor: "#eee",
         borderColor: "#bbb",
         formatter: function() {
             var s = '<div style=\"padding:12px;\"><b>'+ this.x +'</b>';
