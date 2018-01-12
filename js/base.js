@@ -42,6 +42,7 @@ function switchLanguage(new_language) {
 
       xhttp_getlanguage.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
+          //console.log(xhttp_getlanguage.responseText);
           //console.log(JSON.parse(xhttp_getlanguage.responseText));
           translator = JSON.parse(xhttp_getlanguage.responseText);
           // set new language
