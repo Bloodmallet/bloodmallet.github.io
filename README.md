@@ -1,6 +1,14 @@
 # bloodmallet.github.io
-Repository to use as an information hub for trinket charts for all dps-specs available in World of Warcraft.
+> Information hub for different optimization aspects of several specs available in World of Warcraft.
 
-If you have feature requests please add issues.
-If you want to talk with me; join the in FAQ.html mentioned discord and look for me in the #bloodytools channel.
-Please read the FAQ.html page for more information (for example which settings were used, why is trinket X missing...).
+## Featre requests
+Please [add issues](https://github.com/Bloodmallet/bloodmallet.github.io/issues) or contact me.
+
+## Contact
+| Type | Data |
+| --- | --- |
+| Discord | [SimCMinMax](https://discord.gg/tFR2uvK) Channel: #bloodytools Nickname: Bloodmallet(EU)#8246 |
+| GitHub Repo | [Issue System](https://github.com/Bloodmallet/bloodmallet.github.io/issues) |
+
+## Support this project
+Please read the [FAQ page](https://bloodmallet.github.io/faq.html#support) for more information.
