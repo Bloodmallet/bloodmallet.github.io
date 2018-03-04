@@ -1,655 +1,823 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" >
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Make sure Bootstrap is loaded before base, otherwise a lot of styles will be overwritten -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/base.css">
-    <title>Bloody( crucible )</title>
-    <script type="text/javascript" src="js/base.js"></script>
-    <script type="text/javascript" src="js/relics.js"></script>
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-      ga('create', 'UA-102757416-1', 'auto');
-      ga('set', 'anonymizeIp', true);
-      ga('send', 'pageview');
+  <!-- Make sure Bootstrap is loaded before base, otherwise a lot of styles will be overwritten -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/base.css">
+  <title>Bloody( crucible )</title>
+  <script type="text/javascript" src="js/base.js"></script>
+  <script type="text/javascript" src="js/relics.js"></script>
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
-    </script>
-    <script>
-      var whTooltips = {
-        colorLinks: false,
-        iconizeLinks: false,
-        renameLinks: false,
-        hide: {
-          dropchance: true,
-          sellprice: true,
-          maxstack: true
-        }
-      };
-    </script>
-  </head>
-  <body>
-    <div class="central_aligner_outer">
-      <div class="central_aligner_inner">
-        <nav>
-          <ul>
-            <li><a href="./index.html">Trinket Charts</a></li>
-            <li><a href="./trinket_spec_performance.html">Trinket performance <span class="badge badge-new">New</span></a></li>
-            <li><a href="./relics.html">Crucible Charts</a></li>
-            <li><a href="./faq.html">FAQ</a></li>
-            <li><a href="https://github.com/Bloodmallet/bloodmallet.github.io/commits/master">Changelog</a> </li>
-          </ul>
-        </nav>
-      </div>
+    ga('create', 'UA-102757416-1', 'auto');
+    ga('set', 'anonymizeIp', true);
+    ga('send', 'pageview');
+
+  </script>
+  <script>
+    var whTooltips = {
+      colorLinks: false,
+      iconizeLinks: false,
+      renameLinks: false,
+      hide: {
+        dropchance: true,
+        sellprice: true,
+        maxstack: true
+      }
+    };
+  </script>
+</head>
+
+<body>
+  <div class="central_aligner_outer">
+    <div class="central_aligner_inner">
+      <nav>
+        <ul>
+          <li>
+            <a href="./index.html">Trinket Charts</a>
+          </li>
+          <li>
+            <a href="./trinket_spec_performance.html">Trinket performance
+              <span class="badge badge-new">New</span>
+            </a>
+          </li>
+          <li>
+            <a href="./relics.html">Crucible Charts</a>
+          </li>
+          <li>
+            <a href="./faq.html">FAQ</a>
+          </li>
+          <li>
+            <a href="https://github.com/Bloodmallet/bloodmallet.github.io/commits/master">Changelog</a>
+          </li>
+        </ul>
+      </nav>
     </div>
+  </div>
 
 
-    <h1>Crucible Charts</h1>
+  <h1>Crucible Charts</h1>
 
-    <p>This site provides an overview of all light, shadow crucible traits, and damage traits for all specs in World of Warcraft using SimulationCraft with <a href="https://github.com/Bloodmallet/bloodyrelics" target="blank">Github - Bloodyrelics</a>. Please use the trait analysis of your spec's theorycrafters for a more in depth view on these traits.</p>
+  <p>This site provides an overview of all light, shadow crucible traits, and damage traits for all specs in World of Warcraft
+    using SimulationCraft with
+    <a href="https://github.com/Bloodmallet/bloodyrelics" target="blank">Github - Bloodyrelics</a>. Please use the trait analysis of your spec's theorycrafters for a more in depth view on these
+    traits.
+  </p>
 
-    <!--<div class="row">
-      <div class="col-xs-1"></div>
-      <div class="col-xs-10 alert alert-success"><strong>Fully updated crucible charts, including the trinket tuning of this <a href="https://worldofwarcraft.com/en-gb/news/21025532/hotfixes-december-5">bluepost</a>.</strong></div>
-    </div>-->
+  <div class="row">
+    <div class="col-xs-1"></div>
+    <div class="col-xs-10 alert alert-info">
+      <strong>Looking for help:</strong> With Battle for Azeroth looming on the horizon, it's time to improve; and YOU can help to
+      make this resource better. There are multiple ways to do so. Designing, coding, requesting data, pointing out flaws,
+      to name a few. All you need is a GitHub account and you can start adding comments and issues
+      <a href="https://github.com/Bloodmallet/bloodmallet.github.io/projects/4" target="blank">
+        <span style="font-weight: 700;">here</span>
+      </a>.
+    </div>
+  </div>
 
 
-    <!-- desktop table -->
-    <div class="div-table desktop">
-      <div class="div-row">
-        <div class="div-cell">
-          <div class="btn-group dk">
-            <div class="class-table">Death Knight</div>
-            <button class="spec-switch-button" name="death_knight_blood">Blood</button>
-            <button class="spec-switch-button" name="death_knight_frost">Frost</button>
-            <button class="spec-switch-button" name="death_knight_unholy">Unholy</button>
-          </div>
-        </div>
-        <div class="div-cell">
-          <div class="btn-group dh">
-            <div class="class-table">Demon Hunter</div>
-            <button class="spec-switch-button" name="demon_hunter_havoc">Havoc</button>
-          </div>
-        </div>
-        <div class="div-cell">
-          <div class="btn-group druid">
-            <div class="class-table">Druid</div>
-            <button class="spec-switch-button" name="druid_balance">Balance</button>
-            <button class="spec-switch-button" name="druid_feral">Feral</button>
-          </div>
-        </div>
-        <div class="div-cell">
-          <div class="btn-group hunter">
-            <div class="class-table">Hunter</div>
-            <button class="spec-switch-button" name="hunter_beast_mastery">Beast Mastery</button>
-            <button class="spec-switch-button" name="hunter_marksmanship">Marksmanship</button>
-            <button class="spec-switch-button" name="hunter_survival">Survival</button>
-          </div>
+  <!-- desktop table -->
+  <div class="div-table desktop">
+    <div class="div-row">
+      <div class="div-cell">
+        <div class="btn-group dk">
+          <div class="class-table">Death Knight</div>
+          <button class="spec-switch-button" name="death_knight_blood">Blood</button>
+          <button class="spec-switch-button" name="death_knight_frost">Frost</button>
+          <button class="spec-switch-button" name="death_knight_unholy">Unholy</button>
         </div>
       </div>
-      <div class="div-row">
-        <div class="div-cell">
-          <div class="btn-group mage">
-            <div class="class-table">Mage</div>
-            <button class="spec-switch-button" name="mage_arcane">Arcane</button>
-            <button class="spec-switch-button" name="mage_fire">Fire</button>
-            <button class="spec-switch-button" name="mage_frost">Frost</button>
-          </div>
-        </div>
-        <div class="div-cell">
-          <div class="btn-group monk">
-            <div class="class-table">Monk</div>
-            <button class="spec-switch-button" name="monk_brewmaster">Brewmaster</button>
-            <button class="spec-switch-button" name="monk_windwalker">Windwalker</button>
-          </div>
-        </div>
-        <div class="div-cell">
-          <div class="btn-group paladin">
-            <div class="class-table">Paladin</div>
-            <button class="spec-switch-button" name="paladin_protection">Protection</button>
-            <button class="spec-switch-button" name="paladin_retribution">Retribution</button>
-          </div>
-        </div>
-        <div class="div-cell">
-          <div class="btn-group priest">
-            <div class="class-table">Priest</div>
-            <button class="spec-switch-button" name="priest_shadow">Shadow</button>
-          </div>
+      <div class="div-cell">
+        <div class="btn-group dh">
+          <div class="class-table">Demon Hunter</div>
+          <button class="spec-switch-button" name="demon_hunter_havoc">Havoc</button>
         </div>
       </div>
-      <div class="div-row">
-        <div class="div-cell">
-          <div class="btn-group rogue">
-            <div class="class-table">Rogue</div>
-            <button class="spec-switch-button" name="rogue_assassination">Assassination</button>
-            <button class="spec-switch-button" name="rogue_outlaw">Outlaw</button>
-            <button class="spec-switch-button" name="rogue_subtlety">Subtlety</button>
-          </div>
+      <div class="div-cell">
+        <div class="btn-group druid">
+          <div class="class-table">Druid</div>
+          <button class="spec-switch-button" name="druid_balance">Balance</button>
+          <button class="spec-switch-button" name="druid_feral">Feral</button>
         </div>
-        <div class="div-cell">
-          <div class="btn-group shaman">
-            <div class="class-table">Shaman</div>
-            <button class="spec-switch-button" name="shaman_elemental">Elemental</button>
-            <button class="spec-switch-button" name="shaman_enhancement">Enhancement</button>
-          </div>
-        </div>
-        <div class="div-cell">
-          <div class="btn-group warlock">
-            <div class="class-table">Warlock</div>
-            <button class="spec-switch-button" name="warlock_affliction">Affliction</button>
-            <button class="spec-switch-button" name="warlock_demonology">Demonology</button>
-            <button class="spec-switch-button" name="warlock_destruction">Destruction</button>
-          </div>
-        </div>
-        <div class="div-cell">
-          <div class="btn-group warrior">
-            <div class="class-table">Warrior</div>
-            <button class="spec-switch-button" name="warrior_arms">Arms</button>
-            <button class="spec-switch-button" name="warrior_fury">Fury</button>
-          </div>
+      </div>
+      <div class="div-cell">
+        <div class="btn-group hunter">
+          <div class="class-table">Hunter</div>
+          <button class="spec-switch-button" name="hunter_beast_mastery">Beast Mastery</button>
+          <button class="spec-switch-button" name="hunter_marksmanship">Marksmanship</button>
+          <button class="spec-switch-button" name="hunter_survival">Survival</button>
         </div>
       </div>
     </div>
-
-    <!-- mobile table -->
-    <p class="mobile">Note: If you don't see all classes below, try moving the table.</p>
-    <div class="div-table mobile">
-      <div class="div-row">
-        <div class="div-cell">
-          <div class="btn-group dk">
-            <div class="class-table">Death Knight</div>
-            <button class="spec-switch-button" name="death_knight_blood">Blood</button>
-            <button class="spec-switch-button" name="death_knight_frost">Frost</button>
-            <button class="spec-switch-button" name="death_knight_unholy">Unholy</button>
-          </div>
-        </div>
-        <div class="div-cell">
-          <div class="btn-group dh">
-            <div class="class-table">Demon Hunter</div>
-            <button class="spec-switch-button" name="demon_hunter_havoc">Havoc</button>
-          </div>
-        </div>
-        <div class="div-cell">
-          <div class="btn-group druid">
-            <div class="class-table">Druid</div>
-            <button class="spec-switch-button" name="druid_balance">Balance</button>
-            <button class="spec-switch-button" name="druid_feral">Feral</button>
-          </div>
+    <div class="div-row">
+      <div class="div-cell">
+        <div class="btn-group mage">
+          <div class="class-table">Mage</div>
+          <button class="spec-switch-button" name="mage_arcane">Arcane</button>
+          <button class="spec-switch-button" name="mage_fire">Fire</button>
+          <button class="spec-switch-button" name="mage_frost">Frost</button>
         </div>
       </div>
-      <div class="div-row">
-        <div class="div-cell">
-          <div class="btn-group hunter">
-            <div class="class-table">Hunter</div>
-            <button class="spec-switch-button" name="hunter_beast_mastery">Beast Mastery</button>
-            <button class="spec-switch-button" name="hunter_marksmanship">Marksmanship</button>
-            <button class="spec-switch-button" name="hunter_survival">Survival</button>
-          </div>
-        </div>
-        <div class="div-cell">
-          <div class="btn-group mage">
-            <div class="class-table">Mage</div>
-            <button class="spec-switch-button" name="mage_arcane">Arcane</button>
-            <button class="spec-switch-button" name="mage_fire">Fire</button>
-            <button class="spec-switch-button" name="mage_frost">Frost</button>
-          </div>
-        </div>
-        <div class="div-cell">
-          <div class="btn-group monk">
-            <div class="class-table">Monk</div>
-            <button class="spec-switch-button" name="monk_brewmaster">Brewmaster</button>
-            <button class="spec-switch-button" name="monk_windwalker">Windwalker</button>
-          </div>
+      <div class="div-cell">
+        <div class="btn-group monk">
+          <div class="class-table">Monk</div>
+          <button class="spec-switch-button" name="monk_brewmaster">Brewmaster</button>
+          <button class="spec-switch-button" name="monk_windwalker">Windwalker</button>
         </div>
       </div>
-      <div class="div-row">
-        <div class="div-cell">
-          <div class="btn-group paladin">
-            <div class="class-table">Paladin</div>
-            <button class="spec-switch-button" name="paladin_protection">Protection</button>
-            <button class="spec-switch-button" name="paladin_retribution">Retribution</button>
-          </div>
-        </div>
-        <div class="div-cell">
-          <div class="btn-group priest">
-            <div class="class-table">Priest</div>
-            <button class="spec-switch-button" name="priest_shadow">Shadow</button>
-          </div>
-        </div>
-        <div class="div-cell">
-          <div class="btn-group rogue">
-            <div class="class-table">Rogue</div>
-            <button class="spec-switch-button" name="rogue_assassination">Assassination</button>
-            <button class="spec-switch-button" name="rogue_outlaw">Outlaw</button>
-            <button class="spec-switch-button" name="rogue_subtlety">Subtlety</button>
-          </div>
+      <div class="div-cell">
+        <div class="btn-group paladin">
+          <div class="class-table">Paladin</div>
+          <button class="spec-switch-button" name="paladin_protection">Protection</button>
+          <button class="spec-switch-button" name="paladin_retribution">Retribution</button>
         </div>
       </div>
-      <div class="div-row">
-        <div class="div-cell">
-          <div class="btn-group shaman">
-            <div class="class-table">Shaman</div>
-            <button class="spec-switch-button" name="shaman_elemental">Elemental</button>
-            <button class="spec-switch-button" name="shaman_enhancement">Enhancement</button>
-          </div>
-        </div>
-        <div class="div-cell">
-          <div class="btn-group warlock">
-            <div class="class-table">Warlock</div>
-            <button class="spec-switch-button" name="warlock_affliction">Affliction</button>
-            <button class="spec-switch-button" name="warlock_demonology">Demonology</button>
-            <button class="spec-switch-button" name="warlock_destruction">Destruction</button>
-          </div>
-        </div>
-        <div class="div-cell">
-          <div class="btn-group warrior">
-            <div class="class-table">Warrior</div>
-            <button class="spec-switch-button" name="warrior_arms">Arms</button>
-            <button class="spec-switch-button" name="warrior_fury">Fury</button>
-          </div>
+      <div class="div-cell">
+        <div class="btn-group priest">
+          <div class="class-table">Priest</div>
+          <button class="spec-switch-button" name="priest_shadow">Shadow</button>
         </div>
       </div>
     </div>
-
-    <div style="height: 40px;"></div>
-
-    <div id="pre_chart_options" style="display: none;" >
-      <div id="pre_chart_aligner">
-        <button id="fight_style_button">Switch to beastlord &gt;</button>
-        <select id="select_language" title="Translate the trinket names to the selected language.">
-          <option value="CN">简体中文</option>
-          <option value="DE">Deutsch</option>
-          <option value="EN" selected>English</option>
-          <option value="ES">Español</option>
-          <option value="FR">Français</option>
-          <option value="KO">한국어</option>
-          <option value="PT">Português Brasileiro</option>
-          <option value="RU">Русский</option>
-        </select>
-        <button id="chart_linker" title="Copy link of chart to your clipboard." >&#x1f517;<span id="chart_linker_content" style="display: none;"></span></button>
+    <div class="div-row">
+      <div class="div-cell">
+        <div class="btn-group rogue">
+          <div class="class-table">Rogue</div>
+          <button class="spec-switch-button" name="rogue_assassination">Assassination</button>
+          <button class="spec-switch-button" name="rogue_outlaw">Outlaw</button>
+          <button class="spec-switch-button" name="rogue_subtlety">Subtlety</button>
+        </div>
+      </div>
+      <div class="div-cell">
+        <div class="btn-group shaman">
+          <div class="class-table">Shaman</div>
+          <button class="spec-switch-button" name="shaman_elemental">Elemental</button>
+          <button class="spec-switch-button" name="shaman_enhancement">Enhancement</button>
+        </div>
+      </div>
+      <div class="div-cell">
+        <div class="btn-group warlock">
+          <div class="class-table">Warlock</div>
+          <button class="spec-switch-button" name="warlock_affliction">Affliction</button>
+          <button class="spec-switch-button" name="warlock_demonology">Demonology</button>
+          <button class="spec-switch-button" name="warlock_destruction">Destruction</button>
+        </div>
+      </div>
+      <div class="div-cell">
+        <div class="btn-group warrior">
+          <div class="class-table">Warrior</div>
+          <button class="spec-switch-button" name="warrior_arms">Arms</button>
+          <button class="spec-switch-button" name="warrior_fury">Fury</button>
+        </div>
       </div>
     </div>
-    <div id="link_copy_success">Link was copied to clipboard.</div>
-    <div id="crucible_copy_success">Crucible Weight was copied to clipboard.</div>
+  </div>
+
+  <!-- mobile table -->
+  <p class="mobile">Note: If you don't see all classes below, try moving the table.</p>
+  <div class="div-table mobile">
+    <div class="div-row">
+      <div class="div-cell">
+        <div class="btn-group dk">
+          <div class="class-table">Death Knight</div>
+          <button class="spec-switch-button" name="death_knight_blood">Blood</button>
+          <button class="spec-switch-button" name="death_knight_frost">Frost</button>
+          <button class="spec-switch-button" name="death_knight_unholy">Unholy</button>
+        </div>
+      </div>
+      <div class="div-cell">
+        <div class="btn-group dh">
+          <div class="class-table">Demon Hunter</div>
+          <button class="spec-switch-button" name="demon_hunter_havoc">Havoc</button>
+        </div>
+      </div>
+      <div class="div-cell">
+        <div class="btn-group druid">
+          <div class="class-table">Druid</div>
+          <button class="spec-switch-button" name="druid_balance">Balance</button>
+          <button class="spec-switch-button" name="druid_feral">Feral</button>
+        </div>
+      </div>
+    </div>
+    <div class="div-row">
+      <div class="div-cell">
+        <div class="btn-group hunter">
+          <div class="class-table">Hunter</div>
+          <button class="spec-switch-button" name="hunter_beast_mastery">Beast Mastery</button>
+          <button class="spec-switch-button" name="hunter_marksmanship">Marksmanship</button>
+          <button class="spec-switch-button" name="hunter_survival">Survival</button>
+        </div>
+      </div>
+      <div class="div-cell">
+        <div class="btn-group mage">
+          <div class="class-table">Mage</div>
+          <button class="spec-switch-button" name="mage_arcane">Arcane</button>
+          <button class="spec-switch-button" name="mage_fire">Fire</button>
+          <button class="spec-switch-button" name="mage_frost">Frost</button>
+        </div>
+      </div>
+      <div class="div-cell">
+        <div class="btn-group monk">
+          <div class="class-table">Monk</div>
+          <button class="spec-switch-button" name="monk_brewmaster">Brewmaster</button>
+          <button class="spec-switch-button" name="monk_windwalker">Windwalker</button>
+        </div>
+      </div>
+    </div>
+    <div class="div-row">
+      <div class="div-cell">
+        <div class="btn-group paladin">
+          <div class="class-table">Paladin</div>
+          <button class="spec-switch-button" name="paladin_protection">Protection</button>
+          <button class="spec-switch-button" name="paladin_retribution">Retribution</button>
+        </div>
+      </div>
+      <div class="div-cell">
+        <div class="btn-group priest">
+          <div class="class-table">Priest</div>
+          <button class="spec-switch-button" name="priest_shadow">Shadow</button>
+        </div>
+      </div>
+      <div class="div-cell">
+        <div class="btn-group rogue">
+          <div class="class-table">Rogue</div>
+          <button class="spec-switch-button" name="rogue_assassination">Assassination</button>
+          <button class="spec-switch-button" name="rogue_outlaw">Outlaw</button>
+          <button class="spec-switch-button" name="rogue_subtlety">Subtlety</button>
+        </div>
+      </div>
+    </div>
+    <div class="div-row">
+      <div class="div-cell">
+        <div class="btn-group shaman">
+          <div class="class-table">Shaman</div>
+          <button class="spec-switch-button" name="shaman_elemental">Elemental</button>
+          <button class="spec-switch-button" name="shaman_enhancement">Enhancement</button>
+        </div>
+      </div>
+      <div class="div-cell">
+        <div class="btn-group warlock">
+          <div class="class-table">Warlock</div>
+          <button class="spec-switch-button" name="warlock_affliction">Affliction</button>
+          <button class="spec-switch-button" name="warlock_demonology">Demonology</button>
+          <button class="spec-switch-button" name="warlock_destruction">Destruction</button>
+        </div>
+      </div>
+      <div class="div-cell">
+        <div class="btn-group warrior">
+          <div class="class-table">Warrior</div>
+          <button class="spec-switch-button" name="warrior_arms">Arms</button>
+          <button class="spec-switch-button" name="warrior_fury">Fury</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="height: 40px;"></div>
+
+  <div id="pre_chart_options" style="display: none;">
+    <div id="pre_chart_aligner">
+      <button id="fight_style_button">Switch to beastlord &gt;</button>
+      <select id="select_language" title="Translate the trinket names to the selected language.">
+        <option value="CN">简体中文</option>
+        <option value="DE">Deutsch</option>
+        <option value="EN" selected>English</option>
+        <option value="ES">Español</option>
+        <option value="FR">Français</option>
+        <option value="KO">한국어</option>
+        <option value="PT">Português Brasileiro</option>
+        <option value="RU">Русский</option>
+      </select>
+      <button id="chart_linker" title="Copy link of chart to your clipboard.">&#x1f517;
+        <span id="chart_linker_content" style="display: none;"></span>
+      </button>
+    </div>
+  </div>
+  <div id="link_copy_success">Link was copied to clipboard.</div>
+  <div id="crucible_copy_success">Crucible Weight was copied to clipboard.</div>
 
 
 
-    <div class="container-relics" id="crucible_death_knight_blood_patchwerk"    style="display: none;" ></div>
-    <div class="container-relics" id="crucible_death_knight_frost_patchwerk"    style="display: none;" ></div>
-    <div class="container-relics" id="crucible_death_knight_unholy_patchwerk"   style="display: none;" ></div>
-    <div class="container-relics" id="crucible_demon_hunter_havoc_patchwerk"    style="display: none;" ></div>
-    <div class="container-relics" id="crucible_druid_balance_patchwerk"         style="display: none;" ></div>
-    <div class="container-relics" id="crucible_druid_feral_patchwerk"           style="display: none;" ></div>
-    <div class="container-relics" id="crucible_hunter_beast_mastery_patchwerk"  style="display: none;" ></div>
-    <div class="container-relics" id="crucible_hunter_marksmanship_patchwerk"   style="display: none;" ></div>
-    <div class="container-relics" id="crucible_hunter_survival_patchwerk"       style="display: none;" ></div>
-    <div class="container-relics" id="crucible_mage_arcane_patchwerk"           style="display: none;" ></div>
-    <div class="container-relics" id="crucible_mage_fire_patchwerk"             style="display: none;" ></div>
-    <div class="container-relics" id="crucible_mage_frost_patchwerk"            style="display: none;" ></div>
-    <div class="container-relics" id="crucible_monk_brewmaster_patchwerk"       style="display: none;" ></div>
-    <div class="container-relics" id="crucible_monk_windwalker_patchwerk"       style="display: none;" ></div>
-    <div class="container-relics" id="crucible_paladin_protection_patchwerk"    style="display: none;" ></div>
-    <div class="container-relics" id="crucible_paladin_retribution_patchwerk"   style="display: none;" ></div>
-    <div class="container-relics" id="crucible_priest_shadow_patchwerk"         style="display: none;" ></div>
-    <div class="container-relics" id="crucible_rogue_assassination_patchwerk"   style="display: none;" ></div>
-    <div class="container-relics" id="crucible_rogue_outlaw_patchwerk"          style="display: none;" ></div>
-    <div class="container-relics" id="crucible_rogue_subtlety_patchwerk"        style="display: none;" ></div>
-    <div class="container-relics" id="crucible_shaman_elemental_patchwerk"      style="display: none;" ></div>
-    <div class="container-relics" id="crucible_shaman_enhancement_patchwerk"    style="display: none;" ></div>
-    <div class="container-relics" id="crucible_warlock_affliction_patchwerk"    style="display: none;" ></div>
-    <div class="container-relics" id="crucible_warlock_demonology_patchwerk"    style="display: none;" ></div>
-    <div class="container-relics" id="crucible_warlock_destruction_patchwerk"   style="display: none;" ></div>
-    <div class="container-relics" id="crucible_warrior_arms_patchwerk"          style="display: none;" ></div>
-    <div class="container-relics" id="crucible_warrior_fury_patchwerk"          style="display: none;" ></div>
+  <div class="container-relics" id="crucible_death_knight_blood_patchwerk" style="display: none;"></div>
+  <div class="container-relics" id="crucible_death_knight_frost_patchwerk" style="display: none;"></div>
+  <div class="container-relics" id="crucible_death_knight_unholy_patchwerk" style="display: none;"></div>
+  <div class="container-relics" id="crucible_demon_hunter_havoc_patchwerk" style="display: none;"></div>
+  <div class="container-relics" id="crucible_druid_balance_patchwerk" style="display: none;"></div>
+  <div class="container-relics" id="crucible_druid_feral_patchwerk" style="display: none;"></div>
+  <div class="container-relics" id="crucible_hunter_beast_mastery_patchwerk" style="display: none;"></div>
+  <div class="container-relics" id="crucible_hunter_marksmanship_patchwerk" style="display: none;"></div>
+  <div class="container-relics" id="crucible_hunter_survival_patchwerk" style="display: none;"></div>
+  <div class="container-relics" id="crucible_mage_arcane_patchwerk" style="display: none;"></div>
+  <div class="container-relics" id="crucible_mage_fire_patchwerk" style="display: none;"></div>
+  <div class="container-relics" id="crucible_mage_frost_patchwerk" style="display: none;"></div>
+  <div class="container-relics" id="crucible_monk_brewmaster_patchwerk" style="display: none;"></div>
+  <div class="container-relics" id="crucible_monk_windwalker_patchwerk" style="display: none;"></div>
+  <div class="container-relics" id="crucible_paladin_protection_patchwerk" style="display: none;"></div>
+  <div class="container-relics" id="crucible_paladin_retribution_patchwerk" style="display: none;"></div>
+  <div class="container-relics" id="crucible_priest_shadow_patchwerk" style="display: none;"></div>
+  <div class="container-relics" id="crucible_rogue_assassination_patchwerk" style="display: none;"></div>
+  <div class="container-relics" id="crucible_rogue_outlaw_patchwerk" style="display: none;"></div>
+  <div class="container-relics" id="crucible_rogue_subtlety_patchwerk" style="display: none;"></div>
+  <div class="container-relics" id="crucible_shaman_elemental_patchwerk" style="display: none;"></div>
+  <div class="container-relics" id="crucible_shaman_enhancement_patchwerk" style="display: none;"></div>
+  <div class="container-relics" id="crucible_warlock_affliction_patchwerk" style="display: none;"></div>
+  <div class="container-relics" id="crucible_warlock_demonology_patchwerk" style="display: none;"></div>
+  <div class="container-relics" id="crucible_warlock_destruction_patchwerk" style="display: none;"></div>
+  <div class="container-relics" id="crucible_warrior_arms_patchwerk" style="display: none;"></div>
+  <div class="container-relics" id="crucible_warrior_fury_patchwerk" style="display: none;"></div>
 
-    <div id="beastlord-disclaimer" style="display: none;">
-      <p><strong>Disclaimer:</strong> Beastlord simulations suffer from multiple weaknesses and these graphs should be taken with a huge boulder of salt. The standard profiles are most likely optimized for single target; itemwise (secondaries) and talentwise. As I don't change either it's very much possible that the results you see here, don't reflect the potential for your spec. In addition it's possible that the standard APL does not consider AoE fights. Make sure to check out your theorycrafters resources!</p>
-    </div>
-    <div class="container-relics" id="crucible_death_knight_blood_beastlord"    style="display: none;" ></div>
-    <div class="container-relics" id="crucible_death_knight_frost_beastlord"    style="display: none;" ></div>
-    <div class="container-relics" id="crucible_death_knight_unholy_beastlord"   style="display: none;" ></div>
-    <div class="container-relics" id="crucible_demon_hunter_havoc_beastlord"    style="display: none;" ></div>
-    <div class="container-relics" id="crucible_druid_balance_beastlord"         style="display: none;" ></div>
-    <div class="container-relics" id="crucible_druid_feral_beastlord"           style="display: none;" ></div>
-    <div class="container-relics" id="crucible_hunter_beast_mastery_beastlord"  style="display: none;" ></div>
-    <div class="container-relics" id="crucible_hunter_marksmanship_beastlord"   style="display: none;" ></div>
-    <div class="container-relics" id="crucible_hunter_survival_beastlord"       style="display: none;" ></div>
-    <div class="container-relics" id="crucible_mage_arcane_beastlord"           style="display: none;" ></div>
-    <div class="container-relics" id="crucible_mage_fire_beastlord"             style="display: none;" ></div>
-    <div class="container-relics" id="crucible_mage_frost_beastlord"            style="display: none;" ></div>
-    <div class="container-relics" id="crucible_monk_brewmaster_beastlord"       style="display: none;" ></div>
-    <div class="container-relics" id="crucible_monk_windwalker_beastlord"       style="display: none;" ></div>
-    <div class="container-relics" id="crucible_paladin_protection_beastlord"    style="display: none;" ></div>
-    <div class="container-relics" id="crucible_paladin_retribution_beastlord"   style="display: none;" ></div>
-    <div class="container-relics" id="crucible_priest_shadow_beastlord"         style="display: none;" ></div>
-    <div class="container-relics" id="crucible_rogue_assassination_beastlord"   style="display: none;" ></div>
-    <div class="container-relics" id="crucible_rogue_outlaw_beastlord"          style="display: none;" ></div>
-    <div class="container-relics" id="crucible_rogue_subtlety_beastlord"        style="display: none;" ></div>
-    <div class="container-relics" id="crucible_shaman_elemental_beastlord"      style="display: none;" ></div>
-    <div class="container-relics" id="crucible_shaman_enhancement_beastlord"    style="display: none;" ></div>
-    <div class="container-relics" id="crucible_warlock_affliction_beastlord"    style="display: none;" ></div>
-    <div class="container-relics" id="crucible_warlock_demonology_beastlord"    style="display: none;" ></div>
-    <div class="container-relics" id="crucible_warlock_destruction_beastlord"   style="display: none;" ></div>
-    <div class="container-relics" id="crucible_warrior_arms_beastlord"          style="display: none;" ></div>
-    <div class="container-relics" id="crucible_warrior_fury_beastlord"          style="display: none;" ></div>
+  <div id="beastlord-disclaimer" style="display: none;">
+    <p>
+      <strong>Disclaimer:</strong> Beastlord simulations suffer from multiple weaknesses and these graphs should be taken with a
+      huge boulder of salt. The standard profiles are most likely optimized for single target; itemwise (secondaries) and
+      talentwise. As I don't change either it's very much possible that the results you see here, don't reflect the potential
+      for your spec. In addition it's possible that the standard APL does not consider AoE fights. Make sure to check out
+      your theorycrafters resources!</p>
+  </div>
+  <div class="container-relics" id="crucible_death_knight_blood_beastlord" style="display: none;"></div>
+  <div class="container-relics" id="crucible_death_knight_frost_beastlord" style="display: none;"></div>
+  <div class="container-relics" id="crucible_death_knight_unholy_beastlord" style="display: none;"></div>
+  <div class="container-relics" id="crucible_demon_hunter_havoc_beastlord" style="display: none;"></div>
+  <div class="container-relics" id="crucible_druid_balance_beastlord" style="display: none;"></div>
+  <div class="container-relics" id="crucible_druid_feral_beastlord" style="display: none;"></div>
+  <div class="container-relics" id="crucible_hunter_beast_mastery_beastlord" style="display: none;"></div>
+  <div class="container-relics" id="crucible_hunter_marksmanship_beastlord" style="display: none;"></div>
+  <div class="container-relics" id="crucible_hunter_survival_beastlord" style="display: none;"></div>
+  <div class="container-relics" id="crucible_mage_arcane_beastlord" style="display: none;"></div>
+  <div class="container-relics" id="crucible_mage_fire_beastlord" style="display: none;"></div>
+  <div class="container-relics" id="crucible_mage_frost_beastlord" style="display: none;"></div>
+  <div class="container-relics" id="crucible_monk_brewmaster_beastlord" style="display: none;"></div>
+  <div class="container-relics" id="crucible_monk_windwalker_beastlord" style="display: none;"></div>
+  <div class="container-relics" id="crucible_paladin_protection_beastlord" style="display: none;"></div>
+  <div class="container-relics" id="crucible_paladin_retribution_beastlord" style="display: none;"></div>
+  <div class="container-relics" id="crucible_priest_shadow_beastlord" style="display: none;"></div>
+  <div class="container-relics" id="crucible_rogue_assassination_beastlord" style="display: none;"></div>
+  <div class="container-relics" id="crucible_rogue_outlaw_beastlord" style="display: none;"></div>
+  <div class="container-relics" id="crucible_rogue_subtlety_beastlord" style="display: none;"></div>
+  <div class="container-relics" id="crucible_shaman_elemental_beastlord" style="display: none;"></div>
+  <div class="container-relics" id="crucible_shaman_enhancement_beastlord" style="display: none;"></div>
+  <div class="container-relics" id="crucible_warlock_affliction_beastlord" style="display: none;"></div>
+  <div class="container-relics" id="crucible_warlock_demonology_beastlord" style="display: none;"></div>
+  <div class="container-relics" id="crucible_warlock_destruction_beastlord" style="display: none;"></div>
+  <div class="container-relics" id="crucible_warrior_arms_beastlord" style="display: none;"></div>
+  <div class="container-relics" id="crucible_warrior_fury_beastlord" style="display: none;"></div>
 
-    <p>Please be aware that some Light-Traits have a shared RPPM (proc rate) of their damage and healing effects. When simulating these traits the actors aren't hit unless they are tanks. Which results in more damage procs than you can expect for a real fight.</p>
-    <!-- TC resource area -->
-    <div class="tc-box" id="tc_death_knight_blood" style="display: none;" >
-      <ul type="square">
-        <li>Please use the crucible analysis of your spec's theorycrafters for more accuracy. My chart is <strong>ONLY FOR DPS</strong>.</li>
-        <li>Theorycrafter resource: <a href="https://docs.google.com/document/d/162vcG39rz4OJvd4zi7557KCfkRfuyT1aJp3KF076z5U" target="blank">Blood DK Guide</a> / <a href="https://goo.gl/u7s0nm">Defensive Trinkets</a></li>
-        <li>Discord: <a href="https://discord.gg/hq6HwSB" target="blank">Acherus</a></li>
-        <li>Single target Crucible Weight</li>
-        <pre><code><iframe src="js/crucible/crucible_death_knight_blood_patchwerk_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
-        <li>Beastlord Crucible Weight</li>
-        <pre><code><iframe src="js/crucible/crucible_death_knight_blood_beastlord_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
-      </ul>
-    </div>
-    <div class="tc-box" id="tc_death_knight_frost" style="display: none;" >
-      <ul type="square">
-        <li>Please use the crucible analysis of your spec's theorycrafters for more accuracy.</li>
-        <li>Theorycrafter resource: <a href="https://goo.gl/gVBHCW" target="blank">Frost DK FAQ</a></li>
-        <li>Discord: <a href="https://discord.gg/hq6HwSB" target="blank">Acherus</a></li>
-        <li>Single target Crucible Weight</li>
-        <pre><code><iframe src="js/crucible/crucible_death_knight_frost_patchwerk_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
-        <li>Beastlord Crucible Weight</li>
-        <pre><code><iframe src="js/crucible/crucible_death_knight_frost_beastlord_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
-      </ul>
-    </div>
-    </div>
-    <div class="tc-box" id="tc_death_knight_unholy" style="display: none;" >
-      <ul type="square">
-        <li>Please use the crucible analysis of your spec's theorycrafters for more accuracy.</li>
-        <li>Theorycrafter resource: <a href="https://goo.gl/SjcJ3n" target="blank">Guide</a> / <a href="https://docs.google.com/spreadsheets/d/1efg3uitY4HDHjnBtUckq5RPJ1XyyZIzVbt52otMa8Uc/edit#gid=1479337307" target="blank">Trinkets</a> </li>
-        <li>Discord: <a href="https://discord.gg/hq6HwSB" target="blank">Acherus</a></li>
-        <li>Single target Crucible Weight</li>
-        <pre><code><iframe src="js/crucible/crucible_death_knight_unholy_patchwerk_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
-        <li>Beastlord Crucible Weight</li>
-        <pre><code><iframe src="js/crucible/crucible_death_knight_unholy_beastlord_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
-      </ul>
-    </div>
-    <div class="tc-box" id="tc_demon_hunter_havoc" style="display: none;" >
-      <ul type="square">
-        <li>Please use the crucible analysis of your spec's theorycrafters for more accuracy.</li>
-        <li>Theorycrafter resource: <a href="http://www.wowhead.com/havoc-demon-hunter-guide" target="blank">Guide</a> / <a href="https://docs.google.com/spreadsheets/d/11v0mdj9EYTDlcQH8AnW7N3oUFEXYjKsC0rpvjn_047I/pubhtml#" target="blank">Trinkets</a> </li>
-        <li>Discord: <a href="https://discord.gg/b6AvnjM" target="blank">Mardum</a> and <a href="https://discord.gg/zGGkNGC" target="blank">The Fel Hammer</a> </li>
-        <li>Single target Crucible Weight</li>
-        <pre><code><iframe src="js/crucible/crucible_demon_hunter_havoc_patchwerk_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
-        <li>Beastlord Crucible Weight</li>
-        <pre><code><iframe src="js/crucible/crucible_demon_hunter_havoc_beastlord_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
-      </ul>
-    </div>
-    <div class="tc-box" id="tc_druid_balance" style="display: none;" >
-      <ul type="square">
-        <li>Please use the crucible analysis of your spec's theorycrafters for more accuracy.</li>
-        <li>Theorycrafter resource: <a href="https://docs.google.com/document/d/1c6-_akHl_Cja-uwg20Gt8R0f12pcw4_qtVcT7LyZW4A" target="blank">Guide</a> / <a href="https://goo.gl/KtNjWy" target="blank">Trinkets</a> </li>
-        <li>Discord: <a href="http://discord.gg/dreamgrove" target="blank">Dreamgrove</a></li>
-        <li>Single target Crucible Weight</li>
-        <pre><code><iframe src="js/crucible/crucible_druid_balance_patchwerk_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
-        <li>Beastlord Crucible Weight</li>
-        <pre><code><iframe src="js/crucible/crucible_druid_balance_beastlord_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
-      </ul>
-    </div>
-    <div class="tc-box" id="tc_druid_feral" style="display: none;" >
-      <ul type="square">
-        <li>Please use the crucible analysis of your spec's theorycrafters for more accuracy.</li>
-        <li>Theorycrafter resource: <a href="http://www.wowhead.com/feral-druid-guide" target="blank">Guide</a></li>
-        <li>Discord: <a href="http://discord.gg/dreamgrove" target="blank">Dreamgrove</a></li>
-        <li>Single target Crucible Weight</li>
-        <pre><code><iframe src="js/crucible/crucible_druid_feral_patchwerk_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
-        <li>Beastlord Crucible Weight</li>
-        <pre><code><iframe src="js/crucible/crucible_druid_feral_beastlord_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
-      </ul>
-    </div>
-    <div class="tc-box" id="tc_hunter_beast_mastery" style="display: none;" >
-      <ul type="square">
-        <li>Please use the crucible analysis of your spec's theorycrafters for more accuracy.</li>
-        <li>Theorycrafter resource: <a href="http://www.icy-veins.com/wow/beast-mastery-hunter-pve-dps-guide" target="blank">Guide</a> / <a href="https://docs.google.com/spreadsheets/d/1lHAD0GvEbHtX0EPBbPQXuZpVr71TcS-H4Q1-waOK8Jc/pubhtml#">Trinkets</a> </li>
-        <li>Discord: <a href="https://discord.gg/trueshot" target="blank">Trueshot Lodge</a></li>
-        <li>Single target Crucible Weight</li>
-        <pre><code><iframe src="js/crucible/crucible_hunter_beast_mastery_patchwerk_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
-        <li>Beastlord Crucible Weight</li>
-        <pre><code><iframe src="js/crucible/crucible_hunter_beast_mastery_beastlord_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
-      </ul>
-    </div>
-    <div class="tc-box" id="tc_hunter_marksmanship" style="display: none;" >
-      <ul type="square">
-        <li>Please use the crucible analysis of your spec's theorycrafters for more accuracy.</li>
-        <li>Theorycrafter resource: <a href="http://www.icy-veins.com/wow/marksmanship-hunter-pve-dps-guide" target="blank">Guide</a> / <a href="https://docs.google.com/spreadsheets/d/1lHAD0GvEbHtX0EPBbPQXuZpVr71TcS-H4Q1-waOK8Jc/pubhtml#">Trinkets</a></li>
-        <li>Discord: <a href="https://discord.gg/trueshot" target="blank">Trueshot Lodge</a></li>
-        <li>Single target Crucible Weight</li>
-        <pre><code><iframe src="js/crucible/crucible_hunter_marksmanship_patchwerk_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
-        <li>Beastlord Crucible Weight</li>
-        <pre><code><iframe src="js/crucible/crucible_hunter_marksmanship_beastlord_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
-      </ul>
-    </div>
-    <div class="tc-box" id="tc_hunter_survival" style="display: none;" >
-      <ul type="square">
-        <li>Please use the crucible analysis of your spec's theorycrafters for more accuracy.</li>
-        <li>Theorycrafter resource: <a href="http://www.icy-veins.com/wow/survival-hunter-pve-dps-guide" target="blank">Guide</a> / <a href="https://docs.google.com/spreadsheets/d/1lHAD0GvEbHtX0EPBbPQXuZpVr71TcS-H4Q1-waOK8Jc/pubhtml#">Trinkets</a></li>
-        <li>Discord: <a href="https://discord.gg/trueshot" target="blank">Trueshot Lodge</a></li>
-        <li>Single target Crucible Weight</li>
-        <pre><code><iframe src="js/crucible/crucible_hunter_survival_patchwerk_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
-        <li>Beastlord Crucible Weight</li>
-        <pre><code><iframe src="js/crucible/crucible_hunter_survival_beastlord_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
-      </ul>
-    </div>
-    <div class="tc-box" id="tc_mage_arcane" style="display: none;" >
-      <ul type="square">
-        <li>Please use the crucible analysis of your spec's theorycrafters for more accuracy.</li>
-        <li>Theorycrafter resource: <a href="https://www.altered-time.com/forum/viewforum.php?f=3" target="blank">Altered Time</a></li>
-        <li>Discord: <a href="https://discord.gg/0gLMHikX2aZ23VdA" target="blank">Hall of the Guardians</a></li>
-        <li>Single target Crucible Weight</li>
-        <pre><code><iframe src="js/crucible/crucible_mage_arcane_patchwerk_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
-        <li>Beastlord Crucible Weight</li>
-        <pre><code><iframe src="js/crucible/crucible_mage_arcane_beastlord_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
-      </ul>
-    </div>
-    <div class="tc-box" id="tc_mage_fire" style="display: none;" >
-      <ul type="square">
-        <li>Please use the crucible analysis of your spec's theorycrafters for more accuracy.</li>
-        <li>Theorycrafter resource: <a href="https://www.altered-time.com/forum/viewforum.php?f=4" target="blank">Altered Time</a></li>
-        <li>Discord: <a href="https://discord.gg/0gLMHikX2aZ23VdA" target="blank">Hall of the Guardians</a></li>
-        <li>Single target Crucible Weight</li>
-        <pre><code><iframe src="js/crucible/crucible_mage_fire_patchwerk_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
-        <li>Beastlord Crucible Weight</li>
-        <pre><code><iframe src="js/crucible/crucible_mage_fire_beastlord_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
-      </ul>
-    </div>
-    <div class="tc-box" id="tc_mage_frost" style="display: none;" >
-      <ul type="square">
-        <li>Please use the crucible analysis of your spec's theorycrafters for more accuracy.</li>
-        <li>Theorycrafter resource: <a href="https://www.altered-time.com/forum/viewforum.php?f=5" target="blank">Altered Time</a></li>
-        <li>Discord: <a href="https://discord.gg/0gLMHikX2aZ23VdA" target="blank">Hall of the Guardians</a></li>
-        <li>Single target Crucible Weight</li>
-        <pre><code><iframe src="js/crucible/crucible_mage_frost_patchwerk_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
-        <li>Beastlord Crucible Weight</li>
-        <pre><code><iframe src="js/crucible/crucible_mage_frost_beastlord_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
-      </ul>
-    </div>
-    <div class="tc-box" id="tc_monk_brewmaster" style="display: none;" >
-      <ul type="square">
-        <li>Please use the crucible analysis of your spec's theorycrafters for more accuracy. My chart is <strong>ONLY FOR DPS</strong>.</li>
-        <li>Theorycrafter resource: <a href="http://www.peakofserenity.com/brewmaster/" target="blank">Peak of Serenity</a> / <a href="https://goo.gl/u7s0nm">Defensive Trinkets</a> </li>
-        <li>Discord: <a href="https://discord.gg/0dkfBMAxzTkWj21F" target="blank">PeakOfSerenity</a></li>
-        <li>Single target Crucible Weight</li>
-        <pre><code><iframe src="js/crucible/crucible_monk_brewmaster_patchwerk_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
-        <li>Beastlord Crucible Weight</li>
-        <pre><code><iframe src="js/crucible/crucible_monk_brewmaster_beastlord_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
-      </ul>
-    </div>
-    <div class="tc-box" id="tc_monk_windwalker" style="display: none;" >
-      <ul type="square">
-        <li>Please use the crucible analysis of your spec's theorycrafters for more accuracy.</li>
-        <li>Theorycrafter resource: <a href="http://www.peakofserenity.com/windwalker/" target="blank">Peak of Serenity</a></li>
-        <li>Discord: <a href="https://discord.gg/0dkfBMAxzTkWj21F" target="blank">PeakOfSerenity</a></li>
-        <li>Single target Crucible Weight</li>
-        <pre><code><iframe src="js/crucible/crucible_monk_windwalker_patchwerk_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
-        <li>Beastlord Crucible Weight</li>
-        <pre><code><iframe src="js/crucible/crucible_monk_windwalker_beastlord_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
-      </ul>
-    </div>
-    <div class="tc-box" id="tc_paladin_protection" style="display: none;" >
-      <ul type="square">
-        <li>Please use the crucible analysis of your spec's theorycrafters for more accuracy. My chart is <strong>ONLY FOR DPS</strong>.</li>
-        <li>Theorycrafter resource: <a href="http://www.wowhead.com/protection-paladin-guide" target="blank">Protection Paladin Guide</a> / <a href="https://goo.gl/u7s0nm">Defensive Trinkets</a> </li>
-        <li>Discord: <a href="https://discord.gg/0dvRDgpa5xZHFfnD" target="blank">Hammer of Wrath</a></li>
-        <li>Single target Crucible Weight</li>
-        <pre><code><iframe src="js/crucible/crucible_paladin_protection_patchwerk_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
-        <li>Beastlord Crucible Weight</li>
-        <pre><code><iframe src="js/crucible/crucible_paladin_protection_beastlord_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
-      </ul>
-    </div>
-    <div class="tc-box" id="tc_paladin_retribution" style="display: none;" >
-      <ul type="square">
-        <li>Please use the crucible analysis of your spec's theorycrafters for more accuracy.</li>
-        <li>Theorycrafter resource: <a href="http://thesilverhand.net/advanced-guides/" target="blank">The Silver Hand</a></li>
-        <li>Discord: <a href="https://discord.gg/0dvRDgpa5xZHFfnD" target="blank">Hammer of Wrath</a></li>
-        <li>Single target Crucible Weight</li>
-        <pre><code><iframe src="js/crucible/crucible_paladin_retribution_patchwerk_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
-        <li>Beastlord Crucible Weight</li>
-        <pre><code><iframe src="js/crucible/crucible_paladin_retribution_beastlord_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
-      </ul>
-    </div>
-    <div class="tc-box" id="tc_priest_shadow" style="display: none;" >
-      <ul type="square">
-        <li>Please use the crucible analysis of your spec's theorycrafters for more accuracy.</li>
-        <li>Theorycrafter resource: <a href="https://howtopriest.com/viewforum.php?f=120" target="blank">H2P</a></li>
-        <li>Discord: <a href="https://discord.gg/HowToPriest" target="blank">H2P - The Priest Community</a></li>
-        <li>Single target Crucible Weight</li>
-        <pre><code><iframe src="js/crucible/crucible_priest_shadow_patchwerk_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
-        <li>Beastlord Crucible Weight</li>
-        <pre><code><iframe src="js/crucible/crucible_priest_shadow_beastlord_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
-      </ul>
-    </div>
-    <div class="tc-box" id="tc_rogue_assassination" style="display: none;" >
-      <ul type="square">
-        <li>Please use the crucible analysis of your spec's theorycrafters for more accuracy.</li>
-        <li>Theorycrafter resource: <a href="http://www.ravenholdt.net/7-2-5-assassination-rogue-guide/" target="blank">Ravenholdt</a> / <a href="http://tc.ravenholdt.net/" target="blank">Trinkets and other simulations</a> </li>
-        <li>Discord: <a href="https://discord.gg/xDbdHby" target="blank">Ravenholdt</a></li>
-        <li>Single target Crucible Weight</li>
-        <pre><code><iframe src="js/crucible/crucible_rogue_assassination_patchwerk_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
-        <li>Beastlord Crucible Weight</li>
-        <pre><code><iframe src="js/crucible/crucible_rogue_assassination_beastlord_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
-      </ul>
-    </div>
-    <div class="tc-box" id="tc_rogue_outlaw" style="display: none;" >
-      <ul type="square">
-        <li>Please use the crucible analysis of your spec's theorycrafters for more accuracy.</li>
-        <li>Theorycrafter resource: <a href="http://www.ravenholdt.net/outlaw-guide/" target="blank">Ravenholdt</a> / <a href="http://tc.ravenholdt.net/" target="blank">Trinkets and other simulations</a></li>
-        <li>Discord: <a href="https://discord.gg/xDbdHby" target="blank">Ravenholdt</a></li>
-        <li>Single target Crucible Weight</li>
-        <pre><code><iframe src="js/crucible/crucible_rogue_outlaw_patchwerk_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
-        <li>Beastlord Crucible Weight</li>
-        <pre><code><iframe src="js/crucible/crucible_rogue_outlaw_beastlord_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
-      </ul>
-    </div>
-    <div class="tc-box" id="tc_rogue_subtlety" style="display: none;" >
-      <ul type="square">
-        <li>Please use the crucible analysis of your spec's theorycrafters for more accuracy.</li>
-        <li>Theorycrafter resource: <a href="http://www.ravenholdt.net/subtlety-guide/" target="blank">Ravenholdt</a> / <a href="http://tc.ravenholdt.net/" target="blank">Trinkets and other simulations</a></li>
-        <li>Discord: <a href="https://discord.gg/xDbdHby" target="blank">Ravenholdt</a></li>
-        <li>Single target Crucible Weight</li>
-        <pre><code><iframe src="js/crucible/crucible_rogue_subtlety_patchwerk_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
-        <li>Beastlord Crucible Weight</li>
-        <pre><code><iframe src="js/crucible/crucible_rogue_subtlety_beastlord_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
-      </ul>
-    </div>
-    <div class="tc-box" id="tc_shaman_elemental" style="display: none;" >
-      <ul type="square">
-        <li>Please use the crucible analysis of your spec's theorycrafters for more accuracy.</li>
-        <li>Theorycrafter resource: <a href="https://www.stormearthandlava.com/" target="blank">StormEarthAndLava</a></li>
-        <li>Discord: <a href="https://discord.gg/earthshrine" target="blank">Earthshrine</a></li>
-        <li>Single target Crucible Weight</li>
-        <pre><code><iframe src="js/crucible/crucible_shaman_elemental_patchwerk_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
-        <li>Beastlord Crucible Weight</li>
-        <pre><code><iframe src="js/crucible/crucible_shaman_elemental_beastlord_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
-      </ul>
-    </div>
-    <div class="tc-box" id="tc_shaman_enhancement" style="display: none;" >
-      <ul type="square">
-        <li>Please use the crucible analysis of your spec's theorycrafters for more accuracy.</li>
-        <li>Theorycrafter resource: <a href="https://www.icy-veins.com/wow/enhancement-shaman-pve-dps-guide" target="blank">Guide</a></li>
-        <li>Discord: <a href="https://discord.gg/earthshrine" target="blank">Earthshrine</a></li>
-        <li>Single target Crucible Weight</li>
-        <pre><code><iframe src="js/crucible/crucible_shaman_enhancement_patchwerk_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
-        <li>Beastlord Crucible Weight</li>
-        <pre><code><iframe src="js/crucible/crucible_shaman_enhancement_beastlord_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
-      </ul>
-    </div>
-    <div class="tc-box" id="tc_warlock_affliction" style="display: none;" >
-      <ul type="square">
-        <li>Please use the crucible analysis of your spec's theorycrafters for more accuracy.</li>
-        <li>Theorycrafter resource: <a href="http://lockonestopshop.com/#!/Affliction/Introduction" target="blank">LockOneStopShop</a></li>
-        <li>Discord: <a href="https://discord.gg/0onXDymd9Wpc2CEu" target="blank">Council of the Black Harvest</a></li>
-        <li>Single target Crucible Weight</li>
-        <pre><code><iframe src="js/crucible/crucible_warlock_affliction_patchwerk_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
-        <li>Beastlord Crucible Weight</li>
-        <pre><code><iframe src="js/crucible/crucible_warlock_affliction_beastlord_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
-      </ul>
-    </div>
-    <div class="tc-box" id="tc_warlock_demonology" style="display: none;" >
-      <ul type="square">
-        <li>Please use the crucible analysis of your spec's theorycrafters for more accuracy.</li>
-        <li>Theorycrafter resource: <a href="http://lockonestopshop.com/#!/Demonology/Introduction" target="blank">LockOneStopShop</a></li>
-        <li>Discord: <a href="https://discord.gg/0onXDymd9Wpc2CEu" target="blank">Council of the Black Harvest</a></li>
-        <li>Single target Crucible Weight</li>
-        <pre><code><iframe src="js/crucible/crucible_warlock_demonology_patchwerk_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
-        <li>Beastlord Crucible Weight</li>
-        <pre><code><iframe src="js/crucible/crucible_warlock_demonology_beastlord_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
-      </ul>
-    </div>
-    <div class="tc-box" id="tc_warlock_destruction" style="display: none;" >
-      <ul type="square">
-        <li>Please use the crucible analysis of your spec's theorycrafters for more accuracy.</li>
-        <li>Theorycrafter resource: <a href="http://lockonestopshop.com/#!/Destruction/Introduction" target="blank">LockOneStopShop</a></li>
-        <li>Discord: <a href="https://discord.gg/0onXDymd9Wpc2CEu" target="blank">Council of the Black Harvest</a></li>
-        <li>Single target Crucible Weight</li>
-        <pre><code><iframe src="js/crucible/crucible_warlock_destruction_patchwerk_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
-        <li>Beastlord Crucible Weight</li>
-        <pre><code><iframe src="js/crucible/crucible_warlock_destruction_beastlord_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
-      </ul>
-    </div>
-    <div class="tc-box" id="tc_warrior_arms" style="display: none;" >
-      <ul type="square">
-        <li>Please use the crucible analysis of your spec's theorycrafters for more accuracy.</li>
-        <li>Theorycrafter resource: <a href="https://docs.google.com/document/d/1e2yNSETe1RrFPe5upmuhGxi1-nF3wFyJYHGcgMlir0Y/preview" target="blank">Guide</a></li>
-        <li>Discord: <a href="https://discord.gg/0pYY7932lTH4FHW6" target="blank">Skyhold</a></li>
-        <li>Single target Crucible Weight</li>
-        <pre><code><iframe src="js/crucible/crucible_warrior_arms_patchwerk_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
-        <li>Beastlord Crucible Weight</li>
-        <pre><code><iframe src="js/crucible/crucible_warrior_arms_beastlord_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
-      </ul>
-    </div>
-    <div class="tc-box" id="tc_warrior_fury" style="display: none;" >
-      <ul type="square">
-        <li>Please use the crucible analysis of your spec's theorycrafters for more accuracy.</li>
-        <li>Theorycrafter resource: <a href="http://www.mmo-champion.com/threads/2234802-7-2-5-Fury-Guide-amp-FAQ" target="blank">Guide</a></li>
-        <li>Discord: <a href="https://discord.gg/0pYY7932lTH4FHW6" target="blank">Skyhold</a></li>
-        <li>Single target Crucible Weight</li>
-        <pre><code><iframe src="js/crucible/crucible_warrior_fury_patchwerk_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
-        <li>Beastlord Crucible Weight</li>
-        <pre><code><iframe src="js/crucible/crucible_warrior_fury_beastlord_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
-      </ul>
-    </div>
+  <p>Please be aware that some Light-Traits have a shared RPPM (proc rate) of their damage and healing effects. When simulating
+    these traits the actors aren't hit unless they are tanks. Which results in more damage procs than you can expect for
+    a real fight.</p>
+  <!-- TC resource area -->
+  <div class="tc-box" id="tc_death_knight_blood" style="display: none;">
+    <ul type="square">
+      <li>Please use the crucible analysis of your spec's theorycrafters for more accuracy. My chart is
+        <strong>ONLY FOR DPS</strong>.</li>
+      <li>Theorycrafter resource:
+        <a href="https://docs.google.com/document/d/162vcG39rz4OJvd4zi7557KCfkRfuyT1aJp3KF076z5U" target="blank">Blood DK Guide</a> /
+        <a href="https://goo.gl/u7s0nm">Defensive Trinkets</a>
+      </li>
+      <li>Discord:
+        <a href="https://discord.gg/hq6HwSB" target="blank">Acherus</a>
+      </li>
+      <li>Single target Crucible Weight</li>
+      <pre><code><iframe src="js/crucible/crucible_death_knight_blood_patchwerk_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
+      <li>Beastlord Crucible Weight</li>
+      <pre><code><iframe src="js/crucible/crucible_death_knight_blood_beastlord_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
+    </ul>
+  </div>
+  <div class="tc-box" id="tc_death_knight_frost" style="display: none;">
+    <ul type="square">
+      <li>Please use the crucible analysis of your spec's theorycrafters for more accuracy.</li>
+      <li>Theorycrafter resource:
+        <a href="https://goo.gl/gVBHCW" target="blank">Frost DK FAQ</a>
+      </li>
+      <li>Discord:
+        <a href="https://discord.gg/hq6HwSB" target="blank">Acherus</a>
+      </li>
+      <li>Single target Crucible Weight</li>
+      <pre><code><iframe src="js/crucible/crucible_death_knight_frost_patchwerk_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
+      <li>Beastlord Crucible Weight</li>
+      <pre><code><iframe src="js/crucible/crucible_death_knight_frost_beastlord_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
+    </ul>
+  </div>
+  </div>
+  <div class="tc-box" id="tc_death_knight_unholy" style="display: none;">
+    <ul type="square">
+      <li>Please use the crucible analysis of your spec's theorycrafters for more accuracy.</li>
+      <li>Theorycrafter resource:
+        <a href="https://goo.gl/SjcJ3n" target="blank">Guide</a> /
+        <a href="https://docs.google.com/spreadsheets/d/1efg3uitY4HDHjnBtUckq5RPJ1XyyZIzVbt52otMa8Uc/edit#gid=1479337307" target="blank">Trinkets</a>
+      </li>
+      <li>Discord:
+        <a href="https://discord.gg/hq6HwSB" target="blank">Acherus</a>
+      </li>
+      <li>Single target Crucible Weight</li>
+      <pre><code><iframe src="js/crucible/crucible_death_knight_unholy_patchwerk_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
+      <li>Beastlord Crucible Weight</li>
+      <pre><code><iframe src="js/crucible/crucible_death_knight_unholy_beastlord_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
+    </ul>
+  </div>
+  <div class="tc-box" id="tc_demon_hunter_havoc" style="display: none;">
+    <ul type="square">
+      <li>Please use the crucible analysis of your spec's theorycrafters for more accuracy.</li>
+      <li>Theorycrafter resource:
+        <a href="http://www.wowhead.com/havoc-demon-hunter-guide" target="blank">Guide</a> /
+        <a href="https://docs.google.com/spreadsheets/d/11v0mdj9EYTDlcQH8AnW7N3oUFEXYjKsC0rpvjn_047I/pubhtml#" target="blank">Trinkets</a>
+      </li>
+      <li>Discord:
+        <a href="https://discord.gg/b6AvnjM" target="blank">Mardum</a> and
+        <a href="https://discord.gg/zGGkNGC" target="blank">The Fel Hammer</a>
+      </li>
+      <li>Single target Crucible Weight</li>
+      <pre><code><iframe src="js/crucible/crucible_demon_hunter_havoc_patchwerk_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
+      <li>Beastlord Crucible Weight</li>
+      <pre><code><iframe src="js/crucible/crucible_demon_hunter_havoc_beastlord_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
+    </ul>
+  </div>
+  <div class="tc-box" id="tc_druid_balance" style="display: none;">
+    <ul type="square">
+      <li>Please use the crucible analysis of your spec's theorycrafters for more accuracy.</li>
+      <li>Theorycrafter resource:
+        <a href="https://docs.google.com/document/d/1c6-_akHl_Cja-uwg20Gt8R0f12pcw4_qtVcT7LyZW4A" target="blank">Guide</a> /
+        <a href="https://goo.gl/KtNjWy" target="blank">Trinkets</a>
+      </li>
+      <li>Discord:
+        <a href="http://discord.gg/dreamgrove" target="blank">Dreamgrove</a>
+      </li>
+      <li>Single target Crucible Weight</li>
+      <pre><code><iframe src="js/crucible/crucible_druid_balance_patchwerk_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
+      <li>Beastlord Crucible Weight</li>
+      <pre><code><iframe src="js/crucible/crucible_druid_balance_beastlord_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
+    </ul>
+  </div>
+  <div class="tc-box" id="tc_druid_feral" style="display: none;">
+    <ul type="square">
+      <li>Please use the crucible analysis of your spec's theorycrafters for more accuracy.</li>
+      <li>Theorycrafter resource:
+        <a href="http://www.wowhead.com/feral-druid-guide" target="blank">Guide</a>
+      </li>
+      <li>Discord:
+        <a href="http://discord.gg/dreamgrove" target="blank">Dreamgrove</a>
+      </li>
+      <li>Single target Crucible Weight</li>
+      <pre><code><iframe src="js/crucible/crucible_druid_feral_patchwerk_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
+      <li>Beastlord Crucible Weight</li>
+      <pre><code><iframe src="js/crucible/crucible_druid_feral_beastlord_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
+    </ul>
+  </div>
+  <div class="tc-box" id="tc_hunter_beast_mastery" style="display: none;">
+    <ul type="square">
+      <li>Please use the crucible analysis of your spec's theorycrafters for more accuracy.</li>
+      <li>Theorycrafter resource:
+        <a href="http://www.icy-veins.com/wow/beast-mastery-hunter-pve-dps-guide" target="blank">Guide</a> /
+        <a href="https://docs.google.com/spreadsheets/d/1lHAD0GvEbHtX0EPBbPQXuZpVr71TcS-H4Q1-waOK8Jc/pubhtml#">Trinkets</a>
+      </li>
+      <li>Discord:
+        <a href="https://discord.gg/trueshot" target="blank">Trueshot Lodge</a>
+      </li>
+      <li>Single target Crucible Weight</li>
+      <pre><code><iframe src="js/crucible/crucible_hunter_beast_mastery_patchwerk_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
+      <li>Beastlord Crucible Weight</li>
+      <pre><code><iframe src="js/crucible/crucible_hunter_beast_mastery_beastlord_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
+    </ul>
+  </div>
+  <div class="tc-box" id="tc_hunter_marksmanship" style="display: none;">
+    <ul type="square">
+      <li>Please use the crucible analysis of your spec's theorycrafters for more accuracy.</li>
+      <li>Theorycrafter resource:
+        <a href="http://www.icy-veins.com/wow/marksmanship-hunter-pve-dps-guide" target="blank">Guide</a> /
+        <a href="https://docs.google.com/spreadsheets/d/1lHAD0GvEbHtX0EPBbPQXuZpVr71TcS-H4Q1-waOK8Jc/pubhtml#">Trinkets</a>
+      </li>
+      <li>Discord:
+        <a href="https://discord.gg/trueshot" target="blank">Trueshot Lodge</a>
+      </li>
+      <li>Single target Crucible Weight</li>
+      <pre><code><iframe src="js/crucible/crucible_hunter_marksmanship_patchwerk_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
+      <li>Beastlord Crucible Weight</li>
+      <pre><code><iframe src="js/crucible/crucible_hunter_marksmanship_beastlord_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
+    </ul>
+  </div>
+  <div class="tc-box" id="tc_hunter_survival" style="display: none;">
+    <ul type="square">
+      <li>Please use the crucible analysis of your spec's theorycrafters for more accuracy.</li>
+      <li>Theorycrafter resource:
+        <a href="http://www.icy-veins.com/wow/survival-hunter-pve-dps-guide" target="blank">Guide</a> /
+        <a href="https://docs.google.com/spreadsheets/d/1lHAD0GvEbHtX0EPBbPQXuZpVr71TcS-H4Q1-waOK8Jc/pubhtml#">Trinkets</a>
+      </li>
+      <li>Discord:
+        <a href="https://discord.gg/trueshot" target="blank">Trueshot Lodge</a>
+      </li>
+      <li>Single target Crucible Weight</li>
+      <pre><code><iframe src="js/crucible/crucible_hunter_survival_patchwerk_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
+      <li>Beastlord Crucible Weight</li>
+      <pre><code><iframe src="js/crucible/crucible_hunter_survival_beastlord_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
+    </ul>
+  </div>
+  <div class="tc-box" id="tc_mage_arcane" style="display: none;">
+    <ul type="square">
+      <li>Please use the crucible analysis of your spec's theorycrafters for more accuracy.</li>
+      <li>Theorycrafter resource:
+        <a href="https://www.altered-time.com/forum/viewforum.php?f=3" target="blank">Altered Time</a>
+      </li>
+      <li>Discord:
+        <a href="https://discord.gg/0gLMHikX2aZ23VdA" target="blank">Hall of the Guardians</a>
+      </li>
+      <li>Single target Crucible Weight</li>
+      <pre><code><iframe src="js/crucible/crucible_mage_arcane_patchwerk_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
+      <li>Beastlord Crucible Weight</li>
+      <pre><code><iframe src="js/crucible/crucible_mage_arcane_beastlord_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
+    </ul>
+  </div>
+  <div class="tc-box" id="tc_mage_fire" style="display: none;">
+    <ul type="square">
+      <li>Please use the crucible analysis of your spec's theorycrafters for more accuracy.</li>
+      <li>Theorycrafter resource:
+        <a href="https://www.altered-time.com/forum/viewforum.php?f=4" target="blank">Altered Time</a>
+      </li>
+      <li>Discord:
+        <a href="https://discord.gg/0gLMHikX2aZ23VdA" target="blank">Hall of the Guardians</a>
+      </li>
+      <li>Single target Crucible Weight</li>
+      <pre><code><iframe src="js/crucible/crucible_mage_fire_patchwerk_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
+      <li>Beastlord Crucible Weight</li>
+      <pre><code><iframe src="js/crucible/crucible_mage_fire_beastlord_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
+    </ul>
+  </div>
+  <div class="tc-box" id="tc_mage_frost" style="display: none;">
+    <ul type="square">
+      <li>Please use the crucible analysis of your spec's theorycrafters for more accuracy.</li>
+      <li>Theorycrafter resource:
+        <a href="https://www.altered-time.com/forum/viewforum.php?f=5" target="blank">Altered Time</a>
+      </li>
+      <li>Discord:
+        <a href="https://discord.gg/0gLMHikX2aZ23VdA" target="blank">Hall of the Guardians</a>
+      </li>
+      <li>Single target Crucible Weight</li>
+      <pre><code><iframe src="js/crucible/crucible_mage_frost_patchwerk_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
+      <li>Beastlord Crucible Weight</li>
+      <pre><code><iframe src="js/crucible/crucible_mage_frost_beastlord_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
+    </ul>
+  </div>
+  <div class="tc-box" id="tc_monk_brewmaster" style="display: none;">
+    <ul type="square">
+      <li>Please use the crucible analysis of your spec's theorycrafters for more accuracy. My chart is
+        <strong>ONLY FOR DPS</strong>.</li>
+      <li>Theorycrafter resource:
+        <a href="http://www.peakofserenity.com/brewmaster/" target="blank">Peak of Serenity</a> /
+        <a href="https://goo.gl/u7s0nm">Defensive Trinkets</a>
+      </li>
+      <li>Discord:
+        <a href="https://discord.gg/0dkfBMAxzTkWj21F" target="blank">PeakOfSerenity</a>
+      </li>
+      <li>Single target Crucible Weight</li>
+      <pre><code><iframe src="js/crucible/crucible_monk_brewmaster_patchwerk_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
+      <li>Beastlord Crucible Weight</li>
+      <pre><code><iframe src="js/crucible/crucible_monk_brewmaster_beastlord_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
+    </ul>
+  </div>
+  <div class="tc-box" id="tc_monk_windwalker" style="display: none;">
+    <ul type="square">
+      <li>Please use the crucible analysis of your spec's theorycrafters for more accuracy.</li>
+      <li>Theorycrafter resource:
+        <a href="http://www.peakofserenity.com/windwalker/" target="blank">Peak of Serenity</a>
+      </li>
+      <li>Discord:
+        <a href="https://discord.gg/0dkfBMAxzTkWj21F" target="blank">PeakOfSerenity</a>
+      </li>
+      <li>Single target Crucible Weight</li>
+      <pre><code><iframe src="js/crucible/crucible_monk_windwalker_patchwerk_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
+      <li>Beastlord Crucible Weight</li>
+      <pre><code><iframe src="js/crucible/crucible_monk_windwalker_beastlord_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
+    </ul>
+  </div>
+  <div class="tc-box" id="tc_paladin_protection" style="display: none;">
+    <ul type="square">
+      <li>Please use the crucible analysis of your spec's theorycrafters for more accuracy. My chart is
+        <strong>ONLY FOR DPS</strong>.</li>
+      <li>Theorycrafter resource:
+        <a href="http://www.wowhead.com/protection-paladin-guide" target="blank">Protection Paladin Guide</a> /
+        <a href="https://goo.gl/u7s0nm">Defensive Trinkets</a>
+      </li>
+      <li>Discord:
+        <a href="https://discord.gg/0dvRDgpa5xZHFfnD" target="blank">Hammer of Wrath</a>
+      </li>
+      <li>Single target Crucible Weight</li>
+      <pre><code><iframe src="js/crucible/crucible_paladin_protection_patchwerk_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
+      <li>Beastlord Crucible Weight</li>
+      <pre><code><iframe src="js/crucible/crucible_paladin_protection_beastlord_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
+    </ul>
+  </div>
+  <div class="tc-box" id="tc_paladin_retribution" style="display: none;">
+    <ul type="square">
+      <li>Please use the crucible analysis of your spec's theorycrafters for more accuracy.</li>
+      <li>Theorycrafter resource:
+        <a href="http://thesilverhand.net/advanced-guides/" target="blank">The Silver Hand</a>
+      </li>
+      <li>Discord:
+        <a href="https://discord.gg/0dvRDgpa5xZHFfnD" target="blank">Hammer of Wrath</a>
+      </li>
+      <li>Single target Crucible Weight</li>
+      <pre><code><iframe src="js/crucible/crucible_paladin_retribution_patchwerk_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
+      <li>Beastlord Crucible Weight</li>
+      <pre><code><iframe src="js/crucible/crucible_paladin_retribution_beastlord_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
+    </ul>
+  </div>
+  <div class="tc-box" id="tc_priest_shadow" style="display: none;">
+    <ul type="square">
+      <li>Please use the crucible analysis of your spec's theorycrafters for more accuracy.</li>
+      <li>Theorycrafter resource:
+        <a href="https://howtopriest.com/viewforum.php?f=120" target="blank">H2P</a>
+      </li>
+      <li>Discord:
+        <a href="https://discord.gg/HowToPriest" target="blank">H2P - The Priest Community</a>
+      </li>
+      <li>Single target Crucible Weight</li>
+      <pre><code><iframe src="js/crucible/crucible_priest_shadow_patchwerk_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
+      <li>Beastlord Crucible Weight</li>
+      <pre><code><iframe src="js/crucible/crucible_priest_shadow_beastlord_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
+    </ul>
+  </div>
+  <div class="tc-box" id="tc_rogue_assassination" style="display: none;">
+    <ul type="square">
+      <li>Please use the crucible analysis of your spec's theorycrafters for more accuracy.</li>
+      <li>Theorycrafter resource:
+        <a href="http://www.ravenholdt.net/7-2-5-assassination-rogue-guide/" target="blank">Ravenholdt</a> /
+        <a href="http://tc.ravenholdt.net/" target="blank">Trinkets and other simulations</a>
+      </li>
+      <li>Discord:
+        <a href="https://discord.gg/xDbdHby" target="blank">Ravenholdt</a>
+      </li>
+      <li>Single target Crucible Weight</li>
+      <pre><code><iframe src="js/crucible/crucible_rogue_assassination_patchwerk_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
+      <li>Beastlord Crucible Weight</li>
+      <pre><code><iframe src="js/crucible/crucible_rogue_assassination_beastlord_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
+    </ul>
+  </div>
+  <div class="tc-box" id="tc_rogue_outlaw" style="display: none;">
+    <ul type="square">
+      <li>Please use the crucible analysis of your spec's theorycrafters for more accuracy.</li>
+      <li>Theorycrafter resource:
+        <a href="http://www.ravenholdt.net/outlaw-guide/" target="blank">Ravenholdt</a> /
+        <a href="http://tc.ravenholdt.net/" target="blank">Trinkets and other simulations</a>
+      </li>
+      <li>Discord:
+        <a href="https://discord.gg/xDbdHby" target="blank">Ravenholdt</a>
+      </li>
+      <li>Single target Crucible Weight</li>
+      <pre><code><iframe src="js/crucible/crucible_rogue_outlaw_patchwerk_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
+      <li>Beastlord Crucible Weight</li>
+      <pre><code><iframe src="js/crucible/crucible_rogue_outlaw_beastlord_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
+    </ul>
+  </div>
+  <div class="tc-box" id="tc_rogue_subtlety" style="display: none;">
+    <ul type="square">
+      <li>Please use the crucible analysis of your spec's theorycrafters for more accuracy.</li>
+      <li>Theorycrafter resource:
+        <a href="http://www.ravenholdt.net/subtlety-guide/" target="blank">Ravenholdt</a> /
+        <a href="http://tc.ravenholdt.net/" target="blank">Trinkets and other simulations</a>
+      </li>
+      <li>Discord:
+        <a href="https://discord.gg/xDbdHby" target="blank">Ravenholdt</a>
+      </li>
+      <li>Single target Crucible Weight</li>
+      <pre><code><iframe src="js/crucible/crucible_rogue_subtlety_patchwerk_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
+      <li>Beastlord Crucible Weight</li>
+      <pre><code><iframe src="js/crucible/crucible_rogue_subtlety_beastlord_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
+    </ul>
+  </div>
+  <div class="tc-box" id="tc_shaman_elemental" style="display: none;">
+    <ul type="square">
+      <li>Please use the crucible analysis of your spec's theorycrafters for more accuracy.</li>
+      <li>Theorycrafter resource:
+        <a href="https://www.stormearthandlava.com/" target="blank">StormEarthAndLava</a>
+      </li>
+      <li>Discord:
+        <a href="https://discord.gg/earthshrine" target="blank">Earthshrine</a>
+      </li>
+      <li>Single target Crucible Weight</li>
+      <pre><code><iframe src="js/crucible/crucible_shaman_elemental_patchwerk_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
+      <li>Beastlord Crucible Weight</li>
+      <pre><code><iframe src="js/crucible/crucible_shaman_elemental_beastlord_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
+    </ul>
+  </div>
+  <div class="tc-box" id="tc_shaman_enhancement" style="display: none;">
+    <ul type="square">
+      <li>Please use the crucible analysis of your spec's theorycrafters for more accuracy.</li>
+      <li>Theorycrafter resource:
+        <a href="https://www.icy-veins.com/wow/enhancement-shaman-pve-dps-guide" target="blank">Guide</a>
+      </li>
+      <li>Discord:
+        <a href="https://discord.gg/earthshrine" target="blank">Earthshrine</a>
+      </li>
+      <li>Single target Crucible Weight</li>
+      <pre><code><iframe src="js/crucible/crucible_shaman_enhancement_patchwerk_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
+      <li>Beastlord Crucible Weight</li>
+      <pre><code><iframe src="js/crucible/crucible_shaman_enhancement_beastlord_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
+    </ul>
+  </div>
+  <div class="tc-box" id="tc_warlock_affliction" style="display: none;">
+    <ul type="square">
+      <li>Please use the crucible analysis of your spec's theorycrafters for more accuracy.</li>
+      <li>Theorycrafter resource:
+        <a href="http://lockonestopshop.com/#!/Affliction/Introduction" target="blank">LockOneStopShop</a>
+      </li>
+      <li>Discord:
+        <a href="https://discord.gg/0onXDymd9Wpc2CEu" target="blank">Council of the Black Harvest</a>
+      </li>
+      <li>Single target Crucible Weight</li>
+      <pre><code><iframe src="js/crucible/crucible_warlock_affliction_patchwerk_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
+      <li>Beastlord Crucible Weight</li>
+      <pre><code><iframe src="js/crucible/crucible_warlock_affliction_beastlord_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
+    </ul>
+  </div>
+  <div class="tc-box" id="tc_warlock_demonology" style="display: none;">
+    <ul type="square">
+      <li>Please use the crucible analysis of your spec's theorycrafters for more accuracy.</li>
+      <li>Theorycrafter resource:
+        <a href="http://lockonestopshop.com/#!/Demonology/Introduction" target="blank">LockOneStopShop</a>
+      </li>
+      <li>Discord:
+        <a href="https://discord.gg/0onXDymd9Wpc2CEu" target="blank">Council of the Black Harvest</a>
+      </li>
+      <li>Single target Crucible Weight</li>
+      <pre><code><iframe src="js/crucible/crucible_warlock_demonology_patchwerk_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
+      <li>Beastlord Crucible Weight</li>
+      <pre><code><iframe src="js/crucible/crucible_warlock_demonology_beastlord_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
+    </ul>
+  </div>
+  <div class="tc-box" id="tc_warlock_destruction" style="display: none;">
+    <ul type="square">
+      <li>Please use the crucible analysis of your spec's theorycrafters for more accuracy.</li>
+      <li>Theorycrafter resource:
+        <a href="http://lockonestopshop.com/#!/Destruction/Introduction" target="blank">LockOneStopShop</a>
+      </li>
+      <li>Discord:
+        <a href="https://discord.gg/0onXDymd9Wpc2CEu" target="blank">Council of the Black Harvest</a>
+      </li>
+      <li>Single target Crucible Weight</li>
+      <pre><code><iframe src="js/crucible/crucible_warlock_destruction_patchwerk_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
+      <li>Beastlord Crucible Weight</li>
+      <pre><code><iframe src="js/crucible/crucible_warlock_destruction_beastlord_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
+    </ul>
+  </div>
+  <div class="tc-box" id="tc_warrior_arms" style="display: none;">
+    <ul type="square">
+      <li>Please use the crucible analysis of your spec's theorycrafters for more accuracy.</li>
+      <li>Theorycrafter resource:
+        <a href="https://docs.google.com/document/d/1e2yNSETe1RrFPe5upmuhGxi1-nF3wFyJYHGcgMlir0Y/preview" target="blank">Guide</a>
+      </li>
+      <li>Discord:
+        <a href="https://discord.gg/0pYY7932lTH4FHW6" target="blank">Skyhold</a>
+      </li>
+      <li>Single target Crucible Weight</li>
+      <pre><code><iframe src="js/crucible/crucible_warrior_arms_patchwerk_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
+      <li>Beastlord Crucible Weight</li>
+      <pre><code><iframe src="js/crucible/crucible_warrior_arms_beastlord_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
+    </ul>
+  </div>
+  <div class="tc-box" id="tc_warrior_fury" style="display: none;">
+    <ul type="square">
+      <li>Please use the crucible analysis of your spec's theorycrafters for more accuracy.</li>
+      <li>Theorycrafter resource:
+        <a href="http://www.mmo-champion.com/threads/2234802-7-2-5-Fury-Guide-amp-FAQ" target="blank">Guide</a>
+      </li>
+      <li>Discord:
+        <a href="https://discord.gg/0pYY7932lTH4FHW6" target="blank">Skyhold</a>
+      </li>
+      <li>Single target Crucible Weight</li>
+      <pre><code><iframe src="js/crucible/crucible_warrior_fury_patchwerk_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
+      <li>Beastlord Crucible Weight</li>
+      <pre><code><iframe src="js/crucible/crucible_warrior_fury_beastlord_weight.txt" allowTransparency="true" scrolling="no" frameborder="0" style="width: 100%; height: 60px;"></iframe></code></pre>
+    </ul>
+  </div>
 
 
-    <p>If you want to leave a comment, a suggestion for improvement, or found something noteworthy add an <a href="https://github.com/Bloodmallet/bloodmallet.github.io/issues" target="blank">issue at the repository</a> of this site. If you wish to support me, that's possible too: <a href="faq.html#support" target="blank">FAQ</a>.</p>
+  <p>If you want to leave a comment, a suggestion for improvement, or found something noteworthy add an
+    <a href="https://github.com/Bloodmallet/bloodmallet.github.io/issues" target="blank">issue at the repository</a> of this site. If you wish to support me, that's possible too:
+    <a href="faq.html#support" target="blank">FAQ</a>.</p>
 
-    <p>Yours sincerely,
-      <br/>
-      <span class="signout">Bloodmallet(EU)#8246 - <a href="https://discord.gg/tFR2uvK" target="blank">SimCMinMax Discord</a> (channel: #bloodytools)<span>
-      <br/>
-      <span class="signout"><a href="https://worldofwarcraft.com/en-gb/character/die-aldor/bloodmallet" target="blank">Bloodmallet</a> - WoW character<span> </p>
+  <p>Yours sincerely,
+    <br/>
+    <span class="signout">Bloodmallet(EU)#8246 -
+      <a href="https://discord.gg/tFR2uvK" target="blank">SimCMinMax Discord</a> (channel: #bloodytools)
+    </span>
+    <br/>
+    <span class="signout">
+      <a href="https://worldofwarcraft.com/en-gb/character/die-aldor/bloodmallet" target="blank">Bloodmallet</a> - WoW character
+    </span>
+  </p>
 
-    <script src="https://code.highcharts.com/highcharts.js" defer></script>
+  <script src="https://code.highcharts.com/highcharts.js" defer></script>
 
-  </body>
+</body>
+
 </html>

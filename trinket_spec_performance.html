@@ -1,89 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" >
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Make sure Bootstrap is loaded before base, otherwise a lot of styles will be overwritten -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/base.css">
-    <title>Bloody( performance )</title>
-    <script type="text/javascript" src="js/base.js"></script>
-    <script type="text/javascript" src="js/trinket_spec_performance.js"></script>
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-      ga('create', 'UA-102757416-1', 'auto');
-      ga('set', 'anonymizeIp', true);
-      ga('send', 'pageview');
+  <!-- Make sure Bootstrap is loaded before base, otherwise a lot of styles will be overwritten -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/base.css">
+  <title>Bloody( performance )</title>
+  <script type="text/javascript" src="js/base.js"></script>
+  <script type="text/javascript" src="js/trinket_spec_performance.js"></script>
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
-    </script>
-  </head>
-  <body>
-    <div class="central_aligner_outer">
-      <div class="central_aligner_inner">
-        <nav>
-          <ul>
-            <li><a href="./index.html">Trinket Charts</a></li>
-            <li><a href="./trinket_spec_performance.html">Trinket performance <span class="badge badge-new">New</span></a></li>
-            <li><a href="./relics.html">Crucible Charts</a></li>
-            <li><a href="./faq.html">FAQ</a></li>
-            <li><a href="https://github.com/Bloodmallet/bloodmallet.github.io/commits/master">Changelog</a> </li>
-          </ul>
-        </nav>
-      </div>
+    ga('create', 'UA-102757416-1', 'auto');
+    ga('set', 'anonymizeIp', true);
+    ga('send', 'pageview');
+
+  </script>
+</head>
+
+<body>
+  <div class="central_aligner_outer">
+    <div class="central_aligner_inner">
+      <nav>
+        <ul>
+          <li>
+            <a href="./index.html">Trinket Charts</a>
+          </li>
+          <li>
+            <a href="./trinket_spec_performance.html">Trinket performance
+              <span class="badge badge-new">New</span>
+            </a>
+          </li>
+          <li>
+            <a href="./relics.html">Crucible Charts</a>
+          </li>
+          <li>
+            <a href="./faq.html">FAQ</a>
+          </li>
+          <li>
+            <a href="https://github.com/Bloodmallet/bloodmallet.github.io/commits/master">Changelog</a>
+          </li>
+        </ul>
+      </nav>
     </div>
+  </div>
 
 
-    <h1>Trinket performance</h1>
+  <h1>Trinket performance</h1>
 
-    <p>Select a trinket and see how well it performs for all valid specs in a selectable fight style. Remember that this is done with standard profiles and that specs depend differently on trinkets. This tool is educational and not intended to be used to determine who "deserves" a trinket. Trust your Theorycrafters!</p>
+  <p>Select a trinket and see how well it performs for all valid specs in a selectable fight style. Remember that this is done
+    with standard profiles and that specs depend differently on trinkets. This tool is educational and not intended to be
+    used to determine who "deserves" a trinket. Trust your Theorycrafters!</p>
 
-    <p>Tipp: Click on the trinket selection and type the first few letters of the trinket you're looking for.</p>
+  <p>Tipp: Click on the trinket selection and type the first few letters of the trinket you're looking for.</p>
 
-    <div class="row">
-      <div class="col-xs-1"></div>
-      <div class="col-xs-10 alert alert-warning">This page is quite load and calcultion heavy. Therefore it might feel slow when changing settings.</div>
+  <div class="row">
+    <div class="col-xs-1"></div>
+    <div class="col-xs-10 alert alert-warning">This page is quite load and calcultion heavy. Therefore it might feel slow when changing settings.</div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-1"></div>
+    <div class="col-xs-10 alert alert-info">
+      <strong>Looking for help:</strong> With Battle for Azeroth looming on the horizon, it's time to improve; and YOU can help to
+      make this resource better. There are multiple ways to do so. Designing, coding, requesting data, pointing out flaws,
+      to name a few. All you need is a GitHub account and you can start adding comments and issues
+      <a href="https://github.com/Bloodmallet/bloodmallet.github.io/projects/4" target="blank">
+        <span style="font-weight: 700;">here</span>
+      </a>.
     </div>
+  </div>
 
-    <div class="row">
-      <div class="col-xs-offset-1 col-xs-10" id="selectors">
-        <button id="load_data_button">Load Data</button>
-        <span id="load_data_status"></span>
-      </div>
+  <div class="row">
+    <div class="col-xs-offset-1 col-xs-10" id="selectors">
+      <button id="load_data_button">Load Data</button>
+      <span id="load_data_status"></span>
     </div>
-    <form class="form-inline col-xs-offset-1 col-xs-10">
-      <div class="form-group">
-        <label class="sr-only" for="trinket_choice">Name of the trinket</label>
-        <select class="form-control" id="trinket_choice" style="display: none;"></select>
-      </div>
-      <div class="form-group">
-        <label class="sr-only" for="itemlevel_choice">Itemlevel</label>
-        <select class="form-control" id="itemlevel_choice" style="display: none;"></select>
-      </div>
-      <div class="form-group">
-        <label class="sr-only" for="fight_style_choice">Fight style</label>
-        <select class="form-control" id="fight_style_choice" style="display: none;"></select>
-      </div>
-    </form>
-
-    <div class="row">
-      <div class="col-xs-offset-1 col-xs-10" id="performance_root" style="display: none;"></div>
+  </div>
+  <form class="form-inline col-xs-offset-1 col-xs-10">
+    <div class="form-group">
+      <label class="sr-only" for="trinket_choice">Name of the trinket</label>
+      <select class="form-control" id="trinket_choice" style="display: none;"></select>
     </div>
+    <div class="form-group">
+      <label class="sr-only" for="itemlevel_choice">Itemlevel</label>
+      <select class="form-control" id="itemlevel_choice" style="display: none;"></select>
+    </div>
+    <div class="form-group">
+      <label class="sr-only" for="fight_style_choice">Fight style</label>
+      <select class="form-control" id="fight_style_choice" style="display: none;"></select>
+    </div>
+  </form>
 
-    <p></p>
-    <p>If you want to leave a comment, a suggestion for improvement, or found something noteworthy add an <a href="https://github.com/Bloodmallet/bloodmallet.github.io/issues" target="blank">issue at the repository</a> of this site. If you wish to support me, that's possible too: <a href="faq.html#support" target="blank">FAQ</a>.</p>
+  <div class="row">
+    <div class="col-xs-offset-1 col-xs-10" id="performance_root" style="display: none;"></div>
+  </div>
 
-    <p>Yours sincerely,
-      <br/>
-      <span class="signout">Bloodmallet(EU)#8246 - <a href="https://discord.gg/tFR2uvK" target="blank">SimCMinMax Discord</a> (channel: #bloodytools)<span>
-      <br/>
-      <span class="signout"><a href="https://worldofwarcraft.com/en-gb/character/die-aldor/bloodmallet" target="blank">Bloodmallet</a> - WoW character<span> </p>
+  <p></p>
+  <p>If you want to leave a comment, a suggestion for improvement, or found something noteworthy add an
+    <a href="https://github.com/Bloodmallet/bloodmallet.github.io/issues" target="blank">issue at the repository</a> of this site. If you wish to support me, that's possible too:
+    <a href="faq.html#support" target="blank">FAQ</a>.</p>
 
-    <script src="https://code.highcharts.com/highcharts.js" defer></script>
+  <p>Yours sincerely,
+    <br/>
+    <span class="signout">Bloodmallet(EU)#8246 -
+      <a href="https://discord.gg/tFR2uvK" target="blank">SimCMinMax Discord</a> (channel: #bloodytools)
+    </span>
+    <br/>
+    <span class="signout">
+      <a href="https://worldofwarcraft.com/en-gb/character/die-aldor/bloodmallet" target="blank">Bloodmallet</a> - WoW character
+    </span>
+  </p>
 
-  </body>
+  <script src="https://code.highcharts.com/highcharts.js" defer></script>
+
+</body>
+
 </html>
