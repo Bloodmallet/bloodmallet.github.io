@@ -29,19 +29,21 @@
 
 <body class="bg-dark text-light">
   <!-- Top menu start -->
-  <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+  <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark border-bottom">
     <a class="navbar-brand" href="index.html">Bloody( tools )</a>
+    <!-- Menu button if device is too small for full menu -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSpecChoiceContent" aria-controls="navbarSpecChoiceContent"
       aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
+    <!-- Menu list -->
     <div class="collapse navbar-collapse" id="navbarSpecChoiceContent">
       <ul class="navbar-nav">
 
         <!-- Death Knight -->
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle " href="#" id="navbarDeathKnightMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <span class="dk-color">DK</span>
+          <a class="nav-link dropdown-toggle dk-color dk-menu-border" href="#" id="navbarDeathKnightMenu" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">DK
           </a>
           <div class="dropdown-menu dk-background" aria-labelledby="navbarDeathKnightMenu">
             <a class="dropdown-item" href="#">Blood</a>
@@ -52,8 +54,8 @@
 
         <!-- Demon Hunter -->
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle " href="#" id="navbarDemonHunterMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <span class="dh-color">DH</span>
+          <a class="nav-link dropdown-toggle dh-color dh-menu-border" href="#" id="navbarDemonHunterMenu" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">DH
           </a>
           <div class="dropdown-menu dh-background" aria-labelledby="navbarDemonHunterMenu">
             <a class="dropdown-item" href="#">Havoc</a>
@@ -63,8 +65,8 @@
 
         <!-- Druid -->
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle " href="#" id="navbarDruidMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <span class="druid-color">Druid</span>
+          <a class="nav-link dropdown-toggle druid-color druid-menu-border" href="#" id="navbarDruidMenu" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">Druid
           </a>
           <div class="dropdown-menu druid-background" aria-labelledby="navbarDruidMenu">
             <a class="dropdown-item" href="#">Balance</a>
@@ -75,7 +77,8 @@
 
         <!-- Hunter -->
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle " href="#" id="navbarHunterMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Hunter
+          <a class="nav-link dropdown-toggle hunter-color hunter-menu-border" href="#" id="navbarHunterMenu" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">Hunter
           </a>
           <div class="dropdown-menu hunter-background" aria-labelledby="navbarHunterMenu">
             <a class="dropdown-item" href="#">Beast Mastery</a>
@@ -86,7 +89,8 @@
 
         <!-- Mage -->
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle " href="#" id="navbarMageMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mage
+          <a class="nav-link dropdown-toggle mage-color mage-menu-border" href="#" id="navbarMageMenu" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">Mage
           </a>
           <div class="dropdown-menu mage-background" aria-labelledby="navbarMageMenu">
             <a class="dropdown-item" href="#">Arcane</a>
@@ -97,7 +101,8 @@
 
         <!-- Monk -->
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle " href="#" id="navbarMonkMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Monk
+          <a class="nav-link dropdown-toggle monk-color monk-menu-border" href="#" id="navbarMonkMenu" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">Monk
           </a>
           <div class="dropdown-menu monk-background" aria-labelledby="navbarMonkMenu">
             <a class="dropdown-item" href="#">Brewmaster</a>
@@ -107,7 +112,8 @@
 
         <!-- Paladin -->
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle " href="#" id="navbarPaladinMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Paladin
+          <a class="nav-link dropdown-toggle paladin-color paladin-menu-border" href="#" id="navbarPaladinMenu" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">Paladin
           </a>
           <div class="dropdown-menu paladin-background" aria-labelledby="navbarPaladinMenu">
             <a class="dropdown-item" href="#">Protection</a>
@@ -117,7 +123,8 @@
 
         <!-- Priest -->
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle " href="#" id="navbarPriestMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Priest
+          <a class="nav-link dropdown-toggle priest-color priest-menu-border active" href="#" id="navbarPriestMenu" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">Priest
           </a>
           <div class="dropdown-menu priest-background" aria-labelledby="navbarPriestMenu">
             <a class="dropdown-item" href="#">Shadow</a>
@@ -126,7 +133,8 @@
 
         <!-- Rogue -->
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle " href="#" id="navbarRogueMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Rogue
+          <a class="nav-link dropdown-toggle rogue-color rogue-menu-border" href="#" id="navbarRogueMenu" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">Rogue
           </a>
           <div class="dropdown-menu rogue-background" aria-labelledby="navbarRogueMenu">
             <a class="dropdown-item" href="#">Assassination</a>
@@ -137,7 +145,8 @@
 
         <!-- Shaman -->
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle " href="#" id="navbarShamanMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Shaman
+          <a class="nav-link dropdown-toggle shaman-color shaman-menu-border" href="#" id="navbarShamanMenu" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">Shaman
           </a>
           <div class="dropdown-menu shaman-background" aria-labelledby="navbarShamanMenu">
             <a class="dropdown-item" href="#">Elemental</a>
@@ -147,8 +156,8 @@
 
         <!-- Warlock -->
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle warlock-color" href="#" id="navbarWarlockMenu" data-toggle="dropdown" aria-haspopup="true"
-            aria-expanded="false">Warlock
+          <a class="nav-link dropdown-toggle warlock-color warlock-menu-border" href="#" id="navbarWarlockMenu" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">Warlock
           </a>
           <div class="dropdown-menu warlock-background" aria-labelledby="navbarWarlockMenu">
             <a class="dropdown-item" href="#">Affliction</a>
@@ -159,8 +168,8 @@
 
         <!-- Warrior -->
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle warrior-color" href="#" id="navbarWarriorMenu" data-toggle="dropdown" aria-haspopup="true"
-            aria-expanded="false">Warrior
+          <a class="nav-link dropdown-toggle warrior-color warrior-menu-border" href="#" id="navbarWarriorMenu" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">Warrior
           </a>
           <div class="dropdown-menu warrior-background" aria-labelledby="navbarWarriorMenu">
             <a class="dropdown-item" href="#">Arms</a>
@@ -168,226 +177,213 @@
           </div>
         </li>
       </ul>
+      <!-- dark mode checkbox, ml-auto is margin-left auto max -->
+      <form class="form-inline ml-auto">
+        <div class="form-check form-check-inline">
+          <label class="form-check-label text-light">
+            <input class="form-check-input" type="checkbox" id="darkModusCheckbox" checked>dark mode
+          </label>
+        </div>
+      </form>
     </div>
   </nav>
   <!-- Top menu end -->
+  <br/>
 
+  <!-- Introduction -->
+  <div class="container-fluid">
+    <h1 class="display-4 text-center">Bloody<wbr>(&nbsp;<span id="bloodyfiller">trinkets&nbsp;|&nbsp;traits</span>&nbsp;)
+    </h1>
+    <div class="row">
+      <div class="offset-md-1 col-md-10">
+        <p>
+          This site provides an overview about trinkets and azurite traits of several specs in World of Warcraft using
+          <a href="http://www.simulationcraft.org/">SimulationCraft</a>'s default profiles. These overviews are an entry point. For indepth information about your
+          spec use your theorycrafters resources linked below the charts.
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- introduction end -->
 
-  <h1 class="display-4">Bloody( tools )</h1>
-
-  <p>This site provides an overview about trinkets and azurite traits of several specs in World of Warcraft using
-    <a href="http://www.simulationcraft.org/">SimulationCraft</a>
-    with
-    <a href="https://github.com/Bloodmallet/bloodytrinkets" target="blank">Bloodytools</a>. These overviews are an entry point. Please use your theorycrafters resources for more accurate and indepth
-    information.
-  </p>
 
   <!-- Special notification  -->
   <!--<div class="row">
       <div class="col-xs-10 alert alert-success"><strong>Fully updated trinket charts, including the trinket tuning of this <a href="https://worldofwarcraft.com/en-gb/news/21025532/hotfixes-december-5">bluepost</a>.</strong></div>
     </div><!-- -->
 
-
-  <!-- desktop table start -->
-  <div class="div-table desktop">
-    <div class="div-row">
-      <div class="div-cell">
-        <div class="btn-group dk">
-          <div class="wow-class-header">Death Knight</div>
-          <button class="spec-switch-button" name="death_knight_blood">Blood</button>
-          <button class="spec-switch-button" name="death_knight_frost">Frost</button>
-          <button class="spec-switch-button" name="death_knight_unholy">Unholy</button>
-        </div>
-      </div>
-      <div class="div-cell">
-        <div class="btn-group dh">
-          <div class="wow-class-header">Demon Hunter</div>
-          <button class="spec-switch-button" name="demon_hunter_havoc">Havoc</button>
-        </div>
-      </div>
-      <div class="div-cell">
-        <div class="btn-group druid">
-          <div class="wow-class-header">Druid</div>
-          <button class="spec-switch-button" name="druid_balance">Balance</button>
-          <button class="spec-switch-button" name="druid_feral">Feral</button>
-        </div>
-      </div>
-      <div class="div-cell">
-        <div class="btn-group hunter">
-          <div class="wow-class-header">Hunter</div>
-          <button class="spec-switch-button" name="hunter_beast_mastery">Beast Mastery</button>
-          <button class="spec-switch-button" name="hunter_marksmanship">Marksmanship</button>
-          <button class="spec-switch-button" name="hunter_survival">Survival</button>
-        </div>
-      </div>
-    </div>
-    <div class="div-row">
-      <div class="div-cell">
-        <div class="btn-group mage">
-          <div class="wow-class-header">Mage</div>
-          <button class="spec-switch-button" name="mage_arcane">Arcane</button>
-          <button class="spec-switch-button" name="mage_fire">Fire</button>
-          <button class="spec-switch-button" name="mage_frost">Frost</button>
-        </div>
-      </div>
-      <div class="div-cell">
-        <div class="btn-group monk">
-          <div class="wow-class-header">Monk</div>
-          <button class="spec-switch-button" name="monk_brewmaster">Brewmaster</button>
-          <button class="spec-switch-button" name="monk_windwalker">Windwalker</button>
-        </div>
-      </div>
-      <div class="div-cell">
-        <div class="btn-group paladin">
-          <div class="wow-class-header">Paladin</div>
-          <button class="spec-switch-button" name="paladin_protection">Protection</button>
-          <button class="spec-switch-button" name="paladin_retribution">Retribution</button>
-        </div>
-      </div>
-      <div class="div-cell">
-        <div class="btn-group priest">
-          <div class="wow-class-header">Priest</div>
-          <button class="spec-switch-button" name="priest_shadow">Shadow</button>
-        </div>
-      </div>
-    </div>
-    <div class="div-row">
-      <div class="div-cell">
-        <div class="btn-group rogue">
-          <div class="wow-class-header">Rogue</div>
-          <button class="spec-switch-button" name="rogue_assassination">Assassination</button>
-          <button class="spec-switch-button" name="rogue_outlaw">Outlaw</button>
-          <button class="spec-switch-button" name="rogue_subtlety">Subtlety</button>
-        </div>
-      </div>
-      <div class="div-cell">
-        <div class="btn-group shaman">
-          <div class="wow-class-header">Shaman</div>
-          <button class="spec-switch-button" name="shaman_elemental">Elemental</button>
-          <button class="spec-switch-button" name="shaman_enhancement">Enhancement</button>
-        </div>
-      </div>
-      <div class="div-cell">
-        <div class="btn-group warlock">
-          <div class="wow-class-header">Warlock</div>
-          <button class="spec-switch-button" name="warlock_affliction">Affliction</button>
-          <button class="spec-switch-button" name="warlock_demonology">Demonology</button>
-          <button class="spec-switch-button" name="warlock_destruction">Destruction</button>
-        </div>
-      </div>
-      <div class="div-cell">
-        <div class="btn-group warrior">
-          <div class="wow-class-header">Warrior</div>
-          <button class="spec-switch-button" name="warrior_arms">Arms</button>
-          <button class="spec-switch-button" name="warrior_fury">Fury</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- desktop table end -->
-
-  <!-- mobile table start -->
-  <p class="mobile">Note: If you don't see all classes below, try moving the table.</p>
-  <div class="div-table mobile">
-    <div class="div-row">
-      <div class="div-cell">
-        <div class="btn-group dk">
-          <div class="wow-class-header">Death Knight</div>
-          <button class="spec-switch-button" name="death_knight_blood">Blood</button>
-          <button class="spec-switch-button" name="death_knight_frost">Frost</button>
-          <button class="spec-switch-button" name="death_knight_unholy">Unholy</button>
-        </div>
-      </div>
-      <div class="div-cell">
-        <div class="btn-group dh">
-          <div class="wow-class-header">Demon Hunter</div>
-          <button class="spec-switch-button" name="demon_hunter_havoc">Havoc</button>
-        </div>
-      </div>
-      <div class="div-cell">
-        <div class="btn-group druid">
-          <div class="wow-class-header">Druid</div>
-          <button class="spec-switch-button" name="druid_balance">Balance</button>
-          <button class="spec-switch-button" name="druid_feral">Feral</button>
-        </div>
-      </div>
-    </div>
-    <div class="div-row">
-      <div class="div-cell">
-        <div class="btn-group hunter">
-          <div class="wow-class-header">Hunter</div>
-          <button class="spec-switch-button" name="hunter_beast_mastery">Beast Mastery</button>
-          <button class="spec-switch-button" name="hunter_marksmanship">Marksmanship</button>
-          <button class="spec-switch-button" name="hunter_survival">Survival</button>
-        </div>
-      </div>
-      <div class="div-cell">
-        <div class="btn-group mage">
-          <div class="wow-class-header">Mage</div>
-          <button class="spec-switch-button" name="mage_arcane">Arcane</button>
-          <button class="spec-switch-button" name="mage_fire">Fire</button>
-          <button class="spec-switch-button" name="mage_frost">Frost</button>
-        </div>
-      </div>
-      <div class="div-cell">
-        <div class="btn-group monk">
-          <div class="wow-class-header">Monk</div>
-          <button class="spec-switch-button" name="monk_brewmaster">Brewmaster</button>
-          <button class="spec-switch-button" name="monk_windwalker">Windwalker</button>
-        </div>
-      </div>
-    </div>
-    <div class="div-row">
-      <div class="div-cell">
-        <div class="btn-group paladin">
-          <div class="wow-class-header">Paladin</div>
-          <button class="spec-switch-button" name="paladin_protection">Protection</button>
-          <button class="spec-switch-button" name="paladin_retribution">Retribution</button>
-        </div>
-      </div>
-      <div class="div-cell">
-        <div class="btn-group priest">
-          <div class="wow-class-header">Priest</div>
-          <button class="spec-switch-button" name="priest_shadow">Shadow</button>
-        </div>
-      </div>
-      <div class="div-cell">
-        <div class="btn-group rogue">
-          <div class="wow-class-header">Rogue</div>
-          <button class="spec-switch-button" name="rogue_assassination">Assassination</button>
-          <button class="spec-switch-button" name="rogue_outlaw">Outlaw</button>
-          <button class="spec-switch-button" name="rogue_subtlety">Subtlety</button>
-        </div>
-      </div>
-    </div>
-    <div class="div-row">
-      <div class="div-cell">
-        <div class="btn-group shaman">
-          <div class="wow-class-header">Shaman</div>
-          <button class="spec-switch-button" name="shaman_elemental">Elemental</button>
-          <button class="spec-switch-button" name="shaman_enhancement">Enhancement</button>
-        </div>
-      </div>
-      <div class="div-cell">
-        <div class="btn-group warlock">
-          <div class="wow-class-header">Warlock</div>
-          <button class="spec-switch-button" name="warlock_affliction">Affliction</button>
-          <button class="spec-switch-button" name="warlock_demonology">Demonology</button>
-          <button class="spec-switch-button" name="warlock_destruction">Destruction</button>
-        </div>
-      </div>
-      <div class="div-cell">
-        <div class="btn-group warrior">
-          <div class="wow-class-header">Warrior</div>
-          <button class="spec-switch-button" name="warrior_arms">Arms</button>
-          <button class="spec-switch-button" name="warrior_fury">Fury</button>
+  <!-- Redo spec table -->
+  <div class="container-fluid">
+    <!-- have 3 rows, four columns for big screen, and four rows, three columns for smaller ones -->
+    <div class="row text-center ">
+      <div class="offset-xl-2 col-xl-8 offset-lg-2 col-lg-8 offset-md-1 col-md-10">
+        <!-- make sure the table is properly aligned with all other content -->
+        <div class="row" style="margin-right: 0px; margin-left: 0px;">
+          <!-- Death Knight -->
+          <div class="col-md-3 col-4 border spec-cell">
+            <div class="row wow-class-header-row">
+              <div class="wow-class-header-content col-12 dk-color">Death Knight</div>
+            </div>
+            <div class="row">
+              <button class="spec-switch-button col-12 spec-btn dk-button dk-background" name="death_knight_blood">Blood</button>
+            </div>
+            <div class="row">
+              <button class="spec-switch-button col-12 spec-btn dk-button dk-background" name="death_knight_frost">Frost</button>
+            </div>
+            <div class="row">
+              <button class="spec-switch-button col-12 spec-btn dk-button dk-background" name="death_knight_unholy">Unholy</button>
+            </div>
+          </div>
+          <!-- Demon Hunter -->
+          <div class="col-md-3 col-4 border spec-cell">
+            <div class="row wow-class-header-row">
+              <div class="wow-class-header-content col-12 dh-color">Demon Hunter</div>
+            </div>
+            <div class="row">
+              <button class="spec-switch-button col-12 spec-btn dh-button dh-background" name="demon_hunter_havoc">Havoc</button>
+            </div>
+            <div class="row">
+              <button class="spec-switch-button col-12 spec-btn dh-button dh-background" name="demon_hunter_vengeance">Vengeance</button>
+            </div>
+          </div>
+          <!-- Druid -->
+          <div class="col-md-3 col-4 border spec-cell">
+            <div class="row wow-class-header-row">
+              <div class="wow-class-header-content col-12 druid-color">Druid</div>
+            </div>
+            <div class="row">
+              <button class="spec-switch-button col-12 spec-btn druid-button druid-background" name="druid_balance">Balance</button>
+            </div>
+            <div class="row">
+              <button class="spec-switch-button col-12 spec-btn druid-button druid-background" name="druid_feral">Feral</button>
+            </div>
+            <div class="row">
+              <button class="spec-switch-button col-12 spec-btn druid-button druid-background" name="druid_guardian">Guardian</button>
+            </div>
+          </div>
+          <!-- Hunter -->
+          <div class="col-md-3 col-4 border spec-cell">
+            <div class="row wow-class-header-row">
+              <div class="wow-class-header-content col-12 hunter-color">Hunter</div>
+            </div>
+            <div class="row">
+              <button class="spec-switch-button col-12 spec-btn hunter-button hunter-background" name="hunter_beast_mastery">Beast Mastery</button>
+            </div>
+            <div class="row">
+              <button class="spec-switch-button col-12 spec-btn hunter-button hunter-background" name="hunter_marksmanship">Marksmanship</button>
+            </div>
+            <div class="row">
+              <button class="spec-switch-button col-12 spec-btn hunter-button hunter-background" name="hunter_survival">Survival</button>
+            </div>
+          </div>
+          <!-- Mage -->
+          <div class="col-md-3 col-4 border spec-cell">
+            <div class="row wow-class-header-row">
+              <div class="wow-class-header-content col-12 mage-color">Mage</div>
+            </div>
+            <div class="row">
+              <button class="spec-switch-button col-12 spec-btn mage-button mage-background" name="mage_arcane">Arcane</button>
+            </div>
+            <div class="row">
+              <button class="spec-switch-button col-12 spec-btn mage-button mage-background" name="mage_fire">Fire</button>
+            </div>
+            <div class="row">
+              <button class="spec-switch-button col-12 spec-btn mage-button mage-background" name="mage_frost">Frost</button>
+            </div>
+          </div>
+          <!-- Monk -->
+          <div class="col-md-3 col-4 border spec-cell">
+            <div class="row wow-class-header-row">
+              <div class="wow-class-header-content col-12 monk-color">Monk</div>
+            </div>
+            <div class="row">
+              <button class="spec-switch-button col-12 spec-btn monk-button monk-background" name="monk_brewmaster">Brewmaster</button>
+            </div>
+            <div class="row">
+              <button class="spec-switch-button col-12 spec-btn monk-button monk-background" name="monk_windwalker">Windwalker</button>
+            </div>
+          </div>
+          <!-- Paladin -->
+          <div class="col-md-3 col-4 border spec-cell">
+            <div class="row wow-class-header-row">
+              <div class="wow-class-header-content col-12 paladin-color">Paladin</div>
+            </div>
+            <div class="row">
+              <button class="spec-switch-button col-12 spec-btn paladin-button paladin-background" name="paladin_protection">Protection</button>
+            </div>
+            <div class="row">
+              <button class="spec-switch-button col-12 spec-btn paladin-button paladin-background" name="paladin_retribution">Retribution</button>
+            </div>
+          </div>
+          <!-- Priest -->
+          <div class="col-md-3 col-4 border spec-cell">
+            <div class="row wow-class-header-row">
+              <div class="wow-class-header-content col-12 priest-color">Priest</div>
+            </div>
+            <div class="row">
+              <button class="spec-switch-button col-12 spec-btn priest-button priest-background" name="priest_shadow">Shadow</button>
+            </div>
+          </div>
+          <!-- Rogue -->
+          <div class="col-md-3 col-4 border spec-cell">
+            <div class="row wow-class-header-row">
+              <div class="wow-class-header-content col-12 rogue-color">Rogue</div>
+            </div>
+            <div class="row">
+              <button class="spec-switch-button col-12 spec-btn rogue-button rogue-background" name="rogue_assassination">Assassination</button>
+            </div>
+            <div class="row">
+              <button class="spec-switch-button col-12 spec-btn rogue-button rogue-background" name="rogue_outlaw">Outlaw</button>
+            </div>
+            <div class="row">
+              <button class="spec-switch-button col-12 spec-btn rogue-button rogue-background" name="rogue_subtlety">Subtlety</button>
+            </div>
+          </div>
+          <!-- Shaman -->
+          <div class="col-md-3 col-4 border spec-cell">
+            <div class="row wow-class-header-row">
+              <div class="wow-class-header-content col-12 shaman-color">Shaman</div>
+            </div>
+            <div class="row">
+              <button class="spec-switch-button col-12 spec-btn shaman-button shaman-background" name="shaman_elemental">Elemental</button>
+            </div>
+            <div class="row">
+              <button class="spec-switch-button col-12 spec-btn shaman-button shaman-background" name="shaman_enhancement">Enhancement</button>
+            </div>
+          </div>
+          <!-- Warlock -->
+          <div class="col-md-3 col-4 border spec-cell">
+            <div class="row wow-class-header-row">
+              <div class="wow-class-header-content col-12 warlock-color">Warlock</div>
+            </div>
+            <div class="row">
+              <button class="spec-switch-button col-12 spec-btn warlock-button warlock-background" name="warlock_affliction">Affliction</button>
+            </div>
+            <div class="row">
+              <button class="spec-switch-button col-12 spec-btn warlock-button warlock-background" name="warlock_demonology">Demonology</button>
+            </div>
+            <div class="row">
+              <button class="spec-switch-button col-12 spec-btn warlock-button warlock-background" name="warlock_destruction">Destruction</button>
+            </div>
+          </div>
+          <!-- Warrior -->
+          <div class="col-md-3 col-4 border spec-cell">
+            <div class="row wow-class-header-row">
+              <div class="wow-class-header-content col-12 warrior-color">Warrior</div>
+            </div>
+            <div class="row">
+              <button class="spec-switch-button col-12 spec-btn warrior-button warrior-background" name="warrior_arms">Arms</button>
+            </div>
+            <div class="row">
+              <button class="spec-switch-button col-12 spec-btn warrior-button warrior-background" name="warrior_fury">Fury</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
-  <!-- mobile table end -->
+  <!-- end of redo spec table -->
 
-  <script src="https://code.highcharts.com/highcharts.js" defer></script>
 </body>
 
 </html>

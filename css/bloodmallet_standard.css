@@ -1,91 +1,59 @@
-body, h1 {
-  font-family: "Helvetica Neue", "Segoe UI", Segoe, Helvetica, Arial, "Lucida Grande", sans-serif;
+body {
+  font-weight: 200;
+}
+button {
+  font-weight: 400;
+}
+p {
+  font-size: 1.1rem;
+}
+nav {
+  font-weight: 400;
 }
 
-
-.wow-class-header {
-  text-align: center;
-  font-weight: 400;
+/* adds a small free space between header and spec buttons */
+.wow-class-header-row {
   margin-bottom: 3px;
+}
+/* styles the wow class table headers */
+.wow-class-header-content {
+  font-weight: 400;
   background-color: #343434;
   padding-top: 3px;
   padding-bottom: 7px;
-  padding-left: 12px;
-  padding-right: 12px;
-  font-size: 21px;
+  font-size: 1.4rem;
 }
-
-div.central_aligner_outer {
-  text-align: center;
-  background-color: #343434;
-  line-height: 1;
-  margin-bottom: 20px;
-}
-div.central_aligner_inner {
-  display: inline-block;
-}
-
-
-.div-table {
-  display: table;
-  margin: 0 auto;
-}
-.div-table div.div-row:not(:last-child) {
-  border-bottom: none; /* Prevent double borders */
-}
-
-.div-row {
-  display: table-row;
-}
-.div-row div:not(:last-child) {
-    border-right: none; /* Prevent double borders */
-}
-
-.div-cell {
-  border: 1px solid #bbb;
-  padding: 3px;
-  display: table-cell;
-}
-
-.btn-group button:not(:last-child) {
-  border-bottom: none; /* Prevent double borders */
+/* enforces a small free space between borcer and content */
+.spec-cell {
+  padding-right: 18px;
+  padding-left: 18px;
+  padding-top: 3px;
+  padding-bottom: 3px;
 }
 
 /* Mobile devices */
 @media only screen and (max-width: 500px) {
-  p.mobile {
-    display: block;
-  }
   div.div-table div.mobile {
     display: table;
   }
-  .desktop {
-    display: none;
-  }
-  .btn-group button {
-    padding: 5px 5px; /* Some padding */
-    cursor: pointer; /* Pointer/hand icon */
-    width: 100%; /* Set a width if needed */
-    display: block; /* Make the buttons appear below each other */
+  .spec-btn {
+    padding: 5px 5px;
+    cursor: pointer;
+    width: 100%;
+    display: block;
   }
 }
 
 /* Desktop sizes */
 @media only screen and (min-width: 501px) {
-  .mobile {
-    display: none;
-  }
-  p.desktop {
-    display: block;
-  }
   div.div-table div.desktop {
     display: table;
   }
-  .btn-group button {
-    padding: 10px 15px; /* Some padding */
-    cursor: pointer; /* Pointer/hand icon */
-    width: 100%; /* Set a width if needed */
-    display: block; /* Make the buttons appear below each other */
+  .spec-btn {
+    padding: 10px 15px;
+    cursor: pointer;
+    width: 100%;
+    display: block;
   }
 }
 
@@ -100,16 +68,20 @@ div.central_aligner_inner {
 .dk-color {
   color: #C41F3B!important;
 }
-.dk button {
-  color: white;
+.dk-menu-border {
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  transition: border-bottom .20s ease-in;
+}
+.dk-menu-border:hover{
+  border-bottom: 3px solid #C41F3B;
+  transition: border-bottom .01s ease-in;
+}
+.dk-menu-border.active {
+  border-bottom: 3px solid #C41F3B;
+}
+.dk-button {
   border: 1px solid #af1630;
-  background-color: #C41F3B;
-}
-.dk button:hover {
-  background-color: #9C132a;
-}
-.dk div.wow-class-header {
-  color: #C41F3B;
 }
 
 .dh-background, .dh-background a {
@@ -123,16 +95,20 @@ div.central_aligner_inner {
 .dh-color {
   color: #A330C9!important;
 }
-.dh button {
-  color: white;
+.dh-menu-border {
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  transition: border-bottom .20s ease-in;
+}
+.dh-menu-border:hover{
+  border-bottom: 3px solid #A330C9;
+  transition: border-bottom .01s ease-in;
+}
+.dh-menu-border.active {
+  border-bottom: 3px solid #A330C9;
+}
+.dh-button {
   border: 1px solid darkmagenta;
-  background-color: #A330C9;
-}
-.dh button:hover {
-  background-color: #731c90;
-}
-.dh div.wow-class-header {
-  color: #A330C9;
 }
 
 .druid-background, .druid-background a {
@@ -146,16 +122,20 @@ div.central_aligner_inner {
 .druid-color {
   color: #FF7D0A!important;
 }
-.druid button {
-  color: white;
+.druid-menu-border {
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  transition: border-bottom .20s ease-in;
+}
+.druid-menu-border:hover{
+  border-bottom: 3px solid #FF7D0A;
+  transition: border-bottom .01s ease-in;
+}
+.druid-menu-border.active {
+  border-bottom: 3px solid #FF7D0A;
+}
+.druid-button {
   border: 1px solid #de6e0a;
-  background-color: #FF7D0A;
-}
-.druid button:hover {
-  background-color: #D66400;
-}
-.druid div.wow-class-header {
-  color: #FF7D0A;
 }
 
 .hunter-background, .hunter-background a {
@@ -169,16 +149,20 @@ div.central_aligner_inner {
 .hunter-color {
   color: #ABD473!important;
 }
-.hunter button {
-  color: black;
+.hunter-menu-border {
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  transition: border-bottom .20s ease-in;
+}
+.hunter-menu-border:hover{
+  border-bottom: 3px solid #ABD473;
+  transition: border-bottom .01s ease-in;
+}
+.hunter-menu-border.active {
+  border-bottom: 3px solid #ABD473;
+}
+.hunter-button {
   border: 1px solid #799a4c;
-  background-color: #ABD473;
-}
-.hunter button:hover {
-  background-color: #799a4c;
-}
-.hunter div.wow-class-header {
-  color: #ABD473;
 }
 
 .mage-background, .mage-background a {
@@ -192,16 +176,20 @@ div.central_aligner_inner {
 .mage-color {
   color: #69CCF0!important;
 }
-.mage button {
-  color: black;
+.mage-menu-border {
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  transition: border-bottom .20s ease-in;
+}
+.mage-menu-border:hover{
+  border-bottom: 3px solid #69CCF0;
+  transition: border-bottom .01s ease-in;
+}
+.mage-menu-border.active {
+  border-bottom: 3px solid #69CCF0;
+}
+.mage-button {
   border: 1px solid #56b5d8;
-  background-color: #69CCF0;
-}
-.mage button:hover {
-  background-color: #4dabce;
-}
-.mage div.wow-class-header {
-  color: #69CCF0;
 }
 
 .monk-background, .monk-background a {
@@ -215,16 +203,20 @@ div.central_aligner_inner {
 .monk-color {
   color: #00FF96!important;
 }
-.monk button {
-  color: black;
+.monk-menu-border {
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  transition: border-bottom .20s ease-in;
+}
+.monk-menu-border:hover{
+  border-bottom: 3px solid #00FF96;
+  transition: border-bottom .01s ease-in;
+}
+.monk-menu-border.active {
+  border-bottom: 3px solid #00FF96;
+}
+.monk-button {
   border: 1px solid #02e688;
-  background-color: #00FF96;
-}
-.monk button:hover {
-  background-color: #03ce7a;
-}
-.monk div.wow-class-header {
-  color: #00FF96;
 }
 
 .paladin-background, .paladin-background a {
@@ -238,16 +230,20 @@ div.central_aligner_inner {
 .paladin-color {
   color: #F58CBA!important;
 }
-.paladin button {
-  color: black;
+.paladin-menu-border {
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  transition: border-bottom .20s ease-in;
+}
+.paladin-menu-border:hover{
+  border-bottom: 3px solid #F58CBA;
+  transition: border-bottom .01s ease-in;
+}
+.paladin-menu-border.active {
+  border-bottom: 3px solid #F58CBA;
+}
+.paladin-button {
   border: 1px solid #e2a5b0;
-  background-color: #F58CBA;
-}
-.paladin button:hover {
-  background-color: #d878a2;
-}
-.paladin div.wow-class-header {
-  color: #F58CBA;
 }
 
 .priest-background, .priest-background a {
@@ -261,16 +257,20 @@ div.central_aligner_inner {
 .priest-color {
   color: #ffffff!important;
 }
-.priest button {
-  color:black;
+.priest-menu-border {
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  transition: border-bottom .20s ease-in;
+}
+.priest-menu-border:hover{
+  border-bottom: 3px solid #ffffff;
+  transition: border-bottom .01s ease-in;
+}
+.priest-menu-border.active {
+  border-bottom: 3px solid #ffffff;
+}
+.priest-button {
   border: 1px solid #ccc;
-  background-color: #ffffff;
-}
-.priest button:hover {
-  background-color: #cccccc;
-}
-.priest div.wow-class-header {
-  color: #ffffff;
 }
 
 .rogue-background, .rogue-background a {
@@ -284,39 +284,47 @@ div.central_aligner_inner {
 .rogue-color {
   color: #FFF569!important;
 }
-.rogue button {
-  color: black;
+.rogue-menu-border {
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  transition: border-bottom .20s ease-in;
+}
+.rogue-menu-border:hover{
+  border-bottom: 3px solid #FFF569;
+  transition: border-bottom .01s ease-in;
+}
+.rogue-menu-border.active {
+  border-bottom: 3px solid #FFF569;
+}
+.rogue-button {
   border: 1px solid #dcd352;
-  background-color: #FFF569;
-}
-.rogue button:hover {
-  background-color: #d6cc52;
-}
-.rogue div.wow-class-header {
-  color: #FFF569;
 }
 
 .shaman-background, .shaman-background a {
   background-color: #0070DE;
-  color: black;
+  color: white;
 }
 .shaman-background :hover, .shaman-background a:hover {
   background-color: #1744d0;
-  color: black;
+  color: white;
 }
 .shaman-color {
   color: #0070DE!important;
 }
-.shaman button {
-  color: white;
+.shaman-menu-border {
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  transition: border-bottom .20s ease-in;
+}
+.shaman-menu-border:hover{
+  border-bottom: 3px solid #0070DE;
+  transition: border-bottom .01s ease-in;
+}
+.shaman-menu-border.active {
+  border-bottom: 3px solid #0070DE;
+}
+.shaman-button {
   border: 1px solid blue;
-  background-color: #0070DE;
-}
-.shaman button:hover {
-  background-color: #1744d0;
-}
-.shaman div.wow-class-header {
-  color: #0070DE;
 }
 
 .warlock-background, .warlock-background a {
@@ -330,16 +338,20 @@ div.central_aligner_inner {
 .warlock-color {
   color: #9482C9!important;
 }
-.warlock button {
-  color: white;
+.warlock-menu-border {
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  transition: border-bottom .20s ease-in;
+}
+.warlock-menu-border:hover{
+  border-bottom: 3px solid #9482C9;
+  transition: border-bottom .01s ease-in;
+}
+.warlock-menu-border.active {
+  border-bottom: 3px solid #9482C9;
+}
+.warlock-button {
   border: 1px solid #7463a9;
-  background-color: #9482C9;
-}
-.warlock button:hover {
-  background-color: #7463a9;
-}
-.warlock div.wow-class-header {
-  color: #9482C9;
 }
 
 .warrior-background, .warrior-background a {
@@ -353,147 +365,18 @@ div.central_aligner_inner {
 .warrior-color {
   color: #C79C6E!important;
 }
-.warrior button {
-  color: white;
+.warrior-menu-border {
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  transition: border-bottom .20s ease-in;
+}
+.warrior-menu-border:hover{
+  border-bottom: 3px solid #C79C6E;
+  transition: border-bottom .01s ease-in;
+}
+.warrior-menu-border.active {
+  border-bottom: 3px solid #C79C6E;
+}
+.warrior-button {
   border: 1px solid #ab845a;
-  background-color: #C79C6E;
-}
-.warrior button:hover {
-  background-color: #ad8862;
-}
-.warrior div.wow-class-header {
-  color: #C79C6E;
-}
-
-
-
-.highcharts-root text {
-  font-family: "Helvetica Neue", "Segoe UI", Segoe, Helvetica, Arial, "Lucida Grande", sans-serif;
-}
-
-.highcharts-background {
-  fill: #eee;
-  color: black;
-}
-
-.highcharts-axis text {
-  fill: black;
-}
-
-.highcharts-axis-labels text{
-  fill: black;
-}
-
-.highcharts-title {
-  fill: black;
-}
-
-.highcharts-legend-box {
-  fill: #eee;
-  stroke: #bbb;
-}
-
-.highcharts-legend-item text {
-  fill: black;
-}
-
-.highcharts-tick, .highcharts-grid path {
-  stroke: #bbb;
-}
-
-
-.badge-new {
-  color: black;
-  background-color: #abd473;
-  vertical-align: top;
-}
-
-a:hover .badge-new {
-  color: #fff;
-  background-color: #abd473;
-}
-
-
-/* Override bootstrap button group display */
-
-.btn-group {
-  display: initial;
-}
-
-.top-buffer {
-  margin-top: 20px;
-}
-
-#result {
-  max-width: 60%;
-  min-height: 2%;
-}
-
-#compare_button {
-  margin-bottom: 10px;
-}
-
-.trinket-message {
-  margin: 0 auto;
-  display: block;
-  width: 80%;
-  padding: 10px;
-  border: 1px solid #555555;
-  margin-bottom: 2%;
-}
-
-hr {
-  border-top: 1px solid #8c8b8b;
-}
-
-/* The snackbar - position it at the bottom and in the middle of the screen */
-#copy_success, #link_copy_success, #crucible_copy_success {
-    visibility: hidden; /* Hidden by default. Visible on click */
-    min-width: 250px; /* Set a default minimum width */
-    margin-left: -125px; /* Divide value of min-width by 2 */
-    background-color: #333; /* Black background color */
-    color: #fff; /* White text color */
-    text-align: center; /* Centered text */
-    border-radius: 2px; /* Rounded borders */
-    padding: 16px; /* Padding */
-    position: fixed; /* Sit on top of the screen */
-    z-index: 1; /* Add a z-index if needed */
-    left: 50%; /* Center the snackbar */
-    bottom: 30px; /* 30px from the bottom */
-}
-
-/* Show the snackbar when clicking on a button (class added with JavaScript) */
-#copy_success.show, #link_copy_success.show, #crucible_copy_success.show {
-    visibility: visible; /* Show the snackbar */
-
-/* Add animation: Take 0.5 seconds to fade in and out the snackbar.
-However, delay the fade out process for 2.5 seconds */
-    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
-    animation: fadein 0.5s, fadeout 0.5s 2.5s;
-}
-
-/* Animations to fade the snackbar in and out */
-@-webkit-keyframes fadein {
-    from {bottom: 0; opacity: 0;}
-    to {bottom: 30px; opacity: 1;}
-}
-
-@keyframes fadein {
-    from {bottom: 0; opacity: 0;}
-    to {bottom: 30px; opacity: 1;}
-}
-
-@-webkit-keyframes fadeout {
-    from {bottom: 30px; opacity: 1;}
-    to {bottom: 0; opacity: 0;}
-}
-
-@keyframes fadeout {
-    from {bottom: 30px; opacity: 1;}
-    to {bottom: 0; opacity: 0;}
-}
-
-
-.highcharts-legend {
-    z-index: -1;
 }
