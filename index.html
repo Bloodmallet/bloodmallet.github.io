@@ -8,13 +8,6 @@
 
   <!-- Make sure Bootstrap is loaded before base, otherwise some styles will be overwritten -->
   <link rel="stylesheet" href="css/bootstrap.min.css" async>
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-    crossorigin="anonymous"></script>
-  <script src="js/bootstrap.min.js"></script>
-
-  <script src="js/bloodmallet_standard.js"></script>
 
   <link rel="stylesheet" href="css/bloodmallet_standard.css" async>
 
@@ -36,12 +29,12 @@
   <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark border-bottom">
     <a class="navbar-brand" href="index.html">Bloody( charts )</a>
     <!-- Menu button if device is too small for full menu -->
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSpecChoiceContent" aria-controls="navbarSpecChoiceContent"
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTopMenu" aria-controls="navbarTopMenu"
       aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <!-- Menu list -->
-    <div class="collapse navbar-collapse" id="navbarSpecChoiceContent">
+    <div class="collapse navbar-collapse" id="navbarTopMenu">
       <ul class="navbar-nav">
 
         <!-- Death Knight -->
@@ -183,9 +176,10 @@
       </ul>
       <!-- dark mode checkbox, ml-auto is margin-left auto max -->
       <form class="form-inline ml-auto">
-        <div class="form-check form-check-inline">
-          <label class="form-check-label text-light">
-            <input class="form-check-input" type="checkbox" id="darkModeCheckbox" checked>dark mode
+        <!-- navbar-nav is required to style the form text like normal nav links -->
+        <div class="form-check form-check-inline navbar-nav">
+          <label class="form-check-label nav-link" style="cursor: pointer">
+            <input class="form-check-input" type="checkbox" id="darkModeCheckbox" style="cursor: pointer" checked>dark mode
           </label>
         </div>
       </form>
@@ -387,6 +381,36 @@
     </div>
   </div>
   <!-- Spec table end -->
+
+  <div class="container" style="height: 230px"></div>
+
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark border-top">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarBottomMenu" aria-controls="navbarBottomMenu"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarBottomMenu">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">FAQ</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Impressum</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/bloodmallet_standard.js"></script>
 
 </body>
 
