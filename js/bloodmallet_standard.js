@@ -53,3 +53,37 @@ function search_dark_mode_cookie() {
     }
   });
 }
+
+
+/*---------------------------------------------------------
+//
+//  Reroll the FILLER of Bloody(FILLER)
+//
+---------------------------------------------------------*/
+
+var bloodyfiller = "&nbsp;charts&nbsp;";
+var filler_possibilities_common = ["&nbsp;charts&nbsp;", "&nbsp;trinkets&nbsp;", "&nbsp;traits&nbsp;", "&nbsp;races&nbsp;"];
+var filler_possibilities_rare = ["¯\\_(ツ)_/¯", " ͡° ͜ʖ ͡°", "ಠ_ಠ", "⌐■_■", "ʕ•ᴥ•ʔ", "ಠᴗಠ", "づ￣ ³￣", "⊙_☉"];
+
+document.addEventListener("DOMContentLoaded", function () {
+  document.getElementById("bloodyfiller").addEventListener("click", randomize_bloodyfiller);
+});
+
+function randomize_bloodyfiller() {
+  var roll = Math.floor(Math.random() * (filler_possibilities_common.length + 1));
+  while (filler_possibilities_common[roll] == bloodyfiller) {
+    roll = Math.floor(Math.random() * (filler_possibilities_common.length + 1));
+  }
+  if (roll == filler_possibilities_common.length) {
+    roll = Math.floor(Math.random() * filler_possibilities_rare.length);
+    while (filler_possibilities_rare[roll] == bloodyfiller) {
+      roll = Math.floor(Math.random() * filler_possibilities_rare.length);
+    }
+    document.getElementById("bloodyfiller").innerHTML = filler_possibilities_rare[roll];
+    bloodyfiller = filler_possibilities_rare[roll];
+  } else {
+    document.getElementById("bloodyfiller").innerHTML = filler_possibilities_common[roll];
+    bloodyfiller = filler_possibilities_common[roll];
+  }
+}
+
