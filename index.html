@@ -21,13 +21,13 @@
       //ga('send', 'pageview');
 
   </script>
-  <title>Bloody( charts ) - simulation data for everyone</title>
+  <title>Bloody( tools ) - simulation data for everyone</title>
 </head>
 
 <body class="bg-dark text-light">
   <!-- Top menu start -->
   <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark border-bottom">
-    <a class="navbar-brand" href="index.html">Bloody( charts )</a>
+    <a class="navbar-brand" href="index.html">Bloody( tools )</a>
     <!-- Menu button if device is too small for full menu -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTopMenu" aria-controls="navbarTopMenu"
       aria-expanded="false" aria-label="Toggle navigation">
@@ -43,9 +43,9 @@
             aria-expanded="false">DK
           </a>
           <div class="dropdown-menu dk-background" aria-labelledby="navbarDeathKnightMenu">
-            <a class="dropdown-item" href="#">Blood</a>
-            <a class="dropdown-item" href="#">Frost</a>
-            <a class="dropdown-item" href="#">Unholy</a>
+            <a class="dropdown-item translate_blood" href="#death_knight_blood">Blood</a>
+            <a class="dropdown-item translate_frost" href="#death_knight_frost">Frost</a>
+            <a class="dropdown-item translate_unholy" href="#death_knight_unholy">Unholy</a>
           </div>
         </li>
 
@@ -55,8 +55,8 @@
             aria-expanded="false">DH
           </a>
           <div class="dropdown-menu dh-background" aria-labelledby="navbarDemonHunterMenu">
-            <a class="dropdown-item" href="#">Havoc</a>
-            <a class="dropdown-item" href="#">Vengeance</a>
+            <a class="dropdown-item" href="#demon_hunter_havoc">Havoc</a>
+            <a class="dropdown-item" href="#demon_hunter_vengeance">Vengeance</a>
           </div>
         </li>
 
@@ -66,9 +66,9 @@
             aria-expanded="false">Druid
           </a>
           <div class="dropdown-menu druid-background" aria-labelledby="navbarDruidMenu">
-            <a class="dropdown-item" href="#">Balance</a>
-            <a class="dropdown-item" href="#">Feral</a>
-            <a class="dropdown-item" href="#">Guardian</a>
+            <a class="dropdown-item" href="#druid_balance">Balance</a>
+            <a class="dropdown-item" href="#druid_feral">Feral</a>
+            <a class="dropdown-item" href="#druid_guardian">Guardian</a>
           </div>
         </li>
 
@@ -78,9 +78,9 @@
             aria-haspopup="true" aria-expanded="false">Hunter
           </a>
           <div class="dropdown-menu hunter-background" aria-labelledby="navbarHunterMenu">
-            <a class="dropdown-item" href="#">Beast Mastery</a>
-            <a class="dropdown-item" href="#">Marksmanship</a>
-            <a class="dropdown-item" href="#">Survival</a>
+            <a class="dropdown-item" href="#hunter_beast_mastery">Beast Mastery</a>
+            <a class="dropdown-item" href="#hunter_marksmanship">Marksmanship</a>
+            <a class="dropdown-item" href="#hunter_survival">Survival</a>
           </div>
         </li>
 
@@ -90,9 +90,9 @@
             aria-expanded="false">Mage
           </a>
           <div class="dropdown-menu mage-background" aria-labelledby="navbarMageMenu">
-            <a class="dropdown-item" href="#">Arcane</a>
-            <a class="dropdown-item" href="#">Fire</a>
-            <a class="dropdown-item" href="#">Frost</a>
+            <a class="dropdown-item" href="#mage_arcane">Arcane</a>
+            <a class="dropdown-item" href="#mage_fire">Fire</a>
+            <a class="dropdown-item" href="#mage_frost">Frost</a>
           </div>
         </li>
 
@@ -102,8 +102,8 @@
             aria-expanded="false">Monk
           </a>
           <div class="dropdown-menu monk-background" aria-labelledby="navbarMonkMenu">
-            <a class="dropdown-item" href="#">Brewmaster</a>
-            <a class="dropdown-item" href="#">Windwalker</a>
+            <a class="dropdown-item" href="#monk_brewmaster">Brewmaster</a>
+            <a class="dropdown-item" href="#monk_windwalker">Windwalker</a>
           </div>
         </li>
 
@@ -113,8 +113,8 @@
             aria-haspopup="true" aria-expanded="false">Paladin
           </a>
           <div class="dropdown-menu paladin-background" aria-labelledby="navbarPaladinMenu">
-            <a class="dropdown-item" href="#">Protection</a>
-            <a class="dropdown-item" href="#">Retribution</a>
+            <a class="dropdown-item" href="#paladin_protection">Protection</a>
+            <a class="dropdown-item" href="#paladin_retribution">Retribution</a>
           </div>
         </li>
 
@@ -124,7 +124,7 @@
             aria-haspopup="true" aria-expanded="false">Priest
           </a>
           <div class="dropdown-menu priest-background" aria-labelledby="navbarPriestMenu">
-            <a class="dropdown-item" href="#">Shadow</a>
+            <a class="dropdown-item" href="#priest_shadow">Shadow</a>
           </div>
         </li>
 
@@ -134,9 +134,9 @@
             aria-expanded="false">Rogue
           </a>
           <div class="dropdown-menu rogue-background" aria-labelledby="navbarRogueMenu">
-            <a class="dropdown-item" href="#">Assassination</a>
-            <a class="dropdown-item" href="#">Outlaw</a>
-            <a class="dropdown-item" href="#">Subtlety</a>
+            <a class="dropdown-item" href="#rogue_assassination">Assassination</a>
+            <a class="dropdown-item" href="#rogue_outlaw">Outlaw</a>
+            <a class="dropdown-item" href="#rogue_subtlety">Subtlety</a>
           </div>
         </li>
 
@@ -146,8 +146,8 @@
             aria-haspopup="true" aria-expanded="false">Shaman
           </a>
           <div class="dropdown-menu shaman-background" aria-labelledby="navbarShamanMenu">
-            <a class="dropdown-item" href="#">Elemental</a>
-            <a class="dropdown-item" href="#">Enhancement</a>
+            <a class="dropdown-item" href="#shaman_elemental">Elemental</a>
+            <a class="dropdown-item" href="#shaman_enhancement">Enhancement</a>
           </div>
         </li>
 
@@ -157,9 +157,9 @@
             aria-haspopup="true" aria-expanded="false">Warlock
           </a>
           <div class="dropdown-menu warlock-background" aria-labelledby="navbarWarlockMenu">
-            <a class="dropdown-item" href="#">Affliction</a>
-            <a class="dropdown-item" href="#">Demonology</a>
-            <a class="dropdown-item" href="#">Destruction</a>
+            <a class="dropdown-item" href="#warlock_affliction">Affliction</a>
+            <a class="dropdown-item" href="#warlock_demonology">Demonology</a>
+            <a class="dropdown-item" href="#warlock_destruction">Destruction</a>
           </div>
         </li>
 
@@ -169,20 +169,40 @@
             aria-haspopup="true" aria-expanded="false">Warrior
           </a>
           <div class="dropdown-menu warrior-background" aria-labelledby="navbarWarriorMenu">
-            <a class="dropdown-item" href="#">Arms</a>
-            <a class="dropdown-item" href="#">Fury</a>
+            <a class="dropdown-item" href="#warrior_arms">Arms</a>
+            <a class="dropdown-item" href="#warrior_fury">Fury</a>
           </div>
         </li>
       </ul>
-      <!-- dark mode checkbox, ml-auto is margin-left auto max -->
-      <form class="form-inline ml-auto">
-        <!-- navbar-nav is required to style the form text like normal nav links -->
-        <div class="form-check form-check-inline navbar-nav">
-          <label class="form-check-label nav-link" style="cursor: pointer">
-            <input class="form-check-input" type="checkbox" id="darkModeCheckbox" style="cursor: pointer" checked>dark mode
-          </label>
-        </div>
-      </form>
+
+
+      <ul class="navbar-nav ml-auto">
+        <a class="nav-link dropdown-toggle" href="" id="navbarSettingsMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Settings
+        </a>
+        <form class="dropdown-menu dropdown-menu-right p-4" aria-labelledby="navbarSettingsMenu" id="settingsDropDown">
+          <!-- dark mode checkbox, ml-auto is margin-left auto max -->
+          <div class="form-group">
+            <div class="form-check form-inline">
+              <input class="form-check-input" type="checkbox" id="darkModeCheckbox" style="cursor: pointer" checked>
+              <label class="form-check-label" style="cursor: pointer" id="translate_dark_mode" for="darkModeCheckbox">
+                dark mode
+              </label>
+            </div>
+          </div>
+          <div class="form-group">
+            <select id="languageSelector" title="Language">
+              <option value="CN">简体中文</option>
+              <option value="DE">Deutsch</option>
+              <option value="EN" selected>English</option>
+              <option value="ES">Español</option>
+              <option value="FR">Français</option>
+              <option value="KO">한국어</option>
+              <option value="PT">Português Brasileiro</option>
+              <option value="RU">Русский</option>
+            </select>
+          </div>
+        </form>
+      </ul>
     </div>
   </nav>
   <!-- Top menu end -->
@@ -190,12 +210,12 @@
 
   <!-- Introduction -->
   <div class="container-fluid">
-    <h1 class="display-4 text-center">Bloody<wbr>(<span id="bloodyfiller">&nbsp;charts&nbsp;</span>)
+    <h1 class="display-4 text-center" id="main_header">Bloody<wbr>(<span id="bloodyfiller">&nbsp;tools&nbsp;</span>)
     </h1>
     <div class="row">
       <div class="offset-md-1 col-md-10">
-        <p>
-          This site provides an overview about trinkets, azurite traits, and others for several specs in World of Warcraft using
+        <p id="translate_main_paragraph">
+          This site provides an overview about trinkets, azurite traits, and others for almost all specs in World of Warcraft using
           <a href="http://www.simulationcraft.org/">SimulationCraft</a>'s default profiles. These overviews are an entry point. For indepth information about your
           spec use your theorycrafters resources linked below the charts.
         </p>
@@ -211,7 +231,7 @@
     </div><!-- -->
 
   <!-- Spec table -->
-  <div class="container-fluid">
+  <div class="container-fluid" id="spec_table">
     <!-- have 3 rows, four columns for big screen, and four rows, three columns for smaller ones -->
     <div class="row text-center ">
       <div class="offset-xl-2 col-xl-8 offset-lg-2 col-lg-8 offset-md-1 col-md-10">
@@ -382,7 +402,9 @@
   </div>
   <!-- Spec table end -->
 
-  <div class="container" style="height: 230px"></div>
+  <div class="container" id="chart" style="height:250px;"></div>
+  <div class="container" hidden id="TC_resources"></div>
+
 
   <nav class="navbar navbar-expand-md navbar-dark bg-dark border-top">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarBottomMenu" aria-controls="navbarBottomMenu"
@@ -392,13 +414,13 @@
     <div class="collapse navbar-collapse" id="navbarBottomMenu">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="nav-link" href="#">FAQ</a>
+          <a class="nav-link" href="#" id="translate_faq">FAQ</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Contact</a>
+          <a class="nav-link" href="#" id="translate_contact">Contact</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Impressum</a>
+          <a class="nav-link" href="#" id="translate_impressum">Impressum</a>
         </li>
       </ul>
     </div>
