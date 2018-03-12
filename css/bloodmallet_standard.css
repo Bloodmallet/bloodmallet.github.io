@@ -10,6 +10,9 @@ p {
 nav {
   font-weight: 400;
 }
+.bg-light {
+  background-color: #eee!important;
+}
 
 /* adds a small free space between header and spec buttons */
 .wow-class-header-row {
@@ -18,7 +21,7 @@ nav {
 /* styles the wow class table headers */
 .wow-class-header-content {
   font-weight: 400;
-  background-color: #343434;
+  background-color: #343a40;
   padding-top: 3px;
   padding-bottom: 7px;
   font-size: 1.4rem;
@@ -42,6 +45,9 @@ nav {
     width: 100%;
     display: block;
   }
+  .spec-btn:hover {
+    text-decoration: none;
+  }
 }
 
 /* Desktop sizes */
@@ -55,59 +61,62 @@ nav {
     width: 100%;
     display: block;
   }
+  .spec-btn:hover {
+    text-decoration: none;
+  }
 }
 
-.dk-background, .dk-background a {
+.death_knight-background, .death_knight-background a {
   background-color: #C41F3B;
   color: white;
 }
-button.dk-background:hover, .dk-background a:hover {
+a.death_knight-background:hover, button.death_knight-background:hover, .death_knight-background a:hover {
   background-color: #9C132a;
   color: white;
 }
-.dk-color {
+.death_knight-color {
   color: #C41F3B!important;
 }
-.dk-menu-border {
+.death_knight-menu-border {
   border-top: 3px solid transparent;
   border-bottom: 3px solid transparent;
   transition: border-bottom .20s ease-in;
 }
-.dk-menu-border:hover{
+.death_knight-menu-border:hover{
   border-bottom: 3px solid #C41F3B;
   transition: border-bottom .01s ease-in;
 }
-.dk-menu-border.active {
+.death_knight-menu-border.active {
   border-bottom: 3px solid #C41F3B;
 }
-.dk-button {
+.death_knight-button {
   border: 1px solid #af1630;
 }
 
-.dh-background, .dh-background a {
+.demon_hunter-background, .demon_hunter-background a {
   background-color: #A330C9;
   color: white;
 }
-button.dh-background:hover, .dh-background a:hover {
+a.demon_hunter-background:hover, button.demon_hunter-background:hover, .demon_hunter-background a:hover {
   background-color: #731c90;
   color: white;
 }
-.dh-color {
+.demon_hunter-color {
   color: #A330C9!important;
 }
-.dh-menu-border {
+.demon_hunter-menu-border {
   border-top: 3px solid transparent;
   border-bottom: 3px solid transparent;
   transition: border-bottom .20s ease-in;
 }
-.dh-menu-border:hover{
+.demon_hunter-menu-border:hover{
   border-bottom: 3px solid #A330C9;
   transition: border-bottom .01s ease-in;
 }
-.dh-menu-border.active {
+.demon_hunter-menu-border.active {
   border-bottom: 3px solid #A330C9;
 }
-.dh-button {
+.demon_hunter-button {
   border: 1px solid darkmagenta;
 }
 
@@ -115,7 +124,7 @@ button.dh-background:hover, .dh-background a:hover {
   background-color: #FF7D0A;
   color: white;
 }
-button.druid-background:hover, .druid-background a:hover {
+a.druid-background:hover, button.druid-background:hover, .druid-background a:hover {
   background-color: #D66400;
   color: white;
 }
@@ -142,7 +151,7 @@ button.druid-background:hover, .druid-background a:hover {
   background-color: #ABD473;
   color: black;
 }
-button.hunter-background:hover, .hunter-background a:hover {
+a.hunter-background:hover, button.hunter-background:hover, .hunter-background a:hover {
   background-color: #799a4c;
   color: black;
 }
@@ -169,7 +178,7 @@ button.hunter-background:hover, .hunter-background a:hover {
   background-color: #69CCF0;
   color: black;
 }
-button.mage-background:hover, .mage-background a:hover {
+a.mage-background:hover, button.mage-background:hover, .mage-background a:hover {
   background-color: #4dabce;
   color: black;
 }
@@ -196,7 +205,7 @@ button.mage-background:hover, .mage-background a:hover {
   background-color: #00FF96;
   color: black;
 }
-button.monk-background:hover, .monk-background a:hover {
+a.monk-background:hover, button.monk-background:hover,.monk-background a:hover {
   background-color: #03ce7a;
   color: black;
 }
@@ -223,7 +232,7 @@ button.monk-background:hover, .monk-background a:hover {
   background-color: #F58CBA;
   color: black;
 }
-button.paladin-background:hover, .paladin-background a:hover {
+a.paladin-background:hover, button.paladin-background:hover,.paladin-background a:hover {
   background-color: #d878a2;
   color: black;
 }
@@ -250,7 +259,10 @@ button.paladin-background:hover, .paladin-background a:hover {
   background-color: #ffffff;
   color: black;
 }
-button.priest-background:hover, .priest-background a:hover {
+button.priest-background {
+  border: 1px solid black;
+}
+a.priest-background:hover, button.priest-background:hover, .priest-background a:hover {
   background-color: #cccccc;
   color: black;
 }
@@ -277,7 +289,7 @@ button.priest-background:hover, .priest-background a:hover {
   background-color: #FFF569;
   color: black;
 }
-button.rogue-background:hover, .rogue-background a:hover {
+a.rogue-background:hover, button.rogue-background:hover, .rogue-background a:hover {
   background-color: #d6cc52;
   color: black;
 }
@@ -304,7 +316,7 @@ button.rogue-background:hover, .rogue-background a:hover {
   background-color: #0070DE;
   color: white;
 }
-button.shaman-background:hover, .shaman-background a:hover {
+a.shaman-background:hover, button.shaman-background:hover, .shaman-background a:hover {
   background-color: #1744d0;
   color: white;
 }
@@ -331,7 +343,7 @@ button.shaman-background:hover, .shaman-background a:hover {
   background-color: #9482C9;
   color: white;
 }
-button.warlock-background:hover, .warlock-background a:hover {
+a.warlock-background:hover, button.warlock-background:hover, .warlock-background a:hover {
   background-color: #7463a9;
   color: white;
 }
@@ -358,7 +370,7 @@ button.warlock-background:hover, .warlock-background a:hover {
   background-color: #C79C6E;
   color: white;
 }
-button.warrior-background:hover, .warrior-background a:hover {
+a.warrior-background:hover, button.warrior-background:hover, .warrior-background a:hover {
   background-color: #ad8862;
   color: white;
 }
