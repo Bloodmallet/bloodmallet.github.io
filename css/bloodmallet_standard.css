@@ -1,31 +1,24 @@
 body {
   font-weight: 200;
 }
-
 button {
   font-weight: 400;
 }
-
 p {
   font-size: 1.1rem;
 }
-
 nav {
   font-weight: 400;
 }
-
 .bg-light {
-  background-color: #eee !important;
+  background-color: #eee!important;
 }
 
 /* adds a small free space between header and spec buttons */
-
 .wow-class-header-row {
   margin-bottom: 3px;
 }
-
 /* styles the wow class table headers */
-
 .wow-class-header-content {
   font-weight: 400;
   background-color: #343a40;
@@ -33,9 +26,7 @@ nav {
   padding-bottom: 7px;
   font-size: 1.4rem;
 }
-
 /* enforces a small free space between borcer and content */
-
 .spec-cell {
   padding-right: 18px;
   padding-left: 18px;
@@ -44,7 +35,6 @@ nav {
 }
 
 /* Mobile devices */
-
 @media only screen and (max-width: 500px) {
   div.div-table div.mobile {
     display: table;
@@ -61,7 +51,6 @@ nav {
 }
 
 /* Desktop sizes */
-
 @media only screen and (min-width: 501px) {
   div.div-table div.desktop {
     display: table;
@@ -81,31 +70,25 @@ nav {
   background-color: #C41F3B;
   color: white;
 }
-
 a.death_knight-background:hover, button.death_knight-background:hover, .death_knight-background a:hover {
   background-color: #9C132a;
   color: white;
 }
-
 .death_knight-color {
-  color: #C41F3B !important;
+  color: #C41F3B!important;
 }
-
 .death_knight-menu-border {
   border-top: 3px solid transparent;
   border-bottom: 3px solid transparent;
   transition: border-bottom .20s ease-in;
 }
-
-.death_knight-menu-border:hover {
+.death_knight-menu-border:hover{
   border-bottom: 3px solid #C41F3B;
   transition: border-bottom .01s ease-in;
 }
-
 .death_knight-menu-border.active {
   border-bottom: 3px solid #C41F3B;
 }
-
 .death_knight-button {
   border: 1px solid #af1630;
 }
@@ -114,31 +97,25 @@ a.death_knight-background:hover, button.death_knight-background:hover, .death_kn
   background-color: #A330C9;
   color: white;
 }
-
 a.demon_hunter-background:hover, button.demon_hunter-background:hover, .demon_hunter-background a:hover {
   background-color: #731c90;
   color: white;
 }
-
 .demon_hunter-color {
-  color: #A330C9 !important;
+  color: #A330C9!important;
 }
-
 .demon_hunter-menu-border {
   border-top: 3px solid transparent;
   border-bottom: 3px solid transparent;
   transition: border-bottom .20s ease-in;
 }
-
-.demon_hunter-menu-border:hover {
+.demon_hunter-menu-border:hover{
   border-bottom: 3px solid #A330C9;
   transition: border-bottom .01s ease-in;
 }
-
 .demon_hunter-menu-border.active {
   border-bottom: 3px solid #A330C9;
 }
-
 .demon_hunter-button {
   border: 1px solid darkmagenta;
 }
@@ -147,31 +124,25 @@ a.demon_hunter-background:hover, button.demon_hunter-background:hover, .demon_hu
   background-color: #FF7D0A;
   color: white;
 }
-
 a.druid-background:hover, button.druid-background:hover, .druid-background a:hover {
   background-color: #D66400;
   color: white;
 }
-
 .druid-color {
-  color: #FF7D0A !important;
+  color: #FF7D0A!important;
 }
-
 .druid-menu-border {
   border-top: 3px solid transparent;
   border-bottom: 3px solid transparent;
   transition: border-bottom .20s ease-in;
 }
-
-.druid-menu-border:hover {
+.druid-menu-border:hover{
   border-bottom: 3px solid #FF7D0A;
   transition: border-bottom .01s ease-in;
 }
-
 .druid-menu-border.active {
   border-bottom: 3px solid #FF7D0A;
 }
-
 .druid-button {
   border: 1px solid #de6e0a;
 }
@@ -180,31 +151,25 @@ a.druid-background:hover, button.druid-background:hover, .druid-background a:hov
   background-color: #ABD473;
   color: black;
 }
-
 a.hunter-background:hover, button.hunter-background:hover, .hunter-background a:hover {
   background-color: #799a4c;
   color: black;
 }
-
 .hunter-color {
-  color: #ABD473 !important;
+  color: #ABD473!important;
 }
-
 .hunter-menu-border {
   border-top: 3px solid transparent;
   border-bottom: 3px solid transparent;
   transition: border-bottom .20s ease-in;
 }
-
-.hunter-menu-border:hover {
+.hunter-menu-border:hover{
   border-bottom: 3px solid #ABD473;
   transition: border-bottom .01s ease-in;
 }
-
 .hunter-menu-border.active {
   border-bottom: 3px solid #ABD473;
 }
-
 .hunter-button {
   border: 1px solid #799a4c;
 }
@@ -213,31 +178,25 @@ a.hunter-background:hover, button.hunter-background:hover, .hunter-background a:
   background-color: #69CCF0;
   color: black;
 }
-
 a.mage-background:hover, button.mage-background:hover, .mage-background a:hover {
   background-color: #4dabce;
   color: black;
 }
-
 .mage-color {
-  color: #69CCF0 !important;
+  color: #69CCF0!important;
 }
-
 .mage-menu-border {
   border-top: 3px solid transparent;
   border-bottom: 3px solid transparent;
   transition: border-bottom .20s ease-in;
 }
-
-.mage-menu-border:hover {
+.mage-menu-border:hover{
   border-bottom: 3px solid #69CCF0;
   transition: border-bottom .01s ease-in;
 }
-
 .mage-menu-border.active {
   border-bottom: 3px solid #69CCF0;
 }
-
 .mage-button {
   border: 1px solid #56b5d8;
 }
@@ -246,31 +205,25 @@ a.mage-background:hover, button.mage-background:hover, .mage-background a:hover 
   background-color: #00FF96;
   color: black;
 }
-
-a.monk-background:hover, button.monk-background:hover, .monk-background a:hover {
+a.monk-background:hover, button.monk-background:hover,.monk-background a:hover {
   background-color: #03ce7a;
   color: black;
 }
-
 .monk-color {
-  color: #00FF96 !important;
+  color: #00FF96!important;
 }
-
 .monk-menu-border {
   border-top: 3px solid transparent;
   border-bottom: 3px solid transparent;
   transition: border-bottom .20s ease-in;
 }
-
-.monk-menu-border:hover {
+.monk-menu-border:hover{
   border-bottom: 3px solid #00FF96;
   transition: border-bottom .01s ease-in;
 }
-
 .monk-menu-border.active {
   border-bottom: 3px solid #00FF96;
 }
-
 .monk-button {
   border: 1px solid #02e688;
 }
@@ -279,31 +232,25 @@ a.monk-background:hover, button.monk-background:hover, .monk-background a:hover 
   background-color: #F58CBA;
   color: black;
 }
-
-a.paladin-background:hover, button.paladin-background:hover, .paladin-background a:hover {
+a.paladin-background:hover, button.paladin-background:hover,.paladin-background a:hover {
   background-color: #d878a2;
   color: black;
 }
-
 .paladin-color {
-  color: #F58CBA !important;
+  color: #F58CBA!important;
 }
-
 .paladin-menu-border {
   border-top: 3px solid transparent;
   border-bottom: 3px solid transparent;
   transition: border-bottom .20s ease-in;
 }
-
-.paladin-menu-border:hover {
+.paladin-menu-border:hover{
   border-bottom: 3px solid #F58CBA;
   transition: border-bottom .01s ease-in;
 }
-
 .paladin-menu-border.active {
   border-bottom: 3px solid #F58CBA;
 }
-
 .paladin-button {
   border: 1px solid #e2a5b0;
 }
@@ -312,35 +259,28 @@ a.paladin-background:hover, button.paladin-background:hover, .paladin-background
   background-color: #ffffff;
   color: black;
 }
-
 button.priest-background {
   border: 1px solid black;
 }
-
 a.priest-background:hover, button.priest-background:hover, .priest-background a:hover {
   background-color: #cccccc;
   color: black;
 }
-
 .priest-color {
-  color: #ffffff !important;
+  color: #ffffff!important;
 }
-
 .priest-menu-border {
   border-top: 3px solid transparent;
   border-bottom: 3px solid transparent;
   transition: border-bottom .20s ease-in;
 }
-
-.priest-menu-border:hover {
+.priest-menu-border:hover{
   border-bottom: 3px solid #ffffff;
   transition: border-bottom .01s ease-in;
 }
-
 .priest-menu-border.active {
   border-bottom: 3px solid #ffffff;
 }
-
 .priest-button {
   border: 1px solid #ccc;
 }
@@ -349,31 +289,25 @@ a.priest-background:hover, button.priest-background:hover, .priest-background a:
   background-color: #FFF569;
   color: black;
 }
-
 a.rogue-background:hover, button.rogue-background:hover, .rogue-background a:hover {
   background-color: #d6cc52;
   color: black;
 }
-
 .rogue-color {
-  color: #FFF569 !important;
+  color: #FFF569!important;
 }
-
 .rogue-menu-border {
   border-top: 3px solid transparent;
   border-bottom: 3px solid transparent;
   transition: border-bottom .20s ease-in;
 }
-
-.rogue-menu-border:hover {
+.rogue-menu-border:hover{
   border-bottom: 3px solid #FFF569;
   transition: border-bottom .01s ease-in;
 }
-
 .rogue-menu-border.active {
   border-bottom: 3px solid #FFF569;
 }
-
 .rogue-button {
   border: 1px solid #dcd352;
 }
@@ -382,31 +316,25 @@ a.rogue-background:hover, button.rogue-background:hover, .rogue-background a:hov
   background-color: #0070DE;
   color: white;
 }
-
 a.shaman-background:hover, button.shaman-background:hover, .shaman-background a:hover {
   background-color: #1744d0;
   color: white;
 }
-
 .shaman-color {
-  color: #0070DE !important;
+  color: #0070DE!important;
 }
-
 .shaman-menu-border {
   border-top: 3px solid transparent;
   border-bottom: 3px solid transparent;
   transition: border-bottom .20s ease-in;
 }
-
-.shaman-menu-border:hover {
+.shaman-menu-border:hover{
   border-bottom: 3px solid #0070DE;
   transition: border-bottom .01s ease-in;
 }
-
 .shaman-menu-border.active {
   border-bottom: 3px solid #0070DE;
 }
-
 .shaman-button {
   border: 1px solid blue;
 }
@@ -415,31 +343,25 @@ a.shaman-background:hover, button.shaman-background:hover, .shaman-background a:
   background-color: #9482C9;
   color: white;
 }
-
 a.warlock-background:hover, button.warlock-background:hover, .warlock-background a:hover {
   background-color: #7463a9;
   color: white;
 }
-
 .warlock-color {
-  color: #9482C9 !important;
+  color: #9482C9!important;
 }
-
 .warlock-menu-border {
   border-top: 3px solid transparent;
   border-bottom: 3px solid transparent;
   transition: border-bottom .20s ease-in;
 }
-
-.warlock-menu-border:hover {
+.warlock-menu-border:hover{
   border-bottom: 3px solid #9482C9;
   transition: border-bottom .01s ease-in;
 }
-
 .warlock-menu-border.active {
   border-bottom: 3px solid #9482C9;
 }
-
 .warlock-button {
   border: 1px solid #7463a9;
 }
@@ -448,45 +370,25 @@ a.warlock-background:hover, button.warlock-background:hover, .warlock-background
   background-color: #C79C6E;
   color: white;
 }
-
 a.warrior-background:hover, button.warrior-background:hover, .warrior-background a:hover {
   background-color: #ad8862;
   color: white;
 }
-
 .warrior-color {
-  color: #C79C6E !important;
+  color: #C79C6E!important;
 }
-
 .warrior-menu-border {
   border-top: 3px solid transparent;
   border-bottom: 3px solid transparent;
   transition: border-bottom .20s ease-in;
 }
-
-.warrior-menu-border:hover {
+.warrior-menu-border:hover{
   border-bottom: 3px solid #C79C6E;
   transition: border-bottom .01s ease-in;
 }
-
 .warrior-menu-border.active {
   border-bottom: 3px solid #C79C6E;
 }
-
 .warrior-button {
   border: 1px solid #ab845a;
-}
-
-main{
-  min-height: 82vh;
-  bottom:0; right:0; left:0;
-}
-
-footer {
-  width: 100%;
-  position: relative;
-  height: 55px;
-  bottom: 0px;
-  right: 0px;
-  margin-top: 2em;
 }
