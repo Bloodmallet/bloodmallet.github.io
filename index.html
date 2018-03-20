@@ -33,6 +33,23 @@
       }
     };
   </script>
+
+  <!-- from https://cookieconsent.insites.com/download/ -->
+  <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
+  <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+  <script>
+  window.addEventListener("load", function(){
+  window.cookieconsent.initialise({
+    "palette": {
+      "popup": {
+        "background": "#000"
+      },
+      "button": {
+        "background": "#f1d600"
+      }
+    }
+  })});
+  </script>
   <title>Bloody( tools ) - simulation data for everyone</title>
 </head>
 
@@ -223,6 +240,7 @@
   <!-- Top menu end -->
   <br/>
 
+<main>
   <!-- Introduction -->
   <div class="container-fluid" id="welcome_container">
     <h1 class="display-4 text-center" id="main_header">Bloody<wbr>(<span id="bloodyfiller">&nbsp;tools&nbsp;</span>)
@@ -759,7 +777,7 @@
           </li>
         </ul>
         <!-- Warrior Arms -->
-        <ul class="tc-box" id="tc_warrrior_arms" hidden>
+        <ul class="tc-box" id="tc_warrior_arms" hidden>
           <li>
             <a href="https://docs.google.com/document/d/1e2yNSETe1RrFPe5upmuhGxi1-nF3wFyJYHGcgMlir0Y/preview" target="blank">Arms Guide</a>
           </li>
@@ -768,7 +786,7 @@
           </li>
         </ul>
         <!-- Warrior Fury -->
-        <ul class="tc-box" id="tc_warrrior_arms" hidden>
+        <ul class="tc-box" id="tc_warrior_fury" hidden>
           <li>
             <a href="http://www.mmo-champion.com/threads/2234802-7-2-5-Fury-Guide-amp-FAQ" target="blank">Fury Guide</a>
           </li>
@@ -779,8 +797,9 @@
       </li>
     </ul>
   </div>
+</main>
 
-
+<footer>
   <!-- Bottom menu -->
   <nav class="navbar navbar-expand-md navbar-dark bg-dark border-top">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarBottomMenu" aria-controls="navbarBottomMenu"
@@ -802,6 +821,7 @@
     </div>
   </nav>
   <!-- Bottom menu End -->
+</footer>
 
 
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
