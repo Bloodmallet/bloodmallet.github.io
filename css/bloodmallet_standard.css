@@ -10,6 +10,21 @@ p {
 nav {
   font-weight: 400;
 }
+/* container for all page content */
+main{
+  min-height: 82vh;
+  bottom:0; right:0; left:0;
+}
+/* container for bottom navigation */
+footer {
+  width: 100%;
+  position: relative;
+  height: 55px;
+  bottom: 0px;
+  right: 0px;
+  margin-top: 2em;
+}
+
 .bg-light {
   background-color: #eee!important;
 }
@@ -391,18 +406,4 @@ a.warrior-background:hover, button.warrior-background:hover, .warrior-background
 }
 .warrior-button {
   border: 1px solid #ab845a;
-}
-
-main{
-  min-height: 82vh;
-  bottom:0; right:0; left:0;
-}
-
-footer {
-  width: 100%;
-  position: relative;
-  height: 55px;
-  bottom: 0px;
-  right: 0px;
-  margin-top: 2em;
 }
