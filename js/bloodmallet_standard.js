@@ -54,7 +54,7 @@ const translation_IDs = [
   "translate_contact",
   "translate_impressum",
   "show_trinkets_data",
-  "show_azurite_traits_data",
+  "show_azerite_traits_data",
   "show_races_data",
   "fight_style_patchwerk",
   "fight_style_beastlord",
@@ -114,7 +114,7 @@ var data_view = "trinkets";
 
 const data_view_IDs = [
   "show_trinkets_data", // => trinkets
-  "show_azurite_traits_data", // => azurite_traits
+  "show_azerite_traits_data", // => azerite_traits
   "show_races_data" // => races
 ];
 const fight_style_IDs = [
@@ -659,8 +659,8 @@ document.addEventListener("DOMContentLoaded", function () {
     data_view = "trinkets";
     update_data_buttons();
   });
-  document.getElementById("show_azurite_traits_data").addEventListener("click", function () {
-    data_view = "azurite_traits";
+  document.getElementById("show_azerite_traits_data").addEventListener("click", function () {
+    data_view = "azerite_traits";
     update_data_buttons();
   });
   document.getElementById("show_races_data").addEventListener("click", function () {
