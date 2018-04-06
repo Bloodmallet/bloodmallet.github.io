@@ -1,4 +1,4 @@
-Highcharts.chart('crucible_paladin_protection_beastlord',
+Highcharts.chart('crucible_paladin_protection_beastlord', 
 {
     chart: {
         type: "bar"
@@ -40,24 +40,24 @@ Highcharts.chart('crucible_paladin_protection_beastlord',
         {
             color: "#343434",
             data: [
-                50298,
-                35557,
-                35410,
-                33290,
-                29680,
-                26524,
+                49822,
+                35895,
+                34919,
+                34293,
+                30007,
+                27820,
                 0,
-                25165,
-                24235,
-                22728,
+                24843,
+                24510,
+                22532,
                 0,
-                18684,
-                14107,
-                8464,
-                5642,
+                20274,
+                14201,
+                8520,
+                5680,
                 0,
                 0,
-                2821
+                2840
             ],
             name: 1,
             showInLegend: false
@@ -71,17 +71,17 @@ Highcharts.chart('crucible_paladin_protection_beastlord',
                 0,
                 0,
                 0,
-                26123,
+                27307,
                 0,
                 0,
                 0,
-                19057,
+                20601,
                 0,
                 0,
                 0,
                 0,
-                4660,
-                2950,
+                4650,
+                4248,
                 0
             ],
             name: 1,
@@ -89,11 +89,11 @@ Highcharts.chart('crucible_paladin_protection_beastlord',
         }
     ],
     subtitle: {
-        text: "UTC 2018-01-31 11:53 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/0c4b430f56bfb215b32c304915fc49e966d0b553\" target=\"blank\">0c4b430</a>",
+        text: "UTC 2018-04-06 10:48 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7d779968338362996c1eca6d04269bb42ff808ab\" target=\"blank\">7d77996</a>",
         useHTML: true
     },
     title: {
-        text: "Paladin - Protection DPS - Beastlord",
+        text: "Paladin - Protection - Beastlord",
         useHTML: true
     },
     tooltip: {
@@ -109,8 +109,8 @@ Highcharts.chart('crucible_paladin_protection_beastlord',
     xAxis: {
         categories: [
             "<a href=\"http://www.wowhead.com/spell=252922\">Dark Sorrows</a>",
-            "<a href=\"http://www.wowhead.com/spell=253070\">Secure in the Light</a>",
             "<a href=\"http://www.wowhead.com/spell=253093\">Infusion of Light</a>",
+            "<a href=\"http://www.wowhead.com/spell=253070\">Secure in the Light</a>",
             "<a href=\"http://www.wowhead.com/spell=252875\">Shadowbind</a>",
             "<a href=\"http://www.wowhead.com/spell=252888\">Chaotic Darkness</a>",
             "<a href=\"http://www.wowhead.com/spell=252088\">Light Speed</a>",
@@ -123,8 +123,8 @@ Highcharts.chart('crucible_paladin_protection_beastlord',
             "<a href=\"http://www.wowhead.com/spell=250879\">+5 itemlevel</a>",
             "+3 itemlevel",
             "+2 itemlevel",
-            "<a href=\"http://www.wowhead.com/spell=209217\">Stern Judgment</a>",
             "<a href=\"http://www.wowhead.com/spell=239294\">Righteous Crusader</a>",
+            "<a href=\"http://www.wowhead.com/spell=209217\">Stern Judgment</a>",
             "+1 itemlevel"
         ],
         labels: {

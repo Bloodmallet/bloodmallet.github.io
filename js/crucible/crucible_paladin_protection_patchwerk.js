@@ -1,4 +1,4 @@
-Highcharts.chart('crucible_paladin_protection_patchwerk',
+Highcharts.chart('crucible_paladin_protection_patchwerk', 
 {
     chart: {
         type: "bar"
@@ -40,24 +40,24 @@ Highcharts.chart('crucible_paladin_protection_patchwerk',
         {
             color: "#343434",
             data: [
-                37071,
-                36192,
-                36102,
-                33963,
-                30536,
-                15513,
-                10966,
-                10706,
-                10058,
-                9091,
+                36289,
+                35456,
+                35174,
+                33167,
+                29976,
+                15266,
+                11709,
+                10952,
+                10702,
+                9193,
                 0,
-                6833,
+                6656,
                 0,
                 0,
-                4099,
+                3993,
                 0,
-                2733,
-                1366
+                2662,
+                1331
             ],
             name: 1,
             showInLegend: false
@@ -75,12 +75,12 @@ Highcharts.chart('crucible_paladin_protection_patchwerk',
                 0,
                 0,
                 0,
-                7061,
+                7331,
                 0,
-                5760,
-                4381,
+                5909,
+                4561,
                 0,
-                3097,
+                3548,
                 0,
                 0
             ],
@@ -89,11 +89,11 @@ Highcharts.chart('crucible_paladin_protection_patchwerk',
         }
     ],
     subtitle: {
-        text: "UTC 2018-01-31 11:53 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/0c4b430f56bfb215b32c304915fc49e966d0b553\" target=\"blank\">0c4b430</a>",
+        text: "UTC 2018-04-05 22:34 SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7d779968338362996c1eca6d04269bb42ff808ab\" target=\"blank\">7d77996</a>",
         useHTML: true
     },
     title: {
-        text: "Paladin - Protection DPS - Patchwerk",
+        text: "Paladin - Protection - Patchwerk",
         useHTML: true
     },
     tooltip: {
@@ -109,14 +109,14 @@ Highcharts.chart('crucible_paladin_protection_patchwerk',
     xAxis: {
         categories: [
             "<a href=\"http://www.wowhead.com/spell=252906\">Torment the Weak</a>",
-            "<a href=\"http://www.wowhead.com/spell=253070\">Secure in the Light</a>",
             "<a href=\"http://www.wowhead.com/spell=253093\">Infusion of Light</a>",
+            "<a href=\"http://www.wowhead.com/spell=253070\">Secure in the Light</a>",
             "<a href=\"http://www.wowhead.com/spell=252875\">Shadowbind</a>",
             "<a href=\"http://www.wowhead.com/spell=252888\">Chaotic Darkness</a>",
             "<a href=\"http://www.wowhead.com/spell=252922\">Dark Sorrows</a>",
+            "<a href=\"http://www.wowhead.com/spell=252088\">Light Speed</a>",
             "<a href=\"http://www.wowhead.com/spell=252799\">Shocklight</a>",
             "<a href=\"http://www.wowhead.com/spell=252091\">Master of Shadows</a>",
-            "<a href=\"http://www.wowhead.com/spell=252088\">Light Speed</a>",
             "<a href=\"http://www.wowhead.com/spell=252191\">Murderous Intent</a>",
             "<a href=\"http://www.wowhead.com/spell=209218\">Consecration in Flame</a>",
             "<a href=\"http://www.wowhead.com/spell=250879\">+5 itemlevel</a>",
