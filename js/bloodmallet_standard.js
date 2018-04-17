@@ -187,21 +187,38 @@ var standard_chart = Highcharts.chart('chart',
     },
     series: [
       {
-        color: "#f8f9fa",
+        color: light_color,
         data: [
-          44818,
-          28540,
+          1,
+          1,
+          3,
+          1,
+          3
         ],
-        name: 1,
+        name: "b main",
         showInLegend: false
       },
       {
-        color: "#C41F3B",
+        color: dark_color,
         data: [
           0,
+          0,
+          0,
+          1,
           0
         ],
-        name: 1,
+        name: "b's emptiness",
+        showInLegend: false
+      }, {
+        color: light_color,
+        data: [
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        name: "b's finishing touch",
         showInLegend: false
       }
     ],
@@ -241,8 +258,11 @@ var standard_chart = Highcharts.chart('chart',
     },
     xAxis: {
       categories: [
-        "Category 1",
-        "Category 2",
+        "b",
+        "b",
+        "b",
+        "b",
+        "b",
       ],
       labels: {
         useHTML: true,
