@@ -6,7 +6,7 @@ var active_spec = "";
 // add listeners after document finished loading
 document.addEventListener("DOMContentLoaded", addButtonListeners);
 // enable direct links to charts
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
 
   //load tooltip script if viewport is large enough
   var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
     return;
   }
 
-  var start_chart =  window.location.hash.split("#")[1].split("_");
+  var start_chart = window.location.hash.split("#")[1].split("_");
   // enable pruned if it was in the link
   if (start_chart.length > 3 && start_chart[start_chart.length - 1] == "pruned") {
     var to_prune = true;
@@ -64,17 +64,27 @@ function addButtonListeners() {
   // add spec buttons
   var specSwitchButtons = document.getElementsByClassName("spec-switch-button");
   for (var i = specSwitchButtons.length - 1; i >= 0; i--) {
-    specSwitchButtons[i].addEventListener("click", function(e) {
+    specSwitchButtons[i].addEventListener("click", function (e) {
       switch_chart_to(e.target.name);
-    } );
+    });
   }
 
   // add fight style switch button
-  document.getElementById("fight_style_button").addEventListener("click", switch_fight_style );
-  document.getElementById("pruner").addEventListener("click", switch_pruning );
-  document.getElementById("chart_linker").addEventListener("click", copy_chart_link );
+  document.getElementById("fight_style_button").addEventListener("click", switch_fight_style);
+  document.getElementById("pruner").addEventListener("click", switch_pruning);
+  document.getElementById("chart_linker").addEventListener("click", copy_chart_link);
 }
 
+function create_data_name() {
+  var name;
+  name = "#";
+  name += active_spec + "_" + fight_style;
+  if (pruned) {
+    name += "_pruned";
+  }
+
+  return name;
+}
 
 function copy_chart_link() {
   var path = window.location.origin;
@@ -82,21 +92,17 @@ function copy_chart_link() {
   if (language != "EN") {
     path += "?lang=" + language;
   }
-  path += "#";
-  path += active_spec + "_" + fight_style;
-  if (pruned) {
-    path += "_pruned";
-  }
+  path += create_data_name();
 
   document.getElementById("chart_linker_content").innerHTML = path;
   document.getElementById("chart_linker_content").style.display = "block";
-  window.getSelection().selectAllChildren( document.getElementById( "chart_linker_content" ) );
+  window.getSelection().selectAllChildren(document.getElementById("chart_linker_content"));
   document.execCommand("copy");
   document.getElementById("chart_linker_content").style.display = "none";
 
   var success_message = document.getElementById("copy_success");
   success_message.className = "show";
-  setTimeout(function(){ success_message.className = success_message.className.replace("show", ""); }, 3000);
+  setTimeout(function () { success_message.className = success_message.className.replace("show", ""); }, 3000);
 }
 
 
@@ -105,7 +111,7 @@ function switch_fight_style() {
   if (fight_style == "patchwerk") {
     fight_style = "beastlord";
     document.getElementById("fight_style_button").innerHTML = "&lt; Switch to patchwerk";
-  } else if (fight_style=="beastlord") {
+  } else if (fight_style == "beastlord") {
     fight_style = "patchwerk";
     document.getElementById("fight_style_button").innerHTML = "Switch to beastlord &gt;";
   } else {
@@ -164,7 +170,7 @@ function switch_chart_to(spec) {
       already_loaded = true;
     }
   }
-  if ( ! already_loaded) {
+  if (!already_loaded) {
     getScript(load_path);
   }
 
@@ -200,6 +206,7 @@ function switch_chart_to(spec) {
     //console.log("Starting translation process.");
     setTimeout(translate_charts, 200);
   }
+  window.location.hash = create_data_name();
 }
 
 

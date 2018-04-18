@@ -3,10 +3,10 @@ var active_spec = "";
 
 // add listeners after document finished loading
 document.addEventListener("DOMContentLoaded", addButtonListeners);
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   setTimeout(addCrucibleListeners, 1500);
 });
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
 
   //load tooltip script if viewport is large enough
   var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
   if (window.location.hash == "") {
     return;
   }
-  var start_chart =  window.location.hash.split("#")[1].split("_");
+  var start_chart = window.location.hash.split("#")[1].split("_");
   if (start_chart.length == 4 || start_chart.length == 5) {
     var temp_spec = start_chart[1] + "_" + start_chart[2];
     if (start_chart.length == 5) {
@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     switch_chart_to(temp_spec);
 
-    if (start_chart[start_chart.length-1] != fight_style) {
+    if (start_chart[start_chart.length - 1] != fight_style) {
       switch_fight_style();
     }
   }
@@ -53,14 +53,14 @@ function addButtonListeners() {
   // add spec buttons
   var specSwitchButtons = document.getElementsByClassName("spec-switch-button");
   for (var i = specSwitchButtons.length - 1; i >= 0; i--) {
-    specSwitchButtons[i].addEventListener("click", function(e) {
+    specSwitchButtons[i].addEventListener("click", function (e) {
       switch_chart_to(e.target.name);
-    } );
+    });
   }
 
   // add fight style switch button
-  document.getElementById("fight_style_button").addEventListener("click", switch_fight_style );
-  document.getElementById("chart_linker").addEventListener("click", copy_chart_link );
+  document.getElementById("fight_style_button").addEventListener("click", switch_fight_style);
+  document.getElementById("chart_linker").addEventListener("click", copy_chart_link);
 }
 
 
@@ -70,12 +70,19 @@ function addCrucibleListeners() {
   var crucible_iframes = document.getElementsByTagName("iframe");
   for (var i = crucible_iframes.length - 1; i >= 0; i--) {
     var iframe_content = crucible_iframes[i].contentDocument;
-    iframe_content.addEventListener("click", function(e) {
+    iframe_content.addEventListener("click", function (e) {
       copy_crucible_weights(e);
-    } );
+    });
   }
 }
 
+function create_data_name() {
+  var name;
+  name = "#crucible_";
+  name += active_spec + "_" + fight_style;
+
+  return name;
+}
 
 function copy_chart_link() {
   var path = window.location.origin;
@@ -83,29 +90,29 @@ function copy_chart_link() {
   if (language != "EN") {
     path += "?lang=" + language
   }
-  path += "#crucible_" + active_spec + "_" + fight_style;
+  path += create_data_name();
   document.getElementById("chart_linker_content").innerHTML = path;
   document.getElementById("chart_linker_content").style.display = "block";
 
-  window.getSelection().selectAllChildren( document.getElementById( "chart_linker_content" ) );
+  window.getSelection().selectAllChildren(document.getElementById("chart_linker_content"));
   document.execCommand('copy');
 
   document.getElementById("chart_linker_content").style.display = "none";
 
   var success_message = document.getElementById("copy_success");
   success_message.className = "show";
-  setTimeout(function(){ success_message.className = success_message.className.replace("show", ""); }, 3000);
+  setTimeout(function () { success_message.className = success_message.className.replace("show", ""); }, 3000);
 }
 
 
 function copy_crucible_weights(element) {
   console.log("Copy crucible weight to clipboard.");
-  element.view.getSelection().selectAllChildren( element.view.document.getElementsByTagName("pre")[0].parentNode );
+  element.view.getSelection().selectAllChildren(element.view.document.getElementsByTagName("pre")[0].parentNode);
   element.view.document.execCommand('copy');
   element.view.getSelection().removeAllRanges();
   var success_message = document.getElementById("crucible_copy_success");
   success_message.className = "show";
-  setTimeout(function(){ success_message.className = success_message.className.replace("show", ""); }, 3000);
+  setTimeout(function () { success_message.className = success_message.className.replace("show", ""); }, 3000);
 }
 
 
@@ -114,7 +121,7 @@ function switch_fight_style() {
   if (fight_style == "patchwerk") {
     fight_style = "beastlord";
     document.getElementById("fight_style_button").innerHTML = "&lt; Switch to patchwerk";
-  } else if (fight_style=="beastlord") {
+  } else if (fight_style == "beastlord") {
     fight_style = "patchwerk";
     document.getElementById("fight_style_button").innerHTML = "Switch to beastlord &gt;";
   } else {
@@ -149,7 +156,7 @@ function switch_chart_to(spec) {
       already_loaded = true;
     }
   }
-  if ( ! already_loaded) {
+  if (!already_loaded) {
     getScript("js/crucible/crucible_" + spec + "_" + fight_style + ".js");
   }
 
@@ -180,6 +187,7 @@ function switch_chart_to(spec) {
     //console.log("Starting translation process.");
     setTimeout(translate_charts, 200);
   }
+  window.location.hash = create_data_name();
 }
 
 
