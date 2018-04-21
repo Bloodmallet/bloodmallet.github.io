@@ -7,6 +7,12 @@ button {
 p {
   font-size: 1.1rem;
 }
+a {
+  color: #3e9bff;
+}
+a:hover {
+  color: #3273b9;
+}
 nav {
   font-weight: 400;
 }
@@ -40,6 +46,7 @@ footer {
   padding-top: 3px;
   padding-bottom: 7px;
   font-size: 1.4rem;
+  border-bottom: 1px solid #dee2e6;
 }
 /* enforces a small free space between border and content */
 .spec-cell {
@@ -47,27 +54,27 @@ footer {
   padding-left: 18px;
   padding-top: 3px;
   padding-bottom: 3px;
-  border: 1px solid #dee2e6;
+  border: 0px solid #dee2e6;
   border-right-width: 0px;
   border-bottom-width: 0px;
 }
 
 .spec-cell-border-bottom {
-  border-bottom-width: 1px;
+  border-bottom-width: 0px;
 }
 
 @media only screen and (max-width: 767px) {
   .spec-cell-right-border-small-screen {
-    border-right-width: 1px;
+    border-right-width: 0px;
   }
 }
 
 @media only screen and (min-width: 768px) {
   .spec-cell-right-border-wide-screen {
-    border-right-width: 1px;
+    border-right-width: 0px;
   }
   .spec-cell-bottom-border-wide-screen {
-    border-bottom-width: 1px;
+    border-bottom-width: 0px;
   }
 }
 
@@ -116,6 +123,11 @@ footer {
   .spec-btn:hover {
     text-decoration: none;
   }
+}
+
+.faq-question {
+  margin-top: 45px;
+  font-weight: 200;
 }
 
 .death_knight-background, .death_knight-background a {
@@ -277,7 +289,7 @@ a.monk-background:hover, button.monk-background:hover,.monk-background a:hover {
   border-bottom: 3px solid #00FF96;
 }
 .monk-button {
-  border: 1px solid #02e688;
+  border: 1px solid #01d47d;
 }
 
 .paladin-background, .paladin-background a {
