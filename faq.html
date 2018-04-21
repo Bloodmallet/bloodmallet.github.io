@@ -1,116 +1,351 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" >
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/base.css">
-    <title>Bloody( FAQ )</title>
-    <script type="text/javascript" src="js/base.js"></script>
-    <script>
-      // Set to the same value as the web property used on the site
-      var gaProperty = 'UA-102757416-1';
 
-      // Disable tracking if the opt-out cookie exists.
-      var disableStr = 'ga-disable-' + gaProperty;
-      if (document.cookie.indexOf(disableStr + '=true') > -1) {
-        window[disableStr] = true;
-      }
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Overview of DPS increases from trinkets, azerite traits, and other sources for several specs in World of Warcraft using SimulationCraft's default profiles.">
 
-      // Opt-out function
-      function gaOptout() {
-        document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
-        window[disableStr] = true;
-      }
-    </script>
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  <!-- Make sure Bootstrap is loaded before base, otherwise some styles will be overwritten -->
+  <link rel="stylesheet" href="css/bootstrap.min.css" async>
 
-      ga('create', 'UA-102757416-1', 'auto');
-      ga('set', 'anonymizeIp', true);
-      ga('send', 'pageview');
+  <link rel="stylesheet" href="css/bloodmallet_standard.css" async>
 
-    </script>
-  </head>
-  <body>
-    <div class="central_aligner_outer">
-      <div class="central_aligner_inner">
-        <nav>
-          <ul>
-            <li><a href="./index.html">Trinket Charts</a></li>
-            <li><a href="./trinket_spec_performance.html">Trinket performance <span class="badge badge-new">New</span></a></li>
-            <li><a href="./relics.html">Crucible Charts</a></li>
-            <li><a href="./faq.html">FAQ</a></li>
-            <li><a href="https://github.com/Bloodmallet/bloodmallet.github.io/commits/master">Changelog</a> </li>
-          </ul>
-        </nav>
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () { (i[r].q = i[r].q || []).push(arguments) }, i[r].l = 1 * new Date(); a = s.createElement(o), m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+      //ga('create', 'UA-102757416-1', 'auto');
+      //ga('set', 'anonymizeIp', true);
+      //ga('send', 'pageview');
+
+  </script>
+
+  <!-- from https://cookieconsent.insites.com/download/ -->
+  <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css"
+  />
+  <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+  <script>
+    window.addEventListener("load", function () {
+      window.cookieconsent.initialise({
+        "palette": {
+          "popup": {
+            "background": "#000"
+          },
+          "button": {
+            "background": "#f1d600"
+          }
+        }
+      })
+    });
+  </script>
+  <title>bloodmallet - simulation data for everyone</title>
+</head>
+
+<body class="bg-dark text-light">
+  <!-- Top menu start -->
+  <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark border-bottom">
+    <a class="navbar-brand" href="index.html">bloodmallet</a>
+    <!-- Menu button if device is too small for full menu -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTopMenu" aria-controls="navbarTopMenu"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- Menu list -->
+    <div class="collapse navbar-collapse" id="navbarTopMenu">
+      <!-- Wow classes -->
+      <ul class="navbar-nav">
+
+        <!-- Death Knight -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle death_knight-color death_knight-menu-border translate_death_knight" href="#" id="navbarDeathKnightMenu"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Death Knight
+          </a>
+          <div class="dropdown-menu btn-full death_knight-button death_knight-background" aria-labelledby="navbarDeathKnightMenu">
+            <a class="dropdown-item translate_blood" href="#death_knight_blood">Blood</a>
+            <a class="dropdown-item translate_frost" href="#death_knight_frost">Frost</a>
+            <a class="dropdown-item translate_unholy" href="#death_knight_unholy">Unholy</a>
+          </div>
+        </li>
+
+        <!-- Demon Hunter -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle demon_hunter-color demon_hunter-menu-border translate_demon_hunter" href="#" id="navbarDemonHunterMenu"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Demon Hunter
+          </a>
+          <div class="dropdown-menu btn-full demon_hunter-button  demon_hunter-background" aria-labelledby="navbarDemonHunterMenu">
+            <a class="dropdown-item translate_havoc" href="#demon_hunter_havoc">Havoc</a>
+            <a class="dropdown-item translate_vengeance" href="#demon_hunter_vengeance">Vengeance</a>
+          </div>
+        </li>
+
+        <!-- Druid -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle druid-color druid-menu-border translate_druid" href="#" id="navbarDruidMenu" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">Druid
+          </a>
+          <div class="dropdown-menu btn-full druid-button druid-background" aria-labelledby="navbarDruidMenu">
+            <a class="dropdown-item translate_balance" href="#druid_balance">Balance</a>
+            <a class="dropdown-item translate_feral" href="#druid_feral">Feral</a>
+            <a class="dropdown-item translate_guardian" href="#druid_guardian">Guardian</a>
+          </div>
+        </li>
+
+        <!-- Hunter -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle hunter-color hunter-menu-border translate_hunter" href="#" id="navbarHunterMenu" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">Hunter
+          </a>
+          <div class="dropdown-menu btn-full hunter-button hunter-background" aria-labelledby="navbarHunterMenu">
+            <a class="dropdown-item translate_beast_mastery" href="#hunter_beast_mastery">Beast Mastery</a>
+            <a class="dropdown-item translate_marksmanship" href="#hunter_marksmanship">Marksmanship</a>
+            <a class="dropdown-item translate_survival" href="#hunter_survival">Survival</a>
+          </div>
+        </li>
+
+        <!-- Mage -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle mage-color mage-menu-border translate_mage" href="#" id="navbarMageMenu" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">Mage
+          </a>
+          <div class="dropdown-menu btn-full mage-button mage-background" aria-labelledby="navbarMageMenu">
+            <a class="dropdown-item translate_arcane" href="#mage_arcane">Arcane</a>
+            <a class="dropdown-item translate_fire" href="#mage_fire">Fire</a>
+            <a class="dropdown-item translate_frost" href="#mage_frost">Frost</a>
+          </div>
+        </li>
+
+        <!-- Monk -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle monk-color monk-menu-border translate_monk" href="#" id="navbarMonkMenu" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">Monk
+          </a>
+          <div class="dropdown-menu btn-full monk-button monk-background" aria-labelledby="navbarMonkMenu">
+            <a class="dropdown-item translate_brewmaster" href="#monk_brewmaster">Brewmaster</a>
+            <a class="dropdown-item translate_windwalker" href="#monk_windwalker">Windwalker</a>
+          </div>
+        </li>
+
+        <!-- Paladin -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle paladin-color paladin-menu-border translate_paladin" href="#" id="navbarPaladinMenu" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">Paladin
+          </a>
+          <div class="dropdown-menu btn-full pladin-button paladin-background" aria-labelledby="navbarPaladinMenu">
+            <a class="dropdown-item translate_protection" href="#paladin_protection">Protection</a>
+            <a class="dropdown-item translate_retribution" href="#paladin_retribution">Retribution</a>
+          </div>
+        </li>
+
+        <!-- Priest -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle priest-color priest-menu-border translate_priest" href="#" id="navbarPriestMenu" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">Priest
+          </a>
+          <div class="dropdown-menu btn-full priest-button priest-background" aria-labelledby="navbarPriestMenu">
+            <a class="dropdown-item translate_shadow" href="#priest_shadow">Shadow</a>
+          </div>
+        </li>
+
+        <!-- Rogue -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle rogue-color rogue-menu-border translate_rogue" href="#" id="navbarRogueMenu" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">Rogue
+          </a>
+          <div class="dropdown-menu btn-full rogue-button rogue-background" aria-labelledby="navbarRogueMenu">
+            <a class="dropdown-item translate_assassination" href="#rogue_assassination">Assassination</a>
+            <a class="dropdown-item translate_outlaw" href="#rogue_outlaw">Outlaw</a>
+            <a class="dropdown-item translate_subtlety" href="#rogue_subtlety">Subtlety</a>
+          </div>
+        </li>
+
+        <!-- Shaman -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle shaman-color shaman-menu-border translate_shaman" href="#" id="navbarShamanMenu" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">Shaman
+          </a>
+          <div class="dropdown-menu btn-full shaman-button shaman-background" aria-labelledby="navbarShamanMenu">
+            <a class="dropdown-item translate_elemental" href="#shaman_elemental">Elemental</a>
+            <a class="dropdown-item translate_enhancement" href="#shaman_enhancement">Enhancement</a>
+          </div>
+        </li>
+
+        <!-- Warlock -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle warlock-color warlock-menu-border translate_warlock" href="#" id="navbarWarlockMenu" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">Warlock
+          </a>
+          <div class="dropdown-menu btn-full warlock-button warlock-background" aria-labelledby="navbarWarlockMenu">
+            <a class="dropdown-item translate_affliction" href="#warlock_affliction">Affliction</a>
+            <a class="dropdown-item translate_demonology" href="#warlock_demonology">Demonology</a>
+            <a class="dropdown-item translate_destruction" href="#warlock_destruction">Destruction</a>
+          </div>
+        </li>
+
+        <!-- Warrior -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle warrior-color warrior-menu-border translate_warrior" href="#" id="navbarWarriorMenu" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">Warrior
+          </a>
+          <div class="dropdown-menu btn-full warrior-button warrior-background" aria-labelledby="navbarWarriorMenu">
+            <a class="dropdown-item translate_arms" href="#warrior_arms">Arms</a>
+            <a class="dropdown-item translate_fury" href="#warrior_fury">Fury</a>
+          </div>
+        </li>
+      </ul>
+
+      <!-- Settings -->
+      <ul class="navbar-nav ml-auto">
+        <a class="nav-link dropdown-toggle" href="" id="navbarSettingsMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Settings
+        </a>
+        <form class="dropdown-menu btn-full dropdown-menu-right p-4" aria-labelledby="navbarSettingsMenu" id="settingsDropDown">
+          <!-- dark mode checkbox, ml-auto is margin-left auto max -->
+          <div class="form-group">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="darkModeCheckbox" style="cursor: pointer" checked>
+              <label class="form-check-label" style="cursor: pointer" id="translate_dark_mode" for="darkModeCheckbox">
+                dark mode
+              </label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-control-label" id="translate_language" for="languageSelector">Language:</label>
+            <br/>
+            <select id="languageSelector" title="Language">
+              <option value="CN">简体中文(NYI)</option>
+              <option value="DE">Deutsch</option>
+              <option value="EN" selected>English</option>
+              <option value="ES">Español(NYI)</option>
+              <option value="FR">Français(NYI)</option>
+              <option value="KO">한국어(NYI)</option>
+              <option value="PT">Português Brasileiro(NYI)</option>
+              <option value="RU">Русский(NYI)</option>
+            </select>
+          </div>
+        </form>
+      </ul>
+    </div>
+  </nav>
+  <!-- Top menu end -->
+  <br/>
+
+  <main>
+    <!-- Introduction -->
+    <div class="container-fluid" id="welcome_container">
+      <h1 class="display-4 text-center" id="main_header">FAQ
+      </h1>
+      <div class="row">
+        <div class="offset-md-1 col-md-10">
+          <h2 class="faq-question">What is bloodmallet?</h2>
+          <p>
+            Hello there!
+          </p>
+        </div>
+        <div class="offset-md-1 col-md-10">
+          <h2 class="faq-question">Where do you get your data?</h2>
+          <p>
+            I'm generating all data using SimulationCraft wrapped in my own tools.
+          </p>
+        </div>
+        <div class="offset-md-1 col-md-10">
+          <h2 class="faq-question">What settings do you use?</h2>
+          <p>
+            Tables:
+          </p>
+        </div>
+        <div class="offset-md-1 col-md-10">
+          <h2 class="faq-question">Are the charts up to date?</h2>
+          <p>
+            The struggle is real. Please check the time stamp at the top of each chart. I'm trying my best to keep all charts as up to
+            date as possible. But as long as I have to use my own computer to run all simulations, this blocks all other
+            actions on that machine for at least 24 hours. With enough support via Patreon I might be able to run these simulations
+            in the cloud, allowing a better update circle.
+          </p>
+        </div>
+        <div class="offset-md-1 col-md-10">
+          <h2 class="faq-question">Can I trust your charts?</h2>
+          <p>
+            Yes-ish - for a rough overview. Your own equipment, traits and talents change the value of items and traits for your character.
+            Therefore, simming your own character is the most effective way to know which performs best. The easiest way
+            to do so is by heading to RAIDBOTS, which uses SimulationCraft for you.
+          </p>
+        </div>
+        <div class="offset-md-1 col-md-10">
+          <h2 class="faq-question">Why is X missing?</h2>
+          <p>
+            Chances are, I simply missed it. Please report that via github.
+          </p>
+        </div>
+        <div class="offset-md-1 col-md-10">
+          <h2 class="faq-question">Google Analytics</h2>
+          <p>
+            This website uses Google Analytics, a web analytics service provided by Google, Inc. (“Google”). Google Analytics uses “cookies”,
+            which are text files placed on your computer, to help the website analyze how users use the site. The information
+            generated by the cookie about your use of the website (including your IP address) will be transmitted to and
+            stored by Google on servers in the United States. In case of activation of the IP anonymization, Google will
+            truncate/anonymize the last octet of the IP address for Member States of the European Union as well as for other
+            parties to the Agreement on the European Economic Area. Only in exceptional cases, the full IP address is sent
+            to and shortened by Google servers in the USA. On behalf of the website provider Google will use this information
+            for the purpose of evaluating your use of the website, compiling reports on website activity for website operators
+            and providing other services relating to website activity and internet usage to the website provider. Google
+            will not associate your IP address with any other data held by Google. You may refuse the use of cookies by selecting
+            the appropriate settings on your browser. However, please note that if you do this, you may not be able to use
+            the full functionality of this website. Furthermore you can prevent Google’s collection and use of data (cookies
+            and IP address) by downloading and installing the browser plug-in available under https://tools.google.com/dlpage/gaoptout?hl=en-GB.
+          </p>
+          <p>You can refuse the use of Google Analytics by clicking on the following link. An opt-out cookie will be set on
+            the computer, which prevents the future collection of your data when visiting this website:</p>
+          <p>
+            <a href=“javascript:gaOptout()“>Disable Google Analytics</a>
+          </p>
+          <p>Further information concerning the terms and conditions of use and data privacy can be found at http://www.google.com/analytics/terms/gb.html
+            or at https://www.google.de/intl/en_uk/policies/. Please note that on this website, Google Analytics code is
+            supplemented by “anonymizeIp” to ensure an anonymized collection of IP addresses (so called IP-masking).</p>
+        </div>
       </div>
     </div>
+    <!-- Introduction end -->
+  </main>
 
-    <h1>FAQ</h1>
+  <footer>
+    <!-- Bottom menu -->
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark border-top">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarBottomMenu" aria-controls="navbarBottomMenu"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarBottomMenu">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="faq.html" id="translate_faq">FAQ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/Bloodmallet/bloodmallet.github.io/issues" id="translate_report_an_error" target="blank">Report an error</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.patreon.com/bloodmallet" target="blank">Patreon</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://twitter.com/bloodmallet" target="blank">Twitter @bloodmallet</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://discord.gg/tFR2uvK" target="blank">Discord SimCMinMax</a>
+          </li>
 
-    <h4>How do you generate data?</h4>
-    <p>To generate the data, I'm using <a href="http://www.simulationcraft.org/" target="blank">SimulationCraft</a> and its standard profiles with my own tool, which is called <a href="https://github.com/Bloodmallet/bloodytrinkets" target="blank">Bloodytrinkets</a>. All limitations applying to SimulationCraft apply to these graphs as well.</p>
+        </ul>
+      </div>
+    </nav>
+    <!-- Bottom menu End -->
+  </footer>
 
-    <h4>Can I trust your charts?</h4>
-    <p>Yes-ish - for a rough overview. Your own equipment, legendaries and talents change the value of items and traits for your character. Therefore, simming your own character is the most effective way to know which performs best. The easiest way to do so is by heading to <a href="https://www.raidbots.com/simbot" target="blank">RAIDBOTS</a>, which uses SimulationCraft for you.</p>
 
-    <h4>What SimulationCraft settings do you use?</h4>
-    <ul class="sim-settings" type="square">
-      <li>fight_style: <a href="https://github.com/simulationcraft/simc/wiki/RaidEvents" target="blank">patchwerk and beastlord</a></li>
-      <li>fight_length: 300sec</li>
-      <li>target_error: 0.1% for trinkets and 0.08% for crucible (patchwerk) and 0.25% for trinket and 0.2% for crucibles (beastlord)</li>
-      <li>fixed_time: on</li>
-      <li>optimize_expressions: on</li>
-      <li>default_actions: on</li>
-      <li>ready_trigger: on</li>
-      <li>ptr: off</li>
-      <li>tmi_boss: TMI_Standard_Boss_T19M</li>
-      <li>tmi_boss_type: T19M</li>
-      <li>all not-mentioned settings use SimulationCraft default values</li>
-      <li>base profiles: <a href="http://www.simulationcraft.org/reports/T21_Raid.html" target="blank">T21</a> (the DfA rogue profile and protection paladin dps profile were used in place of the base profiles)</li>
-      <li>a versatility stat stick at ilevel 910 was used in conjunction with the ones in the graph</li>
-    </ul>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="js/bootstrap.min.js"></script>
 
-    <h4>Why do you use a versatility stat stick?</h4>
-    <p>Because not using a second trinket is unrealistic and the stat/damage loss might be able to somehow affect other trinkets. I'm aware that many trinkets are able to affect each other and my hope is that a versatility stat stick affects all trinkets for all specs roughly equally. If you have other thoughts or ideas, please let me know.</p>
+</body>
 
-    <h4>Why did you include the legendary trinket Kil'jaeden's Burning Wish?</h4>
-    <p>Because there are some sad souls out there, who just got their first or second legendary and got that trinket. For everyone else: the legendary trinket doesn't really compete with other trinkets but with other legendaries, because we're only allowed to equip two at the same time. So the "power" of this trinket is somewhat misleading, if you have to unequip a different legendary.</p>
-
-    <h4>Why did you use beastlord?</h4>
-    <p>I chose beastlord because it's a standard add fight style in SimulationCraft and in my opinion currently allows the best look at m+ dungeons and very add heavy fights from all baseline fight styles. Please be aware that m+ trash fights are much shorter than the used time for these sims.</p>
-
-    <h4>Why is there a disclaimer about beastlord?</h4>
-    <p>Because I can't stress the weaknesses of beastlord simulations enough. Beastlord simulations suffer from multiple weaknesses and their graphs should be taken with a huge boulder of salt. The standard profiles are most likely optimized for single target; itemwise (legendary effects and secondaries) and talentwise. As I don't change either it's very much possible that the results you see here, don't reflect the potential for your spec. In addition it's possible that the standard APL does not consider AoE fights. Make sure to check out your theorycrafters resources!</p>
-
-    <h4>Why are timewalking trinkets missing?</h4>
-    <p>Because the graphs have enough entries as is, and the chance to get them are quite rare. Please simulate your own character with those trinkets yourself to see how well they perform.</p>
-
-    <h4>Why is X non-timewalking trinket missing?</h4>
-    <p>Chances are, I simply overlooked it. Please contact me via <a href="https://discord.gg/tFR2uvK" target="blank">SimCMinMax Discord</a> (channel: #bloodytools) or <a href="https://github.com/Bloodmallet/bloodmallet.github.io/issues" target="blank">GitHub - bloodmallet.github.io Issues</a> and create an issue there. I'll make sure to add it to the programm and therefore will add it with the next redoing of the charts to the website.</p>
-
-    <h4>Why do you do this?</h4>
-    <p>Because I wrote this automatation tool (<a href="https://github.com/Bloodmallet/bloodytrinkets" target="blank">GitHub - Bloodytrinkets</a>) and like to run it. And I figured...why not share the results?</p>
-
-    <h4>Where can I submit spelling errors/improvements?</h4>
-    <p>Please use the issue system of the repository for this website. <a href="https://github.com/Bloodmallet/bloodmallet.github.io/issues" target="blank">GitHub - bloodmallet.github.io Issues</a></p>
-
-    <h4>I want to poke you, how am I able to contact you?</h4>
-    <p>The easiest way would be to join the <a href="https://discord.gg/tFR2uvK" target="blank">SimCMinMax Discord</a>. Head to the #bloodytools channel. Writing there will make sure that I'll see it. My nickname is Bloodmallet(EU)#8246.</p>
-
-    <h4 id="support">Is there a way to support you?</h4>
-    <p>There really is no need to support me. But if you like this resource and want to <a href="https://www.paypal.me/bloodmallet" target="blank">make a gift via paypal</a>, you can do so. But please be aware that I'm doing this for fun and for free.</p>
-    <p><a href="https://www.paypal.me/bloodmallet" target="blank"><img src="https://img.shields.io/badge/PayPal-donate-blue.svg"></a></p>
-
-    <h4>How can I keep my data save?</h4>
-    <p>This website uses Google Analytics, a web analytics service provided by Google, Inc. (“Google”). Google Analytics uses “cookies”, which are text files placed on your computer, to help the website analyze how users use the site. The information generated by the cookie about your use of the website (including your IP address) will be transmitted to and stored by Google on servers in the United States. In case of activation of the IP anonymization, Google will truncate/anonymize the last octet of the IP address for Member States of the European Union as well as for other parties to the Agreement on the European Economic Area. Only in exceptional cases, the full IP address is sent to and shortened by Google servers in the USA. On behalf of the website provider Google will use this information for the purpose of evaluating your use of the website, compiling reports on website activity for website operators and providing other services relating to website activity and internet usage to the website provider. Google will not associate your IP address with any other data held by Google. You may refuse the use of cookies by selecting the appropriate settings on your browser. However, please note that if you do this, you may not be able to use the full functionality of this website. Furthermore you can prevent Google’s collection and use of data (cookies and IP address) by downloading and installing the browser plug-in available under https://tools.google.com/dlpage/gaoptout?hl=en-GB.</p>
-    <p>You can refuse the use of Google Analytics by clicking on the following link. An opt-out cookie will be set on the computer, which prevents the future collection of your data when visiting this website:</p>
-    <p><a href=“javascript:gaOptout()“>Disable Google Analytics</a></p>
-    <p>Further information concerning the terms and conditions of use and data privacy can be found at http://www.google.com/analytics/terms/gb.html or at https://www.google.de/intl/en_uk/policies/. Please note that on this website, Google Analytics code is supplemented by “anonymizeIp” to ensure an anonymized collection of IP addresses (so called IP-masking).</p>
-
-  </body>
 </html>
