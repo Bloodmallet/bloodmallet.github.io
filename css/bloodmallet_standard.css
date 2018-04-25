@@ -40,6 +40,9 @@ footer {
 .bg-light {
   background-color: #eee!important;
 }
+.container-fluid {
+  max-width: 1200px;
+}
 
 /* adds a small free space between header and spec buttons */
 .wow-class-header-row {
@@ -88,6 +91,13 @@ footer {
 
 .spec-switch-button {
   font-weight: 400;
+  border-right: 3px solid #232227;
+  border-left: 3px solid #232227;
+  background-color: #232227;
+  color: #eee;
+}
+.spec-switch-button:hover {
+  color: #eee;
 }
 
 /* change tooltips corners */
@@ -143,12 +153,12 @@ footer {
 
 .death_knight-background, .death_knight-background a {
   background-color: #C41F3B;
-  color: white;
+  color: #eee;
   text-shadow: 0px 0px 3px black;
 }
 a.death_knight-background:hover, button.death_knight-background:hover, .death_knight-background a:hover {
   background-color: rgb(170, 21, 46);
-  color: white;
+  color: #eee;
 }
 .death_knight-color {
   color: #C41F3B!important;
@@ -162,21 +172,26 @@ a.death_knight-background:hover, button.death_knight-background:hover, .death_kn
   border-bottom: 3px solid #C41F3B;
   transition: border-bottom .01s ease-in;
 }
-.death_knight-menu-border.active {
+.death_knight-border-bottom, .death_knight-menu-border.active {
   border-bottom: 3px solid #C41F3B;
 }
 .death_knight-button {
-  border: 1px solid #af1630;
+  color: #C41F3B;
+}
+.death_knight-button:hover {
+  color: #C41F3B;
+  border-left: 3px solid #C41F3B;
+  border-right: 3px solid #C41F3B;
 }
 
 .demon_hunter-background, .demon_hunter-background a {
   background-color: #A330C9;
-  color: white;
+  color: #eee;
   text-shadow: 0px 0px 3px black;
 }
 a.demon_hunter-background:hover, button.demon_hunter-background:hover, .demon_hunter-background a:hover {
   background-color: #8223a1;
-  color: white;
+  color: #eee;
 }
 .demon_hunter-color {
   color: #A330C9!important;
@@ -193,18 +208,26 @@ a.demon_hunter-background:hover, button.demon_hunter-background:hover, .demon_hu
 .demon_hunter-menu-border.active {
   border-bottom: 3px solid #A330C9;
 }
+.demon_hunter-border-bottom {
+  border-bottom: 3px solid #A330C9;
+}
 .demon_hunter-button {
-  border: 1px solid rgb(149, 36, 187);
+  color: #A330C9;
+}
+.demon_hunter-button:hover {
+  color: #A330C9;
+  border-left: 3px solid #A330C9;
+  border-right: 3px solid #A330C9;
 }
 
 .druid-background, .druid-background a {
   background-color: #FF7D0A;
-  color: white;
+  color: #eee;
   text-shadow: 0px 0px 3px black;
 }
 a.druid-background:hover, button.druid-background:hover, .druid-background a:hover {
   background-color: #D66400;
-  color: white;
+  color: #eee;
 }
 .druid-color {
   color: #FF7D0A!important;
@@ -221,8 +244,16 @@ a.druid-background:hover, button.druid-background:hover, .druid-background a:hov
 .druid-menu-border.active {
   border-bottom: 3px solid #FF7D0A;
 }
+.druid-border-bottom {
+  border-bottom: 3px solid #FF7D0A;
+}
 .druid-button {
-  border: 1px solid rgb(231, 112, 7);
+  color: #FF7D0A;
+}
+.druid-button:hover {
+  color: #FF7D0A;
+  border-left: 3px solid #FF7D0A;
+  border-right: 3px solid #FF7D0A;
 }
 
 .hunter-background, .hunter-background a {
@@ -248,8 +279,16 @@ a.hunter-background:hover, button.hunter-background:hover, .hunter-background a:
 .hunter-menu-border.active {
   border-bottom: 3px solid #ABD473;
 }
+.hunter-border-bottom {
+  border-bottom: 3px solid #ABD473;
+}
 .hunter-button {
-  border: 1px solid rgb(150, 189, 96);
+  color: #ABD473;
+}
+.hunter-button:hover {
+  color: #ABD473;
+  border-left: 3px solid #ABD473;
+  border-right: 3px solid #ABD473;
 }
 
 .mage-background, .mage-background a {
@@ -275,8 +314,16 @@ a.mage-background:hover, button.mage-background:hover, .mage-background a:hover 
 .mage-menu-border.active {
   border-bottom: 3px solid #69CCF0;
 }
+.mage-border-bottom {
+  border-bottom: 3px solid #69CCF0;
+}
 .mage-button {
-  border: 1px solid #56b5d8;
+  color: #69CCF0;
+}
+.mage-button:hover {
+  color: #69CCF0;
+  border-left: 3px solid #69CCF0;
+  border-right: 3px solid #69CCF0;
 }
 
 .monk-background, .monk-background a {
@@ -302,8 +349,16 @@ a.monk-background:hover, button.monk-background:hover,.monk-background a:hover {
 .monk-menu-border.active {
   border-bottom: 3px solid #00FF96;
 }
+.monk-border-bottom {
+  border-bottom: 3px solid #00FF96;
+}
 .monk-button {
-  border: 1px solid #01d47d;
+  color: #00FF96;
+}
+.monk-button:hover {
+  color: #00FF96;
+  border-left: 3px solid #00FF96;
+  border-right: 3px solid #00FF96;
 }
 
 .paladin-background, .paladin-background a {
@@ -329,8 +384,16 @@ a.paladin-background:hover, button.paladin-background:hover,.paladin-background 
 .paladin-menu-border.active {
   border-bottom: 3px solid #F58CBA;
 }
+.paladin-border-bottom {
+  border-bottom: 3px solid #F58CBA;
+}
 .paladin-button {
-  border: 1px solid rgb(219, 120, 163);
+  color: #F58CBA;
+}
+.paladin-button:hover {
+  color: #F58CBA;
+  border-left: 3px solid #F58CBA;
+  border-right: 3px solid #F58CBA;
 }
 
 .priest-background, .priest-background a {
@@ -359,8 +422,16 @@ a.priest-background:hover, button.priest-background:hover, .priest-background a:
 .priest-menu-border.active {
   border-bottom: 3px solid #ffffff;
 }
+.priest-border-bottom {
+  border-bottom: 3px solid #ffffff;
+}
 .priest-button {
-  border: 1px solid #ccc;
+  color: #ffffff;
+}
+.priest-button:hover {
+  color: #ffffff;
+  border-left: 3px solid #ffffff;
+  border-right: 3px solid #ffffff;
 }
 
 .rogue-background, .rogue-background a {
@@ -386,18 +457,26 @@ a.rogue-background:hover, button.rogue-background:hover, .rogue-background a:hov
 .rogue-menu-border.active {
   border-bottom: 3px solid #FFF569;
 }
+.rogue-border-bottom {
+  border-bottom: 3px solid #FFF569;
+}
 .rogue-button {
-  border: 1px solid #dcd352;
+  color: #FFF569;
+}
+.rogue-button:hover {
+  color: #FFF569;
+  border-left: 3px solid #FFF569;
+  border-right: 3px solid #FFF569;
 }
 
 .shaman-background, .shaman-background a {
   background-color: #0070DE;
-  color: white;
+  color: #eee;
   text-shadow: 0px 0px 3px black;
 }
 a.shaman-background:hover, button.shaman-background:hover, .shaman-background a:hover {
   background-color: rgb(19, 93, 167);
-  color: white;
+  color: #eee;
 }
 .shaman-color {
   color: #0070DE!important;
@@ -414,18 +493,26 @@ a.shaman-background:hover, button.shaman-background:hover, .shaman-background a:
 .shaman-menu-border.active {
   border-bottom: 3px solid #0070DE;
 }
+.shaman-border-bottom {
+  border-bottom: 3px solid #0070DE;
+}
 .shaman-button {
-  border: 1px solid rgb(2, 89, 177);
+  color: #0070DE;
+}
+.shaman-button:hover {
+  color: #0070DE;
+  border-left: 3px solid #0070DE;
+  border-right: 3px solid #0070DE;
 }
 
 .warlock-background, .warlock-background a {
   background-color: #9482C9;
-  color: white;
+  color: #eee;
   text-shadow: 0px 0px 3px black;
 }
 a.warlock-background:hover, button.warlock-background:hover, .warlock-background a:hover {
   background-color: #7463a9;
-  color: white;
+  color: #eee;
 }
 .warlock-color {
   color: #9482C9!important;
@@ -442,18 +529,26 @@ a.warlock-background:hover, button.warlock-background:hover, .warlock-background
 .warlock-menu-border.active {
   border-bottom: 3px solid #9482C9;
 }
+.warlock-border-bottom {
+  border-bottom: 3px solid #9482C9;
+}
 .warlock-button {
-  border: 1px solid #7463a9;
+  color: #9482C9;
+}
+.warlock-button:hover {
+  color: #9482C9;
+  border-left: 3px solid #9482C9;
+  border-right: 3px solid #9482C9;
 }
 
 .warrior-background, .warrior-background a {
   background-color: #C79C6E;
-  color: white;
+  color: #eee;
   text-shadow: 0px 0px 3px black;
 }
 a.warrior-background:hover, button.warrior-background:hover, .warrior-background a:hover {
   background-color: #ad8862;
-  color: white;
+  color: #eee;
 }
 .warrior-color {
   color: #C79C6E!important;
@@ -470,6 +565,14 @@ a.warrior-background:hover, button.warrior-background:hover, .warrior-background
 .warrior-menu-border.active {
   border-bottom: 3px solid #C79C6E;
 }
+.warrior-border-bottom {
+  border-bottom: 3px solid #C79C6E;
+}
 .warrior-button {
-  border: 1px solid #ab845a;
+  color: #C79C6E;
+}
+.warrior-button:hover {
+  color: #C79C6E;
+  border-left: 3px solid #C79C6E;
+  border-right: 3px solid #C79C6E;
 }
