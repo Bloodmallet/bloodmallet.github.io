@@ -4,6 +4,8 @@
 //
 ---------------------------------------------------------*/
 
+/* Variable intended for dev mode specific output/markings */
+var dev_mode = true;
 
 /** visual modes
  *   hidden: hides these general elements
@@ -51,8 +53,7 @@ const translation_IDs = [
   "navbarSettingsMenu",
   "translate_dark_mode",
   "translate_faq",
-  "translate_contact",
-  "translate_impressum",
+  "translate_report_an_error",
   "show_trinkets_data",
   "show_azerite_traits_data",
   "show_races_data",
@@ -119,7 +120,8 @@ const data_view_IDs = [
 ];
 const fight_style_IDs = [
   "fight_style_patchwerk",
-  "fight_style_beastlord"
+  "fight_style_beastlord",
+  "copy_link"
 ];
 
 var light_color = "#eee";
@@ -346,7 +348,8 @@ document.addEventListener("DOMContentLoaded", search_dark_mode_cookie);
 
 /** add listener to the dark mode checkbox */
 document.addEventListener("DOMContentLoaded", function () {
-  console.log("addEventListener darkModeCheckbox");
+  if (dev_mode)
+    console.log("addEventListener darkModeCheckbox");
   document.getElementById("darkModeCheckbox").addEventListener("change", function (e) {
     dark_mode = e.target.checked;
     update_dark_mode();
@@ -356,7 +359,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 /** Updates dark mode based on dark mode check box. */
 function update_dark_mode() {
-  console.log("update_dark_mode");
+  if (dev_mode)
+    console.log("update_dark_mode");
 
   if (dark_mode) {
     document.getElementsByTagName("body")[0].classList.remove("bg-light");
@@ -447,7 +451,8 @@ function update_dark_mode() {
 
 /** save the current dark_mode value in a cookie */
 function set_dark_mode_cookie() {
-  console.log("set_dark_mode_cookie");
+  if (dev_mode)
+    console.log("set_dark_mode_cookie");
   var cookie_name = "bloodmallet_dark_mode";
   var duration = new Date();
   var days = 31;
@@ -457,7 +462,8 @@ function set_dark_mode_cookie() {
 
 /** searches for the dark mode cookie and updates the page if necessary */
 function search_dark_mode_cookie() {
-  console.log("search_dark_mode_cookie");
+  if (dev_mode)
+    console.log("search_dark_mode_cookie");
   var cookie_array = document.cookie.split(";");
   cookie_array.forEach(element => {
     if (element.indexOf("bloodmallet_dark_mode=") > -1) {
@@ -484,15 +490,17 @@ const filler_possibilities_epic = ["\\_/"];
 // I'm looking for more silly smileys. Contact me! Maybe your smiley can make it into the epic category.
 
 document.addEventListener("DOMContentLoaded", function () {
-  console.log("addEventListener bloodyfiller");
-  document.getElementById("bloodyfiller").addEventListener("click", randomize_bloodyfiller);
+  if (dev_mode)
+    console.log("addEventListener bloodyfiller");
+  //document.getElementById("bloodyfiller").addEventListener("click", randomize_bloodyfiller);
 });
 
 /**
  * Randomize the CONTENT of Bloody(CONTENT) header on the main page.
  */
 function randomize_bloodyfiller() {
-  console.log("randomize_bloodyfiller");
+  if (dev_mode)
+    console.log("randomize_bloodyfiller");
   var roll = Math.floor(Math.random() * (filler_possibilities_common.length + 1));
   while (filler_possibilities_common[roll] == bloodyfiller) {
     roll = Math.floor(Math.random() * (filler_possibilities_common.length + 1));
@@ -530,7 +538,8 @@ function randomize_bloodyfiller() {
 document.addEventListener("DOMContentLoaded", search_language_cookie);
 
 document.addEventListener("DOMContentLoaded", function () {
-  console.log("addEventListener languageSelector");
+  if (dev_mode)
+    console.log("addEventListener languageSelector");
   document.getElementById("languageSelector").addEventListener("change", function () {
     switch_language(this.options[this.selectedIndex].value);
   });
@@ -540,7 +549,8 @@ document.addEventListener("DOMContentLoaded", function () {
  * Switches the language and calls translate_page to do the actual translation.
 */
 function switch_language(new_language) {
-  console.log("switch_language");
+  if (dev_mode)
+    console.log("switch_language");
   // if new language is different to already active language and if it wasn't already loaded
   if (new_language != language && !loaded_languages[new_language]) {
     var xhttp_getLanguage = new XMLHttpRequest();
@@ -571,7 +581,8 @@ function switch_language(new_language) {
  * translate all translation_IDs and translation_classes. Does NOT translate charts. Use translate_chart() for that
  */
 function translate_page() {
-  console.log("translate_page");
+  if (dev_mode)
+    console.log("translate_page");
   // get the translation options
   var language_html_elements = document.getElementById("languageSelector").options;
   // de-select whatever language option was chosen
@@ -592,9 +603,13 @@ function translate_page() {
     } else if (loaded_languages[language][element] === "") {
       // Don't translate
       console.log("No translation for '" + element + "' available. Help improve the page by submitting a bug report. Or even better: clone the repo, fix the problem, and create a pull request. Any help is greatly appreciated!");
+      if (dev_mode)
+        document.getElementById(element).style.border = "1px solid red";
     } else {
       // Don't translate
       console.log("Language package '" + language + "' doesn't have '" + element + "' added to it or the ID is missing in the page. Help improve the page by submitting a bug report. Or even better: clone the repo, fix the problem, and create a pull request. Any help is greatly appreciated!");
+      if (dev_mode)
+        document.getElementById(element).style.border = "1px solid red";
     }
   });
 
@@ -609,9 +624,23 @@ function translate_page() {
     } else if (loaded_languages[language][element] === "") {
       // Don't translate
       console.log("No translation for '" + element + "' available. Help improve the page by submitting a bug report. Or even better: clone the repo, fix the problem, and create a pull request. Any help is greatly appreciated!");
+      if (dev_mode) {
+        var targets = document.getElementsByClassName(element);
+        for (let index = 0; index < targets.length; index++) {
+          const html_element = targets[index];
+          html_element.style.border = "1px solid red";
+        }
+      }
     } else {
       // Don't translate
       console.log("Language package '" + language + "' doesn't have '" + element + "' added to it or the ID is missing in the page. Help improve the page by submitting a bug report. Or even better: clone the repo, fix the problem, and create a pull request. Any help is greatly appreciated!");
+      if (dev_mode) {
+        var targets = document.getElementsByClassName(element);
+        for (let index = 0; index < targets.length; index++) {
+          const html_element = targets[index];
+          html_element.style.border = "1px solid red";
+        }
+      }
     }
   });
 }
@@ -619,13 +648,15 @@ function translate_page() {
 /** Translates the current chart.
  *  assumption: only one chart is present */
 function translate_chart() {
-  console.log("translate_chart");
+  if (dev_mode)
+    console.log("translate_chart");
   console.log("translate_chart() is not yet implemented.")
 }
 
 /** Save the current language in a cookie. */
 function set_language_cookie() {
-  console.log("set_language_cookie");
+  if (dev_mode)
+    console.log("set_language_cookie");
   var cookie_name = "bloodmallet_language_selection";
   var duration = new Date();
   var days = 31;
@@ -635,7 +666,8 @@ function set_language_cookie() {
 
 /** Searches for the dark mode cookie and updates the page if necessary. */
 function search_language_cookie() {
-  console.log("search_language_cookie");
+  if (dev_mode)
+    console.log("search_language_cookie");
   var language_found = false;
   var cookie_array = document.cookie.split(";");
   cookie_array.forEach(element => {
@@ -662,7 +694,8 @@ function search_language_cookie() {
 
 /** Load spec and data mode if a spec link was used. */
 document.addEventListener("DOMContentLoaded", function () {
-  console.log("eventListener, used link interpretation");
+  if (dev_mode)
+    console.log("eventListener, used link interpretation");
 
   get_class_spec_from_link();
   if (chosen_spec) {
@@ -701,7 +734,8 @@ document.addEventListener("DOMContentLoaded", function () {
  * Update the global class and spec variables from the current url.
  */
 function get_class_spec_from_link() {
-  console.log("get_class_spec_from_link");
+  if (dev_mode)
+    console.log("get_class_spec_from_link");
   var hash = window.location.hash;
   var combined_class_spec = "";
   if (hash.indexOf("?") > -1) {
@@ -724,7 +758,8 @@ function get_class_spec_from_link() {
  * Returns the language (lang-attribute) from link, else return false.
  */
 function get_language_from_link() {
-  console.log("get_language_from_link");
+  if (dev_mode)
+    console.log("get_language_from_link");
   var string = window.location.search;
   if (window.location.hash.indexOf("?") > -1) {
     string = window.location.hash.slice(window.location.hash.indexOf("?"));
@@ -743,7 +778,8 @@ function get_language_from_link() {
  * A spec is considered valid if a json file for it can be found.
  */
 window.onhashchange = function () {
-  console.log("window.onhashchange");
+  if (dev_mode)
+    console.log("window.onhashchange");
   switch_mode();
   // re-translate everything again?
 };
@@ -752,7 +788,8 @@ window.onhashchange = function () {
  * Loads spec data (json) according to the already applied settings. Calls update_chart.
  */
 function load_data() {
-  console.log("load_data");
+  if (dev_mode)
+    console.log("load_data");
   if (!loaded_data[chosen_class]) {
     loaded_data[chosen_class] = {};
   }
@@ -785,7 +822,8 @@ function load_data() {
  * Hides welcome-area and shows data area if necessary.
  */
 function switch_mode() {
-  console.log("switch_mode");
+  if (dev_mode)
+    console.log("switch_mode");
   // underline new nav
   get_class_spec_from_link();
   update_nav();
@@ -816,35 +854,36 @@ function switch_mode() {
  * Update which data button has the class color background.
  */
 function update_data_buttons() {
-  console.log("update_data_buttons");
+  if (dev_mode)
+    console.log("update_data_buttons");
   // reset buttons to standard visual
   data_view_IDs.forEach(element => {
-    document.getElementById(element).className = "btn btn-secondary";
+    document.getElementById(element).className = "btn-data " + chosen_class + "-button";
   });
   // set "active" to class color
-  document.getElementById("show_" + data_view + "_data").classList.remove("btn-secondary");
-  document.getElementById("show_" + data_view + "_data").classList.add(chosen_class + "-background");
+  document.getElementById("show_" + data_view + "_data").classList.add(chosen_class + "-border-bottom");
 }
 
 /**
  * Resets colors of all fight style buttons and sets active button to class color.
  */
 function update_fight_style_buttons() {
-  console.log("update_fight_style_buttons");
+  if (dev_mode)
+    console.log("update_fight_style_buttons");
   // reset buttons to standard visual
   fight_style_IDs.forEach(element => {
-    document.getElementById(element).className = "btn btn-secondary";
+    document.getElementById(element).className = "btn-data " + chosen_class + "-button";
   });
   // set "active" to class color
-  document.getElementById("fight_style_" + fight_style).classList.remove("btn-secondary");
-  document.getElementById("fight_style_" + fight_style).classList.add(chosen_class + "-background");
+  document.getElementById("fight_style_" + fight_style).classList.add(chosen_class + "-border-bottom");
 }
 
 /**
  * Mark current active chosen class in top navigation.
  */
 function update_nav() {
-  console.log("update_nav");
+  if (dev_mode)
+    console.log("update_nav");
   var nav_items = document.getElementsByClassName("dropdown-toggle");
   for (let index = 0; index < nav_items.length; index++) {
     const element = nav_items[index];
@@ -857,7 +896,8 @@ function update_nav() {
  * Makes all given IDs visible.
  */
 function make_visible(IDs) {
-  console.log("make_visible");
+  if (dev_mode)
+    console.log("make_visible");
   IDs.forEach(element => {
     document.getElementById(element).hidden = false;
   });
@@ -867,7 +907,8 @@ function make_visible(IDs) {
  * Makes all given IDs invisible.
  */
 function make_invisible(IDs) {
-  console.log("make_invisible");
+  if (dev_mode)
+    console.log("make_invisible");
   IDs.forEach(element => {
     document.getElementById(element).hidden = true;
   });
@@ -879,7 +920,8 @@ function make_invisible(IDs) {
  * Function applies standard data (in english) to the chart. To translate a chart use translate_chart().
  */
 function update_chart() {
-  console.log("update_chart");
+  if (dev_mode)
+    console.log("update_chart");
   console.log("update_chart is not yet implemented");
 }
 
@@ -888,6 +930,8 @@ function update_chart() {
  * Example: string_test -> String_Test
  */
 function capitalize_first_letters(string) {
+  if (dev_mode)
+    console.log("capitalize_first_letters");
   var new_string = string.charAt(0).toUpperCase();
   if (string.indexOf("_") > -1) {
     new_string += string.slice(1, string.indexOf("_") + 1);
@@ -902,6 +946,8 @@ function capitalize_first_letters(string) {
  * Update data header, triggers TC area appropriate hide and show.
  */
 function update_page_content() {
+  if (dev_mode)
+    console.log("update_page_content");
   // update title
   var content = "<span class=\"" + chosen_class + "-color\"";
   if (chosen_class == "priest" || chosen_class == "rogue") {
