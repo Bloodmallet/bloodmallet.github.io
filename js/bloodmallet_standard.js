@@ -43,7 +43,6 @@ var chosen_spec = "";
 var dark_mode = true;
 var bloodyfiller = "&nbsp;charts&nbsp;";
 
-
 var language = "EN";
 var loaded_languages = {};
 
@@ -166,6 +165,9 @@ var standard_chart = Highcharts.chart('chart',
                 zIndex: 5,
                 label: {
                   text: this.series.name + ' ' + this.category,
+                  style: {
+                    color: 'white',
+                  },
                   align: 'left',
                   verticalAlign: 'bottom',
                   rotation: 0,
@@ -175,9 +177,9 @@ var standard_chart = Highcharts.chart('chart',
             }
           }
         },
-        stacking: "normal",
       },
       series: {
+        stacking: "normal",
         borderColor: dark_color,
         events: {
           legendItemClick: function () { return false; }
@@ -306,34 +308,17 @@ var standard_chart = Highcharts.chart('chart',
     }
   });
 
-
-/*---------------------------------------------------------
-//
-//  Settings area
-//
----------------------------------------------------------*/
-
-// https://stackoverflow.com/questions/25089297/avoid-dropdown-menu-close-on-click-inside/25253002#25253002
-$('#settingsDropDown').on('click', function (event) {
-  var events = $._data(document, 'events') || {};
-  events = events.click || [];
-  for (var i = 0; i < events.length; i++) {
-    if (events[i].selector) {
-
-      //Check if the clicked element matches the event selector
-      if ($(event.target).is(events[i].selector)) {
-        events[i].handler.call(event.target, event);
-      }
-
-      // Check if any of the clicked element parents matches the
-      // delegated event selector (Emulating propagation)
-      $(event.target).parents(events[i].selector).each(function () {
-        events[i].handler.call(this, event);
-      });
-    }
-  }
-  event.stopPropagation(); //Always stop propagation
-});
+var ilevel_color_table = {
+  "910": "#1f78b4",
+  "920": "#a6cee3",
+  "930": "#33a02c",
+  "940": "#b2df8a",
+  "950": "#e31a1c",
+  "960": "#fb9a99",
+  "970": "#ff7f00",
+  "980": "#cab2d6",
+  "1000": "#fdbf6f"
+};
 
 
 /*---------------------------------------------------------
@@ -711,22 +696,27 @@ document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("show_trinkets_data").addEventListener("click", function () {
     data_view = "trinkets";
     update_data_buttons();
+    load_data();
   });
   document.getElementById("show_azerite_traits_data").addEventListener("click", function () {
     data_view = "azerite_traits";
     update_data_buttons();
+    load_data();
   });
   document.getElementById("show_races_data").addEventListener("click", function () {
     data_view = "races";
     update_data_buttons();
+    load_data();
   });
   document.getElementById("fight_style_patchwerk").addEventListener("click", function () {
     fight_style = "patchwerk";
     update_fight_style_buttons();
+    load_data();
   });
   document.getElementById("fight_style_beastlord").addEventListener("click", function () {
     fight_style = "beastlord";
     update_fight_style_buttons();
+    load_data();
   });
 });
 
@@ -785,7 +775,7 @@ window.onhashchange = function () {
 };
 
 /**
- * Loads spec data (json) according to the already applied settings. Calls update_chart.
+ * Loads spec data (json) according to the already applied settings. Triggers update_chart.
  */
 function load_data() {
   if (dev_mode)
@@ -810,8 +800,16 @@ function load_data() {
         loaded_data[chosen_class][chosen_spec][data_view][fight_style] = JSON.parse(xhttp_getLanguage.responseText);
         update_chart();
       }
+      else if (this.readyState == 4 && this.status == 404) {
+        if (dev_mode)
+          alert("Data for this mode was not found! the following link was tried, please check: ./json/" + data_view + "/" + file_name);
+      }
     }
     xhttp_getLanguage.send();
+  } else {
+    if (dev_mode)
+      console.log("Data is already present.");
+    update_chart();
   }
 }
 
@@ -922,7 +920,83 @@ function make_invisible(IDs) {
 function update_chart() {
   if (dev_mode)
     console.log("update_chart");
-  console.log("update_chart is not yet implemented");
+
+  // https://stackoverflow.com/questions/25500316/sort-a-dictionary-by-value-in-javascript
+  // create a list of all trinkets with their highest dps value
+  var dps_ordered_trinkets = Object.keys(loaded_data[chosen_class][chosen_spec][data_view][fight_style]["trinkets"]).map(function (key) { return [key, Math.max(...Object.values(loaded_data[chosen_class][chosen_spec][data_view][fight_style]["trinkets"][key]))] });
+  // order said list
+  dps_ordered_trinkets.sort(function (first, second) { return second[1] - first[1]; });
+  //console.log(dps_ordered_trinkets);
+  // get rid of dps values and keep only the trinket names
+  dps_ordered_trinkets = dps_ordered_trinkets.map(x => x[0]);
+  //console.log(dps_ordered_trinkets);
+
+  // set title and subtitle
+  standard_chart.setTitle({
+    text: loaded_data[chosen_class][chosen_spec][data_view][fight_style]["title"]
+  }, {
+      text: loaded_data[chosen_class][chosen_spec][data_view][fight_style]["subtitle"]
+    }, false);
+
+  // rewrite the trinket names
+  standard_chart.update({
+    xAxis: {
+      categories: dps_ordered_trinkets
+    }
+  }, false);
+
+  // delete all old series data
+  while (standard_chart.series[0]) {
+    standard_chart.series[0].remove(false);
+  }
+
+  for (itemlevel_position in loaded_data[chosen_class][chosen_spec][data_view][fight_style]["Simulated itemlevels"]) {
+
+    var itemlevel = loaded_data[chosen_class][chosen_spec][data_view][fight_style]["Simulated itemlevels"][itemlevel_position];
+    var itemlevel_dps_values = [];
+
+    for (trinket of dps_ordered_trinkets) {
+
+      // check for zero dps values and don't change them
+      if (Number(loaded_data[chosen_class][chosen_spec][data_view][fight_style]["trinkets"][trinket][itemlevel]) > 0) {
+
+        // if lowest itemlevel is looked at, substract baseline
+        if (itemlevel_position == loaded_data[chosen_class][chosen_spec][data_view][fight_style]["Simulated itemlevels"].length - 1) {
+
+          itemlevel_dps_values.push(loaded_data[chosen_class][chosen_spec][data_view][fight_style]["trinkets"][trinket][itemlevel] - loaded_data[chosen_class][chosen_spec][data_view][fight_style]["trinkets"]["baseline"][Math.min(...loaded_data[chosen_class][chosen_spec][data_view][fight_style]["Simulated itemlevels"])]);
+
+
+        } else { // else substract lower itemlevel value of same item
+
+          // if lower itemlevel is zero we have to assume that this item needs to be compared now to the baseline
+          if (loaded_data[chosen_class][chosen_spec][data_view][fight_style]["trinkets"][trinket][loaded_data[chosen_class][chosen_spec][data_view][fight_style]["Simulated itemlevels"][String(Number(itemlevel_position) + 1)]] == 0) {
+
+            itemlevel_dps_values.push(loaded_data[chosen_class][chosen_spec][data_view][fight_style]["trinkets"][trinket][itemlevel] - loaded_data[chosen_class][chosen_spec][data_view][fight_style]["trinkets"]["baseline"][Math.min(...loaded_data[chosen_class][chosen_spec][data_view][fight_style]["Simulated itemlevels"])]);
+
+          } else { // standard case, next itemlevel is not zero and can be used to substract from the current value
+
+            itemlevel_dps_values.push(loaded_data[chosen_class][chosen_spec][data_view][fight_style]["trinkets"][trinket][itemlevel] - loaded_data[chosen_class][chosen_spec][data_view][fight_style]["trinkets"][trinket][loaded_data[chosen_class][chosen_spec][data_view][fight_style]["Simulated itemlevels"][String(Number(itemlevel_position) + 1)]]);
+          }
+
+        }
+
+      } else {
+
+        itemlevel_dps_values.push(loaded_data[chosen_class][chosen_spec][data_view][fight_style]["trinkets"][trinket][itemlevel]);
+      }
+
+    }
+
+    standard_chart.addSeries({
+      color: ilevel_color_table[itemlevel],
+      data: itemlevel_dps_values,
+      name: itemlevel,
+      showInLegend: false
+    }, false);
+  }
+  document.getElementById("chart").style.height = 200 + dps_ordered_trinkets.length * 20 + "px";
+  standard_chart.setSize(document.getElementById("chart").style.width, document.getElementById("chart").style.height);
+  standard_chart.redraw();
 }
 
 /**
@@ -965,4 +1039,31 @@ function update_page_content() {
   }
   // show appropriate tc box
   document.getElementById("tc_" + chosen_class + "_" + chosen_spec).hidden = false;
+}
+
+
+/**
+ *
+ * Temporary fix to the broken stacked charts labels with highcharts version 6.1
+ *
+ * Source/Issue: https://github.com/highcharts/highcharts/issues/8187
+ */
+Highcharts.StackItem.prototype.getStackBox = function (chart, stackItem, x, y, xWidth, h, axis) {
+  var reversed = stackItem.axis.reversed,
+    inverted = chart.inverted,
+    axisPos = axis.height + axis.pos - (inverted ? chart.plotLeft : chart.plotTop),
+    neg = (stackItem.isNegative && !reversed) ||
+      (!stackItem.isNegative && reversed);
+
+  return {
+    x: inverted ? (neg ? y : y - h) : x,
+    y: inverted ?
+      axisPos - x - xWidth :
+      (neg ?
+        (axisPos - y - h) :
+        axisPos - y
+      ),
+    width: inverted ? h : xWidth,
+    height: inverted ? xWidth : h
+  };
 }
