@@ -872,7 +872,7 @@ function switch_mode() {
     make_invisible(modes[mode]["hidden"]);
     make_visible(modes[mode]["shown"]);
   }
-  ga('send', 'event', 'alpha', data_view, fight_style, chosen_class + "_" + chosen_spec);
+  ga('send', 'event', 'alpha', data_view, chosen_class + "_" + chosen_spec);
 }
 
 /**
