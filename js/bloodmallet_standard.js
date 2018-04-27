@@ -139,13 +139,16 @@ var standard_chart = Highcharts.chart('chart',
       align: "right",
       backgroundColor: null,
       borderColor: medium_color,
-      borderWidth: 1,
+      borderWidth: 0,
       floating: false,
       reversed: true,
       shadow: false,
       verticalAlign: "bottom",
       x: 0,
       y: 0,
+      itemStyle: {
+        color: medium_color,
+      }
     },
     plotOptions: {
       bar: {
@@ -991,7 +994,7 @@ function update_chart() {
       color: ilevel_color_table[itemlevel],
       data: itemlevel_dps_values,
       name: itemlevel,
-      showInLegend: false
+      showInLegend: true
     }, false);
   }
   document.getElementById("chart").style.height = 200 + dps_ordered_trinkets.length * 20 + "px";
