@@ -698,21 +698,36 @@ document.addEventListener("DOMContentLoaded", function () {
  * Apply click events for data manipulation.
  */
 document.addEventListener("DOMContentLoaded", function () {
-  document.getElementById("show_trinkets_data").addEventListener("click", function () {
-    data_view = "trinkets";
-    update_data_buttons();
-    load_data();
-  });
-  document.getElementById("show_azerite_traits_data").addEventListener("click", function () {
-    data_view = "azerite_traits";
-    update_data_buttons();
-    load_data();
-  });
-  document.getElementById("show_races_data").addEventListener("click", function () {
-    data_view = "races";
-    update_data_buttons();
-    load_data();
-  });
+  try {
+    document.getElementById("show_trinkets_data").addEventListener("click", function () {
+      data_view = "trinkets";
+      update_data_buttons();
+      load_data();
+    });
+  } catch (err) {
+    console.log("show_trinkets_data was not found in page.");
+  }
+
+  try {
+    document.getElementById("show_azerite_traits_data").addEventListener("click", function () {
+      data_view = "azerite_traits";
+      update_data_buttons();
+      load_data();
+    });
+  } catch (err) {
+    console.log("show_azerite_traits_data was not found in page.");
+  }
+
+  try {
+    document.getElementById("show_races_data").addEventListener("click", function () {
+      data_view = "races";
+      update_data_buttons();
+      load_data();
+    });
+  } catch (err) {
+    console.log("show_races_data was not found in page.");
+  }
+
   document.getElementById("fight_style_patchwerk").addEventListener("click", function () {
     fight_style = "patchwerk";
     update_fight_style_buttons();
@@ -724,6 +739,12 @@ document.addEventListener("DOMContentLoaded", function () {
     load_data();
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  document.getElementById("copy_link").addEventListener("click", function () {
+    copy_link();
+  })
+})
 
 /**
  * Update the global class and spec variables from the current url.
@@ -862,7 +883,11 @@ function update_data_buttons() {
     console.log("update_data_buttons");
   // reset buttons to standard visual
   data_view_IDs.forEach(element => {
-    document.getElementById(element).className = "btn-data " + chosen_class + "-button";
+    try {
+      document.getElementById(element).className = "btn-data " + chosen_class + "-button";
+    } catch (err) {
+      console.log(element + " was not found in page.");
+    }
   });
   // set "active" to class color
   document.getElementById("show_" + data_view + "_data").classList.add(chosen_class + "-border-bottom");
@@ -1047,6 +1072,12 @@ function update_page_content() {
   document.getElementById("tc_" + chosen_class + "_" + chosen_spec).hidden = false;
 }
 
+
+function copy_link() {
+  if (dev_mode)
+    console.log("copy_link");
+  console.log("copy_link is not yet implemented.");
+}
 
 /**
  *
