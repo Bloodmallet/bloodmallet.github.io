@@ -1,0 +1,741 @@
+body {
+  font-weight: 200;
+}
+.bg-darker {
+  background-color:#343a40;
+}
+button {
+  font-weight: 400;
+}
+p {
+  font-size: 1.1rem;
+}
+a {
+  color: #3e9bff;
+}
+a:hover {
+  color: #3273b9;
+}
+nav {
+  font-weight: 400;
+}
+.navbar {
+  background-color: #232227;
+}
+/* container for all page content */
+main{
+  min-height: 82vh;
+  bottom:0; right:0; left:0;
+}
+/* container for bottom navigation */
+footer {
+  width: 100%;
+  position: relative;
+  height: 55px;
+  bottom: 0px;
+  right: 0px;
+  margin-top: 2em;
+}
+
+.bg-light {
+  background-color: #eee!important;
+}
+.container-fluid {
+  max-width: 1200px;
+}
+.dropdown-menu {
+  border: 0px solid transparent;
+  border-radius: 0rem;
+  background-color: #232227;
+  color: #eee;
+  padding: 0rem;
+}
+.dropdown-item:hover, .dropdown-item:focus {
+  background-color: transparent;
+}
+
+/* adds a small free space between header and spec buttons */
+.wow-class-header-row {
+  /* margin-bottom: 3px; */
+}
+/* styles the wow class table headers */
+.wow-class-header-content {
+  font-weight: 600;
+  background-color: #232227/*#343a40*/;
+  padding-top: 3px;
+  padding-bottom: 7px;
+  font-size: 1.4rem;
+  /* border-bottom: 1px solid #dee2e6; */
+  /* border-top: 1px solid #dee2e6; */
+}
+/* enforces a small free space between border and content */
+.spec-cell {
+  padding-right: 21px;
+  /* padding-left: 18px; */
+  margin-bottom: 30px;
+}
+
+.btn-data {
+  color: #eee;
+  background-color: #232227;
+  border: 0px solid transparent;
+  border-bottom-width: 3px;
+  border-top-width: 3px;
+  padding: .375rem .75rem;
+  min-width: 120px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.spec-switch-button {
+  font-weight: 400;
+  background-color: #232227;
+  color: #eee;
+}
+.spec-switch-button:hover {
+  color: #eee;
+}
+
+/* change tooltips corners */
+.btn-full {
+  /* border-radius: 0rem .32rem .32rem .32rem; */
+}
+.btn-start {
+  border-radius: 0rem 0rem 0rem 0rem;
+}
+.btn-middle {
+  border-radius: 0rem 0rem 0rem 0rem;
+}
+.btn-end {
+  border-radius: 0rem 0rem 0rem 0rem;
+}
+
+/* Mobile devices */
+@media only screen and (max-width: 500px) {
+  div.div-table div.mobile {
+    display: table;
+  }
+  .spec-btn {
+    padding: 5px 5px;
+    cursor: pointer;
+    width: 100%;
+    display: block;
+  }
+  .spec-btn:hover {
+    text-decoration: none;
+  }
+}
+
+/* Desktop sizes */
+@media only screen and (min-width: 501px) {
+  div.div-table div.desktop {
+    display: table;
+  }
+  .spec-btn {
+    padding: 10px 15px;
+    cursor: pointer;
+    width: 100%;
+    display: block;
+  }
+  .spec-btn:hover {
+    text-decoration: none;
+  }
+}
+
+.faq-question {
+  margin-top: 45px;
+  font-weight: 200;
+}
+
+.death_knight-background, .death_knight-background a {
+  background-color: #C41F3B;
+  color: #eee;
+  text-shadow: 0px 0px 3px black;
+}
+a.death_knight-background:hover, button.death_knight-background:hover, .death_knight-background a:hover {
+  background-color: rgb(170, 21, 46);
+  color: #eee;
+}
+.death_knight-color {
+  color: #C41F3B!important;
+}
+.death_knight-menu-border {
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  transition: border-bottom .20s ease-in;
+}
+.death_knight-menu-border:hover {
+  border-bottom: 3px solid #C41F3B;
+  transition: border-bottom .01s ease-in;
+}
+/*Hide the bottom border if the sub menu is active*/
+.show .death_knight-menu-border:hover, .show .death_knight-menu-border.active {
+  border-bottom: 3px solid transparent;
+}
+.death_knight-border-bottom, .death_knight-menu-border.active {
+  border-bottom: 3px solid #C41F3B;
+}
+.death_knight-button {
+  color: #C41F3B;
+  border-right: 5px solid #232227;
+  border-left: 5px solid #232227;
+  /* border-bottom: 3px solid #232227; */
+  transition: border .2s ease-in;
+}
+.death_knight-button:hover, .death_knight-button:focus {
+  color: #C41F3B;
+  border-left: 5px solid #C41F3B;
+  /* border-right: 5px solid #C41F3B; */
+  /* border-bottom: 3px solid #C41F3B; */
+  transition: border .01s ease-in;
+}
+.death_knight-border-top {
+  border-top: 3px solid #C41F3B;
+}
+
+.demon_hunter-background, .demon_hunter-background a {
+  background-color: #A330C9;
+  color: #eee;
+  text-shadow: 0px 0px 3px black;
+}
+a.demon_hunter-background:hover, button.demon_hunter-background:hover, .demon_hunter-background a:hover {
+  background-color: #8223a1;
+  color: #eee;
+}
+.demon_hunter-color {
+  color: #A330C9!important;
+}
+.demon_hunter-menu-border {
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  transition: border-bottom .20s ease-in;
+}
+.demon_hunter-menu-border:hover{
+  border-bottom: 3px solid #A330C9;
+  transition: border-bottom .01s ease-in;
+}
+/*Hide the bottom border if the sub menu is active*/
+.show .demon_hunter-menu-border:hover, .show .demon_hunter-menu-border.active {
+  border-bottom: 3px solid transparent;
+}
+.demon_hunter-menu-border.active {
+  border-bottom: 3px solid #A330C9;
+}
+.demon_hunter-border-bottom {
+  border-bottom: 3px solid #A330C9;
+}
+.demon_hunter-button {
+  color: #A330C9;
+  border-right: 5px solid #232227;
+  border-left: 5px solid #232227;
+  /* border-bottom: 3px solid #232227; */
+  transition: border .2s ease-in;
+}
+.demon_hunter-button:hover, .demon_hunter-button:focus {
+  color: #A330C9;
+  border-left: 5px solid #A330C9;
+  /* border-right: 3px solid #A330C9; */
+  /* border-bottom: 3px solid #A330C9; */
+  transition: border .01s ease-in;
+}
+.demon_hunter-border-top {
+  border-top: 3px solid #A330C9;
+}
+
+
+.druid-background, .druid-background a {
+  background-color: #FF7D0A;
+  color: #eee;
+  text-shadow: 0px 0px 3px black;
+}
+a.druid-background:hover, button.druid-background:hover, .druid-background a:hover {
+  background-color: #D66400;
+  color: #eee;
+}
+.druid-color {
+  color: #FF7D0A!important;
+}
+.druid-menu-border {
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  transition: border-bottom .20s ease-in;
+}
+.druid-menu-border:hover{
+  border-bottom: 3px solid #FF7D0A;
+  transition: border-bottom .01s ease-in;
+}
+/*Hide the bottom border if the sub menu is active*/
+.show .druid-menu-border:hover, .show .druid-menu-border.active {
+  border-bottom: 3px solid transparent;
+}
+.druid-menu-border.active {
+  border-bottom: 3px solid #FF7D0A;
+}
+.druid-border-bottom {
+  border-bottom: 3px solid #FF7D0A;
+}
+.druid-button {
+  color: #FF7D0A;
+  border-right: 5px solid #232227;
+  border-left: 5px solid #232227;
+  /* border-bottom: 3px solid #232227; */
+  transition: border .2s ease-in;
+}
+.druid-button:hover, .druid-button:focus {
+  color: #FF7D0A;
+  border-left: 5px solid #FF7D0A;
+  /* border-right: 3px solid #FF7D0A; */
+  /* border-bottom: 3px solid #FF7D0A; */
+  transition: border .01s ease-in;
+}
+.druid-border-top {
+  border-top: 3px solid #FF7D0A;
+}
+
+
+.hunter-background, .hunter-background a {
+  background-color: #ABD473;
+  color: black;
+}
+a.hunter-background:hover, button.hunter-background:hover, .hunter-background a:hover {
+  background-color: #87aa57;
+  color: black;
+}
+.hunter-color {
+  color: #ABD473!important;
+}
+.hunter-menu-border {
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  transition: border-bottom .20s ease-in;
+}
+.hunter-menu-border:hover{
+  border-bottom: 3px solid #ABD473;
+  transition: border-bottom .01s ease-in;
+}
+/*Hide the bottom border if the sub menu is active*/
+.show .hunter-menu-border:hover, .show .hunter-menu-border.active {
+  border-bottom: 3px solid transparent;
+}
+.hunter-menu-border.active {
+  border-bottom: 3px solid #ABD473;
+}
+.hunter-border-bottom {
+  border-bottom: 3px solid #ABD473;
+}
+.hunter-button {
+  color: #ABD473;
+  border-right: 5px solid #232227;
+  border-left: 5px solid #232227;
+  /* border-bottom: 3px solid #232227; */
+  transition: border .2s ease-in;
+}
+.hunter-button:hover, .hunter-button:focus {
+  color: #ABD473;
+  border-left: 5px solid #ABD473;
+  /* border-right: 3px solid #ABD473; */
+  /* border-bottom: 3px solid #ABD473; */
+  transition: border .01s ease-in;
+}
+.hunter-border-top {
+  border-top: 3px solid #ABD473;
+}
+
+
+.mage-background, .mage-background a {
+  background-color: #69CCF0;
+  color: black;
+}
+a.mage-background:hover, button.mage-background:hover, .mage-background a:hover {
+  background-color: #4dabce;
+  color: black;
+}
+.mage-color {
+  color: #69CCF0!important;
+}
+.mage-menu-border {
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  transition: border-bottom .20s ease-in;
+}
+.mage-menu-border:hover{
+  border-bottom: 3px solid #69CCF0;
+  transition: border-bottom .01s ease-in;
+}
+/*Hide the bottom border if the sub menu is active*/
+.show .mage-menu-border:hover, .show .mage-menu-border.active {
+  border-bottom: 3px solid transparent;
+}
+.mage-menu-border.active {
+  border-bottom: 3px solid #69CCF0;
+}
+.mage-border-bottom {
+  border-bottom: 3px solid #69CCF0;
+}
+.mage-button {
+  color: #69CCF0;
+  border-right: 5px solid #232227;
+  border-left: 5px solid #232227;
+  /* border-bottom: 3px solid #232227; */
+  transition: border .2s ease-in;
+}
+.mage-button:hover, .mage-button:focus {
+  color: #69CCF0;
+  border-left: 5px solid #69CCF0;
+  /* border-right: 3px solid #69CCF0; */
+  /* border-bottom: 3px solid #69CCF0; */
+  transition: border .01s ease-in;
+}
+.mage-border-top {
+  border-top: 3px solid #69CCF0;
+}
+
+
+.monk-background, .monk-background a {
+  background-color: #00FF96;
+  color: black;
+}
+a.monk-background:hover, button.monk-background:hover,.monk-background a:hover {
+  background-color: #03ce7a;
+  color: black;
+}
+.monk-color {
+  color: #00FF96!important;
+}
+.monk-menu-border {
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  transition: border-bottom .20s ease-in;
+}
+.monk-menu-border:hover{
+  border-bottom: 3px solid #00FF96;
+  transition: border-bottom .01s ease-in;
+}
+/*Hide the bottom border if the sub menu is active*/
+.show .monk-menu-border:hover, .show .monk-menu-border.active {
+  border-bottom: 3px solid transparent;
+}
+.monk-menu-border.active {
+  border-bottom: 3px solid #00FF96;
+}
+.monk-border-bottom {
+  border-bottom: 3px solid #00FF96;
+}
+.monk-button {
+  color: #00FF96;
+  border-right: 5px solid #232227;
+  border-left: 5px solid #232227;
+  /* border-bottom: 3px solid #232227; */
+  transition: border .2s ease-in;
+}
+.monk-button:hover, .monk-button:focus {
+  color: #00FF96;
+  border-left: 5px solid #00FF96;
+  /* border-right: 3px solid #00FF96; */
+  /* border-bottom: 3px solid #00FF96; */
+  transition: border .01s ease-in;
+}
+.monk-border-top {
+  border-top: 3px solid #00FF96;
+}
+
+
+.paladin-background, .paladin-background a {
+  background-color: #F58CBA;
+  color: black;
+}
+a.paladin-background:hover, button.paladin-background:hover,.paladin-background a:hover {
+  background-color: #d878a2;
+  color: black;
+}
+.paladin-color {
+  color: #F58CBA!important;
+}
+.paladin-menu-border {
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  transition: border-bottom .20s ease-in;
+}
+.paladin-menu-border:hover{
+  border-bottom: 3px solid #F58CBA;
+  transition: border-bottom .01s ease-in;
+}
+/*Hide the bottom border if the sub menu is active*/
+.show .paladin-menu-border:hover, .show .paladin-menu-border.active {
+  border-bottom: 3px solid transparent;
+}
+.paladin-menu-border.active {
+  border-bottom: 3px solid #F58CBA;
+}
+.paladin-border-bottom {
+  border-bottom: 3px solid #F58CBA;
+}
+.paladin-button {
+  color: #F58CBA;
+  border-right: 5px solid #232227;
+  border-left: 5px solid #232227;
+  /* border-bottom: 3px solid #232227; */
+  transition: border .2s ease-in;
+}
+.paladin-button:hover, .paladin-button:focus {
+  color: #F58CBA;
+  border-left: 5px solid #F58CBA;
+  /* border-right: 3px solid #F58CBA; */
+  /* border-bottom: 3px solid #F58CBA; */
+  transition: border .01s ease-in;
+}
+.paladin-border-top {
+  border-top: 3px solid #F58CBA;
+}
+
+
+.priest-background, .priest-background a {
+  background-color: #ffffff;
+  color: black;
+}
+button.priest-background {
+  border: 1px solid black;
+}
+a.priest-background:hover, button.priest-background:hover, .priest-background a:hover {
+  background-color: #cccccc;
+  color: black;
+}
+.priest-color {
+  color: #ffffff!important;
+}
+.priest-menu-border {
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  transition: border-bottom .20s ease-in;
+}
+.priest-menu-border:hover{
+  border-bottom: 3px solid #ffffff;
+  transition: border-bottom .01s ease-in;
+}
+/*Hide the bottom border if the sub menu is active*/
+.show .priest-menu-border:hover, .show .priest-menu-border.active {
+  border-bottom: 3px solid transparent;
+}
+.priest-menu-border.active {
+  border-bottom: 3px solid #ffffff;
+}
+.priest-border-bottom {
+  border-bottom: 3px solid #ffffff;
+}
+.priest-button {
+  color: #ffffff;
+  border-right: 5px solid #232227;
+  border-left: 5px solid #232227;
+  /* border-bottom: 3px solid #232227; */
+  transition: border .2s ease-in;
+}
+.priest-button:hover, .priest-button:focus {
+  color: #ffffff;
+  border-left: 5px solid #ffffff;
+  /* border-right: 3px solid #ffffff; */
+  /* border-bottom: 3px solid #ffffff; */
+  transition: border .01s ease-in;
+}
+.priest-border-top {
+  border-top: 3px solid #ffffff;
+}
+
+
+.rogue-background, .rogue-background a {
+  background-color: #FFF569;
+  color: black;
+}
+a.rogue-background:hover, button.rogue-background:hover, .rogue-background a:hover {
+  background-color: #d6cc52;
+  color: black;
+}
+.rogue-color {
+  color: #FFF569!important;
+}
+.rogue-menu-border {
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  transition: border-bottom .20s ease-in;
+}
+.rogue-menu-border:hover{
+  border-bottom: 3px solid #FFF569;
+  transition: border-bottom .01s ease-in;
+}
+/*Hide the bottom border if the sub menu is active*/
+.show .rogue-menu-border:hover, .show .rogue-menu-border.active {
+  border-bottom: 3px solid transparent;
+}
+.rogue-menu-border.active {
+  border-bottom: 3px solid #FFF569;
+}
+.rogue-border-bottom {
+  border-bottom: 3px solid #FFF569;
+}
+.rogue-button {
+  color: #FFF569;
+  border-right: 5px solid #232227;
+  border-left: 5px solid #232227;
+  /* border-bottom: 3px solid #232227; */
+  transition: border .2s ease-in;
+}
+.rogue-button:hover, .rogue-button:focus {
+  color: #FFF569;
+  border-left: 5px solid #FFF569;
+  /* border-right: 3px solid #FFF569; */
+  /* border-bottom: 3px solid #FFF569; */
+  transition: border .01s ease-in;
+}
+.rogue-border-top {
+  border-top: 3px solid #FFF569;
+}
+
+
+.shaman-background, .shaman-background a {
+  background-color: #0070DE;
+  color: #eee;
+  text-shadow: 0px 0px 3px black;
+}
+a.shaman-background:hover, button.shaman-background:hover, .shaman-background a:hover {
+  background-color: rgb(19, 93, 167);
+  color: #eee;
+}
+.shaman-color {
+  color: #0070DE!important;
+}
+.shaman-menu-border {
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  transition: border-bottom .20s ease-in;
+}
+.shaman-menu-border:hover{
+  border-bottom: 3px solid #0070DE;
+  transition: border-bottom .01s ease-in;
+}
+/*Hide the bottom border if the sub menu is active*/
+.show .shaman-menu-border:hover, .show .shaman-menu-border.active {
+  border-bottom: 3px solid transparent;
+}
+.shaman-menu-border.active {
+  border-bottom: 3px solid #0070DE;
+}
+.shaman-border-bottom {
+  border-bottom: 3px solid #0070DE;
+}
+.shaman-button {
+  color: #0070DE;
+  border-right: 5px solid #232227;
+  border-left: 5px solid #232227;
+  /* border-bottom: 3px solid #232227; */
+  transition: border .2s ease-in;
+}
+.shaman-button:hover, .shaman-button:focus {
+  color: #0070DE;
+  border-left: 5px solid #0070DE;
+  /* border-right: 3px solid #0070DE; */
+  /* border-bottom: 3px solid #0070DE; */
+  transition: border .01s ease-in;
+}
+.shaman-border-top {
+  border-top: 3px solid #0070DE;
+}
+
+
+.warlock-background, .warlock-background a {
+  background-color: #9482C9;
+  color: #eee;
+  text-shadow: 0px 0px 3px black;
+}
+a.warlock-background:hover, button.warlock-background:hover, .warlock-background a:hover {
+  background-color: #7463a9;
+  color: #eee;
+}
+.warlock-color {
+  color: #9482C9!important;
+}
+.warlock-menu-border {
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  transition: border-bottom .20s ease-in;
+}
+.warlock-menu-border:hover{
+  border-bottom: 3px solid #9482C9;
+  transition: border-bottom .01s ease-in;
+}
+/*Hide the bottom border if the sub menu is active*/
+.show .warlock-menu-border:hover, .show .warlock-menu-border.active {
+  border-bottom: 3px solid transparent;
+}
+.warlock-menu-border.active {
+  border-bottom: 3px solid #9482C9;
+}
+.warlock-border-bottom {
+  border-bottom: 3px solid #9482C9;
+}
+.warlock-button {
+  color: #9482C9;
+  border-right: 5px solid #232227;
+  border-left: 5px solid #232227;
+  /* border-bottom: 3px solid #232227; */
+  transition: border .2s ease-in;
+}
+.warlock-button:hover, .warlock-button:focus {
+  color: #9482C9;
+  border-left: 5px solid #9482C9;
+  /* border-right: 3px solid #9482C9; */
+  /* border-bottom: 3px solid #9482C9; */
+  transition: border .01s ease-in;
+}
+.warlock-border-top {
+  border-top: 3px solid #9482C9;
+}
+
+
+.warrior-background, .warrior-background a {
+  background-color: #C79C6E;
+  color: #eee;
+  text-shadow: 0px 0px 3px black;
+}
+a.warrior-background:hover, button.warrior-background:hover, .warrior-background a:hover {
+  background-color: #ad8862;
+  color: #eee;
+}
+.warrior-color {
+  color: #C79C6E!important;
+}
+.warrior-menu-border {
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  transition: border-bottom .20s ease-in;
+}
+.warrior-menu-border:hover{
+  border-bottom: 3px solid #C79C6E;
+  transition: border-bottom .01s ease-in;
+}
+/*Hide the bottom border if the sub menu is active*/
+.show .warrior-menu-border:hover, .show .warrior-menu-border.active {
+  border-bottom: 3px solid transparent;
+}
+.warrior-menu-border.active {
+  border-bottom: 3px solid #C79C6E;
+}
+.warrior-border-bottom {
+  border-bottom: 3px solid #C79C6E;
+}
+.warrior-button {
+  color: #C79C6E;
+  border-right: 5px solid #232227;
+  border-left: 5px solid #232227;
+  /* border-bottom: 3px solid #232227; */
+  transition: border .2s ease-in;
+}
+.warrior-button:hover, .warrior-button:focus {
+  color: #C79C6E;
+  border-left: 5px solid #C79C6E;
+  /* border-right: 3px solid #C79C6E; */
+  /* border-bottom: 3px solid #C79C6E; */
+  transition: border .01s ease-in;
+}
+.warrior-border-top {
+  border-top: 3px solid #C79C6E;
+}
+
