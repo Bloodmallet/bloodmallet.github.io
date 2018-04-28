@@ -22,6 +22,8 @@
 
   </script>
 
+
+
   <!-- from https://cookieconsent.insites.com/download/ -->
   <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css"
   />
@@ -43,10 +45,11 @@
   <title>bloodmallet - simulation data for everyone</title>
 </head>
 
-<body class="bg-dark text-light">
+<body class="bg-darker text-light">
   <!-- Top menu start -->
-  <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark border-bottom">
-    <a class="navbar-brand" href="index.html">bloodmallet</a>
+  <nav class="navbar sticky-top navbar-expand-lg navbar-dark">
+    <a class="navbar-brand" href="index.html">
+      bloodmallet</a>
     <!-- Menu button if device is too small for full menu -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTopMenu" aria-controls="navbarTopMenu"
       aria-expanded="false" aria-label="Toggle navigation">
@@ -62,10 +65,10 @@
           <a class="nav-link dropdown-toggle death_knight-color death_knight-menu-border translate_death_knight" href="#" id="navbarDeathKnightMenu"
             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Death Knight
           </a>
-          <div class="dropdown-menu btn-full death_knight-button death_knight-background" aria-labelledby="navbarDeathKnightMenu">
-            <a class="dropdown-item translate_blood" href="#death_knight_blood">Blood</a>
-            <a class="dropdown-item translate_frost" href="#death_knight_frost">Frost</a>
-            <a class="dropdown-item translate_unholy" href="#death_knight_unholy">Unholy</a>
+          <div class="dropdown-menu death_knight-border-top" aria-labelledby="navbarDeathKnightMenu">
+            <a class="dropdown-item death_knight-button translate_blood" href="index.html#death_knight_blood">Blood</a>
+            <a class="dropdown-item death_knight-button translate_frost" href="index.html#death_knight_frost">Frost</a>
+            <a class="dropdown-item death_knight-button translate_unholy" href="index.html#death_knight_unholy">Unholy</a>
           </div>
         </li>
 
@@ -74,9 +77,9 @@
           <a class="nav-link dropdown-toggle demon_hunter-color demon_hunter-menu-border translate_demon_hunter" href="#" id="navbarDemonHunterMenu"
             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Demon Hunter
           </a>
-          <div class="dropdown-menu btn-full demon_hunter-button  demon_hunter-background" aria-labelledby="navbarDemonHunterMenu">
-            <a class="dropdown-item translate_havoc" href="#demon_hunter_havoc">Havoc</a>
-            <a class="dropdown-item translate_vengeance" href="#demon_hunter_vengeance">Vengeance</a>
+          <div class="dropdown-menu demon_hunter-border-top" aria-labelledby="navbarDemonHunterMenu">
+            <a class="dropdown-item demon_hunter-button translate_havoc" href="index.html#demon_hunter_havoc">Havoc</a>
+            <a class="dropdown-item demon_hunter-button translate_vengeance" href="index.html#demon_hunter_vengeance">Vengeance</a>
           </div>
         </li>
 
@@ -85,10 +88,10 @@
           <a class="nav-link dropdown-toggle druid-color druid-menu-border translate_druid" href="#" id="navbarDruidMenu" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">Druid
           </a>
-          <div class="dropdown-menu btn-full druid-button druid-background" aria-labelledby="navbarDruidMenu">
-            <a class="dropdown-item translate_balance" href="#druid_balance">Balance</a>
-            <a class="dropdown-item translate_feral" href="#druid_feral">Feral</a>
-            <a class="dropdown-item translate_guardian" href="#druid_guardian">Guardian</a>
+          <div class="dropdown-menu druid-border-top" aria-labelledby="navbarDruidMenu">
+            <a class="dropdown-item druid-button translate_balance" href="index.html#druid_balance">Balance</a>
+            <a class="dropdown-item druid-button translate_feral" href="index.html#druid_feral">Feral</a>
+            <a class="dropdown-item druid-button translate_guardian" href="index.html#druid_guardian">Guardian</a>
           </div>
         </li>
 
@@ -97,10 +100,10 @@
           <a class="nav-link dropdown-toggle hunter-color hunter-menu-border translate_hunter" href="#" id="navbarHunterMenu" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">Hunter
           </a>
-          <div class="dropdown-menu btn-full hunter-button hunter-background" aria-labelledby="navbarHunterMenu">
-            <a class="dropdown-item translate_beast_mastery" href="#hunter_beast_mastery">Beast Mastery</a>
-            <a class="dropdown-item translate_marksmanship" href="#hunter_marksmanship">Marksmanship</a>
-            <a class="dropdown-item translate_survival" href="#hunter_survival">Survival</a>
+          <div class="dropdown-menu hunter-border-top" aria-labelledby="navbarHunterMenu">
+            <a class="dropdown-item hunter-button translate_beast_mastery" href="index.html#hunter_beast_mastery">Beast Mastery</a>
+            <a class="dropdown-item hunter-button translate_marksmanship" href="index.html#hunter_marksmanship">Marksmanship</a>
+            <a class="dropdown-item hunter-button translate_survival" href="index.html#hunter_survival">Survival</a>
           </div>
         </li>
 
@@ -109,10 +112,10 @@
           <a class="nav-link dropdown-toggle mage-color mage-menu-border translate_mage" href="#" id="navbarMageMenu" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">Mage
           </a>
-          <div class="dropdown-menu btn-full mage-button mage-background" aria-labelledby="navbarMageMenu">
-            <a class="dropdown-item translate_arcane" href="#mage_arcane">Arcane</a>
-            <a class="dropdown-item translate_fire" href="#mage_fire">Fire</a>
-            <a class="dropdown-item translate_frost" href="#mage_frost">Frost</a>
+          <div class="dropdown-menu mage-border-top" aria-labelledby="navbarMageMenu">
+            <a class="dropdown-item mage-button translate_arcane" href="index.html#mage_arcane">Arcane</a>
+            <a class="dropdown-item mage-button translate_fire" href="index.html#mage_fire">Fire</a>
+            <a class="dropdown-item mage-button translate_frost" href="index.html#mage_frost">Frost</a>
           </div>
         </li>
 
@@ -121,9 +124,9 @@
           <a class="nav-link dropdown-toggle monk-color monk-menu-border translate_monk" href="#" id="navbarMonkMenu" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">Monk
           </a>
-          <div class="dropdown-menu btn-full monk-button monk-background" aria-labelledby="navbarMonkMenu">
-            <a class="dropdown-item translate_brewmaster" href="#monk_brewmaster">Brewmaster</a>
-            <a class="dropdown-item translate_windwalker" href="#monk_windwalker">Windwalker</a>
+          <div class="dropdown-menu monk-border-top" aria-labelledby="navbarMonkMenu">
+            <a class="dropdown-item monk-button translate_brewmaster" href="index.html#monk_brewmaster">Brewmaster</a>
+            <a class="dropdown-item monk-button translate_windwalker" href="index.html#monk_windwalker">Windwalker</a>
           </div>
         </li>
 
@@ -132,9 +135,9 @@
           <a class="nav-link dropdown-toggle paladin-color paladin-menu-border translate_paladin" href="#" id="navbarPaladinMenu" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">Paladin
           </a>
-          <div class="dropdown-menu btn-full pladin-button paladin-background" aria-labelledby="navbarPaladinMenu">
-            <a class="dropdown-item translate_protection" href="#paladin_protection">Protection</a>
-            <a class="dropdown-item translate_retribution" href="#paladin_retribution">Retribution</a>
+          <div class="dropdown-menu paladin-border-top" aria-labelledby="navbarPaladinMenu">
+            <a class="dropdown-item paladin-button translate_protection" href="index.html#paladin_protection">Protection</a>
+            <a class="dropdown-item paladin-button translate_retribution" href="index.html#paladin_retribution">Retribution</a>
           </div>
         </li>
 
@@ -143,8 +146,8 @@
           <a class="nav-link dropdown-toggle priest-color priest-menu-border translate_priest" href="#" id="navbarPriestMenu" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">Priest
           </a>
-          <div class="dropdown-menu btn-full priest-button priest-background" aria-labelledby="navbarPriestMenu">
-            <a class="dropdown-item translate_shadow" href="#priest_shadow">Shadow</a>
+          <div class="dropdown-menu priest-border-top" aria-labelledby="navbarPriestMenu">
+            <a class="dropdown-item priest-button translate_shadow" href="index.html#priest_shadow">Shadow</a>
           </div>
         </li>
 
@@ -153,10 +156,10 @@
           <a class="nav-link dropdown-toggle rogue-color rogue-menu-border translate_rogue" href="#" id="navbarRogueMenu" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">Rogue
           </a>
-          <div class="dropdown-menu btn-full rogue-button rogue-background" aria-labelledby="navbarRogueMenu">
-            <a class="dropdown-item translate_assassination" href="#rogue_assassination">Assassination</a>
-            <a class="dropdown-item translate_outlaw" href="#rogue_outlaw">Outlaw</a>
-            <a class="dropdown-item translate_subtlety" href="#rogue_subtlety">Subtlety</a>
+          <div class="dropdown-menu rogue-border-top" aria-labelledby="navbarRogueMenu">
+            <a class="dropdown-item rogue-button translate_assassination" href="index.html#rogue_assassination">Assassination</a>
+            <a class="dropdown-item rogue-button translate_outlaw" href="index.html#rogue_outlaw">Outlaw</a>
+            <a class="dropdown-item rogue-button translate_subtlety" href="index.html#rogue_subtlety">Subtlety</a>
           </div>
         </li>
 
@@ -165,9 +168,9 @@
           <a class="nav-link dropdown-toggle shaman-color shaman-menu-border translate_shaman" href="#" id="navbarShamanMenu" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">Shaman
           </a>
-          <div class="dropdown-menu btn-full shaman-button shaman-background" aria-labelledby="navbarShamanMenu">
-            <a class="dropdown-item translate_elemental" href="#shaman_elemental">Elemental</a>
-            <a class="dropdown-item translate_enhancement" href="#shaman_enhancement">Enhancement</a>
+          <div class="dropdown-menu shaman-border-top" aria-labelledby="navbarShamanMenu">
+            <a class="dropdown-item shaman-button translate_elemental" href="index.html#shaman_elemental">Elemental</a>
+            <a class="dropdown-item shaman-button translate_enhancement" href="index.html#shaman_enhancement">Enhancement</a>
           </div>
         </li>
 
@@ -176,10 +179,10 @@
           <a class="nav-link dropdown-toggle warlock-color warlock-menu-border translate_warlock" href="#" id="navbarWarlockMenu" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">Warlock
           </a>
-          <div class="dropdown-menu btn-full warlock-button warlock-background" aria-labelledby="navbarWarlockMenu">
-            <a class="dropdown-item translate_affliction" href="#warlock_affliction">Affliction</a>
-            <a class="dropdown-item translate_demonology" href="#warlock_demonology">Demonology</a>
-            <a class="dropdown-item translate_destruction" href="#warlock_destruction">Destruction</a>
+          <div class="dropdown-menu warlock-border-top" aria-labelledby="navbarWarlockMenu">
+            <a class="dropdown-item warlock-button translate_affliction" href="index.html#warlock_affliction">Affliction</a>
+            <a class="dropdown-item warlock-button translate_demonology" href="index.html#warlock_demonology">Demonology</a>
+            <a class="dropdown-item warlock-button translate_destruction" href="index.html#warlock_destruction">Destruction</a>
           </div>
         </li>
 
@@ -188,9 +191,9 @@
           <a class="nav-link dropdown-toggle warrior-color warrior-menu-border translate_warrior" href="#" id="navbarWarriorMenu" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">Warrior
           </a>
-          <div class="dropdown-menu btn-full warrior-button warrior-background" aria-labelledby="navbarWarriorMenu">
-            <a class="dropdown-item translate_arms" href="#warrior_arms">Arms</a>
-            <a class="dropdown-item translate_fury" href="#warrior_fury">Fury</a>
+          <div class="dropdown-menu warrior-border-top" aria-labelledby="navbarWarriorMenu">
+            <a class="dropdown-item warrior-button translate_arms" href="index.html#warrior_arms">Arms</a>
+            <a class="dropdown-item warrior-button translate_fury" href="index.html#warrior_fury">Fury</a>
           </div>
         </li>
       </ul>
@@ -240,6 +243,13 @@
           <h2 class="faq-question">What is bloodmallet?</h2>
           <p>
             Hello there!
+          </p>
+        </div>
+        <div class="offset-md-1 col-md-10">
+          <h2 class="faq-question">I want to contribute</h2>
+          <p>
+            Excellent! Get in contact with me and head to
+            <a href="https://github.com/Bloodmallet/bloodmallet.github.io/projects/4" target="blank">GitHub</a> and have a look at the open issues. You'll need a GitHub account to contribute.
           </p>
         </div>
         <div class="offset-md-1 col-md-10">
@@ -310,7 +320,7 @@
 
   <footer>
     <!-- Bottom menu -->
-    <nav class="navbar navbar-expand-sm navbar-dark bg-dark border-top">
+    <nav class="navbar navbar-expand-sm navbar-dark">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarBottomMenu" aria-controls="navbarBottomMenu"
         aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -321,16 +331,17 @@
             <a class="nav-link active" href="faq.html" id="translate_faq">FAQ</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="https://github.com/Bloodmallet/bloodmallet.github.io/issues" id="translate_report_an_error" target="blank">Report an error</a>
+            <a class="nav-link" href="https://github.com/Bloodmallet/bloodmallet.github.io/issues" id="translate_report_an_error" target="blank"
+              onClick="ga('send', 'event','alpha', 'outgoing', 'Report a page error');">Report an error</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="https://www.patreon.com/bloodmallet" target="blank">Patreon</a>
+            <a class="nav-link" href="https://www.patreon.com/bloodmallet" target="blank" onClick="ga('send', 'event','alpha', 'outgoing', 'bloodmallet patreon');">Patreon</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="https://twitter.com/bloodmallet" target="blank">Twitter @bloodmallet</a>
+            <a class="nav-link" href="https://twitter.com/bloodmallet" target="blank" onClick="ga('send', 'event','alpha', 'outgoing', 'bloodmallet twitter');">Twitter @bloodmallet</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="https://discord.gg/tFR2uvK" target="blank">Discord SimCMinMax</a>
+            <a class="nav-link" href="https://discord.gg/tFR2uvK" target="blank" onClick="ga('send', 'event','alpha', 'outgoing', 'Discord SimCMinMax');">Discord SimCMinMax</a>
           </li>
 
         </ul>
@@ -345,7 +356,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
     crossorigin="anonymous"></script>
   <script src="js/bootstrap.min.js"></script>
-
+  <script src="js/bloodmallet_top_settings_fix.js"></script>
+  <script src="js/bloodmallet_dark_mode.js"></script>
 </body>
 
 </html>

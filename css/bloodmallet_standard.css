@@ -1,6 +1,9 @@
 body {
   font-weight: 200;
 }
+.bg-darker {
+  background-color:#343a40;
+}
 button {
   font-weight: 400;
 }
@@ -15,6 +18,9 @@ a:hover {
 }
 nav {
   font-weight: 400;
+}
+.navbar {
+  background-color: #232227;
 }
 /* container for all page content */
 main{
@@ -34,54 +40,65 @@ footer {
 .bg-light {
   background-color: #eee!important;
 }
+.container-fluid {
+  max-width: 1200px;
+}
+.dropdown-menu {
+  border: 0px solid transparent;
+  border-radius: 0rem;
+  background-color: #232227;
+  color: #eee;
+  padding: 0rem;
+}
+.dropdown-item:hover, .dropdown-item:focus {
+  background-color: transparent;
+}
 
 /* adds a small free space between header and spec buttons */
 .wow-class-header-row {
-  margin-bottom: 3px;
+  /* margin-bottom: 3px; */
 }
 /* styles the wow class table headers */
 .wow-class-header-content {
-  font-weight: 400;
-  background-color: #343a40;
+  font-weight: 600;
+  background-color: #232227/*#343a40*/;
   padding-top: 3px;
   padding-bottom: 7px;
   font-size: 1.4rem;
-  border-bottom: 1px solid #dee2e6;
+  /* border-bottom: 1px solid #dee2e6; */
+  /* border-top: 1px solid #dee2e6; */
 }
 /* enforces a small free space between border and content */
 .spec-cell {
-  padding-right: 18px;
-  padding-left: 18px;
-  padding-top: 3px;
-  padding-bottom: 3px;
-  border: 0px solid #dee2e6;
-  border-right-width: 0px;
-  border-bottom-width: 0px;
+  padding-right: 21px;
+  /* padding-left: 18px; */
+  margin-bottom: 30px;
 }
 
-.spec-cell-border-bottom {
-  border-bottom-width: 0px;
+.btn-data {
+  color: #eee;
+  background-color: #232227;
+  border: 0px solid transparent;
+  border-bottom-width: 3px;
+  border-top-width: 3px;
+  padding: .375rem .75rem;
+  min-width: 120px;
+  font-weight: 400;
+  cursor: pointer;
 }
 
-@media only screen and (max-width: 767px) {
-  .spec-cell-right-border-small-screen {
-    border-right-width: 0px;
-  }
+.spec-switch-button {
+  font-weight: 400;
+  background-color: #232227;
+  color: #eee;
 }
-
-@media only screen and (min-width: 768px) {
-  .spec-cell-right-border-wide-screen {
-    border-right-width: 0px;
-  }
-  .spec-cell-bottom-border-wide-screen {
-    border-bottom-width: 0px;
-  }
+.spec-switch-button:hover {
+  color: #eee;
 }
-
 
 /* change tooltips corners */
 .btn-full {
-  border-radius: 0rem .32rem .32rem .32rem;
+  /* border-radius: 0rem .32rem .32rem .32rem; */
 }
 .btn-start {
   border-radius: 0rem 0rem 0rem 0rem;
@@ -132,11 +149,12 @@ footer {
 
 .death_knight-background, .death_knight-background a {
   background-color: #C41F3B;
-  color: white;
+  color: #eee;
+  text-shadow: 0px 0px 3px black;
 }
 a.death_knight-background:hover, button.death_knight-background:hover, .death_knight-background a:hover {
   background-color: rgb(170, 21, 46);
-  color: white;
+  color: #eee;
 }
 .death_knight-color {
   color: #C41F3B!important;
@@ -146,24 +164,43 @@ a.death_knight-background:hover, button.death_knight-background:hover, .death_kn
   border-bottom: 3px solid transparent;
   transition: border-bottom .20s ease-in;
 }
-.death_knight-menu-border:hover{
+.death_knight-menu-border:hover {
   border-bottom: 3px solid #C41F3B;
   transition: border-bottom .01s ease-in;
 }
-.death_knight-menu-border.active {
+/*Hide the bottom border if the sub menu is active*/
+.show .death_knight-menu-border:hover, .show .death_knight-menu-border.active {
+  border-bottom: 3px solid transparent;
+}
+.death_knight-border-bottom, .death_knight-menu-border.active {
   border-bottom: 3px solid #C41F3B;
 }
 .death_knight-button {
-  border: 1px solid #af1630;
+  color: #C41F3B;
+  border-right: 5px solid #232227;
+  border-left: 5px solid #232227;
+  /* border-bottom: 3px solid #232227; */
+  transition: border .2s ease-in;
+}
+.death_knight-button:hover, .death_knight-button:focus {
+  color: #C41F3B;
+  border-left: 5px solid #C41F3B;
+  /* border-right: 5px solid #C41F3B; */
+  /* border-bottom: 3px solid #C41F3B; */
+  transition: border .01s ease-in;
+}
+.death_knight-border-top {
+  border-top: 3px solid #C41F3B;
 }
 
 .demon_hunter-background, .demon_hunter-background a {
   background-color: #A330C9;
-  color: white;
+  color: #eee;
+  text-shadow: 0px 0px 3px black;
 }
 a.demon_hunter-background:hover, button.demon_hunter-background:hover, .demon_hunter-background a:hover {
   background-color: #8223a1;
-  color: white;
+  color: #eee;
 }
 .demon_hunter-color {
   color: #A330C9!important;
@@ -177,20 +214,43 @@ a.demon_hunter-background:hover, button.demon_hunter-background:hover, .demon_hu
   border-bottom: 3px solid #A330C9;
   transition: border-bottom .01s ease-in;
 }
+/*Hide the bottom border if the sub menu is active*/
+.show .demon_hunter-menu-border:hover, .show .demon_hunter-menu-border.active {
+  border-bottom: 3px solid transparent;
+}
 .demon_hunter-menu-border.active {
   border-bottom: 3px solid #A330C9;
 }
-.demon_hunter-button {
-  border: 1px solid rgb(149, 36, 187);
+.demon_hunter-border-bottom {
+  border-bottom: 3px solid #A330C9;
 }
+.demon_hunter-button {
+  color: #A330C9;
+  border-right: 5px solid #232227;
+  border-left: 5px solid #232227;
+  /* border-bottom: 3px solid #232227; */
+  transition: border .2s ease-in;
+}
+.demon_hunter-button:hover, .demon_hunter-button:focus {
+  color: #A330C9;
+  border-left: 5px solid #A330C9;
+  /* border-right: 3px solid #A330C9; */
+  /* border-bottom: 3px solid #A330C9; */
+  transition: border .01s ease-in;
+}
+.demon_hunter-border-top {
+  border-top: 3px solid #A330C9;
+}
+
 
 .druid-background, .druid-background a {
   background-color: #FF7D0A;
-  color: white;
+  color: #eee;
+  text-shadow: 0px 0px 3px black;
 }
 a.druid-background:hover, button.druid-background:hover, .druid-background a:hover {
   background-color: #D66400;
-  color: white;
+  color: #eee;
 }
 .druid-color {
   color: #FF7D0A!important;
@@ -204,12 +264,34 @@ a.druid-background:hover, button.druid-background:hover, .druid-background a:hov
   border-bottom: 3px solid #FF7D0A;
   transition: border-bottom .01s ease-in;
 }
+/*Hide the bottom border if the sub menu is active*/
+.show .druid-menu-border:hover, .show .druid-menu-border.active {
+  border-bottom: 3px solid transparent;
+}
 .druid-menu-border.active {
   border-bottom: 3px solid #FF7D0A;
 }
-.druid-button {
-  border: 1px solid rgb(231, 112, 7);
+.druid-border-bottom {
+  border-bottom: 3px solid #FF7D0A;
 }
+.druid-button {
+  color: #FF7D0A;
+  border-right: 5px solid #232227;
+  border-left: 5px solid #232227;
+  /* border-bottom: 3px solid #232227; */
+  transition: border .2s ease-in;
+}
+.druid-button:hover, .druid-button:focus {
+  color: #FF7D0A;
+  border-left: 5px solid #FF7D0A;
+  /* border-right: 3px solid #FF7D0A; */
+  /* border-bottom: 3px solid #FF7D0A; */
+  transition: border .01s ease-in;
+}
+.druid-border-top {
+  border-top: 3px solid #FF7D0A;
+}
+
 
 .hunter-background, .hunter-background a {
   background-color: #ABD473;
@@ -231,12 +313,34 @@ a.hunter-background:hover, button.hunter-background:hover, .hunter-background a:
   border-bottom: 3px solid #ABD473;
   transition: border-bottom .01s ease-in;
 }
+/*Hide the bottom border if the sub menu is active*/
+.show .hunter-menu-border:hover, .show .hunter-menu-border.active {
+  border-bottom: 3px solid transparent;
+}
 .hunter-menu-border.active {
   border-bottom: 3px solid #ABD473;
 }
-.hunter-button {
-  border: 1px solid rgb(150, 189, 96);
+.hunter-border-bottom {
+  border-bottom: 3px solid #ABD473;
 }
+.hunter-button {
+  color: #ABD473;
+  border-right: 5px solid #232227;
+  border-left: 5px solid #232227;
+  /* border-bottom: 3px solid #232227; */
+  transition: border .2s ease-in;
+}
+.hunter-button:hover, .hunter-button:focus {
+  color: #ABD473;
+  border-left: 5px solid #ABD473;
+  /* border-right: 3px solid #ABD473; */
+  /* border-bottom: 3px solid #ABD473; */
+  transition: border .01s ease-in;
+}
+.hunter-border-top {
+  border-top: 3px solid #ABD473;
+}
+
 
 .mage-background, .mage-background a {
   background-color: #69CCF0;
@@ -258,12 +362,34 @@ a.mage-background:hover, button.mage-background:hover, .mage-background a:hover 
   border-bottom: 3px solid #69CCF0;
   transition: border-bottom .01s ease-in;
 }
+/*Hide the bottom border if the sub menu is active*/
+.show .mage-menu-border:hover, .show .mage-menu-border.active {
+  border-bottom: 3px solid transparent;
+}
 .mage-menu-border.active {
   border-bottom: 3px solid #69CCF0;
 }
-.mage-button {
-  border: 1px solid #56b5d8;
+.mage-border-bottom {
+  border-bottom: 3px solid #69CCF0;
 }
+.mage-button {
+  color: #69CCF0;
+  border-right: 5px solid #232227;
+  border-left: 5px solid #232227;
+  /* border-bottom: 3px solid #232227; */
+  transition: border .2s ease-in;
+}
+.mage-button:hover, .mage-button:focus {
+  color: #69CCF0;
+  border-left: 5px solid #69CCF0;
+  /* border-right: 3px solid #69CCF0; */
+  /* border-bottom: 3px solid #69CCF0; */
+  transition: border .01s ease-in;
+}
+.mage-border-top {
+  border-top: 3px solid #69CCF0;
+}
+
 
 .monk-background, .monk-background a {
   background-color: #00FF96;
@@ -285,12 +411,34 @@ a.monk-background:hover, button.monk-background:hover,.monk-background a:hover {
   border-bottom: 3px solid #00FF96;
   transition: border-bottom .01s ease-in;
 }
+/*Hide the bottom border if the sub menu is active*/
+.show .monk-menu-border:hover, .show .monk-menu-border.active {
+  border-bottom: 3px solid transparent;
+}
 .monk-menu-border.active {
   border-bottom: 3px solid #00FF96;
 }
-.monk-button {
-  border: 1px solid #01d47d;
+.monk-border-bottom {
+  border-bottom: 3px solid #00FF96;
 }
+.monk-button {
+  color: #00FF96;
+  border-right: 5px solid #232227;
+  border-left: 5px solid #232227;
+  /* border-bottom: 3px solid #232227; */
+  transition: border .2s ease-in;
+}
+.monk-button:hover, .monk-button:focus {
+  color: #00FF96;
+  border-left: 5px solid #00FF96;
+  /* border-right: 3px solid #00FF96; */
+  /* border-bottom: 3px solid #00FF96; */
+  transition: border .01s ease-in;
+}
+.monk-border-top {
+  border-top: 3px solid #00FF96;
+}
+
 
 .paladin-background, .paladin-background a {
   background-color: #F58CBA;
@@ -312,12 +460,34 @@ a.paladin-background:hover, button.paladin-background:hover,.paladin-background 
   border-bottom: 3px solid #F58CBA;
   transition: border-bottom .01s ease-in;
 }
+/*Hide the bottom border if the sub menu is active*/
+.show .paladin-menu-border:hover, .show .paladin-menu-border.active {
+  border-bottom: 3px solid transparent;
+}
 .paladin-menu-border.active {
   border-bottom: 3px solid #F58CBA;
 }
-.paladin-button {
-  border: 1px solid rgb(219, 120, 163);
+.paladin-border-bottom {
+  border-bottom: 3px solid #F58CBA;
 }
+.paladin-button {
+  color: #F58CBA;
+  border-right: 5px solid #232227;
+  border-left: 5px solid #232227;
+  /* border-bottom: 3px solid #232227; */
+  transition: border .2s ease-in;
+}
+.paladin-button:hover, .paladin-button:focus {
+  color: #F58CBA;
+  border-left: 5px solid #F58CBA;
+  /* border-right: 3px solid #F58CBA; */
+  /* border-bottom: 3px solid #F58CBA; */
+  transition: border .01s ease-in;
+}
+.paladin-border-top {
+  border-top: 3px solid #F58CBA;
+}
+
 
 .priest-background, .priest-background a {
   background-color: #ffffff;
@@ -342,12 +512,34 @@ a.priest-background:hover, button.priest-background:hover, .priest-background a:
   border-bottom: 3px solid #ffffff;
   transition: border-bottom .01s ease-in;
 }
+/*Hide the bottom border if the sub menu is active*/
+.show .priest-menu-border:hover, .show .priest-menu-border.active {
+  border-bottom: 3px solid transparent;
+}
 .priest-menu-border.active {
   border-bottom: 3px solid #ffffff;
 }
-.priest-button {
-  border: 1px solid #ccc;
+.priest-border-bottom {
+  border-bottom: 3px solid #ffffff;
 }
+.priest-button {
+  color: #ffffff;
+  border-right: 5px solid #232227;
+  border-left: 5px solid #232227;
+  /* border-bottom: 3px solid #232227; */
+  transition: border .2s ease-in;
+}
+.priest-button:hover, .priest-button:focus {
+  color: #ffffff;
+  border-left: 5px solid #ffffff;
+  /* border-right: 3px solid #ffffff; */
+  /* border-bottom: 3px solid #ffffff; */
+  transition: border .01s ease-in;
+}
+.priest-border-top {
+  border-top: 3px solid #ffffff;
+}
+
 
 .rogue-background, .rogue-background a {
   background-color: #FFF569;
@@ -369,20 +561,43 @@ a.rogue-background:hover, button.rogue-background:hover, .rogue-background a:hov
   border-bottom: 3px solid #FFF569;
   transition: border-bottom .01s ease-in;
 }
+/*Hide the bottom border if the sub menu is active*/
+.show .rogue-menu-border:hover, .show .rogue-menu-border.active {
+  border-bottom: 3px solid transparent;
+}
 .rogue-menu-border.active {
   border-bottom: 3px solid #FFF569;
 }
-.rogue-button {
-  border: 1px solid #dcd352;
+.rogue-border-bottom {
+  border-bottom: 3px solid #FFF569;
 }
+.rogue-button {
+  color: #FFF569;
+  border-right: 5px solid #232227;
+  border-left: 5px solid #232227;
+  /* border-bottom: 3px solid #232227; */
+  transition: border .2s ease-in;
+}
+.rogue-button:hover, .rogue-button:focus {
+  color: #FFF569;
+  border-left: 5px solid #FFF569;
+  /* border-right: 3px solid #FFF569; */
+  /* border-bottom: 3px solid #FFF569; */
+  transition: border .01s ease-in;
+}
+.rogue-border-top {
+  border-top: 3px solid #FFF569;
+}
+
 
 .shaman-background, .shaman-background a {
   background-color: #0070DE;
-  color: white;
+  color: #eee;
+  text-shadow: 0px 0px 3px black;
 }
 a.shaman-background:hover, button.shaman-background:hover, .shaman-background a:hover {
   background-color: rgb(19, 93, 167);
-  color: white;
+  color: #eee;
 }
 .shaman-color {
   color: #0070DE!important;
@@ -396,20 +611,43 @@ a.shaman-background:hover, button.shaman-background:hover, .shaman-background a:
   border-bottom: 3px solid #0070DE;
   transition: border-bottom .01s ease-in;
 }
+/*Hide the bottom border if the sub menu is active*/
+.show .shaman-menu-border:hover, .show .shaman-menu-border.active {
+  border-bottom: 3px solid transparent;
+}
 .shaman-menu-border.active {
   border-bottom: 3px solid #0070DE;
 }
-.shaman-button {
-  border: 1px solid rgb(2, 89, 177);
+.shaman-border-bottom {
+  border-bottom: 3px solid #0070DE;
 }
+.shaman-button {
+  color: #0070DE;
+  border-right: 5px solid #232227;
+  border-left: 5px solid #232227;
+  /* border-bottom: 3px solid #232227; */
+  transition: border .2s ease-in;
+}
+.shaman-button:hover, .shaman-button:focus {
+  color: #0070DE;
+  border-left: 5px solid #0070DE;
+  /* border-right: 3px solid #0070DE; */
+  /* border-bottom: 3px solid #0070DE; */
+  transition: border .01s ease-in;
+}
+.shaman-border-top {
+  border-top: 3px solid #0070DE;
+}
+
 
 .warlock-background, .warlock-background a {
   background-color: #9482C9;
-  color: white;
+  color: #eee;
+  text-shadow: 0px 0px 3px black;
 }
 a.warlock-background:hover, button.warlock-background:hover, .warlock-background a:hover {
   background-color: #7463a9;
-  color: white;
+  color: #eee;
 }
 .warlock-color {
   color: #9482C9!important;
@@ -423,20 +661,43 @@ a.warlock-background:hover, button.warlock-background:hover, .warlock-background
   border-bottom: 3px solid #9482C9;
   transition: border-bottom .01s ease-in;
 }
+/*Hide the bottom border if the sub menu is active*/
+.show .warlock-menu-border:hover, .show .warlock-menu-border.active {
+  border-bottom: 3px solid transparent;
+}
 .warlock-menu-border.active {
   border-bottom: 3px solid #9482C9;
 }
-.warlock-button {
-  border: 1px solid #7463a9;
+.warlock-border-bottom {
+  border-bottom: 3px solid #9482C9;
 }
+.warlock-button {
+  color: #9482C9;
+  border-right: 5px solid #232227;
+  border-left: 5px solid #232227;
+  /* border-bottom: 3px solid #232227; */
+  transition: border .2s ease-in;
+}
+.warlock-button:hover, .warlock-button:focus {
+  color: #9482C9;
+  border-left: 5px solid #9482C9;
+  /* border-right: 3px solid #9482C9; */
+  /* border-bottom: 3px solid #9482C9; */
+  transition: border .01s ease-in;
+}
+.warlock-border-top {
+  border-top: 3px solid #9482C9;
+}
+
 
 .warrior-background, .warrior-background a {
   background-color: #C79C6E;
-  color: white;
+  color: #eee;
+  text-shadow: 0px 0px 3px black;
 }
 a.warrior-background:hover, button.warrior-background:hover, .warrior-background a:hover {
   background-color: #ad8862;
-  color: white;
+  color: #eee;
 }
 .warrior-color {
   color: #C79C6E!important;
@@ -450,9 +711,31 @@ a.warrior-background:hover, button.warrior-background:hover, .warrior-background
   border-bottom: 3px solid #C79C6E;
   transition: border-bottom .01s ease-in;
 }
+/*Hide the bottom border if the sub menu is active*/
+.show .warrior-menu-border:hover, .show .warrior-menu-border.active {
+  border-bottom: 3px solid transparent;
+}
 .warrior-menu-border.active {
   border-bottom: 3px solid #C79C6E;
 }
-.warrior-button {
-  border: 1px solid #ab845a;
+.warrior-border-bottom {
+  border-bottom: 3px solid #C79C6E;
 }
+.warrior-button {
+  color: #C79C6E;
+  border-right: 5px solid #232227;
+  border-left: 5px solid #232227;
+  /* border-bottom: 3px solid #232227; */
+  transition: border .2s ease-in;
+}
+.warrior-button:hover, .warrior-button:focus {
+  color: #C79C6E;
+  border-left: 5px solid #C79C6E;
+  /* border-right: 3px solid #C79C6E; */
+  /* border-bottom: 3px solid #C79C6E; */
+  transition: border .01s ease-in;
+}
+.warrior-border-top {
+  border-top: 3px solid #C79C6E;
+}
+
