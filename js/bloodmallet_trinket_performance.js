@@ -107,9 +107,9 @@ var chart;
 
 // add listener after document finished loading
 document.addEventListener("DOMContentLoaded",
-  function() {
+  function () {
     //console.log("Page was loaded.");
-    document.getElementById("load_data_button").addEventListener("click", trigger_loading );
+    document.getElementById("load_data_button").addEventListener("click", trigger_loading);
   }
 );
 
@@ -117,7 +117,7 @@ document.addEventListener("DOMContentLoaded",
  * Triggers loading animation and load of all json data.
  */
 function trigger_loading() {
-  document.getElementById("load_data_button").removeEventListener("click", trigger_loading );
+  document.getElementById("load_data_button").removeEventListener("click", trigger_loading);
   loading("Loading...");
 
   // Load all data of all fight styles and specs
@@ -126,7 +126,7 @@ function trigger_loading() {
     for (var j = 0; j < wow_classes_specs.length; j++) {
       for (var k = 0; k < wow_classes_specs[j][1].length; k++) {
         //data is saved in load_JSON using the simulated_data variable
-        load_JSON(fight_styles[i], wow_classes_specs[j][0], wow_classes_specs[j][1][k] );
+        load_JSON(fight_styles[i], wow_classes_specs[j][0], wow_classes_specs[j][1][k]);
         loaded_expectation++;
       }
     }
@@ -145,16 +145,16 @@ function loading(argument) {
     document.getElementById("load_data_button").innerHTML = argument;
     document.getElementById("load_data_status").innerHTML = loaded_done + "&nbsp;/&nbsp;" + loaded_expectation;
     if (argument == "Loading...") {
-      setTimeout(function() { loading("Loading..|"); }, 750);
+      setTimeout(function () { loading("Loading..|"); }, 750);
 
     } else if (argument == "Loading|..") {
-      setTimeout(function() { loading("Loading..."); }, 750);
+      setTimeout(function () { loading("Loading..."); }, 750);
 
     } else if (argument == "Loading.|.") {
-      setTimeout(function() { loading("Loading|.."); }, 750);
+      setTimeout(function () { loading("Loading|.."); }, 750);
 
     } else if (argument == "Loading..|") {
-      setTimeout(function() { loading("Loading.|."); }, 750);
+      setTimeout(function () { loading("Loading.|."); }, 750);
 
     } else {
       console.log("Somehow the loop for the \"Loading...\" button broke.");
@@ -174,7 +174,7 @@ function load_JSON(fight_style, wow_class, wow_spec) {
   var xobj = new XMLHttpRequest();
   xobj.overrideMimeType("application/json");
 
-  xobj.open('GET', "json/" + wow_class + "_" + wow_spec + "_" + fight_style + ".json", true);
+  xobj.open('GET', "json/trinkets/" + wow_class + "_" + wow_spec + "_trinkets_" + fight_style + ".json", true);
 
   xobj.onreadystatechange = function () {
     if (xobj.readyState == 4 && xobj.status == "200") {
@@ -200,7 +200,7 @@ function load_JSON(fight_style, wow_class, wow_spec) {
  */
 function wait_for_load() {
   if (loaded_done != loaded_expectation) {
-  //if (loaded_done < 36 ) {
+    //if (loaded_done < 36 ) {
     setTimeout(wait_for_load, 250);
   } else {
     loaded = true;
@@ -221,7 +221,7 @@ function fill_menu() {
     //console.log(spec);
     for (trinket in simulated_data["patchwerk"][spec]) {
       //console.log(trinket);
-      if ( trinket_list.indexOf(trinket) == -1 && trinket != "baseline") {
+      if (trinket_list.indexOf(trinket) == -1 && trinket != "baseline") {
         trinket_list.push(trinket);
       }
     }
@@ -240,7 +240,7 @@ function fill_menu() {
   }
 
   // add change event to the trinket options
-  trinket_choice.addEventListener("change", function() {
+  trinket_choice.addEventListener("change", function () {
     reload_chart();
   });
 
@@ -254,7 +254,7 @@ function fill_menu() {
   }
 
   // add change event to the fight_style options
-  fight_style_choice.addEventListener("change", function() {
+  fight_style_choice.addEventListener("change", function () {
     reload_chart();
   });
 
@@ -269,7 +269,7 @@ function fill_menu() {
   }
 
   // add change event to itemlevels
-  itemlevel_choice.addEventListener("change", function() {
+  itemlevel_choice.addEventListener("change", function () {
     reload_chart();
   });
 
@@ -280,70 +280,70 @@ function fill_menu() {
 
   // create chart with deault values
   chart = Highcharts.chart('performance_root',
-  {
+    {
       chart: {
-          type: "bar"
+        type: "bar"
       },
       legend: {
-          enabled: false
+        enabled: false
       },
       plotOptions: {
-          bar: {
-              dataLabels: {
-                  enabled: false
-              },
-              point: {
-                  events: {
-                      click: function (event) {                var chart = this.series.yAxis;                chart.removePlotLine('helperLine');                chart.addPlotLine({                    value: this.stackY,                    color: '#000',                    width: 2,                    id: 'helperLine',                    zIndex: 5,                    label: {                      text: this.series.name,                      align: 'left',                      verticalAlign: 'bottom',                      rotation: 0,                      y: -5                    }                });              }
-                  }
-              },
-              stacking: "normal"
+        bar: {
+          dataLabels: {
+            enabled: false
           },
-          series: {
-              borderColor: "#151515",
-          }
+          point: {
+            events: {
+              click: function (event) { var chart = this.series.yAxis; chart.removePlotLine('helperLine'); chart.addPlotLine({ value: this.stackY, color: '#000', width: 2, id: 'helperLine', zIndex: 5, label: { text: this.series.name, align: 'left', verticalAlign: 'bottom', rotation: 0, y: -5 } }); }
+            }
+          },
+          stacking: "normal"
+        },
+        series: {
+          borderColor: "#151515",
+        }
       },
       series: [
-          {
-              color: "#343434",
-              data: [
-                1,
-              ],
-              name: 1,
-              showInLegend: false
-          },
+        {
+          color: "#343434",
+          data: [
+            1,
+          ],
+          name: 1,
+          showInLegend: false
+        },
       ],
       subtitle: {
-          text: last_simulation,
-          useHTML: true,
+        text: last_simulation,
+        useHTML: true,
       },
       title: {
-          text: "Placeholder TRINKET",
+        text: "Placeholder TRINKET",
       },
       tooltip: {
         enabled: false,
       },
       xAxis: {
-          categories: [
-            "Placeholder",
-          ]
+        categories: [
+          "Placeholder",
+        ]
       },
       yAxis: {
-          labels: {
-              enabled: false
-          },
-          min: 0,
-          stackLabels: {
-              enabled: true,
-              style: {
-                  textOutline: false,
-              }
-          },
-          title: {
-              text: "\u0394 Damage per second"
+        labels: {
+          enabled: false
+        },
+        min: 0,
+        stackLabels: {
+          enabled: true,
+          style: {
+            textOutline: false,
           }
+        },
+        title: {
+          text: "\u0394 Damage per second"
+        }
       }
-  });
+    });
 
   // trigger update function for chart
   reload_chart();
