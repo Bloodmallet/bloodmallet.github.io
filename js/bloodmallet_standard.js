@@ -504,33 +504,25 @@ document.addEventListener("DOMContentLoaded", function () {
  * Switches the language and calls translate_page to do the actual translation.
 */
 function switch_language(new_language) {
+  if(language===new_language)
+    return;
+
   if (dev_mode)
     console.log("switch_language");
   // if new language is different to already active language and if it wasn't already loaded
-  if (new_language != language && !loaded_languages[new_language]) {
-    var xhttp_getLanguage = new XMLHttpRequest();
-    xhttp_getLanguage.open("GET", "./translations/" + new_language.toLowerCase() + ".json", true);
-    xhttp_getLanguage.setRequestHeader("Content-type", "application/json");
-    xhttp_getLanguage.onreadystatechange = function () {
-      if (this.readyState == 4 && this.status == 200) {
-        // save loaded translations
-        loaded_languages[new_language] = JSON.parse(xhttp_getLanguage.responseText);
-        language = new_language;
-        translate_page();
-        set_language_cookie();
-        ga('send', 'event', 'alpha', 'switch_language', language);
-      }
-    }
-    xhttp_getLanguage.send();
-  } else if (new_language == language) {
-    // nothing happens....there is nothing to do
-    console.log("switch_language didn't detect a change in language. new: " + new_language + ", old: " + language);
-  } else {
-    language = new_language;
-    translate_page();
-    set_language_cookie();
-    ga('send', 'event', 'alpha', 'switch_language', language);
+  if (!loaded_languages[new_language]) {
+    fetch(`./translations/${new_language.toLowerCase()}.json`)
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (json) {
+        loaded_languages[new_language] = json;
+      });
   }
+  language = new_language;
+  translate_page();
+  set_language_cookie();
+  ga('send', 'event', 'alpha', 'switch_language', language);
 }
 
 
