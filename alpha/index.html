@@ -16,9 +16,9 @@
       i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () { (i[r].q = i[r].q || []).push(arguments) }, i[r].l = 1 * new Date(); a = s.createElement(o), m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
     })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
-    ga('create', 'UA-102757416-1', 'auto');
-    ga('set', 'anonymizeIp', true);
-    ga('send', 'pageview');
+      //ga('create', 'UA-102757416-1', 'auto');
+      //ga('set', 'anonymizeIp', true);
+      //ga('send', 'pageview');
 
   </script>
   <script>
@@ -58,7 +58,9 @@
 <body class="bg-darker text-light">
   <!-- Top menu start -->
   <nav class="navbar sticky-top navbar-expand-lg navbar-dark">
-    <a class="navbar-brand" href="index.html">bloodmallet</a>
+    <a class="navbar-brand" href="index.html">
+      <img src="bloodmallet.svg" style="width: 30px;" /> bloodmallet
+    </a>
     <!-- Menu button if device is too small for full menu -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTopMenu" aria-controls="navbarTopMenu"
       aria-expanded="false" aria-label="Toggle navigation">
@@ -245,15 +247,14 @@
   <main>
     <!-- Introduction -->
     <div class="container-fluid" id="welcome_container">
-      <h1 class="display-4 text-center" id="main_header">bloodmallet (alpha)
+      <h1 class="display-4 text-center" id="main_header">
+        bloodmallet
       </h1>
       <br/>
       <!--<h1 class="display-4 text-center" id="main_header">Bloody<wbr>(<span id="bloodyfiller">&nbsp;tools&nbsp;</span>)
       </h1>-->
       <div class="row">
-        <div class="offset-xl-2 col-xl-8 offset-lg-2 col-lg-8 offset-md-1 col-md-10">
-          <p>THIS IS AN EARLY STATE OF THE PAGE! Things are broken or not implemented. Please
-            <a href="https://github.com/Bloodmallet/bloodmallet.github.io/projects/4" target="blank">report</a> problems and suggest improvements! Let me know what you think about this new design.</p>
+        <div class="offset-xl-3 col-xl-6 offset-lg-2 col-lg-8 offset-md-1 col-md-10">
           <p id="translate_main_paragraph">
             This site provides an overview about trinkets, azerite traits, and others for almost all specs in World of Warcraft using
             <a href="http://www.simulationcraft.org/" target="blank">SimulationCraft</a>'s default profiles. These overviews are an entry point. For indepth information about your
@@ -280,7 +281,7 @@
     <div class="container-fluid" id="spec_table">
       <!-- have 3 rows, four columns for big screen, and four rows, three columns for smaller ones -->
       <div class="row text-center ">
-        <div class="offset-xl-2 col-xl-8 offset-lg-2 col-lg-8 offset-md-1 col-md-10">
+        <div class="offset-xl-3 col-xl-6 offset-lg-2 col-lg-8 offset-md-1 col-md-10">
           <!-- make sure the table is properly aligned with all other content -->
           <div class="row" style="margin-right: 0px; margin-left: 0px;">
             <!-- Death Knight -->
@@ -495,14 +496,14 @@
     <!-- Chart -->
     <div class="container-fluid">
       <div class="row">
-        <div id="chart" hidden class="offset-xl-2 col-xl-8 offset-lg-2 col-lg-8 offset-md-1 col-md-10"></div>
+        <div id="chart" hidden class="offset-xl-1 col-xl-10 offset-lg-1 col-lg-10 offset-md-1 col-md-10"></div>
       </div>
     </div>
     <!-- TC resources -->
     <div class="container-fluid" id="tc_resources" hidden>
       <ul type="square" class="offset-xl-2 col-xl-8 offset-lg-2 col-lg-8 offset-md-1 col-md-10">
         <li class="translate_tc_warning">
-          Please use your spec's theorycrafters resources for more indepth data.
+          Please use your spec's theorycrafters resources for more indepth information.
         </li>
         <li><span class="translate_theorycrafter_resource">Theorycrafter resource</span>:
           <!-- Death Knight Blood -->
@@ -819,6 +820,8 @@
     </div>
   </main>
 
+
+  <div id="background_image"></div>
   <footer>
     <!-- Bottom menu -->
     <nav class="navbar navbar-expand-sm navbar-dark">
@@ -827,6 +830,13 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarBottomMenu">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="trinket_performance.html" id="translate_trinket_performance">Trinket performance</a>
+          </li>
+        </ul>
+
+
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
             <a class="nav-link" href="faq.html" id="translate_faq">FAQ</a>
@@ -860,8 +870,8 @@
   <script src="https://code.highcharts.com/highcharts.js"></script>
   <script src="//wow.zamimg.com/widgets/power.js"></script>
   <script src="js/bloodmallet_standard.js"></script>
+  <script src="js/bloodmallet_highcharts_fix.js"></script>
   <script src="js/bloodmallet_top_settings_fix.js"></script>
-
 
 </body>
 

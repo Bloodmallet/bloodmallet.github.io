@@ -162,14 +162,14 @@ var standard_chart = Highcharts.chart('chart',
               chart.removePlotLine('helperLine');
               chart.addPlotLine({
                 value: this.stackY,
-                color: 'white',
+                color: medium_color,
                 width: 2,
                 id: 'helperLine',
                 zIndex: 5,
                 label: {
                   text: this.series.name + ' ' + this.category,
                   style: {
-                    color: 'white',
+                    color: medium_color,
                   },
                   align: 'left',
                   verticalAlign: 'bottom',
@@ -277,7 +277,7 @@ var standard_chart = Highcharts.chart('chart',
           color: light_color
         }
       },
-      gridLineWidth: 1,
+      gridLineWidth: 0,
       gridLineColor: medium_color,
       lineColor: medium_color,
       tickColor: medium_color
@@ -303,7 +303,7 @@ var standard_chart = Highcharts.chart('chart',
       title: {
         text: "\u0394 Damage per second",
         style: {
-          color: light_color
+          color: medium_color
         }
       },
       gridLineWidth: 1,
@@ -379,16 +379,6 @@ function update_dark_mode() {
           style: {
             color: light_color
           }
-        },
-        title: {
-          style: {
-            color: light_color
-          }
-        },
-        subtitle: {
-          style: {
-            color: light_color
-          }
         }
       }
     });
@@ -418,16 +408,6 @@ function update_dark_mode() {
       },
       yAxis: {
         stackLabels: {
-          style: {
-            color: dark_color
-          }
-        },
-        title: {
-          style: {
-            color: dark_color
-          }
-        },
-        subtitle: {
           style: {
             color: dark_color
           }
@@ -1079,28 +1059,4 @@ function copy_link() {
   console.log("copy_link is not yet implemented.");
 }
 
-/**
- *
- * Temporary fix to the broken stacked charts labels with highcharts version 6.1
- *
- * Source/Issue: https://github.com/highcharts/highcharts/issues/8187
- */
-Highcharts.StackItem.prototype.getStackBox = function (chart, stackItem, x, y, xWidth, h, axis) {
-  var reversed = stackItem.axis.reversed,
-    inverted = chart.inverted,
-    axisPos = axis.height + axis.pos - (inverted ? chart.plotLeft : chart.plotTop),
-    neg = (stackItem.isNegative && !reversed) ||
-      (!stackItem.isNegative && reversed);
 
-  return {
-    x: inverted ? (neg ? y : y - h) : x,
-    y: inverted ?
-      axisPos - x - xWidth :
-      (neg ?
-        (axisPos - y - h) :
-        axisPos - y
-      ),
-    width: inverted ? h : xWidth,
-    height: inverted ? xWidth : h
-  };
-}
