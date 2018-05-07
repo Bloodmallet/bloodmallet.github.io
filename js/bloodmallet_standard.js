@@ -162,14 +162,14 @@ var standard_chart = Highcharts.chart('chart',
               chart.removePlotLine('helperLine');
               chart.addPlotLine({
                 value: this.stackY,
-                color: 'white',
+                color: medium_color,
                 width: 2,
                 id: 'helperLine',
                 zIndex: 5,
                 label: {
                   text: this.series.name + ' ' + this.category,
                   style: {
-                    color: 'white',
+                    color: medium_color,
                   },
                   align: 'left',
                   verticalAlign: 'bottom',
@@ -277,7 +277,7 @@ var standard_chart = Highcharts.chart('chart',
           color: light_color
         }
       },
-      gridLineWidth: 1,
+      gridLineWidth: 0,
       gridLineColor: medium_color,
       lineColor: medium_color,
       tickColor: medium_color
@@ -303,7 +303,7 @@ var standard_chart = Highcharts.chart('chart',
       title: {
         text: "\u0394 Damage per second",
         style: {
-          color: light_color
+          color: medium_color
         }
       },
       gridLineWidth: 1,
@@ -379,16 +379,6 @@ function update_dark_mode() {
           style: {
             color: light_color
           }
-        },
-        title: {
-          style: {
-            color: light_color
-          }
-        },
-        subtitle: {
-          style: {
-            color: light_color
-          }
         }
       }
     });
@@ -418,16 +408,6 @@ function update_dark_mode() {
       },
       yAxis: {
         stackLabels: {
-          style: {
-            color: dark_color
-          }
-        },
-        title: {
-          style: {
-            color: dark_color
-          }
-        },
-        subtitle: {
           style: {
             color: dark_color
           }

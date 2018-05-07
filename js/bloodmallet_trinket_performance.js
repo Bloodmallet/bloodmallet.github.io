@@ -278,11 +278,16 @@ function fill_menu() {
   fight_style_choice.style.display = "block";
   itemlevel_choice.style.display = "block";
 
+  var light_color = "#eee";
+  var medium_color = "#999"
+  var dark_color = "#343a40";
+
   // create chart with deault values
   chart = Highcharts.chart('performance_root',
     {
       chart: {
-        type: "bar"
+        type: "bar",
+        backgroundColor: null,
       },
       legend: {
         enabled: false
@@ -294,18 +299,38 @@ function fill_menu() {
           },
           point: {
             events: {
-              click: function (event) { var chart = this.series.yAxis; chart.removePlotLine('helperLine'); chart.addPlotLine({ value: this.stackY, color: '#000', width: 2, id: 'helperLine', zIndex: 5, label: { text: this.series.name, align: 'left', verticalAlign: 'bottom', rotation: 0, y: -5 } }); }
+              click: function (event) {
+                var chart = this.series.yAxis;
+                chart.removePlotLine('helperLine');
+                chart.addPlotLine({
+                  value: this.stackY,
+                  color: medium_color,
+                  width: 2,
+                  id: 'helperLine',
+                  zIndex: 5,
+                  label: {
+                    text: this.series.name,
+                    style: {
+                      color: medium_color,
+                    },
+                    align: 'left',
+                    verticalAlign: 'bottom',
+                    rotation: 0,
+                    y: -5
+                  }
+                });
+              }
             }
           },
           stacking: "normal"
         },
         series: {
-          borderColor: "#151515",
+          borderColor: dark_color,
         }
       },
       series: [
         {
-          color: "#343434",
+          color: medium_color,
           data: [
             1,
           ],
@@ -316,9 +341,17 @@ function fill_menu() {
       subtitle: {
         text: last_simulation,
         useHTML: true,
+        style: {
+          color: light_color,
+        }
       },
       title: {
         text: "Placeholder TRINKET",
+        useHTML: true,
+        style: {
+          color: light_color
+        }
+
       },
       tooltip: {
         enabled: false,
@@ -326,7 +359,17 @@ function fill_menu() {
       xAxis: {
         categories: [
           "Placeholder",
-        ]
+        ],
+        labels: {
+          useHTML: true,
+          style: {
+            color: light_color
+          }
+        },
+        gridLineWidth: 0,
+        gridLineColor: medium_color,
+        lineColor: medium_color,
+        tickColor: medium_color
       },
       yAxis: {
         labels: {
@@ -335,13 +378,22 @@ function fill_menu() {
         min: 0,
         stackLabels: {
           enabled: true,
+          formatter: function () {
+            return Intl.NumberFormat().format(this.total);
+          },
           style: {
+            color: light_color,
             textOutline: false,
           }
         },
         title: {
-          text: "\u0394 Damage per second"
-        }
+          text: "\u0394 Damage per second",
+          style: {
+            color: medium_color,
+          },
+        },
+        gridLineWidth: 1,
+        gridLineColor: medium_color
       }
     });
 

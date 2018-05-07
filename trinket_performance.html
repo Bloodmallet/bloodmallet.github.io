@@ -58,7 +58,9 @@
 <body class="bg-darker text-light">
   <!-- Top menu start -->
   <nav class="navbar sticky-top navbar-expand-lg navbar-dark">
-    <a class="navbar-brand" href="index.html">bloodmallet</a>
+    <a class="navbar-brand" href="index.html">
+      <img src="bloodmallet.svg" style="width: 30px;" /> bloodmallet
+    </a>
     <!-- Menu button if device is too small for full menu -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTopMenu" aria-controls="navbarTopMenu"
       aria-expanded="false" aria-label="Toggle navigation">
@@ -245,7 +247,8 @@
   <main>
     <!-- Introduction -->
     <div class="container-fluid" id="welcome_container">
-      <h1 class="display-4 text-center" id="main_header">Trinket performance
+      <h1 class="display-4 text-center" id="main_header">
+        Trinket performance
       </h1>
       <br/>
       <!--<h1 class="display-4 text-center" id="main_header">Bloody<wbr>(<span id="bloodyfiller">&nbsp;tools&nbsp;</span>)
@@ -276,23 +279,24 @@
     <!-- -->
     <div class="container-fluid">
       <div class="row">
-        <div class="offset-xl-3 col-xl-6 offset-lg-2 col-lg-8 offset-md-1 col-md-10 alert alert-warning">This page is quite load and calcultion heavy. Therefore it might feel slow when changing settings.</div>
+        <div class="offset-xl-3 col-xl-6 offset-lg-2 col-lg-8 offset-md-1 col-md-10 alert alert-warning">This page is quite load and calculation heavy. Therefore it might feel slow when changing settings.</div>
       </div>
 
       <div class="row">
         <div class="offset-xl-3 col-xl-6 offset-lg-2 col-lg-8 offset-md-1 col-md-10" id="selectors">
-          <button id="load_data_button">Load Data</button>
+          <button class="btn" id="load_data_button">Load Data</button>
           <span id="load_data_status"></span>
         </div>
       </div>
-      <form class="form-inline offset-xl-3 col-xl-6 offset-lg-2 col-lg-8 offset-md-1 col-md-10">
+
+      <form class="form-inline d-flex justify-content-center">
         <div class="form-group">
           <label class="sr-only" for="trinket_choice">Name of the trinket</label>
-          <select class="form-control" id="trinket_choice" style="display: none;"></select>
+          <select class="form-control" id="trinket_choice" style="display: none;margin-right: 0.6rem;"></select>
         </div>
         <div class="form-group">
           <label class="sr-only" for="itemlevel_choice">Itemlevel</label>
-          <select class="form-control" id="itemlevel_choice" style="display: none;"></select>
+          <select class="form-control" id="itemlevel_choice" style="display: none; margin-right: 0.6rem;"></select>
         </div>
         <div class="form-group">
           <label class="sr-only" for="fight_style_choice">Fight style</label>
@@ -308,6 +312,7 @@
 
   </main>
 
+  <div id="background_image"></div>
   <footer>
     <!-- Bottom menu -->
     <nav class="navbar navbar-expand-sm navbar-dark">
@@ -318,7 +323,7 @@
       <div class="collapse navbar-collapse" id="navbarBottomMenu">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a class="nav-link active" href="trinket_performance.html" id="translate_trinket_performance">Trinket performance(NYI)</a>
+            <a class="nav-link active" href="trinket_performance.html" id="translate_trinket_performance">Trinket performance</a>
           </li>
         </ul>
 
