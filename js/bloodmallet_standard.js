@@ -949,9 +949,6 @@ function update_chart() {
   const minIlvl=Math.min(...trinketArray["Simulated itemlevels"]);
   const baselineDps=trinketArray["trinkets"]["baseline"][minIlvl];
 
-  console.log(minIlvl);
-  console.log(baselineDps);
-
   for (let itemlevel_position in trinketArray["Simulated itemlevels"]) {
 
     var itemlevel = trinketArray["Simulated itemlevels"][itemlevel_position];
