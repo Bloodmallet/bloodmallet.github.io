@@ -912,9 +912,15 @@ function update_chart() {
   if (dev_mode)
     console.log("update_chart");
 
+  const trinketArray=loaded_data[chosen_class][chosen_spec][data_view][fight_style];
+
   // https://stackoverflow.com/questions/25500316/sort-a-dictionary-by-value-in-javascript
   // create a list of all trinkets with their highest dps value
-  var dps_ordered_trinkets = Object.keys(loaded_data[chosen_class][chosen_spec][data_view][fight_style]["trinkets"]).map(function (key) { return [key, Math.max(...Object.values(loaded_data[chosen_class][chosen_spec][data_view][fight_style]["trinkets"][key]))] });
+  var dps_ordered_trinkets =
+    Object.keys(trinketArray["trinkets"])
+      .map(function (key) {
+        return [key, Math.max(...Object.values(trinketArray["trinkets"][key]))]
+      });
   // order said list
   dps_ordered_trinkets.sort(function (first, second) { return second[1] - first[1]; });
   //console.log(dps_ordered_trinkets);
@@ -924,9 +930,9 @@ function update_chart() {
 
   // set title and subtitle
   standard_chart.setTitle({
-    text: loaded_data[chosen_class][chosen_spec][data_view][fight_style]["title"]
+    text: trinketArray["title"]
   }, {
-      text: loaded_data[chosen_class][chosen_spec][data_view][fight_style]["subtitle"]
+      text: trinketArray["subtitle"]
     }, false);
 
   // rewrite the trinket names
@@ -940,41 +946,23 @@ function update_chart() {
   while (standard_chart.series[0]) {
     standard_chart.series[0].remove(false);
   }
+  const minIlvl=Math.min(...trinketArray["Simulated itemlevels"]);
+  const baselineDps=trinketArray["trinkets"]["baseline"][minIlvl];
 
-  for (itemlevel_position in loaded_data[chosen_class][chosen_spec][data_view][fight_style]["Simulated itemlevels"]) {
+  console.log(minIlvl);
+  console.log(baselineDps);
 
-    var itemlevel = loaded_data[chosen_class][chosen_spec][data_view][fight_style]["Simulated itemlevels"][itemlevel_position];
+  for (let itemlevel_position in trinketArray["Simulated itemlevels"]) {
+
+    var itemlevel = trinketArray["Simulated itemlevels"][itemlevel_position];
     var itemlevel_dps_values = [];
 
     for (trinket of dps_ordered_trinkets) {
-
-      // check for zero dps values and don't change them
-      if (Number(loaded_data[chosen_class][chosen_spec][data_view][fight_style]["trinkets"][trinket][itemlevel]) > 0) {
-
-        // if lowest itemlevel is looked at, substract baseline
-        if (itemlevel_position == loaded_data[chosen_class][chosen_spec][data_view][fight_style]["Simulated itemlevels"].length - 1) {
-
-          itemlevel_dps_values.push(loaded_data[chosen_class][chosen_spec][data_view][fight_style]["trinkets"][trinket][itemlevel] - loaded_data[chosen_class][chosen_spec][data_view][fight_style]["trinkets"]["baseline"][Math.min(...loaded_data[chosen_class][chosen_spec][data_view][fight_style]["Simulated itemlevels"])]);
+      const currentItemDps=trinketArray["trinkets"][trinket][itemlevel];
+      const lastItemDps=trinketArray["trinkets"][trinket][trinketArray["Simulated itemlevels"][String(Number(itemlevel_position) + 1)]] || baselineDps;
 
 
-        } else { // else substract lower itemlevel value of same item
-
-          // if lower itemlevel is zero we have to assume that this item needs to be compared now to the baseline
-          if (loaded_data[chosen_class][chosen_spec][data_view][fight_style]["trinkets"][trinket][loaded_data[chosen_class][chosen_spec][data_view][fight_style]["Simulated itemlevels"][String(Number(itemlevel_position) + 1)]] == 0) {
-
-            itemlevel_dps_values.push(loaded_data[chosen_class][chosen_spec][data_view][fight_style]["trinkets"][trinket][itemlevel] - loaded_data[chosen_class][chosen_spec][data_view][fight_style]["trinkets"]["baseline"][Math.min(...loaded_data[chosen_class][chosen_spec][data_view][fight_style]["Simulated itemlevels"])]);
-
-          } else { // standard case, next itemlevel is not zero and can be used to substract from the current value
-
-            itemlevel_dps_values.push(loaded_data[chosen_class][chosen_spec][data_view][fight_style]["trinkets"][trinket][itemlevel] - loaded_data[chosen_class][chosen_spec][data_view][fight_style]["trinkets"][trinket][loaded_data[chosen_class][chosen_spec][data_view][fight_style]["Simulated itemlevels"][String(Number(itemlevel_position) + 1)]]);
-          }
-
-        }
-
-      } else {
-
-        itemlevel_dps_values.push(loaded_data[chosen_class][chosen_spec][data_view][fight_style]["trinkets"][trinket][itemlevel]);
-      }
+      itemlevel_dps_values.push((currentItemDps - lastItemDps)||0);
 
     }
 
