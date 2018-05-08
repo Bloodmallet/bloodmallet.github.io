@@ -421,29 +421,16 @@ function update_dark_mode() {
 function set_dark_mode_cookie() {
   if (dev_mode)
     console.log("set_dark_mode_cookie");
-  var cookie_name = "bloodmallet_dark_mode";
-  var duration = new Date();
-  var days = 31;
-  duration.setTime(duration.getTime() + days * 24 * 60 * 60 * 1000);
-  document.cookie = cookie_name + "=" + dark_mode + ";" + duration, ";path=/";
+  Cookies.set('bloodmallet_dark_mode', dark_mode, {expires: 31, path: ''});
 }
 
 /** searches for the dark mode cookie and updates the page if necessary */
 function search_dark_mode_cookie() {
   if (dev_mode)
     console.log("search_dark_mode_cookie");
-  var cookie_array = document.cookie.split(";");
-  cookie_array.forEach(element => {
-    if (element.indexOf("bloodmallet_dark_mode=") > -1) {
-      if (element.indexOf("=false") > -1) {
-        dark_mode = false;
-        document.getElementById("darkModeCheckbox").checked = false;
-        update_dark_mode();
-      }
-      // reset dark mode cookie to have a new expiry date
-      set_dark_mode_cookie();
-    }
-  });
+  dark_mode=Cookies.get('bloodmallet_dark_mode')?Cookies.get('bloodmallet_dark_mode'):false;
+  update_dark_mode();
+  set_dark_mode_cookie();
 }
 
 
@@ -517,33 +504,25 @@ document.addEventListener("DOMContentLoaded", function () {
  * Switches the language and calls translate_page to do the actual translation.
 */
 function switch_language(new_language) {
+  if(language===new_language)
+    return;
+
   if (dev_mode)
     console.log("switch_language");
   // if new language is different to already active language and if it wasn't already loaded
-  if (new_language != language && !loaded_languages[new_language]) {
-    var xhttp_getLanguage = new XMLHttpRequest();
-    xhttp_getLanguage.open("GET", "./translations/" + new_language.toLowerCase() + ".json", true);
-    xhttp_getLanguage.setRequestHeader("Content-type", "application/json");
-    xhttp_getLanguage.onreadystatechange = function () {
-      if (this.readyState == 4 && this.status == 200) {
-        // save loaded translations
-        loaded_languages[new_language] = JSON.parse(xhttp_getLanguage.responseText);
-        language = new_language;
-        translate_page();
-        set_language_cookie();
-        ga('send', 'event', 'alpha', 'switch_language', language);
-      }
-    }
-    xhttp_getLanguage.send();
-  } else if (new_language == language) {
-    // nothing happens....there is nothing to do
-    console.log("switch_language didn't detect a change in language. new: " + new_language + ", old: " + language);
-  } else {
-    language = new_language;
-    translate_page();
-    set_language_cookie();
-    ga('send', 'event', 'alpha', 'switch_language', language);
+  if (!loaded_languages[new_language]) {
+    fetch(`./translations/${new_language.toLowerCase()}.json`)
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (json) {
+        loaded_languages[new_language] = json;
+      });
   }
+  language = new_language;
+  translate_page();
+  set_language_cookie();
+  ga('send', 'event', 'alpha', 'switch_language', language);
 }
 
 
