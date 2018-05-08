@@ -428,7 +428,8 @@ function set_dark_mode_cookie() {
 function search_dark_mode_cookie() {
   if (dev_mode)
     console.log("search_dark_mode_cookie");
-  dark_mode=Cookies.get('bloodmallet_dark_mode')?Cookies.get('bloodmallet_dark_mode'):false;
+  dark_mode=Cookies.get('bloodmallet_dark_mode')==="true";
+  document.getElementById("darkModeCheckbox").checked = dark_mode;
   update_dark_mode();
   set_dark_mode_cookie();
 }
