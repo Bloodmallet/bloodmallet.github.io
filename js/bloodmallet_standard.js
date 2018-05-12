@@ -170,6 +170,7 @@ var standard_chart = Highcharts.chart('chart',
                   text: this.series.name + ' ' + this.category,
                   style: {
                     color: medium_color,
+                    fontSize: "1.1rem",
                   },
                   align: 'left',
                   verticalAlign: 'bottom',
@@ -188,7 +189,8 @@ var standard_chart = Highcharts.chart('chart',
           legendItemClick: function () { return false; }
         },
         style: {
-          textOutline: false
+          textOutline: false,
+          fontSize: "1.1rem",
         }
       }
     },
@@ -260,7 +262,8 @@ var standard_chart = Highcharts.chart('chart',
       headerFormat: "<b>{point.x}</b>",
       shared: true,
       style: {
-        color: "black"
+        color: "black",
+        fontSize: "1.1rem",
       }
     },
     xAxis: {
@@ -274,7 +277,8 @@ var standard_chart = Highcharts.chart('chart',
       labels: {
         useHTML: true,
         style: {
-          color: light_color
+          color: light_color,
+          fontSize: "1.1rem",
         }
       },
       gridLineWidth: 0,
@@ -297,7 +301,8 @@ var standard_chart = Highcharts.chart('chart',
         },
         style: {
           color: light_color,
-          textOutline: false
+          textOutline: false,
+          fontSize: "1.1rem",
         }
       },
       title: {
@@ -985,7 +990,7 @@ function update_chart() {
       showInLegend: true
     }, false);
   }
-  document.getElementById("chart").style.height = 200 + dps_ordered_trinkets.length * 20 + "px";
+  document.getElementById("chart").style.height = 200 + dps_ordered_trinkets.length * 30 + "px";
   standard_chart.setSize(document.getElementById("chart").style.width, document.getElementById("chart").style.height);
   standard_chart.redraw();
 }
