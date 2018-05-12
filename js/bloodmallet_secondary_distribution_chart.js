@@ -7,7 +7,7 @@ var light_color = "#eee";
 var medium_color = "#999"
 var dark_color = "#343a40";
 
-
+var axis_label_position = "chart";
 
 var chart = new Highcharts.Chart({
   chart: {
@@ -15,23 +15,16 @@ var chart = new Highcharts.Chart({
     type: "scatter3d",
     backgroundColor: null,
     animation: false,
-    height: 500,
-    //width: 600,
-    marginLeft: 100,
-    marginBottom: 100,
+    height: 700,
+    width: 800,
     options3d: {
       enabled: true,
       axisLabelPosition: "auto",
       alpha: 10,
       beta: 30,
-      depth: 400,
-      //viewDistance: 10,
-      fitToPlot: false,
-      frame: {
-        bottom: { size: 1, color: 'rgba(0,0,0,0.02)' },
-        back: { size: 1, color: 'rgba(0,0,0,0.04)' },
-        side: { size: 1, color: 'rgba(0,0,0,0.06)' }
-      }
+      depth: 600,
+      //viewDistance: 100,
+      fitToPlot: true,
     }
   },
   legend: {
@@ -60,19 +53,22 @@ var chart = new Highcharts.Chart({
   },
   tooltip: {
     headerFormat: '',
-    pointFormat: '<strong>DPS: {point.value}</strong><br>Crit: {point.x} <br>Haste: {point.y} <br>Mastery: {point.z} <br>Versatility: {point.vers}',
+    pointFormat: '<strong>DPS: {point.dps}</strong><br>Crit: {point.stat_crit} <br>Haste: {point.stat_haste} <br>Mastery: {point.stat_mastery} <br>Versatility: {point.stat_vers}',
   },
   xAxis: {
-    // min: 0,
-    // max: 80,
+    min: 10,
+    max: 75,
     tickAmount: 9,
     title: {
-      text: "Crit",
+      text: "<span style=\"font-size: 1.1rem\">Crit</span>",
+      skew3d: true,
+      position3d: axis_label_position,
       style: {
         color: light_color
       }
     },
     labels: {
+      enabled: false,
       style: {
         color: light_color
       }
@@ -82,16 +78,19 @@ var chart = new Highcharts.Chart({
     showLastLabel: false,
   },
   yAxis: {
-    // min: 0,
-    // max: 80,
+    min: 10,
+    max: 60,
     tickAmount: 9,
     title: {
-      text: "Haste",
+      text: "<span style=\"font-size: 1.1rem\">Haste</span>",
+      skew3d: true,
+      position3d: axis_label_position,
       style: {
         color: light_color
       }
     },
     labels: {
+      enabled: false,
       style: {
         color: light_color
       }
@@ -101,16 +100,19 @@ var chart = new Highcharts.Chart({
     showLastLabel: false,
   },
   zAxis: {
-    // min: 0,
-    // max: 80,
+    min: 20,
+    max: 85,
     tickAmount: 9,
     title: {
-      text: "Mastery",
+      text: "<span style=\"font-size: 1.1rem\">Mastery</span>",
+      skew3d: true,
+      position3d: axis_label_position,
       style: {
         color: light_color
       }
     },
     labels: {
+      enabled: false,
       style: {
         color: light_color
       }
@@ -160,7 +162,7 @@ var chart = new Highcharts.Chart({
 
 function create_color(dps, min_dps, max_dps) {
   console.log("create_color called.");
-  let middle = min_dps + (max_dps - min_dps) / 2;
+  let middle = min_dps + (max_dps - min_dps) / 4 * 3;
   if (dps <= middle) {
     // let red = 0;
     // let green = 255 * (dps / middle);
@@ -207,13 +209,17 @@ function enter_scatter_data() {
       scatter_data["data"]["1111111"][scatter_data["sorted_data_keys"]["1111111"][0]]
     );
     series.data.push({
-      x: parseInt(distribution.split("_")[0]) * scatter_data["secondary_sum"] / 100,
-      y: parseInt(distribution.split("_")[1]) * scatter_data["secondary_sum"] / 100,
-      z: parseInt(distribution.split("_")[2]) * scatter_data["secondary_sum"] / 100,
+      x: Math.sqrt(3) / 2 * (parseInt(distribution.split("_")[0]) + Math.sqrt(3) / 6 * parseInt(distribution.split("_")[1])),
+      y: Math.sqrt(1 - (0.25 + 1 / 12)) * parseInt(distribution.split("_")[1]),
+      z: parseInt(distribution.split("_")[2]) + 0.5 * parseInt(distribution.split("_")[0]) + 0.5 * parseInt(distribution.split("_")[1]),
       name: distribution,
       color: "rgb(" + color_set[0] + "," + color_set[1] + "," + color_set[2] + ")",
-      value: scatter_data["data"]["1111111"][distribution],
-      vers: parseInt(distribution.split("_")[3]) * scatter_data["secondary_sum"] / 100
+      dps: scatter_data["data"]["1111111"][distribution],
+      stat_crit: parseInt(distribution.split("_")[0]) * scatter_data["secondary_sum"] / 100,
+      stat_haste: parseInt(distribution.split("_")[1]) * scatter_data["secondary_sum"] / 100,
+      stat_mastery: parseInt(distribution.split("_")[2]) * scatter_data["secondary_sum"] / 100,
+      stat_vers: parseInt(distribution.split("_")[3]) * scatter_data["secondary_sum"] / 100,
+
     });
   }
 
