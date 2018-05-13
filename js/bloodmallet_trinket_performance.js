@@ -174,7 +174,7 @@ function load_JSON(fight_style, wow_class, wow_spec) {
   var xobj = new XMLHttpRequest();
   xobj.overrideMimeType("application/json");
 
-  xobj.open('GET', "json/trinkets/" + wow_class + "_" + wow_spec + "_trinkets_" + fight_style + ".json", true);
+  xobj.open('GET', "json/trinkets/" + wow_class + "_" + wow_spec + "_" + fight_style + ".json", true);
 
   xobj.onreadystatechange = function () {
     if (xobj.readyState == 4 && xobj.status == "200") {
