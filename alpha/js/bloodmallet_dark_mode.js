@@ -47,29 +47,18 @@ function update_dark_mode() {
 function set_dark_mode_cookie() {
   if (dev_mode)
     console.log("set_dark_mode_cookie");
-  var cookie_name = "bloodmallet_dark_mode";
-  var duration = new Date();
-  var days = 31;
-  duration.setTime(duration.getTime() + days * 24 * 60 * 60 * 1000);
-  document.cookie = cookie_name + "=" + dark_mode + ";" + duration, ";path=/";
+  Cookies.set('bloodmallet_dark_mode', dark_mode, { expires: 31, path: '' });
 }
 
 /** searches for the dark mode cookie and updates the page if necessary */
 function search_dark_mode_cookie() {
   if (dev_mode)
     console.log("search_dark_mode_cookie");
-  var cookie_array = document.cookie.split(";");
-  cookie_array.forEach(element => {
-    if (element.indexOf("bloodmallet_dark_mode=") > -1) {
-      if (element.indexOf("=false") > -1) {
-        dark_mode = false;
-        document.getElementById("darkModeCheckbox").checked = false;
-        update_dark_mode();
-      }
-      // reset dark mode cookie to have a new expiry date
-      set_dark_mode_cookie();
-    }
-  });
+  dark_mode = ("true" == Cookies.get('bloodmallet_dark_mode'));
+  document.getElementById("darkModeCheckbox").checked = dark_mode;
+
+  update_dark_mode();
+  set_dark_mode_cookie();
 }
 
 
