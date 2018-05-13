@@ -7,8 +7,6 @@ var light_color = "#eee";
 var medium_color = "#999"
 var dark_color = "#343a40";
 
-var axis_label_position = "chart";
-
 var scatter_chart = new Highcharts.Chart({
   chart: {
     renderTo: 'scatter_plot_chart',
@@ -215,15 +213,15 @@ function create_color(dps, min_dps, max_dps) {
 }
 
 /**
- * Add event listener to show_secondary_distribution_data button
+ * Add event listener to show_secondary_distributions_data button
  */
 document.addEventListener("DOMContentLoaded", function () {
   if (dev_mode)
-    console.log("addEventListener show_secondary_distribution_data");
+    console.log("addEventListener show_secondary_distributions_data");
 
-  document.getElementById("show_secondary_distribution_data").addEventListener("click", function (e) {
+  document.getElementById("show_secondary_distributions_data").addEventListener("click", function (e) {
     if (dev_mode)
-      console.log("show_secondary_distribution_data was clicked.");
+      console.log("show_secondary_distributions_data was clicked.");
     // unhide the scatter plot
     // TODO: make this state dependant once this is merged into bloodmallet_standard and make this scatter plot a state (data_view)
     document.getElementById("scatter_plot_chart").hidden = false;
