@@ -1077,15 +1077,14 @@ var scatter_chart = new Highcharts.Chart({
     type: "scatter3d",
     backgroundColor: null,
     animation: false,
-    height: 700,
+    height: 800,
     width: 800,
     options3d: {
       enabled: true,
       alpha: 10,
       beta: 30,
-      depth: 600,
-      //viewDistance: 100,
-      fitToPlot: true,
+      depth: 800,
+      fitToPlot: false,
     }
   },
   legend: {
@@ -1095,6 +1094,13 @@ var scatter_chart = new Highcharts.Chart({
     layout: "vertical",
     itemStyle: { "color": light_color },
     itemHoverStyle: { "color": light_color }
+  },
+  plotOptions: {
+    series: {
+      dataLabels: {
+        allowOverlap: true,
+      }
+    }
   },
   series: [
   ],
@@ -1126,27 +1132,27 @@ var scatter_chart = new Highcharts.Chart({
         <tbody>\
           <tr>\
             <th scope="row">DPS</th>\
-            <td>' + this.dps + '</td>\
+            <td>' + Intl.NumberFormat().format(this.dps) + '</td>\
             <td>' + Math.round(this.dps / this.dps_max * 10000) / 100 + '%</td>\
           </tr>\
           <tr>\
             <th scope="row">Crit</th>\
-            <td>' + this.stat_crit + '</td>\
+            <td>' + Intl.NumberFormat().format(this.stat_crit) + '</td>\
             <td>' + this.name.split("_")[0] + '%</td>\
           </tr>\
           <tr>\
             <th scope="row">Haste</th>\
-            <td>' + this.stat_haste + '</td>\
+            <td>' + Intl.NumberFormat().format(this.stat_haste) + '</td>\
             <td>' + this.name.split("_")[1] + '%</td>\
           </tr>\
           <tr>\
             <th scope="row">Mastery</th>\
-            <td>' + this.stat_mastery + '</td>\
+            <td>' + Intl.NumberFormat().format(this.stat_mastery) + '</td>\
             <td>' + this.name.split("_")[2] + '%</td>\
           </tr>\
           <tr>\
             <th scope="row">Versatility</th>\
-            <td>' + this.stat_vers + '</td>\
+            <td>' + Intl.NumberFormat().format(this.stat_vers) + '</td>\
             <td>' + this.name.split("_")[3] + '%</td>\
           </tr>\
         </tbody>\
@@ -1158,7 +1164,9 @@ var scatter_chart = new Highcharts.Chart({
   xAxis: {
     min: 0,
     max: 80,
-    tickAmount: 4,
+    tickInterval: 20,
+    startOnTick: true,
+    endOnTick: true,
     title: "",
     labels: {
       enabled: false,
@@ -1167,9 +1175,11 @@ var scatter_chart = new Highcharts.Chart({
     gridLineColor: medium_color,
   },
   yAxis: {
-    min: 0,
-    max: 80,
-    tickAmount: 4,
+    min: -10,
+    max: 70,
+    tickInterval: 20,
+    startOnTick: true,
+    endOnTick: true,
     title: "",
     labels: {
       enabled: false,
@@ -1178,9 +1188,11 @@ var scatter_chart = new Highcharts.Chart({
     gridLineColor: medium_color,
   },
   zAxis: {
-    min: 0,
-    max: 80,
-    tickAmount: 4,
+    min: 10,
+    max: 90,
+    tickInterval: 20,
+    startOnTick: true,
+    endOnTick: true,
     title: "",
     labels: {
       enabled: false,
@@ -1261,16 +1273,16 @@ function create_color(dps, min_dps, max_dps) {
   if (dps >= mid_dps) {
     let percent_of_max = (dps - mid_dps) / (max_dps - mid_dps);
     return [
-      color_max[0] * percent_of_max + color_mid[0] * (1 - percent_of_max),
-      color_max[1] * percent_of_max + color_mid[1] * (1 - percent_of_max),
-      color_max[2] * percent_of_max + color_mid[2] * (1 - percent_of_max)
+      Math.floor(color_max[0] * percent_of_max + color_mid[0] * (1 - percent_of_max)),
+      Math.floor(color_max[1] * percent_of_max + color_mid[1] * (1 - percent_of_max)),
+      Math.floor(color_max[2] * percent_of_max + color_mid[2] * (1 - percent_of_max))
     ];
   } else {
     let percent_of_mid = (dps - min_dps) / (mid_dps - min_dps);
     return [
-      color_mid[0] * percent_of_mid + color_min[0] * (1 - percent_of_mid),
-      color_mid[1] * percent_of_mid + color_min[1] * (1 - percent_of_mid),
-      color_mid[2] * percent_of_mid + color_min[2] * (1 - percent_of_mid)
+      Math.floor(color_mid[0] * percent_of_mid + color_min[0] * (1 - percent_of_mid)),
+      Math.floor(color_mid[1] * percent_of_mid + color_min[1] * (1 - percent_of_mid)),
+      Math.floor(color_mid[2] * percent_of_mid + color_min[2] * (1 - percent_of_mid))
     ];
   }
 }
@@ -1289,7 +1301,7 @@ function update_scatter_chart() {
 
   // prepare series with standard data
   let series = {
-    name: max_dps + " DPS",
+    name: Intl.NumberFormat().format(max_dps) + " DPS",
     color: "#FF0000", // make sure this matches the value of color_max in create_color(...)
     data: []
   };
@@ -1305,7 +1317,8 @@ function update_scatter_chart() {
     );
 
     // width of the border of the marker, 0 for all markers but the max, which gets 3
-    let line_width = 0;
+    let line_width = 1;
+    let line_color = "#232227";
     // adjust marker radius depending on distance to max
     // worst dps: 2
     // max dps: 5 (increased to 8 to fit the additional border)
@@ -1313,6 +1326,7 @@ function update_scatter_chart() {
     if (max_dps == loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"][1111111][distribution]) {
       line_width = 3;
       radius = 8;
+      line_color = light_color;
     }
 
     // undefined data label for all markers unless they are the "max" values
@@ -1322,6 +1336,7 @@ function update_scatter_chart() {
     if (distribution.indexOf("70") > -1) {
       data_label = {
         enabled: true,
+        allowOverlap: true,
         style: {
           color: light_color,
           fontSize: "1.1rem",
@@ -1360,7 +1375,22 @@ function update_scatter_chart() {
       y: Math.sqrt(2 / 3) * parseInt(distribution.split("_")[1]),
       z: parseInt(distribution.split("_")[2]) + 0.5 * parseInt(distribution.split("_")[0]) + 0.5 * parseInt(distribution.split("_")[1]),
       name: distribution,
+      // flat markers with dark border (borders are prepared further up)
       color: "rgb(" + color_set[0] + "," + color_set[1] + "," + color_set[2] + ")",
+
+      // 3d markers with light area and shadow at the opposite side
+      // color: {
+      //   radialGradient: {
+      //     cx: 0.4,
+      //     cy: 0.3,
+      //     r: 0.5
+      //   },
+      //   stops: [
+      //     //[0, "rgb(" + color_set[0] + "," + color_set[1] + "," + color_set[2] + ")"],
+      //     [0, Highcharts.Color('rgb(' + color_set[0] + ',' + color_set[1] + ',' + color_set[2] + ')').brighten(0.4).get('rgb')],
+      //     [1, Highcharts.Color('rgb(' + color_set[0] + ',' + color_set[1] + ',' + color_set[2] + ')').brighten(-0.4).get('rgb')]
+      //   ]
+      // },
       // add additional information required for tooltips
       dps: loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"][1111111][distribution],
       dps_max: max_dps,
@@ -1373,7 +1403,7 @@ function update_scatter_chart() {
       // add marker information
       marker: {
         radius: radius,
-        lineColor: light_color,
+        lineColor: line_color,
         lineWidth: line_width
       },
       // add visible data labels (crit, haste, mastery, vers)
@@ -1388,7 +1418,7 @@ function update_scatter_chart() {
 
   scatter_chart.addSeries(series, false);
   // make sure this color matches the value of color_min in create_color(...)
-  scatter_chart.addSeries({ name: min_dps + " DPS", color: "#00FFFF" }, false);
+  scatter_chart.addSeries({ name: Intl.NumberFormat().format(min_dps) + " DPS", color: "#00FFFF" }, false);
   scatter_chart.setTitle({
     text: loaded_data[chosen_class][chosen_spec][data_view][fight_style]["title"]
   }, {
