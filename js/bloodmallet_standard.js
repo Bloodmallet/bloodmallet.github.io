@@ -115,7 +115,8 @@ var data_view = "trinkets";
 const data_view_IDs = [
   "show_trinkets_data", // => trinkets
   "show_azerite_traits_data", // => azerite_traits
-  "show_races_data" // => races
+  "show_races_data", // => races
+  "show_secondary_distributions_data"
 ];
 const fight_style_IDs = [
   "fight_style_patchwerk",
@@ -170,6 +171,7 @@ var standard_chart = Highcharts.chart('chart',
                   text: this.series.name + ' ' + this.category,
                   style: {
                     color: medium_color,
+                    fontSize: "1.1rem",
                   },
                   align: 'left',
                   verticalAlign: 'bottom',
@@ -188,7 +190,8 @@ var standard_chart = Highcharts.chart('chart',
           legendItemClick: function () { return false; }
         },
         style: {
-          textOutline: false
+          textOutline: false,
+          fontSize: "1.1rem",
         }
       }
     },
@@ -260,7 +263,8 @@ var standard_chart = Highcharts.chart('chart',
       headerFormat: "<b>{point.x}</b>",
       shared: true,
       style: {
-        color: "black"
+        color: "black",
+        fontSize: "1.1rem",
       }
     },
     xAxis: {
@@ -274,7 +278,8 @@ var standard_chart = Highcharts.chart('chart',
       labels: {
         useHTML: true,
         style: {
-          color: light_color
+          color: light_color,
+          fontSize: "1.1rem",
         }
       },
       gridLineWidth: 0,
@@ -297,7 +302,8 @@ var standard_chart = Highcharts.chart('chart',
         },
         style: {
           color: light_color,
-          textOutline: false
+          textOutline: false,
+          fontSize: "1.1rem",
         }
       },
       title: {
@@ -688,6 +694,16 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log("show_races_data was not found in page.");
   }
 
+  try {
+    document.getElementById("show_secondary_distributions_data").addEventListener("click", function () {
+      data_view = "secondary_distributions";
+      update_data_buttons();
+      load_data();
+    });
+  } catch (err) {
+    console.log("show_secondary_distribution_data was not found in page.");
+  }
+
   document.getElementById("fight_style_patchwerk").addEventListener("click", function () {
     fight_style = "patchwerk";
     update_fight_style_buttons();
@@ -777,7 +793,7 @@ function load_data() {
   }
   if (!loaded_data[chosen_class][chosen_spec][data_view][fight_style]) {
     var xhttp_getLanguage = new XMLHttpRequest();
-    var file_name = chosen_class + "_" + chosen_spec + "_" + data_view + "_" + fight_style + ".json";
+    var file_name = chosen_class + "_" + chosen_spec + "_" + fight_style + ".json";
     xhttp_getLanguage.open("GET", "./json/" + data_view + "/" + file_name, true);
     xhttp_getLanguage.setRequestHeader("Content-type", "application/json");
     xhttp_getLanguage.onreadystatechange = function () {
@@ -912,8 +928,17 @@ function update_chart() {
   if (dev_mode)
     console.log("update_chart");
 
-  const trinketArray=loaded_data[chosen_class][chosen_spec][data_view][fight_style];
+  if (data_view == "secondary_distributions") {
+    document.getElementById("scatter_plot_chart").hidden = false;
+    document.getElementById("chart").hidden = true;
+    update_scatter_chart();
+    return;
+  } else {
+    document.getElementById("scatter_plot_chart").hidden = true;
+    document.getElementById("chart").hidden = false;
+  }
 
+  const trinketArray=loaded_data[chosen_class][chosen_spec][data_view][fight_style];
   // https://stackoverflow.com/questions/25500316/sort-a-dictionary-by-value-in-javascript
   // create a list of all trinkets with their highest dps value
   var dps_ordered_trinkets =
@@ -926,6 +951,8 @@ function update_chart() {
   //console.log(dps_ordered_trinkets);
   // get rid of dps values and keep only the trinket names
   dps_ordered_trinkets = dps_ordered_trinkets.map(x => x[0]);
+  // or.... just use the provided sorted list once that is included in fresh data
+  //var dps_ordered_trinkets = loaded_data[chosen_class][chosen_spec][data_view][fight_style]["sorted_data_keys"];
   //console.log(dps_ordered_trinkets);
 
   // set title and subtitle
@@ -970,7 +997,7 @@ function update_chart() {
       showInLegend: true
     }, false);
   }
-  document.getElementById("chart").style.height = 200 + dps_ordered_trinkets.length * 20 + "px";
+  document.getElementById("chart").style.height = 200 + dps_ordered_trinkets.length * 30 + "px";
   standard_chart.setSize(document.getElementById("chart").style.width, document.getElementById("chart").style.height);
   standard_chart.redraw();
 }
@@ -1025,3 +1052,362 @@ function copy_link() {
 }
 
 
+/**
+ * Scatter chart for secondary stat distributions
+ */
+var scatter_chart = new Highcharts.Chart({
+  chart: {
+    renderTo: 'scatter_plot_chart',
+    type: "scatter3d",
+    backgroundColor: null,
+    animation: false,
+    height: 800,
+    width: 800,
+    options3d: {
+      enabled: true,
+      alpha: 10,
+      beta: 30,
+      depth: 800,
+      fitToPlot: false,
+    }
+  },
+  legend: {
+    enabled: true,
+    align: "right",
+    verticalAlign: "middle",
+    layout: "vertical",
+    itemStyle: { "color": light_color },
+    itemHoverStyle: { "color": light_color }
+  },
+  plotOptions: {
+    series: {
+      dataLabels: {
+        allowOverlap: true,
+      }
+    }
+  },
+  series: [
+  ],
+  subtitle: {
+    text: "Subtitle placeholder",
+    useHTML: true,
+    style: {
+      color: light_color
+    }
+  },
+  title: {
+    text: "Title placeholder",
+    useHTML: true,
+    style: {
+      color: light_color
+    }
+  },
+  tooltip: {
+    headerFormat: '',
+    pointFormatter: function () {
+      return '<table class="table table-sm">\
+        <thead>\
+          <tr>\
+            <th scope="col"></th>\
+            <th scope="col">Absolute</th>\
+            <th scope="col">Relative</th>\
+          </tr>\
+        </thead>\
+        <tbody>\
+          <tr>\
+            <th scope="row">DPS</th>\
+            <td>' + Intl.NumberFormat().format(this.dps) + '</td>\
+            <td>' + Math.round(this.dps / this.dps_max * 10000) / 100 + '%</td>\
+          </tr>\
+          <tr>\
+            <th scope="row">Crit</th>\
+            <td>' + Intl.NumberFormat().format(this.stat_crit) + '</td>\
+            <td>' + this.name.split("_")[0] + '%</td>\
+          </tr>\
+          <tr>\
+            <th scope="row">Haste</th>\
+            <td>' + Intl.NumberFormat().format(this.stat_haste) + '</td>\
+            <td>' + this.name.split("_")[1] + '%</td>\
+          </tr>\
+          <tr>\
+            <th scope="row">Mastery</th>\
+            <td>' + Intl.NumberFormat().format(this.stat_mastery) + '</td>\
+            <td>' + this.name.split("_")[2] + '%</td>\
+          </tr>\
+          <tr>\
+            <th scope="row">Versatility</th>\
+            <td>' + Intl.NumberFormat().format(this.stat_vers) + '</td>\
+            <td>' + this.name.split("_")[3] + '%</td>\
+          </tr>\
+        </tbody>\
+      </table>';
+    },
+    useHTML: true,
+    borderColor: dark_color,
+  },
+  xAxis: {
+    min: 0,
+    max: 80,
+    tickInterval: 20,
+    startOnTick: true,
+    endOnTick: true,
+    title: "",
+    labels: {
+      enabled: false,
+    },
+    gridLineWidth: 1,
+    gridLineColor: medium_color,
+  },
+  yAxis: {
+    min: -10,
+    max: 70,
+    tickInterval: 20,
+    startOnTick: true,
+    endOnTick: true,
+    title: "",
+    labels: {
+      enabled: false,
+    },
+    gridLineWidth: 1,
+    gridLineColor: medium_color,
+  },
+  zAxis: {
+    min: 10,
+    max: 90,
+    tickInterval: 20,
+    startOnTick: true,
+    endOnTick: true,
+    title: "",
+    labels: {
+      enabled: false,
+    },
+    reversed: true,
+    gridLineWidth: 1,
+    gridLineColor: medium_color,
+  },
+});
+
+// Add mouse and touch events for rotation
+(function (H) {
+  function dragStart(eStart) {
+    eStart = scatter_chart.pointer.normalize(eStart);
+
+    var posX = eStart.chartX,
+      posY = eStart.chartY,
+      alpha = scatter_chart.options.chart.options3d.alpha,
+      beta = scatter_chart.options.chart.options3d.beta,
+      sensitivity = 5; // lower is more sensitive
+
+    function drag(e) {
+      // Get e.chartX and e.chartY
+      e = scatter_chart.pointer.normalize(e);
+
+      scatter_chart.update({
+        chart: {
+          options3d: {
+            alpha: alpha + (e.chartY - posY) / sensitivity,
+            beta: beta + (posX - e.chartX) / sensitivity
+          }
+        }
+      }, undefined, undefined, false);
+    }
+
+    scatter_chart.unbindDragMouse = H.addEvent(document, 'mousemove', drag);
+    scatter_chart.unbindDragTouch = H.addEvent(document, 'touchmove', drag);
+
+    H.addEvent(document, 'mouseup', scatter_chart.unbindDragMouse);
+    H.addEvent(document, 'touchend', scatter_chart.unbindDragTouch);
+  }
+  H.addEvent(scatter_chart.container, 'mousedown', dragStart);
+  H.addEvent(scatter_chart.container, 'touchstart', dragStart);
+}(Highcharts));
+
+
+/**
+ *  Creates the rgb color array for the dps of a marker.
+ *
+ * @param {Int} dps
+ * @param {Int} min_dps
+ * @param {Int} max_dps
+ */
+function create_color(dps, min_dps, max_dps) {
+  if (dev_mode)
+    console.log("create_color");
+
+  // colour of lowest DPS
+  let color_min = [0, 255, 255];
+  // additional colour step between min and max
+  let color_mid = [255, 255, 0];
+  // colour of  max dps
+  let color_max = [255, 0, 0];
+
+  // calculate the position of the mid colour in this relation to ensure a smooth colour transition (colour distance...if something like this exists) between the three
+  let diff_mid_max = 0;
+  let diff_min_mid = 0;
+  for (let i = 0; i < 3; i++) {
+    diff_mid_max += Math.abs(color_max[i] - color_mid[i]);
+    diff_min_mid += Math.abs(color_mid[i] - color_min[i]);
+  }
+  // ratio from min to max to describe the position of the id colour
+  let mid_ratio = diff_min_mid / (diff_min_mid + diff_mid_max);
+  // mid dps resulting from the ratio
+  let mid_dps = min_dps + (max_dps - min_dps) * mid_ratio;
+
+  // calculate colour based on relative dps
+  if (dps >= mid_dps) {
+    let percent_of_max = (dps - mid_dps) / (max_dps - mid_dps);
+    return [
+      Math.floor(color_max[0] * percent_of_max + color_mid[0] * (1 - percent_of_max)),
+      Math.floor(color_max[1] * percent_of_max + color_mid[1] * (1 - percent_of_max)),
+      Math.floor(color_max[2] * percent_of_max + color_mid[2] * (1 - percent_of_max))
+    ];
+  } else {
+    let percent_of_mid = (dps - min_dps) / (mid_dps - min_dps);
+    return [
+      Math.floor(color_mid[0] * percent_of_mid + color_min[0] * (1 - percent_of_mid)),
+      Math.floor(color_mid[1] * percent_of_mid + color_min[1] * (1 - percent_of_mid)),
+      Math.floor(color_mid[2] * percent_of_mid + color_min[2] * (1 - percent_of_mid))
+    ];
+  }
+}
+
+/**
+ * Creates a series based on the loaded data and pushes it into the scatter chart
+ */
+function update_scatter_chart() {
+  if (dev_mode)
+    console.log("update_scatter_chart");
+  const dpsChart=loaded_data[chosen_class][chosen_spec][data_view][fight_style];
+  // get max dps of the whole data set
+  let max_dps = dpsChart["data"][1111111][dpsChart["sorted_data_keys"][1111111][0]];
+  // get min dps of the whole data set
+  let min_dps = dpsChart["data"][1111111][dpsChart["sorted_data_keys"][1111111][dpsChart["sorted_data_keys"][1111111].length - 1]];
+
+  // prepare series with standard data
+  let series = {
+    name: Intl.NumberFormat().format(max_dps) + " DPS",
+    color: "#FF0000", // make sure this matches the value of color_max in create_color(...)
+    data: []
+  };
+
+  // add a marker for each distribution in the data set
+  for (distribution of Object.keys(dpsChart["data"][1111111])) {
+
+    // get the markers color
+    let color_set = create_color(
+      dpsChart["data"]["1111111"][distribution],
+      dpsChart["data"]["1111111"][dpsChart["sorted_data_keys"]["1111111"][dpsChart["sorted_data_keys"]["1111111"].length - 1]],
+      dpsChart["data"]["1111111"][dpsChart["sorted_data_keys"]["1111111"][0]]
+    );
+
+    // width of the border of the marker, 0 for all markers but the max, which gets 3
+    let line_width = 1;
+    let line_color = "#232227";
+    // adjust marker radius depending on distance to max
+    // worst dps: 2
+    // max dps: 5 (increased to 8 to fit the additional border)
+    let radius = 2 + 3 * (dpsChart["data"]["1111111"][distribution] - min_dps) / (max_dps - min_dps)
+    if (max_dps == dpsChart["data"][1111111][distribution]) {
+      line_width = 3;
+      radius = 8;
+      line_color = light_color;
+    }
+
+    // undefined data label for all markers unless they are the "max" values
+    let data_label = undefined;
+
+    // 70 is the max possible value in data. would need adjustement if data changes to other max values. But I doubt this'll happen.
+    if (distribution.indexOf("70") > -1) {
+      data_label = {
+        enabled: true,
+        allowOverlap: true,
+        style: {
+          color: light_color,
+          fontSize: "1.1rem",
+          fontWeight: "400",
+          textOutline: ""
+        }
+      };
+
+      switch (distribution.indexOf("70")) {
+        case 0: // "70_10_10_10"
+          data_label.format = "Crit";
+          data_label.verticalAlign = "top";
+          break;
+        case 3: // "10_70_10_10"
+          data_label.format = "Haste";
+          break;
+        case 6: // "10_10_70_10"
+          data_label.format = "Mastery";
+          data_label.verticalAlign = "top";
+          break;
+        case 9: // "10_10_10_70"
+          data_label.format = "Versatility";
+          data_label.verticalAlign = "top";
+          break;
+
+        default:
+          // how did we even end up here?
+          break;
+      }
+    }
+
+    // push marker data into the series
+    series.data.push({
+      // formulas slowly snailed together from combining different relations within https://en.wikipedia.org/wiki/Equilateral_triangle and https://en.wikipedia.org/wiki/Pythagorean_theorem
+      x: Math.sqrt(3) / 2 * (parseInt(distribution.split("_")[0]) + 1 / 3 * parseInt(distribution.split("_")[1])),
+      y: Math.sqrt(2 / 3) * parseInt(distribution.split("_")[1]),
+      z: parseInt(distribution.split("_")[2]) + 0.5 * parseInt(distribution.split("_")[0]) + 0.5 * parseInt(distribution.split("_")[1]),
+      name: distribution,
+      // flat markers with dark border (borders are prepared further up)
+      color: "rgb(" + color_set[0] + "," + color_set[1] + "," + color_set[2] + ")",
+
+      // 3d markers with light area and shadow at the opposite side
+      // color: {
+      //   radialGradient: {
+      //     cx: 0.4,
+      //     cy: 0.3,
+      //     r: 0.5
+      //   },
+      //   stops: [
+      //     //[0, "rgb(" + color_set[0] + "," + color_set[1] + "," + color_set[2] + ")"],
+      //     [0, Highcharts.Color('rgb(' + color_set[0] + ',' + color_set[1] + ',' + color_set[2] + ')').brighten(0.4).get('rgb')],
+      //     [1, Highcharts.Color('rgb(' + color_set[0] + ',' + color_set[1] + ',' + color_set[2] + ')').brighten(-0.4).get('rgb')]
+      //   ]
+      // },
+      // add additional information required for tooltips
+      dps: dpsChart["data"][1111111][distribution],
+      dps_max: max_dps,
+      dps_min: min_dps,
+      stat_crit: parseInt(distribution.split("_")[0]) * dpsChart["secondary_sum"] / 100,
+      stat_haste: parseInt(distribution.split("_")[1]) * dpsChart["secondary_sum"] / 100,
+      stat_mastery: parseInt(distribution.split("_")[2]) * dpsChart["secondary_sum"] / 100,
+      stat_vers: parseInt(distribution.split("_")[3]) * dpsChart["secondary_sum"] / 100,
+      stat_sum: dpsChart["secondary_sum"],
+      // add marker information
+      marker: {
+        radius: radius,
+        lineColor: line_color,
+        lineWidth: line_width
+      },
+      // add visible data labels (crit, haste, mastery, vers)
+      dataLabels: data_label,
+    });
+  }
+
+  // delete all old series data
+  while (scatter_chart.series[0]) {
+    scatter_chart.series[0].remove(false);
+  }
+
+  scatter_chart.addSeries(series, false);
+  // make sure this color matches the value of color_min in create_color(...)
+  scatter_chart.addSeries({ name: Intl.NumberFormat().format(min_dps) + " DPS", color: "#00FFFF" }, false);
+  scatter_chart.setTitle({
+    text: dpsChart["title"]
+  }, {
+      text: dpsChart["subtitle"]
+    }
+  );
+  scatter_chart.redraw();
+}

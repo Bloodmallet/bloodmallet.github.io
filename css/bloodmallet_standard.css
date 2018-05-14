@@ -1,6 +1,9 @@
 .bg-darker {
   background-color:#343a40;
 }
+body {
+  font-size: 1.1rem;
+}
 button {
   font-weight: 400;
 }
@@ -77,6 +80,11 @@ footer {
   padding-right: 21px;
   /* padding-left: 18px; */
   margin-bottom: 30px;
+}
+@media only screen and (min-width: 900px) {
+  .spec-cell {
+    padding-right: 40px;
+  }
 }
 
 .btn-data {
