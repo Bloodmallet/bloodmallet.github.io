@@ -164,6 +164,7 @@ var scatter_chart = new Highcharts.Chart({
 }(Highcharts));
 
 
+
 /**
  *  Creates the rgb color array for the dps of a marker.
  *
@@ -248,11 +249,12 @@ document.addEventListener("DOMContentLoaded", function () {
 function enter_scatter_data() {
   if (dev_mode)
     console.log("enter_scatter_data");
-
+  dps=scatter_data["data"][1111111];
+  sorted_dps=scatter_data["sorted_data_keys"][1111111];
   // get max dps of the whole data set
-  let max_dps = scatter_data["data"][1111111][scatter_data["sorted_data_keys"][1111111][0]];
+  let max_dps = dps[sorted_dps[0]];
   // get min dps of the whole data set
-  let min_dps = scatter_data["data"][1111111][scatter_data["sorted_data_keys"][1111111][scatter_data["sorted_data_keys"][1111111].length - 1]];
+  let min_dps = dps[sorted_dps[sorted_dps.length - 1]];
 
   // prepare series with standard data
   let series = {
@@ -262,13 +264,20 @@ function enter_scatter_data() {
   };
 
   // add a marker for each distribution in the data set
-  for (distribution of Object.keys(scatter_data["data"][1111111])) {
+  for (let distribution of Object.keys(dps)) {
+    const split_data=distribution.split['_'];
+    const stats = {
+      "crit":split_data[0],
+      "haste": split_data[1],
+      "mastery":split_data[2],
+      "vers":split_data[3],
+    };
 
     // get the markers color
     let color_set = create_color(
-      scatter_data["data"]["1111111"][distribution],
-      scatter_data["data"]["1111111"][scatter_data["sorted_data_keys"]["1111111"][scatter_data["sorted_data_keys"]["1111111"].length - 1]],
-      scatter_data["data"]["1111111"][scatter_data["sorted_data_keys"]["1111111"][0]]
+      dps[distribution],
+      dps[sorted_dps[sorted_dps.length - 1]],
+      dps[sorted_dps[0]]
     );
 
     // width of the border of the marker, 0 for all markers but the max, which gets 3
@@ -276,8 +285,8 @@ function enter_scatter_data() {
     // adjust marker radius depending on distance to max
     // worst dps: 2
     // max dps: 5 (increased to 8 to fit the additional border)
-    let radius = 2 + 3 * (scatter_data["data"]["1111111"][distribution] - min_dps) / (max_dps - min_dps)
-    if (max_dps == scatter_data["data"][1111111][distribution]) {
+    let radius = 2 + 3 * (dps[distribution] - min_dps) / (max_dps - min_dps);
+    if (max_dps === dps[distribution]) {
       line_width = 3;
       radius = 8;
     }
@@ -297,45 +306,28 @@ function enter_scatter_data() {
         }
       };
 
-      switch (distribution.indexOf("70")) {
-        case 0: // "70_10_10_10"
-          data_label.format = "Crit";
-          data_label.verticalAlign = "top";
-          break;
-        case 3: // "10_70_10_10"
-          data_label.format = "Haste";
-          break;
-        case 6: // "10_10_70_10"
-          data_label.format = "Mastery";
-          data_label.verticalAlign = "top";
-          break;
-        case 9: // "10_10_10_70"
-          data_label.format = "Versatility";
-          data_label.verticalAlign = "top";
-          break;
-
-        default:
-          // how did we even end up here?
-          break;
+      if((index = stats.findIndex("70"))!==-1){
+        data_label.format = index;
+        data_label.verticalAlign="top";
       }
     }
-
+    let position = getPosition(stats);
     // push marker data into the series
     series.data.push({
       // formulas slowly snailed together from combining different relations within the https://en.wikipedia.org/wiki/Equilateral_triangle and https://en.wikipedia.org/wiki/Pythagorean_theorem
-      x: Math.sqrt(3) / 2 * (parseInt(distribution.split("_")[0]) + Math.sqrt(3) / 6 * parseInt(distribution.split("_")[1])),
-      y: Math.sqrt(2 / 3) * parseInt(distribution.split("_")[1]),
-      z: parseInt(distribution.split("_")[2]) + 0.5 * parseInt(distribution.split("_")[0]) + 0.5 * parseInt(distribution.split("_")[1]),
+      x: position.x,
+      y: position.y,
+      z: position.z,
       name: distribution,
-      color: "rgb(" + color_set[0] + "," + color_set[1] + "," + color_set[2] + ")",
+      color: "hsl(100,50%, 50%)",//"rgb(" + color_set[0] + "," + color_set[1] + "," + color_set[2] + ")",
       // add additional information required for tooltips
-      dps: scatter_data["data"]["1111111"][distribution],
+      dps: dps[distribution],
       dps_max: max_dps,
       dps_min: min_dps,
-      stat_crit: parseInt(distribution.split("_")[0]) * scatter_data["secondary_sum"] / 100,
-      stat_haste: parseInt(distribution.split("_")[1]) * scatter_data["secondary_sum"] / 100,
-      stat_mastery: parseInt(distribution.split("_")[2]) * scatter_data["secondary_sum"] / 100,
-      stat_vers: parseInt(distribution.split("_")[3]) * scatter_data["secondary_sum"] / 100,
+      stat_crit: parseInt(stats.crit) * scatter_data["secondary_sum"] / 100,
+      stat_haste: parseInt(stats.haste) * scatter_data["secondary_sum"] / 100,
+      stat_mastery: parseInt(stats.mastery) * scatter_data["secondary_sum"] / 100,
+      stat_vers: parseInt(stats.ver) * scatter_data["secondary_sum"] / 100,
       stat_sum: scatter_data["secondary_sum"],
       marker: {
         radius: radius,
@@ -359,4 +351,11 @@ function enter_scatter_data() {
   );
 
   console.log(chart);
+}
+
+function getPosition(stats){
+  let x=Math.sqrt(3) / 2 * (parseInt(stats.crit) + Math.sqrt(3) / 6 * parseInt(stats.haste));
+  let y=Math.sqrt(2 / 3) * parseInt(stats.haste);
+  let z=parseInt(stats.mastery) + 0.5 * parseInt(stats.crit) + 0.5 * parseInt(stats.haste);
+  return {"x":x, "y":y, "z":z};
 }

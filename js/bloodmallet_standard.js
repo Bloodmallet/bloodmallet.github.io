@@ -1235,41 +1235,19 @@ function create_color(dps, min_dps, max_dps) {
     console.log("create_color");
 
   // colour of lowest DPS
-  let color_min = [0, 255, 255];
-  // additional colour step between min and max
-  let color_mid = [255, 255, 0];
+  let color_min = [180, 100, 50];
   // colour of  max dps
-  let color_max = [255, 0, 0];
+  let color_max = [0, 100, 50];
 
   // calculate the position of the mid colour in this relation to ensure a smooth colour transition (colour distance...if something like this exists) between the three
-  let diff_mid_max = 0;
-  let diff_min_mid = 0;
-  for (let i = 0; i < 3; i++) {
-    diff_mid_max += Math.abs(color_max[i] - color_mid[i]);
-    diff_min_mid += Math.abs(color_mid[i] - color_min[i]);
+  let ratio = (dps-min_dps)/(max_dps-min_dps);
+  let result = [];
+  for (let i=0; i<3; i++) {
+    result[i]=color_min[i]+ratio*(color_max[i]-color_min[i])
   }
-  // ratio from min to max to describe the position of the id colour
-  let mid_ratio = diff_min_mid / (diff_min_mid + diff_mid_max);
-  // mid dps resulting from the ratio
-  let mid_dps = min_dps + (max_dps - min_dps) * mid_ratio;
-
-  // calculate colour based on relative dps
-  if (dps >= mid_dps) {
-    let percent_of_max = (dps - mid_dps) / (max_dps - mid_dps);
-    return [
-      Math.floor(color_max[0] * percent_of_max + color_mid[0] * (1 - percent_of_max)),
-      Math.floor(color_max[1] * percent_of_max + color_mid[1] * (1 - percent_of_max)),
-      Math.floor(color_max[2] * percent_of_max + color_mid[2] * (1 - percent_of_max))
-    ];
-  } else {
-    let percent_of_mid = (dps - min_dps) / (mid_dps - min_dps);
-    return [
-      Math.floor(color_mid[0] * percent_of_mid + color_min[0] * (1 - percent_of_mid)),
-      Math.floor(color_mid[1] * percent_of_mid + color_min[1] * (1 - percent_of_mid)),
-      Math.floor(color_mid[2] * percent_of_mid + color_min[2] * (1 - percent_of_mid))
-    ];
-  }
+  return result;
 }
+
 
 /**
  * Creates a series based on the loaded data and pushes it into the scatter chart
@@ -1278,10 +1256,12 @@ function update_scatter_chart() {
   if (dev_mode)
     console.log("update_scatter_chart");
   const dpsChart=loaded_data[chosen_class][chosen_spec][data_view][fight_style];
+  const scatter_dps=dpsChart["data"][1111111];
+  const sorted_scatter_dps=dpsChart["sorted_data_keys"][1111111];
   // get max dps of the whole data set
-  let max_dps = dpsChart["data"][1111111][dpsChart["sorted_data_keys"][1111111][0]];
+  let max_dps = scatter_dps[sorted_scatter_dps[0]];
   // get min dps of the whole data set
-  let min_dps = dpsChart["data"][1111111][dpsChart["sorted_data_keys"][1111111][dpsChart["sorted_data_keys"][1111111].length - 1]];
+  let min_dps = scatter_dps[sorted_scatter_dps[sorted_scatter_dps.length - 1]];
 
   // prepare series with standard data
   let series = {
@@ -1291,13 +1271,21 @@ function update_scatter_chart() {
   };
 
   // add a marker for each distribution in the data set
-  for (distribution of Object.keys(dpsChart["data"][1111111])) {
-
+  for (let distribution of Object.keys(scatter_dps)) {
+    console.log(distribution);
+    const split_data=distribution.split('_');
+    console.log(split_data);
+    const stats = {
+      "crit":parseInt(split_data[0]),
+      "haste": parseInt(split_data[1]),
+      "mastery":parseInt(split_data[2]),
+      "vers":parseInt(split_data[3]),
+    };
     // get the markers color
     let color_set = create_color(
-      dpsChart["data"]["1111111"][distribution],
-      dpsChart["data"]["1111111"][dpsChart["sorted_data_keys"]["1111111"][dpsChart["sorted_data_keys"]["1111111"].length - 1]],
-      dpsChart["data"]["1111111"][dpsChart["sorted_data_keys"]["1111111"][0]]
+      scatter_dps[distribution],
+      scatter_dps[sorted_scatter_dps[sorted_scatter_dps.length - 1]],
+      scatter_dps[sorted_scatter_dps[0]]
     );
 
     // width of the border of the marker, 0 for all markers but the max, which gets 3
@@ -1306,8 +1294,8 @@ function update_scatter_chart() {
     // adjust marker radius depending on distance to max
     // worst dps: 2
     // max dps: 5 (increased to 8 to fit the additional border)
-    let radius = 2 + 3 * (dpsChart["data"]["1111111"][distribution] - min_dps) / (max_dps - min_dps)
-    if (max_dps == dpsChart["data"][1111111][distribution]) {
+    let radius = 2 + 3 * (scatter_dps[distribution] - min_dps) / (max_dps - min_dps)
+    if (max_dps === scatter_dps[distribution]) {
       line_width = 3;
       radius = 8;
       line_color = light_color;
@@ -1329,38 +1317,22 @@ function update_scatter_chart() {
         }
       };
 
-      switch (distribution.indexOf("70")) {
-        case 0: // "70_10_10_10"
-          data_label.format = "Crit";
-          data_label.verticalAlign = "top";
-          break;
-        case 3: // "10_70_10_10"
-          data_label.format = "Haste";
-          break;
-        case 6: // "10_10_70_10"
-          data_label.format = "Mastery";
-          data_label.verticalAlign = "top";
-          break;
-        case 9: // "10_10_10_70"
-          data_label.format = "Versatility";
-          data_label.verticalAlign = "top";
-          break;
-
-        default:
-          // how did we even end up here?
-          break;
+      let index=Object.keys(stats).find(key=>stats[key]===70);
+      if(index!==-1){
+        data_label.format=index;
+        data_label.verticalAlign="top";
       }
     }
-
+    const position = getPosition(stats);
     // push marker data into the series
     series.data.push({
       // formulas slowly snailed together from combining different relations within https://en.wikipedia.org/wiki/Equilateral_triangle and https://en.wikipedia.org/wiki/Pythagorean_theorem
-      x: Math.sqrt(3) / 2 * (parseInt(distribution.split("_")[0]) + 1 / 3 * parseInt(distribution.split("_")[1])),
-      y: Math.sqrt(2 / 3) * parseInt(distribution.split("_")[1]),
-      z: parseInt(distribution.split("_")[2]) + 0.5 * parseInt(distribution.split("_")[0]) + 0.5 * parseInt(distribution.split("_")[1]),
+      x: position.x,
+      y: position.y,
+      z: position.z,
       name: distribution,
       // flat markers with dark border (borders are prepared further up)
-      color: "rgb(" + color_set[0] + "," + color_set[1] + "," + color_set[2] + ")",
+      color: `hsl(${color_set[0]}, ${color_set[1]}%, ${color_set[2]}%)`,//"rgb(" + color_set[0] + "," + color_set[1] + "," + color_set[2] + ")",
 
       // 3d markers with light area and shadow at the opposite side
       // color: {
@@ -1376,13 +1348,13 @@ function update_scatter_chart() {
       //   ]
       // },
       // add additional information required for tooltips
-      dps: dpsChart["data"][1111111][distribution],
+      dps: scatter_dps[distribution],
       dps_max: max_dps,
       dps_min: min_dps,
-      stat_crit: parseInt(distribution.split("_")[0]) * dpsChart["secondary_sum"] / 100,
-      stat_haste: parseInt(distribution.split("_")[1]) * dpsChart["secondary_sum"] / 100,
-      stat_mastery: parseInt(distribution.split("_")[2]) * dpsChart["secondary_sum"] / 100,
-      stat_vers: parseInt(distribution.split("_")[3]) * dpsChart["secondary_sum"] / 100,
+      stat_crit: stats.crit * dpsChart["secondary_sum"] / 100,
+      stat_haste: stats.haste * dpsChart["secondary_sum"] / 100,
+      stat_mastery: stats.mastery * dpsChart["secondary_sum"] / 100,
+      stat_vers: stats.vers * dpsChart["secondary_sum"] / 100,
       stat_sum: dpsChart["secondary_sum"],
       // add marker information
       marker: {
@@ -1410,4 +1382,11 @@ function update_scatter_chart() {
     }
   );
   scatter_chart.redraw();
+}
+
+function getPosition(stats){
+  let x=Math.sqrt(3) / 2 * stats.crit + Math.sqrt(3) / 6 * stats.haste;
+  let y=Math.sqrt(2 / 3) * stats.haste;
+  let z=stats.mastery + 0.5 * stats.crit + 0.5 * stats.haste;
+  return {"x":x, "y":y, "z":z};
 }
