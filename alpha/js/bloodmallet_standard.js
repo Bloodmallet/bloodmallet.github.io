@@ -1371,7 +1371,7 @@ function update_scatter_chart() {
     // push marker data into the series
     series.data.push({
       // formulas slowly snailed together from combining different relations within https://en.wikipedia.org/wiki/Equilateral_triangle and https://en.wikipedia.org/wiki/Pythagorean_theorem
-      x: Math.sqrt(3) / 2 * (parseInt(distribution.split("_")[0]) + Math.sqrt(3) / 6 * parseInt(distribution.split("_")[1])),
+      x: Math.sqrt(3) / 2 * (parseInt(distribution.split("_")[0]) + 1 / 3 * parseInt(distribution.split("_")[1])),
       y: Math.sqrt(2 / 3) * parseInt(distribution.split("_")[1]),
       z: parseInt(distribution.split("_")[2]) + 0.5 * parseInt(distribution.split("_")[0]) + 0.5 * parseInt(distribution.split("_")[1]),
       name: distribution,
