@@ -124,7 +124,7 @@ const fight_style_IDs = [
   "copy_link"
 ];
 
-var light_color = "#eee";
+var light_color = "rgba(238, 238, 238, 1.0)"; // #eee
 var medium_color = "#999"
 var dark_color = "#343a40";
 
@@ -148,6 +148,9 @@ var standard_chart = Highcharts.chart('chart',
       x: 0,
       y: 0,
       itemStyle: {
+        color: medium_color,
+      },
+      itemHoverStyle: {
         color: medium_color,
       }
     },
@@ -236,21 +239,23 @@ var standard_chart = Highcharts.chart('chart',
       text: "Subtitle placeholder",
       useHTML: true,
       style: {
-        color: light_color
+        color: light_color,
+        //fontSize: "1.1rem"
       }
     },
     title: {
       text: "Title placeholder",
       useHTML: true,
       style: {
-        color: light_color
+        color: light_color,
+        fontSize: "1.2rem"
       }
     },
     tooltip: {
       backgroundColor: light_color,
       borderColor: dark_color,
       formatter: function () {
-        var s = '<b>' + this.x + '</b>';
+        var s = '<div style="margin: -4px -6px -11px -7px; z-index: 9999!important; padding: 3px 3px 6px 3px; background-color:' + light_color + '"><b>' + this.x + '</b>';
         var cumulative_amount = 0;
         for (var i = this.points.length - 1; i >= 0; i--) {
           cumulative_amount += this.points[i].y;
@@ -258,14 +263,16 @@ var standard_chart = Highcharts.chart('chart',
             s += '<br/><span style=\"color: ' + this.points[i].series.color + '; font-weight: bold;\">' + this.points[i].series.name + '</span>: ' + Intl.NumberFormat().format(cumulative_amount);
           }
         }
+        s += '</div>';
         return s;
       },
       headerFormat: "<b>{point.x}</b>",
       shared: true,
       style: {
-        color: "black",
+        color: dark_color,
         fontSize: "1.1rem",
-      }
+      },
+      useHTML: true
     },
     xAxis: {
       categories: [
@@ -289,10 +296,10 @@ var standard_chart = Highcharts.chart('chart',
     },
     yAxis: {
       labels: {
-        enabled: true,
+        //enabled: true,
         style: {
           color: medium_color
-        }
+        },
       },
       min: 0,
       stackLabels: {
@@ -303,7 +310,7 @@ var standard_chart = Highcharts.chart('chart',
         style: {
           color: light_color,
           textOutline: false,
-          fontSize: "1.1rem",
+          fontSize: "1.0rem",
         }
       },
       title: {
@@ -388,6 +395,29 @@ function update_dark_mode() {
         }
       }
     });
+
+    scatter_chart.update({
+      title: {
+        style: {
+          color: light_color
+        }
+      },
+      subtitle: {
+        style: {
+          color: light_color
+        }
+      },
+      plotOptions: {
+        series: {
+          dataLabels: {
+            style: {
+              color: light_color
+            }
+          }
+        }
+      }
+    });
+
   } else {
     document.getElementsByTagName("body")[0].classList.remove("bg-dark");
     document.getElementsByTagName("body")[0].classList.remove("text-light");
@@ -416,6 +446,28 @@ function update_dark_mode() {
         stackLabels: {
           style: {
             color: dark_color
+          }
+        }
+      }
+    });
+
+    scatter_chart.update({
+      title: {
+        style: {
+          color: dark_color
+        }
+      },
+      subtitle: {
+        style: {
+          color: dark_color
+        }
+      },
+      plotOptions: {
+        series: {
+          dataLabels: {
+            style: {
+              color: dark_color
+            }
           }
         }
       }
@@ -1092,15 +1144,24 @@ var scatter_chart = new Highcharts.Chart({
     align: "right",
     verticalAlign: "middle",
     layout: "vertical",
-    itemStyle: { "color": light_color },
-    itemHoverStyle: { "color": light_color }
+    itemStyle: { "color": medium_color },
+    itemHoverStyle: { "color": medium_color }
   },
   plotOptions: {
     series: {
       dataLabels: {
         allowOverlap: true,
-      }
-    }
+        style: {
+          color: light_color,
+          fontSize: "1.1rem",
+          fontWeight: "400",
+          textOutline: ""
+        }
+      },
+      events: {
+        legendItemClick: function () { return false; }
+      },
+    },
   },
   series: [
   ],
@@ -1121,7 +1182,7 @@ var scatter_chart = new Highcharts.Chart({
   tooltip: {
     headerFormat: '',
     pointFormatter: function () {
-      return '<table class="table table-sm">\
+      return '<table class="">\
         <thead>\
           <tr>\
             <th scope="col"></th>\
@@ -1337,12 +1398,6 @@ function update_scatter_chart() {
       data_label = {
         enabled: true,
         allowOverlap: true,
-        style: {
-          color: light_color,
-          fontSize: "1.1rem",
-          fontWeight: "400",
-          textOutline: ""
-        }
       };
 
       switch (distribution.indexOf("70")) {
