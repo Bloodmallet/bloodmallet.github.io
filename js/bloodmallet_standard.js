@@ -244,7 +244,7 @@ var standard_chart = Highcharts.chart('chart',
       }
     },
     title: {
-      text: "Title placeholder",
+      text: "", //"Title placeholder",
       useHTML: true,
       style: {
         color: light_color,
@@ -581,7 +581,6 @@ function switch_language(new_language) {
   language = new_language;
   translate_page();
   set_language_cookie();
-  ga('send', 'event', 'alpha', 'switch_language', language);
 }
 
 
@@ -900,7 +899,6 @@ function switch_mode() {
     make_invisible(modes[mode]["hidden"]);
     make_visible(modes[mode]["shown"]);
   }
-  ga('send', 'event', 'alpha', data_view, chosen_class + "_" + chosen_spec);
 }
 
 /**
@@ -1004,7 +1002,7 @@ function update_chart() {
 
   // set title and subtitle
   standard_chart.setTitle({
-    text: loaded_data[chosen_class][chosen_spec][data_view][fight_style]["title"]
+    //text: loaded_data[chosen_class][chosen_spec][data_view][fight_style]["title"]
   }, {
       text: loaded_data[chosen_class][chosen_spec][data_view][fight_style]["subtitle"]
     }, false);
@@ -1173,7 +1171,7 @@ var scatter_chart = new Highcharts.Chart({
     }
   },
   title: {
-    text: "Title placeholder",
+    text: "", //"Title placeholder",
     useHTML: true,
     style: {
       color: light_color
@@ -1475,7 +1473,7 @@ function update_scatter_chart() {
   // make sure this color matches the value of color_min in create_color(...)
   scatter_chart.addSeries({ name: Intl.NumberFormat().format(min_dps) + " DPS", color: "#00FFFF" }, false);
   scatter_chart.setTitle({
-    text: loaded_data[chosen_class][chosen_spec][data_view][fight_style]["title"]
+    //text: loaded_data[chosen_class][chosen_spec][data_view][fight_style]["title"]
   }, {
       text: loaded_data[chosen_class][chosen_spec][data_view][fight_style]["subtitle"]
     }

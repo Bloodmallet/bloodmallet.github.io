@@ -523,5 +523,4 @@ function reload_chart() {
   // resize and redraw with new values
   chart.setSize(chart.width, new_height);
 
-  ga('send', 'event', 'trinket_performance', selected_trinket);
 }
