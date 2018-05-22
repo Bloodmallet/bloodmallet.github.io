@@ -2,25 +2,12 @@ var language = "EN";
 var translator = {};
 
 
-document.addEventListener("DOMContentLoaded", add_link_listener);
 document.addEventListener("DOMContentLoaded", addLanguageListener);
-
-// add tracking listeners to links, so i'm able to see which resources are beeing used
-function add_link_listener() {
-  var links = document.links;
-  for (var i = links.length - 1; i >= 0; i--) {
-    links[i].addEventListener("click", function (e) {
-      ga('send', 'event', 'outgoing', 'click', e.target.href);
-    });
-  }
-}
-
 
 // replaces all wowhead link names with the ones from the translation file
 function addLanguageListener() {
   document.getElementById("select_language").addEventListener("change", function () {
     switchLanguage(this.options[this.selectedIndex].value);
-    ga('send', 'event', 'switch_language', this.options[this.selectedIndex].value);
   });
 }
 

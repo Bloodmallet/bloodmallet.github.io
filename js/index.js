@@ -22,8 +22,6 @@ document.addEventListener('DOMContentLoaded', function () {
       // set new language for the website
       switchLanguage(new_language);
 
-      ga('send', 'event', 'switch_language', new_language);
-
       // set language selector to the new starting language
       document.getElementById("select_language").value = new_language;
     }
@@ -199,8 +197,6 @@ function switch_chart_to(spec) {
       tc_boxes[i].style.display = 'none';
     }
   }
-
-  ga('send', 'event', 'trinkets', fight_style, spec + pruned_addition);
 
   if (language != "EN") {
     //console.log("Starting translation process.");

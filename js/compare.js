@@ -1,24 +1,24 @@
-var database = new function() {
+var database = new function () {
     this.debug = false;
     this.fightstyle = "patchwerk";
     this.class = "";
     this.spec = "";
     this.trinkets = trinket_data;
 
-    this.get_baseline = function() {
+    this.get_baseline = function () {
         return this.trinkets['fight_style'][this.fightstyle]['classes'][this.class][this.spec]['baseline']['860'];
     };
 
-    this.update_class_spec = function(class_name, spec_name) {
+    this.update_class_spec = function (class_name, spec_name) {
         this.class = class_name;
         this.spec = spec_name;
     };
 
-    this.update_fightstyle = function(fightstyle) {
+    this.update_fightstyle = function (fightstyle) {
         this.fightstyle = fightstyle;
     };
 
-    this.get_keys = function(query_type) {
+    this.get_keys = function (query_type) {
         if (this.debug) console.log(this.class, this.spec)
         switch (query_type) {
             case "fightstyles":
@@ -34,7 +34,7 @@ var database = new function() {
         }
     };
 
-    this.get_valid_ilvl = function(trinket_name) {
+    this.get_valid_ilvl = function (trinket_name) {
         var itemlevels = Object.keys(this.trinkets['fight_style'][this.fightstyle]['classes'][this.class][this.spec][trinket_name]);
         var return_list = []
         for (itemlevel in itemlevels) {
@@ -46,11 +46,11 @@ var database = new function() {
         return return_list
     }
 
-    this.get_trinket_dps_value = function(trinket_name, trinket_ilvl) {
+    this.get_trinket_dps_value = function (trinket_name, trinket_ilvl) {
         return this.trinkets['fight_style'][this.fightstyle]['classes'][this.class][this.spec][trinket_name][trinket_ilvl];
     };
 
-    this.populate_options = function(select_id, keys) {
+    this.populate_options = function (select_id, keys) {
         let select = document.getElementById(select_id);
         for (var k in keys) {
             if (keys[k] !== "baseline") {
@@ -84,7 +84,7 @@ function check_valid_trinket_combination() {
     var compare_button = document.getElementById("compare_button");
 
     var valid_combination = true;
-    Array(trinket1_name, trinket1_ilvl, trinket2_name, trinket2_ilvl).forEach(function(element) {
+    Array(trinket1_name, trinket1_ilvl, trinket2_name, trinket2_ilvl).forEach(function (element) {
         if (element.selectedOptions[0].disabled) {
             valid_combination = false;
         }
@@ -143,8 +143,6 @@ function compare() {
         result_elem.innerHTML = decision
     };
     result_elem.style.visibility = "visible";
-
-    //ga('send', 'event', 'comparison', document.getElementById("fight_style").selectedOptions[0].value, document.getElementById("class_name").selectedOptions[0].value + "_" + document.getElementById("spec_name").selectedOptions[0].value);
 }
 
 function compare_trinket_values(trinket1, trinket2, baseline) {
@@ -172,13 +170,13 @@ function form_enabler() {
     var class_name = document.getElementById("class_name");
     var spec_name = document.getElementById("spec_name");
 
-    fight_style.addEventListener('change', function(e) {
+    fight_style.addEventListener('change', function (e) {
         hide_results();
         database.update_fightstyle(fight_style.selectedOptions[0].value);
         database.update_class_spec(class_name.selectedOptions[0].value, spec_name.selectedOptions[0].value);
     });
 
-    class_name.addEventListener('change', function(e) {
+    class_name.addEventListener('change', function (e) {
         disable_selectors();
         hide_results();
         remove_options(spec_name);
@@ -193,7 +191,7 @@ function form_enabler() {
         spec_name.disabled = false;
     });
 
-    spec_name.addEventListener('change', function(e) {
+    spec_name.addEventListener('change', function (e) {
         disable_selectors();
         hide_results();
         if (trinket1_name.children.length > 1) remove_options(trinket1_name);
@@ -210,7 +208,7 @@ function form_enabler() {
     });
 
 
-    trinket1_name.addEventListener('change', function(e) {
+    trinket1_name.addEventListener('change', function (e) {
         hide_results();
         if (trinket1_ilvl.children.length > 1 || trinket1_ilvl.children[0].value == "970") remove_options(trinket1_ilvl);
         database.populate_options("trinket1_ilvl", database.get_valid_ilvl(trinket1_name.selectedOptions[0].value));
@@ -219,7 +217,7 @@ function form_enabler() {
         check_valid_trinket_combination();
     }, false);
 
-    trinket2_name.addEventListener('change', function(e) {
+    trinket2_name.addEventListener('change', function (e) {
         hide_results();
         if (trinket2_ilvl.children.length > 1 || trinket2_ilvl.children[0].value == "970") remove_options(trinket2_ilvl);
         database.populate_options("trinket2_ilvl", database.get_valid_ilvl(trinket2_name.selectedOptions[0].value));
@@ -228,13 +226,13 @@ function form_enabler() {
         check_valid_trinket_combination();
     }, false);
 
-    trinket1_ilvl.addEventListener('change', function() {
+    trinket1_ilvl.addEventListener('change', function () {
         hide_results();
         compare_button.disabled = true;
         check_valid_trinket_combination();
     });
 
-    trinket2_ilvl.addEventListener('change', function() {
+    trinket2_ilvl.addEventListener('change', function () {
         hide_results();
         compare_button.disabled = true;
         check_valid_trinket_combination();
