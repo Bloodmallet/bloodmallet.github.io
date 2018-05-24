@@ -325,15 +325,15 @@ var standard_chart = Highcharts.chart('chart',
   });
 
 var ilevel_color_table = {
-  "910": "#1f78b4",
-  "920": "#a6cee3",
-  "930": "#33a02c",
-  "940": "#b2df8a",
-  "950": "#e31a1c",
-  "960": "#fb9a99",
-  "970": "#ff7f00",
-  "980": "#cab2d6",
-  "1000": "#fdbf6f"
+  "300": "#1f78b4",
+  "310": "#a6cee3",
+  "320": "#33a02c",
+  "330": "#b2df8a",
+  "340": "#e31a1c",
+  "350": "#fb9a99",
+  "360": "#ff7f00",
+  "370": "#cab2d6",
+  "380": "#fdbf6f"
 };
 
 
@@ -990,15 +990,22 @@ function update_chart() {
 
   // https://stackoverflow.com/questions/25500316/sort-a-dictionary-by-value-in-javascript
   // create a list of all trinkets with their highest dps value
-  var dps_ordered_trinkets = Object.keys(loaded_data[chosen_class][chosen_spec][data_view][fight_style]["trinkets"]).map(function (key) { return [key, Math.max(...Object.values(loaded_data[chosen_class][chosen_spec][data_view][fight_style]["trinkets"][key]))] });
+  // var dps_ordered_trinkets = Object.keys(loaded_data[chosen_class][chosen_spec][data_view][fight_style]["trinkets"]).map(function (key) { return [key, Math.max(...Object.values(loaded_data[chosen_class][chosen_spec][data_view][fight_style]["trinkets"][key]))] });
   // order said list
-  dps_ordered_trinkets.sort(function (first, second) { return second[1] - first[1]; });
+  // dps_ordered_trinkets.sort(function (first, second) { return second[1] - first[1]; });
   //console.log(dps_ordered_trinkets);
   // get rid of dps values and keep only the trinket names
-  dps_ordered_trinkets = dps_ordered_trinkets.map(x => x[0]);
+  // dps_ordered_trinkets = dps_ordered_trinkets.map(x => x[0]);
   // or.... just use the provided sorted list once that is included in fresh data
-  //var dps_ordered_trinkets = loaded_data[chosen_class][chosen_spec][data_view][fight_style]["sorted_data_keys"];
-  //console.log(dps_ordered_trinkets);
+  try {
+    //console.log("set dps_ordered_trinkets");
+    var dps_ordered_trinkets = loaded_data[chosen_class][chosen_spec][data_view][fight_style]["sorted_data_keys"];
+  } catch (err) {
+    //console.log("failed. set dps_ordered_trinkets");
+    var dps_ordered_trinkets = Object.keys(loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"]);
+  } finally {
+    //console.log(dps_ordered_trinkets);
+  }
 
   // set title and subtitle
   standard_chart.setTitle({
@@ -1019,39 +1026,46 @@ function update_chart() {
     standard_chart.series[0].remove(false);
   }
 
-  for (itemlevel_position in loaded_data[chosen_class][chosen_spec][data_view][fight_style]["Simulated itemlevels"]) {
+  for (itemlevel_position in loaded_data[chosen_class][chosen_spec][data_view][fight_style]["simulated_itemlevels"]) {
 
-    var itemlevel = loaded_data[chosen_class][chosen_spec][data_view][fight_style]["Simulated itemlevels"][itemlevel_position];
+    var itemlevel = loaded_data[chosen_class][chosen_spec][data_view][fight_style]["simulated_itemlevels"][itemlevel_position];
     var itemlevel_dps_values = [];
 
     for (trinket of dps_ordered_trinkets) {
 
       // check for zero dps values and don't change them
-      if (Number(loaded_data[chosen_class][chosen_spec][data_view][fight_style]["trinkets"][trinket][itemlevel]) > 0) {
+      if (Number(loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"][trinket][itemlevel]) > 0) {
 
         // if lowest itemlevel is looked at, substract baseline
-        if (itemlevel_position == loaded_data[chosen_class][chosen_spec][data_view][fight_style]["Simulated itemlevels"].length - 1) {
+        if (itemlevel_position == loaded_data[chosen_class][chosen_spec][data_view][fight_style]["simulated_itemlevels"].length - 1) {
 
-          itemlevel_dps_values.push(loaded_data[chosen_class][chosen_spec][data_view][fight_style]["trinkets"][trinket][itemlevel] - loaded_data[chosen_class][chosen_spec][data_view][fight_style]["trinkets"]["baseline"][Math.min(...loaded_data[chosen_class][chosen_spec][data_view][fight_style]["Simulated itemlevels"])]);
+          if (itemlevel in loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"][trinket]) {
+            itemlevel_dps_values.push(loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"][trinket][itemlevel] - loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"]["baseline"][Math.min(...loaded_data[chosen_class][chosen_spec][data_view][fight_style]["simulated_itemlevels"])]);
+          } else {
+            itemlevel_dps_values.push(0);
+          }
 
 
         } else { // else substract lower itemlevel value of same item
 
           // if lower itemlevel is zero we have to assume that this item needs to be compared now to the baseline
-          if (loaded_data[chosen_class][chosen_spec][data_view][fight_style]["trinkets"][trinket][loaded_data[chosen_class][chosen_spec][data_view][fight_style]["Simulated itemlevels"][String(Number(itemlevel_position) + 1)]] == 0) {
+          if (loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"][trinket][loaded_data[chosen_class][chosen_spec][data_view][fight_style]["simulated_itemlevels"][String(Number(itemlevel_position) + 1)]] == 0 || !(loaded_data[chosen_class][chosen_spec][data_view][fight_style]["simulated_itemlevels"][String(Number(itemlevel_position) + 1)] in loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"][trinket])) {
 
-            itemlevel_dps_values.push(loaded_data[chosen_class][chosen_spec][data_view][fight_style]["trinkets"][trinket][itemlevel] - loaded_data[chosen_class][chosen_spec][data_view][fight_style]["trinkets"]["baseline"][Math.min(...loaded_data[chosen_class][chosen_spec][data_view][fight_style]["Simulated itemlevels"])]);
+            itemlevel_dps_values.push(loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"][trinket][itemlevel] - loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"]["baseline"][Math.min(...loaded_data[chosen_class][chosen_spec][data_view][fight_style]["simulated_itemlevels"])]);
 
           } else { // standard case, next itemlevel is not zero and can be used to substract from the current value
 
-            itemlevel_dps_values.push(loaded_data[chosen_class][chosen_spec][data_view][fight_style]["trinkets"][trinket][itemlevel] - loaded_data[chosen_class][chosen_spec][data_view][fight_style]["trinkets"][trinket][loaded_data[chosen_class][chosen_spec][data_view][fight_style]["Simulated itemlevels"][String(Number(itemlevel_position) + 1)]]);
+            itemlevel_dps_values.push(loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"][trinket][itemlevel] - loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"][trinket][loaded_data[chosen_class][chosen_spec][data_view][fight_style]["simulated_itemlevels"][String(Number(itemlevel_position) + 1)]]);
           }
 
         }
 
       } else {
-
-        itemlevel_dps_values.push(loaded_data[chosen_class][chosen_spec][data_view][fight_style]["trinkets"][trinket][itemlevel]);
+        if (itemlevel in loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"][trinket]) {
+          itemlevel_dps_values.push(loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"][trinket][itemlevel]);
+        } else {
+          itemlevel_dps_values.push(0);
+        }
       }
 
     }
