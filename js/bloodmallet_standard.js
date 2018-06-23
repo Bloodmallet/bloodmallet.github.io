@@ -128,11 +128,16 @@ var light_color = "rgba(238, 238, 238, 1.0)"; // #eee
 var medium_color = "#999"
 var dark_color = "#343a40";
 
+var font_size = "1.1rem";
+
 var standard_chart = Highcharts.chart('chart',
   {
     chart: {
       type: "bar",
       backgroundColor: null,
+      style: {
+        fontFamily : "-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\",\"Segoe UI Symbol\""
+      }
       //borderColor: medium_color,
       //borderWidth: 1
     },
@@ -166,15 +171,15 @@ var standard_chart = Highcharts.chart('chart',
               chart.removePlotLine('helperLine');
               chart.addPlotLine({
                 value: this.stackY,
-                color: medium_color,
+                color: light_color,
                 width: 2,
                 id: 'helperLine',
                 zIndex: 5,
                 label: {
                   text: this.series.name + ' ' + this.category,
                   style: {
-                    color: medium_color,
-                    fontSize: "1.1rem",
+                    color: light_color,
+                    fontSize: font_size,
                   },
                   align: 'left',
                   verticalAlign: 'bottom',
@@ -194,7 +199,7 @@ var standard_chart = Highcharts.chart('chart',
         },
         style: {
           textOutline: false,
-          fontSize: "1.1rem",
+          fontSize: font_size,
         }
       }
     },
@@ -240,7 +245,7 @@ var standard_chart = Highcharts.chart('chart',
       useHTML: true,
       style: {
         color: light_color,
-        //fontSize: "1.1rem"
+        fontSize: font_size
       }
     },
     title: {
@@ -252,15 +257,23 @@ var standard_chart = Highcharts.chart('chart',
       }
     },
     tooltip: {
-      backgroundColor: light_color,
-      borderColor: dark_color,
       formatter: function () {
-        var s = '<div style="margin: -4px -6px -11px -7px; z-index: 9999!important; padding: 3px 3px 6px 3px; background-color:' + light_color + '"><b>' + this.x + '</b>';
+        var s = '<div style="margin: -4px -6px -11px -7px; z-index: 9999!important; padding: 3px 3px 6px 3px; background-color:' + dark_color + '"><div style=\"margin-left: 9px; margin-right: 9px; margin-bottom: 6px; font-weight: 700;\">' + this.x + '</div>';
         var cumulative_amount = 0;
         for (var i = this.points.length - 1; i >= 0; i--) {
           cumulative_amount += this.points[i].y;
           if (this.points[i].y !== 0) {
-            s += '<br/><span style=\"color: ' + this.points[i].series.color + '; font-weight: bold;\">' + this.points[i].series.name + '</span>: ' + Intl.NumberFormat().format(cumulative_amount);
+            s += '<div><span style=\"margin-left: 9px; border-left: 9px solid ' +
+              this.points[i].series.color + ';' +
+              ' padding-left: 4px;' +
+              //' color: ' + this.points[i].series.color + ';' +
+              //' font-weight: bold;' +
+              //' text-shadow: 0px 0px 2px black;' +
+              '\">' +
+              this.points[i].series.name +
+              '</span>:&nbsp;&nbsp;' +
+              Intl.NumberFormat().format(cumulative_amount) +
+              "</div>";
           }
         }
         s += '</div>';
@@ -268,9 +281,11 @@ var standard_chart = Highcharts.chart('chart',
       },
       headerFormat: "<b>{point.x}</b>",
       shared: true,
+      backgroundColor: dark_color,
+      borderColor: medium_color,
       style: {
-        color: dark_color,
-        fontSize: "1.1rem",
+        color: light_color,
+        fontSize: font_size,
       },
       useHTML: true
     },
@@ -286,7 +301,7 @@ var standard_chart = Highcharts.chart('chart',
         useHTML: true,
         style: {
           color: light_color,
-          fontSize: "1.1rem",
+          fontSize: font_size,
         }
       },
       gridLineWidth: 0,
@@ -310,7 +325,8 @@ var standard_chart = Highcharts.chart('chart',
         style: {
           color: light_color,
           textOutline: false,
-          fontSize: "1.0rem",
+          fontSize: font_size,
+          //fontWeight: "normal"
         }
       },
       title: {
@@ -1019,6 +1035,46 @@ function update_chart() {
     var dps_ordered_data = Object.keys(loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"]);
   }
 
+  // change item/spell names to wowhead links
+  ordered_trinket_list = [];
+  if (data_view == "trinkets" || data_view == "azerite_traits") {
+    for (let i in dps_ordered_data) {
+      console.log(i);
+      console.log(loaded_data[chosen_class][chosen_spec][data_view][fight_style]["item_ids"][dps_ordered_data[i]]);
+      if (data_view == "trinkets") {
+        ordered_trinket_list.push(
+          "<a href=\"https://www.wowhead.com/item=" +
+          loaded_data[chosen_class][chosen_spec][data_view][fight_style]["item_ids"][dps_ordered_data[i]] +
+          "\" target=\"blank\">" +
+          dps_ordered_data[i] +
+          "</a>"
+        );
+      } else if (data_view == "azerite_traits") {
+          ordered_trinket_list.push(
+            "<a href=\"https://www.wowhead.com/spell=" +
+            loaded_data[chosen_class][chosen_spec][data_view][fight_style]["spell_ids"][dps_ordered_data[i]] +
+            "\" target=\"blank\">" +
+            dps_ordered_data[i] +
+            "</a>"
+          );
+      }
+    }
+    // rewrite the trinket names
+    standard_chart.update({
+      xAxis: {
+        categories: ordered_trinket_list
+      }
+    }, false);
+  } else {
+    // rewrite the trinket names
+    standard_chart.update({
+      xAxis: {
+        categories: dps_ordered_data
+      }
+    }, false);
+  }
+
+
   // set title and subtitle
   standard_chart.setTitle({
     //text: loaded_data[chosen_class][chosen_spec][data_view][fight_style]["title"]
@@ -1026,23 +1082,18 @@ function update_chart() {
       text: loaded_data[chosen_class][chosen_spec][data_view][fight_style]["subtitle"]
     }, false);
 
-  // rewrite the trinket names
-  standard_chart.update({
-    xAxis: {
-      categories: dps_ordered_data
-    }
-  }, false);
+
 
   // delete all old series data
   while (standard_chart.series[0]) {
     standard_chart.series[0].remove(false);
   }
   // basically: if something was simmed with multiple itemlevels
-  if ("simulated_itemlevels" in loaded_data[chosen_class][chosen_spec][data_view][fight_style]) {
+  if ("simulated_steps" in loaded_data[chosen_class][chosen_spec][data_view][fight_style]) {
 
-    for (itemlevel_position in loaded_data[chosen_class][chosen_spec][data_view][fight_style]["simulated_itemlevels"]) {
+    for (itemlevel_position in loaded_data[chosen_class][chosen_spec][data_view][fight_style]["simulated_steps"]) {
 
-      var itemlevel = loaded_data[chosen_class][chosen_spec][data_view][fight_style]["simulated_itemlevels"][itemlevel_position];
+      var itemlevel = loaded_data[chosen_class][chosen_spec][data_view][fight_style]["simulated_steps"][itemlevel_position];
       var itemlevel_dps_values = [];
 
       for (data of dps_ordered_data) {
@@ -1051,10 +1102,10 @@ function update_chart() {
         if (Number(loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"][data][itemlevel]) > 0) {
 
           // if lowest itemlevel is looked at, substract baseline
-          if (itemlevel_position == loaded_data[chosen_class][chosen_spec][data_view][fight_style]["simulated_itemlevels"].length - 1) {
+          if (itemlevel_position == loaded_data[chosen_class][chosen_spec][data_view][fight_style]["simulated_steps"].length - 1) {
 
             if (itemlevel in loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"][data]) {
-              itemlevel_dps_values.push(loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"][data][itemlevel] - loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"]["baseline"][Math.min(...loaded_data[chosen_class][chosen_spec][data_view][fight_style]["simulated_itemlevels"])]);
+              itemlevel_dps_values.push(loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"][data][itemlevel] - loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"]["baseline"][Math.min(...loaded_data[chosen_class][chosen_spec][data_view][fight_style]["simulated_steps"])]);
             } else {
               itemlevel_dps_values.push(0);
             }
@@ -1063,13 +1114,13 @@ function update_chart() {
           } else { // else substract lower itemlevel value of same item
 
             // if lower itemlevel is zero we have to assume that this item needs to be compared now to the baseline
-            if (loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"][data][loaded_data[chosen_class][chosen_spec][data_view][fight_style]["simulated_itemlevels"][String(Number(itemlevel_position) + 1)]] == 0 || !(loaded_data[chosen_class][chosen_spec][data_view][fight_style]["simulated_itemlevels"][String(Number(itemlevel_position) + 1)] in loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"][data])) {
+            if (loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"][data][loaded_data[chosen_class][chosen_spec][data_view][fight_style]["simulated_steps"][String(Number(itemlevel_position) + 1)]] == 0 || !(loaded_data[chosen_class][chosen_spec][data_view][fight_style]["simulated_steps"][String(Number(itemlevel_position) + 1)] in loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"][data])) {
 
-              itemlevel_dps_values.push(loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"][data][itemlevel] - loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"]["baseline"][Math.min(...loaded_data[chosen_class][chosen_spec][data_view][fight_style]["simulated_itemlevels"])]);
+              itemlevel_dps_values.push(loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"][data][itemlevel] - loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"]["baseline"][Math.min(...loaded_data[chosen_class][chosen_spec][data_view][fight_style]["simulated_steps"])]);
 
             } else { // standard case, next itemlevel is not zero and can be used to substract from the current value
 
-              itemlevel_dps_values.push(loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"][data][itemlevel] - loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"][data][loaded_data[chosen_class][chosen_spec][data_view][fight_style]["simulated_itemlevels"][String(Number(itemlevel_position) + 1)]]);
+              itemlevel_dps_values.push(loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"][data][itemlevel] - loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"][data][loaded_data[chosen_class][chosen_spec][data_view][fight_style]["simulated_steps"][String(Number(itemlevel_position) + 1)]]);
             }
 
           }
@@ -1193,7 +1244,7 @@ var scatter_chart = new Highcharts.Chart({
         allowOverlap: true,
         style: {
           color: light_color,
-          fontSize: "1.1rem",
+          fontSize: font_size,
           fontWeight: "400",
           textOutline: ""
         }
