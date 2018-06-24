@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Overview of DPS increases from trinkets, azerite traits, and other sources for several specs in World of Warcraft using SimulationCraft's default profiles.">
+  <meta name="description" content="Simulation data for everyone. Overview of DPS relevant simulation data for World of Warcraft.">
 
   <!-- Make sure Bootstrap is loaded before base, otherwise some styles will be overwritten -->
   <link rel="stylesheet" href="css/bootstrap.min.css" async>
@@ -222,7 +222,7 @@
   <br/>
 
   <main>
-    <!-- Introduction -->
+    <!-- FAQ -->
     <div class="container-fluid" id="welcome_container">
       <h1 class="display-4 text-center" id="main_header">FAQ
       </h1>
@@ -230,65 +230,105 @@
         <div class="offset-md-1 col-md-10">
           <h2 class="faq-question">What is bloodmallet.com?</h2>
           <p>
-            This page offers simulation data for everyone for World of Warcraft. Multiple items often require you to sim your own character
-            to compare them properly. To get a quicker overview you can have a look at the charts offered here. Of course
-            I encourage you to sim your own character either on your own machine or using Raidbots. Personalized simulations
-            should always be preferred.
+            bloodmallet.com offers DPS simulation data for everyone for World of Warcraft. Comparing different setups often requires simulations. To ease this need for information bloodmallet.com offers a wide range of prepared simulation data. This way you can get your overview a lot quicker and get back into the action faster. As with all prepared information, the exact context of your character is missing and that can change the outcome. Therefore make sure to regularly simulate your character yourself.
           </p>
         </div>
         <div class="offset-md-1 col-md-10">
-          <h2 class="faq-question">I want to contribute</h2>
+          <h2 class="faq-question">How is the data generated?</h2>
           <p>
-            Excellent! Get in contact with me, head to
-            <a href="https://github.com/Bloodmallet/bloodmallet.github.io/projects/4" target="blank">GitHub</a>, and have a look at the open issues. You'll need a GitHub account to contribute.
+            <a href="http://www.simulationcraft.org/" target="blank">SimulationCraft</a> is used to generate all the data you can find here. Creating the required input to run SimulationCraft and managing the process is done by <a href="https://github.com/Bloodmallet/bloodytools" target="blank">bloodytools</a>.
           </p>
         </div>
         <div class="offset-md-1 col-md-10">
-          <h2 class="faq-question">Who contributed?</h2>
-          <ul type="square">
-            <li>
-              <a href="https://github.com/bhalial" target="blank">bhalial</a> created the logo</li>
-            <li>
-              <a href="https://github.com/HawkCorrigan" target="blank">HawkCorrigan</a> helps by improving the code of the page</li>
-            <li>everyone who shared their feedback with me or suggested improvements</li>
-          </ul>
-        </div>
-        <div class="offset-md-1 col-md-10">
-          <h2 class="faq-question">How do you get your data?</h2>
-          <p>
-            I'm generating all data using SimulationCraft wrapped in my own tools on my local machine.
-          </p>
-        </div>
-        <div class="offset-md-1 col-md-10">
-          <h2 class="faq-question">What settings do you use?</h2>
-          <p>
-            Tables:
-          </p>
+          <h2 class="faq-question">What settings are used to create the data?</h2>
+          <table class="table table-dark">
+            <thead>
+              <tr>
+                <th scope="col">Setting</th>
+                <th scope="col">Patchwerk</th>
+                <th scope="col">Beastlord</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Tier</th>
+                <td>PreRaid</td>
+                <td>PreRaid</td>
+              </tr>
+              <tr>
+                <th scope="row">Iterations</th>
+                <td>250000</td>
+                <td>250000</td>
+              </tr>
+              <tr>
+                <th scope="row">Target Error</th>
+                <td>0.2%</td>
+                <td>0.2%</td>
+              </tr>
+              <tr>
+                <th scope="row">Max Time</th>
+                <td>300 seconds</td>
+                <td>300 seconds</td>
+              </tr>
+              <tr>
+                <th scope="row">Vary Combat Length</th>
+                <td>20%</td>
+                <td>20%</td>
+              </tr>
+              <tr>
+                <th scope="row">Fixed Time</th>
+                <td>true</td>
+                <td>true</td>
+              </tr>
+              <tr>
+                <th scope="row">Default Actions</th>
+                <td>true</td>
+                <td>true</td>
+              </tr>
+              <tr>
+                <th scope="row">Optimize Expressions</th>
+                <td>true</td>
+                <td>true</td>
+              </tr>
+              <tr>
+                <th scope="row">Ready Trigger</th>
+                <td>true</td>
+                <td>true</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
         <div class="offset-md-1 col-md-10">
           <h2 class="faq-question">Are the charts up to date?</h2>
           <p>
-            Please check the time stamp at the top of each chart. I'm trying my best to keep all charts as up to date as possible. Please
-            understand that generating this massive amount of data takes quite some time on my machine. With enough support
-            via Patreon I'm going to be able to run these simulations in the cloud, allowing a better update circle.
+            Please check the time stamp at the top of each chart. I'm trying my best to keep all charts as up to date as possible. But please understand that generating this massive amount of data takes quite some time. With enough support via <a href="https://www.patreon.com/bloodmallet" target="blank">Patreon</a> I'm going to be able to run these simulations in the cloud, allowing a better update circle.
           </p>
         </div>
         <div class="offset-md-1 col-md-10">
-          <h2 class="faq-question">Can I trust your charts?</h2>
+          <h2 class="faq-question">Can I trust these charts?</h2>
           <p>
-            Yes-ish - for a rough overview. Your own equipment, traits and talents change the value of items and traits for your character.
-            Therefore, simming your own character is the most effective way to know which performs best.
+            Yes-ish - they offer an overview. Your own equipment (e.g. azerite traits and trinkets) and talents make your character unique. Therefore, simming your own character is the most effective way to know which performs best. And of course: listen to your theorycrafters! General information can get you only so far.
           </p>
         </div>
         <div class="offset-md-1 col-md-10">
-          <h2 class="faq-question">Why is X missing?</h2>
+          <h2 class="faq-question">Why is this trinket / azerite trait / race missing?</h2>
           <p>
-            Chances are, I simply missed it. Please report that via github.
+            Chances are, it was forgotten and needs to be added. Please <a href="https://github.com/Bloodmallet/bloodmallet.github.io/issues" target="blank">report an error</a> via github.
           </p>
+        </div>
+        <div class="offset-md-1 col-md-10">
+          <h2 class="faq-question">Who contributed?</h2>
+          <p>A big shout out to everyone who took part in the journey to reach this point. Without your feedback bloodmallet.com wouldn't be as smooth as it is. All feedback is highly appreciated, so share your opinion on Twitter <a href="https://twitter.com/bloodmallet" target="blank">@bloodmallet</a>! Special mentions go to:</p>
+          <ul type="square">
+            <li>
+              <a href="https://github.com/bhalial" target="blank">bhalial</a> created the logo</li>
+            <li>
+              <a href="https://github.com/HawkCorrigan" target="blank">HawkCorrigan</a> double-checked code</li>
+          </ul>
         </div>
       </div>
     </div>
-    <!-- Introduction end -->
+    <!-- FAQ end -->
   </main>
 
   <div id="background_image"></div>
