@@ -12,4 +12,4 @@ Please [add issues](https://github.com/Bloodmallet/bloodmallet.github.io/issues)
 | GitHub Repo | [Issue System](https://github.com/Bloodmallet/bloodmallet.github.io/issues) |
 
 ## Support the developement time
-Please read the [FAQ page](https://bloodmallet.github.io/faq.html#support) for more information.
+Please read the [FAQ page](https://bloodmallet.com/faq.html#support) for more information.
