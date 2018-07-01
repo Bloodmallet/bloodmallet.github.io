@@ -39,6 +39,7 @@ var loaded_data = {};
 
 var chosen_class = "";
 var chosen_spec = "";
+var chosen_talent_combination = "";
 
 var dark_mode = true;
 var bloodyfiller = "&nbsp;charts&nbsp;";
@@ -116,7 +117,8 @@ const data_view_IDs = [
   "show_trinkets_data", // => trinkets
   "show_azerite_traits_data", // => azerite_traits
   "show_races_data", // => races
-  "show_secondary_distributions_data"
+  "show_secondary_distributions_data",
+  "talent_combination_selector"
 ];
 const fight_style_IDs = [
   "fight_style_patchwerk",
@@ -804,6 +806,14 @@ document.addEventListener("DOMContentLoaded", function () {
   })
 })
 
+document.addEventListener("DOMContentLoaded", function () {
+  document.getElementById("talent_combination_selector").addEventListener("change", function (e) {
+    console.log(e);
+    chosen_talent_combination = e.target.value;
+    update_chart();
+  })
+})
+
 /**
  * Update the global class and spec variables from the current url.
  */
@@ -882,6 +892,7 @@ function load_data() {
       if (this.readyState == 4 && this.status == 200) {
         // save loaded data
         loaded_data[chosen_class][chosen_spec][data_view][fight_style] = JSON.parse(xhttp_getLanguage.responseText);
+        update_talent_selector();
         update_chart();
       }
       else if (this.readyState == 4 && this.status == 404) {
@@ -893,6 +904,7 @@ function load_data() {
   } else {
     if (dev_mode)
       console.log("Data is already present.");
+    update_talent_selector();
     update_chart();
   }
 }
@@ -948,6 +960,37 @@ function update_data_buttons() {
   });
   // set "active" to class color
   document.getElementById("show_" + data_view + "_data").classList.add(chosen_class + "-border-bottom");
+
+  // unhide/hide talent combination selection if necessary
+  if (data_view == "secondary_distributions") {
+    document.getElementById("talent_combination_selector").hidden = false;
+  } else {
+    document.getElementById("talent_combination_selector").hidden = true;
+  }
+}
+
+/**
+ * Update the talent list in the talent selector, based on data. Set first talent combination as default.
+ */
+function update_talent_selector() {
+  if (dev_mode)
+    console.log("update_talent_selector");
+
+  let talent_combinations = Object.keys(loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"]);
+
+  let talent_selector = document.getElementById("talent_combination_selector");
+  talent_selector.innerHTML= "";
+
+  chosen_talent_combination = talent_combinations[0];
+
+  for (talent_combination of talent_combinations) {
+    let new_option = document.createElement("option");
+    new_option.text = talent_combination;
+    if (talent_combination == chosen_talent_combination)
+      new_option.selected = true;
+    talent_selector.add(new_option);
+  }
+
 }
 
 /**
@@ -1447,9 +1490,9 @@ function update_scatter_chart() {
     console.log("update_scatter_chart");
 
   // get max dps of the whole data set
-  let max_dps = loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"][1111111][loaded_data[chosen_class][chosen_spec][data_view][fight_style]["sorted_data_keys"][1111111][0]];
+  let max_dps = loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"][chosen_talent_combination][loaded_data[chosen_class][chosen_spec][data_view][fight_style]["sorted_data_keys"][chosen_talent_combination][0]];
   // get min dps of the whole data set
-  let min_dps = loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"][1111111][loaded_data[chosen_class][chosen_spec][data_view][fight_style]["sorted_data_keys"][1111111][loaded_data[chosen_class][chosen_spec][data_view][fight_style]["sorted_data_keys"][1111111].length - 1]];
+  let min_dps = loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"][chosen_talent_combination][loaded_data[chosen_class][chosen_spec][data_view][fight_style]["sorted_data_keys"][chosen_talent_combination][loaded_data[chosen_class][chosen_spec][data_view][fight_style]["sorted_data_keys"][chosen_talent_combination].length - 1]];
 
   // prepare series with standard data
   let series = {
@@ -1459,13 +1502,13 @@ function update_scatter_chart() {
   };
 
   // add a marker for each distribution in the data set
-  for (distribution of Object.keys(loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"][1111111])) {
+  for (distribution of Object.keys(loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"][chosen_talent_combination])) {
 
     // get the markers color
     let color_set = create_color(
-      loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"]["1111111"][distribution],
-      loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"]["1111111"][loaded_data[chosen_class][chosen_spec][data_view][fight_style]["sorted_data_keys"]["1111111"][loaded_data[chosen_class][chosen_spec][data_view][fight_style]["sorted_data_keys"]["1111111"].length - 1]],
-      loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"]["1111111"][loaded_data[chosen_class][chosen_spec][data_view][fight_style]["sorted_data_keys"]["1111111"][0]]
+      loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"][chosen_talent_combination][distribution],
+      loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"][chosen_talent_combination][loaded_data[chosen_class][chosen_spec][data_view][fight_style]["sorted_data_keys"][chosen_talent_combination][loaded_data[chosen_class][chosen_spec][data_view][fight_style]["sorted_data_keys"][chosen_talent_combination].length - 1]],
+      loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"][chosen_talent_combination][loaded_data[chosen_class][chosen_spec][data_view][fight_style]["sorted_data_keys"][chosen_talent_combination][0]]
     );
 
     // width of the border of the marker, 0 for all markers but the max, which gets 3
@@ -1474,8 +1517,8 @@ function update_scatter_chart() {
     // adjust marker radius depending on distance to max
     // worst dps: 2
     // max dps: 5 (increased to 8 to fit the additional border)
-    let radius = 2 + 3 * (loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"]["1111111"][distribution] - min_dps) / (max_dps - min_dps)
-    if (max_dps == loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"][1111111][distribution]) {
+    let radius = 2 + 3 * (loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"][chosen_talent_combination][distribution] - min_dps) / (max_dps - min_dps)
+    if (max_dps == loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"][chosen_talent_combination][distribution]) {
       line_width = 3;
       radius = 8;
       line_color = light_color;
@@ -1538,7 +1581,7 @@ function update_scatter_chart() {
       //   ]
       // },
       // add additional information required for tooltips
-      dps: loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"][1111111][distribution],
+      dps: loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"][chosen_talent_combination][distribution],
       dps_max: max_dps,
       dps_min: min_dps,
       stat_crit: parseInt(distribution.split("_")[0]) * loaded_data[chosen_class][chosen_spec][data_view][fight_style]["secondary_sum"] / 100,
