@@ -5,7 +5,7 @@
 ---------------------------------------------------------*/
 
 /* Variable intended for dev mode specific output/markings */
-var dev_mode = true;
+var dev_mode = false;
 
 /** visual modes
  *   hidden: hides these general elements
@@ -58,7 +58,8 @@ const translation_IDs = [
   "show_azerite_traits_data",
   "show_races_data",
   "fight_style_patchwerk",
-  "fight_style_beastlord",
+  // "fight_style_beastlord",
+  "fight_style_hecticaddcleave",
   "translate_language"
 ];
 
@@ -122,8 +123,9 @@ const data_view_IDs = [
 ];
 const fight_style_IDs = [
   "fight_style_patchwerk",
-  "fight_style_beastlord",
-  "copy_link"
+  // "fight_style_beastlord",
+  "fight_style_hecticaddcleave",
+  // "copy_link"
 ];
 
 var light_color = "rgba(238, 238, 238, 1.0)"; // #eee
@@ -132,226 +134,227 @@ var dark_color = "#343a40";
 
 var font_size = "1.1rem";
 
-var standard_chart = Highcharts.chart('chart',
-  {
-    chart: {
-      type: "bar",
-      backgroundColor: null,
-      style: {
-        fontFamily : "-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\",\"Segoe UI Symbol\""
-      }
-      //borderColor: medium_color,
-      //borderWidth: 1
+var empty_chart = {
+  chart: {
+    type: "bar",
+    backgroundColor: null,
+    style: {
+      fontFamily : "-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\",\"Segoe UI Symbol\""
+    }
+    //borderColor: medium_color,
+    //borderWidth: 1
+  },
+  legend: {
+    align: "right",
+    backgroundColor: null,
+    borderColor: medium_color,
+    borderWidth: 0,
+    floating: false,
+    reversed: true,
+    shadow: false,
+    verticalAlign: "bottom",
+    x: 0,
+    y: 0,
+    itemStyle: {
+      color: medium_color,
     },
-    legend: {
-      align: "right",
-      backgroundColor: null,
-      borderColor: medium_color,
-      borderWidth: 0,
-      floating: false,
-      reversed: true,
-      shadow: false,
-      verticalAlign: "bottom",
-      x: 0,
-      y: 0,
-      itemStyle: {
-        color: medium_color,
+    itemHoverStyle: {
+      color: medium_color,
+    }
+  },
+  plotOptions: {
+    bar: {
+      dataLabels: {
+        enabled: false,
       },
-      itemHoverStyle: {
-        color: medium_color,
-      }
-    },
-    plotOptions: {
-      bar: {
-        dataLabels: {
-          enabled: false,
-        },
-        point: {
-          events: {
-            click: function (event) {
-              var chart = this.series.yAxis;
-              chart.removePlotLine('helperLine');
-              chart.addPlotLine({
-                value: this.stackY,
-                color: light_color,
-                width: 2,
-                id: 'helperLine',
-                zIndex: 5,
-                label: {
-                  text: this.series.name + ' ' + this.category,
-                  style: {
-                    color: light_color,
-                    fontSize: font_size,
-                  },
-                  align: 'left',
-                  verticalAlign: 'bottom',
-                  rotation: 0,
-                  y: -5
-                }
-              });
-            }
-          }
-        },
-      },
-      series: {
-        stacking: "normal",
-        borderColor: dark_color,
+      point: {
         events: {
-          legendItemClick: function () { return false; }
-        },
-        style: {
-          textOutline: false,
-          fontSize: font_size,
-        }
-      }
-    },
-    series: [
-      {
-        color: light_color,
-        data: [
-          1,
-          1,
-          3,
-          1,
-          3
-        ],
-        name: "b main",
-        showInLegend: false
-      },
-      {
-        color: dark_color,
-        data: [
-          0,
-          0,
-          0,
-          1,
-          0
-        ],
-        name: "b's emptiness",
-        showInLegend: false
-      }, {
-        color: light_color,
-        data: [
-          0,
-          0,
-          0,
-          1,
-          0
-        ],
-        name: "b's finishing touch",
-        showInLegend: false
-      }
-    ],
-    subtitle: {
-      text: "Subtitle placeholder",
-      useHTML: true,
-      style: {
-        color: light_color,
-        fontSize: font_size
-      }
-    },
-    title: {
-      text: "", //"Title placeholder",
-      useHTML: true,
-      style: {
-        color: light_color,
-        fontSize: "1.2rem"
-      }
-    },
-    tooltip: {
-      formatter: function () {
-        var s = '<div style="margin: -4px -6px -11px -7px; z-index: 9999!important; padding: 3px 3px 6px 3px; background-color:' + dark_color + '"><div style=\"margin-left: 9px; margin-right: 9px; margin-bottom: 6px; font-weight: 700;\">' + this.x + '</div>';
-        var cumulative_amount = 0;
-        for (var i = this.points.length - 1; i >= 0; i--) {
-          cumulative_amount += this.points[i].y;
-          if (this.points[i].y !== 0) {
-            s += '<div><span style=\"margin-left: 9px; border-left: 9px solid ' +
-              this.points[i].series.color + ';' +
-              ' padding-left: 4px;' +
-              //' color: ' + this.points[i].series.color + ';' +
-              //' font-weight: bold;' +
-              //' text-shadow: 0px 0px 2px black;' +
-              '\">' +
-              this.points[i].series.name +
-              '</span>:&nbsp;&nbsp;' +
-              Intl.NumberFormat().format(cumulative_amount) +
-              "</div>";
+          click: function (event) {
+            var chart = this.series.yAxis;
+            chart.removePlotLine('helperLine');
+            chart.addPlotLine({
+              value: this.stackY,
+              color: light_color,
+              width: 2,
+              id: 'helperLine',
+              zIndex: 5,
+              label: {
+                text: this.series.name + ' ' + this.category,
+                style: {
+                  color: light_color,
+                  fontSize: font_size,
+                },
+                align: 'left',
+                verticalAlign: 'bottom',
+                rotation: 0,
+                y: -5
+              }
+            });
           }
         }
-        s += '</div>';
-        return s;
       },
-      headerFormat: "<b>{point.x}</b>",
-      shared: true,
-      backgroundColor: dark_color,
-      borderColor: medium_color,
+    },
+    series: {
+      stacking: "normal",
+      borderColor: dark_color,
+      events: {
+        legendItemClick: function () { return false; }
+      },
+      style: {
+        textOutline: false,
+        fontSize: font_size,
+      }
+    }
+  },
+  series: [
+    {
+      color: light_color,
+      data: [
+        1,
+        1,
+        3,
+        1,
+        3
+      ],
+      name: "b main",
+      showInLegend: false
+    },
+    {
+      color: dark_color,
+      data: [
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      name: "b's emptiness",
+      showInLegend: false
+    }, {
+      color: light_color,
+      data: [
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      name: "b's finishing touch",
+      showInLegend: false
+    }
+  ],
+  subtitle: {
+    text: "Data not found",
+    useHTML: true,
+    style: {
+      color: light_color,
+      fontSize: font_size
+    }
+  },
+  title: {
+    text: "", //"Title placeholder",
+    useHTML: true,
+    style: {
+      color: light_color,
+      fontSize: "1.2rem"
+    }
+  },
+  tooltip: {
+    formatter: function () {
+      var s = '<div style="margin: -4px -6px -11px -7px; z-index: 9999!important; padding: 3px 3px 6px 3px; background-color:' + dark_color + '"><div style=\"margin-left: 9px; margin-right: 9px; margin-bottom: 6px; font-weight: 700;\">' + this.x + '</div>';
+      var cumulative_amount = 0;
+      for (var i = this.points.length - 1; i >= 0; i--) {
+        cumulative_amount += this.points[i].y;
+        if (this.points[i].y !== 0) {
+          s += '<div><span style=\"margin-left: 9px; border-left: 9px solid ' +
+            this.points[i].series.color + ';' +
+            ' padding-left: 4px;' +
+            //' color: ' + this.points[i].series.color + ';' +
+            //' font-weight: bold;' +
+            //' text-shadow: 0px 0px 2px black;' +
+            '\">' +
+            this.points[i].series.name +
+            '</span>:&nbsp;&nbsp;' +
+            Intl.NumberFormat().format(cumulative_amount) +
+            "</div>";
+        }
+      }
+      s += '</div>';
+      return s;
+    },
+    headerFormat: "<b>{point.x}</b>",
+    shared: true,
+    backgroundColor: dark_color,
+    borderColor: medium_color,
+    style: {
+      color: light_color,
+      fontSize: font_size,
+    },
+    useHTML: true
+  },
+  xAxis: {
+    categories: [
+      "b",
+      "b",
+      "b",
+      "b",
+      "b",
+    ],
+    labels: {
+      useHTML: true,
       style: {
         color: light_color,
         fontSize: font_size,
-      },
-      useHTML: true
+      }
     },
-    xAxis: {
-      categories: [
-        "b",
-        "b",
-        "b",
-        "b",
-        "b",
-      ],
-      labels: {
-        useHTML: true,
-        style: {
-          color: light_color,
-          fontSize: font_size,
-        }
+    gridLineWidth: 0,
+    gridLineColor: medium_color,
+    lineColor: medium_color,
+    tickColor: medium_color
+  },
+  yAxis: {
+    labels: {
+      //enabled: true,
+      style: {
+        color: medium_color
       },
-      gridLineWidth: 0,
-      gridLineColor: medium_color,
-      lineColor: medium_color,
-      tickColor: medium_color
     },
-    yAxis: {
-      labels: {
-        //enabled: true,
-        style: {
-          color: medium_color
-        },
+    min: 0,
+    stackLabels: {
+      enabled: true,
+      formatter: function () {
+        return Intl.NumberFormat().format(this.total);
       },
-      min: 0,
-      stackLabels: {
-        enabled: true,
-        formatter: function () {
-          return Intl.NumberFormat().format(this.total);
-        },
-        style: {
-          color: light_color,
-          textOutline: false,
-          fontSize: font_size,
-          //fontWeight: "normal"
-        }
-      },
-      title: {
-        text: "\u0394 Damage per second",
-        style: {
-          color: medium_color
-        }
-      },
-      gridLineWidth: 1,
-      gridLineColor: medium_color
-    }
-  });
+      style: {
+        color: light_color,
+        textOutline: false,
+        fontSize: font_size,
+        //fontWeight: "normal"
+      }
+    },
+    title: {
+      text: "\u0394 Damage per second",
+      style: {
+        color: medium_color
+      }
+    },
+    gridLineWidth: 1,
+    gridLineColor: medium_color
+  }
+};
+
+var standard_chart = Highcharts.chart('chart', empty_chart);
 
 var ilevel_color_table = {
-  "300": "#1f78b4",
-  "310": "#a6cee3",
-  "320": "#33a02c",
-  "330": "#b2df8a",
-  "340": "#e31a1c",
-  "350": "#fb9a99",
-  "360": "#ff7f00",
-  "370": "#cab2d6",
-  "380": "#fdbf6f"
+  "200": "#1f78b4",
+  "210": "#a6cee3",
+  "220": "#33a02c",
+  "230": "#b2df8a",
+  "240": "#e31a1c",
+  "250": "#fb9a99",
+  "260": "#ff7f00",
+  "270": "#cab2d6",
+  "280": "#fdbf6f"
 };
 
 const class_colors = {
@@ -519,7 +522,11 @@ function set_dark_mode_cookie() {
 function search_dark_mode_cookie() {
   if (dev_mode)
     console.log("search_dark_mode_cookie");
-  dark_mode = ('true' == Cookies.get('bloodmallet_dark_mode'));
+  if (Cookies.get('bloodmallet_dark_mode')) {
+    dark_mode = ('true' == Cookies.get('bloodmallet_dark_mode'));
+  } else {
+    dark_mode = dark_mode;
+  }
   document.getElementById("darkModeCheckbox").checked = dark_mode;
   update_dark_mode();
   set_dark_mode_cookie();
@@ -612,7 +619,11 @@ function switch_language(new_language) {
       });
   }
   language = new_language;
-  translate_page();
+  if (dev_mode)
+    console.log("Setting language to " + new_language);
+  if (dev_mode)
+    console.log("Set language to " + language);
+  setTimeout(translate_page, 15);
   set_language_cookie();
 }
 
@@ -637,6 +648,7 @@ function translate_page() {
   }
 
   // translate content of IDs
+
   translation_IDs.forEach(element => {
     if (loaded_languages[language][element] && loaded_languages[language][element] !== "") {
       document.getElementById(element).innerHTML = loaded_languages[language][element];
@@ -760,9 +772,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   try {
     document.getElementById("show_azerite_traits_data").addEventListener("click", function () {
-      data_view = "azerite_traits";
-      update_data_buttons();
-      load_data();
+      // data_view = "azerite_traits";
+      // update_data_buttons();
+      // load_data();
     });
   } catch (err) {
     console.log("show_azerite_traits_data was not found in page.");
@@ -780,9 +792,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   try {
     document.getElementById("show_secondary_distributions_data").addEventListener("click", function () {
-      data_view = "secondary_distributions";
-      update_data_buttons();
-      load_data();
+      // data_view = "secondary_distributions";
+      // update_data_buttons();
+      // load_data();
     });
   } catch (err) {
     console.log("show_secondary_distribution_data was not found in page.");
@@ -793,18 +805,23 @@ document.addEventListener("DOMContentLoaded", function () {
     update_fight_style_buttons();
     load_data();
   });
-  document.getElementById("fight_style_beastlord").addEventListener("click", function () {
-    fight_style = "beastlord";
+  // document.getElementById("fight_style_beastlord").addEventListener("click", function () {
+  //   fight_style = "beastlord";
+  //   update_fight_style_buttons();
+  //   load_data();
+  // });
+  document.getElementById("fight_style_hecticaddcleave").addEventListener("click", function () {
+    fight_style = "hecticaddcleave";
     update_fight_style_buttons();
     load_data();
   });
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-  document.getElementById("copy_link").addEventListener("click", function () {
-    copy_link();
-  })
-})
+// document.addEventListener("DOMContentLoaded", function () {
+//   document.getElementById("copy_link").addEventListener("click", function () {
+//     copy_link();
+//   })
+// })
 
 document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("talent_combination_selector").addEventListener("change", function (e) {
@@ -898,6 +915,7 @@ function load_data() {
       else if (this.readyState == 4 && this.status == 404) {
         if (dev_mode)
           alert("Data for this mode was not found! the following link was tried, please check: ./json/" + data_view + "/" + file_name);
+        standard_chart = Highcharts.chart('chart', empty_chart);
       }
     }
     xhttp_getLanguage.send();

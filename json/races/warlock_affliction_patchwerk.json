@@ -1,29 +1,42 @@
 {
     "data": {
-        "bloodelf": 1748,
-        "dwarf": 1758,
-        "gnome": 1768,
-        "goblin": 1769,
-        "human": 1755,
-        "nightborne": 1767,
-        "orc": 1748,
-        "troll": 1744,
-        "undead": 1856,
-        "void_elf": 1766,
-        "worgen": 1759
+        "blood_elf": 3725,
+        "dwarf": 3731,
+        "gnome": 3735,
+        "goblin": 3736,
+        "human": 3749,
+        "nightborne": 3732,
+        "orc": 3698,
+        "troll": 3685,
+        "undead": 3727,
+        "void_elf": 3739,
+        "worgen": 3713
     },
     "data_type": "races",
     "simc_settings": {
-        "class": "Warlock",
+        "class": "warlock",
         "fight_style": "patchwerk",
-        "iterations": "75000",
+        "iterations": "250000",
         "ptr": "0",
-        "simc_hash": "dec9b12600b28a81a11eef118b677116b9af4955",
-        "spec": "Affliction",
-        "target_error": "0.4",
-        "tier": "PR"
+        "simc_hash": "312c544388106127dd525278e3520ee5cec7a34d",
+        "spec": "affliction",
+        "target_error": "0.2",
+        "tier": "21"
     },
-    "subtitle": "UTC 2018-05-22 11:20 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/dec9b12600b28a81a11eef118b677116b9af4955\" target=\"blank\">dec9b12</a>",
-    "timestamp": "2018-05-22 11:20",
+    "sorted_data_keys": [
+        "human",
+        "void_elf",
+        "goblin",
+        "gnome",
+        "nightborne",
+        "dwarf",
+        "undead",
+        "blood_elf",
+        "worgen",
+        "orc",
+        "troll"
+    ],
+    "subtitle": "UTC 2018-07-16 23:26 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/312c544388106127dd525278e3520ee5cec7a34d\" target=\"blank\">312c544</a>",
+    "timestamp": "2018-07-16 23:26",
     "title": "Races | Warlock Affliction | Patchwerk"
 }

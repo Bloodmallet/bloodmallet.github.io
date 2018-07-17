@@ -1,44 +1,30 @@
 {
     "data": {
-        "blood_elf": 3555,
-        "draenei": 3567,
-        "dwarf": 3540,
-        "gnome": 3552,
-        "goblin": 3557,
-        "human": 3562,
-        "night_elf": 3543,
-        "orc": 3571,
-        "tauren": 3538,
-        "troll": 3568,
-        "undead": 3559,
-        "worgen": 3556
+        "highmountain_tauren": 3207,
+        "night_elf": 3220,
+        "tauren": 3200,
+        "troll": 3212,
+        "worgen": 3208
     },
     "data_type": "races",
     "simc_settings": {
-        "class": "death_knight",
+        "class": "druid",
         "fight_style": "patchwerk",
         "iterations": "250000",
         "ptr": "0",
         "simc_hash": "312c544388106127dd525278e3520ee5cec7a34d",
-        "spec": "unholy",
+        "spec": "balance",
         "target_error": "0.2",
         "tier": "21"
     },
     "sorted_data_keys": [
-        "orc",
-        "troll",
-        "draenei",
-        "human",
-        "undead",
-        "goblin",
-        "worgen",
-        "blood_elf",
-        "gnome",
         "night_elf",
-        "dwarf",
+        "troll",
+        "worgen",
+        "highmountain_tauren",
         "tauren"
     ],
     "subtitle": "UTC 2018-07-16 23:18 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/312c544388106127dd525278e3520ee5cec7a34d\" target=\"blank\">312c544</a>",
     "timestamp": "2018-07-16 23:18",
-    "title": "Races | Death_Knight Unholy | Patchwerk"
+    "title": "Races | Druid Balance | Patchwerk"
 }
