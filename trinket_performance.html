@@ -10,6 +10,18 @@
   <link rel="stylesheet" href="css/bootstrap.min.css" async>
 
   <link rel="stylesheet" href="css/bloodmallet_standard.css" async>
+  <script>
+    var whTooltips = {
+      colorLinks: false,
+      iconizeLinks: false,
+      renameLinks: false,
+      hide: {
+        dropchance: true,
+        sellprice: true,
+        maxstack: true
+      }
+    };
+  </script>
 
   <!-- from https://cookieconsent.insites.com/download/ -->
   <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css"
@@ -222,113 +234,71 @@
   <br/>
 
   <main>
-    <!-- FAQ -->
+    <!-- Introduction -->
     <div class="container-fluid" id="welcome_container">
-      <h1 class="display-4 text-center" id="main_header">FAQ
+      <h1 class="display-4 text-center" id="main_header">
+        Trinket performance
       </h1>
+      <br/>
+      <!--<h1 class="display-4 text-center" id="main_header">Bloody<wbr>(<span id="bloodyfiller">&nbsp;tools&nbsp;</span>)
+      </h1>-->
       <div class="row">
-        <div class="offset-md-1 col-md-10">
-          <h2 class="faq-question">What is bloodmallet.com?</h2>
-          <p>
-            bloodmallet.com offers DPS simulation data for everyone for World of Warcraft. Comparing different setups often requires simulations. To ease this need for information bloodmallet.com offers a wide range of prepared simulation data. This way you can get your overview a lot quicker and get back into the action faster. As with all prepared information, the exact context of your character is missing and that can change the outcome. Therefore make sure to regularly simulate your character yourself.
+        <div class="offset-xl-3 col-xl-6 offset-lg-2 col-lg-8 offset-md-1 col-md-10">
+          <p id="translate_trinket_performance_main_paragraph">
+            Select a trinket and see how well it performs for all valid specs in a selectable fight style. Remember that this is done
+            with standard profiles and that specs depend differently on trinkets. This tool is educational and not intended
+            to be used to determine who "deserves" a trinket. Trust your Theorycrafters!
           </p>
-        </div>
-        <div class="offset-md-1 col-md-10">
-          <h2 class="faq-question">How is the data generated?</h2>
-          <p>
-            <a href="http://www.simulationcraft.org/" target="blank">SimulationCraft</a> is used to generate all the data you can find here. Creating the required input to run SimulationCraft and managing the process is done by <a href="https://github.com/Bloodmallet/bloodytools" target="blank">bloodytools</a>.
-          </p>
-        </div>
-        <div class="offset-md-1 col-md-10">
-          <h2 class="faq-question">What settings are used to create the data?</h2>
-          <table class="table table-dark">
-            <thead>
-              <tr>
-                <th scope="col">Setting</th>
-                <th scope="col">Patchwerk</th>
-                <th scope="col">HecticAddCleave</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">Tier</th>
-                <td>T21</td>
-                <td>T21</td>
-              </tr>
-              <tr>
-                <th scope="row">Iterations</th>
-                <td>250000</td>
-                <td>250000</td>
-              </tr>
-              <tr>
-                <th scope="row">Target Error</th>
-                <td>0.2%</td>
-                <td>0.2%</td>
-              </tr>
-              <tr>
-                <th scope="row">Max Time</th>
-                <td>300 seconds</td>
-                <td>300 seconds</td>
-              </tr>
-              <tr>
-                <th scope="row">Vary Combat Length</th>
-                <td>20%</td>
-                <td>20%</td>
-              </tr>
-              <tr>
-                <th scope="row">Fixed Time</th>
-                <td>true</td>
-                <td>true</td>
-              </tr>
-              <tr>
-                <th scope="row">Default Actions</th>
-                <td>true</td>
-                <td>true</td>
-              </tr>
-              <tr>
-                <th scope="row">Optimize Expressions</th>
-                <td>true</td>
-                <td>true</td>
-              </tr>
-              <tr>
-                <th scope="row">Ready Trigger</th>
-                <td>true</td>
-                <td>true</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="offset-md-1 col-md-10">
-          <h2 class="faq-question">Are the charts up to date?</h2>
-          <p>
-            Please check the time stamp at the top of each chart. I'm trying my best to keep all charts as up to date as possible. But please understand that generating this massive amount of data takes quite some time. With enough support via <a href="https://www.patreon.com/bloodmallet" target="blank">Patreon</a> I'm going to be able to run these simulations in the cloud, allowing a better update circle.
-          </p>
-        </div>
-        <div class="offset-md-1 col-md-10">
-          <h2 class="faq-question">Can I trust these charts?</h2>
-          <p>
-            Yes-ish - they offer an overview. Your own equipment (e.g. azerite traits and trinkets) and talents make your character unique. Therefore, simming your own character is the most effective way to know which performs best. And of course: listen to your theorycrafters! General information can get you only so far.
-          </p>
-        </div>
-        <div class="offset-md-1 col-md-10">
-          <h2 class="faq-question">Why is this trinket / azerite trait / race missing?</h2>
-          <p>
-            Chances are, it was forgotten and needs to be added. Please <a href="https://github.com/Bloodmallet/bloodmallet.github.io/issues" target="blank">report an error</a> via github.
-          </p>
-        </div>
-        <div class="offset-md-1 col-md-10">
-          <h2 class="faq-question">Who contributed?</h2>
-          <p>A big shout out to everyone who took part in the journey to reach this point. Without your feedback bloodmallet.com wouldn't be as smooth as it is. All feedback is highly appreciated, so share your opinion on Twitter <a href="https://twitter.com/bloodmallet" target="blank">@bloodmallet</a>! Special mentions go to:</p>
-          <ul type="square">
-            <li>
-              <a href="https://github.com/bhalial" target="blank">bhalial</a> for creating the logo</li>
-            <li>
-              <a href="https://github.com/HawkCorrigan" target="blank">HawkCorrigan</a> for double-checking js code</li>
-          </ul>
+          <p id="translate_trinket_performance_tip">Tipp: Click on the trinket selection and type the first few letters of the trinket you're looking for.</p>
         </div>
       </div>
     </div>
-    <!-- FAQ end -->
+    <!-- Introduction end -->
+
+
+    <!-- Special closeable notification  -->
+    <!-- <div class="row">
+      <div class="offset-md-1 col-md-10 alert alert-primary alert-dismissible fade show" role="alert">
+        <strong>Important!</strong> Information!
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+    </div>
+    <!-- -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="offset-xl-3 col-xl-6 offset-lg-2 col-lg-8 offset-md-1 col-md-10 alert alert-warning">This page is quite load and calculation heavy. Therefore it might feel slow when changing settings.</div>
+      </div>
+
+      <div class="row">
+        <div class="offset-xl-3 col-xl-6 offset-lg-2 col-lg-8 offset-md-1 col-md-10" id="selectors">
+          <button class="btn" id="load_data_button">Load Data</button>
+          <span id="load_data_status"></span>
+        </div>
+      </div>
+
+      <form class="form-inline d-flex justify-content-center">
+        <div class="form-group">
+          <label class="sr-only" for="trinket_choice">Name of the trinket</label>
+          <select class="form-control" id="trinket_choice" style="display: none;margin-right: 0.6rem;"></select>
+        </div>
+        <div class="form-group">
+          <label class="sr-only" for="itemlevel_choice">Itemlevel</label>
+          <select class="form-control" id="itemlevel_choice" style="display: none; margin-right: 0.6rem;"></select>
+        </div>
+        <div class="form-group">
+          <label class="sr-only" for="fight_style_choice">Fight style</label>
+          <select class="form-control" id="fight_style_choice" style="display: none;"></select>
+        </div>
+      </form>
+
+
+      <div class="row">
+        <div class="offset-1 col-10" id="performance_root" style="display: none;"></div>
+      </div>
+    </div>
+
   </main>
 
   <div id="background_image"></div>
@@ -342,14 +312,14 @@
       <div class="collapse navbar-collapse" id="navbarBottomMenu">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a class="nav-link" href="trinket_performance.html" id="translate_trinket_performance">Trinket performance</a>
+            <a class="nav-link active" href="trinket_performance.html" id="translate_trinket_performance">Trinket performance</a>
           </li>
         </ul>
 
 
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link active" href="faq.html" id="translate_faq">FAQ</a>
+            <a class="nav-link" href="faq.html" id="translate_faq">FAQ</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="https://github.com/Bloodmallet/bloodmallet.github.io/issues" id="translate_report_an_error" target="blank">Report an error</a>
@@ -375,11 +345,16 @@
     crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
     crossorigin="anonymous"></script>
+  <script src="js/bootstrap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
 
-  <script src="js/bootstrap.min.js"></script>
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="//wow.zamimg.com/widgets/power.js"></script>
+  <script src="js/bloodmallet_highcharts_fix.js"></script>
   <script src="js/bloodmallet_top_settings_fix.js"></script>
   <script src="js/bloodmallet_dark_mode.js"></script>
+  <script src="js/bloodmallet_trinket_performance.js"></script>
+
 </body>
 
 </html>
