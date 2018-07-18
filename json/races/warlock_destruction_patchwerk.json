@@ -1,16 +1,16 @@
 {
     "data": {
-        "blood_elf": 4268,
-        "dwarf": 4301,
-        "gnome": 4287,
-        "goblin": 4282,
-        "human": 4276,
-        "nightborne": 4277,
-        "orc": 4229,
-        "troll": 4219,
-        "undead": 4256,
-        "void_elf": 4274,
-        "worgen": 4256
+        "blood_elf": 5180,
+        "dwarf": 5222,
+        "gnome": 5189,
+        "goblin": 5196,
+        "human": 5213,
+        "nightborne": 5192,
+        "orc": 5212,
+        "troll": 5222,
+        "undead": 5165,
+        "void_elf": 5189,
+        "worgen": 5164
     },
     "data_type": "races",
     "simc_settings": {
@@ -18,25 +18,25 @@
         "fight_style": "patchwerk",
         "iterations": "250000",
         "ptr": "0",
-        "simc_hash": "613419e4e06f1bec93929f60255b28713c9f163a",
+        "simc_hash": "afbd1f04f4f2945eb9b4336cb60b9ab0d4654b2f",
         "spec": "destruction",
         "target_error": "0.2",
         "tier": "21"
     },
     "sorted_data_keys": [
         "dwarf",
-        "gnome",
+        "troll",
+        "human",
+        "orc",
         "goblin",
         "nightborne",
-        "human",
+        "gnome",
         "void_elf",
         "blood_elf",
-        "worgen",
         "undead",
-        "orc",
-        "troll"
+        "worgen"
     ],
-    "subtitle": "UTC 2018-07-17 21:54 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/613419e4e06f1bec93929f60255b28713c9f163a\" target=\"blank\">613419e</a>",
-    "timestamp": "2018-07-17 21:54",
+    "subtitle": "UTC 2018-07-18 21:22 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/afbd1f04f4f2945eb9b4336cb60b9ab0d4654b2f\" target=\"blank\">afbd1f0</a>",
+    "timestamp": "2018-07-18 21:22",
     "title": "Races | Warlock Destruction | Patchwerk"
 }
