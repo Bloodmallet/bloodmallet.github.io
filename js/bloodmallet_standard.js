@@ -600,7 +600,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 /**
- * Switches the language and calls translate_page to do the actual translation.
+ * Switches the language and calls translate_page and translate_chart to do the actual translation.
 */
 function switch_language(new_language) {
   if (language === new_language)
@@ -623,8 +623,9 @@ function switch_language(new_language) {
     console.log("Setting language to " + new_language);
   if (dev_mode)
     console.log("Set language to " + language);
-  setTimeout(translate_page, 15);
   set_language_cookie();
+  setTimeout(translate_page, 15);
+  setTimeout(translate_chart, 15);
 }
 
 
@@ -702,7 +703,30 @@ function translate_page() {
 function translate_chart() {
   if (dev_mode)
     console.log("translate_chart");
-  console.log("translate_chart() is not yet implemented.")
+  let categories = standard_chart.xAxis[0].categories;
+
+  if (categories[0].indexOf('wowhead') == -1) {
+    return;
+  }
+
+  let new_categories = [];
+
+  for (let category of categories) {
+    let new_name = "<a href=\"https://";
+    if (language == 'EN') {
+      new_name += "www";
+    } else {
+      new_name += language.toLowerCase();
+    }
+    new_name += category.slice(category.indexOf('.wowhead'), category.length);
+    new_categories.push( new_name );
+  }
+
+  standard_chart.update({
+    xAxis: {
+      categories: new_categories
+    }
+  }, true);
 }
 
 /** Save the current language in a cookie. */
@@ -1100,8 +1124,10 @@ function update_chart() {
   ordered_trinket_list = [];
   if (data_view == "trinkets" || data_view == "azerite_traits") {
     for (let i in dps_ordered_data) {
-      console.log(i);
-      console.log(loaded_data[chosen_class][chosen_spec][data_view][fight_style]["item_ids"][dps_ordered_data[i]]);
+      if (dev_mode) {
+        console.log(i);
+        console.log(loaded_data[chosen_class][chosen_spec][data_view][fight_style]["item_ids"][dps_ordered_data[i]]);
+      }
       if (data_view == "trinkets") {
         ordered_trinket_list.push(
           "<a href=\"https://www.wowhead.com/item=" +
@@ -1220,6 +1246,7 @@ function update_chart() {
   document.getElementById("chart").style.height = 200 + dps_ordered_data.length * 30 + "px";
   standard_chart.setSize(document.getElementById("chart").style.width, document.getElementById("chart").style.height);
   standard_chart.redraw();
+  translate_chart();
 }
 
 /**
