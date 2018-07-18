@@ -54,12 +54,6 @@ const translation_IDs = [
   "translate_dark_mode",
   "translate_faq",
   "translate_report_an_error",
-  "show_trinkets_data",
-  "show_azerite_traits_data",
-  "show_races_data",
-  "fight_style_patchwerk",
-  // "fight_style_beastlord",
-  "fight_style_hecticaddcleave",
   "translate_language"
 ];
 
@@ -106,7 +100,13 @@ const translation_classes = [
   "translate_demonology",
   "translate_destruction",
   "translate_arms",
-  "translate_fury"
+  "translate_fury",
+  "translate_trinkets",
+  "translate_azerite_traits",
+  "translate_races",
+  "translate_secondary_distributions",
+  "translate_patchwerk",
+  "translate_hecticaddcleave"
 ];
 
 
