@@ -761,3 +761,16 @@ select#talent_combination_selector {
   margin-top: 15px;
 
 }
+
+.patreon-div {
+  position: absolute;
+  right: 30px;
+  top: 89px;
+}
+
+@media only screen and (max-width: 1199px) {
+  .patreon-div {
+    display: none;
+  }
+}
+
