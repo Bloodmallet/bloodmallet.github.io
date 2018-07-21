@@ -1,19 +1,19 @@
 {
     "data": {
-        "blood_elf": 3542,
+        "blood_elf": 3545,
         "draenei": 3570,
-        "dwarf": 3547,
-        "gnome": 3519,
-        "highmountain_tauren": 3545,
-        "human": 3546,
-        "night_elf": 3555,
-        "nightborne": 3520,
-        "orc": 3531,
-        "pandaren": 3510,
-        "tauren": 3548,
-        "troll": 3535,
+        "dwarf": 3549,
+        "gnome": 3521,
+        "highmountain_tauren": 3543,
+        "human": 3552,
+        "night_elf": 3552,
+        "nightborne": 3519,
+        "orc": 3537,
+        "pandaren": 3514,
+        "tauren": 3547,
+        "troll": 3537,
         "undead": 3569,
-        "void_elf": 3549
+        "void_elf": 3550
     },
     "data_type": "races",
     "simc_settings": {
@@ -21,7 +21,7 @@
         "fight_style": "hecticaddcleave",
         "iterations": "250000",
         "ptr": "0",
-        "simc_hash": "9eaf0bca35f1696f2382eb07787b0dcb220c80b5",
+        "simc_hash": "86fef239ee3f4cae015354fbf228952c0dddcb23",
         "spec": "brewmaster",
         "target_error": "0.2",
         "tier": "21"
@@ -29,20 +29,20 @@
     "sorted_data_keys": [
         "draenei",
         "undead",
+        "human",
         "night_elf",
         "void_elf",
-        "tauren",
         "dwarf",
-        "human",
-        "highmountain_tauren",
+        "tauren",
         "blood_elf",
-        "troll",
+        "highmountain_tauren",
         "orc",
-        "nightborne",
+        "troll",
         "gnome",
+        "nightborne",
         "pandaren"
     ],
-    "subtitle": "UTC 2018-07-20 00:04 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/9eaf0bca35f1696f2382eb07787b0dcb220c80b5\" target=\"blank\">9eaf0bc</a>",
-    "timestamp": "2018-07-20 00:04",
+    "subtitle": "UTC 2018-07-21 00:13 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/86fef239ee3f4cae015354fbf228952c0dddcb23\" target=\"blank\">86fef23</a>",
+    "timestamp": "2018-07-21 00:13",
     "title": "Races | Monk Brewmaster | Hecticaddcleave"
 }
