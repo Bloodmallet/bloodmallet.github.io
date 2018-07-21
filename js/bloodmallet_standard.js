@@ -625,6 +625,7 @@ function switch_language(new_language) {
   if (dev_mode)
     console.log("Set language to " + language);
   set_language_cookie();
+  // added delay to wait for the page to actually save the loaded data into the variable
   setTimeout(translate_page, 15);
   setTimeout(translate_chart, 15);
 }
@@ -636,6 +637,16 @@ function switch_language(new_language) {
 function translate_page() {
   if (dev_mode)
     console.log("translate_page");
+
+  // artificial delay until loaded data is properly saved in variable
+  try {
+    loaded_languages[language][translation_IDs[0]];
+  } catch {
+    if (dev_mode)
+      console.log("Gotta wait until data is actually saved to variable");
+    return setTimeout(translate_page, 15);
+  }
+
   // get the translation options
   var language_html_elements = document.getElementById("languageSelector").options;
   // de-select whatever language option was chosen
@@ -649,8 +660,8 @@ function translate_page() {
     }
   }
 
-  // translate content of IDs
 
+  // translate content of IDs
   translation_IDs.forEach(element => {
     if (loaded_languages[language][element] && loaded_languages[language][element] !== "") {
       document.getElementById(element).innerHTML = loaded_languages[language][element];
