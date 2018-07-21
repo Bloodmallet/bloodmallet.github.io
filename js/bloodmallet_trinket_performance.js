@@ -1,3 +1,5 @@
+var dev_mode = false;
+
 var loaded = false;
 var loaded_done = 0;
 var loaded_expectation = 0;
@@ -99,7 +101,8 @@ var wow_classes_specs = [
 
 var fight_styles = [
   "patchwerk",
-  "beastlord",
+  //"beastlord",
+  "hecticaddcleave",
 ];
 
 var chart;
@@ -180,9 +183,9 @@ function load_JSON(fight_style, wow_class, wow_spec) {
     if (xobj.readyState == 4 && xobj.status == "200") {
       var parsed_response = JSON.parse(xobj.responseText);
       //console.log(JSON.parse(xobj.responseText));
-      simulated_data[fight_style][wow_class + "_" + wow_spec] = parsed_response.trinkets;
+      simulated_data[fight_style][wow_class + "_" + wow_spec] = parsed_response["data"];
       //console.log(simulated_data);
-      simulated_ilevels = parsed_response["Simulated itemlevels"];
+      simulated_ilevels = parsed_response["simulated_steps"];
       //console.log(simulated_ilevels);
       if (parsed_response["subtitle"]) {
         last_simulation = parsed_response["subtitle"];
@@ -215,6 +218,8 @@ function wait_for_load() {
  * Populate select forms with data. Create base chart.
  */
 function fill_menu() {
+  if (dev_mode)
+    console.log("fill_menu");
   // create an array of all trinket names except for "baseline"
   var trinket_list = [];
   for (spec in simulated_data["patchwerk"]) {
@@ -233,7 +238,7 @@ function fill_menu() {
   // fill trinket options with trinket array
   var trinket_choice = document.getElementById("trinket_choice");
   for (trinket in trinket_list) {
-    var option = document.createElement("option");
+    let option = document.createElement("option");
     option.innerHTML = trinket_list[trinket];
     option.value = trinket_list[trinket];
     trinket_choice.appendChild(option);
@@ -247,7 +252,7 @@ function fill_menu() {
   // fill fight_style options
   var fight_style_choice = document.getElementById("fight_style_choice");
   for (fight_style in fight_styles) {
-    var option = document.createElement("option");
+    let option = document.createElement("option");
     option.innerHTML = fight_styles[fight_style][0].toUpperCase() + fight_styles[fight_style].substring(1, fight_styles[fight_style].length);
     option.value = fight_styles[fight_style];
     fight_style_choice.appendChild(option);
@@ -261,7 +266,7 @@ function fill_menu() {
   // add all simulated itemlevels
   var itemlevel_choice = document.getElementById("itemlevel_choice");
   for (itemlevel in simulated_ilevels) {
-    var option = document.createElement("option");
+    let option = document.createElement("option");
     option.innerHTML = simulated_ilevels[itemlevel];
     option.value = simulated_ilevels[itemlevel];
     //console.log(option.value);
@@ -406,6 +411,8 @@ function fill_menu() {
  * Update all data of the chart according to current selection.
  */
 function reload_chart() {
+  if (dev_mode)
+    console.log("reload_chart");
   // if the chart isn't visible, make it visible
   var chart_div = document.getElementById("performance_root");
   if (chart_div.style.display == "none") {
@@ -420,21 +427,28 @@ function reload_chart() {
   var selected_fight_style = fight_style_field.options[fight_style_field.selectedIndex].value;
 
 
+  if (dev_mode) {
+    console.log(selected_trinket);
+    console.log(selected_fight_style);
+  }
+
   // prune itemlevels
   var trinket_found = false;
   var need_new_start_itemlevel = false;
   for (spec in simulated_data[selected_fight_style]) {
     if (!trinket_found && selected_trinket in simulated_data[selected_fight_style][spec]) {
-      // deactivate all itemlevels that have a dps value of zero
+      // deactivate all itemlevels that have a dps value of zero or none
       for (var i = 0; i < itemlevel_field.children.length; i++) {
-        if (simulated_data[selected_fight_style][spec][selected_trinket][itemlevel_field.children[i].getAttribute("value")] == 0) {
+        let dps = simulated_data[selected_fight_style][spec][selected_trinket][itemlevel_field.children[i].getAttribute("value")];
+        if (dps == 0 || dps == undefined) {
           itemlevel_field.children[i].disabled = true;
           // special case if the previously selected itemlevel was deactivated
           if (i == itemlevel_field.selectedIndex) {
-            //console.log("Selected itemlevel was disabled.");
             need_new_start_itemlevel = true;
           }
         } else {
+          if (dev_mode)
+            console.log(simulated_data[selected_fight_style][spec][selected_trinket][itemlevel_field.children[i].getAttribute("value")]);
           itemlevel_field.children[i].disabled = false;
         }
       }
@@ -458,7 +472,7 @@ function reload_chart() {
   var selected_itemlevel = itemlevel_field.options[itemlevel_field.selectedIndex].value;
 
   // set title to the currently selected "trinket - Fight_style"
-  chart.setTitle({ text: selected_itemlevel + " " + selected_trinket + " - " + selected_fight_style[0].toUpperCase() + selected_fight_style.substring(1, selected_fight_style.length) });
+  chart.setTitle({ text: selected_trinket + " - ilevel " + selected_itemlevel + " - " + selected_fight_style[0].toUpperCase() + selected_fight_style.substring(1, selected_fight_style.length) });
 
   // collect necessary trinket data
   var valid_specs = [];
