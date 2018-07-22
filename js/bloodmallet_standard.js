@@ -641,7 +641,7 @@ function translate_page() {
   // artificial delay until loaded data is properly saved in variable
   try {
     loaded_languages[language][translation_IDs[0]];
-  } catch {
+  } catch (err) {
     if (dev_mode)
       console.log("Gotta wait until data is actually saved to variable");
     return setTimeout(translate_page, 15);
