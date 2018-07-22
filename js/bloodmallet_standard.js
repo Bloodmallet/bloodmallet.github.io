@@ -641,7 +641,7 @@ function translate_page() {
   // artificial delay until loaded data is properly saved in variable
   try {
     loaded_languages[language][translation_IDs[0]];
-  } catch (err) {
+  } catch(err) {
     if (dev_mode)
       console.log("Gotta wait until data is actually saved to variable");
     return setTimeout(translate_page, 15);
@@ -802,7 +802,7 @@ document.addEventListener("DOMContentLoaded", function () {
       update_data_buttons();
       load_data();
     });
-  } catch (err) {
+  } catch(err) {
     console.log("show_trinkets_data was not found in page.");
   }
 
@@ -812,7 +812,7 @@ document.addEventListener("DOMContentLoaded", function () {
       // update_data_buttons();
       // load_data();
     });
-  } catch (err) {
+  } catch(err) {
     console.log("show_azerite_traits_data was not found in page.");
   }
 
@@ -822,7 +822,7 @@ document.addEventListener("DOMContentLoaded", function () {
       update_data_buttons();
       load_data();
     });
-  } catch (err) {
+  } catch(err) {
     console.log("show_races_data was not found in page.");
   }
 
@@ -832,7 +832,7 @@ document.addEventListener("DOMContentLoaded", function () {
       // update_data_buttons();
       // load_data();
     });
-  } catch (err) {
+  } catch(err) {
     console.log("show_secondary_distribution_data was not found in page.");
   }
 
@@ -1008,7 +1008,7 @@ function update_data_buttons() {
   data_view_IDs.forEach(element => {
     try {
       document.getElementById(element).className = "btn-data " + chosen_class + "-button";
-    } catch (err) {
+    } catch(err) {
       console.log(element + " was not found in page.");
     }
   });
