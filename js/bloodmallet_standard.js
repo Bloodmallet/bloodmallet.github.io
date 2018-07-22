@@ -1289,7 +1289,7 @@ function update_page_content() {
   if (chosen_class == "priest" || chosen_class == "rogue") {
     content += " style=\"text-shadow: 0px 0px 13px black\"";
   }
-  content += "><span class=\"translate_" + chosen_class + "\">" + capitalize_first_letters(chosen_class) + "</span>: <span class=\"translate_" + chosen_spec + "\">" + capitalize_first_letters(chosen_spec) + "</span></span>";
+  content += "><span class=\"translate_" + chosen_class + "\">" + capitalize_first_letters(chosen_class).replace("_", " ") + "</span>: <span class=\"translate_" + chosen_spec + "\">" + capitalize_first_letters(chosen_spec).replace("_", " ") + "</span></span>";
   document.getElementById("data_header").innerHTML = content;
 
   // update TC resource
