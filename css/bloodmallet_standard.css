@@ -766,10 +766,21 @@ select#talent_combination_selector {
   right: 24px;
   top: 89px;
 }
+.patron-link {
+  display: none;
+}
 
 @media only screen and (max-width: 1199px) {
   .patreon-div {
     display: none;
   }
+  .patron-link {
+    display: block;
+  }
 }
 
+@media only screen and (max-width: 1499px) and (min-width: 990px) {
+  #brand-name {
+    display: none;
+  }
+}
