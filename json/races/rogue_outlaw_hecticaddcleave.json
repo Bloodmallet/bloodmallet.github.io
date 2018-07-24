@@ -1,18 +1,18 @@
 {
     "data": {
-        "blood_elf": 8331,
-        "dwarf": 8472,
-        "gnome": 8346,
-        "goblin": 8327,
-        "human": 8358,
-        "night_elf": 8369,
-        "nightborne": 8359,
-        "orc": 8323,
-        "pandaren": 8376,
-        "troll": 8319,
-        "undead": 8334,
-        "void_elf": 8336,
-        "worgen": 8344
+        "blood_elf": 8330,
+        "dwarf": 8470,
+        "gnome": 8344,
+        "goblin": 8335,
+        "human": 8368,
+        "night_elf": 8355,
+        "nightborne": 8362,
+        "orc": 8321,
+        "pandaren": 8377,
+        "troll": 8327,
+        "undead": 8340,
+        "void_elf": 8339,
+        "worgen": 8338
     },
     "data_type": "races",
     "simc_settings": {
@@ -20,7 +20,7 @@
         "fight_style": "hecticaddcleave",
         "iterations": "250000",
         "ptr": "0",
-        "simc_hash": "86fef239ee3f4cae015354fbf228952c0dddcb23",
+        "simc_hash": "d6a74c494e94183f65a71a23f1b1c68deb036a5f",
         "spec": "outlaw",
         "target_error": "0.2",
         "tier": "21"
@@ -28,19 +28,19 @@
     "sorted_data_keys": [
         "dwarf",
         "pandaren",
-        "night_elf",
-        "nightborne",
         "human",
+        "nightborne",
+        "night_elf",
         "gnome",
-        "worgen",
-        "void_elf",
         "undead",
-        "blood_elf",
+        "void_elf",
+        "worgen",
         "goblin",
-        "orc",
-        "troll"
+        "blood_elf",
+        "troll",
+        "orc"
     ],
-    "subtitle": "UTC 2018-07-21 00:31 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/86fef239ee3f4cae015354fbf228952c0dddcb23\" target=\"blank\">86fef23</a>",
-    "timestamp": "2018-07-21 00:31",
+    "subtitle": "UTC 2018-07-23 23:19 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/d6a74c494e94183f65a71a23f1b1c68deb036a5f\" target=\"blank\">d6a74c4</a>",
+    "timestamp": "2018-07-23 23:19",
     "title": "Races | Rogue Outlaw | Hecticaddcleave"
 }
