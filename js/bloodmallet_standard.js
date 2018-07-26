@@ -5,7 +5,7 @@
 ---------------------------------------------------------*/
 
 /* Variable intended for dev mode specific output/markings */
-var dev_mode = true;
+var dev_mode = false;
 
 /** visual modes
  *   hidden: hides these general elements
@@ -897,11 +897,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   try {
     document.getElementById("show_azerite_traits_data").addEventListener("click", function () {
-      data_view = "azerite_traits";
-      chosen_azerite_list_type = "itemlevel";
-      update_data_buttons();
-      update_azerite_buttons();
-      load_data();
+      // data_view = "azerite_traits";
+      // chosen_azerite_list_type = "itemlevel";
+      // update_data_buttons();
+      // update_azerite_buttons();
+      // load_data();
     });
   } catch(err) {
     console.log("show_azerite_traits_data was not found in page.");
@@ -1256,6 +1256,10 @@ function update_chart() {
     document.getElementById("chart").hidden = false;
   }
 
+  if ( data_view == "azerite_traits" && chosen_azerite_list_type == "trait_stacking") {
+    return update_trait_stacking_chart();
+  }
+
   // https://stackoverflow.com/questions/25500316/sort-a-dictionary-by-value-in-javascript
   // create a list of all trinkets with their highest dps value
   // var dps_ordered_data = Object.keys(loaded_data[chosen_class][chosen_spec][data_view][fight_style]["trinkets"]).map(function (key) { return [key, Math.max(...Object.values(loaded_data[chosen_class][chosen_spec][data_view][fight_style]["trinkets"][key]))] });
@@ -1272,9 +1276,6 @@ function update_chart() {
       console.log("Getting sorted_data_keys from data failed. Set unordered dps_ordered_data");
     var dps_ordered_data = Object.keys(loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"]);
   }
-
-  // azerite traits have a second view, trying to get the necessary data from the same file:
-  // TODO: SHIT HERE FOR SECOND VIEW ON AZERITE TRAITS
 
   // change item/spell names to wowhead links
   ordered_trinket_list = [];
@@ -1316,8 +1317,12 @@ function update_chart() {
 
 
   // set title and subtitle
+  let new_title = "";
+  if (data_view == "azerite_traits" && chosen_azerite_list_type == "itemlevel")
+    new_title = "Different itemlevels; number of each trait: 1"
+
   standard_chart.setTitle({
-    //text: loaded_data[chosen_class][chosen_spec][data_view][fight_style]["title"]
+    text: new_title //loaded_data[chosen_class][chosen_spec][data_view][fight_style]["title"]
   }, {
       text: loaded_data[chosen_class][chosen_spec][data_view][fight_style]["subtitle"]
     }, false);
@@ -1412,6 +1417,110 @@ function update_chart() {
   standard_chart.redraw();
 
   console.log("call translate_chart from update_chart");
+  translate_chart();
+
+}
+
+function update_trait_stacking_chart(){
+  if (dev_mode)
+    console.log("update_trait_stacking_chart");
+
+  if ("sorted_data_keys_2" in loaded_data[chosen_class][chosen_spec][data_view][fight_style]) {
+    var dps_ordered_data = loaded_data[chosen_class][chosen_spec][data_view][fight_style]["sorted_data_keys_2"];
+  } else {
+    if (dev_mode)
+      console.log("Getting sorted_data_keys from data failed. Set unordered dps_ordered_data");
+    var dps_ordered_data = Object.keys(loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"]);
+  }
+
+  // change item/spell names to wowhead links
+  ordered_trinket_list = [];
+  for (let i in dps_ordered_data) {
+
+    ordered_trinket_list.push(
+      "<a href=\"https://www.wowhead.com/spell=" +
+      loaded_data[chosen_class][chosen_spec][data_view][fight_style]["spell_ids"][dps_ordered_data[i]] +
+      "\" target=\"blank\">" +
+      dps_ordered_data[i] +
+      "</a>"
+    );
+  }
+  // rewrite the trinket names
+  standard_chart.update({
+    xAxis: {
+      categories: ordered_trinket_list
+    }
+  }, false);
+
+
+  // set title and subtitle
+  standard_chart.setTitle({
+    text: "Same itemlevel; different number of traits"
+  }, {
+      text: loaded_data[chosen_class][chosen_spec][data_view][fight_style]["subtitle"]
+    }, false);
+
+
+
+  // delete all old series data
+  while (standard_chart.series[0]) {
+    standard_chart.series[0].remove(false);
+  }
+
+  // basically: if something was simmed with multiple itemlevels
+  for (stack_count of [3, 2, 1]) {
+    let max_itemlevel = loaded_data[chosen_class][chosen_spec][data_view][fight_style]["simulated_steps"][0].split("_")[1];
+
+    let stack_name = stack_count + "_" + max_itemlevel;
+    let itemlevel_dps_values = [];
+
+    if (dev_mode)
+      console.log("handling stack_name " + stack_name);
+
+    // create series input for highcharts
+    for (data of dps_ordered_data) {
+
+      let dps = loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"][data][stack_name];
+
+      let baseline_dps = loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"]["baseline"]["1_" + max_itemlevel];
+
+      // check for zero dps values and don't change them
+      if (dps > 0) {
+
+        // if lowest itemlevel is looked at, substract baseline
+        if (stack_count == 1) {
+
+          itemlevel_dps_values.push(dps - baseline_dps);
+
+        } else { // else substract lower itemlevel value of same trait
+
+          itemlevel_dps_values.push(dps - loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"][data][stack_count - 1 + "_" + max_itemlevel]);
+
+        }
+
+      } else {
+        if (stack_name in loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"][data]) {
+          itemlevel_dps_values.push(dps);
+        } else {
+          itemlevel_dps_values.push(0);
+        }
+      }
+
+    }
+
+    standard_chart.addSeries({
+      color: ilevel_color_table[stack_name],
+      data: itemlevel_dps_values,
+      name: stack_name,
+      showInLegend: true
+    }, false);
+  }
+
+  document.getElementById("chart").style.height = 200 + dps_ordered_data.length * 30 + "px";
+  standard_chart.setSize(document.getElementById("chart").style.width, document.getElementById("chart").style.height);
+  standard_chart.redraw();
+
+  console.log("call translate_chart from update_trait_stacking_chart");
   translate_chart();
 
 }
