@@ -749,12 +749,14 @@ function translate_chart() {
     console.log("translate_chart");
 
   if (data_view != "trinkets" && data_view != "azerite_traits") {
-    console.log("translate_chart early exit");
+    if (dev_mode)
+      console.log("translate_chart early exit");
     return;
   }
 
   if (language == "EN") {
-    console.log("translate_chart early exit");
+    if (dev_mode)
+      console.log("translate_chart early exit");
     return;
   }
 
@@ -1416,7 +1418,8 @@ function update_chart() {
   standard_chart.setSize(document.getElementById("chart").style.width, document.getElementById("chart").style.height);
   standard_chart.redraw();
 
-  console.log("call translate_chart from update_chart");
+  if (dev_mode)
+    console.log("call translate_chart from update_chart");
   translate_chart();
 
 }
