@@ -1,20 +1,20 @@
 {
     "data": {
         "blood_elf": 5020,
-        "draenei": 5050,
-        "dwarf": 5062,
-        "gnome": 5040,
-        "goblin": 5044,
-        "human": 5055,
-        "lightforged_draenei": 5004,
-        "night_elf": 5002,
+        "draenei": 5041,
+        "dwarf": 5064,
+        "gnome": 5042,
+        "goblin": 5035,
+        "human": 5051,
+        "lightforged_draenei": 5003,
+        "night_elf": 5013,
         "nightborne": 5039,
-        "orc": 5044,
-        "pandaren": 5017,
+        "orc": 5043,
+        "pandaren": 5019,
         "troll": 5046,
-        "undead": 5021,
-        "void_elf": 5035,
-        "worgen": 4997
+        "undead": 5026,
+        "void_elf": 5033,
+        "worgen": 5003
     },
     "data_type": "races",
     "simc_settings": {
@@ -22,7 +22,7 @@
         "fight_style": "patchwerk",
         "iterations": "250000",
         "ptr": "0",
-        "simc_hash": "d6a74c494e94183f65a71a23f1b1c68deb036a5f",
+        "simc_hash": "183d98d9577d62ecd755cb59022cb275dd270acf",
         "spec": "fire",
         "target_error": "0.2",
         "tier": "21"
@@ -30,21 +30,21 @@
     "sorted_data_keys": [
         "dwarf",
         "human",
-        "draenei",
         "troll",
-        "goblin",
         "orc",
         "gnome",
+        "draenei",
         "nightborne",
+        "goblin",
         "void_elf",
         "undead",
         "blood_elf",
         "pandaren",
-        "lightforged_draenei",
         "night_elf",
-        "worgen"
+        "worgen",
+        "lightforged_draenei"
     ],
-    "subtitle": "UTC 2018-07-23 22:21 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/d6a74c494e94183f65a71a23f1b1c68deb036a5f\" target=\"blank\">d6a74c4</a>",
-    "timestamp": "2018-07-23 22:21",
+    "subtitle": "UTC 2018-07-27 22:46 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/183d98d9577d62ecd755cb59022cb275dd270acf\" target=\"blank\">183d98d</a>",
+    "timestamp": "2018-07-27 22:46",
     "title": "Races | Mage Fire | Patchwerk"
 }
