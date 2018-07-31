@@ -1,18 +1,18 @@
 {
     "data": {
-        "blood_elf": 7880,
-        "dwarf": 7891,
-        "gnome": 7870,
+        "blood_elf": 7870,
+        "dwarf": 7890,
+        "gnome": 7885,
         "goblin": 7837,
-        "human": 7864,
-        "night_elf": 7854,
-        "nightborne": 7843,
-        "orc": 7840,
-        "pandaren": 7857,
-        "troll": 7841,
-        "undead": 7826,
-        "void_elf": 7841,
-        "worgen": 7849
+        "human": 7865,
+        "night_elf": 7868,
+        "nightborne": 7844,
+        "orc": 7829,
+        "pandaren": 7854,
+        "troll": 7826,
+        "undead": 7838,
+        "void_elf": 7830,
+        "worgen": 7840
     },
     "data_type": "races",
     "simc_settings": {
@@ -20,27 +20,27 @@
         "fight_style": "hecticaddcleave",
         "iterations": "250000",
         "ptr": "0",
-        "simc_hash": "183d98d9577d62ecd755cb59022cb275dd270acf",
+        "simc_hash": "ae005ee6c7554f56dc7deeb227a5f68de612e148",
         "spec": "assassination",
         "target_error": "0.2",
         "tier": "21"
     },
     "sorted_data_keys": [
         "dwarf",
-        "blood_elf",
         "gnome",
+        "blood_elf",
+        "night_elf",
         "human",
         "pandaren",
-        "night_elf",
-        "worgen",
         "nightborne",
-        "void_elf",
-        "troll",
-        "orc",
+        "worgen",
+        "undead",
         "goblin",
-        "undead"
+        "void_elf",
+        "orc",
+        "troll"
     ],
-    "subtitle": "UTC 2018-07-27 23:46 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/183d98d9577d62ecd755cb59022cb275dd270acf\" target=\"blank\">183d98d</a>",
-    "timestamp": "2018-07-27 23:46",
+    "subtitle": "UTC 2018-07-29 22:15 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/ae005ee6c7554f56dc7deeb227a5f68de612e148\" target=\"blank\">ae005ee</a>",
+    "timestamp": "2018-07-29 22:15",
     "title": "Races | Rogue Assassination | Hecticaddcleave"
 }

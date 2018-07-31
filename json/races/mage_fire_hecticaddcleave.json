@@ -1,20 +1,20 @@
 {
     "data": {
-        "blood_elf": 5086,
+        "blood_elf": 5085,
         "draenei": 5118,
-        "dwarf": 5122,
-        "gnome": 5089,
-        "goblin": 5089,
+        "dwarf": 5124,
+        "gnome": 5088,
+        "goblin": 5096,
         "human": 5115,
-        "lightforged_draenei": 5285,
-        "night_elf": 5079,
-        "nightborne": 5102,
-        "orc": 5106,
-        "pandaren": 5087,
-        "troll": 5103,
-        "undead": 5096,
-        "void_elf": 5095,
-        "worgen": 5072
+        "lightforged_draenei": 5288,
+        "night_elf": 5086,
+        "nightborne": 5101,
+        "orc": 5108,
+        "pandaren": 5078,
+        "troll": 5105,
+        "undead": 5090,
+        "void_elf": 5097,
+        "worgen": 5079
     },
     "data_type": "races",
     "simc_settings": {
@@ -22,7 +22,7 @@
         "fight_style": "hecticaddcleave",
         "iterations": "250000",
         "ptr": "0",
-        "simc_hash": "183d98d9577d62ecd755cb59022cb275dd270acf",
+        "simc_hash": "ae005ee6c7554f56dc7deeb227a5f68de612e148",
         "spec": "fire",
         "target_error": "0.2",
         "tier": "21"
@@ -35,16 +35,16 @@
         "orc",
         "troll",
         "nightborne",
-        "undead",
         "void_elf",
-        "gnome",
         "goblin",
-        "pandaren",
-        "blood_elf",
+        "undead",
+        "gnome",
         "night_elf",
-        "worgen"
+        "blood_elf",
+        "worgen",
+        "pandaren"
     ],
-    "subtitle": "UTC 2018-07-27 23:25 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/183d98d9577d62ecd755cb59022cb275dd270acf\" target=\"blank\">183d98d</a>",
-    "timestamp": "2018-07-27 23:25",
+    "subtitle": "UTC 2018-07-29 22:10 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/ae005ee6c7554f56dc7deeb227a5f68de612e148\" target=\"blank\">ae005ee</a>",
+    "timestamp": "2018-07-29 22:10",
     "title": "Races | Mage Fire | Hecticaddcleave"
 }

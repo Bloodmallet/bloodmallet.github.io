@@ -1,18 +1,24 @@
 {
-    "data": {},
+    "data": {
+        "blood_elf": 2675,
+        "night_elf": 2677
+    },
     "data_type": "races",
     "simc_settings": {
         "class": "demon_hunter",
         "fight_style": "patchwerk",
         "iterations": "250000",
         "ptr": "0",
-        "simc_hash": "183d98d9577d62ecd755cb59022cb275dd270acf",
+        "simc_hash": "ae005ee6c7554f56dc7deeb227a5f68de612e148",
         "spec": "vengeance",
         "target_error": "0.2",
         "tier": "21"
     },
-    "sorted_data_keys": [],
-    "subtitle": "UTC 2018-07-27 22:44 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/183d98d9577d62ecd755cb59022cb275dd270acf\" target=\"blank\">183d98d</a>",
-    "timestamp": "2018-07-27 22:44",
+    "sorted_data_keys": [
+        "night_elf",
+        "blood_elf"
+    ],
+    "subtitle": "UTC 2018-07-29 22:00 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/ae005ee6c7554f56dc7deeb227a5f68de612e148\" target=\"blank\">ae005ee</a>",
+    "timestamp": "2018-07-29 22:00",
     "title": "Races | Demon_Hunter Vengeance | Patchwerk"
 }

@@ -1,18 +1,18 @@
 {
     "data": {
-        "blood_elf": 5150,
-        "dwarf": 5158,
-        "gnome": 5143,
-        "goblin": 5142,
-        "human": 5146,
-        "night_elf": 5137,
-        "nightborne": 5146,
-        "orc": 5140,
-        "pandaren": 5144,
+        "blood_elf": 5159,
+        "dwarf": 5152,
+        "gnome": 5144,
+        "goblin": 5124,
+        "human": 5137,
+        "night_elf": 5145,
+        "nightborne": 5143,
+        "orc": 5143,
+        "pandaren": 5138,
         "troll": 5188,
-        "undead": 5136,
-        "void_elf": 5139,
-        "worgen": 5132
+        "undead": 5128,
+        "void_elf": 5134,
+        "worgen": 5124
     },
     "data_type": "races",
     "simc_settings": {
@@ -20,27 +20,27 @@
         "fight_style": "patchwerk",
         "iterations": "250000",
         "ptr": "0",
-        "simc_hash": "183d98d9577d62ecd755cb59022cb275dd270acf",
+        "simc_hash": "ae005ee6c7554f56dc7deeb227a5f68de612e148",
         "spec": "assassination",
         "target_error": "0.2",
         "tier": "21"
     },
     "sorted_data_keys": [
         "troll",
-        "dwarf",
         "blood_elf",
-        "human",
+        "dwarf",
+        "night_elf",
+        "gnome",
+        "orc",
         "nightborne",
         "pandaren",
-        "gnome",
-        "goblin",
-        "orc",
+        "human",
         "void_elf",
-        "night_elf",
         "undead",
-        "worgen"
+        "worgen",
+        "goblin"
     ],
-    "subtitle": "UTC 2018-07-27 22:49 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/183d98d9577d62ecd755cb59022cb275dd270acf\" target=\"blank\">183d98d</a>",
-    "timestamp": "2018-07-27 22:49",
+    "subtitle": "UTC 2018-07-29 22:01 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/ae005ee6c7554f56dc7deeb227a5f68de612e148\" target=\"blank\">ae005ee</a>",
+    "timestamp": "2018-07-29 22:01",
     "title": "Races | Rogue Assassination | Patchwerk"
 }
