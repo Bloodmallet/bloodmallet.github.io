@@ -118,7 +118,7 @@ const translation_classes = [
 
 var mode = "welcome";
 var fight_style = "patchwerk";
-var data_view = "";
+var data_view = "trinkets";
 
 const data_view_IDs = [
   "show_trinkets_data", // => trinkets
@@ -976,10 +976,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
   try {
     document.getElementById("show_secondary_distributions_data").addEventListener("click", function () {
-      // data_view = "secondary_distributions";
-      // chosen_azerite_list_type = "itemlevel";
-      // update_data_buttons();
-      // load_data();
+      data_view = "secondary_distributions";
+      chosen_azerite_list_type = "itemlevel";
+      update_data_buttons();
+      load_data();
     });
   } catch (err) {
     console.log("show_secondary_distribution_data was not found in page.");
@@ -1147,7 +1147,7 @@ function switch_mode() {
     switch_language(language);
   }
   // update data buttons
-  data_view = "trinkets";
+  //data_view = "trinkets";
   update_data_buttons();
   update_fight_style_buttons();
   update_azerite_buttons();
