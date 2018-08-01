@@ -1,0 +1,79 @@
+{
+    "data": {
+        "Archive of the Titans": {
+            "1_340": 5803,
+            "1_355": 5792,
+            "1_370": 5794,
+            "1_385": 5784,
+            "2_385": 5790,
+            "3_385": 5793
+        },
+        "Laser Matrix": {
+            "1_340": 5803,
+            "1_355": 5797,
+            "1_370": 5794,
+            "1_385": 5791,
+            "2_385": 5788,
+            "3_385": 5791
+        },
+        "Tradewinds": {
+            "1_340": 5795,
+            "1_355": 5782,
+            "1_370": 5806,
+            "1_385": 5800,
+            "2_385": 5790,
+            "3_385": 5799
+        },
+        "Unstable Catalyst": {
+            "1_340": 5801,
+            "1_355": 5790,
+            "1_370": 5816,
+            "1_385": 5791,
+            "2_385": 5811,
+            "3_385": 5797
+        },
+        "baseline": {
+            "1_340": 5877,
+            "1_385": 5877
+        }
+    },
+    "data_type": "azerite_traits",
+    "simc_settings": {
+        "class": "demon_hunter",
+        "fight_style": "hecticaddcleave",
+        "iterations": "250000",
+        "ptr": "0",
+        "simc_hash": "ae005ee6c7554f56dc7deeb227a5f68de612e148",
+        "spec": "vengeance",
+        "target_error": "0.2",
+        "tier": "21"
+    },
+    "simulated_steps": [
+        "1_385",
+        "1_370",
+        "1_355",
+        "1_340"
+    ],
+    "sorted_data_keys": [
+        "baseline",
+        "Tradewinds",
+        "Laser Matrix",
+        "Unstable Catalyst",
+        "Archive of the Titans"
+    ],
+    "sorted_data_keys_2": [
+        "Tradewinds",
+        "Unstable Catalyst",
+        "Archive of the Titans",
+        "Laser Matrix"
+    ],
+    "spell_ids": {
+        "Archive of the Titans": "280555",
+        "Laser Matrix": "280559",
+        "Tradewinds": "281841",
+        "Unstable Catalyst": "281514"
+    },
+    "subtitle": "UTC 2018-08-01 05:05 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/ae005ee6c7554f56dc7deeb227a5f68de612e148\" target=\"blank\">ae005ee</a>",
+    "timestamp": "2018-08-01 05:05",
+    "title": "Azerite Traits | Demon_Hunter Vengeance | Hecticaddcleave"
+}
