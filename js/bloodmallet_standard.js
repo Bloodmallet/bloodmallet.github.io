@@ -1077,6 +1077,8 @@ function load_data() {
   if (dev_mode)
     console.log("load_data");
 
+  empty_charts();
+
   // necessary to be able to save traits, head, shoulders and chest separately
   var data_name = data_view;
   if (data_view == "azerite_traits" && ["head", "shoulders", "chest"].includes(chosen_azerite_list_type)) {
@@ -1601,6 +1603,29 @@ function update_trait_stacking_chart() {
   console.log("call translate_chart from update_trait_stacking_chart");
   translate_chart();
 
+}
+
+function empty_charts() {
+  while (standard_chart.series[0]) {
+    standard_chart.series[0].remove(false);
+  }
+  standard_chart.setTitle({
+    //text: loaded_data[chosen_class][chosen_spec][data_view][fight_style]["title"]
+  }, {
+      text: "No data available / Loading..."
+    }
+  );
+
+  // delete all old series data
+  while (scatter_chart.series[0]) {
+    scatter_chart.series[0].remove(false);
+  }
+  scatter_chart.setTitle({
+    //text: loaded_data[chosen_class][chosen_spec][data_view][fight_style]["title"]
+  }, {
+      text: "No data available / Loading..."
+    }
+  );
 }
 
 /**
