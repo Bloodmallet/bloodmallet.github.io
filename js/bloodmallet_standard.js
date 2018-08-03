@@ -769,6 +769,11 @@ function translate_chart() {
     return;
   }
 
+  if (document.getElementById("translator_helper").childElementCount > 0) {
+    console.log("Another translation seems to be in progress. translate_chart early exit.")
+    return;
+  }
+
   try {
     Object.keys(loaded_data[chosen_class][chosen_spec][data_view][fight_style]['data']);
   } catch (err) {
@@ -797,20 +802,35 @@ function translate_chart() {
     }
     link += ".wowhead.com/item=";
     link += loaded_data[chosen_class][chosen_spec][data_view][fight_style]["item_ids"][trinket];
+
+    link += "&ilvl=" + loaded_data[chosen_class][chosen_spec][data_view][fight_style]["simulated_steps"][loaded_data[chosen_class][chosen_spec][data_view][fight_style]["simulated_steps"].length - 1]
+
     new_link.href = link;
     new_link.target = "blank";
-    link_list.push("<a href=\"" + link + "\" target=\"blank\"></a>");
+    let text_trinket_name = document.createTextNode(trinket);
+    new_link.appendChild(text_trinket_name);
+
+    link_list.push("<a href=\"" + link + "&ilvl=" + loaded_data[chosen_class][chosen_spec][data_view][fight_style]["simulated_steps"][loaded_data[chosen_class][chosen_spec][data_view][fight_style]["simulated_steps"].length - 1] + "\" target=\"blank\">" + trinket + "</a>");
+
     if (language != "EN")
       translator.appendChild(new_link);
   }
 
-  console.log("try to trigger wowhead power js");
+  standard_chart.update({
+    xAxis: {
+      categories: link_list
+    }
+  }, true);
+
+  if (dev_mode)
+    console.log("try to trigger wowhead power js");
   setTimeout(function () { update_link_data(link_list) }, 1000);
 }
 
 
 function update_link_data(original_list) {
-  console.log("update_link_data");
+  if (dev_mode)
+    console.log("update_link_data");
   let all_translated = true;
   all_translated = true;
   for (let a in original_list) {
@@ -835,7 +855,8 @@ function update_link_data(original_list) {
     translator.removeChild(translator.firstChild);
   }
 
-  console.log(new_categories);
+  if (dev_mode)
+    console.log(new_categories);
   standard_chart.update({
     xAxis: {
       categories: new_categories
