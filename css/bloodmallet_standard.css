@@ -57,7 +57,7 @@ footer {
   right: 40px;
   width: 40%;
   height: 25%;
-  background-image: url("../bloodmallet.svg");
+  background-image: url("../assets/bloodmallet.svg");
   background-repeat: no-repeat;
   background-position: right;
   background-size: contain;
@@ -766,21 +766,34 @@ select#talent_combination_selector {
   right: 24px;
   top: 89px;
 }
-.patron-link {
+/* .patron-link {
   display: none;
-}
+} */
 
 @media only screen and (max-width: 1199px) {
   .patreon-div {
     display: none;
   }
-  .patron-link {
+  /* .patron-link {
     display: block;
-  }
+  } */
 }
 
 @media only screen and (max-width: 1499px) and (min-width: 990px) {
   #brand-name {
     display: none;
   }
+}
+
+/* Footer icons */
+.svg-icon {
+  display: inline-block;
+  padding-right: 0px;
+  width: 23px;
+  height: 23px;
+  fill: #828282;
+  vertical-align: text-top;
+}
+a:hover .svg-icon {
+  fill: #eee;
 }
