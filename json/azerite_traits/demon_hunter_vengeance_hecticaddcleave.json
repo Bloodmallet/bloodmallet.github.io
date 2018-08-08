@@ -1,52 +1,54 @@
 {
     "data": {
         "Archive of the Titans": {
-            "1_340": 5803,
-            "1_355": 5792,
-            "1_370": 5794,
-            "1_385": 5784,
-            "2_385": 5790,
-            "3_385": 5793
+            "1_340": 11666,
+            "1_355": 11802,
+            "1_370": 11963,
+            "1_385": 12143,
+            "2_385": 12130,
+            "3_385": 12120
         },
         "Laser Matrix": {
-            "1_340": 5803,
-            "1_355": 5797,
-            "1_370": 5794,
-            "1_385": 5791,
-            "2_385": 5788,
-            "3_385": 5791
+            "1_340": 11779,
+            "1_355": 11931,
+            "1_370": 12093,
+            "1_385": 12285,
+            "2_385": 12431,
+            "3_385": 12590
         },
         "Tradewinds": {
-            "1_340": 5795,
-            "1_355": 5782,
-            "1_370": 5806,
-            "1_385": 5800,
-            "2_385": 5790,
-            "3_385": 5799
+            "1_340": 11768,
+            "1_355": 11922,
+            "1_370": 12084,
+            "1_385": 12259,
+            "2_385": 12407,
+            "3_385": 12535
         },
         "Unstable Catalyst": {
-            "1_340": 5801,
-            "1_355": 5790,
-            "1_370": 5816,
-            "1_385": 5791,
-            "2_385": 5811,
-            "3_385": 5797
+            "1_340": 11669,
+            "1_355": 11794,
+            "1_370": 11953,
+            "1_385": 12145,
+            "2_385": 12144,
+            "3_385": 12135
         },
         "baseline": {
-            "1_340": 5877,
-            "1_385": 5877
+            "1_340": 11671,
+            "1_355": 11813,
+            "1_370": 11976,
+            "1_385": 12135
         }
     },
     "data_type": "azerite_traits",
     "simc_settings": {
         "class": "demon_hunter",
         "fight_style": "hecticaddcleave",
-        "iterations": "250000",
+        "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "ae005ee6c7554f56dc7deeb227a5f68de612e148",
+        "simc_hash": "6bfd7fe5f2",
         "spec": "vengeance",
-        "target_error": "0.2",
-        "tier": "21"
+        "target_error": "0.4",
+        "tier": "PR"
     },
     "simulated_steps": [
         "1_385",
@@ -55,17 +57,17 @@
         "1_340"
     ],
     "sorted_data_keys": [
-        "baseline",
-        "Tradewinds",
         "Laser Matrix",
-        "Unstable Catalyst",
-        "Archive of the Titans"
-    ],
-    "sorted_data_keys_2": [
         "Tradewinds",
         "Unstable Catalyst",
         "Archive of the Titans",
-        "Laser Matrix"
+        "baseline"
+    ],
+    "sorted_data_keys_2": [
+        "Laser Matrix",
+        "Tradewinds",
+        "Unstable Catalyst",
+        "Archive of the Titans"
     ],
     "spell_ids": {
         "Archive of the Titans": "280555",
@@ -73,7 +75,7 @@
         "Tradewinds": "281841",
         "Unstable Catalyst": "281514"
     },
-    "subtitle": "UTC 2018-08-01 05:05 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/ae005ee6c7554f56dc7deeb227a5f68de612e148\" target=\"blank\">ae005ee</a>",
-    "timestamp": "2018-08-01 05:05",
+    "subtitle": "UTC 2018-08-08 10:12 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/6bfd7fe5f2\" target=\"blank\">6bfd7fe</a>",
+    "timestamp": "2018-08-08 10:12",
     "title": "Azerite Traits | Demon_Hunter Vengeance | Hecticaddcleave"
 }

@@ -1,30 +1,30 @@
 {
     "data": {
-        "highmountain_tauren": 4772,
-        "night_elf": 4745,
-        "tauren": 4768,
-        "troll": 4775,
-        "worgen": 4734
+        "highmountain_tauren": 9776,
+        "night_elf": 9778,
+        "tauren": 9738,
+        "troll": 9798,
+        "worgen": 9762
     },
     "data_type": "races",
     "simc_settings": {
         "class": "druid",
         "fight_style": "patchwerk",
-        "iterations": "250000",
+        "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "ae005ee6c7554f56dc7deeb227a5f68de612e148",
+        "simc_hash": "6bfd7fe5f2",
         "spec": "balance",
         "target_error": "0.2",
-        "tier": "21"
+        "tier": "PR"
     },
     "sorted_data_keys": [
         "troll",
-        "highmountain_tauren",
-        "tauren",
         "night_elf",
-        "worgen"
+        "highmountain_tauren",
+        "worgen",
+        "tauren"
     ],
-    "subtitle": "UTC 2018-07-29 22:00 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/ae005ee6c7554f56dc7deeb227a5f68de612e148\" target=\"blank\">ae005ee</a>",
-    "timestamp": "2018-07-29 22:00",
+    "subtitle": "UTC 2018-08-08 07:39 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/6bfd7fe5f2\" target=\"blank\">6bfd7fe</a>",
+    "timestamp": "2018-08-08 07:39",
     "title": "Races | Druid Balance | Patchwerk"
 }

@@ -800,10 +800,28 @@ function translate_chart() {
     } else {
       link += language.toLowerCase();
     }
-    link += ".wowhead.com/item=";
-    link += loaded_data[chosen_class][chosen_spec][data_view][fight_style]["item_ids"][trinket];
+    if (data_view == "azerite_traits" && ["itemlevel", "trait_stacking"].includes(chosen_azerite_list_type)) {
+      link += ".wowhead.com/spell=";
+      link += loaded_data[chosen_class][chosen_spec][data_view][fight_style]["spell_ids"][trinket];
+    } else {
+      link += ".wowhead.com/item=";
+      link += loaded_data[chosen_class][chosen_spec][data_view][fight_style]["item_ids"][trinket];
+    }
 
     link += "&ilvl=" + loaded_data[chosen_class][chosen_spec][data_view][fight_style]["simulated_steps"][loaded_data[chosen_class][chosen_spec][data_view][fight_style]["simulated_steps"].length - 1]
+
+
+    // add azerite power string portion
+    if (data_view == "azerite_traits" && ["head", "shoulders", "chest"].includes(chosen_azerite_list_type)) {
+      string += "/azerite-powers=";
+      // add class id
+      string += loaded_data[chosen_class][chosen_spec][data_name][fight_style]["class_id"];
+      // add azerite traits
+      for (trait of loaded_data[chosen_class][chosen_spec][data_name][fight_style]["used_azerite_traits_per_item"][dps_ordered_data[i]]) {
+        string += ":" + trait["id"];
+      }
+      string += "&ilvl=" + loaded_data[chosen_class][chosen_spec][data_name][fight_style]["simulated_steps"][loaded_data[chosen_class][chosen_spec][data_name][fight_style]["simulated_steps"].length - 1].split("1_")[1];
+    }
 
     new_link.href = link;
     new_link.target = "blank";
@@ -929,11 +947,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   try {
     document.getElementById("show_azerite_traits_data").addEventListener("click", function () {
-      // data_view = "azerite_traits";
-      // chosen_azerite_list_type = "head";
-      // update_data_buttons();
-      // update_azerite_buttons();
-      // load_data();
+      data_view = "azerite_traits";
+      chosen_azerite_list_type = "head";
+      update_data_buttons();
+      update_azerite_buttons();
+      load_data();
     });
   } catch (err) {
     console.log("show_azerite_traits_data was not found in page.");
@@ -1371,17 +1389,27 @@ function update_chart() {
     for (let i in dps_ordered_data) {
 
       if (data_view == "azerite_traits" && ["itemlevel", "trait_stacking"].includes(chosen_azerite_list_type)) {
-        ordered_trinket_list.push(
-          "<a href=\"https://www.wowhead.com/spell=" +
-          loaded_data[chosen_class][chosen_spec][data_name][fight_style]["spell_ids"][dps_ordered_data[i]] +
-          "\" target=\"blank\">" +
-          dps_ordered_data[i] +
-          "</a>"
-        );
+        let link = "<a href=\"https://";
+        if (language == "EN") {
+          link += "www";
+        } else {
+          link += language.toLowerCase();
+        }
+        link += ".wowhead.com/spell=";
+        link += loaded_data[chosen_class][chosen_spec][data_name][fight_style]["spell_ids"][dps_ordered_data[i]];
+        link += "\" target=\"blank\">" + dps_ordered_data[i] + "</a>";
+
+        ordered_trinket_list.push(link);
       } else {
 
-        let string = "<a href=\"https://www.wowhead.com/item=" +
-          loaded_data[chosen_class][chosen_spec][data_name][fight_style]["item_ids"][dps_ordered_data[i]];
+        let string = "<a href=\"https://";
+        if (language == "EN") {
+          string += "www";
+        } else {
+          string += language.toLowerCase();
+        }
+        string += ".wowhead.com/item=";
+        string += loaded_data[chosen_class][chosen_spec][data_name][fight_style]["item_ids"][dps_ordered_data[i]];
 
         // add azerite power string portion
         if (data_view == "azerite_traits" && ["head", "shoulders", "chest"].includes(chosen_azerite_list_type)) {
@@ -1537,14 +1565,17 @@ function update_trait_stacking_chart() {
   // change item/spell names to wowhead links
   ordered_trinket_list = [];
   for (let i in dps_ordered_data) {
+    let string = "<a href=\"https://";
+    if (language == "EN") {
+      string += "www";
+    } else {
+      string += language.toLowerCase();
+    }
+    string += "wowhead.com/spell=";
+    string += loaded_data[chosen_class][chosen_spec][data_view][fight_style]["spell_ids"][dps_ordered_data[i]];
+    string += "\" target=\"blank\">" + dps_ordered_data[i] + "</a>";
 
-    ordered_trinket_list.push(
-      "<a href=\"https://www.wowhead.com/spell=" +
-      loaded_data[chosen_class][chosen_spec][data_view][fight_style]["spell_ids"][dps_ordered_data[i]] +
-      "\" target=\"blank\">" +
-      dps_ordered_data[i] +
-      "</a>"
-    );
+    ordered_trinket_list.push(string);
   }
   // rewrite the trinket names
   standard_chart.update({
