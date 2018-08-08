@@ -668,7 +668,8 @@ function switch_language(new_language) {
   set_language_cookie();
   // added delay to wait for the page to actually save the loaded data into the variable
   setTimeout(translate_page, 15);
-  console.log("call translate_chart from switch_language");
+  if (dev_mode)
+    console.log("call translate_chart from switch_language");
   translate_chart();
 }
 
@@ -758,6 +759,11 @@ function translate_chart() {
     console.log("translate_chart");
 
   if (data_view != "trinkets" && data_view != "azerite_traits") {
+    if (dev_mode)
+      console.log("translate_chart early exit");
+    return;
+  }
+  if (chosen_class == "" || chosen_spec == "") {
     if (dev_mode)
       console.log("translate_chart early exit");
     return;
