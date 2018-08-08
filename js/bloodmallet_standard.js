@@ -775,7 +775,11 @@ function translate_chart() {
   }
 
   try {
-    Object.keys(loaded_data[chosen_class][chosen_spec][data_view][fight_style]['data']);
+    if (data_view == "azerite_traits" && ["head", "shoulders", "chest"].includes(chosen_azerite_list_type)) {
+      Object.keys(loaded_data[chosen_class][chosen_spec][data_view + "_" + chosen_azerite_list_type][fight_style]['data']);
+    } else {
+      Object.keys(loaded_data[chosen_class][chosen_spec][data_view][fight_style]['data']);
+    }
   } catch (err) {
     console.log("translate_chart data was not saved yet, retrying.")
     setTimeout(translate_chart, 4);
@@ -789,7 +793,15 @@ function translate_chart() {
     translator.removeChild(translator.firstChild);
   }
 
-  for (let trinket of loaded_data[chosen_class][chosen_spec][data_view][fight_style]['sorted_data_keys']) {
+  let current_data;
+
+  if (data_view == "azerite_traits" && ["head", "shoulders", "chest"].includes(chosen_azerite_list_type)) {
+    current_data = loaded_data[chosen_class][chosen_spec][data_view + "_" + chosen_azerite_list_type][fight_style];
+  } else {
+    current_data = loaded_data[chosen_class][chosen_spec][data_view][fight_style];
+  }
+
+  for (let trinket of current_data['sorted_data_keys']) {
     // create untranslated link
     let new_link = document.createElement("a");
     // TODO: will need more logic for azerite traits later
@@ -802,25 +814,25 @@ function translate_chart() {
     }
     if (data_view == "azerite_traits" && ["itemlevel", "trait_stacking"].includes(chosen_azerite_list_type)) {
       link += ".wowhead.com/spell=";
-      link += loaded_data[chosen_class][chosen_spec][data_view][fight_style]["spell_ids"][trinket];
+      link += current_data["spell_ids"][trinket];
     } else {
       link += ".wowhead.com/item=";
-      link += loaded_data[chosen_class][chosen_spec][data_view][fight_style]["item_ids"][trinket];
+      link += current_data["item_ids"][trinket];
     }
 
-    link += "&ilvl=" + loaded_data[chosen_class][chosen_spec][data_view][fight_style]["simulated_steps"][loaded_data[chosen_class][chosen_spec][data_view][fight_style]["simulated_steps"].length - 1]
+    link += "&ilvl=" + current_data["simulated_steps"][current_data["simulated_steps"].length - 1]
 
 
-    // add azerite power string portion
+    // add azerite power link portion
     if (data_view == "azerite_traits" && ["head", "shoulders", "chest"].includes(chosen_azerite_list_type)) {
-      string += "/azerite-powers=";
+      link += "/azerite-powers=";
       // add class id
-      string += loaded_data[chosen_class][chosen_spec][data_name][fight_style]["class_id"];
+      link += current_data["class_id"];
       // add azerite traits
-      for (trait of loaded_data[chosen_class][chosen_spec][data_name][fight_style]["used_azerite_traits_per_item"][dps_ordered_data[i]]) {
-        string += ":" + trait["id"];
+      for (trait of current_data["used_azerite_traits_per_item"][trinket]) {
+        link += ":" + trait["id"];
       }
-      string += "&ilvl=" + loaded_data[chosen_class][chosen_spec][data_name][fight_style]["simulated_steps"][loaded_data[chosen_class][chosen_spec][data_name][fight_style]["simulated_steps"].length - 1].split("1_")[1];
+      link += "&ilvl=" + current_data["simulated_steps"][current_data["simulated_steps"].length - 1].split("1_")[1];
     }
 
     new_link.href = link;
@@ -828,7 +840,7 @@ function translate_chart() {
     let text_trinket_name = document.createTextNode(trinket);
     new_link.appendChild(text_trinket_name);
 
-    link_list.push("<a href=\"" + link + "&ilvl=" + loaded_data[chosen_class][chosen_spec][data_view][fight_style]["simulated_steps"][loaded_data[chosen_class][chosen_spec][data_view][fight_style]["simulated_steps"].length - 1] + "\" target=\"blank\">" + trinket + "</a>");
+    link_list.push("<a href=\"" + link + "&ilvl=" + current_data["simulated_steps"][current_data["simulated_steps"].length - 1] + "\" target=\"blank\">" + trinket + "</a>");
 
     if (language != "EN")
       translator.appendChild(new_link);
