@@ -1589,7 +1589,7 @@ function update_trait_stacking_chart() {
     } else {
       string += language.toLowerCase();
     }
-    string += "wowhead.com/spell=";
+    string += ".wowhead.com/spell=";
     string += loaded_data[chosen_class][chosen_spec][data_view][fight_style]["spell_ids"][dps_ordered_data[i]];
     string += "\" target=\"blank\">" + dps_ordered_data[i] + "</a>";
 
