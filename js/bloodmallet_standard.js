@@ -176,20 +176,23 @@ var empty_chart = {
   ],
   legend: {
     align: "right",
-    backgroundColor: null,
+    backgroundColor: dark_color,
     borderColor: medium_color,
-    borderWidth: 0,
-    floating: false,
+    borderWidth: 1,
+    floating: true,
+    itemMarginBottom: 3,
+    itemMarginTop: 3,
+    layout: 'vertical',
     reversed: true,
     shadow: false,
-    verticalAlign: "bottom",
+    verticalAlign: "middle",
     x: 0,
     y: 0,
     itemStyle: {
-      color: medium_color,
+      color: light_color,
     },
     itemHoverStyle: {
-      color: medium_color,
+      color: light_color,
     }
   },
   plotOptions: {
@@ -291,7 +294,13 @@ var empty_chart = {
   },
   tooltip: {
     formatter: function () {
-      var s = '<div style="margin: -4px -6px -11px -7px; z-index: 9999!important; padding: 3px 3px 6px 3px; background-color:' + dark_color + '"><div style=\"margin-left: 9px; margin-right: 9px; margin-bottom: 6px; font-weight: 700;\">' + this.x + '</div>';
+      var s = '<div style="margin: -4px -6px -11px -7px; padding: 3px 3px 6px 3px; background-color:';
+      if (dark_mode) {
+        s += dark_color
+      } else {
+        s += light_color
+      }
+      s += '"><div style=\"margin-left: 9px; margin-right: 9px; margin-bottom: 6px; font-weight: 700;\">' + this.x + '</div>'
       var cumulative_amount = 0;
       for (var i = this.points.length - 1; i >= 0; i--) {
         cumulative_amount += this.points[i].y;
@@ -444,10 +453,25 @@ function update_dark_mode() {
     document.getElementsByTagName("body")[0].classList.add("text-light");
     // update chart base colors
     standard_chart.update({
+      legend: {
+        backgroundColor: dark_color,
+        itemStyle: {
+          color: light_color,
+        },
+        itemHoverStyle: {
+          color: light_color,
+        }
+      },
       title: {
         style: {
           color: light_color
         }
+      },
+      tooltip: {
+        backgroundColor: dark_color,
+        style: {
+          color: light_color,
+        },
       },
       subtitle: {
         style: {
@@ -471,6 +495,14 @@ function update_dark_mode() {
     });
 
     scatter_chart.update({
+      legend: {
+        itemStyle: {
+          color: light_color,
+        },
+        itemHoverStyle: {
+          color: light_color,
+        }
+      },
       title: {
         style: {
           color: light_color
@@ -499,10 +531,25 @@ function update_dark_mode() {
     document.getElementsByTagName("body")[0].classList.add("text-dark");
     // update chart base colors
     standard_chart.update({
+      legend: {
+        backgroundColor: light_color,
+        itemStyle: {
+          color: dark_color,
+        },
+        itemHoverStyle: {
+          color: dark_color,
+        }
+      },
       title: {
         style: {
           color: dark_color
         }
+      },
+      tooltip: {
+        backgroundColor: light_color,
+        style: {
+          color: dark_color
+        },
       },
       subtitle: {
         style: {
@@ -526,6 +573,14 @@ function update_dark_mode() {
     });
 
     scatter_chart.update({
+      legend: {
+        itemStyle: {
+          color: dark_color,
+        },
+        itemHoverStyle: {
+          color: dark_color,
+        }
+      },
       title: {
         style: {
           color: dark_color
@@ -1772,8 +1827,8 @@ var scatter_chart = new Highcharts.Chart({
     align: "right",
     verticalAlign: "middle",
     layout: "vertical",
-    itemStyle: { "color": medium_color },
-    itemHoverStyle: { "color": medium_color }
+    itemStyle: { "color": light_color },
+    itemHoverStyle: { "color": light_color }
   },
   plotOptions: {
     series: {
@@ -1805,6 +1860,14 @@ var scatter_chart = new Highcharts.Chart({
     useHTML: true,
     style: {
       color: light_color
+    }
+  },
+  subtitle: {
+    text: "Data not found",
+    useHTML: true,
+    style: {
+      color: light_color,
+      fontSize: font_size
     }
   },
   tooltip: {
