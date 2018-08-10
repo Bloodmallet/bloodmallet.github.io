@@ -1,17 +1,17 @@
 {
     "data": {
-        "blood_elf": 11748,
-        "draenei": 11691,
-        "dwarf": 11647,
-        "gnome": 11674,
-        "goblin": 11640,
-        "human": 11634,
-        "night_elf": 11670,
-        "orc": 11716,
-        "tauren": 11643,
-        "troll": 11680,
-        "undead": 11717,
-        "worgen": 11669
+        "blood_elf": 11128,
+        "draenei": 11094,
+        "dwarf": 11015,
+        "gnome": 11038,
+        "goblin": 11031,
+        "human": 11025,
+        "night_elf": 11037,
+        "orc": 11128,
+        "tauren": 11040,
+        "troll": 11069,
+        "undead": 11105,
+        "worgen": 11026
     },
     "data_type": "races",
     "simc_settings": {
@@ -19,26 +19,26 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "6bfd7fe5f2",
+        "simc_hash": "4c44d036c2",
         "spec": "frost",
         "target_error": "0.2",
         "tier": "PR"
     },
     "sorted_data_keys": [
         "blood_elf",
-        "undead",
         "orc",
+        "undead",
         "draenei",
         "troll",
+        "tauren",
         "gnome",
         "night_elf",
-        "worgen",
-        "dwarf",
-        "tauren",
         "goblin",
-        "human"
+        "worgen",
+        "human",
+        "dwarf"
     ],
-    "subtitle": "UTC 2018-08-08 07:39 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/6bfd7fe5f2\" target=\"blank\">6bfd7fe</a>",
-    "timestamp": "2018-08-08 07:39",
+    "subtitle": "UTC 2018-08-09 21:35 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/4c44d036c2\" target=\"blank\">4c44d03</a>",
+    "timestamp": "2018-08-09 21:35",
     "title": "Races | Death_Knight Frost | Patchwerk"
 }

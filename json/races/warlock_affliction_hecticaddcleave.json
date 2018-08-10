@@ -1,16 +1,16 @@
 {
     "data": {
-        "blood_elf": 13928,
-        "dwarf": 13862,
-        "gnome": 13927,
-        "goblin": 13950,
-        "human": 13924,
-        "nightborne": 13949,
-        "orc": 14004,
-        "troll": 13836,
-        "undead": 13961,
-        "void_elf": 13932,
-        "worgen": 13916
+        "blood_elf": 13975,
+        "dwarf": 13897,
+        "gnome": 14007,
+        "goblin": 14007,
+        "human": 13984,
+        "nightborne": 13986,
+        "orc": 14062,
+        "troll": 13911,
+        "undead": 13989,
+        "void_elf": 13993,
+        "worgen": 13975
     },
     "data_type": "races",
     "simc_settings": {
@@ -18,25 +18,25 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "6bfd7fe5f2",
+        "simc_hash": "4c44d036c2",
         "spec": "affliction",
-        "target_error": "0.4",
+        "target_error": "0.2",
         "tier": "PR"
     },
     "sorted_data_keys": [
         "orc",
-        "undead",
-        "goblin",
-        "nightborne",
-        "void_elf",
-        "blood_elf",
         "gnome",
+        "goblin",
+        "void_elf",
+        "undead",
+        "nightborne",
         "human",
         "worgen",
-        "dwarf",
-        "troll"
+        "blood_elf",
+        "troll",
+        "dwarf"
     ],
-    "subtitle": "UTC 2018-08-08 07:50 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/6bfd7fe5f2\" target=\"blank\">6bfd7fe</a>",
-    "timestamp": "2018-08-08 07:50",
+    "subtitle": "UTC 2018-08-09 21:49 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/4c44d036c2\" target=\"blank\">4c44d03</a>",
+    "timestamp": "2018-08-09 21:49",
     "title": "Races | Warlock Affliction | Hecticaddcleave"
 }
