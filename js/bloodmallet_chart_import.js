@@ -370,6 +370,7 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log(error);
         return;
       }
+      update_chart_style(bloodmallet_charts[key]);
       if (requirements) {
         load_data(data_type, wow_class, wow_spec, fight_style);
       } else {
@@ -548,69 +549,6 @@ function update_charts() {
 
       }
 
-      chart.update({
-        chart: {
-          backgroundColor: background_color
-        },
-        legend: {
-          backgroundColor: background_color,
-          itemStyle: {
-            color: font_color,
-          },
-          itemHoverStyle: {
-            color: font_color,
-          }
-        },
-        title: {
-          style: {
-            color: font_color,
-          }
-        },
-        subtitle: {
-          style: {
-            color: font_color,
-          }
-        },
-        tooltip: {
-          formatter: function () {
-            let s = '<div style="margin: -4px -6px -11px -7px; padding: 3px 3px 6px 3px; background-color:';
-            s += background_color;
-            s += '"><div style=\"margin-left: 9px; margin-right: 9px; margin-bottom: 6px; font-weight: 700;\">';
-            s += this.x;
-            s += '</div>';
-            let cumulative_amount = 0;
-            for (var i = this.points.length - 1; i >= 0; i--) {
-              cumulative_amount += this.points[i].y;
-              if (this.points[i].y !== 0) {
-                s += '<div><span style=\"margin-left: 9px; border-left: 9px solid ' +
-                  this.points[i].series.color + ';' +
-                  ' padding-left: 4px;\">' +
-                  this.points[i].series.name +
-                  '</span>:&nbsp;&nbsp;' +
-                  Intl.NumberFormat().format(cumulative_amount) +
-                  "</div>";
-              }
-            }
-            s += '</div>';
-            return s;
-          },
-          backgroundColor: background_color,
-          borderColor: grey_color,
-          style: {
-            color: font_color,
-            fontSize: font_size,
-          },
-        },
-        yAxis: {
-          stackLabels: {
-            style: {
-              color: font_color,
-            }
-          }
-        }
-      });
-
-
       html_element.style.height = 200 + dps_ordered_keys.length * 30 + "px";
       chart.setSize(html_element.style.width, html_element.style.height);
       chart.redraw();
@@ -749,4 +687,71 @@ function requirements_error(id) {
       }
     }
   )
+}
+
+/**
+ * Updates the style of the chart
+ */
+function update_chart_style(chart) {
+  chart.update({
+    chart: {
+      backgroundColor: background_color
+    },
+    legend: {
+      backgroundColor: background_color,
+      itemStyle: {
+        color: font_color,
+      },
+      itemHoverStyle: {
+        color: font_color,
+      }
+    },
+    title: {
+      style: {
+        color: font_color,
+      }
+    },
+    subtitle: {
+      style: {
+        color: font_color,
+      }
+    },
+    tooltip: {
+      formatter: function () {
+        let s = '<div style="margin: -4px -6px -11px -7px; padding: 3px 3px 6px 3px; background-color:';
+        s += background_color;
+        s += '"><div style=\"margin-left: 9px; margin-right: 9px; margin-bottom: 6px; font-weight: 700;\">';
+        s += this.x;
+        s += '</div>';
+        let cumulative_amount = 0;
+        for (var i = this.points.length - 1; i >= 0; i--) {
+          cumulative_amount += this.points[i].y;
+          if (this.points[i].y !== 0) {
+            s += '<div><span style=\"margin-left: 9px; border-left: 9px solid ' +
+              this.points[i].series.color + ';' +
+              ' padding-left: 4px;\">' +
+              this.points[i].series.name +
+              '</span>:&nbsp;&nbsp;' +
+              Intl.NumberFormat().format(cumulative_amount) +
+              "</div>";
+          }
+        }
+        s += '</div>';
+        return s;
+      },
+      backgroundColor: background_color,
+      borderColor: grey_color,
+      style: {
+        color: font_color,
+        fontSize: font_size,
+      },
+    },
+    yAxis: {
+      stackLabels: {
+        style: {
+          color: font_color,
+        }
+      }
+    }
+  });
 }
