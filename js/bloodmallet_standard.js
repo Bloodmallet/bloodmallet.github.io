@@ -296,9 +296,9 @@ var empty_chart = {
     formatter: function () {
       var s = '<div style="margin: -4px -6px -11px -7px; padding: 3px 3px 6px 3px; background-color:';
       if (dark_mode) {
-        s += dark_color
+        s += dark_color;
       } else {
-        s += light_color
+        s += light_color;
       }
       s += '"><div style=\"margin-left: 9px; margin-right: 9px; margin-bottom: 6px; font-weight: 700;\">' + this.x + '</div>'
       var cumulative_amount = 0;
@@ -1824,6 +1824,9 @@ var scatter_chart = new Highcharts.Chart({
   },
   legend: {
     enabled: true,
+    backgroundColor: dark_color,
+    borderColor: medium_color,
+    borderWidth: 1,
     align: "right",
     verticalAlign: "middle",
     layout: "vertical",
