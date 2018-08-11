@@ -137,8 +137,6 @@ var empty_chart = {
     style: {
       fontFamily: "-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\",\"Segoe UI Symbol\""
     }
-    //borderColor: grey_color,
-    //borderWidth: 1
   },
   colors: bar_colors,
   legend: {
@@ -442,7 +440,6 @@ document.addEventListener("DOMContentLoaded", function () {
       // reset style to defaults
       background_color = default_background_color;
       font_color = default_font_color;
-      tooltip_origin = default_tooltip_origin;
 
       if (requirements) {
         load_data(data_type, wow_class, wow_spec, fight_style);
@@ -892,6 +889,13 @@ function update_chart_style(chart) {
       style: {
         color: font_color,
         fontSize: font_size,
+      },
+    },
+    xAxis: {
+      labels: {
+        style: {
+          color: font_color,
+        }
       },
     },
     yAxis: {
