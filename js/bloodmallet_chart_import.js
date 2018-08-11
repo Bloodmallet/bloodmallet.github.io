@@ -7,40 +7,48 @@
  * https://www.paypal.me/bloodmallet
  *
  * Requirements:
- *    - Highcharts license on your end
- *    - include Highcharts scripts and their requirements before this script
+ *    - Highcharts license on your end (if you're a commercial website)
+ *    - include Highcharts scripts before this script
  *
- * The script looks for divs like this:
- *  <div id="bloodmallet_azerite_traits_stacking_patchwerk" data-wow-class="shaman" data-wow-spec="elemental" data-background-color="#343a40" data-font-color="#f8f9fa" data-tooltip-engine="wowdb" >Loading...</div>
+ * The script collects all elements with the class 'bloodmallet_chart'
+ *
+ * Minimal example of a patchwerk trinket chart for elemental shamans:
+ * <div id="hello-world" class="bloodmallet_chart" data-wow-class="shaman" data-wow-spec="elemental"></div>
+ *
+ * Maximum alternative to the previous example:
+ * <div id="hello-world-verbose" class="bloodmallet_chart" data-wow-class="shaman" data-wow-spec="elemental" data-type="trinkets" data-fight-style="patchwerk" data-tooltip-engine="wowhead" data-background-color="#343a40" data-font-color="#f8f9fa"></div>
  *
  *  Scheme:
  *    required:
- *      id="bloodmallet_[type]_[fight_style]"
+ *      id="something-unique"
+ *      class="bloodmallet_chart"
  *      data-wow-class="[wow_class]"
  *      data-wow-spec="[wow_spec]"
  *    optional:
+ *      data-type="[data_type]"
+ *      data-fight-style="[fight_style]"
  *      data-tooltip-engine="[tooltip_engine]"
  *      data-background-color="[color]"
  *      data-font-color="[color]"
  *
- *  type:
- *    trinkets
+ *  [data_type]
+ *    trinkets - default
  *    azerite_items_chest
  *    azerite_items_head
  *    azerite_items_shoulders
  *    azerite_traits_itemlevel
  *    azerite_traits_stacking
  *
- *  fight_style:
- *    patchwerk
+ *  [fight_style]
+ *    patchwerk - default
  *    hecticaddcleave
  *
- *  wow_class:
+ *  [wow_class]:
  *    death_knight
  *    demon_hunter
  *    ...
  *
- *  wow_spec:
+ *  [wow_spec]
  *    blood
  *    frost
  *    unholy
@@ -48,14 +56,15 @@
  *    vengeance
  *    ...
  *
- *  tooltip_engine:
+ *  [tooltip_engine]
  *    wowhead - default
  *    wowdb
  *    none
  *
- *  color
+ *  [color]
  *    red
  *    #343a40
+ *    ...
  *
  */
 
@@ -66,10 +75,10 @@ var shown_entries = 7;
 
 /**
  * Options:
- *  "wowhead"
- *  "wowdb"
+ *  wowhead - default
+ *  wowdb
  */
-var tooltip_origin = "wowhead";
+var default_tooltip_origin = "wowhead";
 
 var bar_colors = [
   "#7cb5ec",
@@ -84,13 +93,29 @@ var bar_colors = [
   "#91e8e1"
 ];
 
-var font_color = "#f8f9fa";
+var default_font_color = "#f8f9fa";
 var grey_color = "#828282";
-var background_color = "#343a40";
+var default_background_color = "#343a40";
 
 var font_size = "1.1rem";
 
+/**
+ * options:
+ *  patchwerk - default
+ *  hecticaddcleave
+ */
+var default_fight_style = "patchwerk";
 
+/**
+ * options:
+ *   trinkets - default
+ *   azerite_items_chest
+ *   azerite_items_head
+ *   azerite_items_shoulders
+ *   azerite_traits_itemlevel
+ *   azerite_traits_stacking
+ */
+var default_data_type = "trinkets";
 
 /******************************************************************************
  * Actual code starts here.
@@ -98,6 +123,12 @@ var font_size = "1.1rem";
  */
 
 var dev_mode = false;
+
+var data_type = default_data_type;
+var fight_style = default_fight_style;
+var background_color = default_background_color;
+var font_color = default_font_color;
+var tooltip_origin = default_tooltip_origin;
 
 var empty_chart = {
   chart: {
@@ -295,26 +326,37 @@ var empty_chart = {
 
 var path_to_data = "https://bloodmallet.com/json/";
 
-var bloodmallet_charts = {
-  "bloodmallet_trinkets_patchwerk": false,
-  "bloodmallet_trinkets_hecticaddcleave": false,
-  "bloodmallet_azerite_items_chest_patchwerk": false,
-  "bloodmallet_azerite_items_chest_hecticaddcleave": false,
-  "bloodmallet_azerite_items_head_patchwerk": false,
-  "bloodmallet_azerite_items_head_hecticaddcleave": false,
-  "bloodmallet_azerite_items_shoulders_patchwerk": false,
-  "bloodmallet_azerite_items_shoulders_hecticaddcleave": false,
-  "bloodmallet_azerite_traits_itemlevel_patchwerk": false,
-  "bloodmallet_azerite_traits_itemlevel_hecticaddcleave": false,
-  "bloodmallet_azerite_traits_stacking_patchwerk": false,
-  "bloodmallet_azerite_traits_stacking_hecticaddcleave": false,
-};
+/**
+ * Data categories.
+ * html_ids of matching elements will be added to these arrays for later
+ * data insertion.
+ * Scheme
+ *  {
+ *    [data_type]: {
+ *      [fight_style]: {
+ *        [wow_class]: {
+ *          [wow_spec]: [
+ *            {html_id: chart},
+ *            {html_id: chart},
+ *            ...
+ *          ]
+ *        }
+ *      }
+ *    }
+ *  }
+ */
+var bloodmallet_charts = {};
 
 /**
  * Scheme
  *  {
- *    "bloodmallet_[type]_[fight_style]": { data },
- *    ...
+ *    [data_type]: {
+ *      [fight_style]: {
+ *        [wow_class]: {
+ *          [wow_spec]: data
+ *        }
+ *      }
+ *    }
  *  }
  */
 var loaded_data = {};
@@ -332,11 +374,18 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // scan for divs / what data is wanted
-  for (const key in bloodmallet_charts) {
-    let html_element = document.getElementById(key);
+  let chart_list = document.getElementsByClassName("bloodmallet_chart");
+  for (const html_element of chart_list) {
+    let html_id = html_element.id;
     if (html_element) {
 
       // optional input
+      if (html_element.getAttribute("data-fight-style")) {
+        fight_style = html_element.getAttribute("data-fight-style");
+      }
+      if (html_element.getAttribute("data-type")) {
+        data_type = html_element.getAttribute("data-type");
+      }
       if (html_element.getAttribute("data-background-color")) {
         background_color = html_element.getAttribute("data-background-color");
       }
@@ -350,32 +399,60 @@ document.addEventListener("DOMContentLoaded", function () {
       // preparing necessary input to load data
       let requirements = true;
       if (!html_element.getAttribute("data-wow-class")) {
-        console.log("Required 'data-wow-class' attribute wasn't found in " + key + ".")
+        console.log("Required 'data-wow-class' attribute wasn't found in " + html_id + ".")
         requirements = false;
       }
       let wow_class = html_element.getAttribute("data-wow-class");
       if (!html_element.getAttribute("data-wow-spec")) {
-        console.log("Required 'data-wow-spec' attribute wasn't found in " + key + ".")
+        console.log("Required 'data-wow-spec' attribute wasn't found in " + html_id + ".")
         requirements = false;
       }
       let wow_spec = html_element.getAttribute("data-wow-spec");
-      let fight_style = key.split("_")[key.split("_").length - 1];
-      let data_type = key.replace("bloodmallet_", "");
-      data_type = data_type.replace("_" + fight_style, "");
 
+      if (!bloodmallet_charts[data_type]) {
+        bloodmallet_charts[data_type] = {};
+      }
+      if (!bloodmallet_charts[data_type][fight_style]) {
+        bloodmallet_charts[data_type][fight_style] = {};
+      }
+      if (!bloodmallet_charts[data_type][fight_style][wow_class]) {
+        bloodmallet_charts[data_type][fight_style][wow_class] = {};
+      }
+      if (!bloodmallet_charts[data_type][fight_style][wow_class][wow_spec]) {
+        bloodmallet_charts[data_type][fight_style][wow_class][wow_spec] = [];
+      }
+
+      // create new chart without data
+      let new_chart = false;
       try {
-        bloodmallet_charts[key] = Highcharts.chart(key, empty_chart);
+        new_chart = Highcharts.chart(html_id, empty_chart);
       } catch (error) {
-        console.log("When trying to create a Highcharts Chart the following Error occured. Did you include the necessary Highcharts scripts?");
+        console.log("When trying to create a Highcharts Chart the following error occured. Did you include the necessary Highcharts scripts?");
         console.log(error);
         return;
       }
-      update_chart_style(bloodmallet_charts[key]);
+
+      // save new chart for later
+      let key_value = {};
+      key_value[html_id] = new_chart;
+      bloodmallet_charts[data_type][fight_style][wow_class][wow_spec].push(key_value);
+
+      update_chart_style(new_chart);
+
+      // reset style to defaults
+      background_color = default_background_color;
+      font_color = default_font_color;
+      tooltip_origin = default_tooltip_origin;
+
       if (requirements) {
         load_data(data_type, wow_class, wow_spec, fight_style);
       } else {
         requirements_error(key);
       }
+
+      // reset remaining defaults
+      fight_style = default_fight_style;
+      data_type = default_data_type;
     }
   }
   setTimeout(update_charts, 2 * 1000);
@@ -391,6 +468,17 @@ document.addEventListener("DOMContentLoaded", function () {
 function load_data(data_type, wow_class, wow_spec, fight_style) {
   if (dev_mode) {
     console.log("load_data");
+  }
+
+  // early exit if the data is already present
+  try {
+    if (loaded_data[data_type][fight_style][wow_class][wow_spec]) {
+      return;
+    }
+  } catch (error) {
+    if (dev_mode) {
+      console.log("Data needs to be loaded.");
+    }
   }
 
   let data_group = data_type;
@@ -416,7 +504,18 @@ function load_data(data_type, wow_class, wow_spec, fight_style) {
         return false;
       }
       response.json().then(function (json) {
-        loaded_data["bloodmallet_" + data_type + "_" + fight_style] = json;
+
+        if (!loaded_data[data_type]) {
+          loaded_data[data_type] = {};
+        }
+        if (!loaded_data[data_type][fight_style]) {
+          loaded_data[data_type][fight_style] = {};
+        }
+        if (!loaded_data[data_type][fight_style][wow_class]) {
+          loaded_data[data_type][fight_style][wow_class] = {};
+        }
+
+        loaded_data[data_type][fight_style][wow_class][wow_spec] = json;
       });
     }).catch(function (err) {
       console.log('Fetching data from bloodmallet.com encountered an error', err);
@@ -430,128 +529,177 @@ function update_charts() {
   if (dev_mode) {
     console.log("update_charts");
   }
-  for (const key in loaded_data) {
-    if (loaded_data.hasOwnProperty(key)) {
-      const data = loaded_data[key];
 
-      let chart = bloodmallet_charts[key];
-      let html_element = document.getElementById(key);
-      // Azerite Trait stacking uses the second sorted data key list
-      if (key.indexOf("azerite_traits_stacking") > -1) {
-        var dps_ordered_keys = data["sorted_data_keys_2"].slice(0, shown_entries);
-        var baseline_dps = data["data"]["baseline"][data["simulated_steps"][0]];
-
-      } else {
-        var dps_ordered_keys = data["sorted_data_keys"].slice(0, shown_entries);
-        var baseline_dps = data["data"]["baseline"][data["simulated_steps"][data["simulated_steps"].length - 1]];
-      }
+  // loop to find all created charts
+  for (const data_type in bloodmallet_charts) {
+    if (bloodmallet_charts.hasOwnProperty(data_type)) {
       if (dev_mode) {
-        console.log(dps_ordered_keys);
-        console.log("Baseline dps: " + baseline_dps);
+        console.log(data_type);
       }
 
+      for (const fight_style in bloodmallet_charts[data_type]) {
+        if (bloodmallet_charts[data_type].hasOwnProperty(fight_style)) {
+          if (dev_mode) {
+            console.log(fight_style);
+          }
 
-      // set title and subtitle
-      chart.setTitle({
-        text: data["title"]
-      }, {
-          text: data["subtitle"]
-        },
-        false
-      );
-
-      // clear initial data
-      while (chart.series[0]) {
-        chart.series[0].remove(false);
-      }
-
-      // update categories
-      category_list = [];
-
-      for (let dps_key of dps_ordered_keys) {
-        category_list.push(get_category_name(dps_key, data));
-      }
-
-      if (dev_mode) {
-        console.log(category_list);
-      }
-
-      // rewrite the trinket names
-      chart.update({
-        xAxis: {
-          categories: category_list
-        }
-      }, false);
-
-
-      if (key.indexOf("azerite_traits_stacking") > -1) {
-        let base_ilevel = data["simulated_steps"][0].replace("1_", "");
-        var simulated_steps = [];
-        simulated_steps.push("3_" + base_ilevel);
-        simulated_steps.push("2_" + base_ilevel);
-        simulated_steps.push("1_" + base_ilevel);
-      } else {
-        var simulated_steps = data["simulated_steps"];
-      }
-      if (dev_mode) {
-        console.log("simulated_steps: " + simulated_steps);
-      }
-
-      for (let itemlevel_position in simulated_steps) {
-
-        let itemlevel = simulated_steps[itemlevel_position];
-        var dps_array = [];
-
-        for (let dps_key of dps_ordered_keys) {
-
-          let dps_key_values = data["data"][dps_key];
-
-          // check for zero dps values and don't change them
-          if (Number(dps_key_values[itemlevel]) > 0) {
-
-            // if lowest itemlevel is looked at, substract baseline
-            if (itemlevel_position == simulated_steps.length - 1) {
-
-              if (itemlevel in dps_key_values) {
-                dps_array.push(dps_key_values[itemlevel] - baseline_dps);
-              } else {
-                dps_array.push(0);
+          for (const wow_class in bloodmallet_charts[data_type][fight_style]) {
+            if (bloodmallet_charts[data_type][fight_style].hasOwnProperty(wow_class)) {
+              const wow_class_data = bloodmallet_charts[data_type][fight_style][wow_class];
+              if (dev_mode) {
+                console.log(wow_class);
+                console.log(wow_class_data);
               }
 
-            } else { // else substract lower itemlevel value of same item
+              for (const wow_spec in wow_class_data) {
+                if (wow_class_data.hasOwnProperty(wow_spec)) {
+                  if (dev_mode) {
+                    console.log(wow_spec);
+                  }
 
-              // if lower itemlevel is zero we have to assume that this item needs to be compared now to the baseline
-              if (dps_key_values[simulated_steps[String(Number(itemlevel_position) + 1)]] == 0 || !(simulated_steps[String(Number(itemlevel_position) + 1)] in dps_key_values)) {
+                  for (const key_value of wow_class_data[wow_spec]) {
+                    if (dev_mode) {
+                      console.log(key_value);
+                    }
 
-                dps_array.push(dps_key_values[itemlevel] - baseline_dps);
+                    for (const key in key_value) {
+                      if (key_value.hasOwnProperty(key)) {
+                        let chart = key_value[key];
 
-              } else { // standard case, next itemlevel is not zero and can be used to substract from the current value
+                        const data = loaded_data[data_type][fight_style][wow_class][wow_spec];
 
-                dps_array.push(dps_key_values[itemlevel] - dps_key_values[simulated_steps[String(Number(itemlevel_position) + 1)]]);
+                        let html_element = document.getElementById(key);
+
+                        // Azerite Trait stacking uses the second sorted data key list
+                        if (data_type == "azerite_traits_stacking") {
+                          var dps_ordered_keys = data["sorted_data_keys_2"].slice(0, shown_entries);
+                          var baseline_dps = data["data"]["baseline"][data["simulated_steps"][0]];
+
+                        } else {
+                          var dps_ordered_keys = data["sorted_data_keys"].slice(0, shown_entries);
+                          var baseline_dps = data["data"]["baseline"][data["simulated_steps"][data["simulated_steps"].length - 1]];
+                        }
+                        if (dev_mode) {
+                          console.log(dps_ordered_keys);
+                          console.log("Baseline dps: " + baseline_dps);
+                        }
+
+
+                        // set title and subtitle
+                        chart.setTitle({
+                          text: data["title"]
+                        }, {
+                            text: data["subtitle"]
+                          },
+                          false
+                        );
+
+                        // clear initial data
+                        while (chart.series[0]) {
+                          chart.series[0].remove(false);
+                        }
+
+                        // update categories
+                        category_list = [];
+
+                        for (let dps_key of dps_ordered_keys) {
+                          category_list.push(get_category_name(dps_key, data));
+                        }
+
+                        if (dev_mode) {
+                          console.log(category_list);
+                        }
+
+                        // rewrite the trinket names
+                        chart.update({
+                          xAxis: {
+                            categories: category_list
+                          }
+                        }, false);
+
+
+                        if (data_type == "azerite_traits_stacking") {
+                          let base_ilevel = data["simulated_steps"][0].replace("1_", "");
+                          var simulated_steps = [];
+                          simulated_steps.push("3_" + base_ilevel);
+                          simulated_steps.push("2_" + base_ilevel);
+                          simulated_steps.push("1_" + base_ilevel);
+                        } else {
+                          var simulated_steps = data["simulated_steps"];
+                        }
+                        if (dev_mode) {
+                          console.log("simulated_steps: " + simulated_steps);
+                        }
+
+                        for (let itemlevel_position in simulated_steps) {
+
+                          let itemlevel = simulated_steps[itemlevel_position];
+                          var dps_array = [];
+
+                          for (let dps_key of dps_ordered_keys) {
+
+                            let dps_key_values = data["data"][dps_key];
+
+                            // check for zero dps values and don't change them
+                            if (Number(dps_key_values[itemlevel]) > 0) {
+
+                              // if lowest itemlevel is looked at, substract baseline
+                              if (itemlevel_position == simulated_steps.length - 1) {
+
+                                if (itemlevel in dps_key_values) {
+                                  dps_array.push(dps_key_values[itemlevel] - baseline_dps);
+                                } else {
+                                  dps_array.push(0);
+                                }
+
+                              } else { // else substract lower itemlevel value of same item
+
+                                // if lower itemlevel is zero we have to assume that this item needs to be compared now to the baseline
+                                if (dps_key_values[simulated_steps[String(Number(itemlevel_position) + 1)]] == 0 || !(simulated_steps[String(Number(itemlevel_position) + 1)] in dps_key_values)) {
+
+                                  dps_array.push(dps_key_values[itemlevel] - baseline_dps);
+
+                                } else { // standard case, next itemlevel is not zero and can be used to substract from the current value
+
+                                  dps_array.push(dps_key_values[itemlevel] - dps_key_values[simulated_steps[String(Number(itemlevel_position) + 1)]]);
+                                }
+
+                              }
+
+                            } else {
+                              if (itemlevel in dps_key_values) {
+                                dps_array.push(dps_key_values[itemlevel]);
+                              } else {
+                                dps_array.push(0);
+                              }
+                            }
+                          }
+
+                          chart.addSeries({
+                            data: dps_array,
+                            name: itemlevel,
+                            showInLegend: true
+                          }, false);
+
+                        }
+
+                        html_element.style.height = 200 + dps_ordered_keys.length * 30 + "px";
+                        chart.setSize(html_element.style.width, html_element.style.height);
+                        chart.redraw();
+
+                      }
+                    }
+
+                  }
+
+                }
               }
 
-            }
-
-          } else {
-            if (itemlevel in dps_key_values) {
-              dps_array.push(dps_key_values[itemlevel]);
-            } else {
-              dps_array.push(0);
             }
           }
+
         }
-
-        chart.addSeries({
-          data: dps_array,
-          name: itemlevel,
-          showInLegend: true
-        }, false);
-
       }
-
-      html_element.style.height = 200 + dps_ordered_keys.length * 30 + "px";
-      chart.setSize(html_element.style.width, html_element.style.height);
-      chart.redraw();
 
     }
   }
