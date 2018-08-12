@@ -53,9 +53,9 @@ var bar_colors = [
   "#91e8e1"
 ];
 
+var default_background_color = "#343a40";
 var default_font_color = "#f8f9fa";
 var default_axis_color = "#828282";
-var default_background_color = "#343a40";
 
 var font_size = "1.1rem";
 
@@ -179,7 +179,7 @@ var empty_chart = {
     }
   ],
   title: {
-    text: "Loading...", //"Title placeholder",
+    text: "Loading data...", //"Title placeholder",
     useHTML: true,
     style: {
       color: font_color,
@@ -187,7 +187,7 @@ var empty_chart = {
     }
   },
   subtitle: {
-    text: "...from <a href=\"https://bloodmallet.com\">bloodmallet.com</a>",
+    text: "...from <a href=\"https://bloodmallet.com\">bloodmallet</a>",
     useHTML: true,
     style: {
       color: font_color,
