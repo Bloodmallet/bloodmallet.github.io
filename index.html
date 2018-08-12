@@ -499,23 +499,23 @@
           style="margin-top: 0.6rem;">Secondary distributions</button>
       </div>
       <div class="row d-flex justify-content-center">
+        <button class="btn-data translate_head" id="chart_type_head" style="margin-top: 0.6rem; margin-right: 0.6rem;" hidden>Head</button>
+        <button class="btn-data translate_shoulders" id="chart_type_shoulders" style="margin-top: 0.6rem; margin-right: 0.6rem;"
+        hidden>Shoulders</button>
+        <button class="btn-data translate_chest" id="chart_type_chest" style="margin-top: 0.6rem; margin-right: 0.6rem;" hidden>Chest</button>
+        <button class="btn-data translate_itemlevel" id="chart_type_itemlevel" style="margin-top: 0.6rem; margin-right: 0.6rem;"
+        hidden>Itemlevel</button>
+        <button class="btn-data translate_trait_stacking" id="chart_type_trait_stacking" style="margin-top: 0.6rem; margin-right: 0.6rem;"
+        hidden>Trait stacking</button>
+      </div>
+      <div class="row d-flex justify-content-center">
         <button class="btn-data translate_patchwerk" id="fight_style_patchwerk" style="margin-top: 0.6rem; margin-right: 0.6rem;">Patchwerk</button>
         <!-- <button class="btn-data translate_beastlord" id="fight_style_beastlord" style="margin-right: 0.6rem;">Beastlord</button> -->
         <button class="btn-data translate_hecticaddcleave" id="fight_style_hecticaddcleave" style="margin-top: 0.6rem; margin-right: 0.6rem;">HecticAddCleave</button>
-        <!--<button class="btn-data" id="copy_link" title="Copy link to this chart to clipboard.">🔗(NYI)</button><!-- -->
-      </div>
-      <div class="d-flex justify-content-center">
-        <select class="btn-data" id="talent_combination_selector" hidden></select>
+        <button class="btn-data translate_create_link" id="copy_link" title="Copy a link to the current chart to clipboard." style="margin-top: 0.6rem; margin-right: 0.6rem;">🔗<span id="chart_link_generator" style="display: none;"></span></button>
       </div>
       <div class="row d-flex justify-content-center">
-        <button class="btn-data translate_head" id="chart_type_head" style="margin-top: 0.6rem; margin-right: 0.6rem;" hidden>Head</button>
-        <button class="btn-data translate_shoulders" id="chart_type_shoulders" style="margin-top: 0.6rem; margin-right: 0.6rem;"
-          hidden>Shoulders</button>
-        <button class="btn-data translate_chest" id="chart_type_chest" style="margin-top: 0.6rem; margin-right: 0.6rem;" hidden>Chest</button>
-        <button class="btn-data translate_itemlevel" id="chart_type_itemlevel" style="margin-top: 0.6rem; margin-right: 0.6rem;"
-          hidden>Itemlevel</button>
-        <button class="btn-data translate_trait_stacking" id="chart_type_trait_stacking" style="margin-top: 0.6rem; margin-right: 0.6rem;"
-          hidden>Trait stacking</button>
+        <select class="btn-data" id="talent_combination_selector" style="margin-top: 0.6rem; margin-right: 0.6rem;" hidden></select>
       </div>
     </div>
 
@@ -841,6 +841,7 @@
       </ul>
     </div>
     <div id="translator_helper" style="display: none;"></div>
+    <div id="copy_success" class="translate_link_was_copied_to_clipboard">Link was copied to clipboard.</div>
   </main>
 
 
