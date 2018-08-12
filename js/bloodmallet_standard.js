@@ -43,7 +43,7 @@ var chosen_talent_combination = "";
 var chosen_azerite_list_type = "";
 
 var dark_mode = true;
-var bloodyfiller = "&nbsp;charts&nbsp;";
+var bloodyfiller = "mallet";
 
 var language = "EN";
 var loaded_languages = {};
@@ -633,16 +633,16 @@ function search_dark_mode_cookie() {
 //  Reroll the FILLER of Bloody(FILLER)
 //
 ---------------------------------------------------------*/
-const filler_possibilities_common = ["&nbsp;charts&nbsp;", "&nbsp;trinkets&nbsp;", "&nbsp;traits&nbsp;", "&nbsp;races&nbsp;"];
-const filler_possibilities_rare = ["¯\\_(ツ)_/¯", " ͡° ͜ʖ ͡°", "ಠ_ಠ", "⌐■_■", "ʕ•ᴥ•ʔ", "ಠᴗಠ", "づ￣ ³￣", "⊙_☉"];
-const filler_possibilities_epic = ["\\_/"];
+const filler_possibilities_common = ["y(&nbsp;charts&nbsp;)", "y(&nbsp;trinkets&nbsp;)", "y(&nbsp;azerite&nbsp;)", "y(&nbsp;races&nbsp;)"];
+const filler_possibilities_rare = ["y(¯\\_(ツ)_/¯)", "y(&nbsp; ͡° ͜ʖ ͡°)", "y( ಠ_ಠ )", "y( ⌐■_■ )", "y( ʕ•ᴥ•ʔ )", "y( ಠᴗಠ )", "y(づ￣ ³￣)", "y( ⊙_☉ )"];
+const filler_possibilities_epic = ["y(\\_/)"];
 // I'm looking for more silly smileys. Contact me! Maybe your smiley can make it into the epic category.
 
-// document.addEventListener("DOMContentLoaded", function () {
-//   if (dev_mode)
-//     console.log("addEventListener bloodyfiller");
-//document.getElementById("bloodyfiller").addEventListener("click", randomize_bloodyfiller);
-// });
+document.addEventListener("DOMContentLoaded", function () {
+  if (dev_mode)
+    console.log("addEventListener bloodyfiller");
+  document.getElementById("bloodyfiller").addEventListener("click", randomize_bloodyfiller);
+});
 
 /**
  * Randomize the CONTENT of Bloody(CONTENT) header on the main page.
