@@ -1,13 +1,15 @@
 {
     "data": {
-        "draenei": 10700,
-        "dwarf": 10711,
-        "goblin": 10648,
-        "highmountain_tauren": 10624,
-        "orc": 10691,
-        "pandaren": 10708,
-        "tauren": 10721,
-        "troll": 10775
+        "Dark Iron Dwarf": 11329,
+        "Draenei": 11446,
+        "Dwarf": 11463,
+        "Goblin": 11425,
+        "Highmountain Tauren": 11427,
+        "Maghar Orc": 11320,
+        "Orc": 11461,
+        "Pandaren": 11514,
+        "Tauren": 11447,
+        "Troll": 11553
     },
     "data_type": "races",
     "simc_settings": {
@@ -15,22 +17,24 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "4c44d036c2",
+        "simc_hash": "416dabe371",
         "spec": "elemental",
         "target_error": "0.2",
         "tier": "PR"
     },
     "sorted_data_keys": [
-        "troll",
-        "tauren",
-        "dwarf",
-        "pandaren",
-        "draenei",
-        "orc",
-        "goblin",
-        "highmountain_tauren"
+        "Troll",
+        "Pandaren",
+        "Dwarf",
+        "Orc",
+        "Tauren",
+        "Draenei",
+        "Highmountain Tauren",
+        "Goblin",
+        "Dark Iron Dwarf",
+        "Maghar Orc"
     ],
-    "subtitle": "UTC 2018-08-09 21:39 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/4c44d036c2\" target=\"blank\">4c44d03</a>",
-    "timestamp": "2018-08-09 21:39",
-    "title": "Races | Shaman Elemental | Patchwerk"
+    "subtitle": "UTC 2018-08-11 16:44 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/416dabe371\" target=\"blank\">416dabe</a>",
+    "timestamp": "2018-08-11 16:44",
+    "title": "Races | Elemental Shaman | Patchwerk"
 }
