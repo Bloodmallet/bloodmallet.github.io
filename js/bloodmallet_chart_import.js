@@ -78,7 +78,14 @@ var shown_entries = 7;
  *  wowhead - default
  *  wowdb
  */
-var default_tooltip_origin = "wowhead";
+var default_tooltip_engine = "wowhead";
+
+/**
+ * Options:
+ *  highcharts - default
+ *  highcharts_old
+ */
+var default_chart_engine = "highcharts";
 
 var bar_colors = [
   "#7cb5ec",
@@ -128,7 +135,8 @@ var data_type = default_data_type;
 var fight_style = default_fight_style;
 var background_color = default_background_color;
 var font_color = default_font_color;
-var tooltip_origin = default_tooltip_origin;
+var tooltip_engine = default_tooltip_engine;
+var chart_engine = default_chart_engine;
 
 var empty_chart = {
   chart: {
@@ -391,7 +399,10 @@ document.addEventListener("DOMContentLoaded", function () {
         font_color = html_element.getAttribute("data-font-color");
       }
       if (html_element.getAttribute("data-tooltip-engine")) {
-        tooltip_origin = html_element.getAttribute("data-tooltip-engine");
+        tooltip_engine = html_element.getAttribute("data-tooltip-engine");
+      }
+      if (html_element.getAttribute("data-chart-engine")) {
+        chart_engine = html_element.getAttribute("data-chart-engine");
       }
 
       // preparing necessary input to load data
@@ -422,20 +433,32 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // create new chart without data
       let new_chart = false;
-      try {
-        new_chart = Highcharts.chart(html_id, empty_chart);
-      } catch (error) {
-        console.log("When trying to create a Highcharts Chart the following error occured. Did you include the necessary Highcharts scripts?");
-        console.log(error);
-        return;
+      if (chart_engine == "highcharts") {
+        try {
+          new_chart = Highcharts.chart(html_id, empty_chart);
+        } catch (error) {
+          console.log("When trying to create a highcharts chart the following error occured. Did you include the necessary Highcharts scripts?");
+          console.log(error);
+          return;
+        }
+      } else if (chart_engine == "highcharts_old") {
+        try {
+          tmp_empty_chart = empty_chart;
+          tmp_empty_chart["chart"]["renderTo"] = html_id;
+          new_chart = new Highcharts.Chart(tmp_empty_chart);
+          // $(function () { $("#" + html_id).highcharts(empty_chart) });
+        } catch (error) {
+          console.log("When trying to create a highcharts_old chart the following error occured. Did you include the necessary Highcharts scripts?");
+          console.log(error);
+          return;
+        }
       }
-
       // save new chart for later
       let key_value = {};
       key_value[html_id] = new_chart;
       bloodmallet_charts[data_type][fight_style][wow_class][wow_spec].push(key_value);
 
-      update_chart_style(new_chart);
+      update_chart_style(new_chart, chart_engine);
 
       // reset style to defaults
       background_color = default_background_color;
@@ -608,11 +631,15 @@ function update_charts() {
                         }
 
                         // rewrite the trinket names
-                        chart.update({
-                          xAxis: {
-                            categories: category_list
-                          }
-                        }, false);
+                        if (chart_engine == "highcharts") {
+                          chart.update({
+                            xAxis: {
+                              categories: category_list
+                            }
+                          }, false);
+                        } else if (chart_engine == "highcharts_old") {
+                          chart.xAxis[0].setCategories(category_list, false);
+                        }
 
 
                         if (data_type == "azerite_traits_stacking") {
@@ -681,7 +708,11 @@ function update_charts() {
                         }
 
                         html_element.style.height = 200 + dps_ordered_keys.length * 30 + "px";
-                        chart.setSize(html_element.style.width, html_element.style.height);
+                        if (chart_engine == "highcharts") {
+                          chart.setSize(html_element.style.width, html_element.style.height);
+                        } else if (chart_engine == "highcharts_old") {
+                          //chart.reflow();
+                        }
                         chart.redraw();
 
                       }
@@ -718,12 +749,12 @@ function get_category_name(key, data) {
   // wowhead, wowdb, or plain text if no matching origin is provided
 
   // fallback
-  if (tooltip_origin != "wowhead" && tooltip_origin != "wowdb") {
+  if (tooltip_engine != "wowhead" && tooltip_engine != "wowdb") {
     return key;
   }
 
   // wowhead
-  if (tooltip_origin == "wowhead") {
+  if (tooltip_engine == "wowhead") {
     let link = "<a href=\"https://www.wowhead.com/";
     try {
       let item_id = data["item_ids"][key];
@@ -769,7 +800,7 @@ function get_category_name(key, data) {
     return link;
   }
 
-  if (tooltip_origin == "wowdb") {
+  if (tooltip_engine == "wowdb") {
     let link = "<a href=\"http://www.wowdb.com/";
     try {
       let item_id = data["item_ids"][key];
@@ -837,73 +868,80 @@ function requirements_error(id) {
 /**
  * Updates the style of the chart
  */
-function update_chart_style(chart) {
-  chart.update({
-    chart: {
-      backgroundColor: background_color
-    },
-    legend: {
-      backgroundColor: background_color,
-      itemStyle: {
-        color: font_color,
+function update_chart_style(chart, chart_engine) {
+  if (dev_mode) {
+    console.log("update_chart_style");
+  }
+  if (chart_engine == "highcharts") {
+    chart.update({
+      chart: {
+        backgroundColor: background_color
       },
-      itemHoverStyle: {
-        color: font_color,
-      }
-    },
-    title: {
-      style: {
-        color: font_color,
-      }
-    },
-    subtitle: {
-      style: {
-        color: font_color,
-      }
-    },
-    tooltip: {
-      formatter: function () {
-        let s = '<div style="margin: -4px -6px -11px -7px; padding: 3px 3px 6px 3px; background-color:';
-        s += background_color;
-        s += '"><div style=\"margin-left: 9px; margin-right: 9px; margin-bottom: 6px; font-weight: 700;\">';
-        s += this.x;
-        s += '</div>';
-        let cumulative_amount = 0;
-        for (var i = this.points.length - 1; i >= 0; i--) {
-          cumulative_amount += this.points[i].y;
-          if (this.points[i].y !== 0) {
-            s += '<div><span style=\"margin-left: 9px; border-left: 9px solid ' +
-              this.points[i].series.color + ';' +
-              ' padding-left: 4px;\">' +
-              this.points[i].series.name +
-              '</span>:&nbsp;&nbsp;' +
-              Intl.NumberFormat().format(cumulative_amount) +
-              "</div>";
+      legend: {
+        backgroundColor: background_color,
+        itemStyle: {
+          color: font_color,
+        },
+        itemHoverStyle: {
+          color: font_color,
+        }
+      },
+      title: {
+        style: {
+          color: font_color,
+        }
+      },
+      subtitle: {
+        style: {
+          color: font_color,
+        }
+      },
+      tooltip: {
+        formatter: function () {
+          let s = '<div style="margin: -4px -6px -11px -7px; padding: 3px 3px 6px 3px; background-color:';
+          s += background_color;
+          s += '"><div style=\"margin-left: 9px; margin-right: 9px; margin-bottom: 6px; font-weight: 700;\">';
+          s += this.x;
+          s += '</div>';
+          let cumulative_amount = 0;
+          for (var i = this.points.length - 1; i >= 0; i--) {
+            cumulative_amount += this.points[i].y;
+            if (this.points[i].y !== 0) {
+              s += '<div><span style=\"margin-left: 9px; border-left: 9px solid ' +
+                this.points[i].series.color + ';' +
+                ' padding-left: 4px;\">' +
+                this.points[i].series.name +
+                '</span>:&nbsp;&nbsp;' +
+                Intl.NumberFormat().format(cumulative_amount) +
+                "</div>";
+            }
+          }
+          s += '</div>';
+          return s;
+        },
+        backgroundColor: background_color,
+        borderColor: grey_color,
+        style: {
+          color: font_color,
+          fontSize: font_size,
+        },
+      },
+      xAxis: {
+        labels: {
+          style: {
+            color: font_color,
+          }
+        },
+      },
+      yAxis: {
+        stackLabels: {
+          style: {
+            color: font_color,
           }
         }
-        s += '</div>';
-        return s;
-      },
-      backgroundColor: background_color,
-      borderColor: grey_color,
-      style: {
-        color: font_color,
-        fontSize: font_size,
-      },
-    },
-    xAxis: {
-      labels: {
-        style: {
-          color: font_color,
-        }
-      },
-    },
-    yAxis: {
-      stackLabels: {
-        style: {
-          color: font_color,
-        }
       }
-    }
-  });
+    });
+  } else if (chart_engine == "highcharts_old") {
+    console.log("highcharts_old does not support setting your own style yet. Help improving the importer by creating a pull request.");
+  }
 }
