@@ -1121,7 +1121,6 @@ window.onhashchange = function () {
     console.log("window.onhashchange");
   get_data_from_link();
   switch_mode();
-  switch_to_data();
 };
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -1286,7 +1285,6 @@ function switch_mode() {
   }
 
   // push new state to history
-  console.log("switch_state from switch_mode");
   push_state();
 }
 
@@ -1298,7 +1296,6 @@ function push_state() {
     console.log("push_state");
   }
   history.pushState({ id: 'data_view' }, chosen_spec + " " + chosen_class + " | " + data_view + " | " + fight_style, construct_link());
-  console.log("state pushed");
   switch_to_data();
 }
 
