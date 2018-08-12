@@ -699,6 +699,10 @@ function update_charts() {
 
     }
   }
+
+  if (tooltip_engine == "wowdb") {
+    CurseTips['wowdb-tooltip'].watchElements($('a'));
+  }
 }
 
 /**
@@ -769,7 +773,8 @@ function get_category_name(key, data) {
   }
 
   if (tooltip_engine == "wowdb") {
-    let link = "<a href=\"http://www.wowdb.com/";
+    let element_string = "<a href=\"";
+    let link = "http://www.wowdb.com/";
     try {
       let item_id = data["item_ids"][key];
       link += "items/" + item_id;
@@ -810,9 +815,12 @@ function get_category_name(key, data) {
       }
     }
 
-    link += "\">" + key + "</a>";
+    element_string += link;
 
-    return link;
+    element_string += "\" data-tooltip-href=\"";
+    element_string += link + "\">" + key + "</a>";
+
+    return element_string;
   }
 
 }
