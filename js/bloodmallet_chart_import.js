@@ -1,6 +1,6 @@
 /******************************************************************************
  * Script to include charts from bloodmallet.com.
- * Adding a link to bloodmallet.com as the origin is appreciated.
+ * Linking back to bloodmallet.com as the origin is appreciated.
  * Please consider supporting the project via Patreon or Paypal.
  *
  * https://www.patreon.com/bloodmallet
@@ -13,65 +13,18 @@
  * The script collects all elements with the class 'bloodmallet_chart'
  *
  * Minimal example of a patchwerk trinket chart for elemental shamans:
- * <div id="hello-world" class="bloodmallet_chart" data-wow-class="shaman" data-wow-spec="elemental"></div>
+ * <div id="unique-id" class="bloodmallet_chart" data-wow-class="shaman" data-wow-spec="elemental"></div>
  *
- * Maximum alternative to the previous example:
- * <div id="hello-world-verbose" class="bloodmallet_chart" data-wow-class="shaman" data-wow-spec="elemental" data-type="trinkets" data-fight-style="patchwerk" data-tooltip-engine="wowhead" data-background-color="#343a40" data-font-color="#f8f9fa"></div>
+ * For more information read the wiki at https://github.com/Bloodmallet/bloodmallet.github.io/wiki/How-to-import-charts-or-data
  *
- *  Scheme:
- *    required:
- *      id="something-unique"
- *      class="bloodmallet_chart"
- *      data-wow-class="[wow_class]"
- *      data-wow-spec="[wow_spec]"
- *    optional:
- *      data-type="[data_type]"
- *      data-fight-style="[fight_style]"
- *      data-tooltip-engine="[tooltip_engine]"
- *      data-background-color="[color]"
- *      data-font-color="[color]"
- *
- *  [data_type]
- *    trinkets - default
- *    azerite_items_chest
- *    azerite_items_head
- *    azerite_items_shoulders
- *    azerite_traits_itemlevel
- *    azerite_traits_stacking
- *
- *  [fight_style]
- *    patchwerk - default
- *    hecticaddcleave
- *
- *  [wow_class]:
- *    death_knight
- *    demon_hunter
- *    ...
- *
- *  [wow_spec]
- *    blood
- *    frost
- *    unholy
- *    havoc
- *    vengeance
- *    ...
- *
- *  [tooltip_engine]
- *    wowhead - default
- *    wowdb
- *    none
- *
- *  [color]
- *    red
- *    #343a40
- *    ...
+ *  Adjust the 'default_' variables to your liking if you host this script yourself.
  *
  */
 
 /**
  * Variable determines how many bars are visible
  */
-var shown_entries = 7;
+var default_data_entries = 7;
 
 /**
  * Options:
@@ -101,7 +54,7 @@ var bar_colors = [
 ];
 
 var default_font_color = "#f8f9fa";
-var grey_color = "#828282";
+var default_axis_color = "#828282";
 var default_background_color = "#343a40";
 
 var font_size = "1.1rem";
@@ -131,10 +84,12 @@ var default_data_type = "trinkets";
 
 var dev_mode = false;
 
+var data_entries = default_data_entries;
 var data_type = default_data_type;
 var fight_style = default_fight_style;
 var background_color = default_background_color;
 var font_color = default_font_color;
+var axis_color = default_axis_color;
 var tooltip_engine = default_tooltip_engine;
 var chart_engine = default_chart_engine;
 
@@ -150,7 +105,7 @@ var empty_chart = {
   legend: {
     align: "right",
     backgroundColor: background_color,
-    borderColor: grey_color,
+    borderColor: axis_color,
     borderWidth: 1,
     floating: false,
     itemMarginBottom: 3,
@@ -265,7 +220,7 @@ var empty_chart = {
     headerFormat: "<b>{point.x}</b>",
     shared: true,
     backgroundColor: background_color,
-    borderColor: grey_color,
+    borderColor: axis_color,
     style: {
       color: font_color,
       fontSize: font_size,
@@ -295,15 +250,15 @@ var empty_chart = {
       }
     },
     gridLineWidth: 0,
-    gridLineColor: grey_color,
-    lineColor: grey_color,
-    tickColor: grey_color
+    gridLineColor: axis_color,
+    lineColor: axis_color,
+    tickColor: axis_color
   },
   yAxis: {
     labels: {
       //enabled: true,
       style: {
-        color: grey_color
+        color: axis_color
       },
     },
     min: 0,
@@ -322,11 +277,11 @@ var empty_chart = {
     title: {
       text: "\u0394 Damage per second",
       style: {
-        color: grey_color
+        color: axis_color
       }
     },
     gridLineWidth: 1,
-    gridLineColor: grey_color
+    gridLineColor: axis_color
   }
 };
 
@@ -386,6 +341,9 @@ document.addEventListener("DOMContentLoaded", function () {
     if (html_element) {
 
       // optional input
+      if (html_element.getAttribute("data-entries")) {
+        data_entries = html_element.getAttribute("data-entries");
+      }
       if (html_element.getAttribute("data-fight-style")) {
         fight_style = html_element.getAttribute("data-fight-style");
       }
@@ -397,6 +355,9 @@ document.addEventListener("DOMContentLoaded", function () {
       }
       if (html_element.getAttribute("data-font-color")) {
         font_color = html_element.getAttribute("data-font-color");
+      }
+      if (html_element.getAttribute("data-axis-color")) {
+        axis_color = html_element.getAttribute("data-axis-color");
       }
       if (html_element.getAttribute("data-tooltip-engine")) {
         tooltip_engine = html_element.getAttribute("data-tooltip-engine");
@@ -418,6 +379,8 @@ document.addEventListener("DOMContentLoaded", function () {
       }
       let wow_spec = html_element.getAttribute("data-wow-spec");
 
+      let styled_chart = update_chart_style(empty_chart, chart_engine);
+
       if (!bloodmallet_charts[data_type]) {
         bloodmallet_charts[data_type] = {};
       }
@@ -435,7 +398,7 @@ document.addEventListener("DOMContentLoaded", function () {
       let new_chart = false;
       if (chart_engine == "highcharts") {
         try {
-          new_chart = Highcharts.chart(html_id, empty_chart);
+          new_chart = Highcharts.chart(html_id, styled_chart);
         } catch (error) {
           console.log("When trying to create a highcharts chart the following error occured. Did you include the necessary Highcharts scripts?");
           console.log(error);
@@ -443,9 +406,9 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       } else if (chart_engine == "highcharts_old") {
         try {
-          tmp_empty_chart = empty_chart;
-          tmp_empty_chart["chart"]["renderTo"] = html_id;
-          new_chart = new Highcharts.Chart(tmp_empty_chart);
+          tmp_styled_chart = styled_chart;
+          tmp_styled_chart["chart"]["renderTo"] = html_id;
+          new_chart = new Highcharts.Chart(tmp_styled_chart);
           // $(function () { $("#" + html_id).highcharts(empty_chart) });
         } catch (error) {
           console.log("When trying to create a highcharts_old chart the following error occured. Did you include the necessary Highcharts scripts?");
@@ -458,8 +421,6 @@ document.addEventListener("DOMContentLoaded", function () {
       key_value[html_id] = new_chart;
       bloodmallet_charts[data_type][fight_style][wow_class][wow_spec].push(key_value);
 
-      update_chart_style(new_chart, chart_engine);
-
       // reset style to defaults
       background_color = default_background_color;
       font_color = default_font_color;
@@ -467,7 +428,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (requirements) {
         load_data(data_type, wow_class, wow_spec, fight_style);
       } else {
-        requirements_error(key);
+        requirements_error(new_chart);
       }
 
       // reset remaining defaults
@@ -586,17 +547,23 @@ function update_charts() {
                       if (key_value.hasOwnProperty(key)) {
                         let chart = key_value[key];
 
-                        const data = loaded_data[data_type][fight_style][wow_class][wow_spec];
+                        try {
+                          var spec_data = loaded_data[data_type][fight_style][wow_class][wow_spec];
+                        } catch (error) {
+                          console.warn("Data for ", data_type, fight_style, wow_class, wow_spec, " wasn't loaded. Either chart setup is wrong or connection to bloodmallet.com failed.")
+                          continue;
+                        }
+                        const data = spec_data;
 
                         let html_element = document.getElementById(key);
 
                         // Azerite Trait stacking uses the second sorted data key list
                         if (data_type == "azerite_traits_stacking") {
-                          var dps_ordered_keys = data["sorted_data_keys_2"].slice(0, shown_entries);
+                          var dps_ordered_keys = data["sorted_data_keys_2"].slice(0, data_entries);
                           var baseline_dps = data["data"]["baseline"][data["simulated_steps"][0]];
 
                         } else {
-                          var dps_ordered_keys = data["sorted_data_keys"].slice(0, shown_entries);
+                          var dps_ordered_keys = data["sorted_data_keys"].slice(0, data_entries);
                           var baseline_dps = data["data"]["baseline"][data["simulated_steps"][data["simulated_steps"].length - 1]];
                         }
                         if (dev_mode) {
@@ -710,10 +677,11 @@ function update_charts() {
                         html_element.style.height = 200 + dps_ordered_keys.length * 30 + "px";
                         if (chart_engine == "highcharts") {
                           chart.setSize(html_element.style.width, html_element.style.height);
-                        } else if (chart_engine == "highcharts_old") {
-                          //chart.reflow();
                         }
                         chart.redraw();
+                        if (chart_engine == "highcharts_old") {
+                          chart.reflow();
+                        }
 
                       }
                     }
@@ -853,97 +821,69 @@ function get_category_name(key, data) {
  * Function to update title and subtitle on init error.
  * @param {int} id
  */
-function requirements_error(id) {
-  chart = bloodmallet_charts[id];
-  chart.update(
-    {
-      title: {
-        text: "Error in chart setup"
-      },
-      subtitle: {
-        text: "Missing 'data-wow-class' or 'data-wow-spec'. <a href=\"https://bloodmallet.com\">bloodmallet.com</a>"
-      }
-    }
-  )
+function requirements_error(chart) {
+  chart.setTitle({ text: "Wrong chart setup" }, { text: "Missing 'data-wow-class' or 'data-wow-spec'. See <a href=\"https://github.com/Bloodmallet/bloodmallet.github.io/wiki/How-to-import-charts-or-data\">wiki</a>" });
 }
 
 /**
  * Updates the style of the chart
  */
-function update_chart_style(chart, chart_engine) {
+function update_chart_style(unstyled_chart, chart_engine) {
   if (dev_mode) {
     console.log("update_chart_style");
   }
-  if (chart_engine == "highcharts") {
-    chart.update({
-      chart: {
-        backgroundColor: background_color
-      },
-      legend: {
-        backgroundColor: background_color,
-        itemStyle: {
-          color: font_color,
-        },
-        itemHoverStyle: {
-          color: font_color,
-        }
-      },
-      title: {
-        style: {
-          color: font_color,
-        }
-      },
-      subtitle: {
-        style: {
-          color: font_color,
-        }
-      },
-      tooltip: {
-        formatter: function () {
-          let s = '<div style="margin: -4px -6px -11px -7px; padding: 3px 3px 6px 3px; background-color:';
-          s += background_color;
-          s += '"><div style=\"margin-left: 9px; margin-right: 9px; margin-bottom: 6px; font-weight: 700;\">';
-          s += this.x;
-          s += '</div>';
-          let cumulative_amount = 0;
-          for (var i = this.points.length - 1; i >= 0; i--) {
-            cumulative_amount += this.points[i].y;
-            if (this.points[i].y !== 0) {
-              s += '<div><span style=\"margin-left: 9px; border-left: 9px solid ' +
-                this.points[i].series.color + ';' +
-                ' padding-left: 4px;\">' +
-                this.points[i].series.name +
-                '</span>:&nbsp;&nbsp;' +
-                Intl.NumberFormat().format(cumulative_amount) +
-                "</div>";
-            }
-          }
-          s += '</div>';
-          return s;
-        },
-        backgroundColor: background_color,
-        borderColor: grey_color,
-        style: {
-          color: font_color,
-          fontSize: font_size,
-        },
-      },
-      xAxis: {
-        labels: {
-          style: {
-            color: font_color,
-          }
-        },
-      },
-      yAxis: {
-        stackLabels: {
-          style: {
-            color: font_color,
-          }
+  if (chart_engine == "highcharts" || chart_engine == "highcharts_old") {
+
+    let styled_chart = unstyled_chart;
+
+    styled_chart.chart.backgroundColor = background_color;
+
+    styled_chart.legend.backgroundColor = background_color;
+    styled_chart.legend.borderColor = axis_color;
+    styled_chart.legend.itemStyle.color = font_color;
+    styled_chart.legend.itemHoverStyle.color = font_color;
+
+    styled_chart.title.style.color = font_color;
+    styled_chart.subtitle.style.color = font_color;
+
+    styled_chart.tooltip.formatter = function () {
+      let s = '<div style="margin: -4px -6px -11px -7px; padding: 3px 3px 6px 3px; background-color:';
+      s += background_color;
+      s += '"><div style=\"margin-left: 9px; margin-right: 9px; margin-bottom: 6px; font-weight: 700;\">';
+      s += this.x;
+      s += '</div>';
+      let cumulative_amount = 0;
+      for (var i = this.points.length - 1; i >= 0; i--) {
+        cumulative_amount += this.points[i].y;
+        if (this.points[i].y !== 0) {
+          s += '<div><span style=\"margin-left: 9px; border-left: 9px solid ' +
+            this.points[i].series.color + ';' +
+            ' padding-left: 4px;\">' +
+            this.points[i].series.name +
+            '</span>:&nbsp;&nbsp;' +
+            Intl.NumberFormat().format(cumulative_amount) +
+            "</div>";
         }
       }
-    });
-  } else if (chart_engine == "highcharts_old") {
-    console.log("highcharts_old does not support setting your own style yet. Help improving the importer by creating a pull request.");
+      s += '</div>';
+      return s;
+    };
+    styled_chart.tooltip.backgroundColor = background_color;
+    styled_chart.tooltip.borderColor = axis_color;
+    styled_chart.tooltip.style.color = font_color;
+
+    styled_chart.xAxis.labels.style.color = font_color;
+    styled_chart.xAxis.gridLineColor = axis_color;
+    styled_chart.xAxis.lineColor = axis_color;
+    styled_chart.xAxis.tickColor = axis_color;
+
+    styled_chart.yAxis.labels.style.color = axis_color;
+    styled_chart.yAxis.stackLabels.style.color = font_color;
+    styled_chart.yAxis.gridLineColor = axis_color;
+    styled_chart.yAxis.lineColor = axis_color;
+    styled_chart.yAxis.tickColor = axis_color;
+    styled_chart.yAxis.title.style.color = axis_color;
+
+    return styled_chart;
   }
 }
