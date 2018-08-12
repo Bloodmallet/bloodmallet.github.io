@@ -112,7 +112,9 @@ const translation_classes = [
   "translate_trait_stacking",
   "translate_head",
   "translate_shoulders",
-  "translate_chest"
+  "translate_chest",
+  "translate_link_to_chart",
+  "translate_link_was_copied_to_clipboard"
 ];
 
 
@@ -130,13 +132,13 @@ const data_view_IDs = [
   "chart_type_trait_stacking",
   "chart_type_head",
   "chart_type_shoulders",
-  "chart_type_chest"
+  "chart_type_chest",
+  "copy_link"
 ];
 const fight_style_IDs = [
   "fight_style_patchwerk",
   // "fight_style_beastlord",
   "fight_style_hecticaddcleave",
-  // "copy_link"
 ];
 const azerite_trait_view_type_IDs = [
   "chart_type_head",
@@ -995,11 +997,12 @@ function search_language_cookie() {
 /** Load spec and data mode if a spec link was used. */
 document.addEventListener("DOMContentLoaded", function () {
   if (dev_mode)
-    console.log("eventListener, used link interpretation");
+    console.log("eventListener, interpreting link");
 
-  get_class_spec_from_link();
+  get_data_from_link();
   if (chosen_spec) {
     switch_mode();
+    switch_to_data();
   }
 
 });
@@ -1011,8 +1014,7 @@ document.addEventListener("DOMContentLoaded", function () {
   try {
     document.getElementById("show_trinkets_data").addEventListener("click", function () {
       data_view = "trinkets";
-      update_data_buttons();
-      load_data();
+      push_state();
     });
   } catch (err) {
     console.log("show_trinkets_data was not found in page.");
@@ -1021,10 +1023,10 @@ document.addEventListener("DOMContentLoaded", function () {
   try {
     document.getElementById("show_azerite_traits_data").addEventListener("click", function () {
       data_view = "azerite_traits";
-      chosen_azerite_list_type = "head";
-      update_data_buttons();
-      update_azerite_buttons();
-      load_data();
+      if (!chosen_azerite_list_type) {
+        chosen_azerite_list_type = "head";
+      }
+      push_state();
     });
   } catch (err) {
     console.log("show_azerite_traits_data was not found in page.");
@@ -1032,8 +1034,7 @@ document.addEventListener("DOMContentLoaded", function () {
   try {
     document.getElementById("chart_type_head").addEventListener("click", function () {
       chosen_azerite_list_type = "head";
-      update_azerite_buttons();
-      load_data();
+      push_state();
     });
   } catch (err) {
     console.log("chart_type_head was not found in page.");
@@ -1041,8 +1042,7 @@ document.addEventListener("DOMContentLoaded", function () {
   try {
     document.getElementById("chart_type_shoulders").addEventListener("click", function () {
       chosen_azerite_list_type = "shoulders";
-      update_azerite_buttons();
-      load_data();
+      push_state();
     });
   } catch (err) {
     console.log("chart_type_shoulders was not found in page.");
@@ -1050,8 +1050,7 @@ document.addEventListener("DOMContentLoaded", function () {
   try {
     document.getElementById("chart_type_chest").addEventListener("click", function () {
       chosen_azerite_list_type = "chest";
-      update_azerite_buttons();
-      load_data();
+      push_state();
     });
   } catch (err) {
     console.log("chart_type_chest was not found in page.");
@@ -1059,8 +1058,7 @@ document.addEventListener("DOMContentLoaded", function () {
   try {
     document.getElementById("chart_type_itemlevel").addEventListener("click", function () {
       chosen_azerite_list_type = "itemlevel";
-      update_azerite_buttons();
-      load_data();
+      push_state();
     });
   } catch (err) {
     console.log("chart_type_itemlevel was not found in page.");
@@ -1068,9 +1066,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
   try {
     document.getElementById("chart_type_trait_stacking").addEventListener("click", function () {
-      chosen_azerite_list_type = "trait_stacking";
-      update_azerite_buttons();
-      load_data();
+      if (!chosen_azerite_list_type) {
+        chosen_azerite_list_type = "trait_stacking";
+      }
+      push_state();
     });
   } catch (err) {
     console.log("chart_type_trait_stacking was not found in page.");
@@ -1079,8 +1078,7 @@ document.addEventListener("DOMContentLoaded", function () {
   try {
     document.getElementById("show_races_data").addEventListener("click", function () {
       data_view = "races";
-      update_data_buttons();
-      load_data();
+      push_state();
     });
   } catch (err) {
     console.log("show_races_data was not found in page.");
@@ -1089,9 +1087,7 @@ document.addEventListener("DOMContentLoaded", function () {
   try {
     document.getElementById("show_secondary_distributions_data").addEventListener("click", function () {
       data_view = "secondary_distributions";
-      chosen_azerite_list_type = "itemlevel";
-      update_data_buttons();
-      load_data();
+      push_state();
     });
   } catch (err) {
     console.log("show_secondary_distribution_data was not found in page.");
@@ -1099,43 +1095,66 @@ document.addEventListener("DOMContentLoaded", function () {
 
   document.getElementById("fight_style_patchwerk").addEventListener("click", function () {
     fight_style = "patchwerk";
-    update_fight_style_buttons();
-    load_data();
+    push_state();
   });
   // document.getElementById("fight_style_beastlord").addEventListener("click", function () {
   //   fight_style = "beastlord";
-  //   update_fight_style_buttons();
-  //   load_data();
+  //   push_state();
   // });
   document.getElementById("fight_style_hecticaddcleave").addEventListener("click", function () {
     fight_style = "hecticaddcleave";
-    update_fight_style_buttons();
-    load_data();
+    push_state();
   });
 });
 
-// document.addEventListener("DOMContentLoaded", function () {
-//   document.getElementById("copy_link").addEventListener("click", function () {
-//     copy_link();
-//   })
-// })
+document.addEventListener("DOMContentLoaded", function () {
+  document.getElementById("copy_link").addEventListener("click", function () {
+    copy_link();
+  })
+});
+
+/**
+ *
+ */
+window.onhashchange = function () {
+  if (dev_mode)
+    console.log("window.onhashchange");
+  get_data_from_link();
+  switch_mode();
+  switch_to_data();
+};
 
 document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("talent_combination_selector").addEventListener("change", function (e) {
-    console.log(e);
+    if (dev_mode)
+      console.log(e);
     chosen_talent_combination = e.target.value;
-    update_chart();
-  })
-})
+    push_state();
+  });
+});
+
+window.addEventListener('popstate', function (event) {
+  if (history.state) {
+    get_data_from_link();
+    switch_to_data();
+  }
+}, false);
 
 /**
  * Update the global class and spec variables from the current url.
  */
-function get_class_spec_from_link() {
+function get_data_from_link() {
   if (dev_mode)
     console.log("get_class_spec_from_link");
-  var hash = window.location.hash;
-  var combined_class_spec = "";
+  let hash = window.location.hash;
+
+  if (!hash) {
+    // early exit, we got no data, so what shall we do anyway?
+    return;
+  }
+
+  let combined_class_spec = "";
+
   if (hash.indexOf("?") > -1) {
     combined_class_spec = hash.slice(1, hash.indexOf("?"));
   } else {
@@ -1150,6 +1169,26 @@ function get_class_spec_from_link() {
       chosen_spec = combined_class_spec.slice(combined_class_spec.indexOf("_") + 1);
     }
   }
+
+  if (hash.indexOf("&") == -1) {
+    // rather early exit if no params were provided
+    return;
+  }
+
+  const params = hash.split("?")[1].split("&");
+
+  for (const param of params) {
+    const key = param.split("=")[0];
+    const value = param.split("=")[1];
+    if (key == "data_view") {
+      data_view = value;
+    } else if (key == "fight_style") {
+      fight_style = value;
+    } else if (key == "type") {
+      chosen_azerite_list_type = value;
+    }
+  }
+
 }
 
 /**
@@ -1171,16 +1210,6 @@ function get_language_from_link() {
   }
   return false;
 }
-
-/**
- * A spec is considered valid if a json file for it can be found.
- */
-window.onhashchange = function () {
-  if (dev_mode)
-    console.log("window.onhashchange");
-  switch_mode();
-  // re-translate everything again?
-};
 
 /**
  * Loads spec data (json) according to the already applied settings. Triggers update_chart.
@@ -1226,7 +1255,7 @@ function load_data() {
       }
       else if (this.readyState == 4 && this.status == 404) {
         if (dev_mode)
-          alert("Data for this mode was not found! the following link was tried, please check: ./json/" + data_view + "/" + file_name);
+          console.warn("Data for this mode was not found! the following link was tried, please check: ./json/" + data_view + "/" + file_name);
         standard_chart = Highcharts.chart('chart', empty_chart);
       }
     }
@@ -1248,32 +1277,41 @@ function load_data() {
 function switch_mode() {
   if (dev_mode)
     console.log("switch_mode");
-  // underline new nav
-  get_class_spec_from_link();
-  update_nav();
-  update_page_content();
-  // set appropriate language
-  var new_lang = get_language_from_link();
-  if (new_lang) {
-    switch_language(new_lang);
-  } else if (language != "EN") {
-    // prepare default if somehow language broke
-    switch_language(language);
-  }
-  // update data buttons
-  //data_view = "trinkets";
-  update_data_buttons();
-  update_fight_style_buttons();
-  update_azerite_buttons();
 
-  // load appropriate data for the initial chart
-  load_data();
   // hide, unhide stuff
   if (mode == "welcome") {
     mode = "data";
     make_invisible(modes[mode]["hidden"]);
     make_visible(modes[mode]["shown"]);
   }
+
+  // push new state to history
+  console.log("switch_state from switch_mode");
+  push_state();
+}
+
+/**
+ * Function to change the url. url change triggers state application, load, and chart updates according to state (class + spec + fight_style + ...).
+ */
+function push_state() {
+  if (dev_mode) {
+    console.log("push_state");
+  }
+  history.pushState({ id: 'data_view' }, chosen_spec + " " + chosen_class + " | " + data_view + " | " + fight_style, construct_link());
+  console.log("state pushed");
+  switch_to_data();
+}
+
+/**
+ * Function to trigger all possible updates and loads.
+ */
+function switch_to_data() {
+  update_nav();
+  update_page_content();
+  update_data_buttons();
+  update_fight_style_buttons();
+  update_azerite_buttons();
+  load_data();
 }
 
 /**
@@ -1795,11 +1833,40 @@ function update_page_content() {
   document.getElementById("tc_" + chosen_class + "_" + chosen_spec).hidden = false;
 }
 
+/**
+ * Constructs and returns the current state as url-string.
+ */
+function construct_link() {
+  var path = window.location.origin;
+  path += window.location.pathname;
+  path += "#" + chosen_class;
+  path += "_" + chosen_spec;
+  path += "?data_view=" + data_view;
+  if (data_view == "azerite_traits") {
+    path += "&type=" + chosen_azerite_list_type;
+  }
+  path += "&fight_style=" + fight_style;
+
+  return path;
+} // ?data_view=trinkets&fight_style=patchwerk
 
 function copy_link() {
   if (dev_mode)
     console.log("copy_link");
-  console.log("copy_link is not yet implemented.");
+
+  var path = construct_link();
+
+  let link_helper = document.getElementById("chart_link_generator");
+  link_helper.innerHTML = path;
+  link_helper.style.display = "block";
+  window.getSelection().selectAllChildren(link_helper);
+  document.execCommand("copy");
+  link_helper.style.display = "none";
+
+  let success_message = document.getElementById("copy_success");
+  success_message.className = "show";
+  setTimeout(function () { success_message.className = success_message.className.replace("show", ""); }, 3000);
+
 }
 
 
