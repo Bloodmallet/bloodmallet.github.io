@@ -824,8 +824,10 @@ function get_category_name(key, data) {
       // }
       let ilvl = data["simulated_steps"][data["simulated_steps"].length - 1];
       // fix special case of azerite items "1_340"
-      if (ilvl.indexOf("_") > -1) {
-        ilvl = ilvl.split("_")[1];
+      if (typeof ilvl === 'string') {
+        if (ilvl.indexOf("_") > -1) {
+          ilvl = ilvl.split("_")[1];
+        }
       }
       link += "?itemLevel=" + ilvl;
     }
