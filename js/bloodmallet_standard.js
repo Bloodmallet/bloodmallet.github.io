@@ -329,14 +329,14 @@ var empty_chart = {
       color: light_color,
       fontSize: font_size,
     },
-    useHTML: true
-    // // adding this as a potential tooltip positioning fix. changes tooltip position to be inside the bar rather than at the end
-    // positioner: function(boxWidth, boxHeight, point) {
-    //   return {
-    //     x: point.plotX,
-    //     y: point.plotY
-    //   };
-    //}
+    useHTML: true,
+    // adding this as a potential tooltip positioning fix. changes tooltip position to be inside the bar rather than at the end
+    positioner: function (boxWidth, boxHeight, point) {
+      return {
+        x: point.plotX,
+        y: point.plotY
+      };
+    }
   },
   xAxis: {
     categories: [
