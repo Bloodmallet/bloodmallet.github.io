@@ -1066,9 +1066,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   try {
     document.getElementById("chart_type_trait_stacking").addEventListener("click", function () {
-      if (!chosen_azerite_list_type) {
-        chosen_azerite_list_type = "trait_stacking";
-      }
+      chosen_azerite_list_type = "trait_stacking";
       push_state();
     });
   } catch (err) {
