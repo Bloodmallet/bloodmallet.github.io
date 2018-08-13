@@ -909,6 +909,9 @@ function translate_chart() {
       translator.appendChild(new_link);
   }
 
+  if (dev_mode) {
+    console.log("update categories with link_list (english names, forerign link in translate_chart");
+  }
   standard_chart.update({
     xAxis: {
       categories: link_list
@@ -917,9 +920,35 @@ function translate_chart() {
 
   if (dev_mode)
     console.log("try to trigger wowhead power js");
-  setTimeout(function () { update_link_data(link_list) }, 1000);
+  trigger_wowhead_link_renaming();
+
+  setTimeout(function () { update_link_data(link_list) }, 200);
 }
 
+/**
+ * Somewhat saver way to try and retrigger wowhead link translation.
+ */
+function trigger_wowhead_link_renaming() {
+  if (dev_mode) {
+    console.log("trigger_wowhead_link_renaming");
+  }
+
+  try {
+    $WowheadPower.refreshLinks();
+  } catch (error) {
+    setTimeout(trigger_wowhead_link_renaming, 50);
+  }
+}
+
+function clear_translator() {
+  if (dev_mode) {
+    console.log("clear_translator");
+  }
+  let translator = document.getElementById("translator_helper");
+  while (translator.firstChild) {
+    translator.removeChild(translator.firstChild);
+  }
+}
 
 function update_link_data(original_list) {
   if (dev_mode)
@@ -927,7 +956,10 @@ function update_link_data(original_list) {
   let all_translated = true;
   all_translated = true;
   for (let a in original_list) {
-    if (original_list[a] == document.getElementById("translator_helper").childNodes[a].outerHTML) {
+
+    let original_link = original_list[a];
+    let new_link = document.getElementById("translator_helper").childNodes[a].outerHTML;
+    if (original_link.split(">").length == new_link.split(">").length && original_link.indexOf("baseline") == -1) {
       all_translated = false;
     }
   }
@@ -942,14 +974,13 @@ function update_link_data(original_list) {
     new_categories.push(link.outerHTML);
   }
 
-  // clear page
-  let translator = document.getElementById("translator_helper");
-  while (translator.firstChild) {
-    translator.removeChild(translator.firstChild);
-  }
+  clear_translator();
 
-  if (dev_mode)
+  if (dev_mode) {
+    console.log(original_list);
     console.log(new_categories);
+    console.log("updating categories with new_categories from update_link_data");
+  }
   standard_chart.update({
     xAxis: {
       categories: new_categories
@@ -1002,7 +1033,6 @@ document.addEventListener("DOMContentLoaded", function () {
   get_data_from_link();
   if (chosen_spec) {
     switch_mode();
-    switch_to_data();
   }
 
 });
@@ -1117,6 +1147,7 @@ document.addEventListener("DOMContentLoaded", function () {
 window.onhashchange = function () {
   if (dev_mode)
     console.log("window.onhashchange");
+  clear_translator();
   get_data_from_link();
   switch_mode();
 };
@@ -1301,6 +1332,9 @@ function push_state() {
  * Function to trigger all possible updates and loads.
  */
 function switch_to_data() {
+  if (dev_mode) {
+    console.log("switch_to_data");
+  }
   update_nav();
   update_page_content();
   update_data_buttons();
@@ -1535,6 +1569,9 @@ function update_chart() {
       }
     }
     // rewrite the trinket names
+    if (dev_mode) {
+      console.log("applying ordered_trinket_list to categories in update_chart");
+    }
     standard_chart.update({
       xAxis: {
         categories: ordered_trinket_list
@@ -1542,6 +1579,9 @@ function update_chart() {
     }, false);
   } else {
     // rewrite the trinket names
+    if (dev_mode) {
+      console.log("applying ordered_trinket_list to categories in update_chart");
+    }
     standard_chart.update({
       xAxis: {
         categories: dps_ordered_data
@@ -1684,6 +1724,9 @@ function update_trait_stacking_chart() {
     ordered_trinket_list.push(string);
   }
   // rewrite the trinket names
+  if (dev_mode) {
+    console.log("applying ordered_trinket_list to categories in update_trait_stacking_chart");
+  }
   standard_chart.update({
     xAxis: {
       categories: ordered_trinket_list
