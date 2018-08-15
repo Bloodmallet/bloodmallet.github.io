@@ -1248,33 +1248,20 @@ function load_data() {
     var xhttp_getLanguage = new XMLHttpRequest();
     var file_name = chosen_class + "_" + chosen_spec;
 
-    if (data_view == "azerite_traits" && ["head", "shoulders", "chest"].includes(chosen_azerite_list_type)) {
+    if ((data_view === "azerite_traits") && (["head", "shoulders", "chest"].includes(chosen_azerite_list_type))) {
       file_name += "_" + chosen_azerite_list_type;
     }
 
     file_name += "_" + fight_style + ".json";
-    xhttp_getLanguage.open("GET", "./json/" + data_view + "/" + file_name, true);
-    xhttp_getLanguage.setRequestHeader("Content-type", "application/json");
-    xhttp_getLanguage.onreadystatechange = function () {
-      if (this.readyState == 4 && this.status == 200) {
-
-        // save loaded data
-        loaded_data[chosen_class][chosen_spec][data_name][fight_style] = JSON.parse(xhttp_getLanguage.responseText);
+    fetch("./json/" + data_view + "/" + file_name)
+      .then(function(response) {
+        return response.json();
+      })
+      .then(function(json) {
+        loaded_data[chosen_class][chosen_spec][data_name][fight_style] = json;
         update_talent_selector();
         update_chart();
-      }
-      else if (this.readyState == 4 && this.status == 404) {
-        if (debug)
-          console.warn("Data for this mode was not found! the following link was tried, please check: ./json/" + data_view + "/" + file_name);
-        standard_chart = Highcharts.chart('chart', empty_chart);
-      }
-    }
-    xhttp_getLanguage.send();
-  } else {
-    if (debug)
-      console.log("Data is already present.");
-    update_talent_selector();
-    update_chart();
+      });
   }
 }
 
