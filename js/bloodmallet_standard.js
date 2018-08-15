@@ -5,7 +5,7 @@
 ---------------------------------------------------------*/
 
 /* Variable intended for dev mode specific output/markings */
-var dev_mode = false;
+var debug = false;
 
 /** visual modes
  *   hidden: hides these general elements
@@ -419,7 +419,7 @@ const class_colors = {
   "shaman": "#0070DE",
   "warlock": "#9482C9",
   "warrior": "#C79C6E",
-}
+};
 
 
 /*---------------------------------------------------------
@@ -434,7 +434,7 @@ document.addEventListener("DOMContentLoaded", search_dark_mode_cookie);
 
 /** add listener to the dark mode checkbox */
 document.addEventListener("DOMContentLoaded", function () {
-  if (dev_mode)
+  if (debug)
     console.log("addEventListener darkModeCheckbox");
   document.getElementById("darkModeCheckbox").addEventListener("change", function (e) {
     dark_mode = e.target.checked;
@@ -445,7 +445,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 /** Updates dark mode based on dark mode check box. */
 function update_dark_mode() {
-  if (dev_mode)
+  if (debug)
     console.log("update_dark_mode");
 
   if (dark_mode) {
@@ -608,19 +608,17 @@ function update_dark_mode() {
 
 /** save the current dark_mode value in a cookie */
 function set_dark_mode_cookie() {
-  if (dev_mode)
+  if (debug)
     console.log("set_dark_mode_cookie");
   Cookies.set('bloodmallet_dark_mode', dark_mode, { expires: 31, path: '' });
 }
 
 /** searches for the dark mode cookie and updates the page if necessary */
 function search_dark_mode_cookie() {
-  if (dev_mode)
+  if (debug)
     console.log("search_dark_mode_cookie");
   if (Cookies.get('bloodmallet_dark_mode')) {
-    dark_mode = ('true' == Cookies.get('bloodmallet_dark_mode'));
-  } else {
-    dark_mode = dark_mode;
+    dark_mode = ('true' === Cookies.get('bloodmallet_dark_mode'));
   }
   document.getElementById("darkModeCheckbox").checked = dark_mode;
   update_dark_mode();
@@ -639,7 +637,7 @@ const filler_possibilities_epic = ["y(\\_/)"];
 // I'm looking for more silly smileys. Contact me! Maybe your smiley can make it into the epic category.
 
 document.addEventListener("DOMContentLoaded", function () {
-  if (dev_mode)
+  if (debug)
     console.log("addEventListener bloodyfiller");
   document.getElementById("bloodyfiller").addEventListener("click", randomize_bloodyfiller);
 });
@@ -648,7 +646,7 @@ document.addEventListener("DOMContentLoaded", function () {
  * Randomize the CONTENT of Bloody(CONTENT) header on the main page.
  */
 function randomize_bloodyfiller() {
-  if (dev_mode)
+  if (debug)
     console.log("randomize_bloodyfiller");
   var roll = Math.floor(Math.random() * (filler_possibilities_common.length + 1));
   while (filler_possibilities_common[roll] == bloodyfiller) {
@@ -687,7 +685,7 @@ function randomize_bloodyfiller() {
 document.addEventListener("DOMContentLoaded", search_language_cookie);
 
 document.addEventListener("DOMContentLoaded", function () {
-  if (dev_mode)
+  if (debug)
     console.log("addEventListener languageSelector");
   document.getElementById("languageSelector").addEventListener("change", function () {
     switch_language(this.options[this.selectedIndex].value);
@@ -698,11 +696,11 @@ document.addEventListener("DOMContentLoaded", function () {
  * Switches the language and calls translate_page and translate_chart to do the actual translation.
 */
 function switch_language(new_language) {
-  if (dev_mode)
+  if (debug)
     console.log("switch_language");
 
   if (language === new_language) {
-    if (dev_mode)
+    if (debug)
       console.log("switch_language early exit");
     return;
   }
@@ -718,14 +716,14 @@ function switch_language(new_language) {
       });
   }
   language = new_language;
-  if (dev_mode) {
+  if (debug) {
     console.log("Setting language to " + new_language);
     console.log("Set language to " + language);
   }
   set_language_cookie();
   // added delay to wait for the page to actually save the loaded data into the variable
   setTimeout(translate_page, 15);
-  if (dev_mode)
+  if (debug)
     console.log("call translate_chart from switch_language");
   translate_chart();
 }
@@ -735,14 +733,14 @@ function switch_language(new_language) {
  * translate all translation_IDs and translation_classes. Does NOT translate charts. Use translate_chart() for that
  */
 function translate_page() {
-  if (dev_mode)
+  if (debug)
     console.log("translate_page");
 
   // artificial delay until loaded data is properly saved in variable
   try {
     loaded_languages[language][translation_IDs[0]];
   } catch (err) {
-    if (dev_mode)
+    if (debug)
       console.log("Gotta wait until data is actually saved to variable");
     return setTimeout(translate_page, 15);
   }
@@ -767,12 +765,12 @@ function translate_page() {
     } else if (loaded_languages[language][element] === "") {
       // Don't translate
       console.log("No translation for '" + element + "' available. Help improve the page by submitting a bug report. Or even better: clone the repo, fix the problem, and create a pull request. Any help is greatly appreciated!");
-      if (dev_mode)
+      if (debug)
         document.getElementById(element).style.border = "1px solid red";
     } else {
       // Don't translate
       console.log("Language package '" + language + "' doesn't have '" + element + "' added to it or the ID is missing in the page. Help improve the page by submitting a bug report. Or even better: clone the repo, fix the problem, and create a pull request. Any help is greatly appreciated!");
-      if (dev_mode)
+      if (debug)
         document.getElementById(element).style.border = "1px solid red";
     }
   });
@@ -788,7 +786,7 @@ function translate_page() {
     } else if (loaded_languages[language][element] === "") {
       // Don't translate
       console.log("No translation for '" + element + "' available. Help improve the page by submitting a bug report. Or even better: clone the repo, fix the problem, and create a pull request. Any help is greatly appreciated!");
-      if (dev_mode) {
+      if (debug) {
         var targets = document.getElementsByClassName(element);
         for (let index = 0; index < targets.length; index++) {
           const html_element = targets[index];
@@ -798,7 +796,7 @@ function translate_page() {
     } else {
       // Don't translate
       console.log("Language package '" + language + "' doesn't have '" + element + "' added to it or the ID is missing in the page. Help improve the page by submitting a bug report. Or even better: clone the repo, fix the problem, and create a pull request. Any help is greatly appreciated!");
-      if (dev_mode) {
+      if (debug) {
         var targets = document.getElementsByClassName(element);
         for (let index = 0; index < targets.length; index++) {
           const html_element = targets[index];
@@ -812,22 +810,22 @@ function translate_page() {
 /** Translates the current chart.
  *  assumption: only one chart is present */
 function translate_chart() {
-  if (dev_mode)
+  if (debug)
     console.log("translate_chart");
 
   if (data_view != "trinkets" && data_view != "azerite_traits") {
-    if (dev_mode)
+    if (debug)
       console.log("translate_chart early exit");
     return;
   }
   if (chosen_class == "" || chosen_spec == "") {
-    if (dev_mode)
+    if (debug)
       console.log("translate_chart early exit");
     return;
   }
 
   if (language == "EN") {
-    if (dev_mode)
+    if (debug)
       console.log("translate_chart early exit");
     return;
   }
@@ -909,7 +907,7 @@ function translate_chart() {
       translator.appendChild(new_link);
   }
 
-  if (dev_mode) {
+  if (debug) {
     console.log("update categories with link_list (english names, forerign link in translate_chart");
   }
   standard_chart.update({
@@ -918,7 +916,7 @@ function translate_chart() {
     }
   }, true);
 
-  if (dev_mode)
+  if (debug)
     console.log("try to trigger wowhead power js");
   trigger_wowhead_link_renaming();
 
@@ -929,7 +927,7 @@ function translate_chart() {
  * Somewhat saver way to try and retrigger wowhead link translation.
  */
 function trigger_wowhead_link_renaming() {
-  if (dev_mode) {
+  if (debug) {
     console.log("trigger_wowhead_link_renaming");
   }
 
@@ -941,7 +939,7 @@ function trigger_wowhead_link_renaming() {
 }
 
 function clear_translator() {
-  if (dev_mode) {
+  if (debug) {
     console.log("clear_translator");
   }
   let translator = document.getElementById("translator_helper");
@@ -951,7 +949,7 @@ function clear_translator() {
 }
 
 function update_link_data(original_list) {
-  if (dev_mode)
+  if (debug)
     console.log("update_link_data");
   let all_translated = true;
   all_translated = true;
@@ -976,7 +974,7 @@ function update_link_data(original_list) {
 
   clear_translator();
 
-  if (dev_mode) {
+  if (debug) {
     console.log(original_list);
     console.log(new_categories);
     console.log("updating categories with new_categories from update_link_data");
@@ -990,32 +988,16 @@ function update_link_data(original_list) {
 
 /** Save the current language in a cookie. */
 function set_language_cookie() {
-  if (dev_mode)
+  if (debug)
     console.log("set_language_cookie");
-  var cookie_name = "bloodmallet_language_selection";
-  var duration = new Date();
-  var days = 31;
-  duration.setTime(duration.getTime() + days * 24 * 60 * 60 * 1000);
-  document.cookie = cookie_name + "=" + language + ";" + duration, ";path=/";
+  Cookies.set('bloodmallet_language_selection', language, { expires: 31, path: '' });
 }
 
 /** Searches for the dark mode cookie and updates the page if necessary. */
 function search_language_cookie() {
-  if (dev_mode)
+  if (debug)
     console.log("search_language_cookie");
-  var language_found = false;
-  var cookie_array = document.cookie.split(";");
-  cookie_array.forEach(element => {
-
-    if (element.indexOf("bloodmallet_language_selection=") > -1) {
-
-      if (element.indexOf("=EN") == -1) {
-        switch_language(element.slice(element.indexOf("=") + 1));
-        language_found = true;
-      }
-    }
-  });
-  return language_found;
+  switch_language(Cookies.get("bloodmallet_language_selection") || "EN");
 }
 
 
@@ -1027,7 +1009,7 @@ function search_language_cookie() {
 
 /** Load spec and data mode if a spec link was used. */
 document.addEventListener("DOMContentLoaded", function () {
-  if (dev_mode)
+  if (debug)
     console.log("eventListener, interpreting link");
 
   get_data_from_link();
@@ -1145,7 +1127,7 @@ document.addEventListener("DOMContentLoaded", function () {
  *
  */
 window.onhashchange = function () {
-  if (dev_mode)
+  if (debug)
     console.log("window.onhashchange");
   clear_translator();
   get_data_from_link();
@@ -1154,7 +1136,7 @@ window.onhashchange = function () {
 
 document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("talent_combination_selector").addEventListener("change", function (e) {
-    if (dev_mode)
+    if (debug)
       console.log(e);
     chosen_talent_combination = e.target.value;
     push_state();
@@ -1172,7 +1154,7 @@ window.addEventListener('popstate', function (event) {
  * Update the global class and spec variables from the current url.
  */
 function get_data_from_link() {
-  if (dev_mode)
+  if (debug)
     console.log("get_class_spec_from_link");
   let hash = window.location.hash;
 
@@ -1223,7 +1205,7 @@ function get_data_from_link() {
  * Returns the language (lang-attribute) from link, else return false.
  */
 function get_language_from_link() {
-  if (dev_mode)
+  if (debug)
     console.log("get_language_from_link");
   var string = window.location.search;
   if (window.location.hash.indexOf("?") > -1) {
@@ -1243,7 +1225,7 @@ function get_language_from_link() {
  * Loads spec data (json) according to the already applied settings. Triggers update_chart.
  */
 function load_data() {
-  if (dev_mode)
+  if (debug)
     console.log("load_data");
 
   empty_charts();
@@ -1282,14 +1264,14 @@ function load_data() {
         update_chart();
       }
       else if (this.readyState == 4 && this.status == 404) {
-        if (dev_mode)
+        if (debug)
           console.warn("Data for this mode was not found! the following link was tried, please check: ./json/" + data_view + "/" + file_name);
         standard_chart = Highcharts.chart('chart', empty_chart);
       }
     }
     xhttp_getLanguage.send();
   } else {
-    if (dev_mode)
+    if (debug)
       console.log("Data is already present.");
     update_talent_selector();
     update_chart();
@@ -1303,7 +1285,7 @@ function load_data() {
  * Hides welcome-area and shows data area if necessary.
  */
 function switch_mode() {
-  if (dev_mode)
+  if (debug)
     console.log("switch_mode");
 
   // hide, unhide stuff
@@ -1321,7 +1303,7 @@ function switch_mode() {
  * Function to change the url. url change triggers state application, load, and chart updates according to state (class + spec + fight_style + ...).
  */
 function push_state() {
-  if (dev_mode) {
+  if (debug) {
     console.log("push_state");
   }
   history.pushState({ id: 'data_view' }, chosen_spec + " " + chosen_class + " | " + data_view + " | " + fight_style, construct_link());
@@ -1332,7 +1314,7 @@ function push_state() {
  * Function to trigger all possible updates and loads.
  */
 function switch_to_data() {
-  if (dev_mode) {
+  if (debug) {
     console.log("switch_to_data");
   }
   update_nav();
@@ -1347,7 +1329,7 @@ function switch_to_data() {
  * Update which data button has the class color background.
  */
 function update_data_buttons() {
-  if (dev_mode)
+  if (debug)
     console.log("update_data_buttons");
   // reset buttons to standard visual
   data_view_IDs.forEach(element => {
@@ -1385,7 +1367,7 @@ function update_data_buttons() {
  * Update the talent list in the talent selector, based on data. Set first talent combination as default.
  */
 function update_talent_selector() {
-  if (dev_mode)
+  if (debug)
     console.log("update_talent_selector");
 
   if (data_view != "secondary_distributions")
@@ -1412,7 +1394,7 @@ function update_talent_selector() {
  * Resets colors of all fight style buttons and sets active button to class color.
  */
 function update_fight_style_buttons() {
-  if (dev_mode)
+  if (debug)
     console.log("update_fight_style_buttons");
   // reset buttons to standard visual
   fight_style_IDs.forEach(element => {
@@ -1426,10 +1408,10 @@ function update_fight_style_buttons() {
  * Resets colors of all fight style buttons and sets active button to class color.
  */
 function update_azerite_buttons() {
-  if (dev_mode)
+  if (debug)
     console.log("update_azerite_buttons");
   if (data_view != "azerite_traits") {
-    if (dev_mode)
+    if (debug)
       console.log("update_azerite_buttons early exit");
     return;
   }
@@ -1446,7 +1428,7 @@ function update_azerite_buttons() {
  * Mark current active chosen class in top navigation.
  */
 function update_nav() {
-  if (dev_mode)
+  if (debug)
     console.log("update_nav");
   var nav_items = document.getElementsByClassName("dropdown-toggle");
   for (let index = 0; index < nav_items.length; index++) {
@@ -1460,7 +1442,7 @@ function update_nav() {
  * Makes all given IDs visible.
  */
 function make_visible(IDs) {
-  if (dev_mode)
+  if (debug)
     console.log("make_visible");
   IDs.forEach(element => {
     document.getElementById(element).hidden = false;
@@ -1471,7 +1453,7 @@ function make_visible(IDs) {
  * Makes all given IDs invisible.
  */
 function make_invisible(IDs) {
-  if (dev_mode)
+  if (debug)
     console.log("make_invisible");
   IDs.forEach(element => {
     document.getElementById(element).hidden = true;
@@ -1483,7 +1465,7 @@ function make_invisible(IDs) {
  * Data load is NOT handled by this function. Triggers update_chart!
  */
 function update_chart() {
-  if (dev_mode)
+  if (debug)
     console.log("update_chart");
 
   if (data_view == "secondary_distributions") {
@@ -1518,7 +1500,7 @@ function update_chart() {
   if ("sorted_data_keys" in loaded_data[chosen_class][chosen_spec][data_name][fight_style]) {
     var dps_ordered_data = loaded_data[chosen_class][chosen_spec][data_name][fight_style]["sorted_data_keys"];
   } else {
-    if (dev_mode)
+    if (debug)
       console.log("Getting sorted_data_keys from data failed. Set unordered dps_ordered_data");
     var dps_ordered_data = Object.keys(loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"]);
   }
@@ -1569,7 +1551,7 @@ function update_chart() {
       }
     }
     // rewrite the trinket names
-    if (dev_mode) {
+    if (debug) {
       console.log("applying ordered_trinket_list to categories in update_chart");
     }
     standard_chart.update({
@@ -1579,7 +1561,7 @@ function update_chart() {
     }, false);
   } else {
     // rewrite the trinket names
-    if (dev_mode) {
+    if (debug) {
       console.log("applying ordered_trinket_list to categories in update_chart");
     }
     standard_chart.update({
@@ -1610,7 +1592,7 @@ function update_chart() {
   // basically: if something was simmed with multiple itemlevels
   if ("simulated_steps" in loaded_data[chosen_class][chosen_spec][data_name][fight_style]) {
 
-    if (dev_mode)
+    if (debug)
       console.log("simulated_steps in data found.");
 
     for (itemlevel_position in loaded_data[chosen_class][chosen_spec][data_name][fight_style]["simulated_steps"]) {
@@ -1618,7 +1600,7 @@ function update_chart() {
       let itemlevel = loaded_data[chosen_class][chosen_spec][data_name][fight_style]["simulated_steps"][itemlevel_position];
       let itemlevel_dps_values = [];
 
-      if (dev_mode)
+      if (debug)
         console.log("handling itemlevel " + itemlevel);
 
       // create series input for highcharts
@@ -1690,20 +1672,20 @@ function update_chart() {
   standard_chart.setSize(document.getElementById("chart").style.width, document.getElementById("chart").style.height);
   standard_chart.redraw();
 
-  if (dev_mode)
+  if (debug)
     console.log("call translate_chart from update_chart");
   translate_chart();
 
 }
 
 function update_trait_stacking_chart() {
-  if (dev_mode)
+  if (debug)
     console.log("update_trait_stacking_chart");
 
   if ("sorted_data_keys_2" in loaded_data[chosen_class][chosen_spec][data_view][fight_style]) {
     var dps_ordered_data = loaded_data[chosen_class][chosen_spec][data_view][fight_style]["sorted_data_keys_2"];
   } else {
-    if (dev_mode)
+    if (debug)
       console.log("Getting sorted_data_keys from data failed. Set unordered dps_ordered_data");
     var dps_ordered_data = Object.keys(loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"]);
   }
@@ -1724,7 +1706,7 @@ function update_trait_stacking_chart() {
     ordered_trinket_list.push(string);
   }
   // rewrite the trinket names
-  if (dev_mode) {
+  if (debug) {
     console.log("applying ordered_trinket_list to categories in update_trait_stacking_chart");
   }
   standard_chart.update({
@@ -1755,7 +1737,7 @@ function update_trait_stacking_chart() {
     let stack_name = stack_count + "_" + max_itemlevel;
     let itemlevel_dps_values = [];
 
-    if (dev_mode)
+    if (debug)
       console.log("handling stack_name " + stack_name);
 
     // create series input for highcharts
@@ -1834,7 +1816,7 @@ function empty_charts() {
  * Example: string_test -> String_Test
  */
 function capitalize_first_letters(string) {
-  if (dev_mode)
+  if (debug)
     console.log("capitalize_first_letters");
   var new_string = string.charAt(0).toUpperCase();
   if (string.indexOf("_") > -1) {
@@ -1850,7 +1832,7 @@ function capitalize_first_letters(string) {
  * Update data header, triggers TC area appropriate hide and show.
  */
 function update_page_content() {
-  if (dev_mode)
+  if (debug)
     console.log("update_page_content");
   // update title
   var content = "<span class=\"" + chosen_class + "-color\"";
@@ -1889,7 +1871,7 @@ function construct_link() {
 } // ?data_view=trinkets&fight_style=patchwerk
 
 function copy_link() {
-  if (dev_mode)
+  if (debug)
     console.log("copy_link");
 
   var path = construct_link();
@@ -2107,7 +2089,7 @@ var scatter_chart = new Highcharts.Chart({
  * @param {Int} max_dps
  */
 function create_color(dps, min_dps, max_dps) {
-  if (dev_mode)
+  if (debug)
     console.log("create_color");
 
   // colour of lowest DPS
@@ -2151,7 +2133,7 @@ function create_color(dps, min_dps, max_dps) {
  * Creates a series based on the loaded data and pushes it into the scatter chart
  */
 function update_scatter_chart() {
-  if (dev_mode)
+  if (debug)
     console.log("update_scatter_chart");
 
   // get max dps of the whole data set
