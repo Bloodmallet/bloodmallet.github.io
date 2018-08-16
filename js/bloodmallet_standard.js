@@ -5,7 +5,7 @@
 ---------------------------------------------------------*/
 
 /* Variable intended for dev mode specific output/markings */
-var debug = false;
+const debug = false;
 
 /** visual modes
  *   hidden: hides these general elements
@@ -35,18 +35,19 @@ const modes = {
   }
 };
 
-var loaded_data = {};
+let loaded_data = {};
 
-var chosen_class = "";
-var chosen_spec = "";
-var chosen_talent_combination = "";
-var chosen_azerite_list_type = "";
+let chosen_class = "";
+let chosen_spec = "";
+let chosen_talent_combination = "";
+let chosen_azerite_list_type = "";
 
-var dark_mode = true;
-var bloodyfiller = "mallet";
+let dark_mode = true;
+let filler_rarity=0;
+let bloodyfiller = "mallet";
 
-var language = "EN";
-var loaded_languages = {};
+let language = "EN";
+let loaded_languages = {};
 
 /** translate defined IDs based on data */
 const translation_IDs = [
@@ -118,9 +119,9 @@ const translation_classes = [
 ];
 
 
-var mode = "welcome";
-var fight_style = "patchwerk";
-var data_view = "trinkets";
+let mode = "welcome";
+let fight_style = "patchwerk";
+let data_view = "trinkets";
 
 const data_view_IDs = [
   "show_trinkets_data", // => trinkets
@@ -148,13 +149,13 @@ const azerite_trait_view_type_IDs = [
   "chart_type_trait_stacking"
 ];
 
-var light_color = "rgba(238, 238, 238, 1.0)"; // #eee
-var medium_color = "#999"
-var dark_color = "#343a40";
+const light_color = "#eeeeee";
+const medium_color = "#999999";
+const dark_color = "#343a40";
 
-var font_size = "1.1rem";
+const font_size = "1.1rem";
 
-var empty_chart = {
+const empty_chart = {
   chart: {
     type: "bar",
     backgroundColor: null,
@@ -391,10 +392,10 @@ var empty_chart = {
   }
 };
 
-var standard_chart = Highcharts.chart('chart', empty_chart);
+const standard_chart = Highcharts.chart('chart', empty_chart);
 
 // invalid ilevels to use highcharts base colours but keep the old ones
-var ilevel_color_table = {
+const ilevel_color_table = {
   "00": "#1f78b4",
   "10": "#a6cee3",
   "20": "#33a02c",
@@ -648,30 +649,27 @@ document.addEventListener("DOMContentLoaded", function () {
 function randomize_bloodyfiller() {
   if (debug)
     console.log("randomize_bloodyfiller");
-  var roll = Math.floor(Math.random() * (filler_possibilities_common.length + 1));
-  while (filler_possibilities_common[roll] == bloodyfiller) {
-    roll = Math.floor(Math.random() * (filler_possibilities_common.length + 1));
+  let roll;
+  let filler_possibilities;
+  switch(filler_rarity){
+    case 0:
+      filler_possibilities=filler_possibilities_common;
+      break;
+    case 1:
+      filler_possibilities=filler_possibilities_rare;
+      break;
+    case 2:
+      filler_possibilities=filler_possibilities_epic;
+      break;
   }
-  if (roll == filler_possibilities_common.length) {
-    roll = Math.floor(Math.random() * filler_possibilities_rare.length + 1);
-    while (filler_possibilities_rare[roll] == bloodyfiller) {
-      roll = Math.floor(Math.random() * filler_possibilities_rare.length + 1);
+  do {
+    roll=Math.floor(Math.random() * (filler_possibilities.length + 1));
+    if(roll=filler_possibilities.length){
+      filler_rarity++;
     }
-    if (roll == filler_possibilities_rare.length) {
-      roll = Math.floor(Math.random() * filler_possibilities_epic.length);
-      while (filler_possibilities_rare[roll] == bloodyfiller) {
-        roll = Math.floor(Math.random() * filler_possibilities_epic.length);
-      }
-      document.getElementById("bloodyfiller").innerHTML = filler_possibilities_epic[roll];
-      bloodyfiller = filler_possibilities_epic[roll];
-    } else {
-      document.getElementById("bloodyfiller").innerHTML = filler_possibilities_rare[roll];
-      bloodyfiller = filler_possibilities_rare[roll];
-    }
-  } else {
-    document.getElementById("bloodyfiller").innerHTML = filler_possibilities_common[roll];
-    bloodyfiller = filler_possibilities_common[roll];
-  }
+  } while(roll===filler_possibilities.length);
+
+  bloodyfiller = filler_possibilities[roll];
 }
 
 
@@ -695,36 +693,21 @@ document.addEventListener("DOMContentLoaded", function () {
 /**
  * Switches the language and calls translate_page and translate_chart to do the actual translation.
 */
-function switch_language(new_language) {
-  if (debug)
-    console.log("switch_language");
+async function switch_language(new_language) {
+  debug && console.log("switch_language");
 
   if (language === new_language) {
-    if (debug)
-      console.log("switch_language early exit");
+    debug && console.log("switch_language early exit");
     return;
   }
 
   // if new language is different to already active language and if it wasn't already loaded
   if (!loaded_languages[new_language]) {
-    fetch(`./translations/${new_language.toLowerCase()}.json`)
-      .then(function (response) {
-        return response.json();
-      })
-      .then(function (json) {
-        loaded_languages[new_language] = json;
-      });
+    let response = await fetch(`./translations/${new_language.toLowerCase()}.json`);
+    loaded_languages = await  response.json();
   }
   language = new_language;
-  if (debug) {
-    console.log("Setting language to " + new_language);
-    console.log("Set language to " + language);
-  }
   set_language_cookie();
-  // added delay to wait for the page to actually save the loaded data into the variable
-  setTimeout(translate_page, 15);
-  if (debug)
-    console.log("call translate_chart from switch_language");
   translate_chart();
 }
 
@@ -736,15 +719,6 @@ function translate_page() {
   if (debug)
     console.log("translate_page");
 
-  // artificial delay until loaded data is properly saved in variable
-  try {
-    loaded_languages[language][translation_IDs[0]];
-  } catch (err) {
-    if (debug)
-      console.log("Gotta wait until data is actually saved to variable");
-    return setTimeout(translate_page, 15);
-  }
-
   // get the translation options
   var language_html_elements = document.getElementById("languageSelector").options;
   // de-select whatever language option was chosen
@@ -753,7 +727,7 @@ function translate_page() {
   // select the new language in the settings based on data
   for (let index = 0; index < language_html_elements.length; index++) {
     const element = language_html_elements[index];
-    if (element.value == language) {
+    if (element.value === language) {
       element.selected = true;
     }
   }
@@ -813,36 +787,30 @@ function translate_chart() {
   if (debug)
     console.log("translate_chart");
 
-  if (data_view != "trinkets" && data_view != "azerite_traits") {
+  if (data_view !== "trinkets" && data_view !== "azerite_traits") {
     if (debug)
       console.log("translate_chart early exit");
     return;
   }
-  if (chosen_class == "" || chosen_spec == "") {
-    if (debug)
-      console.log("translate_chart early exit");
-    return;
-  }
-
-  if (language == "EN") {
+  if (chosen_class === "" || chosen_spec === "") {
     if (debug)
       console.log("translate_chart early exit");
     return;
   }
 
   if (document.getElementById("translator_helper").childElementCount > 0) {
-    console.log("Another translation seems to be in progress. translate_chart early exit.")
+    console.log("Another translation seems to be in progress. translate_chart early exit.");
     return;
   }
 
   try {
-    if (data_view == "azerite_traits" && ["head", "shoulders", "chest"].includes(chosen_azerite_list_type)) {
+    if (data_view === "azerite_traits" && ["head", "shoulders", "chest"].includes(chosen_azerite_list_type)) {
       Object.keys(loaded_data[chosen_class][chosen_spec][data_view + "_" + chosen_azerite_list_type][fight_style]['data']);
     } else {
       Object.keys(loaded_data[chosen_class][chosen_spec][data_view][fight_style]['data']);
     }
   } catch (err) {
-    console.log("translate_chart data was not saved yet, retrying.")
+    console.log("translate_chart data was not saved yet, retrying.");
     setTimeout(translate_chart, 4);
     return;
   }
@@ -867,13 +835,8 @@ function translate_chart() {
     let new_link = document.createElement("a");
     // TODO: will need more logic for azerite traits later
     let link = "https://";
-
-    if (language == "EN") {
-      link += "www";
-    } else {
-      link += language.toLowerCase();
-    }
-    if (data_view == "azerite_traits" && ["itemlevel", "trait_stacking"].includes(chosen_azerite_list_type)) {
+    link += language.toLowerCase();
+    if (data_view === "azerite_traits" && ["itemlevel", "trait_stacking"].includes(chosen_azerite_list_type)) {
       link += ".wowhead.com/spell=";
       link += current_data["spell_ids"][trinket];
     } else {
@@ -890,7 +853,7 @@ function translate_chart() {
       // add class id
       link += current_data["class_id"];
       // add azerite traits
-      for (trait of current_data["used_azerite_traits_per_item"][trinket]) {
+      for (let trait of current_data["used_azerite_traits_per_item"][trinket]) {
         link += ":" + trait["id"];
       }
       link += "&ilvl=" + current_data["simulated_steps"][current_data["simulated_steps"].length - 1].split("1_")[1];
@@ -957,7 +920,7 @@ function update_link_data(original_list) {
 
     let original_link = original_list[a];
     let new_link = document.getElementById("translator_helper").childNodes[a].outerHTML;
-    if (original_link.split(">").length == new_link.split(">").length && original_link.indexOf("baseline") == -1) {
+    if (original_link.split(">").length === new_link.split(">").length && original_link.indexOf("baseline") == -1) {
       all_translated = false;
     }
   }
@@ -1180,7 +1143,7 @@ function get_data_from_link() {
     }
   }
 
-  if (hash.indexOf("&") == -1) {
+  if (hash.indexOf("&") === -1) {
     // rather early exit if no params were provided
     return;
   }
@@ -1190,11 +1153,11 @@ function get_data_from_link() {
   for (const param of params) {
     const key = param.split("=")[0];
     const value = param.split("=")[1];
-    if (key == "data_view") {
+    if (key === "data_view") {
       data_view = value;
-    } else if (key == "fight_style") {
+    } else if (key === "fight_style") {
       fight_style = value;
-    } else if (key == "type") {
+    } else if (key === "type") {
       chosen_azerite_list_type = value;
     }
   }
@@ -1330,12 +1293,9 @@ function update_data_buttons() {
   document.getElementById("show_" + data_view + "_data").classList.add(chosen_class + "-border-bottom");
 
   // unhide/hide talent combination selection if necessary
-  if (data_view == "secondary_distributions") {
-    document.getElementById("talent_combination_selector").hidden = false;
-  } else {
-    document.getElementById("talent_combination_selector").hidden = true;
-  }
-  if (data_view == "azerite_traits") {
+  document.getElementById("talent_combination_selector").hidden = (data_view !== "secondary_distributions");
+
+  if (data_view === "azerite_traits") {
     document.getElementById("chart_type_head").hidden = false;
     document.getElementById("chart_type_shoulders").hidden = false;
     document.getElementById("chart_type_chest").hidden = false;
@@ -1357,8 +1317,8 @@ function update_talent_selector() {
   if (debug)
     console.log("update_talent_selector");
 
-  if (data_view != "secondary_distributions")
-    return
+  if (data_view !== "secondary_distributions")
+    return;
 
   let talent_combinations = Object.keys(loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"]);
 
@@ -1367,10 +1327,10 @@ function update_talent_selector() {
 
   chosen_talent_combination = talent_combinations[0];
 
-  for (talent_combination of talent_combinations) {
+  for (let talent_combination of talent_combinations) {
     let new_option = document.createElement("option");
     new_option.text = talent_combination;
-    if (talent_combination == chosen_talent_combination)
+    if (talent_combination === chosen_talent_combination)
       new_option.selected = true;
     talent_selector.add(new_option);
   }
@@ -1397,7 +1357,7 @@ function update_fight_style_buttons() {
 function update_azerite_buttons() {
   if (debug)
     console.log("update_azerite_buttons");
-  if (data_view != "azerite_traits") {
+  if (data_view !== "azerite_traits") {
     if (debug)
       console.log("update_azerite_buttons early exit");
     return;
@@ -1455,7 +1415,7 @@ function update_chart() {
   if (debug)
     console.log("update_chart");
 
-  if (data_view == "secondary_distributions") {
+  if (data_view === "secondary_distributions") {
     document.getElementById("scatter_plot_chart").hidden = false;
     document.getElementById("chart").hidden = true;
     update_scatter_chart();
@@ -1465,7 +1425,7 @@ function update_chart() {
     document.getElementById("chart").hidden = false;
   }
 
-  if (data_view == "azerite_traits" && chosen_azerite_list_type == "trait_stacking") {
+  if (data_view === "azerite_traits" && chosen_azerite_list_type === "trait_stacking") {
     return update_trait_stacking_chart();
   }
 
@@ -1582,7 +1542,7 @@ function update_chart() {
     if (debug)
       console.log("simulated_steps in data found.");
 
-    for (itemlevel_position in loaded_data[chosen_class][chosen_spec][data_name][fight_style]["simulated_steps"]) {
+    for (let itemlevel_position in loaded_data[chosen_class][chosen_spec][data_name][fight_style]["simulated_steps"]) {
 
       let itemlevel = loaded_data[chosen_class][chosen_spec][data_name][fight_style]["simulated_steps"][itemlevel_position];
       let itemlevel_dps_values = [];
@@ -1601,7 +1561,7 @@ function update_chart() {
         if (dps > 0) {
 
           // if lowest itemlevel is looked at, substract baseline
-          if (itemlevel_position == loaded_data[chosen_class][chosen_spec][data_name][fight_style]["simulated_steps"].length - 1) {
+          if (itemlevel_position === loaded_data[chosen_class][chosen_spec][data_name][fight_style]["simulated_steps"].length - 1) {
 
             if (itemlevel in loaded_data[chosen_class][chosen_spec][data_name][fight_style]["data"][data]) {
               itemlevel_dps_values.push(dps - loaded_data[chosen_class][chosen_spec][data_name][fight_style]["data"]["baseline"][min_ilevel]);
@@ -1644,7 +1604,7 @@ function update_chart() {
   } else { // if no itemlevels were used the dps values are exactly at the keys
 
     var dps_values = [];
-    for (category of dps_ordered_data) {
+    for (let category of dps_ordered_data) {
       dps_values.push(loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"][category]);
     }
 
@@ -1678,10 +1638,10 @@ function update_trait_stacking_chart() {
   }
 
   // change item/spell names to wowhead links
-  ordered_trinket_list = [];
+  let ordered_trinket_list = [];
   for (let i in dps_ordered_data) {
     let string = "<a href=\"https://";
-    if (language == "EN") {
+    if (language === "EN") {
       string += "www";
     } else {
       string += language.toLowerCase();
@@ -1718,7 +1678,7 @@ function update_trait_stacking_chart() {
   }
 
   // basically: if something was simmed with multiple itemlevels
-  for (stack_count of [3, 2, 1]) {
+  for (let stack_count of [3, 2, 1]) {
     let max_itemlevel = loaded_data[chosen_class][chosen_spec][data_view][fight_style]["simulated_steps"][0].split("_")[1];
 
     let stack_name = stack_count + "_" + max_itemlevel;
@@ -1738,7 +1698,7 @@ function update_trait_stacking_chart() {
       if (dps > 0) {
 
         // if lowest itemlevel is looked at, substract baseline
-        if (stack_count == 1) {
+        if (stack_count === 1) {
 
           itemlevel_dps_values.push(dps - baseline_dps);
 
@@ -1925,13 +1885,6 @@ var scatter_chart = new Highcharts.Chart({
   },
   series: [
   ],
-  subtitle: {
-    text: "Subtitle placeholder",
-    useHTML: true,
-    style: {
-      color: light_color
-    }
-  },
   title: {
     text: "", //"Title placeholder",
     useHTML: true,
@@ -2136,7 +2089,7 @@ function update_scatter_chart() {
   };
 
   // add a marker for each distribution in the data set
-  for (distribution of Object.keys(loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"][chosen_talent_combination])) {
+  for (let distribution of Object.keys(loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"][chosen_talent_combination])) {
 
     // get the markers color
     let color_set = create_color(
@@ -2152,7 +2105,7 @@ function update_scatter_chart() {
     // worst dps: 2
     // max dps: 5 (increased to 8 to fit the additional border)
     let radius = 2 + 3 * (loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"][chosen_talent_combination][distribution] - min_dps) / (max_dps - min_dps)
-    if (max_dps == loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"][chosen_talent_combination][distribution]) {
+    if (max_dps === loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"][chosen_talent_combination][distribution]) {
       line_width = 3;
       radius = 8;
       line_color = light_color;
