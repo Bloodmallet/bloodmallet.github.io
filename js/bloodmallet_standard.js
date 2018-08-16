@@ -40,7 +40,7 @@ let loaded_data = {};
 let chosen_class = "";
 let chosen_spec = "";
 let chosen_talent_combination = "";
-let chosen_azerite_list_type = "";
+let chosen_azerite_list_type = "head";
 
 let dark_mode = true;
 let filler_rarity=0;
@@ -961,105 +961,51 @@ document.addEventListener("DOMContentLoaded", function () {
 /**
  * Apply click events for data manipulation.
  */
-document.addEventListener("DOMContentLoaded", function () {
-  try {
-    document.getElementById("show_trinkets_data").addEventListener("click", function () {
-      data_view = "trinkets";
-      push_state();
-    });
-  } catch (err) {
-    console.log("show_trinkets_data was not found in page.");
-  }
-
-  try {
-    document.getElementById("show_azerite_traits_data").addEventListener("click", function () {
-      data_view = "azerite_traits";
-      if (!chosen_azerite_list_type) {
-        chosen_azerite_list_type = "head";
-      }
-      push_state();
-    });
-  } catch (err) {
-    console.log("show_azerite_traits_data was not found in page.");
-  }
-  try {
-    document.getElementById("chart_type_head").addEventListener("click", function () {
-      chosen_azerite_list_type = "head";
-      push_state();
-    });
-  } catch (err) {
-    console.log("chart_type_head was not found in page.");
-  }
-  try {
-    document.getElementById("chart_type_shoulders").addEventListener("click", function () {
-      chosen_azerite_list_type = "shoulders";
-      push_state();
-    });
-  } catch (err) {
-    console.log("chart_type_shoulders was not found in page.");
-  }
-  try {
-    document.getElementById("chart_type_chest").addEventListener("click", function () {
-      chosen_azerite_list_type = "chest";
-      push_state();
-    });
-  } catch (err) {
-    console.log("chart_type_chest was not found in page.");
-  }
-  try {
-    document.getElementById("chart_type_itemlevel").addEventListener("click", function () {
-      chosen_azerite_list_type = "itemlevel";
-      push_state();
-    });
-  } catch (err) {
-    console.log("chart_type_itemlevel was not found in page.");
-  }
-
-  try {
-    document.getElementById("chart_type_trait_stacking").addEventListener("click", function () {
-      chosen_azerite_list_type = "trait_stacking";
-      push_state();
-    });
-  } catch (err) {
-    console.log("chart_type_trait_stacking was not found in page.");
-  }
-
-  try {
-    document.getElementById("show_races_data").addEventListener("click", function () {
-      data_view = "races";
-      push_state();
-    });
-  } catch (err) {
-    console.log("show_races_data was not found in page.");
-  }
-
-  try {
-    document.getElementById("show_secondary_distributions_data").addEventListener("click", function () {
-      data_view = "secondary_distributions";
-      push_state();
-    });
-  } catch (err) {
-    console.log("show_secondary_distribution_data was not found in page.");
-  }
-
-  document.getElementById("fight_style_patchwerk").addEventListener("click", function () {
-    fight_style = "patchwerk";
+function addDataViewClickEvent(elementId, new_data_view) {
+  document.getElementById(elementId).addEventListener("click", function() {
+    data_view = new_data_view;
     push_state();
-  });
-  // document.getElementById("fight_style_beastlord").addEventListener("click", function () {
-  //   fight_style = "beastlord";
-  //   push_state();
-  // });
-  document.getElementById("fight_style_hecticaddcleave").addEventListener("click", function () {
-    fight_style = "hecticaddcleave";
-    push_state();
-  });
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-  document.getElementById("copy_link").addEventListener("click", function () {
-    copy_link();
   })
+}
+
+function addAzeriteViewClickEvent(elementId, new_azerite_list_type) {
+  document.getElementById(elementId).addEventListener("click", function() {
+    chosen_azerite_list_type = new_azerite_list_type;
+    push_state();
+  })
+}
+
+function addFightStyleClickEvent(elementId, new_fight_style) {
+  document.getElementById(elementId).addEventListener("click", function() {
+    fight_style = new_fight_style;
+    push_state();
+  })
+}
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  try {
+    addDataViewClickEvent("show_trinkets_data", "trinkets");
+    addDataViewClickEvent("show_azerite_traits_data", "azerite_traits");
+    addDataViewClickEvent("show_secondary_distributions_data", "secondary_distributions");
+    addAzeriteViewClickEvent("chart_type_head", "head");
+    addAzeriteViewClickEvent("chart_type_shoulders", "shoulders");
+    addAzeriteViewClickEvent("chart_type_chest", "chest");
+    addAzeriteViewClickEvent("chart_type_itemlevel", "itemlevel");
+    addAzeriteViewClickEvent("chart_type_trait_stacking", "trait_stacking");
+    addAzeriteViewClickEvent("show_races_data", "races");
+    addFightStyleClickEvent("figth_style_patchwerk", "patchwerk");
+    addFightStyleClickEvent("figth_style_hecticaddcleave", "hecticaddcleave");
+
+    document.addEventListener("DOMContentLoaded", function () {
+      document.getElementById("copy_link").addEventListener("click", function () {
+        copy_link();
+      })
+    });
+
+  } catch (err) {
+    console.log("Couldn't bind click events");
+  }
 });
 
 /**
