@@ -704,7 +704,21 @@ function bloodmallet_chart_import() {
     }
 
     if (tooltip_engine == "wowdb") {
+      readd_wowdb_tooltips();
+    }
+  }
+
+  /**
+   * Function to help catch defered loaded jQuery.
+   */
+  function readd_wowdb_tooltips() {
+    if (dev_mode) {
+      console.log("readd_wow_db_tooltips");
+    }
+    try {
       CurseTips['wowdb-tooltip'].watchElements($('a'));
+    } catch (error) {
+      setTimeout(readd_wowdb_tooltips, 200);
     }
   }
 
