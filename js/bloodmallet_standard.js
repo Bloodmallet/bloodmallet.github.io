@@ -43,7 +43,7 @@ let chosen_talent_combination = "";
 let chosen_azerite_list_type = "head";
 
 let dark_mode = true;
-let filler_rarity=0;
+let filler_rarity = 0;
 let bloodyfiller = "mallet";
 
 let language = "EN";
@@ -234,7 +234,9 @@ const empty_chart = {
       stacking: "normal",
       borderColor: dark_color,
       events: {
-        legendItemClick: function () { return false; }
+        legendItemClick: function () {
+          return false;
+        }
       },
       style: {
         textOutline: false,
@@ -611,7 +613,7 @@ function update_dark_mode() {
 function set_dark_mode_cookie() {
   if (debug)
     console.log("set_dark_mode_cookie");
-  Cookies.set('bloodmallet_dark_mode', dark_mode, { expires: 31, path: '' });
+  Cookies.set('bloodmallet_dark_mode', dark_mode, {expires: 31, path: ''});
 }
 
 /** searches for the dark mode cookie and updates the page if necessary */
@@ -651,23 +653,27 @@ function randomize_bloodyfiller() {
     console.log("randomize_bloodyfiller");
   let roll;
   let filler_possibilities;
-  switch(filler_rarity){
+  switch (filler_rarity) {
     case 0:
-      filler_possibilities=filler_possibilities_common;
+    default:
+      filler_possibilities = filler_possibilities_common;
       break;
     case 1:
-      filler_possibilities=filler_possibilities_rare;
+      filler_possibilities = filler_possibilities_rare;
       break;
     case 2:
-      filler_possibilities=filler_possibilities_epic;
+      filler_possibilities = filler_possibilities_epic;
       break;
   }
   do {
-    roll=Math.floor(Math.random() * (filler_possibilities.length + 1));
-    if(roll=filler_possibilities.length){
+    roll = Math.floor(Math.random() * (filler_possibilities.length + 1));
+    if (roll === filler_possibilities.length) {
       filler_rarity++;
     }
-  } while(roll===filler_possibilities.length);
+    if(filler_rarity === 2){
+      break;
+    }
+  } while (roll === filler_possibilities.length);
 
   bloodyfiller = filler_possibilities[roll];
 }
@@ -692,7 +698,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 /**
  * Switches the language and calls translate_page and translate_chart to do the actual translation.
-*/
+ */
 async function switch_language(new_language) {
   debug && console.log("switch_language");
 
@@ -819,7 +825,7 @@ function translate_chart() {
   }
 
   for (let trinket of current_data['sorted_data_keys']) {
-    const lowest_ilvl=current_data["simulated_steps"][current_data["simulated_steps"].length - 1];
+    const lowest_ilvl = current_data["simulated_steps"][current_data["simulated_steps"].length - 1];
     // create untranslated link
     let new_link = document.createElement("a");
     // TODO: will need more logic for azerite traits later
@@ -867,7 +873,9 @@ function translate_chart() {
     console.log("try to trigger wowhead power js");
   trigger_wowhead_link_renaming();
 
-  setTimeout(function () { update_link_data(link_list) }, 200);
+  setTimeout(function () {
+    update_link_data(link_list)
+  }, 200);
 }
 
 /**
@@ -898,13 +906,6 @@ function clear_translator() {
 function update_link_data(original_list) {
   if (debug)
     console.log("update_link_data");
-  for (let a in original_list) {
-
-    let original_link = original_list[a];
-    let new_link = document.getElementById("translator_helper").childNodes[a].outerHTML;
-   // if (original_link.split(">").length === new_link.split(">").length && original_link.indexOf("baseline") === -1) {
-   // }
-  }
 
   let new_categories = [];
   for (let link of document.getElementById("translator_helper").childNodes) {
@@ -929,7 +930,7 @@ function update_link_data(original_list) {
 function set_language_cookie() {
   if (debug)
     console.log("set_language_cookie");
-  Cookies.set('bloodmallet_language_selection', language, { expires: 31, path: '' });
+  Cookies.set('bloodmallet_language_selection', language, {expires: 31, path: ''});
 }
 
 /** Searches for the dark mode cookie and updates the page if necessary. */
@@ -962,24 +963,25 @@ document.addEventListener("DOMContentLoaded", function () {
  * Apply click events for data manipulation.
  */
 function addDataViewClickEvent(elementId, new_data_view) {
-  document.getElementById(elementId).addEventListener("click", function() {
+  document.getElementById(elementId).addEventListener("click", function () {
     data_view = new_data_view;
     push_state();
-  })
+  });
 }
 
 function addAzeriteViewClickEvent(elementId, new_azerite_list_type) {
-  document.getElementById(elementId).addEventListener("click", function() {
+
+  document.getElementById(elementId).addEventListener("click", function () {
     chosen_azerite_list_type = new_azerite_list_type;
     push_state();
-  })
+  });
 }
 
 function addFightStyleClickEvent(elementId, new_fight_style) {
-  document.getElementById(elementId).addEventListener("click", function() {
+  document.getElementById(elementId).addEventListener("click", function () {
     fight_style = new_fight_style;
     push_state();
-  })
+  });
 }
 
 
@@ -994,8 +996,8 @@ document.addEventListener("DOMContentLoaded", function () {
     addAzeriteViewClickEvent("chart_type_itemlevel", "itemlevel");
     addAzeriteViewClickEvent("chart_type_trait_stacking", "trait_stacking");
     addAzeriteViewClickEvent("show_races_data", "races");
-    addFightStyleClickEvent("figth_style_patchwerk", "patchwerk");
-    addFightStyleClickEvent("figth_style_hecticaddcleave", "hecticaddcleave");
+    addFightStyleClickEvent("fight_style_patchwerk", "patchwerk");
+    addFightStyleClickEvent("fight_style_hecticaddcleave", "hecticaddcleave");
 
     document.addEventListener("DOMContentLoaded", function () {
       document.getElementById("copy_link").addEventListener("click", function () {
@@ -1005,6 +1007,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   } catch (err) {
     console.log("Couldn't bind click events");
+    debug && console.log(err);
   }
 });
 
@@ -1173,7 +1176,7 @@ function push_state() {
   if (debug) {
     console.log("push_state");
   }
-  history.pushState({ id: 'data_view' }, chosen_spec + " " + chosen_class + " | " + data_view + " | " + fight_style, construct_link());
+  history.pushState({id: 'data_view'}, chosen_spec + " " + chosen_class + " | " + data_view + " | " + fight_style, construct_link());
   switch_to_data();
 }
 
@@ -1214,11 +1217,11 @@ function update_data_buttons() {
 
   let is_azerite = (data_view === "azerite_traits");
 
-    document.getElementById("chart_type_head").hidden = !is_azerite;
-    document.getElementById("chart_type_shoulders").hidden = !is_azerite;
-    document.getElementById("chart_type_chest").hidden = !is_azerite;
-    document.getElementById("chart_type_itemlevel").hidden = !is_azerite;
-    document.getElementById("chart_type_trait_stacking").hidden = !is_azerite;
+  document.getElementById("chart_type_head").hidden = !is_azerite;
+  document.getElementById("chart_type_shoulders").hidden = !is_azerite;
+  document.getElementById("chart_type_chest").hidden = !is_azerite;
+  document.getElementById("chart_type_itemlevel").hidden = !is_azerite;
+  document.getElementById("chart_type_trait_stacking").hidden = !is_azerite;
 }
 
 /**
@@ -1371,7 +1374,7 @@ function update_chart() {
       if (data_view == "azerite_traits" && ["itemlevel", "trait_stacking"].includes(chosen_azerite_list_type)) {
         let link = "<a href=\"https://";
 
-          link += language.toLowerCase();
+        link += language.toLowerCase();
 
         link += ".wowhead.com/spell=";
         link += loaded_data[chosen_class][chosen_spec][data_name][fight_style]["spell_ids"][dps_ordered_data[i]];
@@ -1432,9 +1435,8 @@ function update_chart() {
   standard_chart.setTitle({
     text: new_title //loaded_data[chosen_class][chosen_spec][data_view][fight_style]["title"]
   }, {
-      text: loaded_data[chosen_class][chosen_spec][data_name][fight_style]["subtitle"]
-    }, false);
-
+    text: loaded_data[chosen_class][chosen_spec][data_name][fight_style]["subtitle"]
+  }, false);
 
 
   // delete all old series data
@@ -1546,7 +1548,7 @@ function update_trait_stacking_chart() {
   let ordered_trinket_list = [];
   for (let i in dps_ordered_data) {
     let string = "<a href=\"https://";
-      string += language.toLowerCase();
+    string += language.toLowerCase();
     string += ".wowhead.com/spell=";
     string += loaded_data[chosen_class][chosen_spec][data_view][fight_style]["spell_ids"][dps_ordered_data[i]];
     string += "\" target=\"blank\">" + dps_ordered_data[i] + "</a>";
@@ -1568,9 +1570,8 @@ function update_trait_stacking_chart() {
   standard_chart.setTitle({
     text: "Same itemlevel; different number of traits"
   }, {
-      text: loaded_data[chosen_class][chosen_spec][data_view][fight_style]["subtitle"]
-    }, false);
-
+    text: loaded_data[chosen_class][chosen_spec][data_view][fight_style]["subtitle"]
+  }, false);
 
 
   // delete all old series data
@@ -1641,8 +1642,8 @@ function empty_charts() {
     standard_chart.series[0].remove(false);
   }
   standard_chart.setTitle({
-    //text: loaded_data[chosen_class][chosen_spec][data_view][fight_style]["title"]
-  }, {
+      //text: loaded_data[chosen_class][chosen_spec][data_view][fight_style]["title"]
+    }, {
       text: "No data available / Loading..."
     }
   );
@@ -1652,8 +1653,8 @@ function empty_charts() {
     scatter_chart.series[0].remove(false);
   }
   scatter_chart.setTitle({
-    //text: loaded_data[chosen_class][chosen_spec][data_view][fight_style]["title"]
-  }, {
+      //text: loaded_data[chosen_class][chosen_spec][data_view][fight_style]["title"]
+    }, {
       text: "No data available / Loading..."
     }
   );
@@ -1733,7 +1734,9 @@ function copy_link() {
 
   let success_message = document.getElementById("copy_success");
   success_message.className = "show";
-  setTimeout(function () { success_message.className = success_message.className.replace("show", ""); }, 3000);
+  setTimeout(function () {
+    success_message.className = success_message.className.replace("show", "");
+  }, 3000);
 
 }
 
@@ -1765,8 +1768,8 @@ var scatter_chart = new Highcharts.Chart({
     align: "right",
     verticalAlign: "middle",
     layout: "vertical",
-    itemStyle: { "color": light_color },
-    itemHoverStyle: { "color": light_color }
+    itemStyle: {"color": light_color},
+    itemHoverStyle: {"color": light_color}
   },
   plotOptions: {
     series: {
@@ -1780,12 +1783,13 @@ var scatter_chart = new Highcharts.Chart({
         }
       },
       events: {
-        legendItemClick: function () { return false; }
+        legendItemClick: function () {
+          return false;
+        }
       },
     },
   },
-  series: [
-  ],
+  series: [],
   title: {
     text: "", //"Title placeholder",
     useHTML: true,
@@ -1917,6 +1921,7 @@ var scatter_chart = new Highcharts.Chart({
     H.addEvent(document, 'mouseup', scatter_chart.unbindDragMouse);
     H.addEvent(document, 'touchend', scatter_chart.unbindDragTouch);
   }
+
   H.addEvent(scatter_chart.container, 'mousedown', dragStart);
   H.addEvent(scatter_chart.container, 'touchstart', dragStart);
 }(Highcharts));
@@ -2044,7 +2049,7 @@ function update_scatter_chart() {
           break;
       }
     }
-  const secondary_sum = loaded_data[chosen_class][chosen_spec][data_view][fight_style]["secondary_sum"];
+    const secondary_sum = loaded_data[chosen_class][chosen_spec][data_view][fight_style]["secondary_sum"];
     // push marker data into the series
     series.data.push({
       // formulas slowly snailed together from combining different relations within https://en.wikipedia.org/wiki/Equilateral_triangle and https://en.wikipedia.org/wiki/Pythagorean_theorem
@@ -2095,10 +2100,10 @@ function update_scatter_chart() {
 
   scatter_chart.addSeries(series, false);
   // make sure this color matches the value of color_min in create_color(...)
-  scatter_chart.addSeries({ name: Intl.NumberFormat().format(min_dps) + " DPS", color: "#00FFFF" }, false);
+  scatter_chart.addSeries({name: Intl.NumberFormat().format(min_dps) + " DPS", color: "#00FFFF"}, false);
   scatter_chart.setTitle({
-    //text: loaded_data[chosen_class][chosen_spec][data_view][fight_style]["title"]
-  }, {
+      //text: loaded_data[chosen_class][chosen_spec][data_view][fight_style]["title"]
+    }, {
       text: loaded_data[chosen_class][chosen_spec][data_view][fight_style]["subtitle"]
     }
   );
