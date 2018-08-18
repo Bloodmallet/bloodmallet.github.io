@@ -87,7 +87,7 @@ function bloodmallet_chart_import() {
    * The toggles you want are all above this section.
    */
 
-  var dev_mode = false;
+  var dev_mode = true;
 
   var data_entries = default_data_entries;
   var data_type = default_data_type;
@@ -713,10 +713,10 @@ function bloodmallet_chart_import() {
    */
   function readd_wowdb_tooltips() {
     if (dev_mode) {
-      console.log("readd_wow_db_tooltips");
+      console.log("readd_wowdb_tooltips");
     }
     try {
-      CurseTips['wowdb-tooltip'].watchElements($('a'));
+      CurseTips['wowdb-tooltip'].watchElements(document.getElementsByTagName('a'));
     } catch (error) {
       setTimeout(readd_wowdb_tooltips, 200);
     }
