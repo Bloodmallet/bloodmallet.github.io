@@ -87,7 +87,7 @@ function bloodmallet_chart_import() {
    * The toggles you want are all above this section.
    */
 
-  var dev_mode = true;
+  var dev_mode = false;
 
   var data_entries = default_data_entries;
   var data_type = default_data_type;
