@@ -792,13 +792,24 @@ select#talent_combination_selector {
   padding-right: 0px;
   width: 23px;
   height: 23px;
-  fill: #828282;
+  fill: currentColor;
   vertical-align: text-top;
 }
 a:hover .svg-icon {
-  fill: #eee;
+  fill: currentColor;
 }
 
+
+/* Tier icons */
+.tier-icon {
+  display: inline-block;
+  padding-right: 0px;
+  margin-right: 3px;
+  width: 23px;
+  height: 23px;
+  stroke: currentColor;
+  vertical-align: text-top;
+}
 
 /* The snackbar - position it at the bottom and in the middle of the screen */
 #copy_success {
