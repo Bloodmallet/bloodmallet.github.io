@@ -41,6 +41,7 @@ let chosen_class = "";
 let chosen_spec = "";
 let chosen_talent_combination = "";
 let chosen_azerite_list_type = "head";
+let chosen_azerite_tier = 1;
 
 let dark_mode = true;
 let filler_rarity = 0;
@@ -147,6 +148,9 @@ const azerite_trait_view_type_IDs = [
   "chart_type_chest",
   "chart_type_itemlevel",
   "chart_type_trait_stacking",
+];
+
+const azerite_trait_tier_IDs = [
   "azerite_traits_tier_1",
   "azerite_traits_tier_2"
 ];
@@ -845,7 +849,14 @@ function translate_chart() {
     return;
   }
 
-  for (let trinket of current_data['sorted_data_keys']) {
+  let appropriate_data_key_list = [];
+  if (data_view === "azerite_traits" && ["itemlevel", "trait_stacking"].includes(chosen_azerite_list_type)) {
+    appropriate_data_key_list = current_data["sorted_azerite_tier_" + chosen_azerite_tier + "_" + chosen_azerite_list_type];
+  } else {
+    appropriate_data_key_list = current_data["sorted_data_keys"];
+  }
+
+  for (let trinket of appropriate_data_key_list) {
     const lowest_ilvl = current_data["simulated_steps"][current_data["simulated_steps"].length - 1];
     // create untranslated link
     let new_link = document.createElement("a");
@@ -1018,6 +1029,14 @@ function addAzeriteViewClickEvent(elementId, new_azerite_list_type) {
   });
 }
 
+function addAzeriteTierClickEvent(elementId, new_azerite_tier) {
+
+  document.getElementById(elementId).addEventListener("click", function () {
+    chosen_azerite_tier = new_azerite_tier;
+    push_state();
+  });
+}
+
 function addFightStyleClickEvent(elementId, new_fight_style) {
   document.getElementById(elementId).addEventListener("click", function () {
     fight_style = new_fight_style;
@@ -1036,6 +1055,8 @@ document.addEventListener("DOMContentLoaded", function () {
     addAzeriteViewClickEvent("chart_type_chest", "chest");
     addAzeriteViewClickEvent("chart_type_itemlevel", "itemlevel");
     addAzeriteViewClickEvent("chart_type_trait_stacking", "trait_stacking");
+    addAzeriteTierClickEvent("azerite_traits_tier_1", 1);
+    addAzeriteTierClickEvent("azerite_traits_tier_2", 2);
     addFightStyleClickEvent("fight_style_patchwerk", "patchwerk");
     addFightStyleClickEvent("fight_style_hecticaddcleave", "hecticaddcleave");
 
@@ -1122,6 +1143,8 @@ function get_data_from_link() {
       fight_style = value;
     } else if (key === "type") {
       chosen_azerite_list_type = value;
+    } else if (key === "tier") {
+      chosen_azerite_tier = value;
     } else if (key === "lang") {
       switch_language(value);
     }
@@ -1260,6 +1283,10 @@ function update_data_buttons() {
   document.getElementById("chart_type_chest").hidden = !is_azerite;
   document.getElementById("chart_type_itemlevel").hidden = !is_azerite;
   document.getElementById("chart_type_trait_stacking").hidden = !is_azerite;
+
+  let is_traits = (chosen_azerite_list_type === "itemlevel" || chosen_azerite_list_type === "trait_stacking");
+  document.getElementById("azerite_traits_tier_1").hidden = !is_traits;
+  document.getElementById("azerite_traits_tier_2").hidden = !is_traits;
 }
 
 /**
@@ -1330,8 +1357,12 @@ function update_azerite_buttons() {
   azerite_trait_view_type_IDs.forEach(element => {
     document.getElementById(element).className = "btn-data " + chosen_class + "-button";
   });
+  azerite_trait_tier_IDs.forEach(element => {
+    document.getElementById(element).className = "btn-data " + chosen_class + "-button";
+  });
   // set "active" to class color
   document.getElementById("chart_type_" + chosen_azerite_list_type).classList.add(chosen_class + "-border-bottom");
+  document.getElementById("azerite_traits_tier_" + chosen_azerite_tier).classList.add(chosen_class + "-border-bottom");
 }
 
 /**
@@ -1411,10 +1442,15 @@ function update_chart() {
   // dps_ordered_data = dps_ordered_data.map(x => x[0]);
   // or.... just use the provided sorted list once that is included in fresh data
   if ("sorted_data_keys" in loaded_data[chosen_class][chosen_spec][data_name][fight_style]) {
-    var dps_ordered_data = loaded_data[chosen_class][chosen_spec][data_name][fight_style]["sorted_data_keys"];
+    var dps_ordered_data = [];
+
+    if (data_view === "azerite_traits" && ["itemlevel", "trait_stacking"].includes(chosen_azerite_list_type)) {
+      dps_ordered_data = loaded_data[chosen_class][chosen_spec][data_name][fight_style]["sorted_azerite_tier_" + chosen_azerite_tier + "_" + chosen_azerite_list_type];
+    } else {
+      dps_ordered_data = loaded_data[chosen_class][chosen_spec][data_name][fight_style]["sorted_data_keys"];
+    }
   } else {
-    if (debug)
-      console.log("Getting sorted_data_keys from data failed. Set unordered dps_ordered_data");
+    debug && console.log("Getting sorted_data_keys from data failed. Set unordered dps_ordered_data");
     var dps_ordered_data = Object.keys(loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"]);
   }
 
@@ -1599,7 +1635,13 @@ function update_trait_stacking_chart() {
     console.log("update_trait_stacking_chart");
 
   if ("sorted_data_keys_2" in loaded_data[chosen_class][chosen_spec][data_view][fight_style]) {
-    var dps_ordered_data = loaded_data[chosen_class][chosen_spec][data_view][fight_style]["sorted_data_keys_2"];
+    var dps_ordered_data = [];
+    if (data_view === "azerite_traits" && ["itemlevel", "trait_stacking"].includes(chosen_azerite_list_type)) {
+      dps_ordered_data = loaded_data[chosen_class][chosen_spec][data_view][fight_style]["sorted_azerite_tier_" + chosen_azerite_tier + "_" + chosen_azerite_list_type];
+    } else {
+      dps_ordered_data = loaded_data[chosen_class][chosen_spec][data_view][fight_style]["sorted_data_keys"];
+    }
+
   } else {
     if (debug)
       console.log("Getting sorted_data_keys from data failed. Set unordered dps_ordered_data");
@@ -1791,6 +1833,9 @@ function create_link() {
   path += "?data_view=" + data_view;
   if (data_view == "azerite_traits") {
     path += "&type=" + chosen_azerite_list_type;
+  }
+  if (chosen_azerite_list_type === "itemlevel" || chosen_azerite_list_type === "trait_stacking") {
+    path += "&tier=" + chosen_azerite_tier;
   }
   path += "&fight_style=" + fight_style;
   path += "&lang=" + language;
