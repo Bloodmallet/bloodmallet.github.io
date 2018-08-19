@@ -662,8 +662,6 @@ async function switch_language(new_language) {
   }
   language = new_language;
   set_language_cookie();
-  translate_page();
-  translate_chart();
   push_state();
 }
 
