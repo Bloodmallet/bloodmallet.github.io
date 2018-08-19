@@ -757,7 +757,6 @@ function translate_page() {
 
   // translate content of IDs
   translation_IDs.forEach(element => {
-    console.log(element);
     if (loaded_languages[language][element] && loaded_languages[language][element] !== "") {
       document.getElementById(element).innerHTML = loaded_languages[language][element];
     } else if (loaded_languages[language][element] === "") {
@@ -823,7 +822,7 @@ function translate_chart() {
   }
 
   if (document.getElementById("translator_helper").childElementCount > 0) {
-    console.log("Another translation seems to be in progress. translate_chart early exit.");
+    debug && console.log("Another translation seems to be in progress. translate_chart early exit.");
     return;
   }
 
