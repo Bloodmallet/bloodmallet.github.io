@@ -704,6 +704,12 @@ function translate_page() {
 }
 
 function translate_element(element) {
+  if(!loaded_languages[language]){
+    if(debug){
+      console.log(`Language package ${language} wasn't loaded`);
+    }
+    return;
+  }
   const translated_element=loaded_languages[language][element];
   [].forEach.call(document.getElementsByClassName(element),function (html_element) {
     if (!translated_element) {
@@ -722,7 +728,7 @@ function translate_element(element) {
       return;
     }
 
-    html_element.innerHTML = loaded_languages[language][element];
+    html_element.innerHTML = translated_element;
   });
 }
 
