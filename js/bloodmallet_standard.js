@@ -5,7 +5,7 @@
 ---------------------------------------------------------*/
 
 /* Variable intended for dev mode specific output/markings */
-const debug = false;
+const debug = true;
 
 /** visual modes
  *   hidden: hides these general elements
@@ -43,7 +43,6 @@ let chosen_talent_combination = "";
 let chosen_azerite_list_type = "head";
 
 let dark_mode = true;
-let filler_rarity = 0;
 let bloodyfiller = "mallet";
 
 let language = "EN";
@@ -450,128 +449,61 @@ document.addEventListener("DOMContentLoaded", function () {
 function update_dark_mode() {
   if (debug)
     console.log("update_dark_mode");
-
+  let primary_color;
+  let secondary_color;
   if (dark_mode) {
     document.getElementsByTagName("body")[0].classList.remove("bg-light");
     document.getElementsByTagName("body")[0].classList.remove("text-dark");
     document.getElementsByTagName("body")[0].classList.add("bg-dark");
     document.getElementsByTagName("body")[0].classList.add("text-light");
-    // update chart base colors
-    standard_chart.update({
-      legend: {
-        backgroundColor: dark_color,
-        itemStyle: {
-          color: light_color,
-        },
-        itemHoverStyle: {
-          color: light_color,
-        }
-      },
-      title: {
-        style: {
-          color: light_color
-        }
-      },
-      tooltip: {
-        backgroundColor: dark_color,
-        style: {
-          color: light_color,
-        },
-      },
-      subtitle: {
-        style: {
-          color: light_color
-        }
-      },
-      xAxis: {
-        labels: {
-          style: {
-            color: light_color
-          }
-        }
-      },
-      yAxis: {
-        stackLabels: {
-          style: {
-            color: light_color
-          }
-        }
-      }
-    });
-
-    scatter_chart.update({
-      legend: {
-        itemStyle: {
-          color: light_color,
-        },
-        itemHoverStyle: {
-          color: light_color,
-        }
-      },
-      title: {
-        style: {
-          color: light_color
-        }
-      },
-      subtitle: {
-        style: {
-          color: light_color
-        }
-      },
-      plotOptions: {
-        series: {
-          dataLabels: {
-            style: {
-              color: light_color
-            }
-          }
-        }
-      }
-    });
-
+    primary_color = light_color;
+    secondary_color = dark_color;
   } else {
-    document.getElementsByTagName("body")[0].classList.remove("bg-dark");
-    document.getElementsByTagName("body")[0].classList.remove("text-light");
     document.getElementsByTagName("body")[0].classList.add("bg-light");
     document.getElementsByTagName("body")[0].classList.add("text-dark");
+    document.getElementsByTagName("body")[0].classList.remove("bg-dark");
+    document.getElementsByTagName("body")[0].classList.remove("text-light");
+    primary_color = dark_color;
+    secondary_color = light_color;
+  }
     // update chart base colors
     standard_chart.update({
       legend: {
-        backgroundColor: light_color,
+        backgroundColor: secondary_color,
         itemStyle: {
-          color: dark_color,
+          color: primary_color,
         },
         itemHoverStyle: {
-          color: dark_color,
+          color: primary_color,
         }
       },
       title: {
         style: {
-          color: dark_color
+          color: primary_color
         }
       },
       tooltip: {
-        backgroundColor: light_color,
+        backgroundColor: secondary_color,
         style: {
-          color: dark_color
+          color: primary_color,
         },
       },
       subtitle: {
         style: {
-          color: dark_color
+          color: primary_color
         }
       },
       xAxis: {
         labels: {
           style: {
-            color: dark_color
+            color: primary_color
           }
         }
       },
       yAxis: {
         stackLabels: {
           style: {
-            color: dark_color
+            color: light_color
           }
         }
       }
@@ -580,40 +512,39 @@ function update_dark_mode() {
     scatter_chart.update({
       legend: {
         itemStyle: {
-          color: dark_color,
+          color: primary_color,
         },
         itemHoverStyle: {
-          color: dark_color,
+          color: primary_color,
         }
       },
       title: {
         style: {
-          color: dark_color
+          color: primary_color
         }
       },
       subtitle: {
         style: {
-          color: dark_color
+          color: primary_color
         }
       },
       plotOptions: {
         series: {
           dataLabels: {
             style: {
-              color: dark_color
+              color: primary_color
             }
           }
         }
       }
     });
-  }
 }
 
 /** save the current dark_mode value in a cookie */
 function set_dark_mode_cookie() {
   if (debug)
     console.log("set_dark_mode_cookie");
-  Cookies.set('bloodmallet_dark_mode', dark_mode, {expires: 31, path: ''});
+  Cookies.set('bloodmallet_dark_mode', dark_mode, { expires: 31, path: '' });
 }
 
 /** searches for the dark mode cookie and updates the page if necessary */
@@ -653,29 +584,43 @@ function randomize_bloodyfiller() {
     console.log("randomize_bloodyfiller");
   let roll;
   let filler_possibilities;
-  switch (filler_rarity) {
-    case 0:
-    default:
-      filler_possibilities = filler_possibilities_common;
-      break;
-    case 1:
-      filler_possibilities = filler_possibilities_rare;
-      break;
-    case 2:
-      filler_possibilities = filler_possibilities_epic;
-      break;
-  }
-  do {
-    roll = Math.floor(Math.random() * (filler_possibilities.length + 1));
-    if (roll === filler_possibilities.length) {
-      filler_rarity++;
-    }
-    if(filler_rarity === 2){
-      break;
-    }
-  } while (roll === filler_possibilities.length);
+  let filler_rarity = 0;
+  let new_filler = bloodyfiller;
 
-  bloodyfiller = filler_possibilities[roll];
+  while (new_filler === bloodyfiller) {
+    filler_rarity = 0;
+
+    do {
+      switch (filler_rarity) {
+        case 0:
+        default:
+          filler_possibilities = filler_possibilities_common;
+          break;
+        case 1:
+          filler_possibilities = filler_possibilities_rare;
+          break;
+        case 2:
+          filler_possibilities = filler_possibilities_epic;
+          break;
+      }
+
+      if (filler_rarity === 2) {
+        roll = Math.floor(Math.random() * filler_possibilities.length);
+        break;
+      } else {
+        roll = Math.floor(Math.random() * (filler_possibilities.length + 1));
+      }
+
+      if (roll === filler_possibilities.length) {
+        filler_rarity++;
+      }
+    } while (roll === filler_possibilities.length);
+
+    new_filler = filler_possibilities[roll];
+  }
+
+  bloodyfiller = new_filler;
+  document.getElementById("bloodyfiller").innerHTML = bloodyfiller;
 }
 
 
@@ -703,17 +648,20 @@ async function switch_language(new_language) {
   debug && console.log("switch_language");
 
   if (language === new_language) {
-    debug && console.log("switch_language early exit");
+    debug && console.log(`switch_language early exit. new_language: ${new_language}, current language: ${language}`);
     return;
+  } else {
+    debug && console.log("new language: " + new_language);
   }
 
   // if new language is different to already active language and if it wasn't already loaded
   if (!loaded_languages[new_language]) {
     let response = await fetch(`./translations/${new_language.toLowerCase()}.json`);
-    loaded_languages = await response.json();
+    loaded_languages[new_language] = await response.json();
   }
   language = new_language;
   set_language_cookie();
+  translate_page();
   translate_chart();
 }
 
@@ -740,50 +688,31 @@ function translate_page() {
 
   // translate content of IDs
   translation_IDs.forEach(element => {
-    if (loaded_languages[language][element] && loaded_languages[language][element] !== "") {
-      document.getElementById(element).innerHTML = loaded_languages[language][element];
-    } else if (loaded_languages[language][element] === "") {
-      // Don't translate
-      console.log("No translation for '" + element + "' available. Help improve the page by submitting a bug report. Or even better: clone the repo, fix the problem, and create a pull request. Any help is greatly appreciated!");
-      if (debug)
-        document.getElementById(element).style.border = "1px solid red";
-    } else {
-      // Don't translate
-      console.log("Language package '" + language + "' doesn't have '" + element + "' added to it or the ID is missing in the page. Help improve the page by submitting a bug report. Or even better: clone the repo, fix the problem, and create a pull request. Any help is greatly appreciated!");
-      if (debug)
-        document.getElementById(element).style.border = "1px solid red";
-    }
+    translate_element(element);
   });
 
   // translate content of classes
   translation_classes.forEach(element => {
-    if (loaded_languages[language][element] && loaded_languages[language][element] !== "") {
-      var targets = document.getElementsByClassName(element);
-      for (let index = 0; index < targets.length; index++) {
-        const html_element = targets[index];
-        html_element.innerHTML = loaded_languages[language][element];
-      }
-    } else if (loaded_languages[language][element] === "") {
-      // Don't translate
-      console.log("No translation for '" + element + "' available. Help improve the page by submitting a bug report. Or even better: clone the repo, fix the problem, and create a pull request. Any help is greatly appreciated!");
-      if (debug) {
-        var targets = document.getElementsByClassName(element);
-        for (let index = 0; index < targets.length; index++) {
-          const html_element = targets[index];
-          html_element.style.border = "1px solid red";
-        }
-      }
-    } else {
-      // Don't translate
+    translate_element(element);
+  });
+}
+
+function translate_element(element) {
+  const translated_element=loaded_languages[language][element];
+  document.getElementsByClassName(element).forEach(function (html_element) {
+    if (!translated_element) {
       console.log("Language package '" + language + "' doesn't have '" + element + "' added to it or the ID is missing in the page. Help improve the page by submitting a bug report. Or even better: clone the repo, fix the problem, and create a pull request. Any help is greatly appreciated!");
-      if (debug) {
-        var targets = document.getElementsByClassName(element);
-        for (let index = 0; index < targets.length; index++) {
-          const html_element = targets[index];
-          html_element.style.border = "1px solid red";
-        }
-      }
+      html_element.style.border = "1px solid red";
+      return;
     }
+
+    if (translated_element === "") {
+      console.log("No translation for '" + element + "' available. Help improve the page by submitting a bug report. Or even better: clone the repo, fix the problem, and create a pull request. Any help is greatly appreciated!");
+      html_element.style.border = "1px solid red";
+      return;
+    }
+
+    html_element.innerHTML = loaded_languages[language][element];
   });
 }
 
@@ -811,10 +740,7 @@ function translate_chart() {
 
   // create a dictionary of all created links
   let link_list = [];
-  let translator = document.getElementById("translator_helper");
-  while (translator.firstChild) {
-    translator.removeChild(translator.firstChild);
-  }
+  clear_translator();
 
   let current_data;
 
@@ -822,6 +748,11 @@ function translate_chart() {
     current_data = loaded_data[chosen_class][chosen_spec][data_view + "_" + chosen_azerite_list_type][fight_style];
   } else {
     current_data = loaded_data[chosen_class][chosen_spec][data_view][fight_style];
+  }
+
+  if (!current_data) {
+    debug && console.log("current_data is mysteriously empty.");
+    return;
   }
 
   for (let trinket of current_data['sorted_data_keys']) {
@@ -836,17 +767,19 @@ function translate_chart() {
       link += `item=${current_data["item_ids"][trinket]}`;
     }
 
-    link += `&ilvl=${lowest_ilvl}`;
-
+    try {
+      link += `&ilvl=${lowest_ilvl.split("1_")[1]}`;
+    } catch (error) {
+      link += `&ilvl=${lowest_ilvl}`;
+    }
 
     // add azerite power link portion
     if (data_view === "azerite_traits" && ["head", "shoulders", "chest"].includes(chosen_azerite_list_type)) {
-      link += `/azerite-powers=${current_data["class_id"]}`;
+      link += `&azerite-powers=${current_data["class_id"]}`;
       // add azerite traits
       for (let trait of current_data["used_azerite_traits_per_item"][trinket]) {
         link += ":" + trait["id"];
       }
-      link += "&ilvl=" + lowest_ilvl.split("1_")[1];
     }
 
     new_link.href = link;
@@ -854,14 +787,17 @@ function translate_chart() {
     let text_trinket_name = document.createTextNode(trinket);
     new_link.appendChild(text_trinket_name);
 
-    link_list.push(`<a href="${link}&ilvl=${lowest_ilvl} target="blank">${trinket}</a>`);
+    link_list.push(`<a href="${link}" target="blank">${trinket}</a>`);
 
-    if (language !== "EN")
+    if (language !== "EN") {
+      let translator = document.getElementById("translator_helper");
       translator.appendChild(new_link);
+    }
+
   }
 
   if (debug) {
-    console.log("update categories with link_list (english names, forerign link in translate_chart");
+    console.log("update categories with link_list (english names, foreign link in translate_chart");
   }
   standard_chart.update({
     xAxis: {
@@ -903,9 +839,36 @@ function clear_translator() {
   }
 }
 
+/**
+ * Awaits the translation of all hidden links.
+ * If translation is done, will apply new links to chart.
+ */
 function update_link_data(original_list) {
   if (debug)
     console.log("update_link_data");
+
+  let all_translated = true;
+  for (let a in original_list) {
+
+    let original_link = original_list[a];
+    let new_link;
+    try {
+      new_link = document.getElementById("translator_helper").childNodes[a].outerHTML;
+    } catch (error) {
+      debug && console.log(`update_link_data couldn't find '${original_link}' in the translator_helper. Abort.`);
+      clear_translator();
+      return;
+    }
+    // wowhead tooltips add span elements into the link, therefore changing the number of the resulting array
+    if (original_link.split(">").length == new_link.split(">").length && original_link.indexOf("baseline") == -1) {
+      all_translated = false;
+    }
+  }
+
+  if (!all_translated) {
+    setTimeout(function () { update_link_data(original_list) }, 1000);
+    return;
+  }
 
   let new_categories = [];
   for (let link of document.getElementById("translator_helper").childNodes) {
@@ -930,7 +893,7 @@ function update_link_data(original_list) {
 function set_language_cookie() {
   if (debug)
     console.log("set_language_cookie");
-  Cookies.set('bloodmallet_language_selection', language, {expires: 31, path: ''});
+  Cookies.set('bloodmallet_language_selection', language, { expires: 31, path: '' });
 }
 
 /** Searches for the dark mode cookie and updates the page if necessary. */
@@ -984,25 +947,22 @@ function addFightStyleClickEvent(elementId, new_fight_style) {
   });
 }
 
-
 document.addEventListener("DOMContentLoaded", function () {
   try {
     addDataViewClickEvent("show_trinkets_data", "trinkets");
     addDataViewClickEvent("show_azerite_traits_data", "azerite_traits");
+    addDataViewClickEvent("show_races_data", "races");
     addDataViewClickEvent("show_secondary_distributions_data", "secondary_distributions");
     addAzeriteViewClickEvent("chart_type_head", "head");
     addAzeriteViewClickEvent("chart_type_shoulders", "shoulders");
     addAzeriteViewClickEvent("chart_type_chest", "chest");
     addAzeriteViewClickEvent("chart_type_itemlevel", "itemlevel");
     addAzeriteViewClickEvent("chart_type_trait_stacking", "trait_stacking");
-    addAzeriteViewClickEvent("show_races_data", "races");
     addFightStyleClickEvent("fight_style_patchwerk", "patchwerk");
     addFightStyleClickEvent("fight_style_hecticaddcleave", "hecticaddcleave");
 
-    document.addEventListener("DOMContentLoaded", function () {
-      document.getElementById("copy_link").addEventListener("click", function () {
-        copy_link();
-      })
+    document.getElementById("copy_link").addEventListener("click", function () {
+      copy_link();
     });
 
   } catch (err) {
@@ -1142,10 +1102,9 @@ async function load_data() {
     file_name += "_" + fight_style + ".json";
     let response = await fetch(`./json/${data_view}/${file_name}`);
     loaded_data[chosen_class][chosen_spec][data_name][fight_style] = await response.json();
-    update_talent_selector();
-    update_chart();
-
   }
+  update_talent_selector();
+  update_chart();
 }
 
 /**
@@ -1175,8 +1134,9 @@ function switch_mode() {
 function push_state() {
   if (debug) {
     console.log("push_state");
+    console.log(`${chosen_spec} ${chosen_class} ${data_view} ${fight_style}`);
   }
-  history.pushState({id: 'data_view'}, chosen_spec + " " + chosen_class + " | " + data_view + " | " + fight_style, construct_link());
+  history.pushState({ id: 'data_view' }, chosen_spec + " " + chosen_class + " | " + data_view + " | " + fight_style, construct_link());
   switch_to_data();
 }
 
@@ -1374,7 +1334,11 @@ function update_chart() {
       if (data_view == "azerite_traits" && ["itemlevel", "trait_stacking"].includes(chosen_azerite_list_type)) {
         let link = "<a href=\"https://";
 
-        link += language.toLowerCase();
+        if (language == "EN") {
+          link += "www";
+        } else {
+          link += language.toLowerCase();
+        }
 
         link += ".wowhead.com/spell=";
         link += loaded_data[chosen_class][chosen_spec][data_name][fight_style]["spell_ids"][dps_ordered_data[i]];
@@ -1384,7 +1348,13 @@ function update_chart() {
       } else {
 
         let string = "<a href=\"https://";
-        string += language.toLowerCase();
+
+        if (language == "EN") {
+          string += "www";
+        } else {
+          string += language.toLowerCase();
+        }
+
         string += ".wowhead.com/item=";
         string += loaded_data[chosen_class][chosen_spec][data_name][fight_style]["item_ids"][dps_ordered_data[i]];
 
@@ -1430,7 +1400,7 @@ function update_chart() {
   // set title and subtitle
   let new_title = "";
   if (data_view == "azerite_traits" && chosen_azerite_list_type == "itemlevel")
-    new_title = "Different itemlevels; number of each trait: 1"
+    new_title = "Different itemlevels; number of each trait: 1";
 
   standard_chart.setTitle({
     text: new_title //loaded_data[chosen_class][chosen_spec][data_view][fight_style]["title"]
@@ -1548,7 +1518,13 @@ function update_trait_stacking_chart() {
   let ordered_trinket_list = [];
   for (let i in dps_ordered_data) {
     let string = "<a href=\"https://";
-    string += language.toLowerCase();
+
+    if (language == "EN") {
+      string += "www";
+    } else {
+      string += language.toLowerCase();
+    }
+
     string += ".wowhead.com/spell=";
     string += loaded_data[chosen_class][chosen_spec][data_view][fight_style]["spell_ids"][dps_ordered_data[i]];
     string += "\" target=\"blank\">" + dps_ordered_data[i] + "</a>";
@@ -1768,8 +1744,8 @@ var scatter_chart = new Highcharts.Chart({
     align: "right",
     verticalAlign: "middle",
     layout: "vertical",
-    itemStyle: {"color": light_color},
-    itemHoverStyle: {"color": light_color}
+    itemStyle: { "color": light_color },
+    itemHoverStyle: { "color": light_color }
   },
   plotOptions: {
     series: {
@@ -2100,7 +2076,7 @@ function update_scatter_chart() {
 
   scatter_chart.addSeries(series, false);
   // make sure this color matches the value of color_min in create_color(...)
-  scatter_chart.addSeries({name: Intl.NumberFormat().format(min_dps) + " DPS", color: "#00FFFF"}, false);
+  scatter_chart.addSeries({ name: Intl.NumberFormat().format(min_dps) + " DPS", color: "#00FFFF" }, false);
   scatter_chart.setTitle({
       //text: loaded_data[chosen_class][chosen_spec][data_view][fight_style]["title"]
     }, {
