@@ -1079,29 +1079,7 @@ function get_data_from_link() {
 
 }
 
-/**
- * Returns the language (lang-attribute) from link, else return false.
- */
-function get_language_from_link() {
-  if (debug)
-    console.log("get_language_from_link");
-  var string = window.location.search;
-  if (window.location.hash.indexOf("?") > -1) {
-    string = window.location.hash.slice(window.location.hash.indexOf("?"));
-  }
-  if (string.indexOf("lang=") > -1) {
-    var lang = string.slice(string.indexOf("lang=") + 5);
-    if (lang.indexOf("&") > -1) {
-      lang = lang.slice(0, lang.indexOf("&"));
-    }
-    return lang;
-  }
-  return false;
-}
-
-/**
-=======
->>>>>>> upstream/js-refactor-from-hawkcorrigan
+/*
  * Loads spec data (json) according to the already applied settings. Triggers update_chart.
  */
 async function load_data() {
