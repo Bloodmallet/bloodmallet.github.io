@@ -872,7 +872,6 @@ function translate_chart() {
       let p = document.createElement("span");
       let text_trinket_name = document.createTextNode(trinket);
       p.appendChild(text_trinket_name);
-      console.log(p);
       link_list.push(`<span>${trinket}</span>`);
       if (language !== "EN")
         translator.appendChild(p);
@@ -1822,7 +1821,8 @@ function update_trait_stacking_chart() {
   standard_chart.setSize(document.getElementById("chart").style.width, document.getElementById("chart").style.height);
   standard_chart.redraw();
 
-  console.log("call translate_chart from update_trait_stacking_chart");
+  if (dev_mode)
+    console.log("call translate_chart from update_trait_stacking_chart");
   translate_chart();
 
 }
