@@ -708,13 +708,17 @@ function translate_element(element) {
   [].forEach.call(document.getElementsByClassName(element),function (html_element) {
     if (!translated_element) {
       console.log("Language package '" + language + "' doesn't have '" + element + "' added to it or the ID is missing in the page. Help improve the page by submitting a bug report. Or even better: clone the repo, fix the problem, and create a pull request. Any help is greatly appreciated!");
-      html_element.style.border = "1px solid red";
+      if (debug) {
+        html_element.style.border = "1px solid red";
+      }
       return;
     }
 
     if (translated_element === "") {
       console.log("No translation for '" + element + "' available. Help improve the page by submitting a bug report. Or even better: clone the repo, fix the problem, and create a pull request. Any help is greatly appreciated!");
-      html_element.style.border = "1px solid red";
+      if (debug) {
+        html_element.style.border = "1px solid red";
+      }
       return;
     }
 
