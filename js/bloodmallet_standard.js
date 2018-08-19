@@ -432,9 +432,6 @@ const class_colors = {
 ---------------------------------------------------------*/
 
 
-/** look for the dark mode cookie and update view */
-document.addEventListener("DOMContentLoaded", search_dark_mode_cookie);
-
 /** add listener to the dark mode checkbox */
 document.addEventListener("DOMContentLoaded", function () {
   if (debug)
@@ -700,8 +697,6 @@ function randomize_bloodyfiller() {
 //
 ---------------------------------------------------------*/
 
-
-document.addEventListener("DOMContentLoaded", search_language_cookie);
 
 document.addEventListener("DOMContentLoaded", function () {
   if (debug)
@@ -1004,18 +999,6 @@ function search_language_cookie() {
 //
 ---------------------------------------------------------*/
 
-/** Load spec and data mode if a spec link was used. */
-document.addEventListener("DOMContentLoaded", function () {
-  if (debug)
-    console.log("eventListener, interpreting link");
-
-  get_data_from_link();
-  if (chosen_spec) {
-    switch_mode();
-  }
-
-});
-
 /**
  * Apply click events for data manipulation.
  */
@@ -1097,7 +1080,7 @@ window.addEventListener('popstate', function (event) {
  */
 function get_data_from_link() {
   if (debug)
-    console.log("get_class_spec_from_link");
+    console.log("get_data_from_link");
   let hash = window.location.hash;
 
   if (!hash) {
@@ -1151,6 +1134,12 @@ function get_data_from_link() {
 async function load_data() {
   if (debug)
     console.log("load_data");
+
+
+  if (chosen_class === "" || chosen_spec === "") {
+    debug && console.log("load_data aborted. No chosen_class or spec found.")
+    return;
+  }
 
   empty_charts();
 
@@ -1243,6 +1232,12 @@ function switch_to_data() {
 function update_data_buttons() {
   if (debug)
     console.log("update_data_buttons");
+
+  if (chosen_class === "" || chosen_spec === "") {
+    debug && console.log("update_data_buttons aborted. No chosen_class or spec found.")
+    return;
+  }
+
   // reset buttons to standard visual
   data_view_IDs.forEach(element => {
     try {
@@ -1299,6 +1294,12 @@ function update_talent_selector() {
 function update_fight_style_buttons() {
   if (debug)
     console.log("update_fight_style_buttons");
+
+  if (chosen_class === "" || chosen_spec === "") {
+    debug && console.log("update_fight_style_buttons aborted. No chosen_class or spec found.")
+    return;
+  }
+
   // reset buttons to standard visual
   fight_style_IDs.forEach(element => {
     document.getElementById(element).className = "btn-data " + chosen_class + "-button";
@@ -1319,6 +1320,11 @@ function update_azerite_buttons() {
     return;
   }
 
+  if (chosen_class === "" || chosen_spec === "") {
+    debug && console.log("update_azerite_buttons aborted. No chosen_class or spec found.")
+    return;
+  }
+
   // reset buttons to standard visual
   azerite_trait_view_type_IDs.forEach(element => {
     document.getElementById(element).className = "btn-data " + chosen_class + "-button";
@@ -1333,6 +1339,9 @@ function update_azerite_buttons() {
 function update_nav() {
   if (debug)
     console.log("update_nav");
+  if (chosen_class === "") {
+    return;
+  }
   var nav_items = document.getElementsByClassName("dropdown-toggle");
   for (let index = 0; index < nav_items.length; index++) {
     const element = nav_items[index];
@@ -1741,6 +1750,10 @@ function capitalize_first_letters(string) {
 function update_page_content() {
   if (debug)
     console.log("update_page_content");
+  if (chosen_class === "" || chosen_spec === "") {
+    debug && console.log("update_page_content aborted. No class or spec found.")
+    return;
+  }
   // update title
   var content = "<span class=\"" + chosen_class + "-color\"";
   if (chosen_class == "priest" || chosen_class == "rogue") {
@@ -1764,8 +1777,14 @@ function update_page_content() {
  * Constructs and returns the current state as url-string.
  */
 function create_link() {
+
   var path = window.location.origin;
   path += window.location.pathname;
+
+  if (chosen_class === "") {
+    return path;
+  }
+
   path += "#" + chosen_class;
   path += "_" + chosen_spec;
   path += "?data_view=" + data_view;
@@ -2168,3 +2187,28 @@ function update_scatter_chart() {
   );
   scatter_chart.redraw();
 }
+
+/******************************************************************************
+ *
+ * Last content block. These functions trigger onfinished load.
+ *
+ */
+
+
+/** Look for the dark mode cookie and update view */
+document.addEventListener("DOMContentLoaded", search_dark_mode_cookie);
+
+/** Load language from cookie. */
+document.addEventListener("DOMContentLoaded", search_language_cookie);
+
+/** Load spec and data mode if a spec link was used. */
+document.addEventListener("DOMContentLoaded", function () {
+  if (debug)
+    console.log("interprete link");
+
+  get_data_from_link();
+  if (chosen_spec !== "") {
+    switch_mode();
+  }
+
+});
