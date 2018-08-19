@@ -1489,11 +1489,13 @@ function update_chart() {
     console.log("update_chart");
 
   if (data_view == "secondary_distributions") {
+    document.getElementById("scatter_plot_warning").hidden = false;
     document.getElementById("scatter_plot_chart").hidden = false;
     document.getElementById("chart").hidden = true;
     update_scatter_chart();
     return;
   } else {
+    document.getElementById("scatter_plot_warning").hidden = true;
     document.getElementById("scatter_plot_chart").hidden = true;
     document.getElementById("chart").hidden = false;
   }
