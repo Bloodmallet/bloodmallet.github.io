@@ -5,7 +5,7 @@
 ---------------------------------------------------------*/
 
 /* Variable intended for dev mode specific output/markings */
-const debug = true;
+const debug = false;
 
 /** visual modes
  *   hidden: hides these general elements
@@ -41,6 +41,8 @@ let chosen_class = "";
 let chosen_spec = "";
 let chosen_talent_combination = "";
 let chosen_azerite_list_type = "head";
+
+let chosen_azerite_tier = 1;
 
 let dark_mode = true;
 let bloodyfiller = "mallet";
@@ -145,7 +147,12 @@ const azerite_trait_view_type_IDs = [
   "chart_type_shoulders",
   "chart_type_chest",
   "chart_type_itemlevel",
-  "chart_type_trait_stacking"
+  "chart_type_trait_stacking",
+];
+
+const azerite_trait_tier_IDs = [
+  "azerite_traits_tier_1",
+  "azerite_traits_tier_2"
 ];
 
 const light_color = "#eeeeee";
@@ -431,9 +438,6 @@ const class_colors = {
 ---------------------------------------------------------*/
 
 
-/** look for the dark mode cookie and update view */
-document.addEventListener("DOMContentLoaded", search_dark_mode_cookie);
-
 /** add listener to the dark mode checkbox */
 document.addEventListener("DOMContentLoaded", function () {
   if (debug)
@@ -610,7 +614,6 @@ function randomize_bloodyfiller() {
       } else {
         roll = Math.floor(Math.random() * (filler_possibilities.length + 1));
       }
-
       if (roll === filler_possibilities.length) {
         filler_rarity++;
       }
@@ -630,8 +633,6 @@ function randomize_bloodyfiller() {
 //
 ---------------------------------------------------------*/
 
-
-document.addEventListener("DOMContentLoaded", search_language_cookie);
 
 document.addEventListener("DOMContentLoaded", function () {
   if (debug)
@@ -663,6 +664,7 @@ async function switch_language(new_language) {
   set_language_cookie();
   translate_page();
   translate_chart();
+  push_state();
 }
 
 
@@ -680,10 +682,16 @@ function translate_page() {
 
   // select the new language in the settings based on data
   for (let index = 0; index < language_html_elements.length; index++) {
+
     const element = language_html_elements[index];
     if (element.value === language) {
       element.selected = true;
     }
+  }
+
+  if (typeof loaded_languages[language] === 'undefined') {
+    debug && console.log("translate_page abort, due to missing data");
+    return;
   }
 
   // translate content of IDs
@@ -699,7 +707,7 @@ function translate_page() {
 
 function translate_element(element) {
   const translated_element=loaded_languages[language][element];
-  document.getElementsByClassName(element).forEach(function (html_element) {
+  [].forEach.call(document.getElementsByClassName(element),function (html_element) {
     if (!translated_element) {
       console.log("Language package '" + language + "' doesn't have '" + element + "' added to it or the ID is missing in the page. Help improve the page by submitting a bug report. Or even better: clone the repo, fix the problem, and create a pull request. Any help is greatly appreciated!");
       html_element.style.border = "1px solid red";
@@ -734,7 +742,9 @@ function translate_chart() {
   }
 
   if (document.getElementById("translator_helper").childElementCount > 0) {
-    console.log("Another translation seems to be in progress. translate_chart early exit.");
+
+    debug && console.log("Another translation seems to be in progress. translate_chart early exit.");
+
     return;
   }
 
@@ -755,7 +765,15 @@ function translate_chart() {
     return;
   }
 
-  for (let trinket of current_data['sorted_data_keys']) {
+
+  let appropriate_data_key_list = [];
+  if (data_view === "azerite_traits" && ["itemlevel", "trait_stacking"].includes(chosen_azerite_list_type)) {
+    appropriate_data_key_list = current_data["sorted_azerite_tier_" + chosen_azerite_tier + "_" + chosen_azerite_list_type];
+  } else {
+    appropriate_data_key_list = current_data["sorted_data_keys"];
+  }
+
+  for (let trinket of appropriate_data_key_list) {
     const lowest_ilvl = current_data["simulated_steps"][current_data["simulated_steps"].length - 1];
     // create untranslated link
     let new_link = document.createElement("a");
@@ -910,17 +928,7 @@ function search_language_cookie() {
 //
 ---------------------------------------------------------*/
 
-/** Load spec and data mode if a spec link was used. */
-document.addEventListener("DOMContentLoaded", function () {
-  if (debug)
-    console.log("eventListener, interpreting link");
 
-  get_data_from_link();
-  if (chosen_spec) {
-    switch_mode();
-  }
-
-});
 
 /**
  * Apply click events for data manipulation.
@@ -936,6 +944,14 @@ function addAzeriteViewClickEvent(elementId, new_azerite_list_type) {
 
   document.getElementById(elementId).addEventListener("click", function () {
     chosen_azerite_list_type = new_azerite_list_type;
+    push_state();
+  });
+}
+
+function addAzeriteTierClickEvent(elementId, new_azerite_tier) {
+
+  document.getElementById(elementId).addEventListener("click", function () {
+    chosen_azerite_tier = new_azerite_tier;
     push_state();
   });
 }
@@ -958,6 +974,8 @@ document.addEventListener("DOMContentLoaded", function () {
     addAzeriteViewClickEvent("chart_type_chest", "chest");
     addAzeriteViewClickEvent("chart_type_itemlevel", "itemlevel");
     addAzeriteViewClickEvent("chart_type_trait_stacking", "trait_stacking");
+    addAzeriteTierClickEvent("azerite_traits_tier_1", 1);
+    addAzeriteTierClickEvent("azerite_traits_tier_2", 2);
     addFightStyleClickEvent("fight_style_patchwerk", "patchwerk");
     addFightStyleClickEvent("fight_style_hecticaddcleave", "hecticaddcleave");
 
@@ -1003,7 +1021,7 @@ window.addEventListener('popstate', function (event) {
  */
 function get_data_from_link() {
   if (debug)
-    console.log("get_class_spec_from_link");
+    console.log("get_data_from_link");
   let hash = window.location.hash;
 
   if (!hash) {
@@ -1044,6 +1062,10 @@ function get_data_from_link() {
       fight_style = value;
     } else if (key === "type") {
       chosen_azerite_list_type = value;
+    } else if (key === "tier") {
+      chosen_azerite_tier = value;
+    } else if (key === "lang") {
+      switch_language(value);
     }
   }
 
@@ -1070,11 +1092,19 @@ function get_language_from_link() {
 }
 
 /**
+=======
+>>>>>>> upstream/js-refactor-from-hawkcorrigan
  * Loads spec data (json) according to the already applied settings. Triggers update_chart.
  */
 async function load_data() {
   if (debug)
     console.log("load_data");
+
+
+  if (chosen_class === "" || chosen_spec === "") {
+    debug && console.log("load_data aborted. No chosen_class or spec found.")
+    return;
+  }
 
   empty_charts();
 
@@ -1136,7 +1166,7 @@ function push_state() {
     console.log("push_state");
     console.log(`${chosen_spec} ${chosen_class} ${data_view} ${fight_style}`);
   }
-  history.pushState({ id: 'data_view' }, chosen_spec + " " + chosen_class + " | " + data_view + " | " + fight_style, construct_link());
+  history.pushState({ id: 'data_view' }, chosen_spec + " " + chosen_class + " | " + data_view + " | " + fight_style, create_link());
   switch_to_data();
 }
 
@@ -1153,6 +1183,8 @@ function switch_to_data() {
   update_fight_style_buttons();
   update_azerite_buttons();
   load_data();
+  translate_page();
+  translate_chart();
 }
 
 /**
@@ -1161,6 +1193,12 @@ function switch_to_data() {
 function update_data_buttons() {
   if (debug)
     console.log("update_data_buttons");
+
+  if (chosen_class === "" || chosen_spec === "") {
+    debug && console.log("update_data_buttons aborted. No chosen_class or spec found.")
+    return;
+  }
+
   // reset buttons to standard visual
   data_view_IDs.forEach(element => {
     try {
@@ -1182,6 +1220,10 @@ function update_data_buttons() {
   document.getElementById("chart_type_chest").hidden = !is_azerite;
   document.getElementById("chart_type_itemlevel").hidden = !is_azerite;
   document.getElementById("chart_type_trait_stacking").hidden = !is_azerite;
+
+  let is_traits = (chosen_azerite_list_type === "itemlevel" || chosen_azerite_list_type === "trait_stacking");
+  document.getElementById("azerite_traits_tier_1").hidden = !is_traits;
+  document.getElementById("azerite_traits_tier_2").hidden = !is_traits;
 }
 
 /**
@@ -1217,6 +1259,12 @@ function update_talent_selector() {
 function update_fight_style_buttons() {
   if (debug)
     console.log("update_fight_style_buttons");
+
+  if (chosen_class === "" || chosen_spec === "") {
+    debug && console.log("update_fight_style_buttons aborted. No chosen_class or spec found.")
+    return;
+  }
+
   // reset buttons to standard visual
   fight_style_IDs.forEach(element => {
     document.getElementById(element).className = "btn-data " + chosen_class + "-button";
@@ -1237,12 +1285,21 @@ function update_azerite_buttons() {
     return;
   }
 
+  if (chosen_class === "" || chosen_spec === "") {
+    debug && console.log("update_azerite_buttons aborted. No chosen_class or spec found.")
+    return;
+  }
+
   // reset buttons to standard visual
   azerite_trait_view_type_IDs.forEach(element => {
     document.getElementById(element).className = "btn-data " + chosen_class + "-button";
   });
+  azerite_trait_tier_IDs.forEach(element => {
+    document.getElementById(element).className = "btn-data " + chosen_class + "-button";
+  });
   // set "active" to class color
   document.getElementById("chart_type_" + chosen_azerite_list_type).classList.add(chosen_class + "-border-bottom");
+  document.getElementById("azerite_traits_tier_" + chosen_azerite_tier).classList.add(chosen_class + "-border-bottom");
 }
 
 /**
@@ -1251,6 +1308,9 @@ function update_azerite_buttons() {
 function update_nav() {
   if (debug)
     console.log("update_nav");
+  if (chosen_class === "") {
+    return;
+  }
   var nav_items = document.getElementsByClassName("dropdown-toggle");
   for (let index = 0; index < nav_items.length; index++) {
     const element = nav_items[index];
@@ -1319,10 +1379,15 @@ function update_chart() {
   // dps_ordered_data = dps_ordered_data.map(x => x[0]);
   // or.... just use the provided sorted list once that is included in fresh data
   if ("sorted_data_keys" in loaded_data[chosen_class][chosen_spec][data_name][fight_style]) {
-    var dps_ordered_data = loaded_data[chosen_class][chosen_spec][data_name][fight_style]["sorted_data_keys"];
+    var dps_ordered_data = [];
+
+    if (data_view === "azerite_traits" && ["itemlevel", "trait_stacking"].includes(chosen_azerite_list_type)) {
+      dps_ordered_data = loaded_data[chosen_class][chosen_spec][data_name][fight_style]["sorted_azerite_tier_" + chosen_azerite_tier + "_" + chosen_azerite_list_type];
+    } else {
+      dps_ordered_data = loaded_data[chosen_class][chosen_spec][data_name][fight_style]["sorted_data_keys"];
+    }
   } else {
-    if (debug)
-      console.log("Getting sorted_data_keys from data failed. Set unordered dps_ordered_data");
+    debug && console.log("Getting sorted_data_keys from data failed. Set unordered dps_ordered_data");
     var dps_ordered_data = Object.keys(loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"]);
   }
 
@@ -1407,7 +1472,6 @@ function update_chart() {
   }, {
     text: loaded_data[chosen_class][chosen_spec][data_name][fight_style]["subtitle"]
   }, false);
-
 
   // delete all old series data
   while (standard_chart.series[0]) {
@@ -1507,7 +1571,13 @@ function update_trait_stacking_chart() {
     console.log("update_trait_stacking_chart");
 
   if ("sorted_data_keys_2" in loaded_data[chosen_class][chosen_spec][data_view][fight_style]) {
-    var dps_ordered_data = loaded_data[chosen_class][chosen_spec][data_view][fight_style]["sorted_data_keys_2"];
+    var dps_ordered_data = [];
+    if (data_view === "azerite_traits" && ["itemlevel", "trait_stacking"].includes(chosen_azerite_list_type)) {
+      dps_ordered_data = loaded_data[chosen_class][chosen_spec][data_view][fight_style]["sorted_azerite_tier_" + chosen_azerite_tier + "_" + chosen_azerite_list_type];
+    } else {
+      dps_ordered_data = loaded_data[chosen_class][chosen_spec][data_view][fight_style]["sorted_data_keys"];
+    }
+
   } else {
     if (debug)
       console.log("Getting sorted_data_keys from data failed. Set unordered dps_ordered_data");
@@ -1548,7 +1618,6 @@ function update_trait_stacking_chart() {
   }, {
     text: loaded_data[chosen_class][chosen_spec][data_view][fight_style]["subtitle"]
   }, false);
-
 
   // delete all old series data
   while (standard_chart.series[0]) {
@@ -1659,6 +1728,10 @@ function capitalize_first_letters(string) {
 function update_page_content() {
   if (debug)
     console.log("update_page_content");
+  if (chosen_class === "" || chosen_spec === "") {
+    debug && console.log("update_page_content aborted. No class or spec found.")
+    return;
+  }
   // update title
   var content = "<span class=\"" + chosen_class + "-color\"";
   if (chosen_class == "priest" || chosen_class == "rogue") {
@@ -1681,16 +1754,26 @@ function update_page_content() {
 /**
  * Constructs and returns the current state as url-string.
  */
-function construct_link() {
+function create_link() {
+
   var path = window.location.origin;
   path += window.location.pathname;
+
+  if (chosen_class === "") {
+    return path;
+  }
+
   path += "#" + chosen_class;
   path += "_" + chosen_spec;
   path += "?data_view=" + data_view;
   if (data_view == "azerite_traits") {
     path += "&type=" + chosen_azerite_list_type;
   }
+  if (chosen_azerite_list_type === "itemlevel" || chosen_azerite_list_type === "trait_stacking") {
+    path += "&tier=" + chosen_azerite_tier;
+  }
   path += "&fight_style=" + fight_style;
+  path += "&lang=" + language;
 
   return path;
 } // ?data_view=trinkets&fight_style=patchwerk
@@ -1699,7 +1782,7 @@ function copy_link() {
   if (debug)
     console.log("copy_link");
 
-  var path = construct_link();
+  var path = create_link();
 
   let link_helper = document.getElementById("chart_link_generator");
   link_helper.innerHTML = path;
@@ -2085,3 +2168,28 @@ function update_scatter_chart() {
   );
   scatter_chart.redraw();
 }
+
+/******************************************************************************
+ *
+ * Last content block. These functions trigger onfinished load.
+ *
+ */
+
+
+/** Look for the dark mode cookie and update view */
+document.addEventListener("DOMContentLoaded", search_dark_mode_cookie);
+
+/** Load language from cookie. */
+document.addEventListener("DOMContentLoaded", search_language_cookie);
+
+/** Load spec and data mode if a spec link was used. */
+document.addEventListener("DOMContentLoaded", function () {
+  if (debug)
+    console.log("interprete link");
+
+  get_data_from_link();
+  if (chosen_spec !== "") {
+    switch_mode();
+  }
+
+});
