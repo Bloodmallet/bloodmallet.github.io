@@ -146,7 +146,9 @@ const azerite_trait_view_type_IDs = [
   "chart_type_shoulders",
   "chart_type_chest",
   "chart_type_itemlevel",
-  "chart_type_trait_stacking"
+  "chart_type_trait_stacking",
+  "azerite_traits_tier_1",
+  "azerite_traits_tier_2"
 ];
 
 const light_color = "#eeeeee";
