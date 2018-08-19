@@ -867,6 +867,18 @@ function translate_chart() {
   }
 
   for (let trinket of current_data['sorted_data_keys']) {
+
+    if (trinket.indexOf("baseline") > -1) {
+      let p = document.createElement("span");
+      let text_trinket_name = document.createTextNode(trinket);
+      p.appendChild(text_trinket_name);
+      console.log(p);
+      link_list.push(`<span>${trinket}</span>`);
+      if (language !== "EN")
+        translator.appendChild(p);
+      continue;
+    }
+
     // create untranslated link
     let new_link = document.createElement("a");
     // TODO: will need more logic for azerite traits later
@@ -1531,6 +1543,11 @@ function update_chart() {
   ordered_trinket_list = [];
   if (data_view == "trinkets" || data_view == "azerite_traits") {
     for (let i in dps_ordered_data) {
+
+      if (dps_ordered_data[i].indexOf("baseline") > -1) {
+        ordered_trinket_list.push(dps_ordered_data[i]);
+        continue;
+      }
 
       if (data_view == "azerite_traits" && ["itemlevel", "trait_stacking"].includes(chosen_azerite_list_type)) {
         let link = "<a href=\"https://";
