@@ -773,7 +773,6 @@ function translate_chart() {
     return;
   }
 
-
   let appropriate_data_key_list = [];
   if (data_view === "azerite_traits" && ["itemlevel", "trait_stacking"].includes(chosen_azerite_list_type)) {
     appropriate_data_key_list = current_data["sorted_azerite_tier_" + chosen_azerite_tier + "_" + chosen_azerite_list_type];
@@ -782,7 +781,19 @@ function translate_chart() {
   }
 
   for (let trinket of appropriate_data_key_list) {
+    
+    if (trinket.indexOf("baseline") > -1) {
+      let p = document.createElement("span");
+      let text_trinket_name = document.createTextNode(trinket);
+      p.appendChild(text_trinket_name);
+      link_list.push(`<span>${trinket}</span>`);
+      if (language !== "EN")
+        translator.appendChild(p);
+      continue;
+    }
+    
     const lowest_ilvl = current_data["simulated_steps"][current_data["simulated_steps"].length - 1];
+
     // create untranslated link
     let new_link = document.createElement("a");
     // TODO: will need more logic for azerite traits later
@@ -1335,12 +1346,14 @@ function update_chart() {
   if (debug)
     console.log("update_chart");
 
-  if (data_view === "secondary_distributions") {
+  if (data_view == "secondary_distributions") {
+    document.getElementById("scatter_plot_warning").hidden = false;
     document.getElementById("scatter_plot_chart").hidden = false;
     document.getElementById("chart").hidden = true;
     update_scatter_chart();
     return;
   } else {
+    document.getElementById("scatter_plot_warning").hidden = true;
     document.getElementById("scatter_plot_chart").hidden = true;
     document.getElementById("chart").hidden = false;
   }
@@ -1381,6 +1394,11 @@ function update_chart() {
   ordered_trinket_list = [];
   if (data_view == "trinkets" || data_view == "azerite_traits") {
     for (let i in dps_ordered_data) {
+
+      if (dps_ordered_data[i].indexOf("baseline") > -1) {
+        ordered_trinket_list.push(dps_ordered_data[i]);
+        continue;
+      }
 
       if (data_view == "azerite_traits" && ["itemlevel", "trait_stacking"].includes(chosen_azerite_list_type)) {
         let link = "<a href=\"https://";
@@ -1663,7 +1681,8 @@ function update_trait_stacking_chart() {
   standard_chart.setSize(document.getElementById("chart").style.width, document.getElementById("chart").style.height);
   standard_chart.redraw();
 
-  console.log("call translate_chart from update_trait_stacking_chart");
+  if (dev_mode)
+    console.log("call translate_chart from update_trait_stacking_chart");
   translate_chart();
 
 }
