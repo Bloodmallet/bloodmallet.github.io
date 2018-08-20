@@ -470,78 +470,78 @@ function update_dark_mode() {
     primary_color = dark_color;
     secondary_color = light_color;
   }
-    // update chart base colors
-    standard_chart.update({
-      legend: {
-        backgroundColor: secondary_color,
-        itemStyle: {
-          color: primary_color,
-        },
-        itemHoverStyle: {
-          color: primary_color,
-        }
+  // update chart base colors
+  standard_chart.update({
+    legend: {
+      backgroundColor: secondary_color,
+      itemStyle: {
+        color: primary_color,
       },
-      title: {
+      itemHoverStyle: {
+        color: primary_color,
+      }
+    },
+    title: {
+      style: {
+        color: primary_color
+      }
+    },
+    tooltip: {
+      backgroundColor: secondary_color,
+      style: {
+        color: primary_color,
+      },
+    },
+    subtitle: {
+      style: {
+        color: primary_color
+      }
+    },
+    xAxis: {
+      labels: {
         style: {
           color: primary_color
         }
-      },
-      tooltip: {
-        backgroundColor: secondary_color,
+      }
+    },
+    yAxis: {
+      stackLabels: {
         style: {
-          color: primary_color,
-        },
-      },
-      subtitle: {
-        style: {
-          color: primary_color
+          color: light_color
         }
+      }
+    }
+  });
+
+  scatter_chart.update({
+    legend: {
+      itemStyle: {
+        color: primary_color,
       },
-      xAxis: {
-        labels: {
+      itemHoverStyle: {
+        color: primary_color,
+      }
+    },
+    title: {
+      style: {
+        color: primary_color
+      }
+    },
+    subtitle: {
+      style: {
+        color: primary_color
+      }
+    },
+    plotOptions: {
+      series: {
+        dataLabels: {
           style: {
             color: primary_color
           }
         }
-      },
-      yAxis: {
-        stackLabels: {
-          style: {
-            color: light_color
-          }
-        }
       }
-    });
-
-    scatter_chart.update({
-      legend: {
-        itemStyle: {
-          color: primary_color,
-        },
-        itemHoverStyle: {
-          color: primary_color,
-        }
-      },
-      title: {
-        style: {
-          color: primary_color
-        }
-      },
-      subtitle: {
-        style: {
-          color: primary_color
-        }
-      },
-      plotOptions: {
-        series: {
-          dataLabels: {
-            style: {
-              color: primary_color
-            }
-          }
-        }
-      }
-    });
+    }
+  });
 }
 
 /** save the current dark_mode value in a cookie */
@@ -704,14 +704,14 @@ function translate_page() {
 }
 
 function translate_element(element) {
-  if(!loaded_languages[language]){
-    if(debug){
+  if (!loaded_languages[language]) {
+    if (debug) {
       console.log(`Language package ${language} wasn't loaded`);
     }
     return;
   }
-  const translated_element=loaded_languages[language][element];
-  [].forEach.call(document.getElementsByClassName(element),function (html_element) {
+  const translated_element = loaded_languages[language][element];
+  [].forEach.call(document.getElementsByClassName(element), function (html_element) {
     if (!translated_element) {
       console.log("Language package '" + language + "' doesn't have '" + element + "' added to it or the ID is missing in the page. Help improve the page by submitting a bug report. Or even better: clone the repo, fix the problem, and create a pull request. Any help is greatly appreciated!");
       if (debug) {
@@ -781,7 +781,7 @@ function translate_chart() {
   }
 
   for (let trinket of appropriate_data_key_list) {
-    
+
     if (trinket.indexOf("baseline") > -1) {
       let p = document.createElement("span");
       let text_trinket_name = document.createTextNode(trinket);
@@ -791,7 +791,7 @@ function translate_chart() {
         translator.appendChild(p);
       continue;
     }
-    
+
     const lowest_ilvl = current_data["simulated_steps"][current_data["simulated_steps"].length - 1];
 
     // create untranslated link
@@ -1211,14 +1211,13 @@ function update_data_buttons() {
   document.getElementById("talent_combination_selector").hidden = (data_view !== "secondary_distributions");
 
   let is_azerite = (data_view === "azerite_traits");
-
   document.getElementById("chart_type_head").hidden = !is_azerite;
   document.getElementById("chart_type_shoulders").hidden = !is_azerite;
   document.getElementById("chart_type_chest").hidden = !is_azerite;
   document.getElementById("chart_type_itemlevel").hidden = !is_azerite;
   document.getElementById("chart_type_trait_stacking").hidden = !is_azerite;
 
-  let is_traits = (chosen_azerite_list_type === "itemlevel" || chosen_azerite_list_type === "trait_stacking");
+  let is_traits = (data_view === "azerite_traits" && (chosen_azerite_list_type === "itemlevel" || chosen_azerite_list_type === "trait_stacking"));
   document.getElementById("azerite_traits_tier_1").hidden = !is_traits;
   document.getElementById("azerite_traits_tier_2").hidden = !is_traits;
 }
@@ -1474,8 +1473,8 @@ function update_chart() {
   standard_chart.setTitle({
     text: new_title //loaded_data[chosen_class][chosen_spec][data_view][fight_style]["title"]
   }, {
-    text: loaded_data[chosen_class][chosen_spec][data_name][fight_style]["subtitle"]
-  }, false);
+      text: loaded_data[chosen_class][chosen_spec][data_name][fight_style]["subtitle"]
+    }, false);
 
   // delete all old series data
   while (standard_chart.series[0]) {
@@ -1620,8 +1619,8 @@ function update_trait_stacking_chart() {
   standard_chart.setTitle({
     text: "Same itemlevel; different number of traits"
   }, {
-    text: loaded_data[chosen_class][chosen_spec][data_view][fight_style]["subtitle"]
-  }, false);
+      text: loaded_data[chosen_class][chosen_spec][data_view][fight_style]["subtitle"]
+    }, false);
 
   // delete all old series data
   while (standard_chart.series[0]) {
@@ -1692,8 +1691,8 @@ function empty_charts() {
     standard_chart.series[0].remove(false);
   }
   standard_chart.setTitle({
-      //text: loaded_data[chosen_class][chosen_spec][data_view][fight_style]["title"]
-    }, {
+    //text: loaded_data[chosen_class][chosen_spec][data_view][fight_style]["title"]
+  }, {
       text: "No data available / Loading..."
     }
   );
@@ -1703,8 +1702,8 @@ function empty_charts() {
     scatter_chart.series[0].remove(false);
   }
   scatter_chart.setTitle({
-      //text: loaded_data[chosen_class][chosen_spec][data_view][fight_style]["title"]
-    }, {
+    //text: loaded_data[chosen_class][chosen_spec][data_view][fight_style]["title"]
+  }, {
       text: "No data available / Loading..."
     }
   );
@@ -2166,8 +2165,8 @@ function update_scatter_chart() {
   // make sure this color matches the value of color_min in create_color(...)
   scatter_chart.addSeries({ name: Intl.NumberFormat().format(min_dps) + " DPS", color: "#00FFFF" }, false);
   scatter_chart.setTitle({
-      //text: loaded_data[chosen_class][chosen_spec][data_view][fight_style]["title"]
-    }, {
+    //text: loaded_data[chosen_class][chosen_spec][data_view][fight_style]["title"]
+  }, {
       text: loaded_data[chosen_class][chosen_spec][data_view][fight_style]["subtitle"]
     }
   );
