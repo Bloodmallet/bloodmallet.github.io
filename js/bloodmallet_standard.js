@@ -1680,7 +1680,7 @@ function update_trait_stacking_chart() {
   standard_chart.setSize(document.getElementById("chart").style.width, document.getElementById("chart").style.height);
   standard_chart.redraw();
 
-  if (dev_mode)
+  if (debug)
     console.log("call translate_chart from update_trait_stacking_chart");
   translate_chart();
 
