@@ -41,10 +41,10 @@ let chosen_class = "";
 let chosen_spec = "";
 let chosen_talent_combination = "";
 let chosen_azerite_list_type = "head";
-
 let chosen_azerite_tier = 1;
 
 let dark_mode = true;
+let filler_rarity = 0;
 let bloodyfiller = "mallet";
 
 let language = "EN";
@@ -453,54 +453,43 @@ document.addEventListener("DOMContentLoaded", function () {
 function update_dark_mode() {
   if (debug)
     console.log("update_dark_mode");
-  let primary_color;
-  let secondary_color;
+
   if (dark_mode) {
     document.getElementsByTagName("body")[0].classList.remove("bg-light");
     document.getElementsByTagName("body")[0].classList.remove("text-dark");
     document.getElementsByTagName("body")[0].classList.add("bg-dark");
     document.getElementsByTagName("body")[0].classList.add("text-light");
-    primary_color = light_color;
-    secondary_color = dark_color;
-  } else {
-    document.getElementsByTagName("body")[0].classList.add("bg-light");
-    document.getElementsByTagName("body")[0].classList.add("text-dark");
-    document.getElementsByTagName("body")[0].classList.remove("bg-dark");
-    document.getElementsByTagName("body")[0].classList.remove("text-light");
-    primary_color = dark_color;
-    secondary_color = light_color;
-  }
     // update chart base colors
     standard_chart.update({
       legend: {
-        backgroundColor: secondary_color,
+        backgroundColor: dark_color,
         itemStyle: {
-          color: primary_color,
+          color: light_color,
         },
         itemHoverStyle: {
-          color: primary_color,
+          color: light_color,
         }
       },
       title: {
         style: {
-          color: primary_color
+          color: light_color
         }
       },
       tooltip: {
-        backgroundColor: secondary_color,
+        backgroundColor: dark_color,
         style: {
-          color: primary_color,
+          color: light_color,
         },
       },
       subtitle: {
         style: {
-          color: primary_color
+          color: light_color
         }
       },
       xAxis: {
         labels: {
           style: {
-            color: primary_color
+            color: light_color
           }
         }
       },
@@ -516,32 +505,111 @@ function update_dark_mode() {
     scatter_chart.update({
       legend: {
         itemStyle: {
-          color: primary_color,
+          color: light_color,
         },
         itemHoverStyle: {
-          color: primary_color,
+          color: light_color,
         }
       },
       title: {
         style: {
-          color: primary_color
+          color: light_color
         }
       },
       subtitle: {
         style: {
-          color: primary_color
+          color: light_color
         }
       },
       plotOptions: {
         series: {
           dataLabels: {
             style: {
-              color: primary_color
+              color: light_color
             }
           }
         }
       }
     });
+
+  } else {
+    document.getElementsByTagName("body")[0].classList.remove("bg-dark");
+    document.getElementsByTagName("body")[0].classList.remove("text-light");
+    document.getElementsByTagName("body")[0].classList.add("bg-light");
+    document.getElementsByTagName("body")[0].classList.add("text-dark");
+    // update chart base colors
+    standard_chart.update({
+      legend: {
+        backgroundColor: light_color,
+        itemStyle: {
+          color: dark_color,
+        },
+        itemHoverStyle: {
+          color: dark_color,
+        }
+      },
+      title: {
+        style: {
+          color: dark_color
+        }
+      },
+      tooltip: {
+        backgroundColor: light_color,
+        style: {
+          color: dark_color
+        },
+      },
+      subtitle: {
+        style: {
+          color: dark_color
+        }
+      },
+      xAxis: {
+        labels: {
+          style: {
+            color: dark_color
+          }
+        }
+      },
+      yAxis: {
+        stackLabels: {
+          style: {
+            color: dark_color
+          }
+        }
+      }
+    });
+
+    scatter_chart.update({
+      legend: {
+        itemStyle: {
+          color: dark_color,
+        },
+        itemHoverStyle: {
+          color: dark_color,
+        }
+      },
+      title: {
+        style: {
+          color: dark_color
+        }
+      },
+      subtitle: {
+        style: {
+          color: dark_color
+        }
+      },
+      plotOptions: {
+        series: {
+          dataLabels: {
+            style: {
+              color: dark_color
+            }
+          }
+        }
+      }
+    });
+  }
 }
 
 /** save the current dark_mode value in a cookie */
@@ -608,11 +676,13 @@ function randomize_bloodyfiller() {
           break;
       }
 
-      if (filler_rarity === 2) {
+      if (filler_rarity == 2) {
         roll = Math.floor(Math.random() * filler_possibilities.length);
-        break;
       } else {
         roll = Math.floor(Math.random() * (filler_possibilities.length + 1));
+      }
+      if (filler_rarity === 2) {
+        break;
       }
       if (roll === filler_possibilities.length) {
         filler_rarity++;
@@ -680,8 +750,7 @@ function translate_page() {
 
   // select the new language in the settings based on data
   for (let index = 0; index < language_html_elements.length; index++) {
-
-    const element = language_html_elements[index];
+    let element = language_html_elements[index];
     if (element.value === language) {
       element.selected = true;
     }
@@ -694,41 +763,50 @@ function translate_page() {
 
   // translate content of IDs
   translation_IDs.forEach(element => {
-    translate_element(element);
+    if (loaded_languages[language][element] && loaded_languages[language][element] !== "") {
+      document.getElementById(element).innerHTML = loaded_languages[language][element];
+    } else if (loaded_languages[language][element] === "") {
+      // Don't translate
+      console.log("No translation for '" + element + "' available. Help improve the page by submitting a bug report. Or even better: clone the repo, fix the problem, and create a pull request. Any help is greatly appreciated!");
+      if (debug)
+        document.getElementById(element).style.border = "1px solid red";
+    } else {
+      // Don't translate
+      console.log("Language package '" + language + "' doesn't have '" + element + "' added to it or the ID is missing in the page. Help improve the page by submitting a bug report. Or even better: clone the repo, fix the problem, and create a pull request. Any help is greatly appreciated!");
+      if (debug)
+        document.getElementById(element).style.border = "1px solid red";
+    }
   });
 
   // translate content of classes
   translation_classes.forEach(element => {
-    translate_element(element);
-  });
-}
-
-function translate_element(element) {
-  if(!loaded_languages[language]){
-    if(debug){
-      console.log(`Language package ${language} wasn't loaded`);
-    }
-    return;
-  }
-  const translated_element=loaded_languages[language][element];
-  [].forEach.call(document.getElementsByClassName(element),function (html_element) {
-    if (!translated_element) {
-      console.log("Language package '" + language + "' doesn't have '" + element + "' added to it or the ID is missing in the page. Help improve the page by submitting a bug report. Or even better: clone the repo, fix the problem, and create a pull request. Any help is greatly appreciated!");
-      if (debug) {
-        html_element.style.border = "1px solid red";
+    if (loaded_languages[language][element] && loaded_languages[language][element] !== "") {
+      var targets = document.getElementsByClassName(element);
+      for (let index = 0; index < targets.length; index++) {
+        const html_element = targets[index];
+        html_element.innerHTML = loaded_languages[language][element];
       }
-      return;
-    }
-
-    if (translated_element === "") {
+    } else if (loaded_languages[language][element] === "") {
+      // Don't translate
       console.log("No translation for '" + element + "' available. Help improve the page by submitting a bug report. Or even better: clone the repo, fix the problem, and create a pull request. Any help is greatly appreciated!");
       if (debug) {
-        html_element.style.border = "1px solid red";
+        var targets = document.getElementsByClassName(element);
+        for (let index = 0; index < targets.length; index++) {
+          const html_element = targets[index];
+          html_element.style.border = "1px solid red";
+        }
       }
-      return;
+    } else {
+      // Don't translate
+      console.log("Language package '" + language + "' doesn't have '" + element + "' added to it or the ID is missing in the page. Help improve the page by submitting a bug report. Or even better: clone the repo, fix the problem, and create a pull request. Any help is greatly appreciated!");
+      if (debug) {
+        var targets = document.getElementsByClassName(element);
+        for (let index = 0; index < targets.length; index++) {
+          const html_element = targets[index];
+          html_element.style.border = "1px solid red";
+        }
+      }
     }
-
-    html_element.innerHTML = translated_element;
   });
 }
 
@@ -750,9 +828,7 @@ function translate_chart() {
   }
 
   if (document.getElementById("translator_helper").childElementCount > 0) {
-
     debug && console.log("Another translation seems to be in progress. translate_chart early exit.");
-
     return;
   }
 
@@ -947,8 +1023,6 @@ function search_language_cookie() {
 //
 ---------------------------------------------------------*/
 
-
-
 /**
  * Apply click events for data manipulation.
  */
@@ -1090,7 +1164,7 @@ function get_data_from_link() {
 
 }
 
-/*
+/**
  * Loads spec data (json) according to the already applied settings. Triggers update_chart.
  */
 async function load_data() {
@@ -1129,9 +1203,13 @@ async function load_data() {
     file_name += "_" + fight_style + ".json";
     let response = await fetch(`./json/${data_view}/${file_name}`);
     loaded_data[chosen_class][chosen_spec][data_name][fight_style] = await response.json();
+    update_talent_selector();
+    update_chart();
+
+  } else {
+    update_talent_selector();
+    update_chart();
   }
-  update_talent_selector();
-  update_chart();
 }
 
 /**
@@ -1469,13 +1547,14 @@ function update_chart() {
   // set title and subtitle
   let new_title = "";
   if (data_view == "azerite_traits" && chosen_azerite_list_type == "itemlevel")
-    new_title = "Different itemlevels; number of each trait: 1";
+    new_title = "Different itemlevels; number of each trait: 1"
 
   standard_chart.setTitle({
     text: new_title //loaded_data[chosen_class][chosen_spec][data_view][fight_style]["title"]
   }, {
-    text: loaded_data[chosen_class][chosen_spec][data_name][fight_style]["subtitle"]
-  }, false);
+      text: loaded_data[chosen_class][chosen_spec][data_name][fight_style]["subtitle"]
+    }, false);
+
 
   // delete all old series data
   while (standard_chart.series[0]) {
@@ -1620,8 +1699,9 @@ function update_trait_stacking_chart() {
   standard_chart.setTitle({
     text: "Same itemlevel; different number of traits"
   }, {
-    text: loaded_data[chosen_class][chosen_spec][data_view][fight_style]["subtitle"]
-  }, false);
+      text: loaded_data[chosen_class][chosen_spec][data_view][fight_style]["subtitle"]
+    }, false);
+
 
   // delete all old series data
   while (standard_chart.series[0]) {
@@ -1692,8 +1772,8 @@ function empty_charts() {
     standard_chart.series[0].remove(false);
   }
   standard_chart.setTitle({
-      //text: loaded_data[chosen_class][chosen_spec][data_view][fight_style]["title"]
-    }, {
+    //text: loaded_data[chosen_class][chosen_spec][data_view][fight_style]["title"]
+  }, {
       text: "No data available / Loading..."
     }
   );
@@ -1703,8 +1783,8 @@ function empty_charts() {
     scatter_chart.series[0].remove(false);
   }
   scatter_chart.setTitle({
-      //text: loaded_data[chosen_class][chosen_spec][data_view][fight_style]["title"]
-    }, {
+    //text: loaded_data[chosen_class][chosen_spec][data_view][fight_style]["title"]
+  }, {
       text: "No data available / Loading..."
     }
   );
@@ -2166,8 +2246,8 @@ function update_scatter_chart() {
   // make sure this color matches the value of color_min in create_color(...)
   scatter_chart.addSeries({ name: Intl.NumberFormat().format(min_dps) + " DPS", color: "#00FFFF" }, false);
   scatter_chart.setTitle({
-      //text: loaded_data[chosen_class][chosen_spec][data_view][fight_style]["title"]
-    }, {
+    //text: loaded_data[chosen_class][chosen_spec][data_view][fight_style]["title"]
+  }, {
       text: loaded_data[chosen_class][chosen_spec][data_view][fight_style]["subtitle"]
     }
   );
