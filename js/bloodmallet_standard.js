@@ -569,16 +569,101 @@ function search_dark_mode_cookie() {
 //  Reroll the FILLER of Bloody(FILLER)
 //
 ---------------------------------------------------------*/
-const filler_possibilities_common = ["y(&nbsp;charts&nbsp;)", "y(&nbsp;trinkets&nbsp;)", "y(&nbsp;azerite&nbsp;)", "y(&nbsp;races&nbsp;)"];
+const filler_possibilities_uncommon = ["y(&nbsp;charts&nbsp;)", "y(&nbsp;trinkets&nbsp;)", "y(&nbsp;azerite&nbsp;)", "y(&nbsp;races&nbsp;)"];
 const filler_possibilities_rare = ["y(¯\\_(ツ)_/¯)", "y(&nbsp; ͡° ͜ʖ ͡°)", "y( ಠ_ಠ )", "y( ⌐■_■ )", "y( ʕ•ᴥ•ʔ )", "y( ಠᴗಠ )", "y(づ￣ ³￣)", "y( ⊙_☉ )"];
 const filler_possibilities_epic = ["y(\\_/)"];
-// I'm looking for more silly smileys. Contact me! Maybe your smiley can make it into the epic category.
+
+const patrons_epic = [
+]
+const patrons_rare = [
+  {
+    "name": "Dog",
+    "text": "Taco"
+  },
+]
+const patrons_uncommon = [
+  {
+    "name": "Fred",
+    "text": "👻"
+  },
+];
+const patrons = patrons_uncommon.concat(
+  patrons_uncommon,
+  patrons_rare,
+  patrons_rare,
+  patrons_rare,
+  patrons_rare,
+  patrons_rare,
+  patrons_epic,
+  patrons_epic,
+  patrons_epic,
+  patrons_epic,
+  patrons_epic,
+  patrons_epic,
+  patrons_epic,
+  patrons_epic,
+  patrons_epic,
+  patrons_epic
+);
 
 document.addEventListener("DOMContentLoaded", function () {
   if (debug)
     console.log("addEventListener bloodyfiller");
-  document.getElementById("bloodyfiller").addEventListener("click", randomize_bloodyfiller);
+  // document.getElementById("bloodyfiller").addEventListener("click", randomize_bloodyfiller);
+  document.getElementById("bloodyheadline").addEventListener("click", randomize_bloodypatrons);
+  if (Math.floor(Math.random() * 2) > 0) {
+    randomize_bloodypatrons();
+  }
 });
+
+
+function randomize_bloodypatrons() {
+  if (debug) {
+    console.log("randomize_bloodypatrons");
+  }
+
+  // if no bloodypatrons is present update bloodyheadline
+
+  let html_element = document.getElementById("bloodypatrons");
+
+  if (html_element === null) {
+    let helper = document.getElementById("bloodyheadline");
+    helper.innerHTML = "bloody(&nbsp;<span id=\"bloodypatrons\" data-toggle=\"tooltip\" data-placement=\"bottom\" title=\"\" data-original-title=\"Chosen by patron \"></span>&nbsp;)";
+    html_element = document.getElementById("bloodypatrons");
+  }
+  return;
+  let old_content = html_element.innerHTML;
+  let new_content = old_content;
+
+  console.log(old_content);
+  console.log(new_content);
+
+  while (new_content === old_content) {
+    let roll = Math.floor(Math.random() * patrons.length);
+    new_content = "bloody(&nbsp;<span id=\"bloodytext\" data-toggle=\"tooltip\" data-placement=\"bottom\" title=\"\" data-original-title=\"Chosen by patron " + patrons[roll]["name"] + "\">" + patrons[roll]["text"] + "</span>&nbsp;)";
+
+
+    console.log(old_content);
+    console.log(new_content);
+  }
+
+  try {
+    $(function () {
+      $('#bloodytext').tooltip('hide'); // disable
+    });
+  } catch (error) {
+    debug && console.log(error);
+  }
+
+  html_element.innerHTML = new_content;
+  $(function () {
+    $('#bloodytext').tooltip();
+    $('#bloodytext').tooltip('show');
+  });
+
+
+}
+
 
 /**
  * Randomize the CONTENT of Bloody(CONTENT) header on the main page.
@@ -598,7 +683,7 @@ function randomize_bloodyfiller() {
       switch (filler_rarity) {
         case 0:
         default:
-          filler_possibilities = filler_possibilities_common;
+          filler_possibilities = filler_possibilities_uncommon;
           break;
         case 1:
           filler_possibilities = filler_possibilities_rare;
