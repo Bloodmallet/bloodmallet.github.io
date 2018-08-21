@@ -40,7 +40,7 @@ let loaded_data = {};
 let chosen_class = "";
 let chosen_spec = "";
 let chosen_talent_combination = "";
-let chosen_azerite_list_type = "head";
+let chosen_azerite_list_type = "trait_stacking";
 
 let chosen_azerite_tier = 1;
 
