@@ -570,10 +570,10 @@ function search_dark_mode_cookie() {
 //
 ---------------------------------------------------------*/
 const patrons_epic = [
-  // {
-  //   "name": "",
-  //   "text": "charts"
-  // }
+  {
+    "name": "Tumi",
+    "text": "Tumi"
+  }
 ];
 const patrons_rare = [
   {
