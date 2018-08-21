@@ -566,26 +566,30 @@ function search_dark_mode_cookie() {
 
 /*---------------------------------------------------------
 //
-//  Reroll the FILLER of Bloody(FILLER)
+//  Reroll the patron defined message of the headline
 //
 ---------------------------------------------------------*/
-const filler_possibilities_uncommon = ["y(&nbsp;charts&nbsp;)", "y(&nbsp;trinkets&nbsp;)", "y(&nbsp;azerite&nbsp;)", "y(&nbsp;races&nbsp;)"];
-const filler_possibilities_rare = ["y(¯\\_(ツ)_/¯)", "y(&nbsp; ͡° ͜ʖ ͡°)", "y( ಠ_ಠ )", "y( ⌐■_■ )", "y( ʕ•ᴥ•ʔ )", "y( ಠᴗಠ )", "y(づ￣ ³￣)", "y( ⊙_☉ )"];
-const filler_possibilities_epic = ["y(\\_/)"];
-
 const patrons_epic = [
-]
+  // {
+  //   "name": "",
+  //   "text": "charts"
+  // }
+];
 const patrons_rare = [
   {
-    "name": "Dog",
-    "text": "Taco"
+    "name": "🐕",
+    "text": "🌮"
   },
-]
+];
 const patrons_uncommon = [
   {
     "name": "Fred",
     "text": "👻"
   },
+  {
+    "name": "Barokoshama",
+    "text": "(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧"
+  }
 ];
 const patrons = patrons_uncommon.concat(
   patrons_uncommon,
@@ -613,17 +617,25 @@ document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("bloodyheadline").addEventListener("click", randomize_bloodypatrons);
   if (Math.floor(Math.random() * 2) > 0) {
     randomize_bloodypatrons();
+  } else {
+    document.getElementById("bloodyheadline").innerHTML = "bloodmallet";
   }
 });
 
-
+/**
+ * Way to return the kindness of patrons.
+ * Shows the patron defined message in the title.
+ * And adds a tooltip with their wanted name.
+ * bloody( message )
+ *            T
+ *         Tooltip
+ */
 function randomize_bloodypatrons() {
   if (debug) {
     console.log("randomize_bloodypatrons");
   }
 
-  // if no bloodypatrons is present update bloodyheadline
-
+  // if no element 'bloodypatrons' is present, update bloodyheadline
   let html_element = document.getElementById("bloodypatrons");
 
   if (html_element === null) {
@@ -631,84 +643,32 @@ function randomize_bloodypatrons() {
     helper.innerHTML = "bloody(&nbsp;<span id=\"bloodypatrons\" data-toggle=\"tooltip\" data-placement=\"bottom\" title=\"\" data-original-title=\"Chosen by patron \"></span>&nbsp;)";
     html_element = document.getElementById("bloodypatrons");
   }
-  return;
+
+  // roll new patron message and name
   let old_content = html_element.innerHTML;
   let new_content = old_content;
-
-  console.log(old_content);
-  console.log(new_content);
-
+  let roll = 0;
   while (new_content === old_content) {
-    let roll = Math.floor(Math.random() * patrons.length);
-    new_content = "bloody(&nbsp;<span id=\"bloodytext\" data-toggle=\"tooltip\" data-placement=\"bottom\" title=\"\" data-original-title=\"Chosen by patron " + patrons[roll]["name"] + "\">" + patrons[roll]["text"] + "</span>&nbsp;)";
-
-
-    console.log(old_content);
-    console.log(new_content);
+    roll = Math.floor(Math.random() * patrons.length);
+    new_content = patrons[roll]["text"];
   }
 
+  // apply new name to tooltip
   try {
     $(function () {
-      $('#bloodytext').tooltip('hide'); // disable
+      $('#bloodypatrons').tooltip('hide')
+        .attr('data-original-title', 'Chosen by patron ' + patrons[roll]['name'])
+        .tooltip('show');
     });
   } catch (error) {
-    debug && console.log(error);
+    if (debug) {
+      console.log(error);
+    }
   }
 
+  // apply new message
   html_element.innerHTML = new_content;
-  $(function () {
-    $('#bloodytext').tooltip();
-    $('#bloodytext').tooltip('show');
-  });
 
-
-}
-
-
-/**
- * Randomize the CONTENT of Bloody(CONTENT) header on the main page.
- */
-function randomize_bloodyfiller() {
-  if (debug)
-    console.log("randomize_bloodyfiller");
-  let roll;
-  let filler_possibilities;
-  let filler_rarity = 0;
-  let new_filler = bloodyfiller;
-
-  while (new_filler === bloodyfiller) {
-    filler_rarity = 0;
-
-    do {
-      switch (filler_rarity) {
-        case 0:
-        default:
-          filler_possibilities = filler_possibilities_uncommon;
-          break;
-        case 1:
-          filler_possibilities = filler_possibilities_rare;
-          break;
-        case 2:
-          filler_possibilities = filler_possibilities_epic;
-          break;
-      }
-
-      if (filler_rarity === 2) {
-        roll = Math.floor(Math.random() * filler_possibilities.length);
-        break;
-      } else {
-        roll = Math.floor(Math.random() * (filler_possibilities.length + 1));
-      }
-      if (roll === filler_possibilities.length) {
-        filler_rarity++;
-      }
-    } while (roll === filler_possibilities.length);
-
-    new_filler = filler_possibilities[roll];
-  }
-
-  bloodyfiller = new_filler;
-  document.getElementById("bloodyfiller").innerHTML = bloodyfiller;
 }
 
 
@@ -1232,6 +1192,9 @@ function switch_mode() {
   // hide, unhide stuff
   if (mode == "welcome") {
     mode = "data";
+    $(function () {
+      $('#bloodypatrons').tooltip('hide');
+    });
     make_invisible(modes[mode]["hidden"]);
     make_visible(modes[mode]["shown"]);
   }
