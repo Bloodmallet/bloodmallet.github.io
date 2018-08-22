@@ -589,6 +589,10 @@ const patrons_uncommon = [
   {
     "name": "Barokoshama",
     "text": "(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧"
+  },
+  {
+    "name": "kaymancutoff",
+    "text": "Keg Smash"
   }
 ];
 const patrons = patrons_uncommon.concat(
