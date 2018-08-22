@@ -816,8 +816,9 @@ a:hover .svg-icon {
   visibility: hidden; /* Hidden by default. Visible on click */
   min-width: 250px; /* Set a default minimum width */
   margin-left: -125px; /* Divide value of min-width by 2 */
-  background-color: #333; /* Black background color */
-  color: #fff; /* White text color */
+  background-color: #343a40; /* Black background color */
+  border: 1px solid #99999b;
+  color: #f8f9fa; /* White text color */
   text-align: center; /* Centered text */
   border-radius: 2px; /* Rounded borders */
   padding: 16px; /* Padding */
@@ -856,4 +857,9 @@ However, delay the fade out process for 2.5 seconds */
 @keyframes fadeout {
   from {bottom: 30px; opacity: 1;}
   to {bottom: 0; opacity: 0;}
+}
+
+/* Hint at the click feature */
+#bloodyheadline {
+  cursor: pointer;
 }
