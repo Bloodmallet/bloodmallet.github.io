@@ -577,8 +577,8 @@ const patrons_epic = [
 ];
 const patrons_rare = [
   {
-    "name": "🐕",
-    "text": "🌮"
+    "name": "⚡",
+    "text": "Hekili"
   },
 ];
 const patrons_uncommon = [
