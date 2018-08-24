@@ -338,7 +338,7 @@ function bloodmallet_chart_import() {
       console.log("init_charts");
     }
     // scan for divs / what data is wanted
-    let chart_list = document.getElementsByClassName("bloodmallet_chart");
+    let chart_list = document.querySelectorAll("div.bloodmallet_chart");
     for (const html_element of chart_list) {
       let html_id = html_element.id;
       if (html_element) {
