@@ -507,7 +507,7 @@ function update_dark_mode() {
     yAxis: {
       stackLabels: {
         style: {
-          color: light_color
+          color: primary_color
         }
       }
     }
