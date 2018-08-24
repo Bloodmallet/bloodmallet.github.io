@@ -804,14 +804,6 @@ function bloodmallet_chart_import() {
 
       // if it's an item try to add azerite ids and itemlevel
       if (link.indexOf("items") > -1) {
-        // // No Azerite Support yet
-        // if (data.hasOwnProperty("class_id") && data.hasOwnProperty("used_azerite_traits_per_item")) {
-        //   link += "/azerite-powers=";
-        //   link += data["class_id"];
-        //   for (const trait of data["used_azerite_traits_per_item"][key]) {
-        //     link += ":" + trait["id"];
-        //   }
-        // }
         let ilvl = data["simulated_steps"][data["simulated_steps"].length - 1];
         // fix special case of azerite items "1_340"
         if (typeof ilvl === 'string') {
@@ -820,6 +812,13 @@ function bloodmallet_chart_import() {
           }
         }
         link += "?itemLevel=" + ilvl;
+        if (data.hasOwnProperty("class_id") && data.hasOwnProperty("used_azerite_traits_per_item")) {
+          link += "&azerite=";
+          link += data["class_id"] + ":0";
+          for (const trait of data["used_azerite_traits_per_item"][key]) {
+            link += ":" + trait["id"];
+          }
+        }
       }
 
       try {
