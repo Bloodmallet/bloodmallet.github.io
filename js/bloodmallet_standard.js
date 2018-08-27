@@ -1070,8 +1070,10 @@ window.onhashchange = function () {
 
 document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("talent_combination_selector").addEventListener("change", function (e) {
-    if (debug)
-      console.log(e);
+    if (debug) {
+      console.log("talent_combination_selector was changed.");
+      console.log(e.target.value);
+    }
     chosen_talent_combination = e.target.value;
     push_state();
   });
@@ -1289,7 +1291,9 @@ function update_talent_selector() {
   let talent_selector = document.getElementById("talent_combination_selector");
   talent_selector.innerHTML = "";
 
-  chosen_talent_combination = talent_combinations[0];
+  if (!chosen_talent_combination) {
+    chosen_talent_combination = talent_combinations[0];
+  }
 
   for (let talent_combination of talent_combinations) {
     let new_option = document.createElement("option");
