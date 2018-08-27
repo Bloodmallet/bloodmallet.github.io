@@ -311,6 +311,19 @@ function bloodmallet_chart_import() {
     }
     // scan for divs / what data is wanted
     let chart_list = document.querySelectorAll("div.bloodmallet_chart");
+
+    // check for unique IDs
+    let tmp_id_list = [];
+    for (const html_element of chart_list) {
+      if (tmp_id_list.indexOf(html_element.id) > -1) {
+        console.error(`Multiple Elements use the same ID ('${html_element.id}'). Aborting bloodmallet_chart_import.js.`);
+        return;
+      } else {
+        tmp_id_list.push(html_element.id);
+      }
+    }
+
+
     for (const html_element of chart_list) {
       let html_id = undefined;
       try {
