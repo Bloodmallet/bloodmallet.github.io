@@ -1541,9 +1541,13 @@ function update_chart() {
     };
 
     for (const name of dps_ordered_data) {
-      try {
-        new_ordered_data.push(race_array[name]);
-      } catch (error) {
+      if (language === "CN") {
+        try {
+          new_ordered_data.push(race_array[name]);
+        } catch (error) {
+          new_ordered_data.push(name);
+        }
+      } else {
         new_ordered_data.push(name);
       }
     }
