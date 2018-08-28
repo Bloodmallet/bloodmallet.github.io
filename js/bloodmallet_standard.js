@@ -1154,8 +1154,6 @@ async function load_data() {
     return;
   }
 
-  empty_charts();
-
   // necessary to be able to save traits, head, shoulders and chest separately
   var data_name = data_view;
   if (data_view === "azerite_traits" && ["head", "shoulders", "chest"].includes(chosen_azerite_list_type)) {
@@ -1179,8 +1177,13 @@ async function load_data() {
 
     file_name += "_" + fight_style + ".json";
     let response = await fetch(`./json/${data_view}/${file_name}`);
-    loaded_data[chosen_class][chosen_spec][data_name][fight_style] = await response.json();
+    try {
+      loaded_data[chosen_class][chosen_spec][data_name][fight_style] = await response.json();
+    } catch (error) {
+      return;
+    }
   }
+  empty_charts();
   update_talent_selector();
   update_chart();
 }
