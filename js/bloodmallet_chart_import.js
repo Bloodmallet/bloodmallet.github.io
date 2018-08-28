@@ -194,7 +194,7 @@ function bloodmallet_chart_import() {
     },
     tooltip: {
       formatter: function () {
-        let s = '<div style="margin: -4px -6px -11px -7px; padding: 3px 3px 6px 3px; background-color:';
+        let s = '<div style="margin: -4px -7px -7px -7px; padding: 3px 3px 6px 3px; background-color:';
         s += default_background_color;
         s += '"><div style=\"margin-left: 9px; margin-right: 9px; margin-bottom: 6px; font-weight: 700;\">';
         s += this.x;
@@ -472,6 +472,10 @@ function bloodmallet_chart_import() {
     data_name += "_" + fight_style;
     data_name += ".json";
 
+    if (dev_mode) {
+      console.log(`Fetching data from: ${path_to_data + data_group}/${data_name}`);
+    }
+
     fetch(path_to_data + data_group + "/" + data_name)
       .then(function (response) {
         if (response.status !== 200) {
@@ -492,7 +496,10 @@ function bloodmallet_chart_import() {
           }
 
           loaded_data[data_type][fight_style][wow_class][wow_spec] = json;
-          console.log("Load and save finished.");
+          if (dev_mode) {
+            console.log(json);
+            console.log("Load and save finished.");
+          }
         });
       }).catch(function (err) {
         console.error('Fetching data from bloodmallet.com encountered an error, ', err);
@@ -559,7 +566,11 @@ function bloodmallet_chart_import() {
 
     } else {
       dps_ordered_keys = data["sorted_data_keys"].slice(0, data_entries);
-      baseline_dps = data["data"]["baseline"][data["simulated_steps"][data["simulated_steps"].length - 1]];
+      if (data_type === "races") {
+        baseline_dps = 0;
+      } else {
+        baseline_dps = data["data"]["baseline"][data["simulated_steps"][data["simulated_steps"].length - 1]];
+      }
     }
 
     if (dev_mode) {
@@ -617,53 +628,72 @@ function bloodmallet_chart_import() {
       console.log("simulated_steps: " + simulated_steps);
     }
 
-    for (let itemlevel_position in simulated_steps) {
+    if (simulated_steps) {
+      for (let itemlevel_position in simulated_steps) {
 
-      let itemlevel = simulated_steps[itemlevel_position];
+        let itemlevel = simulated_steps[itemlevel_position];
+        var dps_array = [];
+
+        for (let dps_key of dps_ordered_keys) {
+
+          let dps_key_values = data["data"][dps_key];
+
+          // check for zero dps values and don't change them
+          if (Number(dps_key_values[itemlevel]) > 0) {
+
+            // if lowest itemlevel is looked at, substract baseline
+            if (itemlevel_position == simulated_steps.length - 1) {
+
+              if (itemlevel in dps_key_values) {
+                dps_array.push(dps_key_values[itemlevel] - baseline_dps);
+              } else {
+                dps_array.push(0);
+              }
+
+            } else { // else substract lower itemlevel value of same item
+
+              // if lower itemlevel is zero we have to assume that this item needs to be compared now to the baseline
+              if (dps_key_values[simulated_steps[String(Number(itemlevel_position) + 1)]] == 0 || !(simulated_steps[String(Number(itemlevel_position) + 1)] in dps_key_values)) {
+
+                dps_array.push(dps_key_values[itemlevel] - baseline_dps);
+
+              } else { // standard case, next itemlevel is not zero and can be used to substract from the current value
+
+                dps_array.push(dps_key_values[itemlevel] - dps_key_values[simulated_steps[String(Number(itemlevel_position) + 1)]]);
+              }
+
+            }
+
+          } else {
+            if (itemlevel in dps_key_values) {
+              dps_array.push(dps_key_values[itemlevel]);
+            } else {
+              dps_array.push(0);
+            }
+          }
+        }
+
+        chart.addSeries({
+          data: dps_array,
+          name: itemlevel,
+          showInLegend: true
+        }, false);
+
+      }
+    } else { // race simulations
       var dps_array = [];
 
       for (let dps_key of dps_ordered_keys) {
 
         let dps_key_values = data["data"][dps_key];
 
-        // check for zero dps values and don't change them
-        if (Number(dps_key_values[itemlevel]) > 0) {
+        dps_array.push(dps_key_values);
 
-          // if lowest itemlevel is looked at, substract baseline
-          if (itemlevel_position == simulated_steps.length - 1) {
-
-            if (itemlevel in dps_key_values) {
-              dps_array.push(dps_key_values[itemlevel] - baseline_dps);
-            } else {
-              dps_array.push(0);
-            }
-
-          } else { // else substract lower itemlevel value of same item
-
-            // if lower itemlevel is zero we have to assume that this item needs to be compared now to the baseline
-            if (dps_key_values[simulated_steps[String(Number(itemlevel_position) + 1)]] == 0 || !(simulated_steps[String(Number(itemlevel_position) + 1)] in dps_key_values)) {
-
-              dps_array.push(dps_key_values[itemlevel] - baseline_dps);
-
-            } else { // standard case, next itemlevel is not zero and can be used to substract from the current value
-
-              dps_array.push(dps_key_values[itemlevel] - dps_key_values[simulated_steps[String(Number(itemlevel_position) + 1)]]);
-            }
-
-          }
-
-        } else {
-          if (itemlevel in dps_key_values) {
-            dps_array.push(dps_key_values[itemlevel]);
-          } else {
-            dps_array.push(0);
-          }
-        }
       }
 
       chart.addSeries({
         data: dps_array,
-        name: itemlevel,
+        name: "Race",
         showInLegend: true
       }, false);
 
@@ -683,14 +713,6 @@ function bloodmallet_chart_import() {
       readd_wowdb_tooltips();
     }
   }
-
-
-
-
-
-
-
-
 
   /**
    * Function to help catch defered loaded jQuery.
@@ -723,6 +745,11 @@ function bloodmallet_chart_import() {
 
     // fallback
     if (state.tooltip_engine != "wowhead" && state.tooltip_engine != "wowdb") {
+      return key;
+    }
+
+    // races don't have links/tooltips
+    if (state.data_type === "races") {
       return key;
     }
 
@@ -862,7 +889,10 @@ function bloodmallet_chart_import() {
       styled_chart.subtitle.style.color = font_color;
 
       styled_chart.tooltip.formatter = function () {
-        let s = '<div style="margin: -4px -6px -11px -7px; padding: 3px 3px 6px 3px; background-color:';
+        let s = '<div style="margin: -4px -7px -7px -7px; padding: 3px 3px 6px 3px; background-color:';
+        if (state.chart_engine === "highcharts_old") {
+          s = '<div style="margin: -7px; padding: 3px 3px 6px 3px; background-color:';
+        }
         s += background_color;
         s += '"><div style=\"margin-left: 9px; margin-right: 9px; margin-bottom: 6px; font-weight: 700;\">';
         s += this.x;
