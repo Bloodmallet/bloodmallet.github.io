@@ -1516,9 +1516,41 @@ function update_chart() {
     if (debug) {
       console.log("applying ordered_trinket_list to categories in update_chart");
     }
+
+    let new_ordered_data = [];
+    let race_array = {
+      "Lightforged Draenei": "光铸德莱尼",
+      "Gnome": "侏儒",
+      "Undead": "亡灵",
+      "Pandaren": "熊猫人",
+      "Troll": "巨魔",
+      "Draenei": "德莱尼",
+      "Goblin": "地精",
+      "Blood Elf": "血精灵",
+      "Void Elf": "虚空精灵",
+      "Worgen": "狼人",
+      "Tauren": "牛头人",
+      "Highmountain Tauren": "至高岭牛头人",
+      "Night Elf": "暗夜精灵",
+      "Dark Iron Dwarf": "黑铁矮人",
+      "Orc": "兽人",
+      "Maghar Orc": "玛格汉兽人",
+      "Human": "人类",
+      "Dwarf": "矮人",
+      "Nightborne": "夜之子"
+    };
+
+    for (const name of dps_ordered_data) {
+      try {
+        new_ordered_data.push(race_array[name]);
+      } catch (error) {
+        new_ordered_data.push(name);
+      }
+    }
+
     standard_chart.update({
       xAxis: {
-        categories: dps_ordered_data
+        categories: new_ordered_data
       }
     }, false);
   }
