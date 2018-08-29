@@ -1575,10 +1575,20 @@ function update_chart() {
   if (data_view == "azerite_traits" && chosen_azerite_list_type == "itemlevel")
     new_title = "Different itemlevels; number of each trait: 1";
 
+  let subtitle = "Simed ";
+  let age = new Date() - new Date(Date.parse(loaded_data[chosen_class][chosen_spec][data_name][fight_style]["timestamp"] + " UTC"));
+  let age_days = Math.floor(age / 24 / 3600 / 1000);
+  if (age_days > 0) {
+    subtitle += `${age_days}d `;
+  }
+  let age_hours = Math.floor(age / 3600 / 1000) - age_days * 24;
+  subtitle += `${age_hours}h ago`;
+  subtitle += ` | SimulationCraft: <a href=\"https://github.com/simulationcraft/simc/commit/${loaded_data[chosen_class][chosen_spec][data_view][fight_style]["simc_settings"]["simc_hash"]}\" target=\"blank\">#${loaded_data[chosen_class][chosen_spec][data_view][fight_style]["simc_settings"]["simc_hash"].substring(0, 5)}</a>`;
+
   standard_chart.setTitle({
     text: new_title //loaded_data[chosen_class][chosen_spec][data_view][fight_style]["title"]
   }, {
-      text: loaded_data[chosen_class][chosen_spec][data_name][fight_style]["subtitle"]
+      text: subtitle // loaded_data[chosen_class][chosen_spec][data_name][fight_style]["subtitle"]
     }, false);
 
   // delete all old series data
@@ -1736,12 +1746,22 @@ function update_trait_stacking_chart() {
     }
   }, false);
 
+  let subtitle = "Simed ";
+  let age = new Date() - new Date(Date.parse(loaded_data[chosen_class][chosen_spec][data_name][fight_style]["timestamp"] + " UTC"));
+  let age_days = Math.floor(age / 24 / 3600 / 1000);
+  if (age_days > 0) {
+    subtitle += `${age_days}d `;
+  }
+  let age_hours = Math.floor(age / 3600 / 1000) - age_days * 24;
+  subtitle += `${age_hours}h ago`;
+  subtitle += ` | SimulationCraft: <a href=\"https://github.com/simulationcraft/simc/commit/${loaded_data[chosen_class][chosen_spec][data_view][fight_style]["simc_settings"]["simc_hash"]}\" target=\"blank\">#${loaded_data[chosen_class][chosen_spec][data_view][fight_style]["simc_settings"]["simc_hash"].substring(0, 5)}</a>`;
+
   let max_ilevel = loaded_data[chosen_class][chosen_spec][data_view][fight_style]["simulated_steps"][0].split("_")[1];
   // set title and subtitle
   standard_chart.setTitle({
     text: `Itemlevel ${max_ilevel}; different number of traits`
   }, {
-      text: loaded_data[chosen_class][chosen_spec][data_view][fight_style]["subtitle"]
+      text: subtitle // loaded_data[chosen_class][chosen_spec][data_view][fight_style]["subtitle"]
     }, false);
 
   // delete all old series data
@@ -1802,7 +1822,6 @@ function update_trait_stacking_chart() {
 
 
   standard_chart.legend.title.attr({ text: "Trait count" });
-
 
   document.getElementById("chart").style.height = 200 + dps_ordered_data.length * 30 + "px";
   standard_chart.setSize(document.getElementById("chart").style.width, document.getElementById("chart").style.height);
