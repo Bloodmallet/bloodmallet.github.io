@@ -1747,7 +1747,7 @@ function update_trait_stacking_chart() {
   }, false);
 
   let subtitle = "Simed ";
-  let age = new Date() - new Date(Date.parse(loaded_data[chosen_class][chosen_spec][data_name][fight_style]["timestamp"] + " UTC"));
+  let age = new Date() - new Date(Date.parse(loaded_data[chosen_class][chosen_spec][data_view][fight_style]["timestamp"] + " UTC"));
   let age_days = Math.floor(age / 24 / 3600 / 1000);
   if (age_days > 0) {
     subtitle += `${age_days}d `;
