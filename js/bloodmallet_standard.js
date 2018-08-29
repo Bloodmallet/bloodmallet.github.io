@@ -185,12 +185,12 @@ const empty_chart = {
   ],
   legend: {
     align: "right",
-    backgroundColor: dark_color,
+    backgroundColor: "",
     borderColor: medium_color,
     borderWidth: 1,
-    floating: true,
+    floating: false,
     itemMarginBottom: 3,
-    itemMarginTop: 3,
+    itemMarginTop: 0,
     layout: 'vertical',
     reversed: true,
     shadow: false,
@@ -199,10 +199,21 @@ const empty_chart = {
     y: 0,
     itemStyle: {
       color: light_color,
+      fontSize: font_size,
+      fontWeight: "normal"
     },
     itemHoverStyle: {
       color: light_color,
-    }
+    },
+    title: {
+      text: " ",
+      style: {
+        color: light_color,
+        fontSize: font_size,
+        fontWeight: "normal"
+      }
+    },
+    symbolRadius: 0
   },
   plotOptions: {
     bar: {
@@ -341,13 +352,6 @@ const empty_chart = {
       fontSize: font_size,
     },
     useHTML: true,
-    // adding this as a potential tooltip positioning fix. changes tooltip position to be inside the bar rather than at the end
-    positioner: function (boxWidth, boxHeight, point) {
-      return {
-        x: point.plotX,
-        y: point.plotY
-      };
-    }
   },
   xAxis: {
     categories: [
@@ -473,12 +477,18 @@ function update_dark_mode() {
   // update chart base colors
   standard_chart.update({
     legend: {
-      backgroundColor: secondary_color,
+      backgroundColor: "",
       itemStyle: {
         color: primary_color,
       },
       itemHoverStyle: {
         color: primary_color,
+        cursor: "auto"
+      },
+      title: {
+        style: {
+          color: primary_color
+        }
       }
     },
     title: {
@@ -1633,10 +1643,17 @@ function update_chart() {
 
       }
 
+      let polished_itemlevel_name = itemlevel;
+      if (data_view === "azerite_traits" && ["itemlevel", "head", "shoulders", "chest"].includes(chosen_azerite_list_type)) {
+        polished_itemlevel_name = itemlevel.split("_")[1];
+      } else {
+        polished_itemlevel_name = itemlevel;
+      }
+
       standard_chart.addSeries({
         color: ilevel_color_table[itemlevel],
         data: itemlevel_dps_values,
-        name: itemlevel,
+        name: polished_itemlevel_name,
         showInLegend: true
       }, false);
     }
@@ -1650,10 +1667,20 @@ function update_chart() {
     standard_chart.addSeries({
       color: class_colors[chosen_class],
       data: dps_values,
-      name: data_view,
+      name: "Race",
       showInLegend: true
     }, false);
   }
+
+  // add new legend title
+  if (data_view === "trinkets" || data_view === "azerite_traits" && ["itemlevel", "head", "shoulders", "chest"].includes(chosen_azerite_list_type)) {
+    standard_chart.legend.title.attr({ text: "Itemlevel" });
+  } else if (data_view === "races") {
+    standard_chart.legend.title.attr({ text: "" });
+  } else if (data_view === "azerite_traits" && chosen_azerite_list_type === "trait_stacking") {
+    standard_chart.legend.title.attr({ text: "Trait count" });
+  }
+
   document.getElementById("chart").style.height = 200 + dps_ordered_data.length * 30 + "px";
   standard_chart.setSize(document.getElementById("chart").style.width, document.getElementById("chart").style.height);
   standard_chart.redraw();
@@ -1709,10 +1736,10 @@ function update_trait_stacking_chart() {
     }
   }, false);
 
-
+  let max_ilevel = loaded_data[chosen_class][chosen_spec][data_view][fight_style]["simulated_steps"][0].split("_")[1];
   // set title and subtitle
   standard_chart.setTitle({
-    text: "Same itemlevel; different number of traits"
+    text: `Itemlevel ${max_ilevel}; different number of traits`
   }, {
       text: loaded_data[chosen_class][chosen_spec][data_view][fight_style]["subtitle"]
     }, false);
@@ -1763,13 +1790,19 @@ function update_trait_stacking_chart() {
 
     }
 
+    let new_stack_name = stack_name.split("_")[0];
+
     standard_chart.addSeries({
       color: ilevel_color_table[stack_name],
       data: itemlevel_dps_values,
-      name: stack_name,
+      name: new_stack_name,
       showInLegend: true
     }, false);
   }
+
+
+  standard_chart.legend.title.attr({ text: "Trait count" });
+
 
   document.getElementById("chart").style.height = 200 + dps_ordered_data.length * 30 + "px";
   standard_chart.setSize(document.getElementById("chart").style.width, document.getElementById("chart").style.height);
