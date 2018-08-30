@@ -116,7 +116,8 @@ const translation_classes = [
   "translate_shoulders",
   "translate_chest",
   "translate_link_to_chart",
-  "translate_link_was_copied_to_clipboard"
+  "translate_link_was_copied_to_clipboard",
+  "translate_dps_only_warning"
 ];
 
 
