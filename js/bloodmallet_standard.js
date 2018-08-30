@@ -1583,7 +1583,7 @@ function update_chart() {
   }
   let age_hours = Math.floor(age / 3600 / 1000) - age_days * 24;
   subtitle += `${age_hours}h ago`;
-  subtitle += ` | SimulationCraft: <a href=\"https://github.com/simulationcraft/simc/commit/${loaded_data[chosen_class][chosen_spec][data_view][fight_style]["simc_settings"]["simc_hash"]}\" target=\"blank\">#${loaded_data[chosen_class][chosen_spec][data_view][fight_style]["simc_settings"]["simc_hash"].substring(0, 5)}</a>`;
+  subtitle += ` | SimulationCraft: <a href=\"https://github.com/simulationcraft/simc/commit/${loaded_data[chosen_class][chosen_spec][data_name][fight_style]["simc_settings"]["simc_hash"]}\" target=\"blank\">#${loaded_data[chosen_class][chosen_spec][data_name][fight_style]["simc_settings"]["simc_hash"].substring(0, 5)}</a>`;
 
   standard_chart.setTitle({
     text: new_title //loaded_data[chosen_class][chosen_spec][data_view][fight_style]["title"]
