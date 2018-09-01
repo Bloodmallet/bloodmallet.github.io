@@ -42,7 +42,7 @@ let chosen_spec = "";
 let chosen_talent_combination = "";
 let chosen_azerite_list_type = "trait_stacking";
 
-let chosen_azerite_tier = 1;
+let chosen_azerite_tier = 3;
 
 let dark_mode = true;
 let bloodyfiller = "mallet";
@@ -152,7 +152,7 @@ const azerite_trait_view_type_IDs = [
 ];
 
 const azerite_trait_tier_IDs = [
-  "azerite_traits_tier_1",
+  "azerite_traits_tier_3",
   "azerite_traits_tier_2"
 ];
 
@@ -809,16 +809,8 @@ function translate_chart() {
     return;
   }
 
-  if (document.getElementById("translator_helper").childElementCount > 0) {
-
-    debug && console.log("Another translation seems to be in progress. translate_chart early exit.");
-
-    return;
-  }
-
   // create a dictionary of all created links
   let link_list = [];
-  clear_translator();
 
   let current_data;
 
@@ -847,15 +839,11 @@ function translate_chart() {
       let text_trinket_name = document.createTextNode(trinket);
       p.appendChild(text_trinket_name);
       link_list.push(`<span>${trinket}</span>`);
-      if (language !== "EN")
-        translator.appendChild(p);
       continue;
     }
 
     const lowest_ilvl = current_data["simulated_steps"][current_data["simulated_steps"].length - 1];
 
-    // create untranslated link
-    let new_link = document.createElement("a");
     // TODO: will need more logic for azerite traits later
     let link = `https://${language.toLowerCase()}.wowhead.com/`;
     if (data_view === "azerite_traits" && ["itemlevel", "trait_stacking"].includes(chosen_azerite_list_type)) {
@@ -879,17 +867,9 @@ function translate_chart() {
       }
     }
 
-    new_link.href = link;
-    new_link.target = "blank";
-    let text_trinket_name = document.createTextNode(trinket);
-    new_link.appendChild(text_trinket_name);
+    let translated_name = get_translated_name(trinket);
 
-    link_list.push(`<a href="${link}" target="blank">${trinket}</a>`);
-
-    if (language !== "EN") {
-      let translator = document.getElementById("translator_helper");
-      translator.appendChild(new_link);
-    }
+    link_list.push(`<a href="${link}" target="blank">${translated_name}</a>`);
 
   }
 
@@ -899,89 +879,6 @@ function translate_chart() {
   standard_chart.update({
     xAxis: {
       categories: link_list
-    }
-  }, true);
-
-  if (debug)
-    console.log("try to trigger wowhead power js");
-  trigger_wowhead_link_renaming();
-
-  setTimeout(function () {
-    update_link_data(link_list)
-  }, 200);
-}
-
-/**
- * Somewhat saver way to try and retrigger wowhead link translation.
- */
-function trigger_wowhead_link_renaming() {
-  if (debug) {
-    console.log("trigger_wowhead_link_renaming");
-  }
-
-  try {
-    $WowheadPower.refreshLinks();
-  } catch (error) {
-    setTimeout(trigger_wowhead_link_renaming, 50);
-  }
-}
-
-function clear_translator() {
-  if (debug) {
-    console.log("clear_translator");
-  }
-  let translator = document.getElementById("translator_helper");
-  while (translator.firstChild) {
-    translator.removeChild(translator.firstChild);
-  }
-}
-
-/**
- * Awaits the translation of all hidden links.
- * If translation is done, will apply new links to chart.
- */
-function update_link_data(original_list) {
-  if (debug)
-    console.log("update_link_data");
-
-  let all_translated = true;
-  for (let a in original_list) {
-
-    let original_link = original_list[a];
-    let new_link;
-    try {
-      new_link = document.getElementById("translator_helper").childNodes[a].outerHTML;
-    } catch (error) {
-      debug && console.log(`update_link_data couldn't find '${original_link}' in the translator_helper. Abort.`);
-      clear_translator();
-      return;
-    }
-    // wowhead tooltips add span elements into the link, therefore changing the number of the resulting array
-    if (original_link.split(">").length == new_link.split(">").length && original_link.indexOf("baseline") == -1) {
-      all_translated = false;
-    }
-  }
-
-  if (!all_translated) {
-    setTimeout(function () { update_link_data(original_list) }, 1000);
-    return;
-  }
-
-  let new_categories = [];
-  for (let link of document.getElementById("translator_helper").childNodes) {
-    new_categories.push(link.outerHTML);
-  }
-
-  clear_translator();
-
-  if (debug) {
-    console.log(original_list);
-    console.log(new_categories);
-    console.log("updating categories with new_categories from update_link_data");
-  }
-  standard_chart.update({
-    xAxis: {
-      categories: new_categories
     }
   }, true);
 }
@@ -1006,8 +903,6 @@ function search_language_cookie() {
 //  Switch to data mode
 //
 ---------------------------------------------------------*/
-
-
 
 /**
  * Apply click events for data manipulation.
@@ -1053,7 +948,7 @@ document.addEventListener("DOMContentLoaded", function () {
     addAzeriteViewClickEvent("chart_type_chest", "chest");
     addAzeriteViewClickEvent("chart_type_itemlevel", "itemlevel");
     addAzeriteViewClickEvent("chart_type_trait_stacking", "trait_stacking");
-    addAzeriteTierClickEvent("azerite_traits_tier_1", 1);
+    addAzeriteTierClickEvent("azerite_traits_tier_3", 1);
     addAzeriteTierClickEvent("azerite_traits_tier_2", 2);
     addFightStyleClickEvent("fight_style_patchwerk", "patchwerk");
     addFightStyleClickEvent("fight_style_hecticaddcleave", "hecticaddcleave");
@@ -1074,7 +969,6 @@ document.addEventListener("DOMContentLoaded", function () {
 window.onhashchange = function () {
   if (debug)
     console.log("window.onhashchange");
-  clear_translator();
   get_data_from_link();
   switch_mode();
 };
@@ -1286,7 +1180,7 @@ function update_data_buttons() {
   document.getElementById("chart_type_trait_stacking").hidden = !is_azerite;
 
   let is_traits = (data_view === "azerite_traits" && (chosen_azerite_list_type === "itemlevel" || chosen_azerite_list_type === "trait_stacking"));
-  document.getElementById("azerite_traits_tier_1").hidden = !is_traits;
+  document.getElementById("azerite_traits_tier_3").hidden = !is_traits;
   document.getElementById("azerite_traits_tier_2").hidden = !is_traits;
 }
 
@@ -1508,7 +1402,9 @@ function update_chart() {
           string += "&ilvl=" + loaded_data[chosen_class][chosen_spec][data_name][fight_style]["simulated_steps"][loaded_data[chosen_class][chosen_spec][data_name][fight_style]["simulated_steps"].length - 1].split("1_")[1];
         }
 
-        string += "\" target=\"blank\">" + dps_ordered_data[i] + "</a>";
+        let translated_name = get_translated_name(dps_ordered_data[i]);
+
+        string += "\" target=\"blank\">" + translated_name + "</a>";
 
         ordered_trinket_list.push(string);
       }
@@ -1529,38 +1425,10 @@ function update_chart() {
     }
 
     let new_ordered_data = [];
-    let race_array = {
-      "Lightforged Draenei": "光铸德莱尼",
-      "Gnome": "侏儒",
-      "Undead": "亡灵",
-      "Pandaren": "熊猫人",
-      "Troll": "巨魔",
-      "Draenei": "德莱尼",
-      "Goblin": "地精",
-      "Blood Elf": "血精灵",
-      "Void Elf": "虚空精灵",
-      "Worgen": "狼人",
-      "Tauren": "牛头人",
-      "Highmountain Tauren": "至高岭牛头人",
-      "Night Elf": "暗夜精灵",
-      "Dark Iron Dwarf": "黑铁矮人",
-      "Orc": "兽人",
-      "Maghar Orc": "玛格汉兽人",
-      "Human": "人类",
-      "Dwarf": "矮人",
-      "Nightborne": "夜之子"
-    };
 
     for (const name of dps_ordered_data) {
-      if (language === "CN") {
-        try {
-          new_ordered_data.push(race_array[name]);
-        } catch (error) {
-          new_ordered_data.push(name);
-        }
-      } else {
-        new_ordered_data.push(name);
-      }
+      let translated_name = get_translated_name(name);
+      new_ordered_data.push(translated_name);
     }
 
     standard_chart.update({
@@ -1574,7 +1442,7 @@ function update_chart() {
   // set title and subtitle
   let new_title = "";
   if (data_view == "azerite_traits" && chosen_azerite_list_type == "itemlevel") {
-    new_title = "Different itemlevels; number of each trait: 1";
+    new_title = "Different itemlevels | number of each trait: 1 | dps from items primary stats included";
   }
 
   let timestamp = loaded_data[chosen_class][chosen_spec][data_name][fight_style]["timestamp"];
@@ -1707,7 +1575,45 @@ function update_chart() {
 
   if (debug)
     console.log("call translate_chart from update_chart");
-  translate_chart();
+  //translate_chart();
+
+}
+
+/**
+ * Get the translation of a name (item, trait, race) from the data file
+ * @param {string} name
+ */
+function get_translated_name(name) {
+  if (debug) {
+    console.log("get_translated_name");
+  }
+
+  let language_table = {
+    "CN": "cn_CN",
+    "EN": "en_US",
+    "DE": "de_DE",
+    "ES": "es_ES",
+    "FR": "fr_FR",
+    "IT": "it_IT",
+    "KO": "ko_KR",
+    "PT": "pt_BR",
+    "RU": "ru_RU"
+  }
+
+  let data_name = data_view;
+  if (data_view == "azerite_traits" && ["head", "shoulders", "chest"].includes(chosen_azerite_list_type)) {
+    data_name += "_" + chosen_azerite_list_type;
+  }
+
+  try {
+    return loaded_data[chosen_class][chosen_spec][data_name][fight_style]["languages"][name][language_table[language]];
+  } catch (error) {
+    if (debug) {
+      console.log(`No translation for ${name} found.`);
+      console.log(error);
+    }
+    return name;
+  }
 
 }
 
@@ -1742,7 +1648,10 @@ function update_trait_stacking_chart() {
 
     string += ".wowhead.com/spell=";
     string += loaded_data[chosen_class][chosen_spec][data_view][fight_style]["spell_ids"][dps_ordered_data[i]];
-    string += "\" target=\"blank\">" + dps_ordered_data[i] + "</a>";
+
+    let translated_name = get_translated_name(dps_ordered_data[i]);
+
+    string += "\" target=\"blank\">" + translated_name + "</a>";
 
     ordered_trinket_list.push(string);
   }
@@ -1769,7 +1678,7 @@ function update_trait_stacking_chart() {
   let max_ilevel = loaded_data[chosen_class][chosen_spec][data_view][fight_style]["simulated_steps"][0].split("_")[1];
   // set title and subtitle
   standard_chart.setTitle({
-    text: `Itemlevel ${max_ilevel}; different number of traits`
+    text: `Itemlevel ${max_ilevel} | different number of traits | pure trait dps`
   }, {
       text: subtitle // loaded_data[chosen_class][chosen_spec][data_view][fight_style]["subtitle"]
     }, false);
