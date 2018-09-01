@@ -1588,8 +1588,16 @@ function update_trait_stacking_chart() {
     }
   }, false);
 
+  let timestamp = loaded_data[chosen_class][chosen_spec][data_view][fight_style]["timestamp"];
+  let year = timestamp.split("-")[0];
+  let month = timestamp.split("-")[1];
+  let day = timestamp.split("-")[2].split(" ")[0];
+  let hour = timestamp.split(" ")[1].split(":")[0];
+  let minute = timestamp.split(":")[1];
+
   let subtitle = "Last updated ";
-  let age = new Date() - new Date(Date.parse(loaded_data[chosen_class][chosen_spec][data_view][fight_style]["timestamp"] + " UTC"));
+  let age = new Date() - new Date(Date.UTC(year, month, day, hour, minute));
+
   let age_days = Math.floor(age / 24 / 3600 / 1000);
   if (age_days > 0) {
     subtitle += `${age_days}d `;
