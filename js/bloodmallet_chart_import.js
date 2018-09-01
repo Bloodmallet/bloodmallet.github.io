@@ -100,6 +100,13 @@ function bloodmallet_chart_import() {
       }
     },
     colors: bar_colors,
+    credits: {
+      href: "https://bloodmallet.com/",
+      text: "bloodmallet.com",
+      style: {
+        fontSize: font_size
+      }
+    },
     legend: {
       align: "right",
       backgroundColor: default_background_color,
@@ -107,11 +114,11 @@ function bloodmallet_chart_import() {
       borderWidth: 1,
       floating: false,
       itemMarginBottom: 3,
-      itemMarginTop: 3,
-      layout: 'horizontal',
+      itemMarginTop: 0,
+      layout: 'vertical',
       reversed: true,
       shadow: false,
-      verticalAlign: "bottom",
+      verticalAlign: "middle",
       x: 0,
       y: 0,
       itemStyle: {
@@ -119,7 +126,14 @@ function bloodmallet_chart_import() {
       },
       itemHoverStyle: {
         color: default_font_color,
-      }
+      },
+      title: {
+        text: " ",
+        style: {
+          color: default_font_color
+        }
+      },
+      symbolRadius: 0
     },
     plotOptions: {
       bar: {
@@ -284,6 +298,7 @@ function bloodmallet_chart_import() {
   };
 
   var path_to_data = "https://bloodmallet.com/json/";
+
 
   /**
    * Scheme
@@ -541,8 +556,8 @@ function bloodmallet_chart_import() {
 
         if (state.azerite_tier === "all") {
           dps_ordered_keys = data["sorted_data_keys_2"].slice(0, data_entries);
-        } else if (state.azerite_tier === "1") {
-          dps_ordered_keys = data["sorted_azerite_tier_1_trait_stacking"].slice(0, data_entries);
+        } else if (state.azerite_tier === "1" || state.azerite_tier === "3") {
+          dps_ordered_keys = data["sorted_azerite_tier_3_trait_stacking"].slice(0, data_entries);
         } else if (state.azerite_tier === "2") {
           dps_ordered_keys = data["sorted_azerite_tier_2_trait_stacking"].slice(0, data_entries);
         }
@@ -552,8 +567,8 @@ function bloodmallet_chart_import() {
 
         if (state.azerite_tier === "all") {
           dps_ordered_keys = data["sorted_data_keys"].slice(0, data_entries);
-        } else if (state.azerite_tier === "1") {
-          dps_ordered_keys = data["sorted_azerite_tier_1_itemlevel"].slice(0, data_entries);
+        } else if (state.azerite_tier === "1" || state.azerite_tier === "3") {
+          dps_ordered_keys = data["sorted_azerite_tier_3_itemlevel"].slice(0, data_entries);
         } else if (state.azerite_tier === "2") {
           dps_ordered_keys = data["sorted_azerite_tier_2_itemlevel"].slice(0, data_entries);
         }
@@ -673,9 +688,16 @@ function bloodmallet_chart_import() {
           }
         }
 
+        let itemlevel_clean = itemlevel;
+        if (["azerite_items_chest", "azerite_items_head", "azerite_items_shoulders", "azerite_traits_itemlevel"].indexOf(data_type) > -1) {
+          itemlevel_clean = itemlevel.split("_")[1];
+        } else if (data_type === "azerite_traits_stacking") {
+          itemlevel_clean = itemlevel.split("_")[0];
+        }
+
         chart.addSeries({
           data: dps_array,
-          name: itemlevel,
+          name: itemlevel_clean,
           showInLegend: true
         }, false);
 
@@ -688,7 +710,6 @@ function bloodmallet_chart_import() {
         let dps_key_values = data["data"][dps_key];
 
         dps_array.push(dps_key_values);
-
       }
 
       chart.addSeries({
@@ -697,6 +718,15 @@ function bloodmallet_chart_import() {
         showInLegend: true
       }, false);
 
+    }
+
+    // add new legend title
+    if (["trinkets", "azerite_items_chest", "azerite_items_head", "azerite_items_shoulders", "azerite_traits_itemlevel"].includes(data_type)) {
+      chart.legend.title.attr({ text: "Itemlevel" });
+    } else if (data_type === "races") {
+      chart.legend.title.attr({ text: "" });
+    } else if (data_type === "azerite_traits_stacking") {
+      chart.legend.title.attr({ text: "Trait count" });
     }
 
     html_element.style.height = 200 + dps_ordered_keys.length * 30 + "px";
