@@ -308,10 +308,13 @@
       <!-- Additional data paragraph  -->
       <div class="row">
         <div class="offset-xl-2 col-xl-8 offset-lg-2 col-lg-8 offset-md-1 col-md-10">
-          <p id="data_introduction">
+          <p id="data_introduction"></p>
+          <p class="translate_dps_only_warning text-center">
+            <strong>Warning:</strong> All charts are about dealing damage ONLY!
           </p>
         </div>
       </div>
+
 
       <!-- Data buttons -->
       <div class="row d-flex justify-content-center">
@@ -335,7 +338,6 @@
         <button class="btn-data translate_patchwerk" id="fight_style_patchwerk" style="margin-top: 0.6rem; margin-right: 0.6rem;">Patchwerk</button>
         <!-- <button class="btn-data translate_beastlord" id="fight_style_beastlord" style="margin-right: 0.6rem;">Beastlord</button> -->
         <button class="btn-data translate_hecticaddcleave" id="fight_style_hecticaddcleave" style="margin-top: 0.6rem; margin-right: 0.6rem;">HecticAddCleave</button>
-        <button class="btn-data translate_create_link" id="copy_link" title="Copy a link to the current chart to clipboard." style="margin-top: 0.6rem; margin-right: 0.6rem;">🔗<span id="chart_link_generator" style="display: none;"></span></button>
       </div>
       <div class="row d-flex justify-content-center">
         <select class="btn-data" id="talent_combination_selector" style="margin-top: 0.6rem; margin-right: 0.6rem;" hidden></select>
@@ -351,16 +353,6 @@
               <use xlink:href="assets/icons.svg#azerite_tier2"></use>
             </svg>
           <span class="translate_tier_2">Tier 2</span></button>
-      </div>
-    </div>
-
-    <div class="container-fluid">
-      <div class="row">
-        <div class="offset-xl-3 col-xl-6 offset-lg-2 col-lg-8 offset-md-1 col-md-10">
-          <p class="translate_dps_only_warning text-center">
-            <strong>Warning:</strong> All charts are about dealing damage ONLY!
-          </p>
-        </div>
       </div>
     </div>
 
@@ -557,6 +549,23 @@
     </div>
     <!-- Spec table end -->
 
+    <div class="container-fluid">
+      <div id="chart_data" class="row">
+        <div class="offset-xl-1 col-xl-10 offset-lg-1 col-lg-10 offset-md-1 col-md-10">
+          <p id="chart_title" class="text-center" style="font-size:1.5rem;" ></p>
+        </div>
+      </div>
+
+      <div class="row d-flex justify-content-center">
+          <span id="chart_subtitle" style="margin-right: 1rem;"></span>
+          <a id="copy_link" title="Copy chart link to clipboard." style="margin-right: 1rem;" hidden>🔗 Link<span id="chart_link_generator" style="display: none;"></span>
+          </a>
+          <a id="copy_azerite_weights" title="Copy azerite trait weight import string to clipboard." hidden>📋 AzeriteTraitWeights<span id="chart_link_generator" style="display: none;"></span>
+          </a>
+      </div>
+    </div>
+
+
     <!-- Chart for scatter plot -->
     <div class="container-fluid">
       <div class="row">
@@ -576,11 +585,13 @@
         <div id="chart" hidden class="offset-xl-1 col-xl-10 offset-lg-1 col-lg-10 offset-md-1 col-md-10"></div>
       </div>
     </div>
+
     <!-- TC resources -->
     <div class="container-fluid" id="tc_resources" hidden>
       <ul type="square" class="offset-xl-2 col-xl-8 offset-lg-2 col-lg-8 offset-md-1 col-md-10">
         <li class="translate_dps_only_warning"><strong>Warning:</strong> All chart are about dealing damage ONLY!
         </li>
+        <li id="chart_simc_hash"></li>
         <li class="translate_tc_warning">
           Please use your spec's theorycrafters resources for more indepth information.
         </li>
@@ -896,6 +907,7 @@
     </div>
     <div id="translator_helper" style="display: none;"></div>
     <div id="copy_success" class="translate_link_was_copied_to_clipboard">Link was copied to clipboard.</div>
+    <div id="copy_weights_success" class="translate_weights_were_copied_to_clipboard">Weights were copied to clipboard.</div>
   </main>
 
 
