@@ -1,15 +1,37 @@
 {
     "data": {
-        "Blood Elf": 13097,
-        "Night Elf": 13078
+        "Blood Elf": 13115,
+        "Night Elf": 13111
     },
     "data_type": "races",
+    "languages": {
+        "Blood Elf": {
+            "cn_CN": "血精灵",
+            "de_DE": "Blutelf",
+            "en_US": "Blood Elf",
+            "es_ES": "Elfo de sangre",
+            "fr_FR": "Elfe de sang",
+            "it_IT": "Elfo del Sangue",
+            "ko_KR": "블러드 엘프",
+            "ru_RU": "Эльф крови"
+        },
+        "Night Elf": {
+            "cn_CN": "暗夜精灵",
+            "de_DE": "Nachtelf",
+            "en_US": "Night Elf",
+            "es_ES": "Elfo de la noche",
+            "fr_FR": "Elfe de la nuit",
+            "it_IT": "Elfo della Notte",
+            "ko_KR": "나이트 엘프",
+            "ru_RU": "Ночной эльф"
+        }
+    },
     "simc_settings": {
         "class": "demon_hunter",
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "64ce8f56ef",
+        "simc_hash": "db9f5b9ff1",
         "spec": "vengeance",
         "target_error": "0.2",
         "tier": "PR"
@@ -18,7 +40,7 @@
         "Blood Elf",
         "Night Elf"
     ],
-    "subtitle": "UTC 2018-08-30 09:04 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/64ce8f56ef\" target=\"blank\">64ce8f5</a>",
-    "timestamp": "2018-08-30 09:04",
+    "subtitle": "UTC 2018-09-01 16:44 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/db9f5b9ff1\" target=\"blank\">db9f5b9</a>",
+    "timestamp": "2018-09-01 16:44",
     "title": "Races | Vengeance Demon Hunter | Hecticaddcleave"
 }

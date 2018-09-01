@@ -1,25 +1,147 @@
 {
     "data": {
-        "Blood Elf": 10996,
-        "Dark Iron Dwarf": 10981,
-        "Dwarf": 10985,
-        "Gnome": 11029,
-        "Goblin": 11023,
-        "Human": 10969,
-        "Nightborne": 10937,
-        "Orc": 11091,
-        "Troll": 11132,
-        "Undead": 11003,
-        "Void Elf": 10943,
-        "Worgen": 10991
+        "Blood Elf": 11105,
+        "Dark Iron Dwarf": 11086,
+        "Dwarf": 11068,
+        "Gnome": 11128,
+        "Goblin": 11162,
+        "Human": 11075,
+        "Nightborne": 11051,
+        "Orc": 11195,
+        "Troll": 11262,
+        "Undead": 11123,
+        "Void Elf": 11027,
+        "Worgen": 11088
     },
     "data_type": "races",
+    "languages": {
+        "Blood Elf": {
+            "cn_CN": "血精灵",
+            "de_DE": "Blutelf",
+            "en_US": "Blood Elf",
+            "es_ES": "Elfo de sangre",
+            "fr_FR": "Elfe de sang",
+            "it_IT": "Elfo del Sangue",
+            "ko_KR": "블러드 엘프",
+            "ru_RU": "Эльф крови"
+        },
+        "Dark Iron Dwarf": {
+            "cn_CN": "黑铁矮人",
+            "de_DE": "Dunkeleisenzwerg",
+            "en_US": "Dark Iron Dwarf",
+            "es_ES": "Enano Hierro Negro",
+            "fr_FR": "Nain sombrefer",
+            "it_IT": "Nano Ferroscuro",
+            "ko_KR": "검은무쇠 드워프",
+            "ru_RU": "Дворф из клана Черного Железа"
+        },
+        "Dwarf": {
+            "cn_CN": "矮人",
+            "de_DE": "Zwerg",
+            "en_US": "Dwarf",
+            "es_ES": "Enano",
+            "fr_FR": "Nain",
+            "it_IT": "Nano",
+            "ko_KR": "드워프",
+            "ru_RU": "Дворф"
+        },
+        "Gnome": {
+            "cn_CN": "侏儒",
+            "de_DE": "Gnom",
+            "en_US": "Gnome",
+            "es_ES": "Gnomo",
+            "fr_FR": "Gnome",
+            "it_IT": "Gnomo",
+            "ko_KR": "노움",
+            "ru_RU": "Гном"
+        },
+        "Goblin": {
+            "cn_CN": "地精",
+            "de_DE": "Goblin",
+            "en_US": "Goblin",
+            "es_ES": "Goblin",
+            "fr_FR": "Gobelin",
+            "it_IT": "Goblin",
+            "ko_KR": "고블린",
+            "ru_RU": "Гоблин"
+        },
+        "Human": {
+            "cn_CN": "人类",
+            "de_DE": "Mensch",
+            "en_US": "Human",
+            "es_ES": "Humano",
+            "fr_FR": "Humain",
+            "it_IT": "Umano",
+            "ko_KR": "인간",
+            "ru_RU": "Человек"
+        },
+        "Nightborne": {
+            "cn_CN": "夜之子",
+            "de_DE": "Nachtgeborener",
+            "en_US": "Nightborne",
+            "es_ES": "Nocheterna",
+            "fr_FR": "Sacrenuit",
+            "it_IT": "Nobile Oscuro",
+            "ko_KR": "나이트본",
+            "ru_RU": "Ночнорожденный"
+        },
+        "Orc": {
+            "cn_CN": "兽人",
+            "de_DE": "Orc",
+            "en_US": "Orc",
+            "es_ES": "Orco",
+            "fr_FR": "Orc",
+            "it_IT": "Orco",
+            "ko_KR": "오크",
+            "ru_RU": "Орк"
+        },
+        "Troll": {
+            "cn_CN": "巨魔",
+            "de_DE": "Troll",
+            "en_US": "Troll",
+            "es_ES": "Trol",
+            "fr_FR": "Troll",
+            "it_IT": "Troll",
+            "ko_KR": "트롤",
+            "ru_RU": "Тролль"
+        },
+        "Undead": {
+            "cn_CN": "亡灵",
+            "de_DE": "Untoter",
+            "en_US": "Undead",
+            "es_ES": "No-muerto",
+            "fr_FR": "Mort-vivant",
+            "it_IT": "Non Morto",
+            "ko_KR": "언데드",
+            "ru_RU": "Нежить"
+        },
+        "Void Elf": {
+            "cn_CN": "虚空精灵",
+            "de_DE": "Leerenelf",
+            "en_US": "Void Elf",
+            "es_ES": "Elfo del Vacío",
+            "fr_FR": "Elfe du Vide",
+            "it_IT": "Elfo del Vuoto",
+            "ko_KR": "공허 엘프",
+            "ru_RU": "Эльф Бездны"
+        },
+        "Worgen": {
+            "cn_CN": "狼人",
+            "de_DE": "Worgen",
+            "en_US": "Worgen",
+            "es_ES": "Huargen",
+            "fr_FR": "Worgen",
+            "it_IT": "Worgen",
+            "ko_KR": "늑대인간",
+            "ru_RU": "Ворген"
+        }
+    },
     "simc_settings": {
         "class": "warlock",
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "64ce8f56ef",
+        "simc_hash": "db9f5b9ff1",
         "spec": "demonology",
         "target_error": "0.2",
         "tier": "PR"
@@ -27,18 +149,18 @@
     "sorted_data_keys": [
         "Troll",
         "Orc",
-        "Gnome",
         "Goblin",
+        "Gnome",
         "Undead",
         "Blood Elf",
         "Worgen",
-        "Dwarf",
         "Dark Iron Dwarf",
         "Human",
-        "Void Elf",
-        "Nightborne"
+        "Dwarf",
+        "Nightborne",
+        "Void Elf"
     ],
-    "subtitle": "UTC 2018-08-30 09:02 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/64ce8f56ef\" target=\"blank\">64ce8f5</a>",
-    "timestamp": "2018-08-30 09:02",
+    "subtitle": "UTC 2018-09-01 16:41 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/db9f5b9ff1\" target=\"blank\">db9f5b9</a>",
+    "timestamp": "2018-09-01 16:41",
     "title": "Races | Demonology Warlock | Patchwerk"
 }

@@ -1,44 +1,166 @@
 {
     "data": {
-        "Blood Elf": 16089,
-        "Draenei": 16117,
-        "Dwarf": 16014,
-        "Gnome": 16055,
-        "Goblin": 16090,
-        "Human": 16047,
-        "Night Elf": 16099,
-        "Orc": 16095,
-        "Tauren": 16025,
-        "Troll": 16114,
-        "Undead": 16126,
-        "Worgen": 16069
+        "Blood Elf": 16110,
+        "Draenei": 16099,
+        "Dwarf": 16026,
+        "Gnome": 16109,
+        "Goblin": 16091,
+        "Human": 16054,
+        "Night Elf": 16097,
+        "Orc": 16083,
+        "Tauren": 16033,
+        "Troll": 16094,
+        "Undead": 16121,
+        "Worgen": 16108
     },
     "data_type": "races",
+    "languages": {
+        "Blood Elf": {
+            "cn_CN": "血精灵",
+            "de_DE": "Blutelf",
+            "en_US": "Blood Elf",
+            "es_ES": "Elfo de sangre",
+            "fr_FR": "Elfe de sang",
+            "it_IT": "Elfo del Sangue",
+            "ko_KR": "블러드 엘프",
+            "ru_RU": "Эльф крови"
+        },
+        "Draenei": {
+            "cn_CN": "德莱尼",
+            "de_DE": "Draenei",
+            "en_US": "Draenei",
+            "es_ES": "Draenei",
+            "fr_FR": "Draeneï",
+            "it_IT": "Draenei",
+            "ko_KR": "드레나이",
+            "ru_RU": "Дреней"
+        },
+        "Dwarf": {
+            "cn_CN": "矮人",
+            "de_DE": "Zwerg",
+            "en_US": "Dwarf",
+            "es_ES": "Enano",
+            "fr_FR": "Nain",
+            "it_IT": "Nano",
+            "ko_KR": "드워프",
+            "ru_RU": "Дворф"
+        },
+        "Gnome": {
+            "cn_CN": "侏儒",
+            "de_DE": "Gnom",
+            "en_US": "Gnome",
+            "es_ES": "Gnomo",
+            "fr_FR": "Gnome",
+            "it_IT": "Gnomo",
+            "ko_KR": "노움",
+            "ru_RU": "Гном"
+        },
+        "Goblin": {
+            "cn_CN": "地精",
+            "de_DE": "Goblin",
+            "en_US": "Goblin",
+            "es_ES": "Goblin",
+            "fr_FR": "Gobelin",
+            "it_IT": "Goblin",
+            "ko_KR": "고블린",
+            "ru_RU": "Гоблин"
+        },
+        "Human": {
+            "cn_CN": "人类",
+            "de_DE": "Mensch",
+            "en_US": "Human",
+            "es_ES": "Humano",
+            "fr_FR": "Humain",
+            "it_IT": "Umano",
+            "ko_KR": "인간",
+            "ru_RU": "Человек"
+        },
+        "Night Elf": {
+            "cn_CN": "暗夜精灵",
+            "de_DE": "Nachtelf",
+            "en_US": "Night Elf",
+            "es_ES": "Elfo de la noche",
+            "fr_FR": "Elfe de la nuit",
+            "it_IT": "Elfo della Notte",
+            "ko_KR": "나이트 엘프",
+            "ru_RU": "Ночной эльф"
+        },
+        "Orc": {
+            "cn_CN": "兽人",
+            "de_DE": "Orc",
+            "en_US": "Orc",
+            "es_ES": "Orco",
+            "fr_FR": "Orc",
+            "it_IT": "Orco",
+            "ko_KR": "오크",
+            "ru_RU": "Орк"
+        },
+        "Tauren": {
+            "cn_CN": "牛头人",
+            "de_DE": "Tauren",
+            "en_US": "Tauren",
+            "es_ES": "Tauren",
+            "fr_FR": "Tauren",
+            "it_IT": "Tauren",
+            "ko_KR": "타우렌",
+            "ru_RU": "Таурен"
+        },
+        "Troll": {
+            "cn_CN": "巨魔",
+            "de_DE": "Troll",
+            "en_US": "Troll",
+            "es_ES": "Trol",
+            "fr_FR": "Troll",
+            "it_IT": "Troll",
+            "ko_KR": "트롤",
+            "ru_RU": "Тролль"
+        },
+        "Undead": {
+            "cn_CN": "亡灵",
+            "de_DE": "Untoter",
+            "en_US": "Undead",
+            "es_ES": "No-muerto",
+            "fr_FR": "Mort-vivant",
+            "it_IT": "Non Morto",
+            "ko_KR": "언데드",
+            "ru_RU": "Нежить"
+        },
+        "Worgen": {
+            "cn_CN": "狼人",
+            "de_DE": "Worgen",
+            "en_US": "Worgen",
+            "es_ES": "Huargen",
+            "fr_FR": "Worgen",
+            "it_IT": "Worgen",
+            "ko_KR": "늑대인간",
+            "ru_RU": "Ворген"
+        }
+    },
     "simc_settings": {
         "class": "death_knight",
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "64ce8f56ef",
+        "simc_hash": "db9f5b9ff1",
         "spec": "unholy",
         "target_error": "0.2",
         "tier": "PR"
     },
     "sorted_data_keys": [
         "Undead",
-        "Draenei",
-        "Troll",
-        "Night Elf",
-        "Orc",
-        "Goblin",
         "Blood Elf",
-        "Worgen",
         "Gnome",
+        "Worgen",
+        "Draenei",
+        "Night Elf",
+        "Troll",
+        "Goblin",
+        "Orc",
         "Human",
         "Tauren",
         "Dwarf"
     ],
-    "subtitle": "UTC 2018-08-30 09:04 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/64ce8f56ef\" target=\"blank\">64ce8f5</a>",
-    "timestamp": "2018-08-30 09:04",
+    "subtitle": "UTC 2018-09-01 16:43 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/db9f5b9ff1\" target=\"blank\">db9f5b9</a>",
+    "timestamp": "2018-09-01 16:43",
     "title": "Races | Unholy Death Knight | Hecticaddcleave"
 }
