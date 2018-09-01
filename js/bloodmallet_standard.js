@@ -15,7 +15,9 @@ const modes = {
     "hidden": [
       "data_container",
       "chart",
-      "tc_resources"
+      "tc_resources",
+      "copy_link",
+      "copy_azerite_weights"
     ],
     "shown": [
       "welcome_container",
@@ -30,7 +32,9 @@ const modes = {
     "shown": [
       "data_container",
       "tc_resources",
-      "chart"
+      "chart",
+      "copy_link",
+      "copy_azerite_weights"
     ]
   }
 };
@@ -135,8 +139,7 @@ const data_view_IDs = [
   "chart_type_trait_stacking",
   "chart_type_head",
   "chart_type_shoulders",
-  "chart_type_chest",
-  "copy_link"
+  "chart_type_chest"
 ];
 const fight_style_IDs = [
   "fight_style_patchwerk",
@@ -300,7 +303,7 @@ const empty_chart = {
     }
   ],
   subtitle: {
-    text: "Data not found",
+    text: "",
     useHTML: true,
     style: {
       color: light_color,
@@ -723,15 +726,21 @@ async function switch_language(new_language) {
   language = new_language;
   set_language_cookie();
   push_state();
+  translate_page();
 }
 
 
 /**
- * translate all translation_IDs and translation_classes. Does NOT translate charts. Use translate_chart() for that
+ * translate all translation_IDs and translation_classes. Does NOT translate charts. Use load_data() or update_chart() for that.
  */
 function translate_page() {
   if (debug)
     console.log("translate_page");
+
+  if (typeof loaded_languages[language] === 'undefined') {
+    debug && console.log("translate_page abort, due to missing data");
+    return;
+  }
 
   // get the translation options
   var language_html_elements = document.getElementById("languageSelector").options;
@@ -745,11 +754,6 @@ function translate_page() {
     if (element.value === language) {
       element.selected = true;
     }
-  }
-
-  if (typeof loaded_languages[language] === 'undefined') {
-    debug && console.log("translate_page abort, due to missing data");
-    return;
   }
 
   // translate content of IDs
@@ -792,97 +796,6 @@ function translate_element(element) {
   });
 }
 
-/** Translates the current chart.
- *  assumption: only one chart is present */
-function translate_chart() {
-  if (debug)
-    console.log("translate_chart");
-
-  if (data_view !== "trinkets" && data_view !== "azerite_traits") {
-    if (debug)
-      console.log("translate_chart early exit");
-    return;
-  }
-  if (chosen_class === "" || chosen_spec === "") {
-    if (debug)
-      console.log("translate_chart early exit");
-    return;
-  }
-
-  // create a dictionary of all created links
-  let link_list = [];
-
-  let current_data;
-
-  if (data_view === "azerite_traits" && ["head", "shoulders", "chest"].includes(chosen_azerite_list_type)) {
-    current_data = loaded_data[chosen_class][chosen_spec][data_view + "_" + chosen_azerite_list_type][fight_style];
-  } else {
-    current_data = loaded_data[chosen_class][chosen_spec][data_view][fight_style];
-  }
-
-  if (!current_data) {
-    debug && console.log("current_data is mysteriously empty.");
-    return;
-  }
-
-  let appropriate_data_key_list = [];
-  if (data_view === "azerite_traits" && ["itemlevel", "trait_stacking"].includes(chosen_azerite_list_type)) {
-    appropriate_data_key_list = current_data["sorted_azerite_tier_" + chosen_azerite_tier + "_" + chosen_azerite_list_type];
-  } else {
-    appropriate_data_key_list = current_data["sorted_data_keys"];
-  }
-
-  for (let trinket of appropriate_data_key_list) {
-
-    if (trinket.indexOf("baseline") > -1) {
-      let p = document.createElement("span");
-      let text_trinket_name = document.createTextNode(trinket);
-      p.appendChild(text_trinket_name);
-      link_list.push(`<span>${trinket}</span>`);
-      continue;
-    }
-
-    const lowest_ilvl = current_data["simulated_steps"][current_data["simulated_steps"].length - 1];
-
-    // TODO: will need more logic for azerite traits later
-    let link = `https://${language.toLowerCase()}.wowhead.com/`;
-    if (data_view === "azerite_traits" && ["itemlevel", "trait_stacking"].includes(chosen_azerite_list_type)) {
-      link += `spell=${current_data["spell_ids"][trinket]}`;
-    } else {
-      link += `item=${current_data["item_ids"][trinket]}`;
-    }
-
-    try {
-      link += `&ilvl=${lowest_ilvl.split("1_")[1]}`;
-    } catch (error) {
-      link += `&ilvl=${lowest_ilvl}`;
-    }
-
-    // add azerite power link portion
-    if (data_view === "azerite_traits" && ["head", "shoulders", "chest"].includes(chosen_azerite_list_type)) {
-      link += `&azerite-powers=${current_data["class_id"]}`;
-      // add azerite traits
-      for (let trait of current_data["used_azerite_traits_per_item"][trinket]) {
-        link += ":" + trait["id"];
-      }
-    }
-
-    let translated_name = get_translated_name(trinket);
-
-    link_list.push(`<a href="${link}" target="blank">${translated_name}</a>`);
-
-  }
-
-  if (debug) {
-    console.log("update categories with link_list (english names, foreign link in translate_chart");
-  }
-  standard_chart.update({
-    xAxis: {
-      categories: link_list
-    }
-  }, true);
-}
-
 /** Save the current language in a cookie. */
 function set_language_cookie() {
   if (debug)
@@ -891,10 +804,10 @@ function set_language_cookie() {
 }
 
 /** Searches for the dark mode cookie and updates the page if necessary. */
-function search_language_cookie() {
+async function search_language_cookie() {
   if (debug)
     console.log("search_language_cookie");
-  switch_language(Cookies.get("bloodmallet_language_selection") || "EN");
+  await switch_language(Cookies.get("bloodmallet_language_selection") || "EN");
 }
 
 
@@ -948,13 +861,16 @@ document.addEventListener("DOMContentLoaded", function () {
     addAzeriteViewClickEvent("chart_type_chest", "chest");
     addAzeriteViewClickEvent("chart_type_itemlevel", "itemlevel");
     addAzeriteViewClickEvent("chart_type_trait_stacking", "trait_stacking");
-    addAzeriteTierClickEvent("azerite_traits_tier_3", 1);
+    addAzeriteTierClickEvent("azerite_traits_tier_3", 3);
     addAzeriteTierClickEvent("azerite_traits_tier_2", 2);
     addFightStyleClickEvent("fight_style_patchwerk", "patchwerk");
     addFightStyleClickEvent("fight_style_hecticaddcleave", "hecticaddcleave");
 
     document.getElementById("copy_link").addEventListener("click", function () {
       copy_link();
+    });
+    document.getElementById("copy_azerite_weights").addEventListener("click", function () {
+      copy_azerite_weights();
     });
 
   } catch (err) {
@@ -994,7 +910,7 @@ window.addEventListener('popstate', function (event) {
 /**
  * Update the global class and spec variables from the current url.
  */
-function get_data_from_link() {
+async function get_data_from_link() {
   if (debug)
     console.log("get_data_from_link");
   let hash = window.location.hash;
@@ -1040,7 +956,7 @@ function get_data_from_link() {
     } else if (key === "tier") {
       chosen_azerite_tier = value;
     } else if (key === "lang") {
-      switch_language(value);
+      await switch_language(value);
     }
   }
 
@@ -1125,8 +1041,14 @@ function push_state() {
     console.log("push_state");
     console.log(`${chosen_spec} ${chosen_class} ${data_view} ${fight_style}`);
   }
-  history.pushState({ id: 'data_view' }, chosen_spec + " " + chosen_class + " | " + data_view + " | " + fight_style, create_link());
-  switch_to_data();
+  if (chosen_spec && chosen_class && data_view && fight_style) {
+    history.pushState({ id: 'data_view' }, chosen_spec + " " + chosen_class + " | " + data_view + " | " + fight_style, create_link());
+    switch_to_data();
+  } else {
+    if (debug) {
+      console.log("Abort push_state because data is missing.");
+    }
+  }
 }
 
 /**
@@ -1143,7 +1065,6 @@ function switch_to_data() {
   update_azerite_buttons();
   load_data();
   translate_page();
-  translate_chart();
 }
 
 /**
@@ -1182,6 +1103,7 @@ function update_data_buttons() {
   let is_traits = (data_view === "azerite_traits" && (chosen_azerite_list_type === "itemlevel" || chosen_azerite_list_type === "trait_stacking"));
   document.getElementById("azerite_traits_tier_3").hidden = !is_traits;
   document.getElementById("azerite_traits_tier_2").hidden = !is_traits;
+  document.getElementById("copy_azerite_weights").hidden = !is_traits;
 }
 
 /**
@@ -1374,7 +1296,10 @@ function update_chart() {
 
         link += ".wowhead.com/spell=";
         link += loaded_data[chosen_class][chosen_spec][data_name][fight_style]["spell_ids"][dps_ordered_data[i]];
-        link += "\" target=\"blank\">" + dps_ordered_data[i] + "</a>";
+
+        let translated_name = get_translated_name(dps_ordered_data[i]);
+
+        link += "\" target=\"blank\">" + translated_name + "</a>";
 
         ordered_trinket_list.push(link);
       } else {
@@ -1452,7 +1377,7 @@ function update_chart() {
   let hour = timestamp.split(" ")[1].split(":")[0];
   let minute = timestamp.split(":")[1];
 
-  let subtitle = "Simed ";
+  let subtitle = "Last updated ";
   let age = new Date() - new Date(Date.UTC(year, month, day, hour, minute));
 
   let age_days = Math.floor(age / 24 / 3600 / 1000);
@@ -1461,13 +1386,10 @@ function update_chart() {
   }
   let age_hours = Math.floor(age / 3600 / 1000) - age_days * 24;
   subtitle += `${age_hours}h ago`;
-  subtitle += ` | SimulationCraft: <a href=\"https://github.com/simulationcraft/simc/commit/${loaded_data[chosen_class][chosen_spec][data_name][fight_style]["simc_settings"]["simc_hash"]}\" target=\"blank\">#${loaded_data[chosen_class][chosen_spec][data_name][fight_style]["simc_settings"]["simc_hash"].substring(0, 5)}</a>`;
 
-  standard_chart.setTitle({
-    text: new_title //loaded_data[chosen_class][chosen_spec][data_view][fight_style]["title"]
-  }, {
-      text: subtitle // loaded_data[chosen_class][chosen_spec][data_name][fight_style]["subtitle"]
-    }, false);
+  document.getElementById("chart_title").innerHTML = new_title;
+  document.getElementById("chart_subtitle").innerHTML = subtitle;
+  document.getElementById("chart_simc_hash").innerHTML = `SimulationCraft build: <a href=\"https://github.com/simulationcraft/simc/commit/${loaded_data[chosen_class][chosen_spec][data_name][fight_style]["simc_settings"]["simc_hash"]}\" target=\"blank\">#${loaded_data[chosen_class][chosen_spec][data_name][fight_style]["simc_settings"]["simc_hash"].substring(0, 5)}</a>`;
 
   // delete all old series data
   while (standard_chart.series[0]) {
@@ -1572,11 +1494,6 @@ function update_chart() {
   document.getElementById("chart").style.height = 200 + dps_ordered_data.length * 30 + "px";
   standard_chart.setSize(document.getElementById("chart").style.width, document.getElementById("chart").style.height);
   standard_chart.redraw();
-
-  if (debug)
-    console.log("call translate_chart from update_chart");
-  //translate_chart();
-
 }
 
 /**
@@ -1585,7 +1502,7 @@ function update_chart() {
  */
 function get_translated_name(name) {
   if (debug) {
-    console.log("get_translated_name");
+    console.log("get_translated_name " + name);
   }
 
   let language_table = {
@@ -1605,16 +1522,22 @@ function get_translated_name(name) {
     data_name += "_" + chosen_azerite_list_type;
   }
 
+  let return_name = "";
   try {
-    return loaded_data[chosen_class][chosen_spec][data_name][fight_style]["languages"][name][language_table[language]];
+    return_name = loaded_data[chosen_class][chosen_spec][data_name][fight_style]["languages"][name][language_table[language]];
   } catch (error) {
     if (debug) {
       console.log(`No translation for ${name} found.`);
       console.log(error);
     }
-    return name;
+    return_name = name;
   }
 
+  if (debug) {
+    console.log("Translated name: " + return_name);
+  }
+
+  return return_name;
 }
 
 function update_trait_stacking_chart() {
@@ -1665,7 +1588,7 @@ function update_trait_stacking_chart() {
     }
   }, false);
 
-  let subtitle = "Simed ";
+  let subtitle = "Last updated ";
   let age = new Date() - new Date(Date.parse(loaded_data[chosen_class][chosen_spec][data_view][fight_style]["timestamp"] + " UTC"));
   let age_days = Math.floor(age / 24 / 3600 / 1000);
   if (age_days > 0) {
@@ -1673,15 +1596,14 @@ function update_trait_stacking_chart() {
   }
   let age_hours = Math.floor(age / 3600 / 1000) - age_days * 24;
   subtitle += `${age_hours}h ago`;
-  subtitle += ` | SimulationCraft: <a href=\"https://github.com/simulationcraft/simc/commit/${loaded_data[chosen_class][chosen_spec][data_view][fight_style]["simc_settings"]["simc_hash"]}\" target=\"blank\">#${loaded_data[chosen_class][chosen_spec][data_view][fight_style]["simc_settings"]["simc_hash"].substring(0, 5)}</a>`;
 
   let max_ilevel = loaded_data[chosen_class][chosen_spec][data_view][fight_style]["simulated_steps"][0].split("_")[1];
+
   // set title and subtitle
-  standard_chart.setTitle({
-    text: `Itemlevel ${max_ilevel} | different number of traits | pure trait dps`
-  }, {
-      text: subtitle // loaded_data[chosen_class][chosen_spec][data_view][fight_style]["subtitle"]
-    }, false);
+  document.getElementById("chart_title").innerHTML = `Itemlevel ${max_ilevel} | different number of traits | pure trait dps`;
+  document.getElementById("chart_subtitle").innerHTML = subtitle;
+  document.getElementById("chart_simc_hash").innerHTML = `SimulationCraft build: <a href=\"https://github.com/simulationcraft/simc/commit/${loaded_data[chosen_class][chosen_spec][data_view][fight_style]["simc_settings"]["simc_hash"]}\" target=\"blank\">#${loaded_data[chosen_class][chosen_spec][data_view][fight_style]["simc_settings"]["simc_hash"].substring(0, 5)}</a>`;
+
 
   // delete all old series data
   while (standard_chart.series[0]) {
@@ -1746,33 +1668,25 @@ function update_trait_stacking_chart() {
   standard_chart.setSize(document.getElementById("chart").style.width, document.getElementById("chart").style.height);
   standard_chart.redraw();
 
-  if (debug)
-    console.log("call translate_chart from update_trait_stacking_chart");
-  translate_chart();
-
 }
 
 function empty_charts() {
   while (standard_chart.series[0]) {
     standard_chart.series[0].remove(false);
   }
-  standard_chart.setTitle({
-    //text: loaded_data[chosen_class][chosen_spec][data_view][fight_style]["title"]
-  }, {
-      text: "No data available / Loading..."
-    }
-  );
+
+  let data_name = data_view;
+  if (data_view === "azerite_traits" && ["head", "shoulders", "chest"].includes(chosen_azerite_list_type)) {
+    data_name += "_" + chosen_azerite_list_type;
+  }
+
+  document.getElementById("chart_title").innerHTML = loaded_data[chosen_class][chosen_spec][data_name][fight_style]["title"];
+  document.getElementById("chart_subtitle").innerHTML = "No data available / Loading...";
 
   // delete all old series data
   while (scatter_chart.series[0]) {
     scatter_chart.series[0].remove(false);
   }
-  scatter_chart.setTitle({
-    //text: loaded_data[chosen_class][chosen_spec][data_view][fight_style]["title"]
-  }, {
-      text: "No data available / Loading..."
-    }
-  );
 }
 
 /**
@@ -1846,7 +1760,7 @@ function create_link() {
   path += "&lang=" + language;
 
   return path;
-} // ?data_view=trinkets&fight_style=patchwerk
+}
 
 function copy_link() {
   if (debug)
@@ -1862,6 +1776,28 @@ function copy_link() {
   link_helper.style.display = "none";
 
   let success_message = document.getElementById("copy_success");
+  success_message.className = "show";
+  setTimeout(function () {
+    success_message.className = success_message.className.replace("show", "");
+  }, 3000);
+
+}
+
+
+function copy_azerite_weights() {
+  if (debug)
+    console.log("copy_azerite_weights");
+
+  var weight_string = loaded_data[chosen_class][chosen_spec][data_view][fight_style]["azerite_weight_" + fight_style];
+
+  let link_helper = document.getElementById("chart_link_generator");
+  link_helper.innerHTML = weight_string;
+  link_helper.style.display = "block";
+  window.getSelection().selectAllChildren(link_helper);
+  document.execCommand("copy");
+  link_helper.style.display = "none";
+
+  let success_message = document.getElementById("copy_weights_success");
   success_message.className = "show";
   setTimeout(function () {
     success_message.className = success_message.className.replace("show", "");
@@ -1927,7 +1863,7 @@ var scatter_chart = new Highcharts.Chart({
     }
   },
   subtitle: {
-    text: "Data not found",
+    text: "",
     useHTML: true,
     style: {
       color: light_color,
@@ -2230,12 +2166,30 @@ function update_scatter_chart() {
   scatter_chart.addSeries(series, false);
   // make sure this color matches the value of color_min in create_color(...)
   scatter_chart.addSeries({ name: Intl.NumberFormat().format(min_dps) + " DPS", color: "#00FFFF" }, false);
-  scatter_chart.setTitle({
-    //text: loaded_data[chosen_class][chosen_spec][data_view][fight_style]["title"]
-  }, {
-      text: loaded_data[chosen_class][chosen_spec][data_view][fight_style]["subtitle"]
-    }
-  );
+
+
+  let timestamp = loaded_data[chosen_class][chosen_spec][data_view][fight_style]["timestamp"];
+  let year = timestamp.split("-")[0];
+  let month = timestamp.split("-")[1];
+  let day = timestamp.split("-")[2].split(" ")[0];
+  let hour = timestamp.split(" ")[1].split(":")[0];
+  let minute = timestamp.split(":")[1];
+
+  let subtitle = "Last updated ";
+  let age = new Date() - new Date(Date.UTC(year, month, day, hour, minute));
+
+  let age_days = Math.floor(age / 24 / 3600 / 1000);
+  if (age_days > 0) {
+    subtitle += `${age_days}d `;
+  }
+  let age_hours = Math.floor(age / 3600 / 1000) - age_days * 24;
+  subtitle += `${age_hours}h ago`;
+
+  document.getElementById("chart_title").innerHTML = "";//loaded_data[chosen_class][chosen_spec][data_view][fight_style]["title"];
+  document.getElementById("chart_subtitle").innerHTML = subtitle;
+  document.getElementById("chart_simc_hash").innerHTML = `SimulationCraft build: <a href=\"https://github.com/simulationcraft/simc/commit/${loaded_data[chosen_class][chosen_spec][data_view][fight_style]["simc_settings"]["simc_hash"]}\" target=\"blank\">#${loaded_data[chosen_class][chosen_spec][data_view][fight_style]["simc_settings"]["simc_hash"].substring(0, 5)}</a>`;
+
+
   scatter_chart.redraw();
 }
 
@@ -2246,16 +2200,9 @@ function update_scatter_chart() {
  */
 
 
-/** Look for the dark mode cookie and update view */
-document.addEventListener("DOMContentLoaded", search_dark_mode_cookie);
-
-/** Load language from cookie. */
-document.addEventListener("DOMContentLoaded", search_language_cookie);
-
-/** Load spec and data mode if a spec link was used. */
-document.addEventListener("DOMContentLoaded", function () {
-  if (debug)
-    console.log("interprete link");
+document.addEventListener("DOMContentLoaded", async function () {
+  search_dark_mode_cookie();
+  await search_language_cookie();
 
   get_data_from_link();
   if (chosen_spec !== "") {
