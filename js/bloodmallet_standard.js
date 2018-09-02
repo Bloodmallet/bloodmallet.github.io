@@ -1121,7 +1121,7 @@ function update_talent_selector() {
   let talent_selector = document.getElementById("talent_combination_selector");
   talent_selector.innerHTML = "";
 
-  if (!chosen_talent_combination) {
+  if (!chosen_talent_combination || !loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"].hasOwnProperty(chosen_talent_combination)) {
     chosen_talent_combination = talent_combinations[0];
   }
 
