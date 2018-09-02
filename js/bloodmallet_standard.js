@@ -1092,6 +1092,7 @@ function update_data_buttons() {
 
   // unhide/hide talent combination selection if necessary
   document.getElementById("talent_combination_selector").hidden = (data_view !== "secondary_distributions");
+  document.getElementById("talent_selector_label").hidden = (data_view !== "secondary_distributions");
 
   let is_azerite = (data_view === "azerite_traits");
   document.getElementById("chart_type_head").hidden = !is_azerite;
