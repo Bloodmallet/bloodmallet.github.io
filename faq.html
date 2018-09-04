@@ -322,51 +322,9 @@
           <h2 id="trusting-these-charts" class="faq-question">Can I trust these charts?</h2>
           <p>
             Yes-ish - they offer an overview. Your own equipment (e.g. azerite traits and trinkets) and talents make your character unique.
-            Therefore, simming your own character is the most effective way to know which performs best. And of course: listen
+            Therefore, simming your own character is the most effective way to know which performs best. Try out <a href="https://www.raidbots.com/">Raidbots</a>, if you haven't yet. And of course: listen
             to your theorycrafters! General information can get you only so far.
           </p>
-        </div>
-        <div class="offset-md-1 col-md-10">
-          <h2 id="missing-trinkets-traits" class="faq-question">Why is this trinket / azerite trait / race missing?</h2>
-          <p>
-            Chances are, it was forgotten and needs to be added. Please
-            <a href="https://github.com/Bloodmallet/bloodmallet.github.io/issues" target="blank">report an error</a> via github. Please check the following table for Alliance Azerite Traits, which are intentionally
-            left out and instead are replaced by their Horde counterpart.
-          </p>
-          <table class="table table-dark">
-            <thead>
-              <tr>
-                <th scope="col">Alliance (not in chart)</th>
-                <th scope="col">Horde (equivalent)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Anduin's Dedication</td>
-                <td>Sylvanas' Resolve</td>
-              </tr>
-              <tr>
-                <td>Battlefield Precision</td>
-                <td>Battlefield Focus</td>
-              </tr>
-              <tr>
-                <td>Stand As One</td>
-                <td>Collective Will</td>
-              </tr>
-              <tr>
-                <td>Stronger Together</td>
-                <td>Combined Might</td>
-              </tr>
-              <tr>
-                <td>Last Gift</td>
-                <td>Retaliatory Fury</td>
-              </tr>
-              <tr>
-                <td>Liberator's Might</td>
-                <td>Glory in Battle</td>
-              </tr>
-            </tbody>
-          </table>
         </div>
         <div class="offset-md-1 col-md-10">
           <h2 id="contributors" class="faq-question">Who contributed?</h2>
@@ -383,6 +341,10 @@
         <div class="offset-md-1 col-md-10">
           <h2 id="azerite-itemlevel-chart" class="faq-question">Why do traits grow stronger with increasing itemlevel in the itemlevel azerite chart?</h2>
           <p>That's primarly the effect of me including the actual item in that dps value too. That means: not only the trait is scaled to that itemlevel but the profile has the matching primary stat increase too.</p>
+        </div>
+        <div class="offset-md-1 col-md-10">
+          <h2 id="spike-in-chart" class="faq-question">Why do I see a spike in the chart?</h2>
+          <p>Are you talking about something like this?</p><img src="assets/faq_chart_spike.PNG" alt="Suddenly a 'higher' dps value in the lower area of the chart"/><p>This indicates a negative dps value for the entry of that bar. A negative dps value can happen if an actual dps loss occurs due to an APL issue or a bug in SimulationCraft. I'm NOT filtering these out, in hope that they'll be noticed and then somehow fixed. This means for you to ignore this bar for now and keep an eye out for data updates in the future. Or to dig into it and find out what's wrong, so it can be fixed.</p>
         </div>
         <div class="offset-md-1 col-md-10">
           <h2 id="data-usage" class="faq-question">Can I use the charts/data from bloodmallet.com?</h2>
