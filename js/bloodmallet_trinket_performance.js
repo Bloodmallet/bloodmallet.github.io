@@ -21,6 +21,7 @@ var wow_classes_specs = [
   [
     "demon_hunter", [
       "havoc",
+      "vengeance"
     ],
     "#A330C9"
   ],
@@ -28,6 +29,7 @@ var wow_classes_specs = [
     "druid", [
       "balance",
       "feral",
+      "guardian"
     ],
     "#FF7D0A"
   ],
@@ -64,6 +66,7 @@ var wow_classes_specs = [
   [
     "priest", [
       "shadow",
+      "holy"
     ],
     "#FFFFFF"
   ],
