@@ -1761,9 +1761,9 @@ function create_link() {
   path += "?data_view=" + data_view;
   if (data_view == "azerite_traits") {
     path += "&type=" + chosen_azerite_list_type;
-  }
-  if (chosen_azerite_list_type === "itemlevel" || chosen_azerite_list_type === "trait_stacking") {
-    path += "&tier=" + chosen_azerite_tier;
+    if (chosen_azerite_list_type === "itemlevel" || chosen_azerite_list_type === "trait_stacking") {
+      path += "&tier=" + chosen_azerite_tier;
+    }
   }
   path += "&fight_style=" + fight_style;
   path += "&lang=" + language;
