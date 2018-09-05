@@ -1766,7 +1766,9 @@ function create_link() {
     }
   }
   path += "&fight_style=" + fight_style;
-  path += "&lang=" + language;
+  if (language !== "EN") {
+    path += "&lang=" + language;
+  }
 
   return path;
 }
