@@ -46,6 +46,10 @@ let chosen_spec = "";
 let chosen_talent_combination = "";
 let chosen_azerite_list_type = "trait_stacking";
 
+let mode = "welcome";
+let fight_style = "patchwerk";
+let data_view = "trinkets";
+
 let chosen_azerite_tier = 3;
 
 let dark_mode = true;
@@ -123,11 +127,6 @@ const translation_classes = [
   "translate_link_was_copied_to_clipboard",
   "translate_dps_only_warning"
 ];
-
-
-let mode = "welcome";
-let fight_style = "patchwerk";
-let data_view = "trinkets";
 
 const data_view_IDs = [
   "show_trinkets_data", // => trinkets
@@ -937,7 +936,7 @@ async function get_data_from_link() {
     }
   }
 
-  if (hash.indexOf("&") === -1) {
+  if (hash.indexOf("?") === -1) {
     // rather early exit if no params were provided
     return;
   }
@@ -1758,14 +1757,20 @@ function create_link() {
 
   path += "#" + chosen_class;
   path += "_" + chosen_spec;
+
+  if (data_view === "trinkets" && fight_style === "patchwerk") {
+    return path;
+  }
   path += "?data_view=" + data_view;
+  if (fight_style !== "patchwerk") {
+    path += "&fight_style=" + fight_style;
+  }
   if (data_view == "azerite_traits") {
     path += "&type=" + chosen_azerite_list_type;
     if (chosen_azerite_list_type === "itemlevel" || chosen_azerite_list_type === "trait_stacking") {
       path += "&tier=" + chosen_azerite_tier;
     }
   }
-  path += "&fight_style=" + fight_style;
   if (language !== "EN") {
     path += "&lang=" + language;
   }
