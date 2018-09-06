@@ -954,6 +954,10 @@ async function get_data_from_link() {
       chosen_azerite_list_type = value;
     } else if (key === "tier") {
       chosen_azerite_tier = value;
+      if (chosen_azerite_tier === "1") {
+        // needed for old links
+        chosen_azerite_tier = "3";
+      }
     } else if (key === "lang") {
       await switch_language(value);
     }
