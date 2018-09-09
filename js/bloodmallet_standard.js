@@ -586,6 +586,10 @@ const patrons_epic = [
   {
     "name": "Tumi",
     "text": "Tumi"
+  },
+  {
+    "name": "Xss",
+    "text": "Xss"
   }
 ];
 const patrons_rare = [
