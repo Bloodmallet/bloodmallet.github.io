@@ -266,7 +266,7 @@ function bloodmallet_chart_import() {
       lineColor: default_axis_color,
       tickColor: default_axis_color
     },
-    yAxis: {
+    yAxis: [{
       labels: {
         //enabled: true,
         style: {
@@ -294,7 +294,38 @@ function bloodmallet_chart_import() {
       },
       gridLineWidth: 1,
       gridLineColor: default_axis_color
-    }
+    }, {
+      linkedTo: 0,
+      opposite: true,
+      labels: {
+        //enabled: true,
+        style: {
+          color: default_axis_color
+        },
+      },
+      min: 0,
+      stackLabels: {
+        enabled: true,
+        formatter: function () {
+          return Intl.NumberFormat().format(this.total);
+        },
+        style: {
+          color: default_font_color,
+          textOutline: false,
+          fontSize: font_size,
+          fontWeight: "normal"
+        }
+      },
+      title: {
+        text: "\u0394 Damage per second",
+        style: {
+          color: default_axis_color
+        }
+      },
+      gridLineWidth: 1,
+      gridLineColor: default_axis_color
+
+    }]
   };
 
   var path_to_data = "https://bloodmallet.com/json/";
@@ -329,9 +360,12 @@ function bloodmallet_chart_import() {
 
     // check for unique IDs
     let tmp_id_list = [];
-    for (const html_element of chart_list) {
+
+
+    for (let i = 0; i < chart_list.length; i++) {
+      const html_element = chart_list[i];
       if (tmp_id_list.indexOf(html_element.id) > -1) {
-        console.error(`Multiple Elements use the same ID ('${html_element.id}'). Aborting bloodmallet_chart_import.js.`);
+        console.error("Multiple Elements use the same ID ('" + html_element.id + "'). Aborting bloodmallet_chart_import.js.");
         return;
       } else {
         tmp_id_list.push(html_element.id);
@@ -339,14 +373,16 @@ function bloodmallet_chart_import() {
     }
 
 
-    for (const html_element of chart_list) {
+    for (let i in chart_list) {
+      //const html_element = chart_list[i];
       let html_id = undefined;
       try {
-        html_id = html_element.id;
+        html_id = chart_list[i].id;
       } catch (error) {
         console.log("No bloodmallet_chart was found.");
         return;
       }
+      const html_element = document.getElementById(chart_list[i].id);
 
       if (html_element) {
 
@@ -451,7 +487,7 @@ function bloodmallet_chart_import() {
    * @param {string} wow_spec wow spec name
    * @param {string} fight_style simc baseline fight style
    */
-  async function load_data(state) {
+  function load_data(state) {
     if (dev_mode) {
       console.log("load_data");
     }
@@ -488,17 +524,17 @@ function bloodmallet_chart_import() {
     data_name += ".json";
 
     if (dev_mode) {
-      console.log(`Fetching data from: ${path_to_data + data_group}/${data_name}`);
+      console.log("Fetching data from: " + path_to_data + data_group + "/" + data_name);
     }
 
-    fetch(path_to_data + data_group + "/" + data_name)
-      .then(function (response) {
-        if (response.status !== 200) {
-          console.warn('Problem occured when fetching data from bloodmallet.com. Status Code: ' +
-            response.status);
-          return false;
-        }
-        response.json().then(function (json) {
+
+    let request = new XMLHttpRequest();
+    request.open("GET", path_to_data + data_group + "/" + data_name, true); // async request
+
+    request.onload = function (e) {
+      if (request.readyState === 4) {
+        if (request.status === 200) {
+          let json = JSON.parse(request.responseText);
 
           if (!loaded_data[data_type]) {
             loaded_data[data_type] = {};
@@ -515,10 +551,15 @@ function bloodmallet_chart_import() {
             console.log(json);
             console.log("Load and save finished.");
           }
-        });
-      }).catch(function (err) {
-        console.error('Fetching data from bloodmallet.com encountered an error, ', err);
-      });
+        } else {
+          console.error(request.statusText);
+        }
+      }
+    };
+    request.onerror = function (e) {
+      console.error('Fetching data from bloodmallet.com encountered an error, ', e);
+    };
+    request.send(null);
   }
 
   /**
@@ -611,7 +652,8 @@ function bloodmallet_chart_import() {
     // update categories
     category_list = [];
 
-    for (let dps_key of dps_ordered_keys) {
+    for (let i in dps_ordered_keys) {
+      let dps_key = dps_ordered_keys[i];
       category_list.push(get_category_name(state, dps_key, data));
     }
 
@@ -649,7 +691,8 @@ function bloodmallet_chart_import() {
         let itemlevel = simulated_steps[itemlevel_position];
         var dps_array = [];
 
-        for (let dps_key of dps_ordered_keys) {
+        for (let i in dps_ordered_keys) {
+          let dps_key = dps_ordered_keys[i];
 
           let dps_key_values = data["data"][dps_key];
 
@@ -705,7 +748,8 @@ function bloodmallet_chart_import() {
     } else { // race simulations
       var dps_array = [];
 
-      for (let dps_key of dps_ordered_keys) {
+      for (let i in dps_ordered_keys) {
+        let dps_key = dps_ordered_keys[i];
 
         let dps_key_values = data["data"][dps_key];
 
@@ -721,7 +765,7 @@ function bloodmallet_chart_import() {
     }
 
     // add new legend title
-    if (["trinkets", "azerite_items_chest", "azerite_items_head", "azerite_items_shoulders", "azerite_traits_itemlevel"].includes(data_type)) {
+    if ("trinkets" == data_type || "azerite_items_chest" == data_type || "azerite_items_head" == data_type || "azerite_items_shoulders" == data_type || "azerite_traits_itemlevel" == data_type) {
       chart.legend.title.attr({ text: "Itemlevel" });
     } else if (data_type === "races") {
       chart.legend.title.attr({ text: "" });
@@ -801,7 +845,8 @@ function bloodmallet_chart_import() {
         if (data.hasOwnProperty("class_id") && data.hasOwnProperty("used_azerite_traits_per_item")) {
           link += "/azerite-powers=";
           link += data["class_id"];
-          for (const trait of data["used_azerite_traits_per_item"][key]) {
+          for (let i in data["used_azerite_traits_per_item"][key]) {
+            const trait = data["used_azerite_traits_per_item"][key][i];
             link += ":" + trait["id"];
           }
         }
@@ -856,7 +901,8 @@ function bloodmallet_chart_import() {
         if (data.hasOwnProperty("class_id") && data.hasOwnProperty("used_azerite_traits_per_item")) {
           link += "&azerite=";
           link += data["class_id"] + ":0";
-          for (const trait of data["used_azerite_traits_per_item"][key]) {
+          for (let i in data["used_azerite_traits_per_item"][key]) {
+            const trait = data["used_azerite_traits_per_item"][key][i];
             link += ":" + trait["id"];
           }
         }
@@ -952,12 +998,21 @@ function bloodmallet_chart_import() {
       styled_chart.xAxis.lineColor = axis_color;
       styled_chart.xAxis.tickColor = axis_color;
 
-      styled_chart.yAxis.labels.style.color = axis_color;
-      styled_chart.yAxis.stackLabels.style.color = font_color;
-      styled_chart.yAxis.gridLineColor = axis_color;
-      styled_chart.yAxis.lineColor = axis_color;
-      styled_chart.yAxis.tickColor = axis_color;
-      styled_chart.yAxis.title.style.color = axis_color;
+      styled_chart.yAxis[0].labels.style.color = axis_color;
+      styled_chart.yAxis[0].stackLabels.style.color = font_color;
+      styled_chart.yAxis[0].gridLineColor = axis_color;
+      styled_chart.yAxis[0].lineColor = axis_color;
+      styled_chart.yAxis[0].tickColor = axis_color;
+      styled_chart.yAxis[0].title.style.color = axis_color;
+
+      styled_chart.yAxis[1].labels.style.color = axis_color;
+      styled_chart.yAxis[1].stackLabels.style.color = font_color;
+      styled_chart.yAxis[1].gridLineColor = axis_color;
+      styled_chart.yAxis[1].lineColor = axis_color;
+      styled_chart.yAxis[1].tickColor = axis_color;
+      styled_chart.yAxis[1].title.style.color = axis_color;
+
+      styled_chart.credits.style.color = font_color;
 
       return styled_chart;
     }
