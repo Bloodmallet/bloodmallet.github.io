@@ -376,7 +376,7 @@ const empty_chart = {
     lineColor: medium_color,
     tickColor: medium_color
   },
-  yAxis: {
+  yAxis: [{
     labels: {
       //enabled: true,
       style: {
@@ -404,7 +404,37 @@ const empty_chart = {
     },
     gridLineWidth: 1,
     gridLineColor: medium_color
-  }
+  }, {
+    linkedTo: 0,
+    labels: {
+      //enabled: true,
+      style: {
+        color: medium_color
+      },
+    },
+    min: 0,
+    stackLabels: {
+      enabled: true,
+      formatter: function () {
+        return Intl.NumberFormat().format(this.total);
+      },
+      style: {
+        color: light_color,
+        textOutline: false,
+        fontSize: font_size,
+        //fontWeight: "normal"
+      }
+    },
+    title: {
+      text: "\u0394 Damage per second",
+      style: {
+        color: medium_color
+      }
+    },
+    gridLineWidth: 1,
+    gridLineColor: medium_color,
+    opposite: true
+  }]
 };
 
 const standard_chart = Highcharts.chart('chart', empty_chart);
@@ -517,13 +547,19 @@ function update_dark_mode() {
         }
       }
     },
-    yAxis: {
+    yAxis: [{
       stackLabels: {
         style: {
           color: primary_color
         }
       }
-    }
+    }, {
+      stackLabels: {
+        style: {
+          color: primary_color
+        }
+      }
+    }]
   });
 
   scatter_chart.update({
