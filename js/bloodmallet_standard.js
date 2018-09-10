@@ -1422,8 +1422,8 @@ function update_chart() {
   let minute = timestamp.split(":")[1];
 
   let subtitle = "Last updated ";
-  let age = new Date() - new Date(Date.UTC(year, month, day, hour, minute));
-
+  // month is a number 0-11
+  let age = new Date() - new Date(Date.UTC(year, month - 1, day, hour, minute));
   let age_days = Math.floor(age / 24 / 3600 / 1000);
   if (age_days > 0) {
     subtitle += `${age_days}d `;
