@@ -5,7 +5,7 @@
 ---------------------------------------------------------*/
 
 /* Variable intended for dev mode specific output/markings */
-const debug = false;
+const debug = true;
 
 /** visual modes
  *   hidden: hides these general elements
@@ -45,6 +45,7 @@ let chosen_class = "";
 let chosen_spec = "";
 let chosen_talent_combination = "";
 let chosen_azerite_list_type = "trait_stacking";
+let chosen_step_list = [];
 
 let mode = "welcome";
 let fight_style = "patchwerk";
@@ -138,7 +139,8 @@ const data_view_IDs = [
   "chart_type_trait_stacking",
   "chart_type_head",
   "chart_type_shoulders",
-  "chart_type_chest"
+  "chart_type_chest",
+  "advanced_chart_options_button"
 ];
 const fight_style_IDs = [
   "fight_style_patchwerk",
@@ -1049,7 +1051,109 @@ async function load_data() {
   }
   empty_charts();
   update_talent_selector();
+
+  update_advanced_chart_options(loaded_data[chosen_class][chosen_spec][data_name][fight_style]["simulated_steps"]);
+
   update_chart();
+}
+
+function update_advanced_chart_options(itemlevels) {
+  if (debug) {
+    console.log("update_advanced_chart_options");
+  }
+  var data_name = data_view;
+  if (data_view === "azerite_traits" && ["head", "shoulders", "chest"].includes(chosen_azerite_list_type)) {
+    data_name += "_" + chosen_azerite_list_type;
+  }
+
+  // update chosen_step_list to the new max list
+  chosen_step_list = loaded_data[chosen_class][chosen_spec][data_name][fight_style]["simulated_steps"];
+
+
+  let chart_options = document.getElementById("advanced_chart_options");
+  chart_options.innerHTML = "";
+  let area = document.createElement("div");
+  area.className = "row";
+  chart_options.appendChild(area);
+
+
+  // add itemlevel filtering
+  let ilevel_filtering = document.createElement("div");
+  ilevel_filtering.className = "col-md-4";
+  area.appendChild(ilevel_filtering);
+
+  ilevel_filtering.innerHTML = "Itemlevels:<br/>";
+  for (const step of itemlevels) {
+    let form_check = document.createElement("div");
+    form_check.className = "form-check";
+    ilevel_filtering.appendChild(form_check);
+    let input = document.createElement("input");
+    input.className = "form-check-input";
+    input.type = "checkbox";
+    input.value = step;
+    input.id = "step_" + step;
+    // update checked based on user input
+    if (chosen_step_list.includes(step)) {
+      input.checked = true;
+    }
+    input.addEventListener("change", function (e) {
+      update_step_list(e.target.value, e.target.checked);
+    });
+    form_check.appendChild(input);
+
+    let label = document.createElement("label");
+    label.className = "form-check-label";
+    label.htmlFor = input.id;
+    label.innerHTML = step;
+    form_check.appendChild(label);
+
+  }
+
+  // add more chart settings here
+
+  // add apply button
+  let apply_area = document.createElement("div");
+  apply_area.className = "row";
+  chart_options.appendChild(apply_area);
+
+  let button = document.createElement("div");
+  button.className = "col-md-4";
+  apply_area.appendChild(button);
+
+  let apply_changes_button = document.createElement("button");
+  button.appendChild(apply_changes_button);
+  apply_changes_button.className = "btn-data " + chosen_class + "-button";
+  apply_changes_button.type = "button";
+  apply_changes_button.setAttribute("data-toggle", "collapse");
+  apply_changes_button.setAttribute("data-target", "#advanced_chart_options_area");
+  apply_changes_button.setAttribute("aria-expanded", "false");
+  apply_changes_button.setAttribute("aria-controls", "advanced_chart_options_area");
+  apply_changes_button.style = "margin-top: 0.6rem;";
+  apply_changes_button.innerHTML = "Apply changes";
+
+  apply_changes_button.addEventListener("click", function () {
+    update_chart();
+  });
+
+}
+
+
+/**
+ * Updates global chosen_step_list
+ * @param {string} step itemlevel step or trait step
+ * @param {bool} push is the step pushed to the list or removed
+ */
+function update_step_list(step, push) {
+  if (debug) {
+    console.log("update_step_list", step, push);
+  }
+
+  if (push) {
+    chosen_step_list.push(step);
+  } else {
+    chosen_step_list.splice(chosen_step_list.indexOf(step), 1);
+  }
+
 }
 
 /**
@@ -1176,6 +1280,10 @@ function update_talent_selector() {
       new_option.selected = true;
     talent_selector.add(new_option);
   }
+
+}
+
+function update_step_filter() {
 
 }
 
@@ -1368,7 +1476,13 @@ function update_chart() {
           for (trait of loaded_data[chosen_class][chosen_spec][data_name][fight_style]["used_azerite_traits_per_item"][dps_ordered_data[i]]) {
             string += ":" + trait["id"];
           }
-          string += "&ilvl=" + loaded_data[chosen_class][chosen_spec][data_name][fight_style]["simulated_steps"][loaded_data[chosen_class][chosen_spec][data_name][fight_style]["simulated_steps"].length - 1].split("1_")[1];
+
+        }
+        let ilevel = get_minimum_step_of(loaded_data[chosen_class][chosen_spec][data_name][fight_style]["data"][dps_ordered_data[i]]);
+        if (data_view === "trinkets") {
+          string += "&ilvl=" + ilevel;
+        } else {
+          string += "&ilvl=" + ilevel.split("1_")[1];
         }
 
         let translated_name = get_translated_name(dps_ordered_data[i]);
@@ -1538,6 +1652,76 @@ function update_chart() {
   document.getElementById("chart").style.height = 200 + dps_ordered_data.length * 30 + "px";
   standard_chart.setSize(document.getElementById("chart").style.width, document.getElementById("chart").style.height);
   standard_chart.redraw();
+}
+
+
+/**
+ * Function returns the minimal simulated step of the data. Based on the global chosen_step_list, which will later be used as a filter for the user to manage.
+ * @param {json} data All simulated data for the item/trait
+ */
+function get_minimum_step_of(data) {
+  if (debug) {
+    console.log("get_minimum_itemlevel_of");
+  }
+
+  for (let i = chosen_step_list.length - 1; i >= 0; i--) {
+    const itemlevel = chosen_step_list[i];
+    try {
+      if (data[itemlevel]) {
+        return itemlevel;
+      }
+    } catch (error) {
+      if (debug) {
+        console.log("get_minimum_itemlevel_of skipped " + itemlevel);
+      }
+    }
+  }
+}
+
+
+/**
+ * Function returns the maximal simulated step of the data. Based on the global chosen_step_list, which will later be used as a filter for the user to manage.
+ * @param {json} data All simulated data for the item/trait
+ */
+function get_maximum_step_of(data) {
+  if (debug) {
+    console.log("get_maximum_step_of");
+  }
+
+  for (let i = 0; i < chosen_step_list.length; i++) {
+    const itemlevel = chosen_step_list[i];
+    try {
+      if (data[itemlevel]) {
+        return itemlevel;
+      }
+    } catch (error) {
+      if (debug) {
+        console.log("get_maximum_step_of skipped " + itemlevel);
+      }
+    }
+  }
+}
+
+
+/**
+ * Function returns a filtered data object. Only key/values matching the global chosen_step_list are returned.
+ * @param {json} data all available data for the item/spell
+ */
+function get_filtered_data(data) {
+  if (debug) {
+    console.log("get_filtered_data");
+  }
+  let new_data = {};
+
+  for (let i = 0; i < chosen_step_list.length; i++) {
+    const step = chosen_step_list[i];
+    if (data[step]) {
+      new_data.step = data[step];
+    }
+  }
+
+  console.log("get_filtered_data ", new_data);
+  return new_data;
 }
 
 /**
