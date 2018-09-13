@@ -22,9 +22,9 @@
 function bloodmallet_chart_import() {
 
   /**
-     *  Adjust the 'default_' variables to your liking if you host this script yourself.
-     *
-     */
+   *  Adjust the 'default_' variables to your liking if you host this script yourself.
+   *
+   */
 
   /**
    * Variable determines how many bars are visible
@@ -83,6 +83,8 @@ function bloodmallet_chart_import() {
   const default_data_type = "trinkets";
 
   const default_azerite_tier = "all"
+
+  const default_language = "en";
 
   /******************************************************************************
    * Actual code starts here.
@@ -397,7 +399,8 @@ function bloodmallet_chart_import() {
           tooltip_engine: default_tooltip_engine,
           chart_engine: default_chart_engine,
           wow_class: undefined,
-          wow_spec: undefined
+          wow_spec: undefined,
+          language: default_language
         };
 
         // optional input
@@ -427,6 +430,9 @@ function bloodmallet_chart_import() {
         }
         if (html_element.getAttribute("data-chart-engine")) {
           state.chart_engine = html_element.getAttribute("data-chart-engine");
+        }
+        if (html_element.getAttribute("data-language")) {
+          state.language = html_element.getAttribute("data-language");
         }
 
         // preparing necessary input to load data
@@ -814,22 +820,42 @@ function bloodmallet_chart_import() {
       console.log(data);
     }
 
+    const language_table = {
+      "cn": "cn_CN",
+      "en": "en_US",
+      "de": "de_DE",
+      "es": "es_ES",
+      "fr": "fr_FR",
+      "it": "it_IT",
+      "ko": "ko_KR",
+      "pt": "pt_BR",
+      "ru": "ru_RU"
+    }
+
     // start constructing links
     // wowhead, wowdb, or plain text if no matching origin is provided
 
     // fallback
     if (state.tooltip_engine != "wowhead" && state.tooltip_engine != "wowdb") {
-      return key;
+      return data["languages"][key][language_table[state.language]];
     }
 
     // races don't have links/tooltips
     if (state.data_type === "races") {
-      return key;
+      return data["languages"][key][language_table[state.language]];
     }
 
     // wowhead
     if (state.tooltip_engine == "wowhead") {
-      let link = "<a href=\"https://www.wowhead.com/";
+      let link = "<a href=\"https://";
+
+      if (state.language === "en") {
+        link += "www";
+      } else {
+        link += state.language;
+      }
+
+      link += ".wowhead.com/";
       try {
         let item_id = data["item_ids"][key];
         link += "item=" + item_id;
@@ -870,7 +896,7 @@ function bloodmallet_chart_import() {
         }
       }
 
-      link += "\">" + key + "</a>";
+      link += "\">" + data["languages"][key][language_table[state.language]] + "</a>";
 
       return link;
     }
@@ -921,7 +947,7 @@ function bloodmallet_chart_import() {
       element_string += link;
 
       element_string += "\" data-tooltip-href=\"";
-      element_string += link + "\">" + key + "</a>";
+      element_string += link + "\">" + data["languages"][key][language_table[state.language]] + "</a>";
 
       return element_string;
     }
