@@ -1149,9 +1149,34 @@ function update_step_list(step, push) {
   }
 
   if (push) {
-    chosen_step_list.push(step);
+    if (step.indexOf("_") > -1) {
+      chosen_step_list.push(step);
+    } else {
+      chosen_step_list.push(parseInt(step));
+    }
+    try {
+      chosen_step_list.sort(function (a, b) {
+        if (typeof a === "string" && typeof b === "string") {
+          return a < b;
+        } else {
+          return b - a;
+        }
+      }); // 385
+    } catch (error) {
+      console.log(error);
+    }
   } else {
-    chosen_step_list.splice(chosen_step_list.indexOf(step), 1);
+    let index = -1;
+    if (chosen_step_list.indexOf(step) > -1) {
+      index = chosen_step_list.indexOf(step); // "3_385"
+    } else {
+      index = chosen_step_list.indexOf(parseInt(step)) // 385
+    }
+    chosen_step_list.splice(index, 1);
+  }
+
+  if (debug) {
+    console.log("new chosen_step_list", chosen_step_list);
   }
 
 }
