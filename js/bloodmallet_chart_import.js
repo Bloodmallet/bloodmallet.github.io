@@ -374,8 +374,7 @@ function bloodmallet_chart_import() {
       }
     }
 
-
-    for (let i in chart_list) {
+    for (let i = 0; i < chart_list.length; i++) {
       //const html_element = chart_list[i];
       let html_id = undefined;
       try {
@@ -658,7 +657,7 @@ function bloodmallet_chart_import() {
     // update categories
     category_list = [];
 
-    for (let i in dps_ordered_keys) {
+    for (let i = 0; i < dps_ordered_keys.length; i++) {
       let dps_key = dps_ordered_keys[i];
       category_list.push(get_category_name(state, dps_key, data));
     }
@@ -692,12 +691,12 @@ function bloodmallet_chart_import() {
     }
 
     if (simulated_steps) {
-      for (let itemlevel_position in simulated_steps) {
+      for (let itemlevel_position = 0; itemlevel_position < simulated_steps.length; itemlevel_position++) {
 
         let itemlevel = simulated_steps[itemlevel_position];
         var dps_array = [];
 
-        for (let i in dps_ordered_keys) {
+        for (let i = 0; i < dps_ordered_keys.length; i++) {
           let dps_key = dps_ordered_keys[i];
 
           let dps_key_values = data["data"][dps_key];
@@ -754,7 +753,7 @@ function bloodmallet_chart_import() {
     } else { // race simulations
       var dps_array = [];
 
-      for (let i in dps_ordered_keys) {
+      for (let i = 0; i < dps_ordered_keys.length; i++) {
         let dps_key = dps_ordered_keys[i];
 
         let dps_key_values = data["data"][dps_key];
@@ -871,7 +870,7 @@ function bloodmallet_chart_import() {
         if (data.hasOwnProperty("class_id") && data.hasOwnProperty("used_azerite_traits_per_item")) {
           link += "/azerite-powers=";
           link += data["class_id"];
-          for (let i in data["used_azerite_traits_per_item"][key]) {
+          for (let i = 0; i < data["used_azerite_traits_per_item"][key].length; i++) {
             const trait = data["used_azerite_traits_per_item"][key][i];
             link += ":" + trait["id"];
           }
@@ -927,7 +926,7 @@ function bloodmallet_chart_import() {
         if (data.hasOwnProperty("class_id") && data.hasOwnProperty("used_azerite_traits_per_item")) {
           link += "&azerite=";
           link += data["class_id"] + ":0";
-          for (let i in data["used_azerite_traits_per_item"][key]) {
+          for (let i = 0; i < data["used_azerite_traits_per_item"][key].length; i++) {
             const trait = data["used_azerite_traits_per_item"][key][i];
             link += ":" + trait["id"];
           }
