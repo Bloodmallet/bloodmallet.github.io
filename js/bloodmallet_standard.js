@@ -5,7 +5,7 @@
 ---------------------------------------------------------*/
 
 /* Variable intended for dev mode specific output/markings */
-const debug = true;
+const debug = false;
 
 /** visual modes
  *   hidden: hides these general elements
@@ -443,15 +443,15 @@ const standard_chart = Highcharts.chart('chart', empty_chart);
 
 // invalid ilevels to use highcharts base colours but keep the old ones
 const ilevel_color_table = {
-  "00": "#1f78b4",
-  "10": "#a6cee3",
-  "20": "#33a02c",
-  "30": "#b2df8a",
-  "40": "#e31a1c",
-  "50": "#fb9a99",
-  "60": "#ff7f00",
-  "70": "#cab2d6",
-  "80": "#fdbf6f"
+  "340": "#7cb5ec",
+  "355": "#d9d9df",
+  "370": "#90ed7d",
+  "385": "#f7a35c",
+  "400": "#8085e9",
+  "50": "#f15c80",
+  "60": "#e4d354",
+  "70": "#2b908f",
+  "80": "#91e8e1"
 };
 
 const class_colors = {
@@ -1066,10 +1066,6 @@ function update_advanced_chart_options(itemlevels) {
     data_name += "_" + chosen_azerite_list_type;
   }
 
-  // update chosen_step_list to the new max list
-  chosen_step_list = loaded_data[chosen_class][chosen_spec][data_name][fight_style]["simulated_steps"];
-
-
   let chart_options = document.getElementById("advanced_chart_options");
   chart_options.innerHTML = "";
   let area = document.createElement("div");
@@ -1078,37 +1074,49 @@ function update_advanced_chart_options(itemlevels) {
 
 
   // add itemlevel filtering
-  let ilevel_filtering = document.createElement("div");
-  ilevel_filtering.className = "col-md-4";
-  area.appendChild(ilevel_filtering);
+  if (data_view === "trinkets" || data_view === "azerite_traits" && ["head", "shoulders", "chest", "itemlevel"].includes(chosen_azerite_list_type)) {
 
-  ilevel_filtering.innerHTML = "Itemlevels:<br/>";
-  for (const step of itemlevels) {
-    let form_check = document.createElement("div");
-    form_check.className = "form-check";
-    ilevel_filtering.appendChild(form_check);
-    let input = document.createElement("input");
-    input.className = "form-check-input";
-    input.type = "checkbox";
-    input.value = step;
-    input.id = "step_" + step;
-    // update checked based on user input
-    if (chosen_step_list.includes(step)) {
-      input.checked = true;
+    // update chosen_step_list to the new max list (create a copy)
+    chosen_step_list = loaded_data[chosen_class][chosen_spec][data_name][fight_style]["simulated_steps"].slice();
+
+    let ilevel_filtering = document.createElement("div");
+    ilevel_filtering.className = "col-md-4";
+    area.appendChild(ilevel_filtering);
+
+    ilevel_filtering.innerHTML = "Itemlevel:<br/>";
+    for (const step of itemlevels) {
+      let form_check = document.createElement("div");
+      form_check.className = "form-check";
+      ilevel_filtering.appendChild(form_check);
+      let input = document.createElement("input");
+      input.className = "form-check-input";
+      input.type = "checkbox";
+      input.value = step;
+      input.id = "step_" + step;
+      // update checked based on user input
+      if (chosen_step_list.includes(step)) {
+        input.checked = true;
+      }
+      input.addEventListener("change", function (e) {
+        update_step_list(e.target.value, e.target.checked);
+      });
+      form_check.appendChild(input);
+
+      let label = document.createElement("label");
+      label.className = "form-check-label";
+      label.htmlFor = input.id;
+      let cleansed_input_label = step;
+      if (typeof cleansed_input_label === "string") {
+        if (cleansed_input_label.indexOf("_") > -1) {
+          cleansed_input_label = cleansed_input_label.split("_")[1];
+        }
+      }
+      label.innerHTML = cleansed_input_label;
+      label.style = "padding-left: 5px; border-left: 9px solid " + ilevel_color_table[cleansed_input_label];
+      form_check.appendChild(label);
+
     }
-    input.addEventListener("change", function (e) {
-      update_step_list(e.target.value, e.target.checked);
-    });
-    form_check.appendChild(input);
-
-    let label = document.createElement("label");
-    label.className = "form-check-label";
-    label.htmlFor = input.id;
-    label.innerHTML = step;
-    form_check.appendChild(label);
-
   }
-
   // add more chart settings here
 
   // add apply button
@@ -1157,11 +1165,11 @@ function update_step_list(step, push) {
     try {
       chosen_step_list.sort(function (a, b) {
         if (typeof a === "string" && typeof b === "string") {
-          return a < b;
+          return b > a; // 1_385
         } else {
-          return b - a;
+          return b - a; // 385
         }
-      }); // 385
+      });
     } catch (error) {
       console.log(error);
     }
@@ -1584,57 +1592,56 @@ function update_chart() {
     if (debug)
       console.log("simulated_steps in data found.");
 
-    for (let itemlevel_position in loaded_data[chosen_class][chosen_spec][data_name][fight_style]["simulated_steps"]) {
+    for (let itemlevel_position = 0; itemlevel_position < chosen_step_list.length; itemlevel_position++) {
+      const itemlevel = chosen_step_list[itemlevel_position];
 
-      let itemlevel = loaded_data[chosen_class][chosen_spec][data_name][fight_style]["simulated_steps"][itemlevel_position];
       let itemlevel_dps_values = [];
-
-      if (debug)
+      if (debug) {
         console.log("handling itemlevel " + itemlevel);
+      }
 
-      // create series input for highcharts
-      for (data of dps_ordered_data) {
+      for (let data of dps_ordered_data) {
 
         let dps = loaded_data[chosen_class][chosen_spec][data_name][fight_style]["data"][data][itemlevel];
-        let min_ilevel = loaded_data[chosen_class][chosen_spec][data_name][fight_style]["simulated_steps"][loaded_data[chosen_class][chosen_spec][data_name][fight_style]["simulated_steps"].length - 1];
-        let max_ilevel = loaded_data[chosen_class][chosen_spec][data_name][fight_style]["simulated_steps"][0];
+        let min_ilevel = chosen_step_list[chosen_step_list.length - 1];
+        let max_ilevel = chosen_step_list[0];
+        let baseline_dps = loaded_data[chosen_class][chosen_spec][data_name][fight_style]["data"]["baseline"][loaded_data[chosen_class][chosen_spec][data_name][fight_style]["simulated_steps"][loaded_data[chosen_class][chosen_spec][data_name][fight_style]["simulated_steps"].length - 1]]
 
         // check for zero dps values and don't change them
         if (dps > 0) {
 
           // if lowest itemlevel is looked at, substract baseline
-          if (itemlevel_position === loaded_data[chosen_class][chosen_spec][data_name][fight_style]["simulated_steps"].length - 1) {
+          if (itemlevel === min_ilevel) {
 
             if (itemlevel in loaded_data[chosen_class][chosen_spec][data_name][fight_style]["data"][data]) {
-              itemlevel_dps_values.push(dps - loaded_data[chosen_class][chosen_spec][data_name][fight_style]["data"]["baseline"][min_ilevel]);
+              itemlevel_dps_values.push(dps - baseline_dps);
             } else {
               itemlevel_dps_values.push(0);
             }
 
-
           } else { // else substract lower itemlevel value of same item
 
             // if lower itemlevel is zero we have to assume that this item needs to be compared now to the baseline
-            if (loaded_data[chosen_class][chosen_spec][data_name][fight_style]["data"][data][loaded_data[chosen_class][chosen_spec][data_name][fight_style]["simulated_steps"][String(Number(itemlevel_position) + 1)]] == 0 || !(loaded_data[chosen_class][chosen_spec][data_name][fight_style]["simulated_steps"][String(Number(itemlevel_position) + 1)] in loaded_data[chosen_class][chosen_spec][data_name][fight_style]["data"][data])) {
+            if (loaded_data[chosen_class][chosen_spec][data_name][fight_style]["data"][data][chosen_step_list[String(Number(itemlevel_position) + 1)]] == 0 || !(chosen_step_list[String(Number(itemlevel_position) + 1)] in loaded_data[chosen_class][chosen_spec][data_name][fight_style]["data"][data])) {
 
-              itemlevel_dps_values.push(dps - loaded_data[chosen_class][chosen_spec][data_name][fight_style]["data"]["baseline"][min_ilevel]);
+              itemlevel_dps_values.push(dps - baseline_dps);
 
             } else { // standard case, next itemlevel is not zero and can be used to substract from the current value
 
-              itemlevel_dps_values.push(dps - loaded_data[chosen_class][chosen_spec][data_name][fight_style]["data"][data][loaded_data[chosen_class][chosen_spec][data_name][fight_style]["simulated_steps"][String(Number(itemlevel_position) + 1)]]);
+              itemlevel_dps_values.push(dps - loaded_data[chosen_class][chosen_spec][data_name][fight_style]["data"][data][chosen_step_list[String(Number(itemlevel_position) + 1)]]);
             }
-
           }
 
-        } else {
+        } else { // if dps is undefined or 0
           if (itemlevel in loaded_data[chosen_class][chosen_spec][data_name][fight_style]["data"][data]) {
             itemlevel_dps_values.push(dps);
           } else {
             itemlevel_dps_values.push(0);
           }
         }
-
       }
+
+      console.log(itemlevel_dps_values);
 
       let polished_itemlevel_name = itemlevel;
       if (data_view === "azerite_traits" && ["itemlevel", "head", "shoulders", "chest"].includes(chosen_azerite_list_type)) {
@@ -1644,13 +1651,13 @@ function update_chart() {
       }
 
       standard_chart.addSeries({
-        color: ilevel_color_table[itemlevel],
+        color: ilevel_color_table[polished_itemlevel_name],
         data: itemlevel_dps_values,
         name: polished_itemlevel_name,
         showInLegend: true
       }, false);
     }
-  } else { // if no itemlevels were used the dps values are exactly at the keys
+  } else { // if no itemlevels were used the dps values are exactly at the keys, like race simulations
 
     var dps_values = [];
     for (let category of dps_ordered_data) {
