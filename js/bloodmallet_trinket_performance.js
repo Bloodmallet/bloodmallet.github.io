@@ -379,7 +379,7 @@ function fill_menu() {
         lineColor: medium_color,
         tickColor: medium_color
       },
-      yAxis: {
+      yAxis: [{
         labels: {
           enabled: false
         },
@@ -387,7 +387,7 @@ function fill_menu() {
         stackLabels: {
           enabled: true,
           formatter: function () {
-            return Intl.NumberFormat().format(this.total);
+            return Intl.NumberFormat().format(this.total) + "%";
           },
           style: {
             color: light_color,
@@ -395,7 +395,32 @@ function fill_menu() {
           }
         },
         title: {
-          text: "\u0394 Damage per second",
+          text: "% Damage per second",
+          style: {
+            color: medium_color,
+          },
+        },
+        gridLineWidth: 1,
+        gridLineColor: medium_color
+      }, {
+        linkedTo: 0,
+        opposite: true,
+        labels: {
+          enabled: false
+        },
+        min: 0,
+        stackLabels: {
+          enabled: true,
+          formatter: function () {
+            return Intl.NumberFormat().format(this.total) + "%";
+          },
+          style: {
+            color: light_color,
+            textOutline: false,
+          }
+        },
+        title: {
+          text: "% Damage per second",
           style: {
             color: medium_color,
           },
@@ -403,6 +428,7 @@ function fill_menu() {
         gridLineWidth: 1,
         gridLineColor: medium_color
       }
+      ]
     });
 
   // trigger update function for chart
@@ -483,7 +509,12 @@ function reload_chart() {
   for (spec in simulated_data[selected_fight_style]) {
     if (selected_trinket in simulated_data[selected_fight_style][spec] && selected_itemlevel in simulated_data[selected_fight_style][spec][selected_trinket]) {
       valid_specs.push(spec);
-      trinket_data[spec] = parseInt(simulated_data[selected_fight_style][spec][selected_trinket][selected_itemlevel]) - parseInt(simulated_data[selected_fight_style][spec]["baseline"][simulated_ilevels[simulated_ilevels.length - 1]]);
+
+      // absolute gain
+      //trinket_data[spec] = parseInt(simulated_data[selected_fight_style][spec][selected_trinket][selected_itemlevel]) - parseInt(simulated_data[selected_fight_style][spec]["baseline"][simulated_ilevels[simulated_ilevels.length - 1]]);
+
+      // relative gain
+      trinket_data[spec] = Math.round((parseInt(simulated_data[selected_fight_style][spec][selected_trinket][selected_itemlevel]) - parseInt(simulated_data[selected_fight_style][spec]["baseline"][simulated_ilevels[simulated_ilevels.length - 1]])) * 10000 / parseInt(simulated_data[selected_fight_style][spec]["baseline"][simulated_ilevels[simulated_ilevels.length - 1]])) / 100;
     }
   }
   valid_specs.sort();
