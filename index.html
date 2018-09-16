@@ -227,6 +227,15 @@
               <option value="RU">Русский</option>
             </select>
           </div>
+          <div class="form-group">
+            <label class="form-control-label" for="value_style_selector">Chart mode:</label>
+            <br/>
+            <select id="value_style_selector" title="Chart value style">
+              <option value="absolute_gain" selected>Δ - absolute dps gain</option>
+              <option value="relative_gain">% - relative dps gain</option>
+            </select>
+          </div>
+
         </form>
       </ul>
     </div>
@@ -600,7 +609,7 @@
     <!-- TC resources -->
     <div class="container-fluid" id="tc_resources" hidden>
       <ul type="square" class="offset-xl-2 col-xl-8 offset-lg-2 col-lg-8 offset-md-1 col-md-10">
-        <li class="translate_dps_only_warning"><strong>Warning:</strong> All chart are about dealing damage ONLY!
+        <li class="translate_dps_only_warning"><strong>Warning:</strong> All charts are about dealing damage ONLY!
         </li>
         <li id="chart_simc_hash"></li>
         <li class="translate_tc_warning">
