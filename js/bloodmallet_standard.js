@@ -41,6 +41,7 @@ const modes = {
 
 let loaded_data = {};
 
+let chosen_value_style = "absolute_gain";
 let chosen_class = "";
 let chosen_spec = "";
 let chosen_talent_combination = "";
@@ -159,6 +160,15 @@ const azerite_trait_tier_IDs = [
   "azerite_traits_tier_3",
   "azerite_traits_tier_2"
 ];
+
+const chart_value_mode = {
+  "relative_gain": {
+    "axis": "% Damage per second"
+  },
+  "absolute_gain": {
+    "axis": "\u0394 Damage per second"
+  }
+}
 
 const light_color = "#eeeeee";
 const medium_color = "#999999";
@@ -341,8 +351,15 @@ const empty_chart = {
             '\">' +
             this.points[i].series.name +
             '</span>:&nbsp;&nbsp;' +
-            Intl.NumberFormat().format(cumulative_amount) +
-            "</div>";
+            Intl.NumberFormat().format(cumulative_amount);
+
+          if (chosen_value_style === "absolute_gain" || data_view === "races") {
+            s += " dps";
+          } else if (chosen_value_style === "relative_gain") {
+            s += "%";
+          }
+
+          s += "</div>";
         }
       }
       s += '</div>';
@@ -389,7 +406,11 @@ const empty_chart = {
     stackLabels: {
       enabled: true,
       formatter: function () {
-        return Intl.NumberFormat().format(this.total);
+        if (chosen_value_style === "absolute_gain" || data_view === "races") {
+          return Intl.NumberFormat().format(this.total) + "";
+        } else if (chosen_value_style === "relative_gain") {
+          return Intl.NumberFormat().format(this.total) + "%";
+        }
       },
       style: {
         color: light_color,
@@ -597,21 +618,111 @@ function update_dark_mode() {
 
 /** save the current dark_mode value in a cookie */
 function set_dark_mode_cookie() {
-  if (debug)
+  if (debug) {
     console.log("set_dark_mode_cookie");
+  }
   Cookies.set('bloodmallet_dark_mode', dark_mode, { expires: 31, path: '' });
 }
 
 /** searches for the dark mode cookie and updates the page if necessary */
 function search_dark_mode_cookie() {
-  if (debug)
+  if (debug) {
     console.log("search_dark_mode_cookie");
+  }
   if (Cookies.get('bloodmallet_dark_mode')) {
     dark_mode = ('true' === Cookies.get('bloodmallet_dark_mode'));
   }
   document.getElementById("darkModeCheckbox").checked = dark_mode;
   update_dark_mode();
   set_dark_mode_cookie();
+}
+
+
+/*---------------------------------------------------------
+ //
+ //  How to present numbers in the charts
+ //
+---------------------------------------------------------*/
+/** add listener to the dark mode checkbox */
+document.addEventListener("DOMContentLoaded", function () {
+  if (debug) {
+    console.log("addEventListener value_style_selector");
+  }
+  document.getElementById("value_style_selector").addEventListener("change", function (e) {
+    chosen_value_style = this.options[this.selectedIndex].value;
+    set_value_style_cookie();
+    //set_value_style();
+    update_chart();
+  });
+  search_value_style_cookie();
+});
+
+/**
+ * Adjusts axis titles of the standard chart. Called by update_chart(), too.
+ */
+function set_value_style() {
+  if (debug) {
+    console.log("set_value_style");
+  }
+  // get the translation options
+  var html_elements = document.getElementById("value_style_selector").options;
+  // de-select whatever language option was chosen
+  html_elements[document.getElementById("value_style_selector").selectedIndex].selected = false;
+
+  // select the new language in the settings based on data
+  for (let index = 0; index < html_elements.length; index++) {
+
+    const element = html_elements[index];
+    if (element.value === chosen_value_style) {
+      element.selected = true;
+    }
+  }
+
+  if (mode === "data") {
+    if (data_view !== "races") {
+      standard_chart.update({
+        yAxis: [
+          { title: { text: chart_value_mode[chosen_value_style]["axis"] } },
+          { title: { text: chart_value_mode[chosen_value_style]["axis"] } }
+        ]
+      });
+    } else {
+      standard_chart.update({
+        yAxis: [
+          { title: { text: chart_value_mode["absolute_gain"]["axis"] } },
+          { title: { text: chart_value_mode["absolute_gain"]["axis"] } }
+        ]
+      });
+    }
+  } else {
+    empty_chart.yAxis[0].title.text = chart_value_mode[chosen_value_style]["axis"];
+    empty_chart.yAxis[1].title.text = chart_value_mode[chosen_value_style]["axis"];
+  }
+}
+
+/**
+ * save the current chosen_value_style value in a cookie
+ */
+function set_value_style_cookie() {
+  if (debug) {
+    console.log("set_value_style_cookie");
+  }
+  Cookies.set('bloodmallet_value_style', chosen_value_style, { expires: 31, path: '' });
+}
+
+/**
+ * searches for the value_style cookie and updates the page if necessary
+ */
+function search_value_style_cookie() {
+  if (debug) {
+    console.log("search_value_style_cookie");
+  }
+  if (Cookies.get('bloodmallet_value_style')) {
+    chosen_value_style = Cookies.get('bloodmallet_value_style');
+  }
+  set_value_style();
+  update_chart();
+  set_value_style_cookie();
 }
 
 
@@ -1421,8 +1532,14 @@ function make_invisible(IDs) {
  * Data load is NOT handled by this function. Triggers update_chart!
  */
 function update_chart() {
-  if (debug)
+  if (debug) {
     console.log("update_chart");
+  }
+
+  // early exit if wrong mode detected
+  if (mode !== "data") {
+    return;
+  }
 
   if (data_view == "secondary_distributions") {
     document.getElementById("scatter_plot_warning").hidden = false;
@@ -1622,9 +1739,17 @@ function update_chart() {
           if (itemlevel === min_ilevel) {
 
             if (itemlevel in loaded_data[chosen_class][chosen_spec][data_name][fight_style]["data"][data]) {
-              itemlevel_dps_values.push(dps - baseline_dps);
+              if (chosen_value_style === "absolute_gain") {
+                itemlevel_dps_values.push(dps - baseline_dps);
+              } else if (chosen_value_style === "relative_gain") {
+                itemlevel_dps_values.push(Math.round((dps - baseline_dps) * 10000 / baseline_dps) / 100);
+              }
             } else {
-              itemlevel_dps_values.push(0);
+              if (chosen_value_style === "absolute_gain") {
+                itemlevel_dps_values.push(0);
+              } else if (chosen_value_style === "relative_gain") {
+                itemlevel_dps_values.push(0);
+              }
             }
 
           } else { // else substract lower itemlevel value of same item
@@ -1632,24 +1757,37 @@ function update_chart() {
             // if lower itemlevel is zero we have to assume that this item needs to be compared now to the baseline
             if (loaded_data[chosen_class][chosen_spec][data_name][fight_style]["data"][data][chosen_step_list[String(Number(itemlevel_position) + 1)]] == 0 || !(chosen_step_list[String(Number(itemlevel_position) + 1)] in loaded_data[chosen_class][chosen_spec][data_name][fight_style]["data"][data])) {
 
-              itemlevel_dps_values.push(dps - baseline_dps);
-
+              if (chosen_value_style === "absolute_gain") {
+                itemlevel_dps_values.push(dps - baseline_dps);
+              } else if (chosen_value_style === "relative_gain") {
+                itemlevel_dps_values.push(Math.round((dps - baseline_dps) * 10000 / baseline_dps) / 100);
+              }
             } else { // standard case, next itemlevel is not zero and can be used to substract from the current value
 
-              itemlevel_dps_values.push(dps - loaded_data[chosen_class][chosen_spec][data_name][fight_style]["data"][data][chosen_step_list[String(Number(itemlevel_position) + 1)]]);
+              if (chosen_value_style === "absolute_gain") {
+                itemlevel_dps_values.push(dps - loaded_data[chosen_class][chosen_spec][data_name][fight_style]["data"][data][chosen_step_list[String(Number(itemlevel_position) + 1)]]);
+              } else if (chosen_value_style === "relative_gain") {
+                itemlevel_dps_values.push(Math.round((dps - loaded_data[chosen_class][chosen_spec][data_name][fight_style]["data"][data][chosen_step_list[String(Number(itemlevel_position) + 1)]]) * 10000 / baseline_dps) / 100);
+              }
             }
           }
 
         } else { // if dps is undefined or 0
           if (itemlevel in loaded_data[chosen_class][chosen_spec][data_name][fight_style]["data"][data]) {
-            itemlevel_dps_values.push(dps);
+            if (chosen_value_style === "absolute_gain") {
+              itemlevel_dps_values.push(dps);
+            } else if (chosen_value_style === "relative_gain") {
+              itemlevel_dps_values.push(Math.round((dps * 100 / baseline_dps - 100) * 100) / 100);
+            }
           } else {
-            itemlevel_dps_values.push(0);
+            if (chosen_value_style === "absolute_gain") {
+              itemlevel_dps_values.push(0);
+            } else if (chosen_value_style === "relative_gain") {
+              itemlevel_dps_values.push(0);
+            }
           }
         }
       }
-
-      console.log(itemlevel_dps_values);
 
       let polished_itemlevel_name = itemlevel;
       if (data_view === "azerite_traits" && ["itemlevel", "head", "shoulders", "chest"].includes(chosen_azerite_list_type)) {
@@ -1688,6 +1826,9 @@ function update_chart() {
   } else if (data_view === "azerite_traits" && chosen_azerite_list_type === "trait_stacking") {
     standard_chart.legend.title.attr({ text: "Trait count" });
   }
+
+  // adjust axis titles
+  set_value_style();
 
   document.getElementById("chart").style.height = 200 + dps_ordered_data.length * 30 + "px";
   standard_chart.setSize(document.getElementById("chart").style.width, document.getElementById("chart").style.height);
@@ -1808,6 +1949,9 @@ function get_translated_name(name) {
   return return_name;
 }
 
+/**
+ * Function solely exists to update the Azerite Trait Stacking chart.
+ */
 function update_trait_stacking_chart() {
   if (debug)
     console.log("update_trait_stacking_chart");
@@ -1817,12 +1961,12 @@ function update_trait_stacking_chart() {
     if (data_view === "azerite_traits" && ["itemlevel", "trait_stacking"].includes(chosen_azerite_list_type)) {
       dps_ordered_data = loaded_data[chosen_class][chosen_spec][data_view][fight_style]["sorted_azerite_tier_" + chosen_azerite_tier + "_" + chosen_azerite_list_type];
     } else {
-      dps_ordered_data = loaded_data[chosen_class][chosen_spec][data_view][fight_style]["sorted_data_keys"];
+      dps_ordered_data = loaded_data[chosen_class][chosen_spec][data_view][fight_style]["sorted_data_keys_2"];
     }
 
   } else {
     if (debug)
-      console.log("Getting sorted_data_keys from data failed. Set unordered dps_ordered_data");
+      console.log("Getting sorted_data_keys_2 from data failed. Set unordered dps_ordered_data");
     var dps_ordered_data = Object.keys(loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"]);
   }
 
@@ -1903,25 +2047,55 @@ function update_trait_stacking_chart() {
 
       let baseline_dps = loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"]["baseline"]["1_" + max_itemlevel];
 
+      // if a trait doesn't have values at the highest simulated itemlevel, get their max available itemlevel dps
+      if (!dps) {
+        let simulation_steps = loaded_data[chosen_class][chosen_spec][data_view][fight_style]["simulated_steps"];
+        for (let i = 0; i < simulation_steps.length; i++) {
+          const step = simulation_steps[i];
+          if (!dps) {
+            // set dps only once
+            if (loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"][data][step]) {
+              dps = loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"][data][step];
+              baseline_dps = loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"]["baseline"][step];
+            }
+          }
+        }
+      }
+
       // check for zero dps values and don't change them
       if (dps > 0) {
 
-        // if lowest itemlevel is looked at, substract baseline
+        // if lowest trait count is looked at, substract baseline
         if (stack_count === 1) {
 
-          itemlevel_dps_values.push(dps - baseline_dps);
-
+          if (chosen_value_style === "absolute_gain") {
+            itemlevel_dps_values.push(dps - baseline_dps);
+          } else if (chosen_value_style === "relative_gain") {
+            itemlevel_dps_values.push(Math.round((dps - baseline_dps) * 10000 / baseline_dps) / 100);
+          }
         } else { // else substract lower itemlevel value of same trait
 
-          itemlevel_dps_values.push(dps - loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"][data][stack_count - 1 + "_" + max_itemlevel]);
+          if (chosen_value_style === "absolute_gain") {
+            itemlevel_dps_values.push(dps - loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"][data][stack_count - 1 + "_" + max_itemlevel]);
+          } else if (chosen_value_style === "relative_gain") {
+            itemlevel_dps_values.push(Math.round((dps - loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"][data][stack_count - 1 + "_" + max_itemlevel]) * 10000 / baseline_dps) / 100);
 
+          }
         }
 
       } else {
         if (stack_name in loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"][data]) {
-          itemlevel_dps_values.push(dps);
+          if (chosen_value_style === "absolute_gain") {
+            itemlevel_dps_values.push(dps);
+          } else if (chosen_value_style === "relative_gain") {
+            itemlevel_dps_values.push(Math.round(dps * 10000 / baseline_dps) / 100);
+          }
         } else {
-          itemlevel_dps_values.push(0);
+          if (chosen_value_style === "absolute_gain") {
+            itemlevel_dps_values.push(0);
+          } else if (chosen_value_style === "relative_gain") {
+            itemlevel_dps_values.push(0);
+          }
         }
       }
 
