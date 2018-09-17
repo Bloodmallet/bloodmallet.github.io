@@ -1615,7 +1615,11 @@ function update_chart() {
 
         let translated_name = get_translated_name(dps_ordered_data[i]);
 
-        link += "\" target=\"blank\" style=\"padding-left:18px;\">" + translated_name + "</a>";
+        link += "\" target=\"blank\"";
+        if (whTooltips.iconizeLinks) {
+          string += "class=\"chart_link\"";
+        }
+        link += ">" + translated_name + "</a>";
 
         ordered_trinket_list.push(link);
       } else {
@@ -1652,7 +1656,11 @@ function update_chart() {
 
         let translated_name = get_translated_name(dps_ordered_data[i]);
 
-        string += "\" target=\"blank\">" + translated_name + "</a>";
+        string += "\" target=\"blank\"";
+        if (whTooltips.iconizeLinks) {
+          string += "class=\"chart_link\"";
+        }
+        string += ">" + translated_name + "</a>";
 
         ordered_trinket_list.push(string);
       }
@@ -1841,7 +1849,10 @@ function update_chart() {
   standard_chart.setSize(document.getElementById("chart").style.width, document.getElementById("chart").style.height);
   standard_chart.redraw();
 
-  $WowheadPower.refreshLinks();
+  try {
+    $WowheadPower.refreshLinks();
+  } catch (error) {
+  }
 }
 
 
@@ -1995,7 +2006,11 @@ function update_trait_stacking_chart() {
 
     let translated_name = get_translated_name(dps_ordered_data[i]);
 
-    string += "\" target=\"blank\" style=\"padding-left:18px;\">" + translated_name + "</a>";
+    string += "\" target=\"blank\"";
+    if (whTooltips.iconizeLinks) {
+      string += "class=\"chart_link\"";
+    }
+    string += "> " + translated_name + "</a > ";
 
     ordered_trinket_list.push(string);
   }
@@ -2670,6 +2685,7 @@ function set_iconized_chart_cookie() {
     console.log("set_iconized_chart_cookie");
   }
   Cookies.set('bloodmallet_iconized_chart', whTooltips.iconizeLinks, { expires: 31, path: '' });
+  update_chart();
 }
 
 
