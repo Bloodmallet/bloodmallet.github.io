@@ -500,13 +500,23 @@ const class_colors = {
 
 /** add listener to the dark mode checkbox */
 document.addEventListener("DOMContentLoaded", function () {
-  if (debug)
+  if (debug) {
     console.log("addEventListener darkModeCheckbox");
+  }
   document.getElementById("darkModeCheckbox").addEventListener("change", function (e) {
     dark_mode = e.target.checked;
     update_dark_mode();
     set_dark_mode_cookie();
   });
+  if (debug) {
+    console.log("addEventListener inconized_charts_checkbox");
+  }
+  document.getElementById("inconized_charts_checkbox").addEventListener("change", function (e) {
+    whTooltips.iconizeLinks = e.target.checked;
+    set_iconized_chart_cookie();
+    $WowheadPower.refreshLinks();
+  });
+
 });
 
 /** Updates dark mode based on dark mode check box. */
@@ -1435,10 +1445,6 @@ function update_talent_selector() {
 
 }
 
-function update_step_filter() {
-
-}
-
 /**
  * Resets colors of all fight style buttons and sets active button to class color.
  */
@@ -1833,6 +1839,8 @@ function update_chart() {
   document.getElementById("chart").style.height = 200 + dps_ordered_data.length * 30 + "px";
   standard_chart.setSize(document.getElementById("chart").style.width, document.getElementById("chart").style.height);
   standard_chart.redraw();
+
+  $WowheadPower.refreshLinks();
 }
 
 
@@ -2117,6 +2125,8 @@ function update_trait_stacking_chart() {
   document.getElementById("chart").style.height = 200 + dps_ordered_data.length * 30 + "px";
   standard_chart.setSize(document.getElementById("chart").style.width, document.getElementById("chart").style.height);
   standard_chart.redraw();
+
+  $WowheadPower.refreshLinks();
 
 }
 
@@ -2651,6 +2661,29 @@ function update_scatter_chart() {
   scatter_chart.redraw();
 }
 
+
+
+/** Save the current iconized_chart in a cookie. */
+function set_iconized_chart_cookie() {
+  if (debug) {
+    console.log("set_iconized_chart_cookie");
+  }
+  Cookies.set('bloodmallet_iconized_chart', whTooltips.iconizeLinks, { expires: 31, path: '' });
+}
+
+
+/** searches for the iconized charts cookie */
+function seach_iconized_chart_cookie() {
+  if (debug) {
+    console.log("seach_iconized_chart_cookie");
+  }
+  if (Cookies.get('bloodmallet_iconized_chart')) {
+    whTooltips.iconizeLinks = ('true' === Cookies.get('bloodmallet_iconized_chart'));
+  }
+  document.getElementById("inconized_charts_checkbox").checked = whTooltips.iconizeLinks;
+}
+
+
 /******************************************************************************
  *
  * Last content block. These functions trigger onfinished load.
@@ -2660,6 +2693,7 @@ function update_scatter_chart() {
 
 document.addEventListener("DOMContentLoaded", async function () {
   search_dark_mode_cookie();
+  seach_iconized_chart_cookie();
   await search_language_cookie();
 
   get_data_from_link();
