@@ -1615,7 +1615,7 @@ function update_chart() {
 
         let translated_name = get_translated_name(dps_ordered_data[i]);
 
-        link += "\" target=\"blank\">" + translated_name + "</a>";
+        link += "\" target=\"blank\" style=\"padding-left:18px;\">" + translated_name + "</a>";
 
         ordered_trinket_list.push(link);
       } else {
