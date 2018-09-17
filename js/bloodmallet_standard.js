@@ -1637,7 +1637,8 @@ function update_chart() {
           // add class id
           string += loaded_data[chosen_class][chosen_spec][data_name][fight_style]["class_id"];
           // add azerite traits
-          for (trait of loaded_data[chosen_class][chosen_spec][data_name][fight_style]["used_azerite_traits_per_item"][dps_ordered_data[i]]) {
+          for (let j = loaded_data[chosen_class][chosen_spec][data_name][fight_style]["used_azerite_traits_per_item"][dps_ordered_data[i]].length - 1; j >= 0; j--) {
+            const trait = loaded_data[chosen_class][chosen_spec][data_name][fight_style]["used_azerite_traits_per_item"][dps_ordered_data[i]][j];
             string += ":" + trait["id"];
           }
 
