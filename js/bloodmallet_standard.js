@@ -1995,7 +1995,7 @@ function update_trait_stacking_chart() {
 
     let translated_name = get_translated_name(dps_ordered_data[i]);
 
-    string += "\" target=\"blank\">" + translated_name + "</a>";
+    string += "\" target=\"blank\" style=\"padding-left:18px;\">" + translated_name + "</a>";
 
     ordered_trinket_list.push(string);
   }
