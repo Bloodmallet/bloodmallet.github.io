@@ -1,17 +1,17 @@
 {
     "data": {
-        "Blood Elf": 16196,
+        "Blood Elf": 16214,
         "Draenei": 16114,
-        "Dwarf": 16112,
-        "Gnome": 16146,
-        "Goblin": 16087,
-        "Human": 16085,
-        "Night Elf": 16074,
-        "Orc": 16110,
-        "Tauren": 16109,
-        "Troll": 16129,
-        "Undead": 16199,
-        "Worgen": 16087
+        "Dwarf": 16095,
+        "Gnome": 16107,
+        "Goblin": 16088,
+        "Human": 16102,
+        "Night Elf": 16100,
+        "Orc": 16172,
+        "Tauren": 16102,
+        "Troll": 16103,
+        "Undead": 16200,
+        "Worgen": 16098
     },
     "data_type": "races",
     "languages": {
@@ -141,26 +141,26 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "96bd04604d",
+        "simc_hash": "da24163522",
         "spec": "frost",
         "target_error": "0.2",
         "tier": "22"
     },
     "sorted_data_keys": [
-        "Undead",
         "Blood Elf",
+        "Undead",
+        "Orc",
+        "Draenei",
         "Gnome",
         "Troll",
-        "Draenei",
-        "Dwarf",
-        "Orc",
-        "Tauren",
-        "Worgen",
-        "Goblin",
         "Human",
-        "Night Elf"
+        "Tauren",
+        "Night Elf",
+        "Worgen",
+        "Dwarf",
+        "Goblin"
     ],
-    "subtitle": "UTC 2018-09-13 07:13 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/96bd04604d\" target=\"blank\">96bd046</a>",
-    "timestamp": "2018-09-13 07:13",
+    "subtitle": "UTC 2018-09-18 07:49 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/da24163522\" target=\"blank\">da24163</a>",
+    "timestamp": "2018-09-18 07:49",
     "title": "Races | Frost Death Knight | Patchwerk"
 }
