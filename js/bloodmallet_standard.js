@@ -1617,7 +1617,7 @@ function update_chart() {
 
         link += "\" target=\"blank\"";
         if (whTooltips.iconizeLinks) {
-          string += "class=\"chart_link\"";
+          link += "class=\"chart_link\"";
         }
         link += ">" + translated_name + "</a>";
 
