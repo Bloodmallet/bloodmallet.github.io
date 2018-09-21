@@ -749,6 +749,10 @@ const patrons_epic = [
   {
     "name": "Xss",
     "text": "Xss"
+  },
+  {
+    "name": "Djriff",
+    "text": "DJ"
   }
 ];
 const patrons_rare = [
