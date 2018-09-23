@@ -337,7 +337,7 @@ const empty_chart = {
       } else {
         s += light_color;
       }
-      s += '"><div style=\"margin-left: 9px; margin-right: 9px; margin-bottom: 6px; font-weight: 700;\">' + this.x + '</div>'
+      s += '"><div class=\"anti-icon-space\" style=\"margin-left: 9px;margin-bottom: 6px; font-weight: 700;\">' + this.x + '</div>'
       var cumulative_amount = 0;
       for (var i = this.points.length - 1; i >= 0; i--) {
         cumulative_amount += this.points[i].y;
@@ -490,6 +490,26 @@ const class_colors = {
   "warrior": "#C79C6E",
 };
 
+const item_and_trait_equilizer = {
+  "Battlefield Focus": "Battlefield Precision",
+  // "Battlefield Precision": "Battlefield Focus",
+  "Sylvanas' Resolve": "Anduin's Dedication",
+  // "Anduin's Dedication": "Sylvanas' Resolve",
+  "Glory in Battle": "Liberator's Might",
+  // "Liberator's Might": "Glory in Battle",
+  "Retaliatory Fury": "Last Gift",
+  // "Last Gift": "Retaliatory Fury",
+  "Collective Will": "Stand As One",
+  // "Stand As One": "Collective Will",
+  "Combined Might": "Stronger Together",
+  // "Stronger Together": "Combined Might",
+  "Doom's Hatred": "Lion's Grace",
+  //"Lion's Grace": "Doom's Hatred",
+  "Doom's Wake": "Lion's Guile",
+  //"Lion's Guile": "Doom's Wake",
+  "Doom's Fury": "Lion's Strength",
+  //"Lion's Strength": "Doom's Fury"
+}
 
 /*---------------------------------------------------------
 //
@@ -1599,6 +1619,30 @@ function update_chart() {
     var dps_ordered_data = Object.keys(loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"]);
   }
 
+  // cleanse dps_ordered_data from doubled pvp traits
+  let tmp_pvp_trait_names = Object.keys(item_and_trait_equilizer);
+  tmp_pvp_trait_names.concat(Object.values(item_and_trait_equilizer));
+  let purge_list = [];
+  // create purgable list
+  for (let trait_name of dps_ordered_data) {
+    if (item_and_trait_equilizer[trait_name] && !purge_list.includes(trait_name)) {
+      console.log(`adding ${trait_name} to purgable list`);
+      purge_list.push(item_and_trait_equilizer[trait_name])
+    } else if (Object.values(item_and_trait_equilizer).includes(trait_name) && !purge_list.includes(trait_name)) {
+      console.log(`adding value ${trait_name} to purgable list`);
+      for (let tmp_name in item_and_trait_equilizer) {
+        if (item_and_trait_equilizer[tmp_name] == trait_name) {
+          purge_list.push(tmp_name);
+        }
+      }
+    }
+  }
+  // purge dps_ordere_data with purge_list
+  for (let trait_name of purge_list) {
+    console.log(`deleting ${trait_name} from dps_ordered_data`);
+    dps_ordered_data.splice(dps_ordered_data.indexOf(trait_name), 1);
+  }
+
   // change item/spell names to wowhead links
   ordered_trinket_list = [];
   if (data_view == "trinkets" || data_view == "azerite_traits") {
@@ -1610,7 +1654,7 @@ function update_chart() {
       }
 
       if (data_view == "azerite_traits" && ["itemlevel", "trait_stacking"].includes(chosen_azerite_list_type)) {
-        let link = "<a href=\"https://";
+        let link = "<div style=\"display:inline-block; margin-bottom:-3px\"><a href=\"https://";
 
         if (language == "EN") {
           link += "www";
@@ -1619,20 +1663,56 @@ function update_chart() {
         }
 
         link += ".wowhead.com/spell=";
-        link += loaded_data[chosen_class][chosen_spec][data_name][fight_style]["spell_ids"][dps_ordered_data[i]];
 
-        let translated_name = get_translated_name(dps_ordered_data[i]);
+        let spell_id = loaded_data[chosen_class][chosen_spec][data_name][fight_style]["spell_ids"][dps_ordered_data[i]];
+        let trait_name = dps_ordered_data[i];
+
+        // if the present trait is a value in the collection of equal data we have to adjust the trait name and id
+        if (Object.values(item_and_trait_equilizer).includes(trait_name)) {
+          for (let key in item_and_trait_equilizer) {
+            if (item_and_trait_equilizer[key] == trait_name) {
+              spell_id = loaded_data[chosen_class][chosen_spec][data_name][fight_style]["spell_ids"][key];
+              trait_name = key;
+            }
+          }
+        }
+
+        link += spell_id;
+
+        let translated_name = get_translated_name(trait_name);
 
         link += "\" target=\"blank\"";
-        if (whTooltips.iconizeLinks) {
+        if (whTooltips.iconizeLinks && !item_and_trait_equilizer[trait_name]) {
           link += "class=\"chart_link\"";
         }
-        link += ">" + translated_name + "</a>";
+        link += ">" + translated_name + "</a></div>";
+
+        // add second trait
+        if (item_and_trait_equilizer[trait_name]) {
+          link += " / <br><div style=\"display:inline-block;\"><a href=\"https://";
+
+          if (language == "EN") {
+            link += "www";
+          } else {
+            link += language.toLowerCase();
+          }
+
+          link += ".wowhead.com/spell=";
+          link += loaded_data[chosen_class][chosen_spec][data_name][fight_style]["spell_ids"][item_and_trait_equilizer[trait_name]];
+
+          let translated_name = get_translated_name(item_and_trait_equilizer[trait_name]);
+
+          link += "\" target=\"blank\"";
+          if (whTooltips.iconizeLinks) {
+            link += "class=\"chart_link\"";
+          }
+          link += ">" + translated_name + "</a></div>";
+        }
 
         ordered_trinket_list.push(link);
-      } else {
+      } else { // trinkets or head, shoulders, chest
 
-        let string = "<a href=\"https://";
+        let string = "<div style=\"display:inline-block; margin-bottom:-3px\"><a href=\"https://";
 
         if (language == "EN") {
           string += "www";
@@ -1641,7 +1721,21 @@ function update_chart() {
         }
 
         string += ".wowhead.com/item=";
-        string += loaded_data[chosen_class][chosen_spec][data_name][fight_style]["item_ids"][dps_ordered_data[i]];
+
+        let item_id = loaded_data[chosen_class][chosen_spec][data_name][fight_style]["item_ids"][dps_ordered_data[i]];
+        let item_name = dps_ordered_data[i];
+
+        // if the present item is a value in the collection of equal data we have to adjust the item name and id
+        if (Object.values(item_and_trait_equilizer).includes(item_name)) {
+          for (let key in item_and_trait_equilizer) {
+            if (item_and_trait_equilizer[key] == item_name) {
+              item_id = loaded_data[chosen_class][chosen_spec][data_name][fight_style]["item_ids"][key];
+              item_name = key;
+            }
+          }
+        }
+
+        string += item_id;
 
         // add azerite power string portion
         if (data_view == "azerite_traits" && ["head", "shoulders", "chest"].includes(chosen_azerite_list_type)) {
@@ -1662,13 +1756,35 @@ function update_chart() {
           string += "&ilvl=" + ilevel.split("1_")[1];
         }
 
-        let translated_name = get_translated_name(dps_ordered_data[i]);
+        let translated_name = get_translated_name(item_name);
 
         string += "\" target=\"blank\"";
-        if (whTooltips.iconizeLinks) {
+        if (whTooltips.iconizeLinks && !item_and_trait_equilizer[item_name]) {
           string += "class=\"chart_link\"";
         }
-        string += ">" + translated_name + "</a>";
+        string += ">" + translated_name + "</a></div>";
+
+        // add second item
+        if (item_and_trait_equilizer[item_name]) {
+          string += " / <br><div style=\"display:inline-block;\"><a href=\"https://";
+
+          if (language == "EN") {
+            string += "www";
+          } else {
+            string += language.toLowerCase();
+          }
+
+          string += ".wowhead.com/item=";
+          string += loaded_data[chosen_class][chosen_spec][data_name][fight_style]["item_ids"][item_and_trait_equilizer[item_name]];
+
+          let translated_name = get_translated_name(item_and_trait_equilizer[item_name]);
+
+          string += "\" target=\"blank\"";
+          if (whTooltips.iconizeLinks) {
+            string += "class=\"chart_link\"";
+          }
+          string += ">" + translated_name + "</a></div>";
+        }
 
         ordered_trinket_list.push(string);
       }
@@ -1853,7 +1969,7 @@ function update_chart() {
   // adjust axis titles
   set_value_style();
 
-  document.getElementById("chart").style.height = 200 + dps_ordered_data.length * 30 + "px";
+  document.getElementById("chart").style.height = 200 + dps_ordered_data.length * 35 + "px";
   standard_chart.setSize(document.getElementById("chart").style.width, document.getElementById("chart").style.height);
   standard_chart.redraw();
 
@@ -1998,29 +2114,86 @@ function update_trait_stacking_chart() {
     var dps_ordered_data = Object.keys(loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"]);
   }
 
+  // cleanse dps_ordered_data from doubled pvp traits
+  let tmp_pvp_trait_names = Object.keys(item_and_trait_equilizer);
+  tmp_pvp_trait_names.concat(Object.values(item_and_trait_equilizer));
+  let purge_list = [];
+  for (let trait_name of dps_ordered_data) {
+    if (item_and_trait_equilizer[trait_name] && !purge_list.includes(trait_name)) {
+      purge_list.push(item_and_trait_equilizer[trait_name])
+    } else if (Object.keys(item_and_trait_equilizer).includes(trait_name) && !purge_list.includes(trait_name)) {
+      for (let tmp_name in item_and_trait_equilizer) {
+        if (item_and_trait_equilizer[tmp_name] == trait_name) {
+          purge_list.push(tmp_name);
+        }
+      }
+    }
+  }
+  for (let trait_name of purge_list) {
+    dps_ordered_data.splice(dps_ordered_data.indexOf(trait_name), 1);
+  }
+
   // change item/spell names to wowhead links
   let ordered_trinket_list = [];
   for (let i in dps_ordered_data) {
-    let string = "<a href=\"https://";
+
+    let link = "<div style=\"display:inline-block; margin-bottom:-3px\"><a href=\"https://";
 
     if (language == "EN") {
-      string += "www";
+      link += "www";
     } else {
-      string += language.toLowerCase();
+      link += language.toLowerCase();
     }
 
-    string += ".wowhead.com/spell=";
-    string += loaded_data[chosen_class][chosen_spec][data_view][fight_style]["spell_ids"][dps_ordered_data[i]];
+    link += ".wowhead.com/spell=";
 
-    let translated_name = get_translated_name(dps_ordered_data[i]);
+    let spell_id = loaded_data[chosen_class][chosen_spec][data_view][fight_style]["spell_ids"][dps_ordered_data[i]];
+    let trait_name = dps_ordered_data[i];
 
-    string += "\" target=\"blank\"";
-    if (whTooltips.iconizeLinks) {
-      string += "class=\"chart_link\"";
+    // if the present trait is a value in the collection of equal data we have to adjust the trait name and id
+    if (Object.values(item_and_trait_equilizer).includes(trait_name)) {
+      for (let key in item_and_trait_equilizer) {
+        if (item_and_trait_equilizer[key] == trait_name) {
+          spell_id = loaded_data[chosen_class][chosen_spec][data_name][fight_style]["spell_ids"][key];
+          trait_name = key;
+        }
+      }
     }
-    string += "> " + translated_name + "</a > ";
 
-    ordered_trinket_list.push(string);
+
+    link += spell_id;
+
+    let translated_name = get_translated_name(trait_name);
+
+    link += "\" target=\"blank\"";
+    if (whTooltips.iconizeLinks && !item_and_trait_equilizer[trait_name]) {
+      link += "class=\"chart_link\"";
+    }
+    link += ">" + translated_name + "</a></div>";
+    //link += " / <div style=\"display:inline-block;\">boom chacke</div>";
+
+    if (item_and_trait_equilizer[trait_name]) {
+      link += " / <br><div style=\"display:inline-block;\"><a href=\"https://";
+
+      if (language == "EN") {
+        link += "www";
+      } else {
+        link += language.toLowerCase();
+      }
+
+      link += ".wowhead.com/spell=";
+      link += loaded_data[chosen_class][chosen_spec][data_view][fight_style]["spell_ids"][item_and_trait_equilizer[trait_name]];
+
+      let translated_name = get_translated_name(item_and_trait_equilizer[trait_name]);
+
+      link += "\" target=\"blank\"";
+      if (whTooltips.iconizeLinks) {
+        link += "class=\"chart_link\"";
+      }
+      link += ">" + translated_name + "</a></div>";
+    }
+
+    ordered_trinket_list.push(link);
   }
   // rewrite the trinket names
   if (debug) {
@@ -2146,7 +2319,7 @@ function update_trait_stacking_chart() {
 
   standard_chart.legend.title.attr({ text: "Trait count" });
 
-  document.getElementById("chart").style.height = 200 + dps_ordered_data.length * 30 + "px";
+  document.getElementById("chart").style.height = 200 + dps_ordered_data.length * 35 + "px";
   standard_chart.setSize(document.getElementById("chart").style.width, document.getElementById("chart").style.height);
   standard_chart.redraw();
 
