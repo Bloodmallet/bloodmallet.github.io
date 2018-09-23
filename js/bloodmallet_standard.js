@@ -1632,10 +1632,8 @@ function update_chart() {
   // create purgable list
   for (let trait_name of dps_ordered_data) {
     if (item_and_trait_equilizer[trait_name] && !purge_list.includes(trait_name)) {
-      console.log(`adding ${trait_name} to purgable list`);
       purge_list.push(item_and_trait_equilizer[trait_name])
     } else if (Object.values(item_and_trait_equilizer).includes(trait_name) && !purge_list.includes(trait_name)) {
-      console.log(`adding value ${trait_name} to purgable list`);
       for (let tmp_name in item_and_trait_equilizer) {
         if (item_and_trait_equilizer[tmp_name] == trait_name) {
           purge_list.push(tmp_name);
@@ -1645,7 +1643,6 @@ function update_chart() {
   }
   // purge dps_ordere_data with purge_list
   for (let trait_name of purge_list) {
-    console.log(`deleting ${trait_name} from dps_ordered_data`);
     dps_ordered_data.splice(dps_ordered_data.indexOf(trait_name), 1);
   }
 
@@ -2329,7 +2326,11 @@ function update_trait_stacking_chart() {
   standard_chart.setSize(document.getElementById("chart").style.width, document.getElementById("chart").style.height);
   standard_chart.redraw();
 
-  $WowheadPower.refreshLinks();
+  try {
+    $WowheadPower.refreshLinks();
+  } catch (error) {
+
+  }
 
 }
 
