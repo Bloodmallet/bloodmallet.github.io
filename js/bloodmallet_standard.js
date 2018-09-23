@@ -170,6 +170,9 @@ const chart_value_mode = {
   },
   "absolute_gain": {
     "axis": "\u0394 Damage per second"
+  },
+  "absolute_value": {
+    "axis": "|x| Damage per second"
   }
 }
 
@@ -356,7 +359,7 @@ const empty_chart = {
             '</span>:&nbsp;&nbsp;' +
             Intl.NumberFormat().format(cumulative_amount);
 
-          if (chosen_value_style === "absolute_gain" || data_view === "races") {
+          if (chosen_value_style === "absolute_gain" || data_view === "races" || chosen_value_style === "absolute_value") {
             s += " dps";
           } else if (chosen_value_style === "relative_gain") {
             s += "%";
@@ -413,6 +416,19 @@ const empty_chart = {
           return Intl.NumberFormat().format(this.total) + "";
         } else if (chosen_value_style === "relative_gain") {
           return Intl.NumberFormat().format(this.total) + "%";
+        } else if (chosen_value_style === "absolute_value") {
+          let data_name = data_view;
+          if (data_view == "azerite_traits" && ["head", "shoulders", "chest"].includes(chosen_azerite_list_type)) {
+            data_name += "_" + chosen_azerite_list_type;
+          }
+          let addition = "";
+          try {
+            let base_dps = loaded_data[chosen_class][chosen_spec][data_name][fight_style]["data"]["baseline"][loaded_data[chosen_class][chosen_spec][data_name][fight_style]["simulated_steps"][loaded_data[chosen_class][chosen_spec][data_name][fight_style]["simulated_steps"].length - 1]];
+            addition = "<br><span style=\"font-size: 0.7rem\">(+" + Intl.NumberFormat().format(this.total - base_dps) + " | +" + Intl.NumberFormat().format((this.total - base_dps) * 100 / this.total) + "%)</span>";
+          } catch (error) {
+
+          }
+          return Intl.NumberFormat().format(this.total) + addition;
         }
       },
       style: {
@@ -1239,7 +1255,7 @@ function update_advanced_chart_options() {
   let itemlevels = loaded_data[chosen_class][chosen_spec][data_name][fight_style]["simulated_steps"];
 
   // add itemlevel filtering
-  if (itemlevels.length > 0 && (data_view === "trinkets" || data_view === "azerite_traits" && ["head", "shoulders", "chest", "itemlevel"].includes(chosen_azerite_list_type))) {
+  if (itemlevels && (data_view === "trinkets" || data_view === "azerite_traits" && ["head", "shoulders", "chest", "itemlevel"].includes(chosen_azerite_list_type))) {
 
     // update chosen_step_list to the new max list (create a copy)
     chosen_step_list = loaded_data[chosen_class][chosen_spec][data_name][fight_style]["simulated_steps"].slice();
@@ -1974,11 +1990,15 @@ function update_chart() {
                 itemlevel_dps_values.push(dps - baseline_dps);
               } else if (chosen_value_style === "relative_gain") {
                 itemlevel_dps_values.push(Math.round((dps - baseline_dps) * 10000 / baseline_dps) / 100);
+              } else if (chosen_value_style === "absolute_value") {
+                itemlevel_dps_values.push(dps);
               }
             } else {
               if (chosen_value_style === "absolute_gain") {
                 itemlevel_dps_values.push(0);
               } else if (chosen_value_style === "relative_gain") {
+                itemlevel_dps_values.push(0);
+              } else if (chosen_value_style === "absolute_value") {
                 itemlevel_dps_values.push(0);
               }
             }
@@ -1992,6 +2012,8 @@ function update_chart() {
                 itemlevel_dps_values.push(dps - baseline_dps);
               } else if (chosen_value_style === "relative_gain") {
                 itemlevel_dps_values.push(Math.round((dps - baseline_dps) * 10000 / baseline_dps) / 100);
+              } else if (chosen_value_style === "absolute_value") {
+                itemlevel_dps_values.push(dps);
               }
             } else { // standard case, next itemlevel is not zero and can be used to substract from the current value
 
@@ -1999,6 +2021,8 @@ function update_chart() {
                 itemlevel_dps_values.push(dps - loaded_data[chosen_class][chosen_spec][data_name][fight_style]["data"][data][chosen_step_list[String(Number(itemlevel_position) + 1)]]);
               } else if (chosen_value_style === "relative_gain") {
                 itemlevel_dps_values.push(Math.round((dps - loaded_data[chosen_class][chosen_spec][data_name][fight_style]["data"][data][chosen_step_list[String(Number(itemlevel_position) + 1)]]) * 10000 / baseline_dps) / 100);
+              } else if (chosen_value_style === "absolute_value") {
+                itemlevel_dps_values.push(dps - loaded_data[chosen_class][chosen_spec][data_name][fight_style]["data"][data][chosen_step_list[String(Number(itemlevel_position) + 1)]]);
               }
             }
           }
@@ -2009,11 +2033,15 @@ function update_chart() {
               itemlevel_dps_values.push(dps);
             } else if (chosen_value_style === "relative_gain") {
               itemlevel_dps_values.push(Math.round((dps * 100 / baseline_dps - 100) * 100) / 100);
+            } else if (chosen_value_style === "absolute_value") {
+              itemlevel_dps_values.push(dps);
             }
           } else {
             if (chosen_value_style === "absolute_gain") {
               itemlevel_dps_values.push(0);
             } else if (chosen_value_style === "relative_gain") {
+              itemlevel_dps_values.push(0);
+            } else if (chosen_value_style === "absolute_value") {
               itemlevel_dps_values.push(0);
             }
           }
@@ -2384,6 +2412,8 @@ function update_trait_stacking_chart() {
             itemlevel_dps_values.push(dps - baseline_dps);
           } else if (chosen_value_style === "relative_gain") {
             itemlevel_dps_values.push(Math.round((dps - baseline_dps) * 10000 / baseline_dps) / 100);
+          } else if (chosen_value_style === "absolute_value") {
+            itemlevel_dps_values.push(dps);
           }
         } else { // else substract lower itemlevel value of same trait
 
@@ -2391,7 +2421,8 @@ function update_trait_stacking_chart() {
             itemlevel_dps_values.push(dps - loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"][data][stack_count - 1 + "_" + max_itemlevel]);
           } else if (chosen_value_style === "relative_gain") {
             itemlevel_dps_values.push(Math.round((dps - loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"][data][stack_count - 1 + "_" + max_itemlevel]) * 10000 / baseline_dps) / 100);
-
+          } else if (chosen_value_style === "absolute_value") {
+            itemlevel_dps_values.push(dps - loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"][data][stack_count - 1 + "_" + max_itemlevel]);
           }
         }
 
@@ -2401,16 +2432,19 @@ function update_trait_stacking_chart() {
             itemlevel_dps_values.push(dps);
           } else if (chosen_value_style === "relative_gain") {
             itemlevel_dps_values.push(Math.round(dps * 10000 / baseline_dps) / 100);
+          } else if (chosen_value_style === "absolute_value") {
+            itemlevel_dps_values.push(dps);
           }
         } else {
           if (chosen_value_style === "absolute_gain") {
             itemlevel_dps_values.push(0);
           } else if (chosen_value_style === "relative_gain") {
             itemlevel_dps_values.push(0);
+          } else if (chosen_value_style === "absolute_value") {
+            itemlevel_dps_values.push(0);
           }
         }
       }
-
     }
 
     let new_stack_name = stack_name.split("_")[0];
@@ -2422,6 +2456,9 @@ function update_trait_stacking_chart() {
       showInLegend: true
     }, false);
   }
+
+  // adjust axis titles
+  set_value_style();
 
 
   standard_chart.legend.title.attr({ text: "Trait count" });
