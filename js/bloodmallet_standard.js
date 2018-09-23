@@ -49,6 +49,7 @@ let chosen_spec = "";
 let chosen_talent_combination = "";
 let chosen_azerite_list_type = "trait_stacking";
 let chosen_step_list = [];
+let chosen_source_list = [];
 
 let mode = "welcome";
 let fight_style = "patchwerk";
@@ -1214,12 +1215,12 @@ async function load_data() {
   empty_charts();
   update_talent_selector();
 
-  update_advanced_chart_options(loaded_data[chosen_class][chosen_spec][data_name][fight_style]["simulated_steps"]);
+  update_advanced_chart_options();
 
   update_chart();
 }
 
-function update_advanced_chart_options(itemlevels) {
+function update_advanced_chart_options() {
   if (debug) {
     console.log("update_advanced_chart_options");
   }
@@ -1235,8 +1236,10 @@ function update_advanced_chart_options(itemlevels) {
   chart_options.appendChild(area);
 
 
+  let itemlevels = loaded_data[chosen_class][chosen_spec][data_name][fight_style]["simulated_steps"];
+
   // add itemlevel filtering
-  if (data_view === "trinkets" || data_view === "azerite_traits" && ["head", "shoulders", "chest", "itemlevel"].includes(chosen_azerite_list_type)) {
+  if (itemlevels.length > 0 && (data_view === "trinkets" || data_view === "azerite_traits" && ["head", "shoulders", "chest", "itemlevel"].includes(chosen_azerite_list_type))) {
 
     // update chosen_step_list to the new max list (create a copy)
     chosen_step_list = loaded_data[chosen_class][chosen_spec][data_name][fight_style]["simulated_steps"].slice();
@@ -1245,7 +1248,7 @@ function update_advanced_chart_options(itemlevels) {
     ilevel_filtering.className = "col-md-4";
     area.appendChild(ilevel_filtering);
 
-    ilevel_filtering.innerHTML = "Itemlevel:<br/>";
+    ilevel_filtering.innerHTML = "Itemlevels:<br/>";
     for (const step of itemlevels) {
       let form_check = document.createElement("div");
       form_check.className = "form-check";
@@ -1279,6 +1282,53 @@ function update_advanced_chart_options(itemlevels) {
 
     }
   }
+
+  // add source filtering
+  if (data_view === "trinkets") {
+
+    // reset and refill source list
+    chosen_source_list = [];
+    for (let item in loaded_data[chosen_class][chosen_spec][data_name][fight_style]["data_sources"]) {
+      if (!chosen_source_list.includes(loaded_data[chosen_class][chosen_spec][data_name][fight_style]["data_sources"][item])) {
+        chosen_source_list.push(loaded_data[chosen_class][chosen_spec][data_name][fight_style]["data_sources"][item]);
+      }
+    }
+    // sort to have almost the exact same list for everything
+    chosen_source_list.sort();
+
+    let source_filtering = document.createElement("div");
+    source_filtering.className = "col-md-4";
+    area.appendChild(source_filtering);
+
+    source_filtering.innerHTML = "Sources:<br/>";
+
+    for (let source of chosen_source_list) {
+      let form_check = document.createElement("div");
+      form_check.className = "form-check";
+      source_filtering.appendChild(form_check);
+      let input = document.createElement("input");
+      input.className = "form-check-input";
+      input.type = "checkbox";
+      input.value = source;
+      input.id = "source_" + source;
+      // update checked based on user input
+      if (chosen_source_list.includes(source)) {
+        input.checked = true;
+      }
+      input.addEventListener("change", function (e) {
+        update_source_list(e.target.value, e.target.checked);
+      });
+      form_check.appendChild(input);
+
+      let label = document.createElement("label");
+      label.className = "form-check-label";
+      label.htmlFor = input.id;
+      label.innerHTML = source;
+      form_check.appendChild(label);
+
+    }
+  }
+
   // add more chart settings here
 
   // add apply button
@@ -1347,6 +1397,30 @@ function update_step_list(step, push) {
 
   if (debug) {
     console.log("new chosen_step_list", chosen_step_list);
+  }
+
+}
+
+
+/**
+ * Updates global chosen_source_list
+ * @param {string} source item source
+ * @param {bool} push is the step pushed to the list or removed
+ */
+function update_source_list(source, push) {
+  if (debug) {
+    console.log("update_source_list", source, push);
+  }
+
+  if (push) {
+    chosen_source_list.push(source);
+    chosen_source_list.sort();
+  } else {
+    chosen_source_list.splice(chosen_source_list.indexOf(source), 1);
+  }
+
+  if (debug) {
+    console.log("new chosen_source_list", chosen_source_list);
   }
 
 }
@@ -1616,19 +1690,34 @@ function update_chart() {
     var dps_ordered_data = [];
 
     if (data_view === "azerite_traits" && ["itemlevel", "trait_stacking"].includes(chosen_azerite_list_type)) {
-      dps_ordered_data = loaded_data[chosen_class][chosen_spec][data_name][fight_style]["sorted_azerite_tier_" + chosen_azerite_tier + "_" + chosen_azerite_list_type];
+      dps_ordered_data = loaded_data[chosen_class][chosen_spec][data_name][fight_style]["sorted_azerite_tier_" + chosen_azerite_tier + "_" + chosen_azerite_list_type].slice();
     } else {
-      dps_ordered_data = loaded_data[chosen_class][chosen_spec][data_name][fight_style]["sorted_data_keys"];
+      dps_ordered_data = loaded_data[chosen_class][chosen_spec][data_name][fight_style]["sorted_data_keys"].slice();
     }
   } else {
     debug && console.log("Getting sorted_data_keys from data failed. Set unordered dps_ordered_data");
     var dps_ordered_data = Object.keys(loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"]);
   }
 
+  // filter dps_ordered_data by source
+  let purge_list = [];
+  for (let thing of dps_ordered_data) {
+    try {
+      if (!chosen_source_list.includes(loaded_data[chosen_class][chosen_spec][data_name][fight_style]["data_sources"][thing])) {
+        purge_list.push(thing);
+      }
+    } catch (error) {
+      // data_sources are not available
+    }
+  }
+  for (let thing of purge_list) {
+    dps_ordered_data.splice(dps_ordered_data.indexOf(thing), 1);
+  }
+
   // cleanse dps_ordered_data from doubled pvp traits
   let tmp_pvp_trait_names = Object.keys(item_and_trait_equilizer);
   tmp_pvp_trait_names.concat(Object.values(item_and_trait_equilizer));
-  let purge_list = [];
+  purge_list = [];
   // create purgable list
   for (let trait_name of dps_ordered_data) {
     if (item_and_trait_equilizer[trait_name] && !purge_list.includes(trait_name)) {
@@ -1641,7 +1730,7 @@ function update_chart() {
       }
     }
   }
-  // purge dps_ordere_data with purge_list
+  // purge dps_ordered_data with purge_list
   for (let trait_name of purge_list) {
     dps_ordered_data.splice(dps_ordered_data.indexOf(trait_name), 1);
   }
@@ -2114,13 +2203,28 @@ function update_trait_stacking_chart() {
   } else {
     if (debug)
       console.log("Getting sorted_data_keys_2 from data failed. Set unordered dps_ordered_data");
-    var dps_ordered_data = Object.keys(loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"]);
+    var dps_ordered_data = Object.keys(loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"]).slice();
+  }
+
+  // filter dps_ordered_data by source
+  let purge_list = [];
+  for (let thing of dps_ordered_data) {
+    try {
+      if (!chosen_source_list.includes(loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data_sources"][thing])) {
+        purge_list.push(thing);
+      }
+    } catch (error) {
+      // data_sources are not available
+    }
+  }
+  for (let thing of purge_list) {
+    dps_ordered_data.splice(dps_ordered_data.indexOf(thing), 1);
   }
 
   // cleanse dps_ordered_data from doubled pvp traits
   let tmp_pvp_trait_names = Object.keys(item_and_trait_equilizer);
   tmp_pvp_trait_names.concat(Object.values(item_and_trait_equilizer));
-  let purge_list = [];
+  purge_list = [];
   for (let trait_name of dps_ordered_data) {
     if (item_and_trait_equilizer[trait_name] && !purge_list.includes(trait_name)) {
       purge_list.push(item_and_trait_equilizer[trait_name])
