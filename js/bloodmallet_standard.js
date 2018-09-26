@@ -409,6 +409,7 @@ const empty_chart = {
       },
     },
     min: 0,
+    //tickInterval: 1000,
     stackLabels: {
       enabled: true,
       formatter: function () {
