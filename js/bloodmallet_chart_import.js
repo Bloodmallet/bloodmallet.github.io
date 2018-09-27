@@ -697,9 +697,41 @@ function bloodmallet_chart_import() {
         var dps_array = [];
 
         for (let i = 0; i < dps_ordered_keys.length; i++) {
+          itemlevel = simulated_steps[itemlevel_position];
           let dps_key = dps_ordered_keys[i];
 
           let dps_key_values = data["data"][dps_key];
+
+          baseline_dps = data["data"]["baseline"][data["simulated_steps"][data["simulated_steps"].length - 1]];
+
+          // use max itemlevel for the trait stacking chart
+          if (data_type === "azerite_traits_stacking") {
+            baseline_dps = data["data"]["baseline"][data["simulated_steps"][0]];
+          }
+
+          // special handling of azerite_stacking chart to account for traits not simmed at max itemlevel or without max stacks
+          if (data_type === "azerite_traits_stacking" && dps_key_values[itemlevel] === undefined) {
+
+            // find max available simulated step instead
+            let available_steps = data["simulated_steps"];
+            let max_step = undefined;
+
+            for (let broken_id = 0; broken_id < available_steps.length; broken_id++) {
+
+              const available_step = available_steps[broken_id];
+
+              if (!max_step && data["data"][dps_key][available_step]) {
+                max_step = available_step;
+              }
+            }
+            max_step = max_step.replace("1_", "");
+
+            // reset baseline dps to max available simulation step
+            baseline_dps = data["data"]["baseline"]["1_" + max_step];
+
+            // reset itemlevel to the actually available itemlevel
+            itemlevel = itemlevel.split("_")[0] + "_" + max_step;
+          }
 
           // check for zero dps values and don't change them
           if (Number(dps_key_values[itemlevel]) > 0) {
