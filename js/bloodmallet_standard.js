@@ -1763,20 +1763,11 @@ function update_chart() {
       }
 
       if (data_view == "azerite_traits" && ["itemlevel", "trait_stacking"].includes(chosen_azerite_list_type)) {
-        let link = "<div style=\"display:inline-block; margin-bottom:-3px\"><a href=\"https://";
-
-        if (language == "EN") {
-          link += "www";
-        } else {
-          link += language.toLowerCase();
-        }
-
-        link += ".wowhead.com/spell=";
 
         let spell_id = loaded_data[chosen_class][chosen_spec][data_name][fight_style]["spell_ids"][dps_ordered_data[i]];
         let trait_name = dps_ordered_data[i];
 
-        // if the present trait is a value in the collection of equal data we have to adjust the trait name and id
+        // if the present trait is a value in the collection of equal data (horde/alliance) we have to adjust the trait name and id
         if (Object.values(item_and_trait_equilizer).includes(trait_name)) {
           for (let key in item_and_trait_equilizer) {
             if (item_and_trait_equilizer[key] == trait_name) {
@@ -1786,15 +1777,44 @@ function update_chart() {
           }
         }
 
-        link += spell_id;
-
         let translated_name = get_translated_name(trait_name);
 
-        link += "\" target=\"blank\"";
-        if (whTooltips.iconizeLinks && !item_and_trait_equilizer[trait_name]) {
-          link += "class=\"chart_link\"";
+        let translated_portions = translated_name.split("+");
+
+        let link = "";
+
+        for (let tmp_i in translated_portions) {
+          let translated_portion = translated_portions[tmp_i];
+          link += "<div style=\"display:inline-block; margin-bottom:-3px\">";
+
+          link += "<a href=\"https://";
+
+          if (language == "EN") {
+            link += "www";
+          } else {
+            link += language.toLowerCase();
+          }
+
+          link += ".wowhead.com/spell=";
+
+          try {
+            portion_spell_id = loaded_data[chosen_class][chosen_spec][data_name][fight_style]["spell_ids"][translated_portion.trim()];
+          } catch (error) {
+            portion_spell_id = spell_id;
+          }
+
+          link += portion_spell_id;
+
+          link += "\" target=\"blank\"";
+          if (whTooltips.iconizeLinks && !item_and_trait_equilizer[trait_name] && (translated_portions.length === 1 || translated_portions.length > 1 && translated_portions.length - 1 > tmp_i)) {
+            link += "class=\"chart_link\"";
+          }
+          link += ">" + translated_portion.trim() + "</a></div>";
+
+          if (translated_portions.length > 1 && tmp_i < translated_portions.length - 1) {
+            link += "<br/>+";
+          }
         }
-        link += ">" + translated_name + "</a></div>";
 
         // add second trait
         if (item_and_trait_equilizer[trait_name]) {
@@ -2090,7 +2110,7 @@ function update_chart() {
   // adjust axis titles
   set_value_style();
 
-  document.getElementById("chart").style.height = 200 + dps_ordered_data.length * 35 + "px";
+  document.getElementById("chart").style.height = 200 + dps_ordered_data.length * 42 + "px";
   standard_chart.setSize(document.getElementById("chart").style.width, document.getElementById("chart").style.height);
   standard_chart.redraw();
 
@@ -2273,16 +2293,6 @@ function update_trait_stacking_chart() {
   let ordered_trinket_list = [];
   for (let i in dps_ordered_data) {
 
-    let link = "<div style=\"display:inline-block; margin-bottom:-3px\"><a href=\"https://";
-
-    if (language == "EN") {
-      link += "www";
-    } else {
-      link += language.toLowerCase();
-    }
-
-    link += ".wowhead.com/spell=";
-
     let spell_id = loaded_data[chosen_class][chosen_spec][data_view][fight_style]["spell_ids"][dps_ordered_data[i]];
     let trait_name = dps_ordered_data[i];
 
@@ -2296,17 +2306,46 @@ function update_trait_stacking_chart() {
       }
     }
 
-
-    link += spell_id;
-
     let translated_name = get_translated_name(trait_name);
+    let translated_portions = translated_name.split("+");
 
-    link += "\" target=\"blank\"";
-    if (whTooltips.iconizeLinks && !item_and_trait_equilizer[trait_name]) {
-      link += "class=\"chart_link\"";
+    let link = "";
+
+    for (let tmp_i in translated_portions) {
+      let translated_portion = translated_portions[tmp_i];
+
+      link += "<div style=\"display:inline-block; margin-bottom:-3px\"><a href=\"https://";
+
+      if (language == "EN") {
+        link += "www";
+      } else {
+        link += language.toLowerCase();
+      }
+
+      link += ".wowhead.com/spell=";
+
+      let portion_spell_id = "";
+
+      try {
+        portion_spell_id = loaded_data[chosen_class][chosen_spec][data_view][fight_style]["spell_ids"][translated_portion.trim()];
+      } catch (error) {
+        portion_spell_id = spell_id;
+      }
+
+      link += portion_spell_id;
+
+      link += "\" target=\"blank\"";
+      if (whTooltips.iconizeLinks && !item_and_trait_equilizer[trait_name] && (translated_portions.length === 1 || translated_portions.length > 1 && translated_portions.length - 1 > tmp_i)) {
+        link += "class=\"chart_link\"";
+      }
+      link += ">" + translated_portion.trim() + "</a></div>";
+
+      if (translated_portions.length > 1 && tmp_i < translated_portions.length - 1) {
+        link += "<br/>+";
+      }
+
     }
-    link += ">" + translated_name + "</a></div>";
-    //link += " / <div style=\"display:inline-block;\">boom chacke</div>";
+
 
     if (item_and_trait_equilizer[trait_name]) {
       link += " / <br><div style=\"display:inline-block;\"><a href=\"https://";
@@ -2464,7 +2503,7 @@ function update_trait_stacking_chart() {
 
   standard_chart.legend.title.attr({ text: "Trait count" });
 
-  document.getElementById("chart").style.height = 200 + dps_ordered_data.length * 35 + "px";
+  document.getElementById("chart").style.height = 200 + dps_ordered_data.length * 42 + "px";
   standard_chart.setSize(document.getElementById("chart").style.width, document.getElementById("chart").style.height);
   standard_chart.redraw();
 
