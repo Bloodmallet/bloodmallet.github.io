@@ -3,7 +3,7 @@ Greetings traveler of the frozen wasteland of coding and content creation.
 First of: I want to thank you for your interest in helping. That's awesome!
 
 This document is intended to collect the small and bigger quirks of working
-on and with bloodmallet.github.io (bloodmallet.com to the public). As this 
+on and with bloodmallet.github.io (bloodmallet.com to the public). As this
 project goes on, problems arise, and question are asked this document will
 get updated and extended. It should be considered a living document as everyone
 is learning.
@@ -11,7 +11,7 @@ is learning.
 # Website
 ## HTML
 The whole website is currently written without any renderers or templating engine.
-This means for you, that you'll have to write all the code yourself. If someone is
+This means for you, that you'll have to write all the code yourself. If something is
 used in multiple places, you'll probably have to copy the code around. It's certainly
 a good idea to migrate to something like jekyll in the future.
 
@@ -27,7 +27,7 @@ a good idea to migrate to something like jekyll in the future.
 - write as many comments to explain the elements as necessary
 
 ## Functional Elements
-[Bootstrap](https://getbootstrap.com/) is used to handle the usually needed elements 
+[Bootstrap](https://getbootstrap.com/) is used to handle the usually needed elements
 in pages.
 
 ## JavaScript
