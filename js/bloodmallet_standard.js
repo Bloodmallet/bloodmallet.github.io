@@ -1777,14 +1777,12 @@ function update_chart() {
           }
         }
 
-        let translated_name = get_translated_name(trait_name);
-
-        let translated_portions = translated_name.split("+");
+        let name_portions = trait_name.split("+");
 
         let link = "";
 
-        for (let tmp_i in translated_portions) {
-          let translated_portion = translated_portions[tmp_i];
+        for (let tmp_i in name_portions) {
+          let name_portion = name_portions[tmp_i];
           link += "<div style=\"display:inline-block; margin-bottom:-3px\">";
 
           link += "<a href=\"https://";
@@ -1798,7 +1796,7 @@ function update_chart() {
           link += ".wowhead.com/spell=";
 
           try {
-            portion_spell_id = loaded_data[chosen_class][chosen_spec][data_name][fight_style]["spell_ids"][translated_portion.trim()];
+            portion_spell_id = loaded_data[chosen_class][chosen_spec][data_name][fight_style]["spell_ids"][name_portion.trim()];
           } catch (error) {
             portion_spell_id = spell_id;
           }
@@ -1806,12 +1804,12 @@ function update_chart() {
           link += portion_spell_id;
 
           link += "\" target=\"blank\"";
-          if (whTooltips.iconizeLinks && !item_and_trait_equilizer[trait_name] && (translated_portions.length === 1 || translated_portions.length > 1 && translated_portions.length - 1 > tmp_i)) {
+          if (whTooltips.iconizeLinks && !item_and_trait_equilizer[trait_name] && (name_portions.length === 1 || name_portions.length > 1 && name_portions.length - 1 > tmp_i)) {
             link += "class=\"chart_link\"";
           }
-          link += ">" + translated_portion.trim() + "</a></div>";
+          link += ">" + get_translated_name(name_portion.trim()) + "</a></div>";
 
-          if (translated_portions.length > 1 && tmp_i < translated_portions.length - 1) {
+          if (name_portions.length > 1 && tmp_i < name_portions.length - 1) {
             link += "<br/>+";
           }
         }
@@ -2306,13 +2304,12 @@ function update_trait_stacking_chart() {
       }
     }
 
-    let translated_name = get_translated_name(trait_name);
-    let translated_portions = translated_name.split("+");
+    let name_portions = trait_name.split("+");
 
     let link = "";
 
-    for (let tmp_i in translated_portions) {
-      let translated_portion = translated_portions[tmp_i];
+    for (let tmp_i in name_portions) {
+      let name_portion = name_portions[tmp_i];
 
       link += "<div style=\"display:inline-block; margin-bottom:-3px\"><a href=\"https://";
 
@@ -2327,7 +2324,7 @@ function update_trait_stacking_chart() {
       let portion_spell_id = "";
 
       try {
-        portion_spell_id = loaded_data[chosen_class][chosen_spec][data_view][fight_style]["spell_ids"][translated_portion.trim()];
+        portion_spell_id = loaded_data[chosen_class][chosen_spec][data_view][fight_style]["spell_ids"][name_portion.trim()];
       } catch (error) {
         portion_spell_id = spell_id;
       }
@@ -2335,12 +2332,12 @@ function update_trait_stacking_chart() {
       link += portion_spell_id;
 
       link += "\" target=\"blank\"";
-      if (whTooltips.iconizeLinks && !item_and_trait_equilizer[trait_name] && (translated_portions.length === 1 || translated_portions.length > 1 && translated_portions.length - 1 > tmp_i)) {
+      if (whTooltips.iconizeLinks && !item_and_trait_equilizer[trait_name] && (name_portions.length === 1 || name_portions.length > 1 && name_portions.length - 1 > tmp_i)) {
         link += "class=\"chart_link\"";
       }
-      link += ">" + translated_portion.trim() + "</a></div>";
+      link += ">" + get_translated_name(name_portion.trim()) + "</a></div>";
 
-      if (translated_portions.length > 1 && tmp_i < translated_portions.length - 1) {
+      if (name_portions.length > 1 && tmp_i < name_portions.length - 1) {
         link += "<br/>+";
       }
 
