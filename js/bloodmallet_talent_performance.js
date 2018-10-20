@@ -5,7 +5,7 @@
 ---------------------------------------------------------*/
 
 /* Variable intended for dev mode specific output/markings */
-const debug = true;
+const debug = false;
 
 /** visual modes
  *   hidden: hides these general elements
@@ -537,6 +537,7 @@ async function push_state() {
   }
   if (chosen_spec && chosen_class && data_view && fight_style) {
     history.pushState({ id: 'data_view' }, chosen_spec + " " + chosen_class + " | " + data_view + " | " + fight_style, create_link());
+    reset_table();
     await switch_to_data();
   } else {
     if (debug) {
@@ -558,8 +559,6 @@ async function switch_to_data() {
   await load_data();
   translate_page();
 
-
-  console.log("Trigger tooltips!");
   $(function () {
     $('[data-toggle="tooltip"]').tooltip();
   });
@@ -683,8 +682,6 @@ function update_table() {
       // derive non-talent version
       let blank_talent_combination = talent_combination.slice(0, row_column.slice(0, 1) - 1) + "0" + talent_combination.slice(row_column.slice(0, 1), 8);
 
-      console.log(row_column, talent_combination, blank_talent_combination);
-
       let talent_dps = data["data"][talent_combination];
       let blank_dps = data["data"][blank_talent_combination];
 
@@ -695,10 +692,20 @@ function update_table() {
       html_element.appendChild(talent_name);
 
 
+      let avg_element = document.createElement("div");
+      avg_element.innerHTML = "Mean gain: ";
+      let avg_value = document.createElement("span");
+      let gain = get_average_gain(row_column);
+      avg_value.innerHTML = gain + "%";
+      avg_value.classList += get_class_color(gain);
+      avg_element.appendChild(avg_value);
+      html_element.appendChild(avg_element);
+
       let max_element = document.createElement("div");
-      max_element.innerHTML = "Gain: ";
+      max_element.innerHTML = "Best talent combination: ";
       max_element.title = "Talent combination: " + talent_combination;
       max_element.setAttribute("data-toggle", "tooltip");
+      max_element.setAttribute("data-placement", "bottom");
       let max_value = document.createElement("span");
       gain = get_percentage_gain(blank_dps, talent_dps);
       max_value.innerHTML = gain + "%";
@@ -707,11 +714,11 @@ function update_table() {
       html_element.appendChild(max_element);
 
     } catch (error) {
+      // utility row...probably
       html_element.innerHTML = "-";
       if (debug) {
         console.warn(error);
       }
-      // utility row...probably
     }
   }
 
@@ -719,6 +726,14 @@ function update_table() {
   try {
     $WowheadPower.refreshLinks();
   } catch (error) {
+  }
+}
+
+function reset_table() {
+  for (let row = 1; row < 8; row++) {
+    for (let column = 1; column < 4; column++) {
+      document.getElementById(row.toString() + column.toString()).innerHTML = "-";
+    }
   }
 }
 
@@ -753,6 +768,30 @@ function get_talent_name(name, row_column) {
   s += "</a>";
 
   return s;
+}
+
+function get_average_gain(row_column) {
+  if (debug) {
+    console.log("get_average_gain");
+  }
+
+  let data = loaded_data[chosen_class][chosen_spec][data_view][fight_style];
+
+  let talent_combinations = [];
+  for (let talent_combination of data["sorted_data_keys"]) {
+    if (talent_combination[row_column.slice(0, 1) - 1] === row_column.slice(1, 2)) {
+      talent_combinations.push(talent_combination);
+    }
+  }
+
+  let sum = 0;
+  for (let talent_combination of talent_combinations) {
+    let t_dps = data["data"][talent_combination];
+    let b_dps = data["data"][talent_combination.slice(0, row_column.slice(0, 1) - 1) + "0" + talent_combination.slice(row_column.slice(0, 1), 8)];
+    sum += get_percentage_gain(b_dps, t_dps);
+  }
+
+  return Math.round((sum / talent_combinations.length) * 100) / 100;
 }
 
 function get_percentage_gain(base_value, changed_value) {
