@@ -887,6 +887,9 @@ However, delay the fade out process for 2.5 seconds */
 .iconsmall {
   float: right;
 }
+#data_table .iconsmall {
+  float:left;
+}
 .iconsmall del {
   background-image: none!important;
 }
