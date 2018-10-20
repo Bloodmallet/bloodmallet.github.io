@@ -533,7 +533,7 @@
     <div class="container-fluid">
       <div class="row">
         <div class="offset-xl-3 col-xl-6 offset-lg-2 col-lg-8 offset-md-1 col-md-10">
-          <p>This table presents the dps gain of each talent compared to the same talent combination but without the talent you're looking at that moment. Default setting uses the best possible talent combination for each talent. You'll be able to "lock" talents in place later on. Hover over the "Gain" line to see which talent combination was used.</p>
+          <p>This table presents the mean dps gain of each talent, when comparing all their talent combinations with the identical talent combination, just without a talent in that row. Best talent combination gain shows only the gain of the best talent combination of that talent compared to the same talent combination, once again without a talent in that row.</p>
           <p id="table-warning">When using these talent tables, be aware of a few drawbacks.</p>
           <ul type="square">
             <li>BETA BETA BETA What you see here could very well be wrong. I'm looking for input on how to improve the provided information</li>
@@ -541,6 +541,13 @@
             <li>the used Azerite Traits were not changed</li>
             <li>Action Priority Lists are potentially not optimized for all talent combinations</li>
           </ul>
+          <p>Used colours reflect how much of a gain a talent is.</p>
+          <ul type="square">
+              <li><span class="mage-color">< 3%</span></3> gain</li>
+              <li> <span class="monk-color">3% - 5%</span> gain</li>
+              <li><span class="druid-color">5% - 7%</span></5> gain</li>
+              <li><span class="death_knight-color">> 7%</span> gain</li>
+            </ul>
         </div>
       </div>
       <div id="chart_data" class="row">
