@@ -112,6 +112,281 @@ const class_colors = {
   "warrior": "#C79C6E",
 };
 
+
+const empty_chart = {
+  chart: {
+    type: "bar",
+    backgroundColor: null,
+    style: {
+      fontFamily: "-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\",\"Segoe UI Symbol\""
+    }
+    //borderColor: medium_color,
+    //borderWidth: 1
+  },
+  colors: [
+    "#7cb5ec",
+    "#d9d9df",
+    "#90ed7d",
+    "#f7a35c",
+    "#8085e9",
+    "#f15c80",
+    "#e4d354",
+    "#2b908f",
+    "#f45b5b",
+    "#91e8e1"
+  ],
+  legend: {
+    align: "right",
+    backgroundColor: "",
+    borderColor: medium_color,
+    borderWidth: 1,
+    floating: false,
+    itemMarginBottom: 3,
+    itemMarginTop: 0,
+    layout: 'vertical',
+    reversed: true,
+    shadow: false,
+    verticalAlign: "middle",
+    x: 0,
+    y: 0,
+    itemStyle: {
+      color: light_color,
+      fontSize: font_size,
+      fontWeight: "normal"
+    },
+    itemHoverStyle: {
+      color: light_color,
+    },
+    title: {
+      text: " ",
+      style: {
+        color: light_color,
+        fontSize: font_size,
+        fontWeight: "normal"
+      }
+    },
+    symbolRadius: 0
+  },
+  plotOptions: {
+    bar: {
+      dataLabels: {
+        enabled: false,
+      },
+      point: {
+        events: {
+          click: function (event) {
+            var chart = this.series.yAxis;
+            chart.removePlotLine('helperLine');
+            chart.addPlotLine({
+              value: this.stackY,
+              color: light_color,
+              width: 2,
+              id: 'helperLine',
+              zIndex: 5,
+              label: {
+                text: this.series.name + ' ' + this.category,
+                style: {
+                  color: light_color,
+                  fontSize: font_size,
+                },
+                align: 'left',
+                verticalAlign: 'bottom',
+                rotation: 0,
+                y: -5
+              }
+            });
+          }
+        }
+      },
+    },
+    series: {
+      stacking: "normal",
+      borderColor: dark_color,
+      events: {
+        legendItemClick: function () {
+          return false;
+        }
+      },
+      style: {
+        textOutline: false,
+        fontSize: font_size,
+      }
+    }
+  },
+  series: [
+    {
+      color: light_color,
+      data: [
+        1,
+        1,
+        3,
+        1,
+        3
+      ],
+      name: "b main",
+      showInLegend: false
+    },
+    {
+      color: dark_color,
+      data: [
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      name: "b's emptiness",
+      showInLegend: false
+    }, {
+      color: light_color,
+      data: [
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      name: "b's finishing touch",
+      showInLegend: false
+    }
+  ],
+  subtitle: {
+    text: "",
+    useHTML: true,
+    style: {
+      color: light_color,
+      fontSize: font_size
+    }
+  },
+  title: {
+    text: "", //"Title placeholder",
+    useHTML: true,
+    style: {
+      color: light_color,
+      fontSize: "1.2rem"
+    }
+  },
+  tooltip: {
+    formatter: function () {
+      var s = '<div style="margin: -4px -6px -11px -7px; padding: 3px 3px 6px 3px; background-color:';
+      if (dark_mode) {
+        s += dark_color;
+      } else {
+        s += light_color;
+      }
+      s += '"><div class=\"anti-icon-space\" style=\"margin-left: 9px;margin-bottom: 6px; font-weight: 700;\">' + this.x + '</div>'
+      var cumulative_amount = 0;
+      for (var i = this.points.length - 1; i >= 0; i--) {
+        cumulative_amount += this.points[i].y;
+        if (this.points[i].y !== 0) {
+          s += '<div><span style=\"margin-left: 9px; border-left: 9px solid ' +
+            this.points[i].series.color + ';' +
+            ' padding-left: 4px;' +
+            //' color: ' + this.points[i].series.color + ';' +
+            //' font-weight: bold;' +
+            //' text-shadow: 0px 0px 2px black;' +
+            '\">' +
+            this.points[i].series.name +
+            '</span>:&nbsp;&nbsp;' +
+            Intl.NumberFormat().format(cumulative_amount);
+          s += " dps</div>";
+        }
+      }
+      s += '</div>';
+      return s;
+    },
+    headerFormat: "<b>{point.x}</b>",
+    shared: true,
+    backgroundColor: dark_color,
+    borderColor: medium_color,
+    style: {
+      color: light_color,
+      fontSize: font_size,
+    },
+    useHTML: true,
+  },
+  xAxis: {
+    categories: [
+      "b",
+      "b",
+      "b",
+      "b",
+      "b",
+    ],
+    labels: {
+      useHTML: true,
+      style: {
+        color: light_color,
+        fontSize: font_size,
+      }
+    },
+    gridLineWidth: 0,
+    gridLineColor: medium_color,
+    lineColor: medium_color,
+    tickColor: medium_color
+  },
+  yAxis: [{
+    labels: {
+      //enabled: true,
+      style: {
+        color: medium_color
+      },
+    },
+    min: 0,
+    //tickInterval: 1000,
+    stackLabels: {
+      enabled: true,
+      style: {
+        color: light_color,
+        textOutline: false,
+        fontSize: font_size,
+        //fontWeight: "normal"
+      }
+    },
+    title: {
+      text: "\u0394 Damage per second",
+      style: {
+        color: medium_color
+      }
+    },
+    gridLineWidth: 1,
+    gridLineColor: medium_color
+  }, {
+    linkedTo: 0,
+    labels: {
+      //enabled: true,
+      style: {
+        color: medium_color
+      },
+    },
+    min: 0,
+    stackLabels: {
+      enabled: true,
+      formatter: function () {
+        return Intl.NumberFormat().format(this.total);
+      },
+      style: {
+        color: light_color,
+        textOutline: false,
+        fontSize: font_size,
+        //fontWeight: "normal"
+      }
+    },
+    title: {
+      text: "\u0394 Damage per second",
+      style: {
+        color: medium_color
+      }
+    },
+    gridLineWidth: 1,
+    gridLineColor: medium_color,
+    opposite: true
+  }]
+};
+
+const standard_chart = Highcharts.chart('chart', empty_chart);
+
+
 /*---------------------------------------------------------
 //
 //  Dark Mode
@@ -675,23 +950,14 @@ function update_table() {
     let html_element = document.getElementById(row_column);
 
     try {
-
-      // get best talent combination for a given fixed talent
-      let talent_combination = get_best_talent_combination(row_column, data);
-
-      // derive non-talent version
-      let blank_talent_combination = talent_combination.slice(0, row_column.slice(0, 1) - 1) + "0" + talent_combination.slice(row_column.slice(0, 1), 8);
-
-      let talent_dps = data["data"][talent_combination];
-      let blank_dps = data["data"][blank_talent_combination];
-
+      // add talent name
       let talent_name = document.createElement("h5");
       let talent_data = data["talent_data"][row_column.slice(0, 1)][row_column.slice(1, 2)];
-      talent_name.innerHTML = get_talent_name(talent_data["name"], row_column); // TODO: extend here to have a link instead
+      talent_name.innerHTML = get_talent_name(talent_data["name"], row_column);
       html_element.innerHTML = "";
       html_element.appendChild(talent_name);
 
-
+      // add mean gain
       let avg_element = document.createElement("div");
       avg_element.innerHTML = "Mean gain: ";
       let avg_value = document.createElement("span");
@@ -701,8 +967,43 @@ function update_table() {
       avg_element.appendChild(avg_value);
       html_element.appendChild(avg_element);
 
+      // add lowest gain
+      let low_element = document.createElement("div");
+      low_element.innerHTML = "Lowest gain: ";
+      let low_value = document.createElement("span");
+      let combo = get_lowest_gain(row_column);
+      let talent_combination = combo[0];
+      gain = combo[1];
+      low_element.title = "Talent combination: " + talent_combination;
+      low_element.setAttribute("data-toggle", "tooltip");
+      low_element.setAttribute("data-placement", "bottom");
+      low_value.innerHTML = gain + "%";
+      low_value.classList += get_class_color(gain);
+      low_element.appendChild(low_value);
+      html_element.appendChild(low_element);
+
+      // add biggest gain
+      let high_element = document.createElement("div");
+      high_element.innerHTML = "Highest gain: ";
+      let high_value = document.createElement("span");
+      combo = get_highest_gain(row_column);
+      talent_combination = combo[0];
+      gain = combo[1];
+      high_element.title = "Talent combination: " + talent_combination;
+      high_element.setAttribute("data-toggle", "tooltip");
+      high_element.setAttribute("data-placement", "bottom");
+      high_value.innerHTML = gain + "%";
+      high_value.classList += get_class_color(gain);
+      high_element.appendChild(high_value);
+      html_element.appendChild(high_element);
+
+      // add gain in best talent combination
       let max_element = document.createElement("div");
-      max_element.innerHTML = "Best talent combination: ";
+      talent_combination = get_best_talent_combination(row_column, data);
+      let blank_talent_combination = talent_combination.slice(0, row_column.slice(0, 1) - 1) + "0" + talent_combination.slice(row_column.slice(0, 1), 8);
+      let talent_dps = data["data"][talent_combination];
+      let blank_dps = data["data"][blank_talent_combination];
+      max_element.innerHTML = "Highest DPS talent combination: ";
       max_element.title = "Talent combination: " + talent_combination;
       max_element.setAttribute("data-toggle", "tooltip");
       max_element.setAttribute("data-placement", "bottom");
@@ -713,6 +1014,21 @@ function update_table() {
       max_element.appendChild(max_value);
       html_element.appendChild(max_element);
 
+      // add "Is this talent within x% of the best talent combination?"
+      talent_combination = get_best_talent_combination(row_column, data);
+      let actual_range = get_percentage_gain(data["data"][data["sorted_data_keys"][0]], data["data"][talent_combination]);
+
+      let range_element = document.createElement("div");
+      range_element.innerHTML = "Difference from global best: ";
+      let range_value = document.createElement("span");
+      range_element.title = "Talent combination: " + talent_combination;
+      range_element.setAttribute("data-toggle", "tooltip");
+      range_element.setAttribute("data-placement", "bottom");
+      range_value.innerHTML = actual_range + "%";
+      range_value.classList += get_class_color(-actual_range + 3);
+      range_element.appendChild(range_value);
+      html_element.appendChild(range_element);
+
     } catch (error) {
       // utility row...probably
       html_element.innerHTML = "-";
@@ -722,6 +1038,7 @@ function update_table() {
     }
   }
 
+  update_chart();
 
   try {
     $WowheadPower.refreshLinks();
@@ -770,6 +1087,44 @@ function get_talent_name(name, row_column) {
   return s;
 }
 
+function get_lowest_gain(row_column) {
+  let row = row_column.slice(0, 1);
+  let column = row_column.slice(1, 2);
+  let data = loaded_data[chosen_class][chosen_spec][data_view][fight_style];
+  let gain = 100.0;
+  let talent_combination = "";
+  for (let name of data["sorted_data_keys"]) {
+    if (name[row - 1] === column) {
+      let c_dps = data["data"][name];
+      let b_dps = data["data"][name.slice(0, row - 1) + "0" + name.slice(row, 8)];
+      if (gain > get_percentage_gain(b_dps, c_dps)) {
+        gain = get_percentage_gain(b_dps, c_dps);
+        talent_combination = name;
+      }
+    }
+  }
+  return [talent_combination, gain];
+}
+
+function get_highest_gain(row_column) {
+  let row = row_column.slice(0, 1);
+  let column = row_column.slice(1, 2);
+  let data = loaded_data[chosen_class][chosen_spec][data_view][fight_style];
+  let gain = -100.0;
+  let talent_combination = "";
+  for (let name of data["sorted_data_keys"]) {
+    if (name[row - 1] === column) {
+      let c_dps = data["data"][name];
+      let b_dps = data["data"][name.slice(0, row - 1) + "0" + name.slice(row, 8)];
+      if (gain < get_percentage_gain(b_dps, c_dps)) {
+        gain = get_percentage_gain(b_dps, c_dps);
+        talent_combination = name;
+      }
+    }
+  }
+  return [talent_combination, gain];
+}
+
 function get_average_gain(row_column) {
   if (debug) {
     console.log("get_average_gain");
@@ -794,11 +1149,11 @@ function get_average_gain(row_column) {
   return Math.round((sum / talent_combinations.length) * 100) / 100;
 }
 
-function get_percentage_gain(base_value, changed_value) {
+function get_percentage_gain(no_talent_value, talent_value) {
   if (debug) {
     console.log("get_percentage_gain");
   }
-  return Math.round((changed_value * 100 / base_value - 100) * 100) / 100;
+  return Math.round((talent_value * 100 / no_talent_value - 100) * 100) / 100;
 }
 
 function get_class_color(dps_increase) {
@@ -967,13 +1322,57 @@ function seach_iconized_chart_cookie() {
 }
 
 
+
+/**
+ * Show and update the chart with currently available data.
+ * Data load is NOT handled by this function. Triggers update_chart!
+ */
+function update_chart() {
+  if (debug) {
+    console.log("update_chart");
+  }
+
+  let data_name = data_view;
+  var dps_ordered_data = loaded_data[chosen_class][chosen_spec][data_name][fight_style]["sorted_data_keys"].slice();
+
+  // change item/spell names to wowhead links
+  standard_chart.update({
+    xAxis: {
+      categories: dps_ordered_data
+    }
+  }, false);
+
+  // delete all old series data
+  while (standard_chart.series[0]) {
+    standard_chart.series[0].remove(false);
+  }
+
+
+  let dps_values = [];
+  for (let category of dps_ordered_data) {
+    dps_values.push(loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"][category]);
+  }
+
+  standard_chart.addSeries({
+    color: class_colors[chosen_class],
+    data: dps_values,
+    name: "Talent combination",
+    showInLegend: false
+  }, false);
+
+
+  document.getElementById("chart").style.height = 200 + dps_ordered_data.length * 30 + "px";
+  standard_chart.setSize(document.getElementById("chart").style.width, document.getElementById("chart").style.height);
+  standard_chart.redraw();
+}
+
+
+
 /******************************************************************************
  *
  * Last content block. These functions trigger onfinished load.
  *
  */
-
-
 document.addEventListener("DOMContentLoaded", async function () {
   search_dark_mode_cookie();
   seach_iconized_chart_cookie();
