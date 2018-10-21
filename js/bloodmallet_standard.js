@@ -1743,29 +1743,33 @@ function update_chart() {
   }
 
   // sort dps_ordered_data if max itemlevel is not allowed
-  if (chosen_step_list[0] !== loaded_data[chosen_class][chosen_spec][data_name][fight_style]["simulated_steps"][0]) {
-    // create list of all categories with their best allowed dps values
-    let tmp_list = []
+  try {
+    if (chosen_step_list[0] !== loaded_data[chosen_class][chosen_spec][data_name][fight_style]["simulated_steps"][0]) {
+      // create list of all categories with their best allowed dps values
+      let tmp_list = []
 
-    for (let element of dps_ordered_data) {
-      for (let step of chosen_step_list) { // descendant ordered
+      for (let element of dps_ordered_data) {
+        for (let step of chosen_step_list) { // descendant ordered
 
-        if (loaded_data[chosen_class][chosen_spec][data_name][fight_style]["data"][element][step]) {
+          if (loaded_data[chosen_class][chosen_spec][data_name][fight_style]["data"][element][step]) {
 
-          if (tmp_list.length === 0) {
-            tmp_list.push([element, loaded_data[chosen_class][chosen_spec][data_name][fight_style]["data"][element][step]]);
-          } else if (tmp_list[tmp_list.length - 1][0] !== element) {
-            tmp_list.push([element, loaded_data[chosen_class][chosen_spec][data_name][fight_style]["data"][element][step]]);
+            if (tmp_list.length === 0) {
+              tmp_list.push([element, loaded_data[chosen_class][chosen_spec][data_name][fight_style]["data"][element][step]]);
+            } else if (tmp_list[tmp_list.length - 1][0] !== element) {
+              tmp_list.push([element, loaded_data[chosen_class][chosen_spec][data_name][fight_style]["data"][element][step]]);
+            }
           }
         }
       }
+
+      // sort list
+      tmp_list.sort(function (first, second) { return second[1] - first[1]; });
+
+      // throw away dps values
+      dps_ordered_data = tmp_list.map(x => x[0]);
     }
-
-    // sort list
-    tmp_list.sort(function (first, second) { return second[1] - first[1]; });
-
-    // throw away dps values
-    dps_ordered_data = tmp_list.map(x => x[0]);
+  } catch (error) {
+    // data doesn't need to be resorted
   }
 
   // change item/spell names to wowhead links
