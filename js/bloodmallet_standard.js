@@ -1693,16 +1693,6 @@ function update_chart() {
     data_name += "_" + chosen_azerite_list_type;
   }
 
-
-  // https://stackoverflow.com/questions/25500316/sort-a-dictionary-by-value-in-javascript
-  // create a list of all trinkets with their highest dps value
-  // var dps_ordered_data = Object.keys(loaded_data[chosen_class][chosen_spec][data_view][fight_style]["trinkets"]).map(function (key) { return [key, Math.max(...Object.values(loaded_data[chosen_class][chosen_spec][data_view][fight_style]["trinkets"][key]))] });
-  // order said list
-  // dps_ordered_data.sort(function (first, second) { return second[1] - first[1]; });
-  //console.log(dps_ordered_data);
-  // get rid of dps values and keep only the trinket names
-  // dps_ordered_data = dps_ordered_data.map(x => x[0]);
-  // or.... just use the provided sorted list once that is included in fresh data
   if ("sorted_data_keys" in loaded_data[chosen_class][chosen_spec][data_name][fight_style]) {
     var dps_ordered_data = [];
 
@@ -1750,6 +1740,32 @@ function update_chart() {
   // purge dps_ordered_data with purge_list
   for (let trait_name of purge_list) {
     dps_ordered_data.splice(dps_ordered_data.indexOf(trait_name), 1);
+  }
+
+  // sort dps_ordered_data if max itemlevel is not allowed
+  if (chosen_step_list[0] !== loaded_data[chosen_class][chosen_spec][data_name][fight_style]["simulated_steps"][0]) {
+    // create list of all categories with their best allowed dps values
+    let tmp_list = []
+
+    for (let element of dps_ordered_data) {
+      for (let step of chosen_step_list) { // descendant ordered
+
+        if (loaded_data[chosen_class][chosen_spec][data_name][fight_style]["data"][element][step]) {
+
+          if (tmp_list.length === 0) {
+            tmp_list.push([element, loaded_data[chosen_class][chosen_spec][data_name][fight_style]["data"][element][step]]);
+          } else if (tmp_list[tmp_list.length - 1][0] !== element) {
+            tmp_list.push([element, loaded_data[chosen_class][chosen_spec][data_name][fight_style]["data"][element][step]]);
+          }
+        }
+      }
+    }
+
+    // sort list
+    tmp_list.sort(function (first, second) { return second[1] - first[1]; });
+
+    // throw away dps values
+    dps_ordered_data = tmp_list.map(x => x[0]);
   }
 
   // change item/spell names to wowhead links
