@@ -345,6 +345,7 @@ const empty_chart = {
       }
       s += '"><div class=\"anti-icon-space\" style=\"margin-left: 9px;margin-bottom: 6px; font-weight: 700;\">' + this.x + '</div>'
       var cumulative_amount = 0;
+      let previous_step_amount = 0;
       for (var i = this.points.length - 1; i >= 0; i--) {
         cumulative_amount += this.points[i].y;
         if (this.points[i].y !== 0) {
@@ -365,8 +366,21 @@ const empty_chart = {
             s += "%";
           }
 
+          // add dmg increase compared to previous step
+          if (previous_step_amount < cumulative_amount && i != this.points.length - 1) {
+            s += " (+";
+            s += Intl.NumberFormat().format(cumulative_amount - previous_step_amount);
+            if (chosen_value_style === "absolute_gain" || data_view === "races" || chosen_value_style === "absolute_value") {
+              s += " dps";
+            } else if (chosen_value_style === "relative_gain") {
+              s += "%";
+            }
+            s += ")";
+          }
+
           s += "</div>";
         }
+        previous_step_amount += this.points[i].y;
       }
       s += '</div>';
       return s;
