@@ -346,6 +346,7 @@ const empty_chart = {
       s += '"><div class=\"anti-icon-space\" style=\"margin-left: 9px;margin-bottom: 6px; font-weight: 700;\">' + this.x + '</div>'
       var cumulative_amount = 0;
       let previous_step_amount = 0;
+      let foundFirst = false;
       for (var i = this.points.length - 1; i >= 0; i--) {
         cumulative_amount += this.points[i].y;
         if (this.points[i].y !== 0) {
@@ -367,7 +368,7 @@ const empty_chart = {
           }
 
           // add dmg increase compared to previous step
-          if (previous_step_amount < cumulative_amount && i != this.points.length - 1) {
+          if (previous_step_amount < cumulative_amount && foundFirst) {
             s += " (+";
             s += Intl.NumberFormat().format(cumulative_amount - previous_step_amount);
             if (chosen_value_style === "absolute_gain" || data_view === "races" || chosen_value_style === "absolute_value") {
@@ -379,6 +380,7 @@ const empty_chart = {
           }
 
           s += "</div>";
+          foundFirst=true;
         }
         previous_step_amount += this.points[i].y;
       }
