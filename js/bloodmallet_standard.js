@@ -48,8 +48,8 @@ let chosen_class = "";
 let chosen_spec = "";
 let chosen_talent_combination = "";
 let chosen_azerite_list_type = "trait_stacking";
-let chosen_step_list = [];
-let chosen_source_list = [];
+let chosen_step_list = []; // array to store the to-be-shown steps
+let chosen_source_list = []; // array to store the to-be-shown sources
 
 let mode = "welcome";
 let fight_style = "patchwerk";
@@ -346,7 +346,7 @@ const empty_chart = {
       s += '"><div class=\"anti-icon-space\" style=\"margin-left: 9px;margin-bottom: 6px; font-weight: 700;\">' + this.x + '</div>'
       var cumulative_amount = 0;
       let previous_step_amount = 0;
-      let foundFirst = false;
+      let not_first_value = false;
       for (var i = this.points.length - 1; i >= 0; i--) {
         cumulative_amount += this.points[i].y;
         if (this.points[i].y !== 0) {
@@ -368,7 +368,7 @@ const empty_chart = {
           }
 
           // add dmg increase compared to previous step
-          if (previous_step_amount < cumulative_amount && foundFirst) {
+          if (previous_step_amount < cumulative_amount && not_first_value) {
             s += " (+";
             s += Intl.NumberFormat().format(cumulative_amount - previous_step_amount);
             if (chosen_value_style === "absolute_gain" || data_view === "races" || chosen_value_style === "absolute_value") {
@@ -380,7 +380,7 @@ const empty_chart = {
           }
 
           s += "</div>";
-          foundFirst=true;
+          not_first_value = true;
         }
         previous_step_amount += this.points[i].y;
       }
@@ -1275,7 +1275,10 @@ function update_advanced_chart_options() {
   if (itemlevels && (data_view === "trinkets" || data_view === "azerite_traits" && ["head", "shoulders", "chest", "itemlevel"].includes(chosen_azerite_list_type))) {
 
     // update chosen_step_list to the new max list (create a copy)
-    chosen_step_list = loaded_data[chosen_class][chosen_spec][data_name][fight_style]["simulated_steps"].slice();
+    // update only if nothing was selected or if the current values aren't present in the actual new data view (trinket -> azerite itemlevel)
+    if (chosen_step_list.length === 0 || !itemlevels.includes(chosen_step_list[0])) {
+      chosen_step_list = loaded_data[chosen_class][chosen_spec][data_name][fight_style]["simulated_steps"].slice();
+    }
 
     let ilevel_filtering = document.createElement("div");
     ilevel_filtering.className = "col-md-4";
@@ -1320,14 +1323,18 @@ function update_advanced_chart_options() {
   if (data_view === "trinkets") {
 
     // reset and refill source list
-    chosen_source_list = [];
+    let source_list = [];
     for (let item in loaded_data[chosen_class][chosen_spec][data_name][fight_style]["data_sources"]) {
-      if (!chosen_source_list.includes(loaded_data[chosen_class][chosen_spec][data_name][fight_style]["data_sources"][item])) {
-        chosen_source_list.push(loaded_data[chosen_class][chosen_spec][data_name][fight_style]["data_sources"][item]);
+      if (!source_list.includes(loaded_data[chosen_class][chosen_spec][data_name][fight_style]["data_sources"][item])) {
+        source_list.push(loaded_data[chosen_class][chosen_spec][data_name][fight_style]["data_sources"][item]);
       }
+    }
+    if (chosen_source_list.length === 0) {
+      chosen_source_list = source_list.slice();
     }
     // sort to have almost the exact same list for everything
     chosen_source_list.sort();
+    source_list.sort();
 
     let source_filtering = document.createElement("div");
     source_filtering.className = "col-md-4";
@@ -1335,7 +1342,7 @@ function update_advanced_chart_options() {
 
     source_filtering.innerHTML = "Sources:<br/>";
 
-    for (let source of chosen_source_list) {
+    for (let source of source_list) {
       let form_check = document.createElement("div");
       form_check.className = "form-check";
       source_filtering.appendChild(form_check);
