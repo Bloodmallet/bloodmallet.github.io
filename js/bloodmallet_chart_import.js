@@ -900,7 +900,7 @@ function bloodmallet_chart_import() {
       // if it's an item try to add azerite ids and itemlevel
       if (link.indexOf("item") > -1) {
         if (data.hasOwnProperty("class_id") && data.hasOwnProperty("used_azerite_traits_per_item")) {
-          link += "/azerite-powers=";
+          link += "?azerite-powers=";
           link += data["class_id"];
           for (let i = 0; i < data["used_azerite_traits_per_item"][key].length; i++) {
             const trait = data["used_azerite_traits_per_item"][key][i];

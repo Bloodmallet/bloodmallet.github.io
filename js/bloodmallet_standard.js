@@ -1909,7 +1909,7 @@ function update_chart() {
 
         // add azerite power string portion
         if (data_view == "azerite_traits" && ["head", "shoulders", "chest"].includes(chosen_azerite_list_type)) {
-          string += "/azerite-powers=";
+          string += "?azerite-powers=";
           // add class id
           string += loaded_data[chosen_class][chosen_spec][data_name][fight_style]["class_id"];
           // add azerite traits
