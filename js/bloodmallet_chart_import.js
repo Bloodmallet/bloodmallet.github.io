@@ -890,6 +890,7 @@ function bloodmallet_chart_import() {
       try {
         let item_id = data["item_ids"][key];
         link += "item=" + item_id;
+        link += "/" + slugify(key);
       } catch (error) {
         if (dev_mode) {
           console.log(error);
@@ -920,6 +921,7 @@ function bloodmallet_chart_import() {
       try {
         let spell_id = data["spell_ids"][key];
         link += "spell=" + spell_id;
+        link += "/" + slugify(key);
       } catch (error) {
         if (dev_mode) {
           console.log(error);
@@ -991,6 +993,19 @@ function bloodmallet_chart_import() {
    */
   function requirements_error(chart) {
     chart.setTitle({ text: "Wrong chart setup" }, { text: "Missing 'data-wow-class' or 'data-wow-spec'. See <a href=\"https://github.com/Bloodmallet/bloodmallet.github.io/wiki/How-to-import-charts-or-data\">wiki</a>" });
+  }
+
+  /**
+   * All hail https://gist.github.com/mathewbyrne/1280286
+   * @param {*} text
+   */
+  function slugify(text) {
+    return text.toString().toLowerCase()
+      .replace(/\s+/g, '-')           // Replace spaces with -
+      .replace(/[^\w\-]+/g, '')       // Remove all non-word chars
+      .replace(/\-\-+/g, '-')         // Replace multiple - with single -
+      .replace(/^-+/, '')             // Trim - from start of text
+      .replace(/-+$/, '');            // Trim - from end of text
   }
 
   /**

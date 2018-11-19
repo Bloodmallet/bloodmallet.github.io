@@ -1846,6 +1846,9 @@ function update_chart() {
 
           link += portion_spell_id;
 
+          link += "/" + slugify(trait_name);
+
+
           link += "\" target=\"blank\"";
           if (whTooltips.iconizeLinks && !item_and_trait_equilizer[trait_name] && (name_portions.length === 1 || name_portions.length > 1 && name_portions.length - 1 > tmp_i)) {
             link += "class=\"chart_link\"";
@@ -1869,6 +1872,8 @@ function update_chart() {
 
           link += ".wowhead.com/spell=";
           link += loaded_data[chosen_class][chosen_spec][data_name][fight_style]["spell_ids"][item_and_trait_equilizer[trait_name]];
+
+          link += "/" + slugify(item_and_trait_equilizer[trait_name]);
 
           let translated_name = get_translated_name(item_and_trait_equilizer[trait_name]);
 
@@ -1906,6 +1911,9 @@ function update_chart() {
         }
 
         string += item_id;
+
+        // add slug name
+        string += "/" + slugify(item_name);
 
         // add azerite power string portion
         if (data_view == "azerite_traits" && ["head", "shoulders", "chest"].includes(chosen_azerite_list_type)) {
@@ -2211,6 +2219,19 @@ function get_maximum_step_of(data) {
 
 
 /**
+ * https://gist.github.com/mathewbyrne/1280286
+ * @param {*} text
+ */
+function slugify(text) {
+  return text.toString().toLowerCase()
+    .replace(/\s+/g, '-')           // Replace spaces with -
+    .replace(/[^\w\-]+/g, '')       // Remove all non-word chars
+    .replace(/\-\-+/g, '-')         // Replace multiple - with single -
+    .replace(/^-+/, '')             // Trim - from start of text
+    .replace(/-+$/, '');            // Trim - from end of text
+}
+
+/**
  * Function returns a filtered data object. Only key/values matching the global chosen_step_list are returned.
  * @param {json} data all available data for the item/spell
  */
@@ -2374,6 +2395,9 @@ function update_trait_stacking_chart() {
 
       link += portion_spell_id;
 
+      link += "/" + slugify(trait_name);
+
+
       link += "\" target=\"blank\"";
       if (whTooltips.iconizeLinks && !item_and_trait_equilizer[trait_name] && (name_portions.length === 1 || name_portions.length > 1 && name_portions.length - 1 > tmp_i)) {
         link += "class=\"chart_link\"";
@@ -2386,7 +2410,7 @@ function update_trait_stacking_chart() {
 
     }
 
-
+    // add equilized spell/effect
     if (item_and_trait_equilizer[trait_name]) {
       link += " / <br><div style=\"display:inline-block;\"><a href=\"https://";
 
@@ -2398,6 +2422,8 @@ function update_trait_stacking_chart() {
 
       link += ".wowhead.com/spell=";
       link += loaded_data[chosen_class][chosen_spec][data_view][fight_style]["spell_ids"][item_and_trait_equilizer[trait_name]];
+
+      link += "/" + slugify(item_and_trait_equilizer[trait_name]);
 
       let translated_name = get_translated_name(item_and_trait_equilizer[trait_name]);
 
