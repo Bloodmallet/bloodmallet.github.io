@@ -1929,9 +1929,13 @@ function update_chart() {
         }
         let ilevel = get_minimum_step_of(loaded_data[chosen_class][chosen_spec][data_name][fight_style]["data"][dps_ordered_data[i]]);
         if (data_view === "trinkets") {
-          string += "&ilvl=" + ilevel;
+          if (ilevel !== undefined) {
+            string += "&ilvl=" + ilevel;
+          }
         } else {
-          string += "&ilvl=" + ilevel.split("1_")[1];
+          if (ilevel !== undefined) {
+            string += "&ilvl=" + ilevel.split("1_")[1];
+          }
         }
 
         let translated_name = get_translated_name(item_name);
