@@ -1,17 +1,17 @@
 {
     "data": {
-        "Blood Elf": 15914,
-        "Draenei": 15890,
-        "Dwarf": 15874,
-        "Gnome": 15912,
-        "Goblin": 15876,
-        "Human": 15857,
-        "Night Elf": 15894,
-        "Orc": 15922,
-        "Tauren": 15859,
-        "Troll": 16002,
-        "Undead": 15978,
-        "Worgen": 15903
+        "Blood Elf": 16002,
+        "Draenei": 15981,
+        "Dwarf": 15956,
+        "Gnome": 16015,
+        "Goblin": 15983,
+        "Human": 15980,
+        "Night Elf": 15933,
+        "Orc": 16015,
+        "Tauren": 15980,
+        "Troll": 16036,
+        "Undead": 16050,
+        "Worgen": 15974
     },
     "data_type": "races",
     "languages": {
@@ -140,27 +140,27 @@
         "class": "death_knight",
         "fight_style": "patchwerk",
         "iterations": "20000",
-        "ptr": "0",
-        "simc_hash": "1c196f0365",
+        "ptr": "1",
+        "simc_hash": "9b3f94e66f",
         "spec": "unholy",
         "target_error": "0.2",
         "tier": "22"
     },
     "sorted_data_keys": [
-        "Troll",
         "Undead",
+        "Troll",
+        "Gnome",
         "Orc",
         "Blood Elf",
-        "Gnome",
-        "Worgen",
-        "Night Elf",
-        "Draenei",
         "Goblin",
-        "Dwarf",
+        "Draenei",
+        "Human",
         "Tauren",
-        "Human"
+        "Worgen",
+        "Dwarf",
+        "Night Elf"
     ],
-    "subtitle": "UTC 2018-11-24 12:35 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/1c196f0365\" target=\"blank\">1c196f0</a>",
-    "timestamp": "2018-11-24 12:35",
+    "subtitle": "UTC 2018-12-08 17:52 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/9b3f94e66f\" target=\"blank\">9b3f94e</a>",
+    "timestamp": "2018-12-08 17:52",
     "title": "Races | Unholy Death Knight | Patchwerk"
 }
