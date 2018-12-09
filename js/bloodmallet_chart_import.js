@@ -91,7 +91,7 @@ function bloodmallet_chart_import() {
    * The toggles you want are all above this section.
    */
 
-  const dev_mode = false;
+  const debug = false;
 
   const path_to_data = "https://bloodmallet.com/json/";
 
@@ -117,7 +117,7 @@ function bloodmallet_chart_import() {
    */
 
   this.init_charts = new function () {
-    if (dev_mode) {
+    if (debug) {
       console.log("init_charts");
     }
     // scan for divs / what data is wanted
@@ -151,19 +151,50 @@ function bloodmallet_chart_import() {
       if (html_element) {
 
         var state = {
-          data_entries: default_data_entries,
+          wow_class: undefined,
+          wow_spec: undefined,
           data_type: default_data_type,
           azerite_tier: default_azerite_tier,
           fight_style: default_fight_style,
+          // style
+          axis_color: default_axis_color,
           background_color: default_background_color,
           font_color: default_font_color,
-          axis_color: default_axis_color,
-          tooltip_engine: default_tooltip_engine,
+          // settings
+          data_entries: default_data_entries,
           chart_engine: default_chart_engine,
-          wow_class: undefined,
-          wow_spec: undefined,
+          tooltip_engine: default_tooltip_engine,
           language: default_language
         };
+
+        // Get general settings from in-page variable
+        try {
+          if (bloodmallet.style.axis_color !== undefined) {
+            state.axis_color = bloodmallet.style.axis_color;
+          }
+          if (bloodmallet.style.background_color !== undefined) {
+            state.background_color = bloodmallet.style.background_color;
+          }
+          if (bloodmallet.style.font_color !== undefined) {
+            state.font_color = bloodmallet.style.font_color;
+          }
+          if (bloodmallet.settings.entries !== undefined) {
+            state.data_entries = bloodmallet.settings.entries;
+          }
+          if (bloodmallet.settings.chart_engine !== undefined) {
+            state.chart_engine = bloodmallet.settings.chart_engine;
+          }
+          if (bloodmallet.settings.tooltip_engine !== undefined) {
+            state.tooltip_engine = bloodmallet.settings.tooltip_engine;
+          }
+          if (bloodmallet.settings.language !== undefined) {
+            state.language = bloodmallet.settings.language;
+          }
+        } catch (error) {
+          if (debug) {
+            console.log("Applying page wide settings failed.");
+          }
+        }
 
         // optional input
         if (html_element.getAttribute("data-entries")) {
@@ -256,7 +287,7 @@ function bloodmallet_chart_import() {
    * @param {string} fight_style simc baseline fight style
    */
   function load_data(state) {
-    if (dev_mode) {
+    if (debug) {
       console.log("load_data");
     }
 
@@ -271,7 +302,7 @@ function bloodmallet_chart_import() {
         return;
       }
     } catch (error) {
-      if (dev_mode) {
+      if (debug) {
         console.log("Data needs to be loaded.");
       }
     }
@@ -291,7 +322,7 @@ function bloodmallet_chart_import() {
     data_name += "_" + fight_style;
     data_name += ".json";
 
-    if (dev_mode) {
+    if (debug) {
       console.log("Fetching data from: " + path_to_data + data_group + "/" + data_name);
     }
 
@@ -315,7 +346,7 @@ function bloodmallet_chart_import() {
           }
 
           loaded_data[data_type][fight_style][wow_class][wow_spec] = json;
-          if (dev_mode) {
+          if (debug) {
             console.log(json);
             console.log("Load and save finished.");
           }
@@ -334,7 +365,7 @@ function bloodmallet_chart_import() {
    * Update a chart with data from bloodmallet.com
    */
   function update_chart(state, html_element, chart, count) {
-    if (dev_mode) {
+    if (debug) {
       console.log("update_charts");
     }
 
@@ -397,7 +428,7 @@ function bloodmallet_chart_import() {
       }
     }
 
-    if (dev_mode) {
+    if (debug) {
       console.log(dps_ordered_keys);
       console.log("Baseline dps: " + baseline_dps);
     }
@@ -425,7 +456,7 @@ function bloodmallet_chart_import() {
       category_list.push(get_category_name(state, dps_key, data));
     }
 
-    if (dev_mode) {
+    if (debug) {
       console.log(category_list);
     }
 
@@ -449,7 +480,7 @@ function bloodmallet_chart_import() {
     } else {
       var simulated_steps = data["simulated_steps"];
     }
-    if (dev_mode) {
+    if (debug) {
       console.log("simulated_steps: " + simulated_steps);
     }
 
@@ -592,7 +623,7 @@ function bloodmallet_chart_import() {
    * Function to help catch defered loaded jQuery.
    */
   function readd_wowdb_tooltips(chart_id) {
-    if (dev_mode) {
+    if (debug) {
       console.log("readd_wowdb_tooltips");
     }
     try {
@@ -608,7 +639,7 @@ function bloodmallet_chart_import() {
    * @param {json} data loaded data from bloodmallet.com for this chart
    */
   function get_category_name(state, key, data) {
-    if (dev_mode) {
+    if (debug) {
       console.log("get_category_name");
       console.log(key);
       console.log(data);
@@ -655,7 +686,7 @@ function bloodmallet_chart_import() {
         link += "item=" + item_id;
         link += "/" + slugify(key);
       } catch (error) {
-        if (dev_mode) {
+        if (debug) {
           console.log(error);
           console.log("We're probably looking at a spell.");
         }
@@ -686,7 +717,7 @@ function bloodmallet_chart_import() {
         link += "spell=" + spell_id;
         link += "/" + slugify(key);
       } catch (error) {
-        if (dev_mode) {
+        if (debug) {
           console.log(error);
           console.log("We're probably looking at an item.");
         }
@@ -704,7 +735,7 @@ function bloodmallet_chart_import() {
         let item_id = data["item_ids"][key];
         link += "items/" + item_id;
       } catch (error) {
-        if (dev_mode) {
+        if (debug) {
           console.log(error);
           console.log("We're probably looking at a spell.");
         }
@@ -734,7 +765,7 @@ function bloodmallet_chart_import() {
         let spell_id = data["spell_ids"][key];
         link += "spells/" + spell_id;
       } catch (error) {
-        if (dev_mode) {
+        if (debug) {
           console.log(error);
           console.log("We're probably looking at an item.");
         }
@@ -775,7 +806,7 @@ function bloodmallet_chart_import() {
    * Updates the style of the chart
    */
   function update_chart_style(state) {
-    if (dev_mode) {
+    if (debug) {
       console.log("update_chart_style");
     }
     if (state.chart_engine == "highcharts" || state.chart_engine == "highcharts_old") {
