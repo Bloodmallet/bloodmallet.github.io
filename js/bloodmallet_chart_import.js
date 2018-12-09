@@ -91,246 +91,9 @@ function bloodmallet_chart_import() {
    * The toggles you want are all above this section.
    */
 
-  var dev_mode = false;
+  const dev_mode = false;
 
-  var empty_chart = {
-    chart: {
-      type: "bar",
-      backgroundColor: default_background_color,
-      style: {
-        fontFamily: "-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\",\"Segoe UI Symbol\""
-      }
-    },
-    colors: bar_colors,
-    credits: {
-      href: "https://bloodmallet.com/",
-      text: "bloodmallet.com",
-      style: {
-        fontSize: font_size
-      }
-    },
-    legend: {
-      align: "right",
-      backgroundColor: default_background_color,
-      borderColor: default_axis_color,
-      borderWidth: 1,
-      floating: false,
-      itemMarginBottom: 3,
-      itemMarginTop: 0,
-      layout: 'vertical',
-      reversed: true,
-      shadow: false,
-      verticalAlign: "middle",
-      x: 0,
-      y: 0,
-      itemStyle: {
-        color: default_font_color,
-      },
-      itemHoverStyle: {
-        color: default_font_color,
-      },
-      title: {
-        text: " ",
-        style: {
-          color: default_font_color
-        }
-      },
-      symbolRadius: 0
-    },
-    plotOptions: {
-      bar: {
-        dataLabels: {
-          enabled: false,
-        },
-      },
-      series: {
-        stacking: "normal",
-        borderColor: default_background_color,
-        events: {
-          legendItemClick: function () { return false; }
-        },
-        style: {
-          textOutline: false,
-          fontSize: font_size,
-        }
-      }
-    },
-    series: [
-      {
-        color: default_font_color,
-        data: [
-          1,
-          1,
-          3,
-          1,
-          3
-        ],
-        name: "b main",
-        showInLegend: false
-      },
-      {
-        color: default_background_color,
-        data: [
-          0,
-          0,
-          0,
-          1,
-          0
-        ],
-        name: "b's emptiness",
-        showInLegend: false
-      }, {
-        color: default_font_color,
-        data: [
-          0,
-          0,
-          0,
-          1,
-          0
-        ],
-        name: "b's finishing touch",
-        showInLegend: false
-      }
-    ],
-    title: {
-      text: "Loading data...", //"Title placeholder",
-      useHTML: true,
-      style: {
-        color: default_font_color,
-        fontSize: font_size
-      }
-    },
-    subtitle: {
-      text: "...from <a href=\"https://bloodmallet.com\">bloodmallet</a>",
-      useHTML: true,
-      style: {
-        color: default_font_color,
-        fontSize: font_size
-      }
-    },
-    tooltip: {
-      formatter: function () {
-        let s = '<div style="margin: -4px -7px -7px -7px; padding: 3px 3px 6px 3px; background-color:';
-        s += default_background_color;
-        s += '"><div style=\"margin-left: 9px; margin-right: 9px; margin-bottom: 6px; font-weight: 700;\">';
-        s += this.x;
-        s += '</div>';
-        let cumulative_amount = 0;
-        for (var i = this.points.length - 1; i >= 0; i--) {
-          cumulative_amount += this.points[i].y;
-          if (this.points[i].y !== 0) {
-            s += '<div><span style=\"margin-left: 9px; border-left: 9px solid ' +
-              this.points[i].series.color + ';' +
-              ' padding-left: 4px;\">' +
-              this.points[i].series.name +
-              '</span>:&nbsp;&nbsp;' +
-              Intl.NumberFormat().format(cumulative_amount) +
-              "</div>";
-          }
-        }
-        s += '</div>';
-        return s;
-      },
-      headerFormat: "<b>{point.x}</b>",
-      shared: true,
-      backgroundColor: default_background_color,
-      borderColor: default_axis_color,
-      style: {
-        color: default_font_color,
-        fontSize: font_size,
-      },
-      useHTML: true,
-      // adding this as a potential tooltip positioning fix. changes tooltip position to be inside the bar rather than at the end
-      positioner: function (boxWidth, boxHeight, point) {
-        return {
-          x: point.plotX,
-          y: point.plotY
-        };
-      }
-    },
-    xAxis: {
-      categories: [
-        "",
-        "",
-        "",
-        "",
-        "",
-      ],
-      labels: {
-        useHTML: true,
-        style: {
-          color: default_font_color,
-          fontSize: font_size,
-        }
-      },
-      gridLineWidth: 0,
-      gridLineColor: default_axis_color,
-      lineColor: default_axis_color,
-      tickColor: default_axis_color
-    },
-    yAxis: [{
-      labels: {
-        //enabled: true,
-        style: {
-          color: default_axis_color
-        },
-      },
-      min: 0,
-      stackLabels: {
-        enabled: true,
-        formatter: function () {
-          return Intl.NumberFormat().format(this.total);
-        },
-        style: {
-          color: default_font_color,
-          textOutline: false,
-          fontSize: font_size,
-          fontWeight: "normal"
-        }
-      },
-      title: {
-        text: "\u0394 Damage per second",
-        style: {
-          color: default_axis_color
-        }
-      },
-      gridLineWidth: 1,
-      gridLineColor: default_axis_color
-    }, {
-      linkedTo: 0,
-      opposite: true,
-      labels: {
-        //enabled: true,
-        style: {
-          color: default_axis_color
-        },
-      },
-      min: 0,
-      stackLabels: {
-        enabled: true,
-        formatter: function () {
-          return Intl.NumberFormat().format(this.total);
-        },
-        style: {
-          color: default_font_color,
-          textOutline: false,
-          fontSize: font_size,
-          fontWeight: "normal"
-        }
-      },
-      title: {
-        text: "\u0394 Damage per second",
-        style: {
-          color: default_axis_color
-        }
-      },
-      gridLineWidth: 1,
-      gridLineColor: default_axis_color
-
-    }]
-  };
-
-  var path_to_data = "https://bloodmallet.com/json/";
+  const path_to_data = "https://bloodmallet.com/json/";
 
 
   /**
@@ -345,7 +108,7 @@ function bloodmallet_chart_import() {
    *    }
    *  }
    */
-  var loaded_data = {};
+  let loaded_data = {};
 
   /**
    *
@@ -821,21 +584,21 @@ function bloodmallet_chart_import() {
 
     // add wowdb tooltips, they don't check dynamically
     if (state.tooltip_engine == "wowdb") {
-      readd_wowdb_tooltips();
+      setTimeout(function () { readd_wowdb_tooltips(html_element.id); }, 1);
     }
   }
 
   /**
    * Function to help catch defered loaded jQuery.
    */
-  function readd_wowdb_tooltips() {
+  function readd_wowdb_tooltips(chart_id) {
     if (dev_mode) {
       console.log("readd_wowdb_tooltips");
     }
     try {
-      CurseTips['wowdb-tooltip'].watchElements(document.getElementsByTagName('a'));
+      CurseTips['wowdb-tooltip'].watchElements(document.getElementById(chart_id).getElementsByTagName('a'));
     } catch (error) {
-      setTimeout(readd_wowdb_tooltips, 200);
+      console.log("Setting wowdb (CurseTips) tooltips failed. Error: ", error);
     }
   }
 
@@ -1021,7 +784,243 @@ function bloodmallet_chart_import() {
       let axis_color = state.axis_color;
       let font_color = state.font_color;
 
-      let styled_chart = empty_chart;
+      let styled_chart = {
+        chart: {
+          type: "bar",
+          backgroundColor: default_background_color,
+          style: {
+            fontFamily: "-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\",\"Segoe UI Symbol\""
+          }
+        },
+        colors: bar_colors,
+        credits: {
+          href: "https://bloodmallet.com/",
+          text: "bloodmallet.com",
+          style: {
+            fontSize: font_size
+          }
+        },
+        legend: {
+          align: "right",
+          backgroundColor: default_background_color,
+          borderColor: default_axis_color,
+          borderWidth: 1,
+          floating: false,
+          itemMarginBottom: 3,
+          itemMarginTop: 0,
+          layout: 'vertical',
+          reversed: true,
+          shadow: false,
+          verticalAlign: "middle",
+          x: 0,
+          y: 0,
+          itemStyle: {
+            color: default_font_color,
+          },
+          itemHoverStyle: {
+            color: default_font_color,
+          },
+          title: {
+            text: " ",
+            style: {
+              color: default_font_color
+            }
+          },
+          symbolRadius: 0
+        },
+        plotOptions: {
+          bar: {
+            dataLabels: {
+              enabled: false,
+            },
+          },
+          series: {
+            stacking: "normal",
+            borderColor: default_background_color,
+            events: {
+              legendItemClick: function () { return false; }
+            },
+            style: {
+              textOutline: false,
+              fontSize: font_size,
+            }
+          }
+        },
+        series: [
+          {
+            color: default_font_color,
+            data: [
+              1,
+              1,
+              3,
+              1,
+              3
+            ],
+            name: "b main",
+            showInLegend: false
+          },
+          {
+            color: default_background_color,
+            data: [
+              0,
+              0,
+              0,
+              1,
+              0
+            ],
+            name: "b's emptiness",
+            showInLegend: false
+          }, {
+            color: default_font_color,
+            data: [
+              0,
+              0,
+              0,
+              1,
+              0
+            ],
+            name: "b's finishing touch",
+            showInLegend: false
+          }
+        ],
+        title: {
+          text: "Loading data...", //"Title placeholder",
+          useHTML: true,
+          style: {
+            color: default_font_color,
+            fontSize: font_size
+          }
+        },
+        subtitle: {
+          text: "...from <a href=\"https://bloodmallet.com\">bloodmallet</a>",
+          useHTML: true,
+          style: {
+            color: default_font_color,
+            fontSize: font_size
+          }
+        },
+        tooltip: {
+          formatter: function () {
+            let s = '<div style="margin: -4px -7px -7px -7px; padding: 3px 3px 6px 3px; background-color:';
+            s += default_background_color;
+            s += '"><div style=\"margin-left: 9px; margin-right: 9px; margin-bottom: 6px; font-weight: 700;\">';
+            s += this.x;
+            s += '</div>';
+            let cumulative_amount = 0;
+            for (var i = this.points.length - 1; i >= 0; i--) {
+              cumulative_amount += this.points[i].y;
+              if (this.points[i].y !== 0) {
+                s += '<div><span style=\"margin-left: 9px; border-left: 9px solid ' +
+                  this.points[i].series.color + ';' +
+                  ' padding-left: 4px;\">' +
+                  this.points[i].series.name +
+                  '</span>:&nbsp;&nbsp;' +
+                  Intl.NumberFormat().format(cumulative_amount) +
+                  "</div>";
+              }
+            }
+            s += '</div>';
+            return s;
+          },
+          headerFormat: "<b>{point.x}</b>",
+          shared: true,
+          backgroundColor: default_background_color,
+          borderColor: default_axis_color,
+          style: {
+            color: default_font_color,
+            fontSize: font_size,
+          },
+          useHTML: true,
+          // adding this as a potential tooltip positioning fix. changes tooltip position to be inside the bar rather than at the end
+          positioner: function (boxWidth, boxHeight, point) {
+            return {
+              x: point.plotX,
+              y: point.plotY
+            };
+          }
+        },
+        xAxis: {
+          categories: [
+            "",
+            "",
+            "",
+            "",
+            "",
+          ],
+          labels: {
+            useHTML: true,
+            style: {
+              color: default_font_color,
+              fontSize: font_size,
+            }
+          },
+          gridLineWidth: 0,
+          gridLineColor: default_axis_color,
+          lineColor: default_axis_color,
+          tickColor: default_axis_color
+        },
+        yAxis: [{
+          labels: {
+            //enabled: true,
+            style: {
+              color: default_axis_color
+            },
+          },
+          min: 0,
+          stackLabels: {
+            enabled: true,
+            formatter: function () {
+              return Intl.NumberFormat().format(this.total);
+            },
+            style: {
+              color: default_font_color,
+              textOutline: false,
+              fontSize: font_size,
+              fontWeight: "normal"
+            }
+          },
+          title: {
+            text: "\u0394 Damage per second",
+            style: {
+              color: default_axis_color
+            }
+          },
+          gridLineWidth: 1,
+          gridLineColor: default_axis_color
+        }, {
+          linkedTo: 0,
+          opposite: true,
+          labels: {
+            //enabled: true,
+            style: {
+              color: default_axis_color
+            },
+          },
+          min: 0,
+          stackLabels: {
+            enabled: true,
+            formatter: function () {
+              return Intl.NumberFormat().format(this.total);
+            },
+            style: {
+              color: default_font_color,
+              textOutline: false,
+              fontSize: font_size,
+              fontWeight: "normal"
+            }
+          },
+          title: {
+            text: "\u0394 Damage per second",
+            style: {
+              color: default_axis_color
+            }
+          },
+          gridLineWidth: 1,
+          gridLineColor: default_axis_color
+
+        }]
+      };
+
       // TODO: https://scotch.io/bar-talk/copying-objects-in-javascript
       // step 1: JSON.parse(JSON.stringify(obj))
       // step 2: get functions with Object.assign({}, obj)
