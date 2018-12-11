@@ -723,7 +723,16 @@ function bloodmallet_chart_import() {
         }
       }
 
-      link += "\">" + data["languages"][key][language_table[state.language]] + "</a>";
+      link += "\">";
+
+      try {
+
+        link += data["languages"][key][language_table[state.language]];
+      } catch (error) {
+        link += key;
+        console.log("Bloodmallet charts: Translation for " + key + " wasn't found. Please help improving the reasource at bloodmallet.com.");
+      }
+      link += "</a>";
 
       return link;
     }
@@ -774,7 +783,16 @@ function bloodmallet_chart_import() {
       element_string += link;
 
       element_string += "\" data-tooltip-href=\"";
-      element_string += link + "\">" + data["languages"][key][language_table[state.language]] + "</a>";
+      element_string += link + "\">";
+
+      try {
+
+        element_string += data["languages"][key][language_table[state.language]];
+      } catch (error) {
+        element_string += key;
+        console.log("Bloodmallet charts: Translation for " + key + " wasn't found. Please help improving the reasource at bloodmallet.com.");
+      }
+      element_string += "</a>";
 
       return element_string;
     }
