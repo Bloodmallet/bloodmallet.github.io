@@ -255,7 +255,7 @@ function bloodmallet_chart_import() {
           }
         } else if (state.chart_engine == "highcharts_old") {
           try {
-            tmp_styled_chart = styled_chart;
+            let tmp_styled_chart = styled_chart;
             tmp_styled_chart["chart"]["renderTo"] = html_id;
             new_chart = new Highcharts.Chart(tmp_styled_chart);
           } catch (error) {
@@ -449,7 +449,7 @@ function bloodmallet_chart_import() {
     }
 
     // update categories
-    category_list = [];
+    let category_list = [];
 
     for (let i = 0; i < dps_ordered_keys.length; i++) {
       let dps_key = dps_ordered_keys[i];
