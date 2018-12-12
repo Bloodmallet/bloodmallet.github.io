@@ -672,34 +672,16 @@ function bloodmallet_chart_import() {
 
     // wowhead
     if (state.tooltip_engine == "wowhead") {
-      let link = "<a href=\"https://";
+      let a = document.createElement("a");
+      a.href = "https://" + (state.language === "en" ? "www" : state.language) + ".wowhead.com/";
+      if (data.hasOwnProperty("item_ids") && data["item_ids"].hasOwnProperty(key)) {
+        a.href += "item=" + data["item_ids"][key] + "/" + slugify(key);
 
-      if (state.language === "en") {
-        link += "www";
-      } else {
-        link += state.language;
-      }
-
-      link += ".wowhead.com/";
-      try {
-        let item_id = data["item_ids"][key];
-        link += "item=" + item_id;
-        link += "/" + slugify(key);
-      } catch (error) {
-        if (debug) {
-          console.log(error);
-          console.log("We're probably looking at a spell.");
-        }
-      }
-
-      // if it's an item try to add azerite ids and itemlevel
-      if (link.indexOf("item") > -1) {
         if (data.hasOwnProperty("class_id") && data.hasOwnProperty("used_azerite_traits_per_item")) {
-          link += "?azerite-powers=";
-          link += data["class_id"];
+          a.href += "?azerite-powers=" + data["class_id"];
           for (let i = 0; i < data["used_azerite_traits_per_item"][key].length; i++) {
             const trait = data["used_azerite_traits_per_item"][key][i];
-            link += ":" + trait["id"];
+            a.href += ":" + trait["id"];
           }
         }
         let ilvl = data["simulated_steps"][data["simulated_steps"].length - 1];
@@ -709,32 +691,18 @@ function bloodmallet_chart_import() {
             ilvl = ilvl.split("_")[1];
           }
         }
-        link += "&ilvl=" + ilvl;
+        a.href += "&ilvl=" + ilvl;
+      } else if (data.hasOwnProperty("spell_ids") && data["spell_ids"].hasOwnProperty(key)) {
+        a.href += "spell=" + data["spell_ids"][key] + '/' + slugify(key);
       }
-
       try {
-        let spell_id = data["spell_ids"][key];
-        link += "spell=" + spell_id;
-        link += "/" + slugify(key);
+        a.appendChild(document.createTextNode(data.languages[key][language_table[state.language]]));
       } catch (error) {
-        if (debug) {
-          console.log(error);
-          console.log("We're probably looking at an item.");
-        }
-      }
-
-      link += "\">";
-
-      try {
-
-        link += data["languages"][key][language_table[state.language]];
-      } catch (error) {
-        link += key;
+        a.appendChild(document.createTextNode(key));
         console.log("Bloodmallet charts: Translation for " + key + " wasn't found. Please help improving the reasource at bloodmallet.com.");
       }
-      link += "</a>";
 
-      return link;
+      return a.outerHTML;
     }
 
     if (state.tooltip_engine == "wowdb") {
