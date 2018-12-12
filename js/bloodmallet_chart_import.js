@@ -949,28 +949,6 @@ function bloodmallet_chart_import() {
           }
         },
         tooltip: {
-          formatter: function () {
-            let s = '<div style="margin: -4px -7px -7px -7px; padding: 3px 3px 6px 3px; background-color:';
-            s += default_background_color;
-            s += '"><div style=\"margin-left: 9px; margin-right: 9px; margin-bottom: 6px; font-weight: 700;\">';
-            s += this.x;
-            s += '</div>';
-            let cumulative_amount = 0;
-            for (var i = this.points.length - 1; i >= 0; i--) {
-              cumulative_amount += this.points[i].y;
-              if (this.points[i].y !== 0) {
-                s += '<div><span style=\"margin-left: 9px; border-left: 9px solid ' +
-                  this.points[i].series.color + ';' +
-                  ' padding-left: 4px;\">' +
-                  this.points[i].series.name +
-                  '</span>:&nbsp;&nbsp;' +
-                  Intl.NumberFormat().format(cumulative_amount) +
-                  "</div>";
-              }
-            }
-            s += '</div>';
-            return s;
-          },
           headerFormat: "<b>{point.x}</b>",
           shared: true,
           backgroundColor: default_background_color,
