@@ -1063,29 +1063,41 @@ function bloodmallet_chart_import() {
       styled_chart.subtitle.style.color = font_color;
 
       styled_chart.tooltip.formatter = function () {
-        let s = '<div style="margin: -4px -7px -7px -7px; padding: 3px 3px 6px 3px; background-color:';
+        let container = document.createElement('div');
+        container.style.margin = '-4px -7px -7px -7px';
+        container.style.padding = '3px 3px 6px 3px';
+        container.style.backgroundColor = background_color;
         if (state.chart_engine === "highcharts_old") {
-          s = '<div style="margin: -7px; padding: 3px 3px 6px 3px; background-color:';
+            container.style.margin = '-7px';
         }
-        s += background_color;
-        s += '"><div style=\"margin-left: 9px; margin-right: 9px; margin-bottom: 6px; font-weight: 700;\">';
-        s += this.x;
-        s += '</div>';
+
+        let name_div = document.createElement('div');
+        container.appendChild(name_div);
+        name_div.style.marginLeft = '9px';
+        name_div.style.marginRight = '9px';
+        name_div.style.marginBottom = '6px';
+        name_div.style.fontWeight = '700';
+        name_div.innerHTML = this.x;
+
         let cumulative_amount = 0;
         for (var i = this.points.length - 1; i >= 0; i--) {
           cumulative_amount += this.points[i].y;
           if (this.points[i].y !== 0) {
-            s += '<div><span style=\"margin-left: 9px; border-left: 9px solid ' +
-              this.points[i].series.color + ';' +
-              ' padding-left: 4px;\">' +
-              this.points[i].series.name +
-              '</span>:&nbsp;&nbsp;' +
-              Intl.NumberFormat().format(cumulative_amount) +
-              "</div>";
+            let point_div = document.createElement('div');
+            container.appendChild(point_div);
+
+            let block_span = document.createElement('span');
+            point_div.appendChild(block_span);
+            block_span.style.marginLeft = '9px';
+            block_span.style.borderLeft = '9px solid ' + this.points[i].series.color;
+            block_span.style.paddingLeft = '4px';
+            block_span.innerHtml = this.points[i].series.name;
+
+            point_div.appendChild(document.createTextNode('\u00A0\u00A0' + Intl.NumberFormat().format(cumulative_amount)));
           }
         }
-        s += '</div>';
-        return s;
+
+        return container.outerHTML;
       };
       styled_chart.tooltip.backgroundColor = background_color;
       styled_chart.tooltip.borderColor = axis_color;
