@@ -706,11 +706,10 @@ function bloodmallet_chart_import() {
     }
 
     if (state.tooltip_engine == "wowdb") {
-      let element_string = "<a href=\"";
-      let link = "http://www.wowdb.com/";
+      let a = document.createElement('a');
+      a.href = "http://www.wowdb.com/";
       try {
-        let item_id = data["item_ids"][key];
-        link += "items/" + item_id;
+        a.href += "items/" + data["item_ids"][key]; // item id
       } catch (error) {
         if (debug) {
           console.log(error);
@@ -719,7 +718,7 @@ function bloodmallet_chart_import() {
       }
 
       // if it's an item try to add azerite ids and itemlevel
-      if (link.indexOf("items") > -1) {
+      if (a.href.indexOf("items") > -1) {
         let ilvl = data["simulated_steps"][data["simulated_steps"].length - 1];
         // fix special case of azerite items "1_340"
         if (typeof ilvl === 'string') {
@@ -727,20 +726,19 @@ function bloodmallet_chart_import() {
             ilvl = ilvl.split("_")[1];
           }
         }
-        link += "?itemLevel=" + ilvl;
+        a.href += "?itemLevel=" + ilvl;
         if (data.hasOwnProperty("class_id") && data.hasOwnProperty("used_azerite_traits_per_item")) {
-          link += "&azerite=";
-          link += data["class_id"] + ":0";
+          a.href += "&azerite=";
+          a.href += data["class_id"] + ":0";
           for (let i = 0; i < data["used_azerite_traits_per_item"][key].length; i++) {
             const trait = data["used_azerite_traits_per_item"][key][i];
-            link += ":" + trait["id"];
+            a.href += ":" + trait["id"];
           }
         }
       }
 
       try {
-        let spell_id = data["spell_ids"][key];
-        link += "spells/" + spell_id;
+        a.href += "spells/" + data["spell_ids"][key]; // spell id
       } catch (error) {
         if (debug) {
           console.log(error);
@@ -748,21 +746,17 @@ function bloodmallet_chart_import() {
         }
       }
 
-      element_string += link;
-
-      element_string += "\" data-tooltip-href=\"";
-      element_string += link + "\">";
+      a.dataset.tooltipHref = a.href;
 
       try {
 
-        element_string += data["languages"][key][language_table[state.language]];
+        a.appendChild(document.createTextNode(data["languages"][key][language_table[state.language]]));
       } catch (error) {
-        element_string += key;
+        a.appendChild(document.createTextNode(key));
         console.log("Bloodmallet charts: Translation for " + key + " wasn't found. Please help improving the reasource at bloodmallet.com.");
       }
-      element_string += "</a>";
 
-      return element_string;
+      return a.outerHTML;
     }
 
   }
@@ -1036,7 +1030,7 @@ function bloodmallet_chart_import() {
         container.style.padding = '3px 3px 6px 3px';
         container.style.backgroundColor = background_color;
         if (state.chart_engine === "highcharts_old") {
-            container.style.margin = '-7px';
+          container.style.margin = '-7px';
         }
 
         let name_div = document.createElement('div');
