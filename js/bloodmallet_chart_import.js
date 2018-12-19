@@ -255,7 +255,7 @@ function bloodmallet_chart_import() {
           }
         } else if (state.chart_engine == "highcharts_old") {
           try {
-            tmp_styled_chart = styled_chart;
+            let tmp_styled_chart = styled_chart;
             tmp_styled_chart["chart"]["renderTo"] = html_id;
             new_chart = new Highcharts.Chart(tmp_styled_chart);
           } catch (error) {
@@ -449,7 +449,7 @@ function bloodmallet_chart_import() {
     }
 
     // update categories
-    category_list = [];
+    let category_list = [];
 
     for (let i = 0; i < dps_ordered_keys.length; i++) {
       let dps_key = dps_ordered_keys[i];
@@ -672,34 +672,16 @@ function bloodmallet_chart_import() {
 
     // wowhead
     if (state.tooltip_engine == "wowhead") {
-      let link = "<a href=\"https://";
+      let a = document.createElement("a");
+      a.href = "https://" + (state.language === "en" ? "www" : state.language) + ".wowhead.com/";
+      if (data.hasOwnProperty("item_ids") && data["item_ids"].hasOwnProperty(key)) {
+        a.href += "item=" + data["item_ids"][key] + "/" + slugify(key);
 
-      if (state.language === "en") {
-        link += "www";
-      } else {
-        link += state.language;
-      }
-
-      link += ".wowhead.com/";
-      try {
-        let item_id = data["item_ids"][key];
-        link += "item=" + item_id;
-        link += "/" + slugify(key);
-      } catch (error) {
-        if (debug) {
-          console.log(error);
-          console.log("We're probably looking at a spell.");
-        }
-      }
-
-      // if it's an item try to add azerite ids and itemlevel
-      if (link.indexOf("item") > -1) {
         if (data.hasOwnProperty("class_id") && data.hasOwnProperty("used_azerite_traits_per_item")) {
-          link += "?azerite-powers=";
-          link += data["class_id"];
+          a.href += "?azerite-powers=" + data["class_id"];
           for (let i = 0; i < data["used_azerite_traits_per_item"][key].length; i++) {
             const trait = data["used_azerite_traits_per_item"][key][i];
-            link += ":" + trait["id"];
+            a.href += ":" + trait["id"];
           }
         }
         let ilvl = data["simulated_steps"][data["simulated_steps"].length - 1];
@@ -709,32 +691,18 @@ function bloodmallet_chart_import() {
             ilvl = ilvl.split("_")[1];
           }
         }
-        link += "&ilvl=" + ilvl;
+        a.href += "&ilvl=" + ilvl;
+      } else if (data.hasOwnProperty("spell_ids") && data["spell_ids"].hasOwnProperty(key)) {
+        a.href += "spell=" + data["spell_ids"][key] + '/' + slugify(key);
       }
-
       try {
-        let spell_id = data["spell_ids"][key];
-        link += "spell=" + spell_id;
-        link += "/" + slugify(key);
+        a.appendChild(document.createTextNode(data.languages[key][language_table[state.language]]));
       } catch (error) {
-        if (debug) {
-          console.log(error);
-          console.log("We're probably looking at an item.");
-        }
-      }
-
-      link += "\">";
-
-      try {
-
-        link += data["languages"][key][language_table[state.language]];
-      } catch (error) {
-        link += key;
+        a.appendChild(document.createTextNode(key));
         console.log("Bloodmallet charts: Translation for " + key + " wasn't found. Please help improving the reasource at bloodmallet.com.");
       }
-      link += "</a>";
 
-      return link;
+      return a.outerHTML;
     }
 
     if (state.tooltip_engine == "wowdb") {
@@ -949,28 +917,6 @@ function bloodmallet_chart_import() {
           }
         },
         tooltip: {
-          formatter: function () {
-            let s = '<div style="margin: -4px -7px -7px -7px; padding: 3px 3px 6px 3px; background-color:';
-            s += default_background_color;
-            s += '"><div style=\"margin-left: 9px; margin-right: 9px; margin-bottom: 6px; font-weight: 700;\">';
-            s += this.x;
-            s += '</div>';
-            let cumulative_amount = 0;
-            for (var i = this.points.length - 1; i >= 0; i--) {
-              cumulative_amount += this.points[i].y;
-              if (this.points[i].y !== 0) {
-                s += '<div><span style=\"margin-left: 9px; border-left: 9px solid ' +
-                  this.points[i].series.color + ';' +
-                  ' padding-left: 4px;\">' +
-                  this.points[i].series.name +
-                  '</span>:&nbsp;&nbsp;' +
-                  Intl.NumberFormat().format(cumulative_amount) +
-                  "</div>";
-              }
-            }
-            s += '</div>';
-            return s;
-          },
           headerFormat: "<b>{point.x}</b>",
           shared: true,
           backgroundColor: default_background_color,
@@ -1085,29 +1031,41 @@ function bloodmallet_chart_import() {
       styled_chart.subtitle.style.color = font_color;
 
       styled_chart.tooltip.formatter = function () {
-        let s = '<div style="margin: -4px -7px -7px -7px; padding: 3px 3px 6px 3px; background-color:';
+        let container = document.createElement('div');
+        container.style.margin = '-4px -7px -7px -7px';
+        container.style.padding = '3px 3px 6px 3px';
+        container.style.backgroundColor = background_color;
         if (state.chart_engine === "highcharts_old") {
-          s = '<div style="margin: -7px; padding: 3px 3px 6px 3px; background-color:';
+            container.style.margin = '-7px';
         }
-        s += background_color;
-        s += '"><div style=\"margin-left: 9px; margin-right: 9px; margin-bottom: 6px; font-weight: 700;\">';
-        s += this.x;
-        s += '</div>';
+
+        let name_div = document.createElement('div');
+        container.appendChild(name_div);
+        name_div.style.marginLeft = '9px';
+        name_div.style.marginRight = '9px';
+        name_div.style.marginBottom = '6px';
+        name_div.style.fontWeight = '700';
+        name_div.innerHTML = this.x;
+
         let cumulative_amount = 0;
         for (var i = this.points.length - 1; i >= 0; i--) {
           cumulative_amount += this.points[i].y;
           if (this.points[i].y !== 0) {
-            s += '<div><span style=\"margin-left: 9px; border-left: 9px solid ' +
-              this.points[i].series.color + ';' +
-              ' padding-left: 4px;\">' +
-              this.points[i].series.name +
-              '</span>:&nbsp;&nbsp;' +
-              Intl.NumberFormat().format(cumulative_amount) +
-              "</div>";
+            let point_div = document.createElement('div');
+            container.appendChild(point_div);
+
+            let block_span = document.createElement('span');
+            point_div.appendChild(block_span);
+            block_span.style.marginLeft = '9px';
+            block_span.style.borderLeft = '9px solid ' + this.points[i].series.color;
+            block_span.style.paddingLeft = '4px';
+            block_span.innerHtml = this.points[i].series.name;
+
+            point_div.appendChild(document.createTextNode('\u00A0\u00A0' + Intl.NumberFormat().format(cumulative_amount)));
           }
         }
-        s += '</div>';
-        return s;
+
+        return container.outerHTML;
       };
       styled_chart.tooltip.backgroundColor = background_color;
       styled_chart.tooltip.borderColor = axis_color;
