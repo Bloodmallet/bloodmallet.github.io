@@ -19,6 +19,8 @@ let chosen_spec = "";
 
 let fight_style = "patchwerk";
 
+let wow_version = "live";
+
 let dark_mode = true;
 
 let language = "EN";
@@ -89,6 +91,11 @@ const fight_style_IDs = [
   "fight_style_patchwerk",
   // "fight_style_beastlord",
   "fight_style_hecticaddcleave",
+];
+
+const version_IDs = [
+  "version_live",
+  "version_ptr"
 ];
 
 const light_color = "#eeeeee";
@@ -639,10 +646,26 @@ function addFightStyleClickEvent(elementId, new_fight_style) {
   });
 }
 
+/**
+ * Apply click events for data manipulation.
+ */
+function addWowVersionClickEvent(elementId, new_wow_version) {
+  try {
+    document.getElementById(elementId).addEventListener("click", function () {
+      wow_version = new_wow_version;
+      push_state();
+    });
+  } catch (error) {
+    // Buttons weren't found in page.
+  }
+}
+
 document.addEventListener("DOMContentLoaded", function () {
   try {
     addFightStyleClickEvent("fight_style_patchwerk", "patchwerk");
     addFightStyleClickEvent("fight_style_hecticaddcleave", "hecticaddcleave");
+    addWowVersionClickEvent("version_live", "live");
+    addWowVersionClickEvent("version_ptr", "ptr");
 
     document.getElementById("copy_link").addEventListener("click", function () {
       copy_link();
@@ -690,6 +713,9 @@ async function get_data_from_link() {
   } else {
     combined_class_spec = hash.slice(1);
   }
+  if (hash.indexOf("&") > -1) {
+    combined_class_spec = combined_class_spec.slice(0, hash.indexOf("&") - 1);
+  }
   if (combined_class_spec) {
     if (combined_class_spec.indexOf("death_knight") > -1 || combined_class_spec.indexOf("demon_hunter") > -1) {
       chosen_class = combined_class_spec.slice(0, combined_class_spec.lastIndexOf("_"));
@@ -700,13 +726,16 @@ async function get_data_from_link() {
     }
   }
 
-  if (hash.indexOf("?") === -1) {
+  if (hash.indexOf("?") === -1 && hash.indexOf("&") === -1) {
     // rather early exit if no params were provided
     return;
   }
 
-  const params = hash.split("?")[1].split("&");
-
+  if (hash.indexOf("?") === -1) {
+    var params = hash.split("&");
+  } else {
+    var params = hash.split("?")[1].split("&");
+  }
   for (const param of params) {
     const key = param.split("=")[0];
     const value = param.split("=")[1];
@@ -715,6 +744,8 @@ async function get_data_from_link() {
       fight_style = value;
     } else if (key === "lang") {
       await switch_language(value);
+    } else if (key === "version") {
+      wow_version = value;
     }
   }
 
@@ -735,22 +766,29 @@ async function load_data() {
 
   // necessary to be able to save traits, head, shoulders and chest separately
   var data_name = data_view;
-  if (!loaded_data[chosen_class]) {
-    loaded_data[chosen_class] = {};
+  if (!loaded_data[wow_version]) {
+    loaded_data[wow_version] = {};
   }
-  if (!loaded_data[chosen_class][chosen_spec]) {
-    loaded_data[chosen_class][chosen_spec] = {};
+  if (!loaded_data[wow_version][chosen_class]) {
+    loaded_data[wow_version][chosen_class] = {};
   }
-  if (!loaded_data[chosen_class][chosen_spec][data_name]) {
-    loaded_data[chosen_class][chosen_spec][data_name] = {};
+  if (!loaded_data[wow_version][chosen_class][chosen_spec]) {
+    loaded_data[wow_version][chosen_class][chosen_spec] = {};
   }
-  if (!loaded_data[chosen_class][chosen_spec][data_name][fight_style]) {
-    var file_name = chosen_class + "_" + chosen_spec;
+  if (!loaded_data[wow_version][chosen_class][chosen_spec][data_name]) {
+    loaded_data[wow_version][chosen_class][chosen_spec][data_name] = {};
+  }
+  if (!loaded_data[wow_version][chosen_class][chosen_spec][data_name][fight_style]) {
+    var file_name = chosen_class + "_" + chosen_spec + "_" + fight_style;
 
-    file_name += "_" + fight_style + ".json";
+    if (wow_version === "ptr") {
+      file_name += "_ptr";
+    }
+
+    file_name += ".json";
     let response = await fetch(`./json/${data_view}/${file_name}`);
     try {
-      loaded_data[chosen_class][chosen_spec][data_name][fight_style] = await response.json();
+      loaded_data[wow_version][chosen_class][chosen_spec][data_name][fight_style] = await response.json();
     } catch (error) {
       return;
     }
@@ -857,6 +895,18 @@ function update_fight_style_buttons() {
   });
   // set "active" to class color
   document.getElementById("fight_style_" + fight_style).classList.add(chosen_class + "-border-bottom");
+
+  try {
+    // reset buttons to standard visual
+    version_IDs.forEach(element => {
+      document.getElementById(element).className = "btn-data " + chosen_class + "-button";
+    });
+    // set "active" to class color
+    document.getElementById("version_" + wow_version).classList.add(chosen_class + "-border-bottom");
+  } catch (error) {
+    // Buttons aren't present in page
+  }
+
 }
 
 /**
@@ -912,7 +962,7 @@ function update_table() {
   // set title and subtitle
   let new_title = "";
 
-  let timestamp = loaded_data[chosen_class][chosen_spec][data_name][fight_style]["timestamp"];
+  let timestamp = loaded_data[wow_version][chosen_class][chosen_spec][data_name][fight_style]["timestamp"];
   let year = timestamp.split("-")[0];
   let month = timestamp.split("-")[1];
   let day = timestamp.split("-")[2].split(" ")[0];
@@ -931,11 +981,11 @@ function update_table() {
 
   document.getElementById("chart_title").innerHTML = new_title;
   document.getElementById("chart_subtitle").innerHTML = subtitle;
-  document.getElementById("chart_simc_hash").innerHTML = `SimulationCraft build: <a href=\"https://github.com/simulationcraft/simc/commit/${loaded_data[chosen_class][chosen_spec][data_name][fight_style]["simc_settings"]["simc_hash"]}\" target=\"blank\">#${loaded_data[chosen_class][chosen_spec][data_name][fight_style]["simc_settings"]["simc_hash"].substring(0, 5)}</a>`;
+  document.getElementById("chart_simc_hash").innerHTML = `SimulationCraft build: <a href=\"https://github.com/simulationcraft/simc/commit/${loaded_data[wow_version][chosen_class][chosen_spec][data_name][fight_style]["simc_settings"]["simc_hash"]}\" target=\"blank\">#${loaded_data[wow_version][chosen_class][chosen_spec][data_name][fight_style]["simc_settings"]["simc_hash"].substring(0, 5)}</a>`;
 
 
   // manage data
-  let data = loaded_data[chosen_class][chosen_spec][data_name][fight_style];
+  let data = loaded_data[wow_version][chosen_class][chosen_spec][data_name][fight_style];
 
   let key_list = [];
 
@@ -1073,14 +1123,20 @@ function get_talent_name(name, row_column) {
 
   let s = "<a href=\"https://";
 
-  if (language === "EN") {
+  if (wow_version === "ptr") {
+    s += "ptr";
+  } else if (language === "EN") {
     s += "www";
   } else {
     s += language.toLowerCase();
   }
   s += ".wowhead.com/spell=";
-  s += loaded_data[chosen_class][chosen_spec][data_view][fight_style]["talent_data"][row_column.slice(0, 1)][row_column.slice(1, 2)]["spell_id"];
-  s += "\">";
+  s += loaded_data[wow_version][chosen_class][chosen_spec][data_view][fight_style]["talent_data"][row_column.slice(0, 1)][row_column.slice(1, 2)]["spell_id"];
+  s += "\"";
+  if (wow_version === "ptr") {
+    s += " data-wowhead=\"domain=ptr\"";
+  }
+  s += ">";
   s += get_translated_name(name);
   s += "</a>";
 
@@ -1090,7 +1146,7 @@ function get_talent_name(name, row_column) {
 function get_lowest_gain(row_column) {
   let row = row_column.slice(0, 1);
   let column = row_column.slice(1, 2);
-  let data = loaded_data[chosen_class][chosen_spec][data_view][fight_style];
+  let data = loaded_data[wow_version][chosen_class][chosen_spec][data_view][fight_style];
   let gain = 100.0;
   let talent_combination = "";
   for (let name of data["sorted_data_keys"]) {
@@ -1109,7 +1165,7 @@ function get_lowest_gain(row_column) {
 function get_highest_gain(row_column) {
   let row = row_column.slice(0, 1);
   let column = row_column.slice(1, 2);
-  let data = loaded_data[chosen_class][chosen_spec][data_view][fight_style];
+  let data = loaded_data[wow_version][chosen_class][chosen_spec][data_view][fight_style];
   let gain = -100.0;
   let talent_combination = "";
   for (let name of data["sorted_data_keys"]) {
@@ -1130,7 +1186,7 @@ function get_average_gain(row_column) {
     console.log("get_average_gain");
   }
 
-  let data = loaded_data[chosen_class][chosen_spec][data_view][fight_style];
+  let data = loaded_data[wow_version][chosen_class][chosen_spec][data_view][fight_style];
 
   let talent_combinations = [];
   for (let talent_combination of data["sorted_data_keys"]) {
@@ -1198,7 +1254,7 @@ function get_translated_name(name) {
 
   let return_name = "";
   try {
-    return_name = loaded_data[chosen_class][chosen_spec][data_name][fight_style]["languages"][name][language_table[language]];
+    return_name = loaded_data[wow_version][chosen_class][chosen_spec][data_name][fight_style]["languages"][name][language_table[language]];
   } catch (error) {
     if (debug) {
       console.log(`No translation for ${name} found.`);
@@ -1275,6 +1331,9 @@ function create_link() {
   if (language !== "EN") {
     path += "&lang=" + language;
   }
+  if (wow_version !== "live") {
+    path += "&version=" + wow_version;
+  }
 
   return path;
 }
@@ -1333,7 +1392,7 @@ function update_chart() {
   }
 
   let data_name = data_view;
-  var dps_ordered_data = loaded_data[chosen_class][chosen_spec][data_name][fight_style]["sorted_data_keys"].slice();
+  var dps_ordered_data = loaded_data[wow_version][chosen_class][chosen_spec][data_name][fight_style]["sorted_data_keys"].slice();
 
   // change item/spell names to wowhead links
   standard_chart.update({
@@ -1350,7 +1409,7 @@ function update_chart() {
 
   let dps_values = [];
   for (let category of dps_ordered_data) {
-    dps_values.push(loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"][category]);
+    dps_values.push(loaded_data[wow_version][chosen_class][chosen_spec][data_view][fight_style]["data"][category]);
   }
 
   standard_chart.addSeries({
