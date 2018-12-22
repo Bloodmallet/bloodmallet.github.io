@@ -1217,11 +1217,11 @@ function get_class_color(dps_increase) {
     console.log("get_class_color");
   }
 
-  if (dps_increase < 3.0) {
+  if (dps_increase < 5.0) {
     return "mage-color";
-  } else if (dps_increase > 5.0 && dps_increase <= 7.0) {
+  } else if (dps_increase > 10.0 && dps_increase <= 12.0) {
     return "druid-color";
-  } else if (dps_increase > 7.0) {
+  } else if (dps_increase > 12.0) {
     return "death_knight-color";
   } else {
     return "monk-color";
