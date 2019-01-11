@@ -946,7 +946,7 @@ async function switch_language(new_language) {
 
   // if new language is different to already active language and if it wasn't already loaded
   if (!loaded_languages[new_language]) {
-    let response = await fetch(`./translations/${new_language.toLowerCase()}.json`);
+    let response = await fetch(`./translations/${new_language.toLowerCase()}.json`, { cache: "no-cache" });
     loaded_languages[new_language] = await response.json();
   }
   language = new_language;
@@ -1238,7 +1238,7 @@ async function load_data() {
     }
 
     file_name += "_" + fight_style + ".json";
-    let response = await fetch(`./json/${data_view}/${file_name}`);
+    let response = await fetch(`./json/${data_view}/${file_name}`, { cache: "no-cache" });
     try {
       loaded_data[chosen_class][chosen_spec][data_name][fight_style] = await response.json();
     } catch (error) {
