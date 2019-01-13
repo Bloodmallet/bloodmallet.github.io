@@ -1856,7 +1856,10 @@ function update_chart() {
           link += ">" + get_translated_name(name_portion.trim()) + "</a></div>";
 
           if (name_portions.length > 1 && tmp_i < name_portions.length - 1) {
-            link += "<br/>+";
+            if (tmp_i % 3 === 0 || tmp_i === 0) {
+              link += "<br/>";
+            }
+            link += "+";
           }
         }
 
@@ -2409,7 +2412,10 @@ function update_trait_stacking_chart() {
       link += ">" + get_translated_name(name_portion.trim()) + "</a></div>";
 
       if (name_portions.length > 1 && tmp_i < name_portions.length - 1) {
-        link += "<br/>+";
+        if (tmp_i % 3 === 0 || tmp_i === 0) {
+          link += "<br/>";
+        }
+        link += "+";
       }
 
     }
