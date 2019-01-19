@@ -520,7 +520,7 @@ a.priest-background:hover, button.priest-background:hover, .priest-background a:
   border-bottom: 3px solid transparent;
   transition: border-bottom .05s ease-in;
 }
-.priest-menu-border:hover{
+.priest-menu-border:hover {
   border-bottom: 3px solid #ffffff;
   transition: border-bottom .0s ease-in;
 }
@@ -899,4 +899,11 @@ span a.chart_link {
 }
 .anti-icon-space a.chart_link {
   padding-right: 4px;
+}
+a.disabled:not([href]) {
+  cursor: not-allowed;
+  color: #999;
+}
+a.disabled:hover:not([href]) {
+  color: #999;
 }
