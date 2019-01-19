@@ -328,7 +328,7 @@ function bloodmallet_chart_import() {
 
 
     let request = new XMLHttpRequest();
-    request.open("GET", path_to_data + data_group + "/" + data_name, true); // async request
+    request.open("GET", path_to_data + data_group + "/" + data_name + "?" + (new Date()).getTime(), true); // async request
 
     request.onload = function (e) {
       if (request.readyState === 4) {
