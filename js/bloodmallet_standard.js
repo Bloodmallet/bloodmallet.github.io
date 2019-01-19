@@ -1242,6 +1242,13 @@ async function load_data() {
     try {
       loaded_data[chosen_class][chosen_spec][data_name][fight_style] = await response.json();
     } catch (error) {
+      let warner = document.getElementById("data_introduction");
+      warner.style.color = "red";
+      warner.appendChild(document.createTextNode("WARNING! No data was found for your link! Please click here: "));
+      let link = document.createElement("a");
+      link.href = "https://bloodmallet.com";
+      link.appendChild(document.createTextNode("bloodmallet.com"));
+      warner.appendChild(link);
       return;
     }
   }
@@ -1656,7 +1663,11 @@ function update_nav() {
     const element = nav_items[index];
     element.classList.remove("active");
   }
-  document.getElementsByClassName("translate_" + chosen_class)[0].classList.add("active");
+  try {
+    document.getElementsByClassName("translate_" + chosen_class)[0].classList.add("active");
+  } catch (error) {
+    //
+  }
 }
 
 /**
@@ -2653,7 +2664,11 @@ function update_page_content() {
     element.hidden = true;
   }
   // show appropriate tc box
-  document.getElementById("tc_" + chosen_class + "_" + chosen_spec).hidden = false;
+  try {
+    document.getElementById("tc_" + chosen_class + "_" + chosen_spec).hidden = false;
+  } catch (error) {
+    //
+  }
 }
 
 /**
@@ -3183,5 +3198,9 @@ document.addEventListener("DOMContentLoaded", async function () {
   if (chosen_spec !== "") {
     switch_mode();
   }
+
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  })
 
 });
