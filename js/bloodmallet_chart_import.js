@@ -493,6 +493,8 @@ function bloodmallet_chart_import() {
 
         for (let i = 0; i < dps_ordered_keys.length; i++) {
           simulation_step = simulated_steps[simulation_step_position];
+          // create copy of simulated_steps to work with internally (some traits don't have the max simulated_step)
+          let tmp_simulation_steps = simulated_steps.slice();
           let dps_key = dps_ordered_keys[i];
 
           let dps_key_values = data["data"][dps_key];
@@ -522,6 +524,12 @@ function bloodmallet_chart_import() {
             }
             max_step = max_step.replace("1_", "");
 
+            // fix tmp_simulation_steps to match this trait
+            tmp_simulation_steps = [];
+            for (step of simulated_steps) {
+              tmp_simulation_steps.push(step.split("_")[0] + "_" + max_step);
+            }
+
             // reset baseline dps to max available simulation step
             baseline_dps = data["data"]["baseline"]["1_" + max_step];
 
@@ -544,13 +552,12 @@ function bloodmallet_chart_import() {
             } else { // else substract lower simulation_step value of same item
 
               // if lower simulation_step is zero we have to assume that this item needs to be compared now to the baseline
-              if (dps_key_values[simulated_steps[String(Number(simulation_step_position) + 1)]] == 0 || !(simulated_steps[String(Number(simulation_step_position) + 1)] in dps_key_values)) {
-
+              if (dps_key_values[tmp_simulation_steps[String(Number(simulation_step_position) + 1)]] === 0 || !(tmp_simulation_steps[String(Number(simulation_step_position) + 1)] in dps_key_values)) {
                 dps_array.push(dps_key_values[simulation_step] - baseline_dps);
 
               } else { // standard case, next simulation_step is not zero and can be used to substract from the current value
 
-                dps_array.push(dps_key_values[simulation_step] - dps_key_values[simulated_steps[String(Number(simulation_step_position) + 1)]]);
+                dps_array.push(dps_key_values[simulation_step] - dps_key_values[tmp_simulation_steps[String(Number(simulation_step_position) + 1)]]);
               }
 
             }
