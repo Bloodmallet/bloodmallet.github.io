@@ -526,7 +526,7 @@ function bloodmallet_chart_import() {
 
             // fix tmp_simulation_steps to match this trait
             tmp_simulation_steps = [];
-            for (step of simulated_steps) {
+            for (let step of simulated_steps) {
               tmp_simulation_steps.push(step.split("_")[0] + "_" + max_step);
             }
 
