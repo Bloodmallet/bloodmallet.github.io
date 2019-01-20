@@ -2467,6 +2467,7 @@ function update_trait_stacking_chart() {
     }
   }, false);
 
+  // manipulate title and other page elements
   let timestamp = loaded_data[chosen_class][chosen_spec][data_view][fight_style]["timestamp"];
   let year = timestamp.split("-")[0];
   let month = timestamp.split("-")[1];
@@ -2504,26 +2505,31 @@ function update_trait_stacking_chart() {
     let stack_name = stack_count + "_" + max_itemlevel;
     let itemlevel_dps_values = [];
 
-    if (debug)
+    if (debug) {
       console.log("handling stack_name " + stack_name);
+    }
 
     // create series input for highcharts
-    for (data of dps_ordered_data) {
+    for (let data of dps_ordered_data) {
 
-      let dps = loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"][data][stack_name];
+      let traits_information = loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"];
 
-      let baseline_dps = loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"]["baseline"]["1_" + max_itemlevel];
+      let baseline_dps = traits_information["baseline"]["1_" + max_itemlevel];
+
+      let dps = traits_information[data][stack_name];
 
       // if a trait doesn't have values at the highest simulated itemlevel, get their max available itemlevel dps
+      let tmp_max_step = max_itemlevel;
       if (!dps) {
         let simulation_steps = loaded_data[chosen_class][chosen_spec][data_view][fight_style]["simulated_steps"];
         for (let i = 0; i < simulation_steps.length; i++) {
           const step = simulation_steps[i];
           if (!dps) {
             // set dps only once
-            if (loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"][data][step]) {
-              dps = loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"][data][step];
-              baseline_dps = loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"]["baseline"][step];
+            if (traits_information[data][step]) {
+              tmp_max_step = step.split("_")[1];
+              dps = traits_information[data][stack_count + "_" + step.split("_")[1]];
+              baseline_dps = traits_information["baseline"]["1_" + step.split("_")[1]];
             }
           }
         }
@@ -2545,16 +2551,16 @@ function update_trait_stacking_chart() {
         } else { // else substract lower itemlevel value of same trait
 
           if (chosen_value_style === "absolute_gain") {
-            itemlevel_dps_values.push(dps - loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"][data][stack_count - 1 + "_" + max_itemlevel]);
+            itemlevel_dps_values.push(dps - traits_information[data][stack_count - 1 + "_" + tmp_max_step]);
           } else if (chosen_value_style === "relative_gain") {
-            itemlevel_dps_values.push(Math.round((dps - loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"][data][stack_count - 1 + "_" + max_itemlevel]) * 10000 / baseline_dps) / 100);
+            itemlevel_dps_values.push(Math.round((dps - traits_information[data][stack_count - 1 + "_" + tmp_max_step]) * 10000 / baseline_dps) / 100);
           } else if (chosen_value_style === "absolute_value") {
-            itemlevel_dps_values.push(dps - loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"][data][stack_count - 1 + "_" + max_itemlevel]);
+            itemlevel_dps_values.push(dps - traits_information[data][stack_count - 1 + "_" + tmp_max_step]);
           }
         }
 
       } else {
-        if (stack_name in loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"][data]) {
+        if (stack_name in traits_information[data]) {
           if (chosen_value_style === "absolute_gain") {
             itemlevel_dps_values.push(dps);
           } else if (chosen_value_style === "relative_gain") {
