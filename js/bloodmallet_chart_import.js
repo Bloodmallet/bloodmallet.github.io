@@ -435,9 +435,10 @@ function bloodmallet_chart_import() {
 
 
     // set title and subtitle
-    chart.setTitle({
-      text: data["title"]
-    }, {
+    chart.setTitle(
+      {
+        text: data["title"]
+      }, {
         text: data["subtitle"]
       },
       false
@@ -471,45 +472,46 @@ function bloodmallet_chart_import() {
       chart.xAxis[0].setCategories(category_list, false);
     }
 
+    let simulated_steps = [];
     if (data_type == "azerite_traits_stacking") {
       let base_ilevel = data["simulated_steps"][0].replace("1_", "");
-      var simulated_steps = [];
       simulated_steps.push("3_" + base_ilevel);
       simulated_steps.push("2_" + base_ilevel);
       simulated_steps.push("1_" + base_ilevel);
     } else {
-      var simulated_steps = data["simulated_steps"];
+      simulated_steps = data["simulated_steps"];
     }
     if (debug) {
       console.log("simulated_steps: " + simulated_steps);
     }
 
     if (simulated_steps) {
-      for (let itemlevel_position = 0; itemlevel_position < simulated_steps.length; itemlevel_position++) {
+      for (let simulation_step_position = 0; simulation_step_position < simulated_steps.length; simulation_step_position++) {
 
-        let itemlevel = simulated_steps[itemlevel_position];
+        let simulation_step = simulated_steps[simulation_step_position];
         var dps_array = [];
 
         for (let i = 0; i < dps_ordered_keys.length; i++) {
-          itemlevel = simulated_steps[itemlevel_position];
+          simulation_step = simulated_steps[simulation_step_position];
           let dps_key = dps_ordered_keys[i];
 
           let dps_key_values = data["data"][dps_key];
 
           baseline_dps = data["data"]["baseline"][data["simulated_steps"][data["simulated_steps"].length - 1]];
 
-          // use max itemlevel for the trait stacking chart
+          // use max simulation_step for the trait stacking chart
           if (data_type === "azerite_traits_stacking") {
             baseline_dps = data["data"]["baseline"][data["simulated_steps"][0]];
           }
 
-          // special handling of azerite_stacking chart to account for traits not simmed at max itemlevel or without max stacks
-          if (data_type === "azerite_traits_stacking" && dps_key_values[itemlevel] === undefined) {
+          // special handling of azerite_stacking chart to account for traits not simmed at max simulation_step or without max stacks
+          if (data_type === "azerite_traits_stacking" && dps_key_values[simulation_step] === undefined) {
 
             // find max available simulated step instead
             let available_steps = data["simulated_steps"];
             let max_step = undefined;
 
+            // comparing descending simulated_steps until we find the highest possible simulated_step
             for (let broken_id = 0; broken_id < available_steps.length; broken_id++) {
 
               const available_step = available_steps[broken_id];
@@ -523,55 +525,55 @@ function bloodmallet_chart_import() {
             // reset baseline dps to max available simulation step
             baseline_dps = data["data"]["baseline"]["1_" + max_step];
 
-            // reset itemlevel to the actually available itemlevel
-            itemlevel = itemlevel.split("_")[0] + "_" + max_step;
+            // reset simulation_step to the actually available simulation_step
+            simulation_step = simulation_step.split("_")[0] + "_" + max_step;
           }
 
           // check for zero dps values and don't change them
-          if (Number(dps_key_values[itemlevel]) > 0) {
+          if (Number(dps_key_values[simulation_step]) > 0) {
 
-            // if lowest itemlevel is looked at, substract baseline
-            if (itemlevel_position == simulated_steps.length - 1) {
+            // if lowest simulation_step is looked at, substract baseline
+            if (simulation_step_position == simulated_steps.length - 1) {
 
-              if (itemlevel in dps_key_values) {
-                dps_array.push(dps_key_values[itemlevel] - baseline_dps);
+              if (simulation_step in dps_key_values) {
+                dps_array.push(dps_key_values[simulation_step] - baseline_dps);
               } else {
                 dps_array.push(0);
               }
 
-            } else { // else substract lower itemlevel value of same item
+            } else { // else substract lower simulation_step value of same item
 
-              // if lower itemlevel is zero we have to assume that this item needs to be compared now to the baseline
-              if (dps_key_values[simulated_steps[String(Number(itemlevel_position) + 1)]] == 0 || !(simulated_steps[String(Number(itemlevel_position) + 1)] in dps_key_values)) {
+              // if lower simulation_step is zero we have to assume that this item needs to be compared now to the baseline
+              if (dps_key_values[simulated_steps[String(Number(simulation_step_position) + 1)]] == 0 || !(simulated_steps[String(Number(simulation_step_position) + 1)] in dps_key_values)) {
 
-                dps_array.push(dps_key_values[itemlevel] - baseline_dps);
+                dps_array.push(dps_key_values[simulation_step] - baseline_dps);
 
-              } else { // standard case, next itemlevel is not zero and can be used to substract from the current value
+              } else { // standard case, next simulation_step is not zero and can be used to substract from the current value
 
-                dps_array.push(dps_key_values[itemlevel] - dps_key_values[simulated_steps[String(Number(itemlevel_position) + 1)]]);
+                dps_array.push(dps_key_values[simulation_step] - dps_key_values[simulated_steps[String(Number(simulation_step_position) + 1)]]);
               }
 
             }
 
           } else {
-            if (itemlevel in dps_key_values) {
-              dps_array.push(dps_key_values[itemlevel]);
+            if (simulation_step in dps_key_values) {
+              dps_array.push(dps_key_values[simulation_step]);
             } else {
               dps_array.push(0);
             }
           }
         }
 
-        let itemlevel_clean = itemlevel;
+        let simulation_step_clean = simulation_step;
         if (["azerite_items_chest", "azerite_items_head", "azerite_items_shoulders", "azerite_traits_itemlevel"].indexOf(data_type) > -1) {
-          itemlevel_clean = itemlevel.split("_")[1];
+          simulation_step_clean = simulation_step.split("_")[1];
         } else if (data_type === "azerite_traits_stacking") {
-          itemlevel_clean = itemlevel.split("_")[0];
+          simulation_step_clean = simulation_step.split("_")[0];
         }
 
         chart.addSeries({
           data: dps_array,
-          name: itemlevel_clean,
+          name: simulation_step_clean,
           showInLegend: true
         }, false);
 
