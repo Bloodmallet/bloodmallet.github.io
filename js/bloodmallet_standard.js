@@ -2422,13 +2422,17 @@ function update_trait_stacking_chart() {
 
 
       link += "\" target=\"blank\"";
-      if (whTooltips.iconizeLinks && !item_and_trait_equilizer[trait_name] && (name_portions.length === 1 || name_portions.length > 1 && name_portions.length - 1 > tmp_i)) {
+      if (whTooltips.iconizeLinks && !item_and_trait_equilizer[trait_name] && name_portions.length === 1) {
         link += "class=\"chart_link\"";
       }
-      link += ">" + get_translated_name(name_portion.trim()) + "</a></div>";
+      link += ">";
+      if (tmp_i === "0") { // I have no idea for what reason this is a string...
+        link += get_translated_name(name_portion.trim());
+      }
+      link += "</a></div>";
 
       if (name_portions.length > 1 && tmp_i < name_portions.length - 1) {
-        if (tmp_i % 3 === 0 || tmp_i === 0) {
+        if (tmp_i % 4 === 0 || tmp_i === "0") {
           link += "<br/>";
         }
         link += "+";
