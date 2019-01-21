@@ -1,10 +1,11 @@
 {
+    "class_id": 11,
     "data": {
-        "Highmountain Tauren": 27026,
-        "Night Elf": 27452,
-        "Tauren": 27017,
-        "Troll": 26931,
-        "Worgen": 27008
+        "Highmountain Tauren": 27000,
+        "Night Elf": 27467,
+        "Tauren": 27077,
+        "Troll": 26866,
+        "Worgen": 27075
     },
     "data_type": "races",
     "languages": {
@@ -59,24 +60,194 @@
             "ru_RU": "Ворген"
         }
     },
+    "profile": {
+        "back": {
+            "bonus_id": "4800/1537",
+            "id": "165924"
+        },
+        "chest": {
+            "azerite_powers": "247/209/31/44/13",
+            "bonus_id": "5062/1587/4786/4775",
+            "id": "159335"
+        },
+        "feet": {
+            "bonus_id": "4800/1537",
+            "id": "165527"
+        },
+        "finger1": {
+            "bonus_id": "4800/1537",
+            "enchant": "pact_of_critical_strike",
+            "id": "165565"
+        },
+        "finger2": {
+            "bonus_id": "4800/1537",
+            "enchant": "pact_of_critical_strike",
+            "id": "165566"
+        },
+        "hands": {
+            "bonus_id": "4800/1537",
+            "id": "165522"
+        },
+        "head": {
+            "azerite_powers": "247/359/18/83/13",
+            "bonus_id": "4824/1537/4775",
+            "id": "165526"
+        },
+        "legs": {
+            "bonus_id": "4800/1537",
+            "id": "165521"
+        },
+        "main_hand": {
+            "bonus_id": "4800/1537",
+            "enchant": "deadly_navigation",
+            "id": "165589"
+        },
+        "neck": {
+            "bonus_id": "4929/4930/4936/1566",
+            "id": "158075"
+        },
+        "shoulders": {
+            "azerite_powers": "359/247/459/467/13",
+            "bonus_id": "4824/1537/4775",
+            "id": "165824"
+        },
+        "talents": "2000122",
+        "trinket1": {
+            "bonus_id": "4800/1537",
+            "id": "165579"
+        },
+        "trinket2": {
+            "bonus_id": "4800/1537",
+            "id": "165572"
+        },
+        "waist": {
+            "bonus_id": "4800/1537",
+            "id": "165525"
+        },
+        "wrists": {
+            "bonus_id": "4800/1537",
+            "id": "165517"
+        }
+    },
     "simc_settings": {
         "class": "druid",
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "10f7fea788",
+        "simc_hash": "7dc3bbcf67",
         "spec": "feral",
         "target_error": "0.2",
         "tier": "23"
     },
     "sorted_data_keys": [
         "Night Elf",
-        "Highmountain Tauren",
         "Tauren",
         "Worgen",
+        "Highmountain Tauren",
         "Troll"
     ],
-    "subtitle": "UTC 2019-01-20 10:21 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/10f7fea788\" target=\"blank\">10f7fea</a>",
-    "timestamp": "2019-01-20 10:21",
+    "spec_id": 103,
+    "subtitle": "UTC 2019-01-21 11:30 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7dc3bbcf67\" target=\"blank\">7dc3bbc</a>",
+    "talent_data": {
+        "1": {
+            "1": {
+                "name": "Predator",
+                "spell_id": "202021"
+            },
+            "2": {
+                "name": "Sabertooth",
+                "spell_id": "202031"
+            },
+            "3": {
+                "name": "Lunar Inspiration",
+                "spell_id": "155580"
+            }
+        },
+        "2": {
+            "1": {
+                "name": "Tiger Dash",
+                "spell_id": "252216"
+            },
+            "2": {
+                "name": "Renewal",
+                "spell_id": "108238"
+            },
+            "3": {
+                "name": "Wild Charge",
+                "spell_id": "102401"
+            }
+        },
+        "3": {
+            "1": {
+                "name": "Balance Affinity",
+                "spell_id": "197488"
+            },
+            "2": {
+                "name": "Guardian Affinity",
+                "spell_id": "217615"
+            },
+            "3": {
+                "name": "Restoration Affinity",
+                "spell_id": "197492"
+            }
+        },
+        "4": {
+            "1": {
+                "name": "Mighty Bash",
+                "spell_id": "5211"
+            },
+            "2": {
+                "name": "Mass Entanglement",
+                "spell_id": "102359"
+            },
+            "3": {
+                "name": "Typhoon",
+                "spell_id": "132469"
+            }
+        },
+        "5": {
+            "1": {
+                "name": "Soul of the Forest",
+                "spell_id": "158476"
+            },
+            "2": {
+                "name": "Savage Roar",
+                "spell_id": "52610"
+            },
+            "3": {
+                "name": "Incarnation",
+                "spell_id": "102543"
+            }
+        },
+        "6": {
+            "1": {
+                "name": "Scent of Blood",
+                "spell_id": "285564"
+            },
+            "2": {
+                "name": "Brutal Slash",
+                "spell_id": "202028"
+            },
+            "3": {
+                "name": "Primal Wrath",
+                "spell_id": "285381"
+            }
+        },
+        "7": {
+            "1": {
+                "name": "Moment of Clarity",
+                "spell_id": "236068"
+            },
+            "2": {
+                "name": "Bloodtalons",
+                "spell_id": "155672"
+            },
+            "3": {
+                "name": "Feral Frenzy",
+                "spell_id": "274837"
+            }
+        }
+    },
+    "timestamp": "2019-01-21 11:30",
     "title": "Races | Feral Druid | Patchwerk"
 }

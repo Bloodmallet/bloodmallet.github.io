@@ -1,17 +1,18 @@
 {
+    "class_id": 9,
     "data": {
-        "Blood Elf": 29345,
-        "Dark Iron Dwarf": 29248,
-        "Dwarf": 29405,
-        "Gnome": 29479,
-        "Goblin": 29500,
-        "Human": 29393,
-        "Nightborne": 29333,
-        "Orc": 29370,
-        "Troll": 29378,
-        "Undead": 29249,
-        "Void Elf": 29344,
-        "Worgen": 29357
+        "Blood Elf": 28849,
+        "Dark Iron Dwarf": 28802,
+        "Dwarf": 28868,
+        "Gnome": 29018,
+        "Goblin": 29027,
+        "Human": 28996,
+        "Nightborne": 28806,
+        "Orc": 28872,
+        "Troll": 29044,
+        "Undead": 28759,
+        "Void Elf": 28904,
+        "Worgen": 28756
     },
     "data_type": "races",
     "languages": {
@@ -136,31 +137,205 @@
             "ru_RU": "Ворген"
         }
     },
+    "profile": {
+        "back": {
+            "bonus_id": "4800/1537",
+            "id": "165512"
+        },
+        "chest": {
+            "azerite_powers": "432/562/30/13",
+            "bonus_id": "4824/1537/4775",
+            "id": "165834"
+        },
+        "feet": {
+            "bonus_id": "4800/1537",
+            "id": "165502"
+        },
+        "finger1": {
+            "bonus_id": "4800/1537",
+            "enchant": "pact_of_mastery",
+            "id": "165567"
+        },
+        "finger2": {
+            "bonus_id": "4800/1537",
+            "enchant": "pact_of_mastery",
+            "id": "165566"
+        },
+        "hands": {
+            "bonus_id": "4800/1537",
+            "id": "165503"
+        },
+        "head": {
+            "azerite_powers": "131/562/31/13",
+            "bonus_id": "4824/1537/4775",
+            "id": "165500"
+        },
+        "legs": {
+            "bonus_id": "4800/1537",
+            "id": "165506"
+        },
+        "main_hand": {
+            "bonus_id": "4800/1537",
+            "enchant": "masterful_navigation",
+            "id": "165603"
+        },
+        "neck": {
+            "bonus_id": "4929/4930/4936/1566",
+            "id": "158075"
+        },
+        "off_hand": {
+            "bonus_id": "4800/1537",
+            "id": "165583"
+        },
+        "shoulders": {
+            "azerite_powers": "444/562/459/13",
+            "bonus_id": "4824/1537/4775",
+            "id": "165497"
+        },
+        "talents": "2203023",
+        "trinket1": {
+            "bonus_id": "4800/1537",
+            "id": "165571"
+        },
+        "trinket2": {
+            "bonus_id": "1542/4779",
+            "id": "159615"
+        },
+        "waist": {
+            "bonus_id": "4800/1537",
+            "id": "165504"
+        },
+        "wrists": {
+            "bonus_id": "4800/1537",
+            "id": "165508"
+        }
+    },
     "simc_settings": {
         "class": "warlock",
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "10f7fea788",
+        "simc_hash": "7dc3bbcf67",
         "spec": "destruction",
         "target_error": "0.2",
         "tier": "23"
     },
     "sorted_data_keys": [
+        "Troll",
         "Goblin",
         "Gnome",
-        "Dwarf",
         "Human",
-        "Troll",
-        "Orc",
-        "Worgen",
-        "Blood Elf",
         "Void Elf",
+        "Orc",
+        "Dwarf",
+        "Blood Elf",
         "Nightborne",
+        "Dark Iron Dwarf",
         "Undead",
-        "Dark Iron Dwarf"
+        "Worgen"
     ],
-    "subtitle": "UTC 2019-01-20 10:34 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/10f7fea788\" target=\"blank\">10f7fea</a>",
-    "timestamp": "2019-01-20 10:34",
+    "spec_id": 267,
+    "subtitle": "UTC 2019-01-21 11:44 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7dc3bbcf67\" target=\"blank\">7dc3bbc</a>",
+    "talent_data": {
+        "1": {
+            "1": {
+                "name": "Flashover",
+                "spell_id": "267115"
+            },
+            "2": {
+                "name": "Eradication",
+                "spell_id": "196412"
+            },
+            "3": {
+                "name": "Soul Fire",
+                "spell_id": "6353"
+            }
+        },
+        "2": {
+            "1": {
+                "name": "Reverse Entropy",
+                "spell_id": "205148"
+            },
+            "2": {
+                "name": "Internal Combustion",
+                "spell_id": "266134"
+            },
+            "3": {
+                "name": "Shadowburn",
+                "spell_id": "17877"
+            }
+        },
+        "3": {
+            "1": {
+                "name": "Demon Skin",
+                "spell_id": "219272"
+            },
+            "2": {
+                "name": "Burning Rush",
+                "spell_id": "111400"
+            },
+            "3": {
+                "name": "Dark Pact",
+                "spell_id": "108416"
+            }
+        },
+        "4": {
+            "1": {
+                "name": "Inferno",
+                "spell_id": "270545"
+            },
+            "2": {
+                "name": "Fire and Brimstone",
+                "spell_id": "196408"
+            },
+            "3": {
+                "name": "Cataclysm",
+                "spell_id": "152108"
+            }
+        },
+        "5": {
+            "1": {
+                "name": "Darkfury",
+                "spell_id": "264874"
+            },
+            "2": {
+                "name": "Mortal Coil",
+                "spell_id": "6789"
+            },
+            "3": {
+                "name": "Demonic Circle",
+                "spell_id": "268358"
+            }
+        },
+        "6": {
+            "1": {
+                "name": "Roaring Blaze",
+                "spell_id": "205184"
+            },
+            "2": {
+                "name": "Grimoire of Supremacy",
+                "spell_id": "266086"
+            },
+            "3": {
+                "name": "Grimoire of Sacrifice",
+                "spell_id": "108503"
+            }
+        },
+        "7": {
+            "1": {
+                "name": "Soul Conduit",
+                "spell_id": "215941"
+            },
+            "2": {
+                "name": "Channel Demonfire",
+                "spell_id": "196447"
+            },
+            "3": {
+                "name": "Dark Soul",
+                "spell_id": "113858"
+            }
+        }
+    },
+    "timestamp": "2019-01-21 11:44",
     "title": "Races | Destruction Warlock | Hecticaddcleave"
 }

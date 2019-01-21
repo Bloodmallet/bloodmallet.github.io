@@ -1,22 +1,23 @@
 {
+    "class_id": 5,
     "data": {
-        "Blood Elf": 34375,
-        "Dark Iron Dwarf": 34104,
-        "Draenei": 34304,
-        "Dwarf": 34376,
-        "Gnome": 34509,
-        "Goblin": 34432,
-        "Human": 34547,
-        "Lightforged Draenei": 34409,
-        "Maghar Orc": 34285,
-        "Night Elf": 34608,
-        "Nightborne": 34345,
-        "Pandaren": 34295,
-        "Tauren": 34377,
-        "Troll": 33887,
-        "Undead": 34227,
-        "Void Elf": 34339,
-        "Worgen": 34355
+        "Blood Elf": 34331,
+        "Dark Iron Dwarf": 34135,
+        "Draenei": 34349,
+        "Dwarf": 34381,
+        "Gnome": 34411,
+        "Goblin": 34420,
+        "Human": 34607,
+        "Lightforged Draenei": 34420,
+        "Maghar Orc": 34289,
+        "Night Elf": 34518,
+        "Nightborne": 34389,
+        "Pandaren": 34400,
+        "Tauren": 34401,
+        "Troll": 33935,
+        "Undead": 34273,
+        "Void Elf": 34299,
+        "Worgen": 34308
     },
     "data_type": "races",
     "languages": {
@@ -191,36 +192,206 @@
             "ru_RU": "Ворген"
         }
     },
+    "profile": {
+        "back": {
+            "bonus_id": "4800/1537",
+            "id": "165512"
+        },
+        "chest": {
+            "azerite_powers": "405/562/38/13",
+            "bonus_id": "4824/1537/4775",
+            "id": "165834"
+        },
+        "feet": {
+            "bonus_id": "4800/1537",
+            "id": "165502"
+        },
+        "finger1": {
+            "bonus_id": "4800/1537",
+            "enchant": "pact_of_haste",
+            "id": "165567"
+        },
+        "finger2": {
+            "bonus_id": "4800/1537",
+            "enchant": "pact_of_haste",
+            "id": "165566"
+        },
+        "hands": {
+            "bonus_id": "4800/1537",
+            "id": "165503"
+        },
+        "head": {
+            "azerite_powers": "403/405/18/13",
+            "bonus_id": "4824/1537/4775",
+            "id": "165818"
+        },
+        "legs": {
+            "bonus_id": "4800/1537",
+            "id": "165506"
+        },
+        "main_hand": {
+            "bonus_id": "4800/1537",
+            "enchant": "quick_navigation",
+            "id": "165587"
+        },
+        "neck": {
+            "bonus_id": "4929/4930/4936/1566",
+            "id": "158075"
+        },
+        "shoulders": {
+            "azerite_powers": "405/403/462/13",
+            "bonus_id": "4824/1537/4775",
+            "id": "165922"
+        },
+        "talents": "1111112",
+        "trinket1": {
+            "bonus_id": "4800/1537",
+            "id": "165571"
+        },
+        "trinket2": {
+            "bonus_id": "1572/4780",
+            "id": "159615"
+        },
+        "waist": {
+            "bonus_id": "4800/1537",
+            "id": "165504"
+        },
+        "wrists": {
+            "bonus_id": "4800/1537",
+            "id": "165508"
+        }
+    },
     "simc_settings": {
         "class": "priest",
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "10f7fea788",
+        "simc_hash": "7dc3bbcf67",
         "spec": "shadow",
         "target_error": "0.2",
         "tier": "23"
     },
     "sorted_data_keys": [
-        "Night Elf",
         "Human",
-        "Gnome",
-        "Goblin",
+        "Night Elf",
         "Lightforged Draenei",
+        "Goblin",
+        "Gnome",
         "Tauren",
+        "Pandaren",
+        "Nightborne",
         "Dwarf",
+        "Draenei",
         "Blood Elf",
         "Worgen",
-        "Nightborne",
         "Void Elf",
-        "Draenei",
-        "Pandaren",
         "Maghar Orc",
         "Undead",
         "Dark Iron Dwarf",
         "Troll"
     ],
-    "subtitle": "UTC 2019-01-20 10:31 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/10f7fea788\" target=\"blank\">10f7fea</a>",
-    "timestamp": "2019-01-20 10:31",
+    "spec_id": 258,
+    "subtitle": "UTC 2019-01-21 11:41 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7dc3bbcf67\" target=\"blank\">7dc3bbc</a>",
+    "talent_data": {
+        "1": {
+            "1": {
+                "name": "Fortress of the Mind",
+                "spell_id": "193195"
+            },
+            "2": {
+                "name": "Shadowy Insight",
+                "spell_id": "162452"
+            },
+            "3": {
+                "name": "Shadow Word",
+                "spell_id": "205351"
+            }
+        },
+        "2": {
+            "1": {
+                "name": "Body and Soul",
+                "spell_id": "64129"
+            },
+            "2": {
+                "name": "San'layn",
+                "spell_id": "199855"
+            },
+            "3": {
+                "name": "Intangibility",
+                "spell_id": "288733"
+            }
+        },
+        "3": {
+            "1": {
+                "name": "Twist of Fate",
+                "spell_id": "109142"
+            },
+            "2": {
+                "name": "Misery",
+                "spell_id": "238558"
+            },
+            "3": {
+                "name": "Dark Void",
+                "spell_id": "263346"
+            }
+        },
+        "4": {
+            "1": {
+                "name": "Last Word",
+                "spell_id": "263716"
+            },
+            "2": {
+                "name": "Mind Bomb",
+                "spell_id": "205369"
+            },
+            "3": {
+                "name": "Psychic Horror",
+                "spell_id": "64044"
+            }
+        },
+        "5": {
+            "1": {
+                "name": "Auspicious Spirits",
+                "spell_id": "155271"
+            },
+            "2": {
+                "name": "Shadow Word",
+                "spell_id": "32379"
+            },
+            "3": {
+                "name": "Shadow Crash",
+                "spell_id": "205385"
+            }
+        },
+        "6": {
+            "1": {
+                "name": "Lingering Insanity",
+                "spell_id": "199849"
+            },
+            "2": {
+                "name": "Mindbender",
+                "spell_id": "200174"
+            },
+            "3": {
+                "name": "Void Torrent",
+                "spell_id": "263165"
+            }
+        },
+        "7": {
+            "1": {
+                "name": "Legacy of the Void",
+                "spell_id": "193225"
+            },
+            "2": {
+                "name": "Dark Ascension",
+                "spell_id": "280711"
+            },
+            "3": {
+                "name": "Surrender to Madness",
+                "spell_id": "193223"
+            }
+        }
+    },
+    "timestamp": "2019-01-21 11:41",
     "title": "Races | Shadow Priest | Hecticaddcleave"
 }

@@ -1,20 +1,21 @@
 {
+    "class_id": 4,
     "data": {
-        "Blood Elf": 26066,
-        "Dark Iron Dwarf": 26025,
-        "Dwarf": 26089,
-        "Gnome": 26045,
-        "Goblin": 25995,
-        "Human": 26118,
-        "Maghar Orc": 26042,
-        "Night Elf": 26231,
-        "Nightborne": 25916,
-        "Orc": 26030,
-        "Pandaren": 26124,
-        "Troll": 25913,
+        "Blood Elf": 26093,
+        "Dark Iron Dwarf": 26028,
+        "Dwarf": 26051,
+        "Gnome": 26088,
+        "Goblin": 25996,
+        "Human": 26060,
+        "Maghar Orc": 26065,
+        "Night Elf": 26248,
+        "Nightborne": 25883,
+        "Orc": 25986,
+        "Pandaren": 26060,
+        "Troll": 25907,
         "Undead": 26086,
-        "Void Elf": 26197,
-        "Worgen": 26095
+        "Void Elf": 26215,
+        "Worgen": 26004
     },
     "data_type": "races",
     "languages": {
@@ -169,12 +170,86 @@
             "ru_RU": "Ворген"
         }
     },
+    "profile": {
+        "back": {
+            "bonus_id": "4800/1537",
+            "id": "165924"
+        },
+        "chest": {
+            "azerite_powers": "240/562/22/13",
+            "bonus_id": "4824/1537/4775",
+            "id": "165830"
+        },
+        "feet": {
+            "bonus_id": "4800/1537",
+            "id": "165527"
+        },
+        "finger1": {
+            "bonus_id": "4800/1537",
+            "enchant": "pact_of_mastery",
+            "id": "165565"
+        },
+        "finger2": {
+            "bonus_id": "4800/1537",
+            "enchant": "pact_of_mastery",
+            "id": "165566"
+        },
+        "hands": {
+            "bonus_id": "4800/1537",
+            "id": "165522"
+        },
+        "head": {
+            "azerite_powers": "414/562/30/13",
+            "bonus_id": "4824/1537/4775",
+            "id": "165519"
+        },
+        "legs": {
+            "bonus_id": "4800/1537",
+            "id": "165521"
+        },
+        "main_hand": {
+            "bonus_id": "4800/1537",
+            "enchant": "deadly_navigation",
+            "id": "165596"
+        },
+        "neck": {
+            "bonus_id": "4929/4930/4936/1566",
+            "id": "158075"
+        },
+        "off_hand": {
+            "bonus_id": "4800/1537",
+            "enchant": "masterful_navigation",
+            "id": "165596"
+        },
+        "shoulders": {
+            "azerite_powers": "413/175/30/13",
+            "bonus_id": "4824/1537/4775",
+            "id": "165523"
+        },
+        "talents": "2320031",
+        "trinket1": {
+            "bonus_id": "4800/1537",
+            "id": "165579"
+        },
+        "trinket2": {
+            "bonus_id": "4800/1537",
+            "id": "165572"
+        },
+        "waist": {
+            "bonus_id": "4800/1537",
+            "id": "165525"
+        },
+        "wrists": {
+            "bonus_id": "4800/1537",
+            "id": "165517"
+        }
+    },
     "simc_settings": {
         "class": "rogue",
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "10f7fea788",
+        "simc_hash": "7dc3bbcf67",
         "spec": "subtlety",
         "target_error": "0.2",
         "tier": "23"
@@ -182,21 +257,122 @@
     "sorted_data_keys": [
         "Night Elf",
         "Void Elf",
-        "Pandaren",
-        "Human",
-        "Worgen",
-        "Dwarf",
-        "Undead",
         "Blood Elf",
         "Gnome",
+        "Undead",
         "Maghar Orc",
-        "Orc",
+        "Human",
+        "Pandaren",
+        "Dwarf",
         "Dark Iron Dwarf",
+        "Worgen",
         "Goblin",
-        "Nightborne",
-        "Troll"
+        "Orc",
+        "Troll",
+        "Nightborne"
     ],
-    "subtitle": "UTC 2019-01-20 10:24 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/10f7fea788\" target=\"blank\">10f7fea</a>",
-    "timestamp": "2019-01-20 10:24",
+    "spec_id": 261,
+    "subtitle": "UTC 2019-01-21 11:33 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7dc3bbcf67\" target=\"blank\">7dc3bbc</a>",
+    "talent_data": {
+        "1": {
+            "1": {
+                "name": "Weaponmaster",
+                "spell_id": "193537"
+            },
+            "2": {
+                "name": "Find Weakness",
+                "spell_id": "91023"
+            },
+            "3": {
+                "name": "Gloomblade",
+                "spell_id": "200758"
+            }
+        },
+        "2": {
+            "1": {
+                "name": "Nightstalker",
+                "spell_id": "14062"
+            },
+            "2": {
+                "name": "Subterfuge",
+                "spell_id": "108208"
+            },
+            "3": {
+                "name": "Shadow Focus",
+                "spell_id": "108209"
+            }
+        },
+        "3": {
+            "1": {
+                "name": "Vigor",
+                "spell_id": "14983"
+            },
+            "2": {
+                "name": "Deeper Stratagem",
+                "spell_id": "193531"
+            },
+            "3": {
+                "name": "Marked for Death",
+                "spell_id": "137619"
+            }
+        },
+        "4": {
+            "1": {
+                "name": "Soothing Darkness",
+                "spell_id": "200759"
+            },
+            "2": {
+                "name": "Cheat Death",
+                "spell_id": "31230"
+            },
+            "3": {
+                "name": "Elusiveness",
+                "spell_id": "79008"
+            }
+        },
+        "5": {
+            "1": {
+                "name": "Shot in the Dark",
+                "spell_id": "257505"
+            },
+            "2": {
+                "name": "Night Terrors",
+                "spell_id": "277953"
+            },
+            "3": {
+                "name": "Prey on the Weak",
+                "spell_id": "131511"
+            }
+        },
+        "6": {
+            "1": {
+                "name": "Dark Shadow",
+                "spell_id": "245687"
+            },
+            "2": {
+                "name": "Alacrity",
+                "spell_id": "193539"
+            },
+            "3": {
+                "name": "Enveloping Shadows",
+                "spell_id": "238104"
+            }
+        },
+        "7": {
+            "1": {
+                "name": "Master of Shadows",
+                "spell_id": "196976"
+            },
+            "2": {
+                "name": "Secret Technique",
+                "spell_id": "280719"
+            },
+            "3": {
+                "name": "Shuriken Tornado",
+                "spell_id": "277925"
+            }
+        }
+    },
+    "timestamp": "2019-01-21 11:33",
     "title": "Races | Subtlety Rogue | Patchwerk"
 }

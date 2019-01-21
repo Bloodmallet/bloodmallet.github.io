@@ -1,15 +1,16 @@
 {
+    "class_id": 7,
     "data": {
-        "Dark Iron Dwarf": 28912,
-        "Draenei": 28912,
-        "Dwarf": 29061,
-        "Goblin": 28978,
-        "Highmountain Tauren": 29033,
-        "Maghar Orc": 28989,
-        "Orc": 28982,
-        "Pandaren": 28971,
-        "Tauren": 29055,
-        "Troll": 29068
+        "Dark Iron Dwarf": 28896,
+        "Draenei": 28954,
+        "Dwarf": 29095,
+        "Goblin": 29050,
+        "Highmountain Tauren": 28946,
+        "Maghar Orc": 28997,
+        "Orc": 28972,
+        "Pandaren": 29002,
+        "Tauren": 29091,
+        "Troll": 29008
     },
     "data_type": "races",
     "languages": {
@@ -117,65 +118,74 @@
     "profile": {
         "back": {
             "bonus_id": "4800/1537",
-            "id": "4800/1537"
+            "id": "165512"
         },
         "chest": {
             "azerite_powers": "222/562/31/474/13",
             "bonus_id": "4824/1537/4775",
-            "id": "4824/1537/4775"
+            "id": "165540"
         },
         "feet": {
             "bonus_id": "4800/1537",
-            "id": "4800/1537"
+            "id": "165541"
         },
         "finger1": {
             "bonus_id": "4800/1537",
             "enchant": "pact_of_critical_strike",
-            "id": "4800/1537"
+            "id": "165567"
         },
         "finger2": {
             "bonus_id": "4800/1537",
             "enchant": "pact_of_critical_strike",
-            "id": "4800/1537"
+            "id": "165565"
         },
         "hands": {
             "bonus_id": "4800/1537",
-            "id": "4800/1537"
+            "id": "165531"
         },
         "head": {
             "azerite_powers": "222/562/459/539/13",
             "bonus_id": "4824/1537/4775",
-            "id": "4824/1537/4775"
+            "id": "165543"
         },
         "legs": {
             "bonus_id": "4800/1537",
-            "id": "4800/1537"
+            "id": "165536"
         },
         "main_hand": {
             "bonus_id": "4800/1537",
             "enchant": "deadly_navigation",
-            "id": "4800/1537"
+            "id": "165594"
         },
         "neck": {
             "bonus_id": "4929/4930/4936/1566",
-            "id": "4929/4930/4936/1566"
+            "id": "158075"
         },
         "off_hand": {
             "bonus_id": "4800/1537",
-            "id": "4800/1537"
+            "id": "165584"
+        },
+        "shoulders": {
+            "azerite_powers": "222/479/31/87/13",
+            "bonus_id": "1587/4819/1674/4775",
+            "id": "159393"
         },
         "talents": "1302012",
         "trinket1": {
             "bonus_id": "4800/1537",
-            "id": "4800/1537"
+            "id": "165571"
         },
         "trinket2": {
             "bonus_id": "1572/4779/1674",
-            "id": "1572/4779/1674"
+            "id": "159615"
         },
         "waist": {
             "bonus_id": "4800/1537",
-            "id": "4800/1537"
+            "id": "165538"
+        },
+        "wrists": {
+            "bonus_id": "4800/1537",
+            "id": "165542"
         }
     },
     "simc_settings": {
@@ -183,24 +193,125 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "7a2bad7148f658829e992396ff8869b9741fd497",
+        "simc_hash": "7dc3bbcf67",
         "spec": "elemental",
         "target_error": "0.2",
         "tier": "23"
     },
     "sorted_data_keys": [
-        "Troll",
         "Dwarf",
         "Tauren",
-        "Highmountain Tauren",
+        "Goblin",
+        "Troll",
+        "Pandaren",
         "Maghar Orc",
         "Orc",
-        "Goblin",
-        "Pandaren",
         "Draenei",
+        "Highmountain Tauren",
         "Dark Iron Dwarf"
     ],
-    "subtitle": "UTC 2019-01-20 14:04 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7a2bad7148f658829e992396ff8869b9741fd497\" target=\"blank\">7a2bad7</a>",
-    "timestamp": "2019-01-20 14:04",
+    "spec_id": 262,
+    "subtitle": "UTC 2019-01-21 11:33 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7dc3bbcf67\" target=\"blank\">7dc3bbc</a>",
+    "talent_data": {
+        "1": {
+            "1": {
+                "name": "Earthen Rage",
+                "spell_id": "170374"
+            },
+            "2": {
+                "name": "Echo of the Elements",
+                "spell_id": "108283"
+            },
+            "3": {
+                "name": "Elemental Blast",
+                "spell_id": "117014"
+            }
+        },
+        "2": {
+            "1": {
+                "name": "Aftershock",
+                "spell_id": "273221"
+            },
+            "2": {
+                "name": "Call the Thunder",
+                "spell_id": "260897"
+            },
+            "3": {
+                "name": "Totem Mastery",
+                "spell_id": "210643"
+            }
+        },
+        "3": {
+            "1": {
+                "name": "Spirit Wolf",
+                "spell_id": "260878"
+            },
+            "2": {
+                "name": "Earth Shield",
+                "spell_id": "974"
+            },
+            "3": {
+                "name": "Static Charge",
+                "spell_id": "265046"
+            }
+        },
+        "4": {
+            "1": {
+                "name": "Master of the Elements",
+                "spell_id": "16166"
+            },
+            "2": {
+                "name": "Storm Elemental",
+                "spell_id": "192249"
+            },
+            "3": {
+                "name": "Liquid Magma Totem",
+                "spell_id": "192222"
+            }
+        },
+        "5": {
+            "1": {
+                "name": "Nature's Guardian",
+                "spell_id": "30884"
+            },
+            "2": {
+                "name": "Ancestral Guidance",
+                "spell_id": "108281"
+            },
+            "3": {
+                "name": "Wind Rush Totem",
+                "spell_id": "192077"
+            }
+        },
+        "6": {
+            "1": {
+                "name": "Surge of Power",
+                "spell_id": "262303"
+            },
+            "2": {
+                "name": "Primal Elementalist",
+                "spell_id": "117013"
+            },
+            "3": {
+                "name": "Icefury",
+                "spell_id": "210714"
+            }
+        },
+        "7": {
+            "1": {
+                "name": "Unlimited Power",
+                "spell_id": "260895"
+            },
+            "2": {
+                "name": "Stormkeeper",
+                "spell_id": "191634"
+            },
+            "3": {
+                "name": "Ascendance",
+                "spell_id": "114050"
+            }
+        }
+    },
+    "timestamp": "2019-01-21 11:33",
     "title": "Races | Elemental Shaman | Patchwerk"
 }

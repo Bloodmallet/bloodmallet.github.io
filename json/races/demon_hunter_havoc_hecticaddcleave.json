@@ -1,7 +1,8 @@
 {
+    "class_id": 12,
     "data": {
-        "Blood Elf": 37031,
-        "Night Elf": 37100
+        "Blood Elf": 37047,
+        "Night Elf": 37069
     },
     "data_type": "races",
     "languages": {
@@ -26,12 +27,86 @@
             "ru_RU": "Ночной эльф"
         }
     },
+    "profile": {
+        "back": {
+            "bonus_id": "4800/1537",
+            "id": "165924"
+        },
+        "chest": {
+            "azerite_powers": "352/479/459/44/13",
+            "bonus_id": "5062/1587/4786/4775",
+            "id": "159314"
+        },
+        "feet": {
+            "bonus_id": "4800/1537",
+            "id": "165527"
+        },
+        "finger1": {
+            "bonus_id": "4800/1537",
+            "enchant": "pact_of_haste",
+            "id": "165565"
+        },
+        "finger2": {
+            "bonus_id": "4800/1537",
+            "enchant": "pact_of_haste",
+            "id": "165566"
+        },
+        "hands": {
+            "bonus_id": "4800/1537",
+            "id": "165522"
+        },
+        "head": {
+            "azerite_powers": "352/479/30/44/13",
+            "bonus_id": "5062/1587/4786/4775",
+            "id": "155888"
+        },
+        "legs": {
+            "bonus_id": "4800/1537",
+            "id": "165521"
+        },
+        "main_hand": {
+            "bonus_id": "4800/1537",
+            "enchant": "versatile_navigation",
+            "id": "165601"
+        },
+        "neck": {
+            "bonus_id": "4929/4930/4936/1566",
+            "id": "158075"
+        },
+        "off_hand": {
+            "bonus_id": "4800/1537",
+            "enchant": "quick_navigation",
+            "id": "165604"
+        },
+        "shoulders": {
+            "azerite_powers": "352/159/30/15/13",
+            "bonus_id": "4824/1537/4775",
+            "id": "165523"
+        },
+        "talents": "3210222",
+        "trinket1": {
+            "bonus_id": "4800/1537",
+            "id": "165579"
+        },
+        "trinket2": {
+            "bonus_id": "4800/1537",
+            "id": "165572"
+        },
+        "waist": {
+            "bonus_id": "4800/1537",
+            "id": "165525"
+        },
+        "wrists": {
+            "bonus_id": "4800/1537",
+            "id": "165517"
+        }
+    },
     "simc_settings": {
         "class": "demon_hunter",
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "10f7fea788",
+        "simc_hash": "7dc3bbcf67",
         "spec": "havoc",
         "target_error": "0.2",
         "tier": "23"
@@ -40,7 +115,108 @@
         "Night Elf",
         "Blood Elf"
     ],
-    "subtitle": "UTC 2019-01-20 10:26 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/10f7fea788\" target=\"blank\">10f7fea</a>",
-    "timestamp": "2019-01-20 10:26",
+    "spec_id": 577,
+    "subtitle": "UTC 2019-01-21 11:36 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7dc3bbcf67\" target=\"blank\">7dc3bbc</a>",
+    "talent_data": {
+        "1": {
+            "1": {
+                "name": "Blind Fury",
+                "spell_id": "203550"
+            },
+            "2": {
+                "name": "Demonic Appetite",
+                "spell_id": "206478"
+            },
+            "3": {
+                "name": "Felblade",
+                "spell_id": "232893"
+            }
+        },
+        "2": {
+            "1": {
+                "name": "Insatiable Hunger",
+                "spell_id": "258876"
+            },
+            "2": {
+                "name": "Demon Blades",
+                "spell_id": "203555"
+            },
+            "3": {
+                "name": "Immolation Aura",
+                "spell_id": "258920"
+            }
+        },
+        "3": {
+            "1": {
+                "name": "Trail of Ruin",
+                "spell_id": "258881"
+            },
+            "2": {
+                "name": "Fel Mastery",
+                "spell_id": "192939"
+            },
+            "3": {
+                "name": "Fel Barrage",
+                "spell_id": "258925"
+            }
+        },
+        "4": {
+            "1": {
+                "name": "Soul Rending",
+                "spell_id": "204909"
+            },
+            "2": {
+                "name": "Desperate Instincts",
+                "spell_id": "205411"
+            },
+            "3": {
+                "name": "Netherwalk",
+                "spell_id": "196555"
+            }
+        },
+        "5": {
+            "1": {
+                "name": "Cycle of Hatred",
+                "spell_id": "258887"
+            },
+            "2": {
+                "name": "First Blood",
+                "spell_id": "206416"
+            },
+            "3": {
+                "name": "Dark Slash",
+                "spell_id": "258860"
+            }
+        },
+        "6": {
+            "1": {
+                "name": "Unleashed Power",
+                "spell_id": "206477"
+            },
+            "2": {
+                "name": "Master of the Glaive",
+                "spell_id": "203556"
+            },
+            "3": {
+                "name": "Fel Eruption",
+                "spell_id": "211881"
+            }
+        },
+        "7": {
+            "1": {
+                "name": "Demonic",
+                "spell_id": "213410"
+            },
+            "2": {
+                "name": "Momentum",
+                "spell_id": "206476"
+            },
+            "3": {
+                "name": "Nemesis",
+                "spell_id": "206491"
+            }
+        }
+    },
+    "timestamp": "2019-01-21 11:36",
     "title": "Races | Havoc Demon Hunter | Hecticaddcleave"
 }

@@ -1,22 +1,23 @@
 {
+    "class_id": 8,
     "data": {
-        "Blood Elf": 32164,
-        "Dark Iron Dwarf": 32113,
-        "Draenei": 32167,
-        "Dwarf": 32239,
-        "Gnome": 32464,
-        "Goblin": 32487,
-        "Human": 32185,
-        "Lightforged Draenei": 32907,
-        "Maghar Orc": 32210,
-        "Night Elf": 32189,
-        "Nightborne": 32236,
-        "Orc": 31914,
-        "Pandaren": 32228,
-        "Troll": 32526,
-        "Undead": 32161,
-        "Void Elf": 32288,
-        "Worgen": 32110
+        "Blood Elf": 32180,
+        "Dark Iron Dwarf": 32084,
+        "Draenei": 32185,
+        "Dwarf": 32241,
+        "Gnome": 32404,
+        "Goblin": 32422,
+        "Human": 32213,
+        "Lightforged Draenei": 32976,
+        "Maghar Orc": 32221,
+        "Night Elf": 32184,
+        "Nightborne": 32203,
+        "Orc": 31978,
+        "Pandaren": 32284,
+        "Troll": 32661,
+        "Undead": 32169,
+        "Void Elf": 32290,
+        "Worgen": 32155
     },
     "data_type": "races",
     "languages": {
@@ -191,12 +192,81 @@
             "ru_RU": "Ворген"
         }
     },
+    "profile": {
+        "back": {
+            "bonus_id": "4800/1537",
+            "id": "165924"
+        },
+        "chest": {
+            "azerite_powers": "127/562/30/13",
+            "bonus_id": "4824/1537/4775",
+            "id": "165834"
+        },
+        "feet": {
+            "bonus_id": "4800/1537",
+            "id": "165502"
+        },
+        "finger1": {
+            "bonus_id": "4800/1537",
+            "enchant": "pact_of_versatility",
+            "id": "165565"
+        },
+        "finger2": {
+            "bonus_id": "1572/4780",
+            "enchant": "pact_of_versatility",
+            "id": "158362"
+        },
+        "hands": {
+            "bonus_id": "4800/1537",
+            "id": "165764"
+        },
+        "head": {
+            "azerite_powers": "374/157/30/13",
+            "bonus_id": "1587/4819/4775",
+            "id": "159236"
+        },
+        "legs": {
+            "bonus_id": "4800/1537",
+            "id": "165499"
+        },
+        "main_hand": {
+            "bonus_id": "4800/1537",
+            "enchant": "torrent_of_elements",
+            "id": "165587"
+        },
+        "neck": {
+            "bonus_id": "4929/4930/4936/1566",
+            "id": "158075"
+        },
+        "shoulders": {
+            "azerite_powers": "88/562/459/13",
+            "bonus_id": "4824/1537/4775",
+            "id": "165497"
+        },
+        "talents": "2032021",
+        "trinket1": {
+            "bonus_id": "1572/4780",
+            "id": "159630"
+        },
+        "trinket2": {
+            "bonus_id": "4800/1537",
+            "id": "165571"
+        },
+        "waist": {
+            "bonus_id": "4800/1537",
+            "id": "165504"
+        },
+        "wrists": {
+            "bonus_id": "4800/1537",
+            "id": "165508"
+        }
+    },
     "simc_settings": {
         "class": "mage",
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "10f7fea788",
+        "simc_hash": "7dc3bbcf67",
         "spec": "arcane",
         "target_error": "0.2",
         "tier": "23"
@@ -207,20 +277,121 @@
         "Goblin",
         "Gnome",
         "Void Elf",
-        "Dwarf",
-        "Nightborne",
         "Pandaren",
+        "Dwarf",
         "Maghar Orc",
-        "Night Elf",
         "Human",
+        "Nightborne",
         "Draenei",
+        "Night Elf",
         "Blood Elf",
         "Undead",
-        "Dark Iron Dwarf",
         "Worgen",
+        "Dark Iron Dwarf",
         "Orc"
     ],
-    "subtitle": "UTC 2019-01-20 10:28 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/10f7fea788\" target=\"blank\">10f7fea</a>",
-    "timestamp": "2019-01-20 10:28",
+    "spec_id": 62,
+    "subtitle": "UTC 2019-01-21 11:38 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7dc3bbcf67\" target=\"blank\">7dc3bbc</a>",
+    "talent_data": {
+        "1": {
+            "1": {
+                "name": "Amplification",
+                "spell_id": "236628"
+            },
+            "2": {
+                "name": "Rule of Threes",
+                "spell_id": "264354"
+            },
+            "3": {
+                "name": "Arcane Familiar",
+                "spell_id": "205022"
+            }
+        },
+        "2": {
+            "1": {
+                "name": "Mana Shield",
+                "spell_id": "235463"
+            },
+            "2": {
+                "name": "Shimmer",
+                "spell_id": "212653"
+            },
+            "3": {
+                "name": "Slipstream",
+                "spell_id": "236457"
+            }
+        },
+        "3": {
+            "1": {
+                "name": "Incanter's Flow",
+                "spell_id": "1463"
+            },
+            "2": {
+                "name": "Mirror Image",
+                "spell_id": "55342"
+            },
+            "3": {
+                "name": "Rune of Power",
+                "spell_id": "116011"
+            }
+        },
+        "4": {
+            "1": {
+                "name": "Resonance",
+                "spell_id": "205028"
+            },
+            "2": {
+                "name": "Charged Up",
+                "spell_id": "205032"
+            },
+            "3": {
+                "name": "Supernova",
+                "spell_id": "157980"
+            }
+        },
+        "5": {
+            "1": {
+                "name": "Chrono Shift",
+                "spell_id": "235711"
+            },
+            "2": {
+                "name": "Ice Ward",
+                "spell_id": "205036"
+            },
+            "3": {
+                "name": "Ring of Frost",
+                "spell_id": "113724"
+            }
+        },
+        "6": {
+            "1": {
+                "name": "Reverberate",
+                "spell_id": "281482"
+            },
+            "2": {
+                "name": "Touch of the Magi",
+                "spell_id": "210725"
+            },
+            "3": {
+                "name": "Nether Tempest",
+                "spell_id": "114923"
+            }
+        },
+        "7": {
+            "1": {
+                "name": "Overpowered",
+                "spell_id": "155147"
+            },
+            "2": {
+                "name": "Time Anomaly",
+                "spell_id": "210805"
+            },
+            "3": {
+                "name": "Arcane Orb",
+                "spell_id": "153626"
+            }
+        }
+    },
+    "timestamp": "2019-01-21 11:38",
     "title": "Races | Arcane Mage | Hecticaddcleave"
 }

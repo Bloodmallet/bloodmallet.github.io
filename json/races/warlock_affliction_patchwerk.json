@@ -1,17 +1,18 @@
 {
+    "class_id": 9,
     "data": {
-        "Blood Elf": 24681,
-        "Dark Iron Dwarf": 24672,
-        "Dwarf": 24635,
-        "Gnome": 24737,
-        "Goblin": 24841,
-        "Human": 24756,
-        "Nightborne": 24693,
-        "Orc": 24691,
-        "Troll": 24955,
-        "Undead": 24756,
-        "Void Elf": 24790,
-        "Worgen": 24715
+        "Blood Elf": 25498,
+        "Dark Iron Dwarf": 25463,
+        "Dwarf": 25390,
+        "Gnome": 25605,
+        "Goblin": 25619,
+        "Human": 25634,
+        "Nightborne": 25513,
+        "Orc": 25567,
+        "Troll": 25871,
+        "Undead": 25579,
+        "Void Elf": 25611,
+        "Worgen": 25547
     },
     "data_type": "races",
     "languages": {
@@ -136,31 +137,205 @@
             "ru_RU": "Ворген"
         }
     },
+    "profile": {
+        "back": {
+            "bonus_id": "4800/1537",
+            "id": "165512"
+        },
+        "chest": {
+            "azerite_powers": "123/230/30/13",
+            "bonus_id": "4824/1537/4775",
+            "id": "165834"
+        },
+        "feet": {
+            "bonus_id": "4800/1537",
+            "id": "165502"
+        },
+        "finger1": {
+            "bonus_id": "4800/1537",
+            "enchant": "pact_of_mastery",
+            "id": "165567"
+        },
+        "finger2": {
+            "bonus_id": "4800/1537",
+            "enchant": "pact_of_mastery",
+            "id": "165566"
+        },
+        "hands": {
+            "bonus_id": "4800/1537",
+            "id": "165503"
+        },
+        "head": {
+            "azerite_powers": "183/123/30/13",
+            "bonus_id": "5062/1587/4786/4775",
+            "id": "159252"
+        },
+        "legs": {
+            "bonus_id": "4800/1537",
+            "id": "165506"
+        },
+        "main_hand": {
+            "bonus_id": "4800/1537",
+            "enchant": "masterful_navigation",
+            "id": "165603"
+        },
+        "neck": {
+            "bonus_id": "4929/4930/4936/1566",
+            "id": "158075"
+        },
+        "off_hand": {
+            "bonus_id": "4800/1537",
+            "id": "165583"
+        },
+        "shoulders": {
+            "azerite_powers": "123/230/30/13",
+            "bonus_id": "5062/1587/4786/4775",
+            "id": "159273"
+        },
+        "talents": "3302023",
+        "trinket1": {
+            "bonus_id": "4800/1537",
+            "id": "165571"
+        },
+        "trinket2": {
+            "bonus_id": "1542/4779",
+            "id": "159630"
+        },
+        "waist": {
+            "bonus_id": "4800/1537",
+            "id": "165504"
+        },
+        "wrists": {
+            "bonus_id": "4800/1537",
+            "id": "165501"
+        }
+    },
     "simc_settings": {
         "class": "warlock",
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "10f7fea788",
+        "simc_hash": "7dc3bbcf67",
         "spec": "affliction",
         "target_error": "0.2",
         "tier": "23"
     },
     "sorted_data_keys": [
         "Troll",
+        "Human",
         "Goblin",
         "Void Elf",
-        "Human",
-        "Undead",
         "Gnome",
+        "Undead",
+        "Orc",
         "Worgen",
         "Nightborne",
-        "Orc",
         "Blood Elf",
         "Dark Iron Dwarf",
         "Dwarf"
     ],
-    "subtitle": "UTC 2019-01-20 10:25 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/10f7fea788\" target=\"blank\">10f7fea</a>",
-    "timestamp": "2019-01-20 10:25",
+    "spec_id": 265,
+    "subtitle": "UTC 2019-01-21 11:34 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7dc3bbcf67\" target=\"blank\">7dc3bbc</a>",
+    "talent_data": {
+        "1": {
+            "1": {
+                "name": "Nightfall",
+                "spell_id": "108558"
+            },
+            "2": {
+                "name": "Drain Soul",
+                "spell_id": "198590"
+            },
+            "3": {
+                "name": "Deathbolt",
+                "spell_id": "264106"
+            }
+        },
+        "2": {
+            "1": {
+                "name": "Writhe in Agony",
+                "spell_id": "196102"
+            },
+            "2": {
+                "name": "Absolute Corruption",
+                "spell_id": "196103"
+            },
+            "3": {
+                "name": "Siphon Life",
+                "spell_id": "63106"
+            }
+        },
+        "3": {
+            "1": {
+                "name": "Demon Skin",
+                "spell_id": "219272"
+            },
+            "2": {
+                "name": "Burning Rush",
+                "spell_id": "111400"
+            },
+            "3": {
+                "name": "Dark Pact",
+                "spell_id": "108416"
+            }
+        },
+        "4": {
+            "1": {
+                "name": "Sow the Seeds",
+                "spell_id": "196226"
+            },
+            "2": {
+                "name": "Phantom Singularity",
+                "spell_id": "205179"
+            },
+            "3": {
+                "name": "Vile Taint",
+                "spell_id": "278350"
+            }
+        },
+        "5": {
+            "1": {
+                "name": "Darkfury",
+                "spell_id": "264874"
+            },
+            "2": {
+                "name": "Mortal Coil",
+                "spell_id": "6789"
+            },
+            "3": {
+                "name": "Demonic Circle",
+                "spell_id": "268358"
+            }
+        },
+        "6": {
+            "1": {
+                "name": "Shadow Embrace",
+                "spell_id": "32388"
+            },
+            "2": {
+                "name": "Haunt",
+                "spell_id": "48181"
+            },
+            "3": {
+                "name": "Grimoire of Sacrifice",
+                "spell_id": "108503"
+            }
+        },
+        "7": {
+            "1": {
+                "name": "Soul Conduit",
+                "spell_id": "215941"
+            },
+            "2": {
+                "name": "Creeping Death",
+                "spell_id": "264000"
+            },
+            "3": {
+                "name": "Dark Soul",
+                "spell_id": "113860"
+            }
+        }
+    },
+    "timestamp": "2019-01-21 11:34",
     "title": "Races | Affliction Warlock | Patchwerk"
 }

@@ -1,12 +1,13 @@
 {
+    "class_id": 2,
     "data": {
-        "Blood Elf": 24560,
-        "Dark Iron Dwarf": 24286,
-        "Draenei": 24376,
-        "Dwarf": 24269,
-        "Human": 24369,
-        "Lightforged Draenei": 25579,
-        "Tauren": 24340
+        "Blood Elf": 40901,
+        "Dark Iron Dwarf": 40471,
+        "Draenei": 40525,
+        "Dwarf": 40538,
+        "Human": 40506,
+        "Lightforged Draenei": 42309,
+        "Tauren": 40477
     },
     "data_type": "races",
     "languages": {
@@ -81,26 +82,192 @@
             "ru_RU": "Таурен"
         }
     },
+    "profile": {
+        "back": {
+            "bonus_id": "4800/1537",
+            "id": "165924"
+        },
+        "chest": {
+            "azerite_powers": "396/562/461/13",
+            "bonus_id": "4824/1537/4775",
+            "id": "165550"
+        },
+        "feet": {
+            "bonus_id": "4800/1537",
+            "id": "165561"
+        },
+        "finger1": {
+            "bonus_id": "4800/1537",
+            "id": "165567"
+        },
+        "finger2": {
+            "bonus_id": "4800/1537",
+            "id": "165566"
+        },
+        "hands": {
+            "bonus_id": "4800/1537",
+            "id": "165549"
+        },
+        "head": {
+            "azerite_powers": "125/562/31/13",
+            "bonus_id": "4824/1537/4775",
+            "id": "165548"
+        },
+        "legs": {
+            "bonus_id": "4800/1537",
+            "id": "165560"
+        },
+        "main_hand": {
+            "bonus_id": "4800/1537",
+            "id": "165586"
+        },
+        "neck": {
+            "bonus_id": "4929/4930/4936/1566",
+            "id": "158075"
+        },
+        "shoulders": {
+            "azerite_powers": "453/562/22/13",
+            "bonus_id": "4775",
+            "id": "165825"
+        },
+        "talents": "2303103",
+        "trinket1": {
+            "id": "165580"
+        },
+        "trinket2": {
+            "bonus_id": "4800/1537",
+            "id": "165570"
+        },
+        "waist": {
+            "bonus_id": "4800/1537",
+            "id": "165552"
+        },
+        "wrists": {
+            "bonus_id": "4800/1537",
+            "id": "165551"
+        }
+    },
     "simc_settings": {
         "class": "paladin",
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "890b196aca",
+        "simc_hash": "7dc3bbcf67",
         "spec": "retribution",
         "target_error": "0.2",
-        "tier": "22"
+        "tier": "23"
     },
     "sorted_data_keys": [
         "Lightforged Draenei",
         "Blood Elf",
+        "Dwarf",
         "Draenei",
         "Human",
         "Tauren",
-        "Dark Iron Dwarf",
-        "Dwarf"
+        "Dark Iron Dwarf"
     ],
-    "subtitle": "UTC 2019-01-03 11:16 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/890b196aca\" target=\"blank\">890b196</a>",
-    "timestamp": "2019-01-03 11:16",
+    "spec_id": 70,
+    "subtitle": "UTC 2019-01-21 11:41 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7dc3bbcf67\" target=\"blank\">7dc3bbc</a>",
+    "talent_data": {
+        "1": {
+            "1": {
+                "name": "Zeal",
+                "spell_id": "269569"
+            },
+            "2": {
+                "name": "Righteous Verdict",
+                "spell_id": "267610"
+            },
+            "3": {
+                "name": "Execution Sentence",
+                "spell_id": "267798"
+            }
+        },
+        "2": {
+            "1": {
+                "name": "Fires of Justice",
+                "spell_id": "203316"
+            },
+            "2": {
+                "name": "Blade of Wrath",
+                "spell_id": "231832"
+            },
+            "3": {
+                "name": "Hammer of Wrath",
+                "spell_id": "24275"
+            }
+        },
+        "3": {
+            "1": {
+                "name": "Fist of Justice",
+                "spell_id": "234299"
+            },
+            "2": {
+                "name": "Repentance",
+                "spell_id": "20066"
+            },
+            "3": {
+                "name": "Blinding Light",
+                "spell_id": "115750"
+            }
+        },
+        "4": {
+            "1": {
+                "name": "Divine Judgment",
+                "spell_id": "271580"
+            },
+            "2": {
+                "name": "Consecration",
+                "spell_id": "205228"
+            },
+            "3": {
+                "name": "Wake of Ashes",
+                "spell_id": "255937"
+            }
+        },
+        "5": {
+            "1": {
+                "name": "Unbreakable Spirit",
+                "spell_id": "114154"
+            },
+            "2": {
+                "name": "Cavalier",
+                "spell_id": "230332"
+            },
+            "3": {
+                "name": "Eye for an Eye",
+                "spell_id": "205191"
+            }
+        },
+        "6": {
+            "1": {
+                "name": "Selfless Healer",
+                "spell_id": "85804"
+            },
+            "2": {
+                "name": "Justicar's Vengeance",
+                "spell_id": "215661"
+            },
+            "3": {
+                "name": "Word of Glory",
+                "spell_id": "210191"
+            }
+        },
+        "7": {
+            "1": {
+                "name": "Divine Purpose",
+                "spell_id": "223817"
+            },
+            "2": {
+                "name": "Crusade",
+                "spell_id": "231895"
+            },
+            "3": {
+                "name": "Inquisition",
+                "spell_id": "84963"
+            }
+        }
+    },
+    "timestamp": "2019-01-21 11:41",
     "title": "Races | Retribution Paladin | Hecticaddcleave"
 }

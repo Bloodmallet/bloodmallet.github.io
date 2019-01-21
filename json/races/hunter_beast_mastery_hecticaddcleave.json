@@ -1,24 +1,25 @@
 {
+    "class_id": 3,
     "data": {
-        "Blood Elf": 41183,
-        "Dark Iron Dwarf": 41133,
-        "Draenei": 41211,
-        "Dwarf": 41250,
-        "Gnome": 41388,
-        "Goblin": 41301,
-        "Highmountain Tauren": 41236,
-        "Human": 41412,
-        "Lightforged Draenei": 42076,
-        "Maghar Orc": 41294,
-        "Night Elf": 41355,
-        "Nightborne": 40883,
-        "Orc": 41439,
-        "Pandaren": 41297,
-        "Tauren": 41255,
-        "Troll": 41307,
-        "Undead": 41187,
-        "Void Elf": 41077,
-        "Worgen": 41324
+        "Blood Elf": 41142,
+        "Dark Iron Dwarf": 41155,
+        "Draenei": 41222,
+        "Dwarf": 41191,
+        "Gnome": 41411,
+        "Goblin": 41361,
+        "Highmountain Tauren": 41340,
+        "Human": 41308,
+        "Lightforged Draenei": 42080,
+        "Maghar Orc": 41285,
+        "Night Elf": 41324,
+        "Nightborne": 40953,
+        "Orc": 41560,
+        "Pandaren": 41343,
+        "Tauren": 41191,
+        "Troll": 41279,
+        "Undead": 41170,
+        "Void Elf": 41114,
+        "Worgen": 41311
     },
     "data_type": "races",
     "languages": {
@@ -213,12 +214,81 @@
             "ru_RU": "Ворген"
         }
     },
+    "profile": {
+        "back": {
+            "bonus_id": "4800/1537",
+            "id": "165512"
+        },
+        "chest": {
+            "azerite_powers": "161/366/30/14/13",
+            "bonus_id": "1587/5440/4775",
+            "id": "159370"
+        },
+        "feet": {
+            "bonus_id": "4800/1537",
+            "id": "165533"
+        },
+        "finger1": {
+            "bonus_id": "4800/1537",
+            "enchant": "pact_of_haste",
+            "id": "165567"
+        },
+        "finger2": {
+            "bonus_id": "4800/1537",
+            "enchant": "pact_of_haste",
+            "id": "165566"
+        },
+        "hands": {
+            "bonus_id": "4800/1537",
+            "id": "165531"
+        },
+        "head": {
+            "azerite_powers": "366/562/22/14/13",
+            "bonus_id": "4824/1537/4775",
+            "id": "165543"
+        },
+        "legs": {
+            "bonus_id": "4800/1537",
+            "id": "165536"
+        },
+        "main_hand": {
+            "bonus_id": "4800/1537",
+            "enchant": "incendiary_ammunition",
+            "id": "165599"
+        },
+        "neck": {
+            "bonus_id": "4929/4930/4936/1566",
+            "id": "158075"
+        },
+        "shoulders": {
+            "azerite_powers": "367/562/30/203/13",
+            "bonus_id": "4824/1537/4775",
+            "id": "165921"
+        },
+        "talents": "1303011",
+        "trinket1": {
+            "bonus_id": "4800/1537",
+            "id": "165572"
+        },
+        "trinket2": {
+            "bonus_id": "4800/1537",
+            "id": "165579"
+        },
+        "waist": {
+            "bonus_id": "4800/1537",
+            "id": "165538"
+        },
+        "wrists": {
+            "bonus_id": "4800/1537",
+            "id": "165542"
+        }
+    },
     "simc_settings": {
         "class": "hunter",
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "10f7fea788",
+        "simc_hash": "7dc3bbcf67",
         "spec": "beast_mastery",
         "target_error": "0.2",
         "tier": "23"
@@ -226,25 +296,126 @@
     "sorted_data_keys": [
         "Lightforged Draenei",
         "Orc",
-        "Human",
         "Gnome",
-        "Night Elf",
-        "Worgen",
-        "Troll",
         "Goblin",
         "Pandaren",
-        "Maghar Orc",
-        "Tauren",
-        "Dwarf",
         "Highmountain Tauren",
+        "Night Elf",
+        "Worgen",
+        "Human",
+        "Maghar Orc",
+        "Troll",
         "Draenei",
+        "Dwarf",
+        "Tauren",
         "Undead",
-        "Blood Elf",
         "Dark Iron Dwarf",
+        "Blood Elf",
         "Void Elf",
         "Nightborne"
     ],
-    "subtitle": "UTC 2019-01-20 10:27 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/10f7fea788\" target=\"blank\">10f7fea</a>",
-    "timestamp": "2019-01-20 10:27",
+    "spec_id": 253,
+    "subtitle": "UTC 2019-01-21 11:37 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7dc3bbcf67\" target=\"blank\">7dc3bbc</a>",
+    "talent_data": {
+        "1": {
+            "1": {
+                "name": "Killer Instinct",
+                "spell_id": "273887"
+            },
+            "2": {
+                "name": "Animal Companion",
+                "spell_id": "267116"
+            },
+            "3": {
+                "name": "Dire Beast",
+                "spell_id": "120679"
+            }
+        },
+        "2": {
+            "1": {
+                "name": "Scent of Blood",
+                "spell_id": "193532"
+            },
+            "2": {
+                "name": "One with the Pack",
+                "spell_id": "199528"
+            },
+            "3": {
+                "name": "Chimaera Shot",
+                "spell_id": "53209"
+            }
+        },
+        "3": {
+            "1": {
+                "name": "Trailblazer",
+                "spell_id": "199921"
+            },
+            "2": {
+                "name": "Natural Mending",
+                "spell_id": "270581"
+            },
+            "3": {
+                "name": "Camouflage",
+                "spell_id": "199483"
+            }
+        },
+        "4": {
+            "1": {
+                "name": "Venomous Bite",
+                "spell_id": "257891"
+            },
+            "2": {
+                "name": "Thrill of the Hunt",
+                "spell_id": "257944"
+            },
+            "3": {
+                "name": "A Murder of Crows",
+                "spell_id": "131894"
+            }
+        },
+        "5": {
+            "1": {
+                "name": "Born To Be Wild",
+                "spell_id": "266921"
+            },
+            "2": {
+                "name": "Posthaste",
+                "spell_id": "109215"
+            },
+            "3": {
+                "name": "Binding Shot",
+                "spell_id": "109248"
+            }
+        },
+        "6": {
+            "1": {
+                "name": "Stomp",
+                "spell_id": "199530"
+            },
+            "2": {
+                "name": "Barrage",
+                "spell_id": "120360"
+            },
+            "3": {
+                "name": "Stampede",
+                "spell_id": "201430"
+            }
+        },
+        "7": {
+            "1": {
+                "name": "Aspect of the Beast",
+                "spell_id": "191384"
+            },
+            "2": {
+                "name": "Killer Cobra",
+                "spell_id": "199532"
+            },
+            "3": {
+                "name": "Spitting Cobra",
+                "spell_id": "194407"
+            }
+        }
+    },
+    "timestamp": "2019-01-21 11:37",
     "title": "Races | Beast Mastery Hunter | Hecticaddcleave"
 }

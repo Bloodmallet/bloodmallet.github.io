@@ -1,20 +1,21 @@
 {
+    "class_id": 4,
     "data": {
-        "Blood Elf": 25390,
-        "Dark Iron Dwarf": 25229,
-        "Dwarf": 25226,
-        "Gnome": 25408,
-        "Goblin": 25363,
-        "Human": 25285,
-        "Maghar Orc": 25386,
-        "Night Elf": 25316,
-        "Nightborne": 25216,
-        "Orc": 25227,
-        "Pandaren": 25293,
-        "Troll": 25327,
-        "Undead": 25368,
-        "Void Elf": 25271,
-        "Worgen": 25294
+        "Blood Elf": 25409,
+        "Dark Iron Dwarf": 25239,
+        "Dwarf": 25300,
+        "Gnome": 25346,
+        "Goblin": 25338,
+        "Human": 25310,
+        "Maghar Orc": 25399,
+        "Night Elf": 25289,
+        "Nightborne": 25217,
+        "Orc": 25216,
+        "Pandaren": 25255,
+        "Troll": 25365,
+        "Undead": 25311,
+        "Void Elf": 25389,
+        "Worgen": 25285
     },
     "data_type": "races",
     "languages": {
@@ -169,34 +170,209 @@
             "ru_RU": "Ворген"
         }
     },
+    "profile": {
+        "back": {
+            "bonus_id": "4800/1537",
+            "id": "165512"
+        },
+        "chest": {
+            "azerite_powers": "249/562/22/13",
+            "bonus_id": "4824/1537/4775",
+            "id": "165830"
+        },
+        "feet": {
+            "bonus_id": "4800/1537",
+            "id": "165527"
+        },
+        "finger1": {
+            "bonus_id": "4800/1537",
+            "enchant": "pact_of_haste",
+            "id": "165567"
+        },
+        "finger2": {
+            "bonus_id": "4800/1537",
+            "enchant": "pact_of_haste",
+            "id": "165566"
+        },
+        "hands": {
+            "bonus_id": "4800/1537",
+            "id": "165514"
+        },
+        "head": {
+            "azerite_powers": "136/562/30/13",
+            "bonus_id": "4824/1537/4775",
+            "id": "165519"
+        },
+        "legs": {
+            "bonus_id": "4800/1537",
+            "id": "165528"
+        },
+        "main_hand": {
+            "bonus_id": "4800/1537",
+            "enchant": "galeforce_striking",
+            "id": "165593"
+        },
+        "neck": {
+            "bonus_id": "4929/4930/4936/1566",
+            "id": "158075"
+        },
+        "off_hand": {
+            "bonus_id": "4800/1537",
+            "enchant": "quick_navigation",
+            "id": "165593"
+        },
+        "shoulders": {
+            "azerite_powers": "136/562/31/13",
+            "bonus_id": "4824/1537/4775",
+            "id": "165516"
+        },
+        "talents": "2310021",
+        "trinket1": {
+            "bonus_id": "4800/1537",
+            "id": "165579"
+        },
+        "trinket2": {
+            "bonus_id": "4800/1537",
+            "id": "165572"
+        },
+        "waist": {
+            "bonus_id": "4800/1537",
+            "id": "165525"
+        },
+        "wrists": {
+            "bonus_id": "4800/1537",
+            "id": "165524"
+        }
+    },
     "simc_settings": {
         "class": "rogue",
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "10f7fea788",
+        "simc_hash": "7dc3bbcf67",
         "spec": "assassination",
         "target_error": "0.2",
         "tier": "23"
     },
     "sorted_data_keys": [
-        "Gnome",
         "Blood Elf",
         "Maghar Orc",
-        "Undead",
-        "Goblin",
+        "Void Elf",
         "Troll",
+        "Gnome",
+        "Goblin",
+        "Undead",
+        "Human",
+        "Dwarf",
         "Night Elf",
         "Worgen",
         "Pandaren",
-        "Human",
-        "Void Elf",
         "Dark Iron Dwarf",
-        "Orc",
-        "Dwarf",
-        "Nightborne"
+        "Nightborne",
+        "Orc"
     ],
-    "subtitle": "UTC 2019-01-20 10:23 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/10f7fea788\" target=\"blank\">10f7fea</a>",
-    "timestamp": "2019-01-20 10:23",
+    "spec_id": 259,
+    "subtitle": "UTC 2019-01-21 11:33 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7dc3bbcf67\" target=\"blank\">7dc3bbc</a>",
+    "talent_data": {
+        "1": {
+            "1": {
+                "name": "Master Poisoner",
+                "spell_id": "196864"
+            },
+            "2": {
+                "name": "Elaborate Planning",
+                "spell_id": "193640"
+            },
+            "3": {
+                "name": "Blindside",
+                "spell_id": "111240"
+            }
+        },
+        "2": {
+            "1": {
+                "name": "Nightstalker",
+                "spell_id": "14062"
+            },
+            "2": {
+                "name": "Subterfuge",
+                "spell_id": "108208"
+            },
+            "3": {
+                "name": "Master Assassin",
+                "spell_id": "255989"
+            }
+        },
+        "3": {
+            "1": {
+                "name": "Vigor",
+                "spell_id": "14983"
+            },
+            "2": {
+                "name": "Deeper Stratagem",
+                "spell_id": "193531"
+            },
+            "3": {
+                "name": "Marked for Death",
+                "spell_id": "137619"
+            }
+        },
+        "4": {
+            "1": {
+                "name": "Leeching Poison",
+                "spell_id": "280716"
+            },
+            "2": {
+                "name": "Cheat Death",
+                "spell_id": "31230"
+            },
+            "3": {
+                "name": "Elusiveness",
+                "spell_id": "79008"
+            }
+        },
+        "5": {
+            "1": {
+                "name": "Internal Bleeding",
+                "spell_id": "154904"
+            },
+            "2": {
+                "name": "Iron Wire",
+                "spell_id": "196861"
+            },
+            "3": {
+                "name": "Prey on the Weak",
+                "spell_id": "131511"
+            }
+        },
+        "6": {
+            "1": {
+                "name": "Venom Rush",
+                "spell_id": "152152"
+            },
+            "2": {
+                "name": "Toxic Blade",
+                "spell_id": "245388"
+            },
+            "3": {
+                "name": "Exsanguinate",
+                "spell_id": "200806"
+            }
+        },
+        "7": {
+            "1": {
+                "name": "Poison Bomb",
+                "spell_id": "255544"
+            },
+            "2": {
+                "name": "Hidden Blades",
+                "spell_id": "270061"
+            },
+            "3": {
+                "name": "Crimson Tempest",
+                "spell_id": "121411"
+            }
+        }
+    },
+    "timestamp": "2019-01-21 11:33",
     "title": "Races | Assassination Rogue | Patchwerk"
 }

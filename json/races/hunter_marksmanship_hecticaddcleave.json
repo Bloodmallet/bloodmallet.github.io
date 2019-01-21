@@ -1,24 +1,25 @@
 {
+    "class_id": 3,
     "data": {
-        "Blood Elf": 40296,
-        "Dark Iron Dwarf": 40127,
-        "Draenei": 40341,
-        "Dwarf": 40378,
-        "Gnome": 40299,
-        "Goblin": 40330,
-        "Highmountain Tauren": 40349,
-        "Human": 40584,
-        "Lightforged Draenei": 41047,
-        "Maghar Orc": 40354,
-        "Night Elf": 40406,
-        "Nightborne": 40064,
-        "Orc": 40176,
-        "Pandaren": 40354,
-        "Tauren": 40436,
-        "Troll": 40529,
-        "Undead": 40257,
-        "Void Elf": 40399,
-        "Worgen": 40290
+        "Blood Elf": 40303,
+        "Dark Iron Dwarf": 40147,
+        "Draenei": 40220,
+        "Dwarf": 40351,
+        "Gnome": 40285,
+        "Goblin": 40325,
+        "Highmountain Tauren": 40359,
+        "Human": 40506,
+        "Lightforged Draenei": 41067,
+        "Maghar Orc": 40281,
+        "Night Elf": 40421,
+        "Nightborne": 40029,
+        "Orc": 40219,
+        "Pandaren": 40396,
+        "Tauren": 40302,
+        "Troll": 40550,
+        "Undead": 40321,
+        "Void Elf": 40531,
+        "Worgen": 40315
     },
     "data_type": "races",
     "languages": {
@@ -213,38 +214,208 @@
             "ru_RU": "Ворген"
         }
     },
+    "profile": {
+        "back": {
+            "bonus_id": "4800/1537",
+            "id": "165513"
+        },
+        "chest": {
+            "azerite_powers": "212/562/31/469/13",
+            "bonus_id": "4824/1537/4775",
+            "id": "165540"
+        },
+        "feet": {
+            "bonus_id": "4800/1537",
+            "id": "165533"
+        },
+        "finger1": {
+            "bonus_id": "4800/1537",
+            "enchant": "pact_of_mastery",
+            "id": "165567"
+        },
+        "finger2": {
+            "bonus_id": "4800/1537",
+            "enchant": "pact_of_mastery",
+            "id": "165566"
+        },
+        "hands": {
+            "bonus_id": "4800/1537",
+            "id": "165546"
+        },
+        "head": {
+            "azerite_powers": "212/36/22/14/13",
+            "bonus_id": "4824/1537/4775",
+            "id": "165543"
+        },
+        "legs": {
+            "bonus_id": "4800/1537",
+            "id": "165536"
+        },
+        "main_hand": {
+            "bonus_id": "4800/1537",
+            "enchant": "incendiary_ammunition",
+            "id": "165599"
+        },
+        "neck": {
+            "bonus_id": "4929/4930/4936/1566",
+            "id": "158075"
+        },
+        "shoulders": {
+            "azerite_powers": "36/562/30/203/13",
+            "bonus_id": "4824/1537/4775",
+            "id": "165921"
+        },
+        "talents": "1103031",
+        "trinket1": {
+            "bonus_id": "4800/1537",
+            "id": "165572"
+        },
+        "trinket2": {
+            "bonus_id": "4800/1537",
+            "id": "165579"
+        },
+        "waist": {
+            "bonus_id": "4800/1537",
+            "id": "165538"
+        },
+        "wrists": {
+            "bonus_id": "4800/1537",
+            "id": "165534"
+        }
+    },
     "simc_settings": {
         "class": "hunter",
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "10f7fea788",
+        "simc_hash": "7dc3bbcf67",
         "spec": "marksmanship",
         "target_error": "0.2",
         "tier": "23"
     },
     "sorted_data_keys": [
         "Lightforged Draenei",
-        "Human",
         "Troll",
-        "Tauren",
-        "Night Elf",
         "Void Elf",
-        "Dwarf",
+        "Human",
+        "Night Elf",
         "Pandaren",
-        "Maghar Orc",
         "Highmountain Tauren",
-        "Draenei",
+        "Dwarf",
         "Goblin",
-        "Gnome",
-        "Blood Elf",
-        "Worgen",
         "Undead",
+        "Worgen",
+        "Blood Elf",
+        "Tauren",
+        "Gnome",
+        "Maghar Orc",
+        "Draenei",
         "Orc",
         "Dark Iron Dwarf",
         "Nightborne"
     ],
-    "subtitle": "UTC 2019-01-20 10:28 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/10f7fea788\" target=\"blank\">10f7fea</a>",
-    "timestamp": "2019-01-20 10:28",
+    "spec_id": 254,
+    "subtitle": "UTC 2019-01-21 11:37 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7dc3bbcf67\" target=\"blank\">7dc3bbc</a>",
+    "talent_data": {
+        "1": {
+            "1": {
+                "name": "Master Marksman",
+                "spell_id": "260309"
+            },
+            "2": {
+                "name": "Serpent Sting",
+                "spell_id": "271788"
+            },
+            "3": {
+                "name": "A Murder of Crows",
+                "spell_id": "131894"
+            }
+        },
+        "2": {
+            "1": {
+                "name": "Careful Aim",
+                "spell_id": "260228"
+            },
+            "2": {
+                "name": "Volley",
+                "spell_id": "260243"
+            },
+            "3": {
+                "name": "Explosive Shot",
+                "spell_id": "212431"
+            }
+        },
+        "3": {
+            "1": {
+                "name": "Trailblazer",
+                "spell_id": "199921"
+            },
+            "2": {
+                "name": "Natural Mending",
+                "spell_id": "270581"
+            },
+            "3": {
+                "name": "Camouflage",
+                "spell_id": "199483"
+            }
+        },
+        "4": {
+            "1": {
+                "name": "Steady Focus",
+                "spell_id": "193533"
+            },
+            "2": {
+                "name": "Streamline",
+                "spell_id": "260367"
+            },
+            "3": {
+                "name": "Hunter's Mark",
+                "spell_id": "257284"
+            }
+        },
+        "5": {
+            "1": {
+                "name": "Born To Be Wild",
+                "spell_id": "266921"
+            },
+            "2": {
+                "name": "Posthaste",
+                "spell_id": "109215"
+            },
+            "3": {
+                "name": "Binding Shot",
+                "spell_id": "109248"
+            }
+        },
+        "6": {
+            "1": {
+                "name": "Lethal Shots",
+                "spell_id": "260393"
+            },
+            "2": {
+                "name": "Barrage",
+                "spell_id": "120360"
+            },
+            "3": {
+                "name": "Double Tap",
+                "spell_id": "260402"
+            }
+        },
+        "7": {
+            "1": {
+                "name": "Calling the Shots",
+                "spell_id": "260404"
+            },
+            "2": {
+                "name": "Lock and Load",
+                "spell_id": "194595"
+            },
+            "3": {
+                "name": "Piercing Shot",
+                "spell_id": "198670"
+            }
+        }
+    },
+    "timestamp": "2019-01-21 11:37",
     "title": "Races | Marksmanship Hunter | Hecticaddcleave"
 }

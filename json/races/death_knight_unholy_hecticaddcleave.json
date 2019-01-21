@@ -1,17 +1,18 @@
 {
+    "class_id": 6,
     "data": {
-        "Blood Elf": 25363,
-        "Draenei": 25321,
-        "Dwarf": 25270,
-        "Gnome": 25297,
-        "Goblin": 25318,
-        "Human": 25320,
-        "Night Elf": 25302,
-        "Orc": 25335,
-        "Tauren": 25308,
-        "Troll": 25417,
-        "Undead": 25323,
-        "Worgen": 25263
+        "Blood Elf": 45598,
+        "Draenei": 44906,
+        "Dwarf": 44970,
+        "Gnome": 45089,
+        "Goblin": 45154,
+        "Human": 45077,
+        "Night Elf": 45028,
+        "Orc": 44908,
+        "Tauren": 45034,
+        "Troll": 45106,
+        "Undead": 45061,
+        "Worgen": 45092
     },
     "data_type": "races",
     "languages": {
@@ -136,31 +137,201 @@
             "ru_RU": "Ворген"
         }
     },
+    "profile": {
+        "back": {
+            "bonus_id": "4800/1537",
+            "id": "165512"
+        },
+        "chest": {
+            "azerite_powers": "199/244/30/14/13",
+            "bonus_id": "5062/1587/4786/4775",
+            "id": "159440"
+        },
+        "feet": {
+            "bonus_id": "4800/1537",
+            "id": "165561"
+        },
+        "finger1": {
+            "bonus_id": "4800/1537",
+            "enchant": "pact_of_haste",
+            "id": "165567"
+        },
+        "finger2": {
+            "bonus_id": "4800/1537",
+            "enchant": "pact_of_haste",
+            "id": "165565"
+        },
+        "hands": {
+            "bonus_id": "4800/1537",
+            "id": "165549"
+        },
+        "head": {
+            "azerite_powers": "199/562/31/465/13",
+            "bonus_id": "1537/4824/4775",
+            "id": "165548"
+        },
+        "legs": {
+            "bonus_id": "4800/1537",
+            "id": "165560"
+        },
+        "main_hand": {
+            "bonus_id": "4800/1537",
+            "enchant": "rune_of_the_fallen_crusader",
+            "id": "165586"
+        },
+        "neck": {
+            "bonus_id": "4929/4930/4936/1566",
+            "id": "158075"
+        },
+        "shoulders": {
+            "azerite_powers": "199/562/459/14/13",
+            "bonus_id": "1537/4824/4775",
+            "id": "165825"
+        },
+        "talents": "2203032",
+        "trinket1": {
+            "bonus_id": "4779/1572",
+            "id": "159627"
+        },
+        "trinket2": {
+            "bonus_id": "4800/1537",
+            "id": "165570"
+        },
+        "waist": {
+            "bonus_id": "4800/1537",
+            "id": "165552"
+        },
+        "wrists": {
+            "bonus_id": "4800/1537",
+            "id": "165551"
+        }
+    },
     "simc_settings": {
         "class": "death_knight",
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "890b196aca",
+        "simc_hash": "7dc3bbcf67",
         "spec": "unholy",
         "target_error": "0.2",
-        "tier": "22"
+        "tier": "23"
     },
     "sorted_data_keys": [
-        "Troll",
         "Blood Elf",
-        "Orc",
-        "Undead",
-        "Draenei",
-        "Human",
         "Goblin",
+        "Troll",
+        "Worgen",
+        "Gnome",
+        "Human",
+        "Undead",
         "Tauren",
         "Night Elf",
-        "Gnome",
         "Dwarf",
-        "Worgen"
+        "Orc",
+        "Draenei"
     ],
-    "subtitle": "UTC 2019-01-03 11:11 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/890b196aca\" target=\"blank\">890b196</a>",
-    "timestamp": "2019-01-03 11:11",
+    "spec_id": 252,
+    "subtitle": "UTC 2019-01-21 11:36 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7dc3bbcf67\" target=\"blank\">7dc3bbc</a>",
+    "talent_data": {
+        "1": {
+            "1": {
+                "name": "Infected Claws",
+                "spell_id": "207272"
+            },
+            "2": {
+                "name": "All Will Serve",
+                "spell_id": "194916"
+            },
+            "3": {
+                "name": "Clawing Shadows",
+                "spell_id": "207311"
+            }
+        },
+        "2": {
+            "1": {
+                "name": "Bursting Sores",
+                "spell_id": "207264"
+            },
+            "2": {
+                "name": "Ebon Fever",
+                "spell_id": "207269"
+            },
+            "3": {
+                "name": "Unholy Blight",
+                "spell_id": "115989"
+            }
+        },
+        "3": {
+            "1": {
+                "name": "Grip of the Dead",
+                "spell_id": "273952"
+            },
+            "2": {
+                "name": "Death's Reach",
+                "spell_id": "276079"
+            },
+            "3": {
+                "name": "Asphyxiate",
+                "spell_id": "108194"
+            }
+        },
+        "4": {
+            "1": {
+                "name": "Pestilent Pustules",
+                "spell_id": "194917"
+            },
+            "2": {
+                "name": "Harbinger of Doom",
+                "spell_id": "276023"
+            },
+            "3": {
+                "name": "Soul Reaper",
+                "spell_id": "130736"
+            }
+        },
+        "5": {
+            "1": {
+                "name": "Spell Eater",
+                "spell_id": "207321"
+            },
+            "2": {
+                "name": "Wraith Walk",
+                "spell_id": "212552"
+            },
+            "3": {
+                "name": "Death Pact",
+                "spell_id": "48743"
+            }
+        },
+        "6": {
+            "1": {
+                "name": "Pestilence",
+                "spell_id": "277234"
+            },
+            "2": {
+                "name": "Defile",
+                "spell_id": "152280"
+            },
+            "3": {
+                "name": "Epidemic",
+                "spell_id": "207317"
+            }
+        },
+        "7": {
+            "1": {
+                "name": "Army of the Damned",
+                "spell_id": "276837"
+            },
+            "2": {
+                "name": "Unholy Frenzy",
+                "spell_id": "207289"
+            },
+            "3": {
+                "name": "Summon Gargoyle",
+                "spell_id": "49206"
+            }
+        }
+    },
+    "timestamp": "2019-01-21 11:36",
     "title": "Races | Unholy Death Knight | Hecticaddcleave"
 }

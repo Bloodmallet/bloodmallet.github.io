@@ -1,12 +1,13 @@
 {
+    "class_id": 2,
     "data": {
-        "Blood Elf": 17206,
-        "Dark Iron Dwarf": 17196,
-        "Draenei": 17238,
-        "Dwarf": 17264,
-        "Human": 17329,
-        "Lightforged Draenei": 18270,
-        "Tauren": 17236
+        "Blood Elf": 29691,
+        "Dark Iron Dwarf": 29637,
+        "Draenei": 29654,
+        "Dwarf": 29761,
+        "Human": 29852,
+        "Lightforged Draenei": 31107,
+        "Tauren": 29676
     },
     "data_type": "races",
     "languages": {
@@ -81,26 +82,200 @@
             "ru_RU": "Таурен"
         }
     },
+    "profile": {
+        "back": {
+            "bonus_id": "4824/1537",
+            "id": "165512"
+        },
+        "chest": {
+            "azerite_powers": "395/562/461/13",
+            "bonus_id": "4824/1537/4775",
+            "id": "165550"
+        },
+        "feet": {
+            "bonus_id": "4824/1537",
+            "id": "165561"
+        },
+        "finger1": {
+            "bonus_id": "4824/1537",
+            "enchant": "pact_of_haste",
+            "id": "165566"
+        },
+        "finger2": {
+            "bonus_id": "4824/1537",
+            "enchant": "pact_of_haste",
+            "id": "165567"
+        },
+        "hands": {
+            "bonus_id": "4824/1537",
+            "id": "165549"
+        },
+        "head": {
+            "azerite_powers": "235/562/31/13",
+            "bonus_id": "4824/1537/4775",
+            "id": "165823"
+        },
+        "legs": {
+            "bonus_id": "4824/1537",
+            "id": "165560"
+        },
+        "main_hand": {
+            "bonus_id": "4824/1537",
+            "enchant": "quick_navigation",
+            "id": "165598"
+        },
+        "neck": {
+            "bonus_id": "4929/4930/4936/1566",
+            "id": "158075"
+        },
+        "off_hand": {
+            "bonus_id": "4824/1537",
+            "id": "165584"
+        },
+        "shoulders": {
+            "azerite_powers": "235/562/22/13",
+            "bonus_id": "4824/1537/4775",
+            "id": "165825"
+        },
+        "talents": "3200003",
+        "trinket1": {
+            "bonus_id": "4824/1537",
+            "id": "165580"
+        },
+        "trinket2": {
+            "bonus_id": "4824/1537",
+            "id": "165570"
+        },
+        "waist": {
+            "bonus_id": "4824/1537",
+            "id": "165559"
+        },
+        "wrists": {
+            "bonus_id": "4824/1537",
+            "id": "165551"
+        }
+    },
     "simc_settings": {
         "class": "paladin",
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "890b196aca",
+        "simc_hash": "7dc3bbcf67",
         "spec": "protection",
         "target_error": "0.2",
-        "tier": "22"
+        "tier": "23"
     },
     "sorted_data_keys": [
         "Lightforged Draenei",
         "Human",
         "Dwarf",
-        "Draenei",
-        "Tauren",
         "Blood Elf",
+        "Tauren",
+        "Draenei",
         "Dark Iron Dwarf"
     ],
-    "subtitle": "UTC 2019-01-03 11:15 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/890b196aca\" target=\"blank\">890b196</a>",
-    "timestamp": "2019-01-03 11:15",
+    "spec_id": 66,
+    "subtitle": "UTC 2019-01-21 11:40 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7dc3bbcf67\" target=\"blank\">7dc3bbc</a>",
+    "talent_data": {
+        "1": {
+            "1": {
+                "name": "Holy Shield",
+                "spell_id": "152261"
+            },
+            "2": {
+                "name": "Redoubt",
+                "spell_id": "280373"
+            },
+            "3": {
+                "name": "Blessed Hammer",
+                "spell_id": "204019"
+            }
+        },
+        "2": {
+            "1": {
+                "name": "First Avenger",
+                "spell_id": "203776"
+            },
+            "2": {
+                "name": "Crusader's Judgment",
+                "spell_id": "204023"
+            },
+            "3": {
+                "name": "Bastion of Light",
+                "spell_id": "204035"
+            }
+        },
+        "3": {
+            "1": {
+                "name": "Fist of Justice",
+                "spell_id": "198054"
+            },
+            "2": {
+                "name": "Repentance",
+                "spell_id": "20066"
+            },
+            "3": {
+                "name": "Blinding Light",
+                "spell_id": "115750"
+            }
+        },
+        "4": {
+            "1": {
+                "name": "Retribution Aura",
+                "spell_id": "203797"
+            },
+            "2": {
+                "name": "Cavalier",
+                "spell_id": "230332"
+            },
+            "3": {
+                "name": "Blessing of Spellwarding",
+                "spell_id": "204018"
+            }
+        },
+        "5": {
+            "1": {
+                "name": "Unbreakable Spirit",
+                "spell_id": "114154"
+            },
+            "2": {
+                "name": "Final Stand",
+                "spell_id": "204077"
+            },
+            "3": {
+                "name": "Hand of the Protector",
+                "spell_id": "213652"
+            }
+        },
+        "6": {
+            "1": {
+                "name": "Judgment of Light",
+                "spell_id": "183778"
+            },
+            "2": {
+                "name": "Consecrated Ground",
+                "spell_id": "204054"
+            },
+            "3": {
+                "name": "Aegis of Light",
+                "spell_id": "204150"
+            }
+        },
+        "7": {
+            "1": {
+                "name": "Last Defender",
+                "spell_id": "203791"
+            },
+            "2": {
+                "name": "Righteous Protector",
+                "spell_id": "204074"
+            },
+            "3": {
+                "name": "Seraphim",
+                "spell_id": "152262"
+            }
+        }
+    },
+    "timestamp": "2019-01-21 11:40",
     "title": "Races | Protection Paladin | Hecticaddcleave"
 }

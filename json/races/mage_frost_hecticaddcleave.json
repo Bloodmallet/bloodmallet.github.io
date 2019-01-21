@@ -1,22 +1,23 @@
 {
+    "class_id": 8,
     "data": {
-        "Blood Elf": 35003,
-        "Dark Iron Dwarf": 34923,
-        "Draenei": 34968,
-        "Dwarf": 35009,
-        "Gnome": 34917,
-        "Goblin": 35011,
-        "Human": 34987,
-        "Lightforged Draenei": 35436,
-        "Maghar Orc": 34833,
-        "Night Elf": 35079,
-        "Nightborne": 35032,
-        "Orc": 34900,
-        "Pandaren": 35042,
-        "Troll": 34898,
-        "Undead": 34875,
-        "Void Elf": 35160,
-        "Worgen": 34988
+        "Blood Elf": 34935,
+        "Dark Iron Dwarf": 34869,
+        "Draenei": 34976,
+        "Dwarf": 35045,
+        "Gnome": 34918,
+        "Goblin": 35005,
+        "Human": 34981,
+        "Lightforged Draenei": 35432,
+        "Maghar Orc": 34847,
+        "Night Elf": 35036,
+        "Nightborne": 35087,
+        "Orc": 34961,
+        "Pandaren": 35016,
+        "Troll": 34912,
+        "Undead": 34951,
+        "Void Elf": 35107,
+        "Worgen": 35004
     },
     "data_type": "races",
     "languages": {
@@ -191,12 +192,81 @@
             "ru_RU": "Ворген"
         }
     },
+    "profile": {
+        "back": {
+            "bonus_id": "4800/1537",
+            "id": "165512"
+        },
+        "chest": {
+            "azerite_powers": "379/170/30/13",
+            "bonus_id": "4824/1537/4775",
+            "id": "165498"
+        },
+        "feet": {
+            "bonus_id": "4800/1537",
+            "id": "165502"
+        },
+        "finger1": {
+            "bonus_id": "4800/1537",
+            "enchant": "pact_of_versatility",
+            "id": "165565"
+        },
+        "finger2": {
+            "bonus_id": "4800/1537",
+            "enchant": "pact_of_versatility",
+            "id": "165567"
+        },
+        "hands": {
+            "bonus_id": "4800/1537",
+            "id": "165764"
+        },
+        "head": {
+            "azerite_powers": "170/479/30/13",
+            "bonus_id": "1587/4819/4775",
+            "id": "159252"
+        },
+        "legs": {
+            "bonus_id": "4800/1537",
+            "id": "165506"
+        },
+        "main_hand": {
+            "bonus_id": "4800/1537",
+            "enchant": "torrent_of_elements",
+            "id": "165597"
+        },
+        "neck": {
+            "bonus_id": "4929/4930/4936/1566",
+            "id": "158075"
+        },
+        "shoulders": {
+            "azerite_powers": "170/196/31/13",
+            "bonus_id": "1587/4819/4775",
+            "id": "159254"
+        },
+        "talents": "1013033",
+        "trinket1": {
+            "bonus_id": "4800/1537",
+            "id": "165581"
+        },
+        "trinket2": {
+            "bonus_id": "4800/1537",
+            "id": "165571"
+        },
+        "waist": {
+            "bonus_id": "4800/1537",
+            "id": "165504"
+        },
+        "wrists": {
+            "bonus_id": "4800/1537",
+            "id": "165508"
+        }
+    },
     "simc_settings": {
         "class": "mage",
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "10f7fea788",
+        "simc_hash": "7dc3bbcf67",
         "spec": "frost",
         "target_error": "0.2",
         "tier": "23"
@@ -204,23 +274,124 @@
     "sorted_data_keys": [
         "Lightforged Draenei",
         "Void Elf",
+        "Nightborne",
+        "Dwarf",
         "Night Elf",
         "Pandaren",
-        "Nightborne",
         "Goblin",
-        "Dwarf",
-        "Blood Elf",
         "Worgen",
         "Human",
         "Draenei",
-        "Dark Iron Dwarf",
-        "Gnome",
         "Orc",
-        "Troll",
         "Undead",
+        "Blood Elf",
+        "Gnome",
+        "Troll",
+        "Dark Iron Dwarf",
         "Maghar Orc"
     ],
-    "subtitle": "UTC 2019-01-20 10:29 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/10f7fea788\" target=\"blank\">10f7fea</a>",
-    "timestamp": "2019-01-20 10:29",
+    "spec_id": 64,
+    "subtitle": "UTC 2019-01-21 11:39 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7dc3bbcf67\" target=\"blank\">7dc3bbc</a>",
+    "talent_data": {
+        "1": {
+            "1": {
+                "name": "Bone Chilling",
+                "spell_id": "205027"
+            },
+            "2": {
+                "name": "Lonely Winter",
+                "spell_id": "205024"
+            },
+            "3": {
+                "name": "Ice Nova",
+                "spell_id": "157997"
+            }
+        },
+        "2": {
+            "1": {
+                "name": "Glacial Insulation",
+                "spell_id": "235297"
+            },
+            "2": {
+                "name": "Shimmer",
+                "spell_id": "212653"
+            },
+            "3": {
+                "name": "Ice Floes",
+                "spell_id": "108839"
+            }
+        },
+        "3": {
+            "1": {
+                "name": "Incanter's Flow",
+                "spell_id": "1463"
+            },
+            "2": {
+                "name": "Mirror Image",
+                "spell_id": "55342"
+            },
+            "3": {
+                "name": "Rune of Power",
+                "spell_id": "116011"
+            }
+        },
+        "4": {
+            "1": {
+                "name": "Frozen Touch",
+                "spell_id": "205030"
+            },
+            "2": {
+                "name": "Chain Reaction",
+                "spell_id": "278309"
+            },
+            "3": {
+                "name": "Ebonbolt",
+                "spell_id": "257537"
+            }
+        },
+        "5": {
+            "1": {
+                "name": "Frigid Winds",
+                "spell_id": "235224"
+            },
+            "2": {
+                "name": "Ice Ward",
+                "spell_id": "205036"
+            },
+            "3": {
+                "name": "Ring of Frost",
+                "spell_id": "113724"
+            }
+        },
+        "6": {
+            "1": {
+                "name": "Freezing Rain",
+                "spell_id": "270233"
+            },
+            "2": {
+                "name": "Splitting Ice",
+                "spell_id": "56377"
+            },
+            "3": {
+                "name": "Comet Storm",
+                "spell_id": "153595"
+            }
+        },
+        "7": {
+            "1": {
+                "name": "Thermal Void",
+                "spell_id": "155149"
+            },
+            "2": {
+                "name": "Ray of Frost",
+                "spell_id": "205021"
+            },
+            "3": {
+                "name": "Glacial Spike",
+                "spell_id": "199786"
+            }
+        }
+    },
+    "timestamp": "2019-01-21 11:39",
     "title": "Races | Frost Mage | Hecticaddcleave"
 }

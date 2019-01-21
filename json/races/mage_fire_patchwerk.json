@@ -1,22 +1,23 @@
 {
+    "class_id": 8,
     "data": {
-        "Blood Elf": 25935,
-        "Dark Iron Dwarf": 25996,
-        "Draenei": 25878,
-        "Dwarf": 26161,
-        "Gnome": 25958,
-        "Goblin": 25943,
-        "Human": 25921,
-        "Lightforged Draenei": 26056,
-        "Maghar Orc": 26027,
-        "Night Elf": 25911,
-        "Nightborne": 26001,
-        "Orc": 26011,
-        "Pandaren": 25977,
+        "Blood Elf": 25941,
+        "Dark Iron Dwarf": 25979,
+        "Draenei": 25888,
+        "Dwarf": 26157,
+        "Gnome": 25926,
+        "Goblin": 25935,
+        "Human": 25955,
+        "Lightforged Draenei": 26083,
+        "Maghar Orc": 26017,
+        "Night Elf": 25916,
+        "Nightborne": 26008,
+        "Orc": 26018,
+        "Pandaren": 26002,
         "Troll": 26069,
-        "Undead": 26019,
-        "Void Elf": 26136,
-        "Worgen": 25905
+        "Undead": 26036,
+        "Void Elf": 26143,
+        "Worgen": 25884
     },
     "data_type": "races",
     "languages": {
@@ -191,12 +192,85 @@
             "ru_RU": "Ворген"
         }
     },
+    "profile": {
+        "back": {
+            "bonus_id": "4800/1537",
+            "id": "165512"
+        },
+        "chest": {
+            "azerite_powers": "168/479/22/13",
+            "bonus_id": "1587/4819/4775",
+            "id": "159268"
+        },
+        "feet": {
+            "bonus_id": "4800/1537",
+            "id": "165502"
+        },
+        "finger1": {
+            "bonus_id": "1572/4780",
+            "enchant": "pact_of_versatility",
+            "id": "158314"
+        },
+        "finger2": {
+            "bonus_id": "4800/1537",
+            "enchant": "pact_of_versatility",
+            "id": "165567"
+        },
+        "hands": {
+            "bonus_id": "4800/1537",
+            "id": "165764"
+        },
+        "head": {
+            "azerite_powers": "168/193/459/13",
+            "bonus_id": "1587/4819/4775",
+            "id": "159279"
+        },
+        "legs": {
+            "bonus_id": "4800/1537",
+            "id": "165506"
+        },
+        "main_hand": {
+            "bonus_id": "4800/1537",
+            "enchant": "torrent_of_elements",
+            "id": "165919"
+        },
+        "neck": {
+            "bonus_id": "4929/4930/4936/1566",
+            "id": "158075"
+        },
+        "off_hand": {
+            "bonus_id": "4800/1537",
+            "id": "165582"
+        },
+        "shoulders": {
+            "azerite_powers": "168/196/31/13",
+            "bonus_id": "1587/4819/4775",
+            "id": "159254"
+        },
+        "talents": "living_bomb,if=active_enemies>1&buff.combustion.down&(cooldown.combustion.remains>cooldown.living_bomb.duration|cooldown.combustion.ready)",
+        "trinket1": {
+            "bonus_id": "1572/4780",
+            "id": "159630"
+        },
+        "trinket2": {
+            "bonus_id": "4800/1537",
+            "id": "165571"
+        },
+        "waist": {
+            "bonus_id": "4800/1537",
+            "id": "165504"
+        },
+        "wrists": {
+            "bonus_id": "4800/1537",
+            "id": "165501"
+        }
+    },
     "simc_settings": {
         "class": "mage",
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "10f7fea788",
+        "simc_hash": "7dc3bbcf67",
         "spec": "fire",
         "target_error": "0.2",
         "tier": "23"
@@ -204,23 +278,124 @@
     "sorted_data_keys": [
         "Dwarf",
         "Void Elf",
-        "Troll",
         "Lightforged Draenei",
-        "Maghar Orc",
+        "Troll",
         "Undead",
         "Orc",
+        "Maghar Orc",
         "Nightborne",
-        "Dark Iron Dwarf",
         "Pandaren",
-        "Gnome",
-        "Goblin",
-        "Blood Elf",
+        "Dark Iron Dwarf",
         "Human",
+        "Blood Elf",
+        "Goblin",
+        "Gnome",
         "Night Elf",
-        "Worgen",
-        "Draenei"
+        "Draenei",
+        "Worgen"
     ],
-    "subtitle": "UTC 2019-01-20 10:22 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/10f7fea788\" target=\"blank\">10f7fea</a>",
-    "timestamp": "2019-01-20 10:22",
+    "spec_id": 63,
+    "subtitle": "UTC 2019-01-21 11:31 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7dc3bbcf67\" target=\"blank\">7dc3bbc</a>",
+    "talent_data": {
+        "1": {
+            "1": {
+                "name": "Firestarter",
+                "spell_id": "205026"
+            },
+            "2": {
+                "name": "Pyromaniac",
+                "spell_id": "205020"
+            },
+            "3": {
+                "name": "Searing Touch",
+                "spell_id": "269644"
+            }
+        },
+        "2": {
+            "1": {
+                "name": "Blazing Soul",
+                "spell_id": "235365"
+            },
+            "2": {
+                "name": "Shimmer",
+                "spell_id": "212653"
+            },
+            "3": {
+                "name": "Blast Wave",
+                "spell_id": "157981"
+            }
+        },
+        "3": {
+            "1": {
+                "name": "Incanter's Flow",
+                "spell_id": "1463"
+            },
+            "2": {
+                "name": "Mirror Image",
+                "spell_id": "55342"
+            },
+            "3": {
+                "name": "Rune of Power",
+                "spell_id": "116011"
+            }
+        },
+        "4": {
+            "1": {
+                "name": "Flame On",
+                "spell_id": "205029"
+            },
+            "2": {
+                "name": "Alexstrasza's Fury",
+                "spell_id": "235870"
+            },
+            "3": {
+                "name": "Phoenix Flames",
+                "spell_id": "257541"
+            }
+        },
+        "5": {
+            "1": {
+                "name": "Frenetic Speed",
+                "spell_id": "236058"
+            },
+            "2": {
+                "name": "Ice Ward",
+                "spell_id": "205036"
+            },
+            "3": {
+                "name": "Ring of Frost",
+                "spell_id": "113724"
+            }
+        },
+        "6": {
+            "1": {
+                "name": "Flame Patch",
+                "spell_id": "205037"
+            },
+            "2": {
+                "name": "Conflagration",
+                "spell_id": "205023"
+            },
+            "3": {
+                "name": "Living Bomb",
+                "spell_id": "44457"
+            }
+        },
+        "7": {
+            "1": {
+                "name": "Kindling",
+                "spell_id": "155148"
+            },
+            "2": {
+                "name": "Pyroclasm",
+                "spell_id": "269650"
+            },
+            "3": {
+                "name": "Meteor",
+                "spell_id": "153561"
+            }
+        }
+    },
+    "timestamp": "2019-01-21 11:31",
     "title": "Races | Fire Mage | Patchwerk"
 }

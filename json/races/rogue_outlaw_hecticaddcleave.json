@@ -1,20 +1,21 @@
 {
+    "class_id": 4,
     "data": {
-        "Blood Elf": 46593,
-        "Dark Iron Dwarf": 46391,
-        "Dwarf": 46792,
-        "Gnome": 46498,
-        "Goblin": 46333,
-        "Human": 46622,
-        "Maghar Orc": 46425,
-        "Night Elf": 46932,
-        "Nightborne": 46280,
-        "Orc": 46339,
-        "Pandaren": 46617,
-        "Troll": 46279,
-        "Undead": 46491,
-        "Void Elf": 46356,
-        "Worgen": 46634
+        "Blood Elf": 46620,
+        "Dark Iron Dwarf": 46342,
+        "Dwarf": 46738,
+        "Gnome": 46555,
+        "Goblin": 46456,
+        "Human": 46606,
+        "Maghar Orc": 46326,
+        "Night Elf": 46897,
+        "Nightborne": 46351,
+        "Orc": 46233,
+        "Pandaren": 46591,
+        "Troll": 46347,
+        "Undead": 46470,
+        "Void Elf": 46370,
+        "Worgen": 46569
     },
     "data_type": "races",
     "languages": {
@@ -169,12 +170,86 @@
             "ru_RU": "Ворген"
         }
     },
+    "profile": {
+        "back": {
+            "bonus_id": "4800/1537",
+            "id": "165924"
+        },
+        "chest": {
+            "azerite_powers": "446/129/22/13",
+            "bonus_id": "4824/1537/4775",
+            "id": "165830"
+        },
+        "feet": {
+            "bonus_id": "4800/1537",
+            "id": "165527"
+        },
+        "finger1": {
+            "bonus_id": "4800/1537",
+            "enchant": "pact_of_critical_strike",
+            "id": "165565"
+        },
+        "finger2": {
+            "bonus_id": "4800/1537",
+            "enchant": "pact_of_critical_strike",
+            "id": "165566"
+        },
+        "hands": {
+            "bonus_id": "4800/1537",
+            "id": "165522"
+        },
+        "head": {
+            "azerite_powers": "129/562/30/13",
+            "bonus_id": "4824/1537/4775",
+            "id": "165519"
+        },
+        "legs": {
+            "bonus_id": "4800/1537",
+            "id": "165521"
+        },
+        "main_hand": {
+            "bonus_id": "4800/1537",
+            "enchant": "deadly_navigation",
+            "id": "165601"
+        },
+        "neck": {
+            "bonus_id": "4929/4930/4936/1566",
+            "id": "158075"
+        },
+        "off_hand": {
+            "bonus_id": "4800/1537",
+            "enchant": "galeforce_striking",
+            "id": "165604"
+        },
+        "shoulders": {
+            "azerite_powers": "129/562/31/13",
+            "bonus_id": "4824/1537/4775",
+            "id": "165516"
+        },
+        "talents": "2010022",
+        "trinket1": {
+            "bonus_id": "4800/1537",
+            "id": "165579"
+        },
+        "trinket2": {
+            "bonus_id": "4800/1537",
+            "id": "165572"
+        },
+        "waist": {
+            "bonus_id": "4800/1537",
+            "id": "165525"
+        },
+        "wrists": {
+            "bonus_id": "4800/1537",
+            "id": "165517"
+        }
+    },
     "simc_settings": {
         "class": "rogue",
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "10f7fea788",
+        "simc_hash": "7dc3bbcf67",
         "spec": "outlaw",
         "target_error": "0.2",
         "tier": "23"
@@ -182,21 +257,122 @@
     "sorted_data_keys": [
         "Night Elf",
         "Dwarf",
-        "Worgen",
+        "Blood Elf",
         "Human",
         "Pandaren",
-        "Blood Elf",
+        "Worgen",
         "Gnome",
         "Undead",
-        "Maghar Orc",
-        "Dark Iron Dwarf",
-        "Void Elf",
-        "Orc",
         "Goblin",
+        "Void Elf",
         "Nightborne",
-        "Troll"
+        "Troll",
+        "Dark Iron Dwarf",
+        "Maghar Orc",
+        "Orc"
     ],
-    "subtitle": "UTC 2019-01-20 10:32 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/10f7fea788\" target=\"blank\">10f7fea</a>",
-    "timestamp": "2019-01-20 10:32",
+    "spec_id": 260,
+    "subtitle": "UTC 2019-01-21 11:42 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7dc3bbcf67\" target=\"blank\">7dc3bbc</a>",
+    "talent_data": {
+        "1": {
+            "1": {
+                "name": "Weaponmaster",
+                "spell_id": "200733"
+            },
+            "2": {
+                "name": "Quick Draw",
+                "spell_id": "196938"
+            },
+            "3": {
+                "name": "Ghostly Strike",
+                "spell_id": "196937"
+            }
+        },
+        "2": {
+            "1": {
+                "name": "Acrobatic Strikes",
+                "spell_id": "196924"
+            },
+            "2": {
+                "name": "Retractable Hook",
+                "spell_id": "256188"
+            },
+            "3": {
+                "name": "Hit and Run",
+                "spell_id": "196922"
+            }
+        },
+        "3": {
+            "1": {
+                "name": "Vigor",
+                "spell_id": "14983"
+            },
+            "2": {
+                "name": "Deeper Stratagem",
+                "spell_id": "193531"
+            },
+            "3": {
+                "name": "Marked for Death",
+                "spell_id": "137619"
+            }
+        },
+        "4": {
+            "1": {
+                "name": "Iron Stomach",
+                "spell_id": "193546"
+            },
+            "2": {
+                "name": "Cheat Death",
+                "spell_id": "31230"
+            },
+            "3": {
+                "name": "Elusiveness",
+                "spell_id": "79008"
+            }
+        },
+        "5": {
+            "1": {
+                "name": "Dirty Tricks",
+                "spell_id": "108216"
+            },
+            "2": {
+                "name": "Blinding Powder",
+                "spell_id": "256165"
+            },
+            "3": {
+                "name": "Prey on the Weak",
+                "spell_id": "131511"
+            }
+        },
+        "6": {
+            "1": {
+                "name": "Loaded Dice",
+                "spell_id": "256170"
+            },
+            "2": {
+                "name": "Alacrity",
+                "spell_id": "193539"
+            },
+            "3": {
+                "name": "Slice and Dice",
+                "spell_id": "5171"
+            }
+        },
+        "7": {
+            "1": {
+                "name": "Dancing Steel",
+                "spell_id": "272026"
+            },
+            "2": {
+                "name": "Blade Rush",
+                "spell_id": "271877"
+            },
+            "3": {
+                "name": "Killing Spree",
+                "spell_id": "51690"
+            }
+        }
+    },
+    "timestamp": "2019-01-21 11:42",
     "title": "Races | Outlaw Rogue | Hecticaddcleave"
 }

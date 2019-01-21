@@ -1,10 +1,11 @@
 {
+    "class_id": 11,
     "data": {
-        "Highmountain Tauren": 32659,
-        "Night Elf": 32723,
-        "Tauren": 32545,
-        "Troll": 32852,
-        "Worgen": 32603
+        "Highmountain Tauren": 32648,
+        "Night Elf": 32643,
+        "Tauren": 32512,
+        "Troll": 32762,
+        "Worgen": 32636
     },
     "data_type": "races",
     "languages": {
@@ -59,24 +60,197 @@
             "ru_RU": "Ворген"
         }
     },
+    "profile": {
+        "back": {
+            "id": "165512"
+        },
+        "chest": {
+            "azerite_powers": "/122/250/462/13",
+            "bonus_id": "4824/1537/4775",
+            "id": "165515"
+        },
+        "feet": {
+            "bonus_id": "4800/1537",
+            "id": "165527"
+        },
+        "finger1": {
+            "bonus_id": "4800/1537",
+            "enchant": "pact_of_haste",
+            "id": "165566"
+        },
+        "finger2": {
+            "bonus_id": "4800/1537",
+            "enchant": "pact_of_haste",
+            "id": "165567"
+        },
+        "hands": {
+            "bonus_id": "4800/1537",
+            "id": "165514"
+        },
+        "head": {
+            "azerite_powers": "200/122/30/13",
+            "bonus_id": "4824/1537/4775",
+            "id": "165819"
+        },
+        "legs": {
+            "bonus_id": "4800/1537",
+            "id": "165528"
+        },
+        "main_hand": {
+            "bonus_id": "4800/1537",
+            "enchant": "torrent_of_elements",
+            "id": "165592"
+        },
+        "neck": {
+            "bonus_id": "4929/4930/4936/1566",
+            "id": "158075"
+        },
+        "off_hand": {
+            "bonus_id": "4800/1537",
+            "id": "165583"
+        },
+        "shoulders": {
+            "azerite_powers": "/122/562/31/13",
+            "bonus_id": "4824/1537/4775",
+            "id": "165516"
+        },
+        "talents": "1000231",
+        "trinket1": {
+            "bonus_id": "4800/1537",
+            "id": "165571"
+        },
+        "trinket2": {
+            "bonus_id": "4800/1537",
+            "id": "165581"
+        },
+        "waist": {
+            "bonus_id": "4800/1537",
+            "id": "165525"
+        },
+        "wrists": {
+            "bonus_id": "4800/1537",
+            "id": "165524"
+        }
+    },
     "simc_settings": {
         "class": "druid",
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "10f7fea788",
+        "simc_hash": "7dc3bbcf67",
         "spec": "balance",
         "target_error": "0.2",
         "tier": "23"
     },
     "sorted_data_keys": [
         "Troll",
-        "Night Elf",
         "Highmountain Tauren",
+        "Night Elf",
         "Worgen",
         "Tauren"
     ],
-    "subtitle": "UTC 2019-01-20 10:27 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/10f7fea788\" target=\"blank\">10f7fea</a>",
-    "timestamp": "2019-01-20 10:27",
+    "spec_id": 102,
+    "subtitle": "UTC 2019-01-21 11:36 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7dc3bbcf67\" target=\"blank\">7dc3bbc</a>",
+    "talent_data": {
+        "1": {
+            "1": {
+                "name": "Nature's Balance",
+                "spell_id": "202430"
+            },
+            "2": {
+                "name": "Warrior of Elune",
+                "spell_id": "202425"
+            },
+            "3": {
+                "name": "Force of Nature",
+                "spell_id": "205636"
+            }
+        },
+        "2": {
+            "1": {
+                "name": "Tiger Dash",
+                "spell_id": "252216"
+            },
+            "2": {
+                "name": "Renewal",
+                "spell_id": "108238"
+            },
+            "3": {
+                "name": "Wild Charge",
+                "spell_id": "102401"
+            }
+        },
+        "3": {
+            "1": {
+                "name": "Feral Affinity",
+                "spell_id": "202157"
+            },
+            "2": {
+                "name": "Guardian Affinity",
+                "spell_id": "197491"
+            },
+            "3": {
+                "name": "Restoration Affinity",
+                "spell_id": "197492"
+            }
+        },
+        "4": {
+            "1": {
+                "name": "Mighty Bash",
+                "spell_id": "5211"
+            },
+            "2": {
+                "name": "Mass Entanglement",
+                "spell_id": "102359"
+            },
+            "3": {
+                "name": "Typhoon",
+                "spell_id": "132469"
+            }
+        },
+        "5": {
+            "1": {
+                "name": "Soul of the Forest",
+                "spell_id": "114107"
+            },
+            "2": {
+                "name": "Starlord",
+                "spell_id": "202345"
+            },
+            "3": {
+                "name": "Incarnation",
+                "spell_id": "102560"
+            }
+        },
+        "6": {
+            "1": {
+                "name": "Stellar Drift",
+                "spell_id": "202354"
+            },
+            "2": {
+                "name": "Twin Moons",
+                "spell_id": "279620"
+            },
+            "3": {
+                "name": "Stellar Flare",
+                "spell_id": "202347"
+            }
+        },
+        "7": {
+            "1": {
+                "name": "Shooting Stars",
+                "spell_id": "202342"
+            },
+            "2": {
+                "name": "Fury of Elune",
+                "spell_id": "202770"
+            },
+            "3": {
+                "name": "New Moon",
+                "spell_id": "274281"
+            }
+        }
+    },
+    "timestamp": "2019-01-21 11:36",
     "title": "Races | Balance Druid | Hecticaddcleave"
 }

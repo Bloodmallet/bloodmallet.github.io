@@ -1,21 +1,22 @@
 {
+    "class_id": 10,
     "data": {
-        "Blood Elf": 46472,
-        "Dark Iron Dwarf": 45680,
-        "Draenei": 45857,
-        "Dwarf": 45829,
-        "Gnome": 45734,
+        "Blood Elf": 46447,
+        "Dark Iron Dwarf": 45701,
+        "Draenei": 45829,
+        "Dwarf": 45870,
+        "Gnome": 45678,
         "Highmountain Tauren": 45849,
-        "Human": 45924,
-        "Maghar Orc": 45775,
-        "Night Elf": 45821,
-        "Nightborne": 45532,
-        "Orc": 45800,
-        "Pandaren": 45895,
-        "Tauren": 45853,
-        "Troll": 45693,
-        "Undead": 45790,
-        "Void Elf": 45950
+        "Human": 45909,
+        "Maghar Orc": 45841,
+        "Night Elf": 45856,
+        "Nightborne": 45617,
+        "Orc": 45702,
+        "Pandaren": 45885,
+        "Tauren": 46062,
+        "Troll": 45691,
+        "Undead": 45728,
+        "Void Elf": 45892
     },
     "data_type": "races",
     "languages": {
@@ -180,35 +181,210 @@
             "ru_RU": "Эльф Бездны"
         }
     },
+    "profile": {
+        "back": {
+            "bonus_id": "4800/1537",
+            "id": "165924"
+        },
+        "chest": {
+            "azerite_powers": "389/117/22/14/13",
+            "bonus_id": "4824/1537/4775",
+            "id": "165830"
+        },
+        "feet": {
+            "bonus_id": "4800/1537",
+            "id": "165527"
+        },
+        "finger1": {
+            "bonus_id": "4800/1537",
+            "enchant": "pact_of_versatility",
+            "id": "165565"
+        },
+        "finger2": {
+            "bonus_id": "4800/1537",
+            "enchant": "pact_of_versatility",
+            "id": "165566"
+        },
+        "hands": {
+            "bonus_id": "4800/1537",
+            "id": "165522"
+        },
+        "head": {
+            "azerite_powers": "390/389/22/218/13",
+            "bonus_id": "5062/1587/4786/4775",
+            "id": "159302"
+        },
+        "legs": {
+            "bonus_id": "4800/1537",
+            "id": "165521"
+        },
+        "main_hand": {
+            "bonus_id": "4800/1537",
+            "enchant": "deadly_navigation",
+            "id": "165601"
+        },
+        "neck": {
+            "bonus_id": "4929/4930/4936/1566",
+            "id": "158075"
+        },
+        "off_hand": {
+            "bonus_id": "4800/1537",
+            "enchant": "versatile_navigation",
+            "id": "165604"
+        },
+        "shoulders": {
+            "azerite_powers": "389/388/461/83/13",
+            "bonus_id": "5062/1587/4786/4775",
+            "id": "158304"
+        },
+        "talents": "2022032",
+        "trinket1": {
+            "bonus_id": "4800/1537",
+            "id": "165579"
+        },
+        "trinket2": {
+            "bonus_id": "4800/1537",
+            "id": "165572"
+        },
+        "waist": {
+            "bonus_id": "4800/1537",
+            "id": "165525"
+        },
+        "wrists": {
+            "bonus_id": "4800/1537",
+            "id": "165517"
+        }
+    },
     "simc_settings": {
         "class": "monk",
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "10f7fea788",
+        "simc_hash": "7dc3bbcf67",
         "spec": "windwalker",
         "target_error": "0.2",
         "tier": "23"
     },
     "sorted_data_keys": [
         "Blood Elf",
-        "Void Elf",
-        "Human",
-        "Pandaren",
-        "Draenei",
         "Tauren",
-        "Highmountain Tauren",
+        "Human",
+        "Void Elf",
+        "Pandaren",
         "Dwarf",
         "Night Elf",
-        "Orc",
-        "Undead",
+        "Highmountain Tauren",
         "Maghar Orc",
-        "Gnome",
-        "Troll",
+        "Draenei",
+        "Undead",
+        "Orc",
         "Dark Iron Dwarf",
+        "Troll",
+        "Gnome",
         "Nightborne"
     ],
-    "subtitle": "UTC 2019-01-20 10:30 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/10f7fea788\" target=\"blank\">10f7fea</a>",
-    "timestamp": "2019-01-20 10:30",
+    "spec_id": 269,
+    "subtitle": "UTC 2019-01-21 11:40 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7dc3bbcf67\" target=\"blank\">7dc3bbc</a>",
+    "talent_data": {
+        "1": {
+            "1": {
+                "name": "Eye of the Tiger",
+                "spell_id": "196607"
+            },
+            "2": {
+                "name": "Chi Wave",
+                "spell_id": "115098"
+            },
+            "3": {
+                "name": "Chi Burst",
+                "spell_id": "123986"
+            }
+        },
+        "2": {
+            "1": {
+                "name": "Celerity",
+                "spell_id": "115173"
+            },
+            "2": {
+                "name": "Chi Torpedo",
+                "spell_id": "115008"
+            },
+            "3": {
+                "name": "Tiger's Lust",
+                "spell_id": "116841"
+            }
+        },
+        "3": {
+            "1": {
+                "name": "Ascension",
+                "spell_id": "115396"
+            },
+            "2": {
+                "name": "Fist of the White Tiger",
+                "spell_id": "261947"
+            },
+            "3": {
+                "name": "Energizing Elixir",
+                "spell_id": "115288"
+            }
+        },
+        "4": {
+            "1": {
+                "name": "Tiger Tail Sweep",
+                "spell_id": "264348"
+            },
+            "2": {
+                "name": "Good Karma",
+                "spell_id": "280195"
+            },
+            "3": {
+                "name": "Ring of Peace",
+                "spell_id": "116844"
+            }
+        },
+        "5": {
+            "1": {
+                "name": "Inner Strength",
+                "spell_id": "261767"
+            },
+            "2": {
+                "name": "Diffuse Magic",
+                "spell_id": "122783"
+            },
+            "3": {
+                "name": "Dampen Harm",
+                "spell_id": "122278"
+            }
+        },
+        "6": {
+            "1": {
+                "name": "Hit Combo",
+                "spell_id": "196740"
+            },
+            "2": {
+                "name": "Rushing Jade Wind",
+                "spell_id": "116847"
+            },
+            "3": {
+                "name": "Invoke Xuen, the White Tiger",
+                "spell_id": "123904"
+            }
+        },
+        "7": {
+            "1": {
+                "name": "Spiritual Focus",
+                "spell_id": "280197"
+            },
+            "2": {
+                "name": "Whirling Dragon Punch",
+                "spell_id": "152175"
+            },
+            "3": {
+                "name": "Serenity",
+                "spell_id": "152173"
+            }
+        }
+    },
+    "timestamp": "2019-01-21 11:40",
     "title": "Races | Windwalker Monk | Hecticaddcleave"
 }

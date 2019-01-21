@@ -1,24 +1,25 @@
 {
+    "class_id": 1,
     "data": {
-        "Blood Elf": 26196,
-        "Dark Iron Dwarf": 26153,
-        "Draenei": 26181,
-        "Dwarf": 26162,
-        "Gnome": 26834,
-        "Goblin": 26654,
-        "Highmountain Tauren": 26262,
-        "Human": 26325,
-        "Lightforged Draenei": 26759,
-        "Maghar Orc": 26227,
-        "Night Elf": 26189,
-        "Nightborne": 25960,
-        "Orc": 26089,
-        "Pandaren": 26268,
-        "Tauren": 26158,
-        "Troll": 26468,
-        "Undead": 26199,
-        "Void Elf": 26164,
-        "Worgen": 26154
+        "Blood Elf": 39191,
+        "Dark Iron Dwarf": 38984,
+        "Draenei": 39171,
+        "Dwarf": 39130,
+        "Gnome": 39532,
+        "Goblin": 39375,
+        "Highmountain Tauren": 39296,
+        "Human": 39339,
+        "Lightforged Draenei": 39891,
+        "Maghar Orc": 39124,
+        "Night Elf": 39288,
+        "Nightborne": 38891,
+        "Orc": 38988,
+        "Pandaren": 39201,
+        "Tauren": 39139,
+        "Troll": 38779,
+        "Undead": 39083,
+        "Void Elf": 39209,
+        "Worgen": 39254
     },
     "data_type": "races",
     "languages": {
@@ -213,38 +214,213 @@
             "ru_RU": "Ворген"
         }
     },
+    "profile": {
+        "back": {
+            "bonus_id": "4800/1537",
+            "id": "165512"
+        },
+        "chest": {
+            "azerite_powers": "438/119/31/14/13",
+            "bonus_id": "5062/1587/4786/4775",
+            "id": "159416"
+        },
+        "feet": {
+            "bonus_id": "4800/1537",
+            "id": "165561"
+        },
+        "finger1": {
+            "bonus_id": "4800/1537",
+            "enchant": "pact_of_haste",
+            "id": "165567"
+        },
+        "finger2": {
+            "bonus_id": "4800/1537",
+            "enchant": "pact_of_haste",
+            "id": "165566"
+        },
+        "hands": {
+            "bonus_id": "4800/1537",
+            "id": "165549"
+        },
+        "head": {
+            "azerite_powers": "176/438/21/83/13",
+            "bonus_id": "4824/1537/4775",
+            "id": "165821"
+        },
+        "legs": {
+            "bonus_id": "4800/1537",
+            "id": "165560"
+        },
+        "main_hand": {
+            "bonus_id": "4800/1537",
+            "enchant": "masterful_navigation",
+            "id": "165586"
+        },
+        "neck": {
+            "bonus_id": "4929/4930/4936/1566",
+            "id": "158075"
+        },
+        "off_hand": {
+            "bonus_id": "4800/1537",
+            "enchant": "quick_navigation",
+            "id": "165602"
+        },
+        "shoulders": {
+            "azerite_powers": "176/438/22/476/13",
+            "bonus_id": "4824/1537/4775",
+            "id": "165562"
+        },
+        "talents": "2332123",
+        "trinket1": {
+            "bonus_id": "4800/1537",
+            "id": "165580"
+        },
+        "trinket2": {
+            "bonus_id": "4800/1537",
+            "id": "165570"
+        },
+        "waist": {
+            "bonus_id": "4800/1537",
+            "id": "165559"
+        },
+        "wrists": {
+            "bonus_id": "4800/1537",
+            "id": "165551"
+        }
+    },
     "simc_settings": {
         "class": "warrior",
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "890b196aca",
+        "simc_hash": "7dc3bbcf67",
         "spec": "fury",
         "target_error": "0.2",
-        "tier": "22"
+        "tier": "23"
     },
     "sorted_data_keys": [
-        "Gnome",
         "Lightforged Draenei",
+        "Gnome",
         "Goblin",
-        "Troll",
         "Human",
-        "Pandaren",
         "Highmountain Tauren",
+        "Night Elf",
+        "Worgen",
+        "Void Elf",
+        "Pandaren",
+        "Blood Elf",
+        "Draenei",
+        "Tauren",
+        "Dwarf",
         "Maghar Orc",
         "Undead",
-        "Blood Elf",
-        "Night Elf",
-        "Draenei",
-        "Void Elf",
-        "Dwarf",
-        "Tauren",
-        "Worgen",
-        "Dark Iron Dwarf",
         "Orc",
-        "Nightborne"
+        "Dark Iron Dwarf",
+        "Nightborne",
+        "Troll"
     ],
-    "subtitle": "UTC 2019-01-03 11:20 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/890b196aca\" target=\"blank\">890b196</a>",
-    "timestamp": "2019-01-03 11:20",
+    "spec_id": 72,
+    "subtitle": "UTC 2019-01-21 11:45 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7dc3bbcf67\" target=\"blank\">7dc3bbc</a>",
+    "talent_data": {
+        "1": {
+            "1": {
+                "name": "War Machine",
+                "spell_id": "262231"
+            },
+            "2": {
+                "name": "Endless Rage",
+                "spell_id": "202296"
+            },
+            "3": {
+                "name": "Fresh Meat",
+                "spell_id": "215568"
+            }
+        },
+        "2": {
+            "1": {
+                "name": "Double Time",
+                "spell_id": "103827"
+            },
+            "2": {
+                "name": "Impending Victory",
+                "spell_id": "202168"
+            },
+            "3": {
+                "name": "Storm Bolt",
+                "spell_id": "107570"
+            }
+        },
+        "3": {
+            "1": {
+                "name": "Inner Rage",
+                "spell_id": "215573"
+            },
+            "2": {
+                "name": "Sudden Death",
+                "spell_id": "280721"
+            },
+            "3": {
+                "name": "Furious Slash",
+                "spell_id": "100130"
+            }
+        },
+        "4": {
+            "1": {
+                "name": "Furious Charge",
+                "spell_id": "202224"
+            },
+            "2": {
+                "name": "Bounding Stride",
+                "spell_id": "202163"
+            },
+            "3": {
+                "name": "Warpaint",
+                "spell_id": "208154"
+            }
+        },
+        "5": {
+            "1": {
+                "name": "Carnage",
+                "spell_id": "202922"
+            },
+            "2": {
+                "name": "Massacre",
+                "spell_id": "206315"
+            },
+            "3": {
+                "name": "Frothing Berserker",
+                "spell_id": "215571"
+            }
+        },
+        "6": {
+            "1": {
+                "name": "Meat Cleaver",
+                "spell_id": "280392"
+            },
+            "2": {
+                "name": "Dragon Roar",
+                "spell_id": "118000"
+            },
+            "3": {
+                "name": "Bladestorm",
+                "spell_id": "46924"
+            }
+        },
+        "7": {
+            "1": {
+                "name": "Reckless Abandon",
+                "spell_id": "202751"
+            },
+            "2": {
+                "name": "Anger Management",
+                "spell_id": "152278"
+            },
+            "3": {
+                "name": "Siegebreaker",
+                "spell_id": "280772"
+            }
+        }
+    },
+    "timestamp": "2019-01-21 11:45",
     "title": "Races | Fury Warrior | Hecticaddcleave"
 }
