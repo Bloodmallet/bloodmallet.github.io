@@ -567,7 +567,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (debug) {
     console.log("addEventListener inconized_charts_checkbox");
   }
-  document.getElementById("inconized_charts_checkbox").addEventListener("change", function (e) {
+  document.getElementById("iconized_charts_checkbox").addEventListener("change", function (e) {
     whTooltips.iconizeLinks = e.target.checked;
     set_iconized_chart_cookie();
     $WowheadPower.refreshLinks();
@@ -1546,6 +1546,9 @@ function update_data_buttons() {
   data_view_IDs.forEach(element => {
     try {
       document.getElementById(element).className = "btn-data " + chosen_class + "-button";
+      if (element === "advanced_chart_options_button") {
+        document.getElementById(element).className += " dropdown-toggle";
+      }
     } catch (err) {
       console.log(element + " was not found in page.");
     }
@@ -2039,6 +2042,8 @@ function update_chart() {
   subtitle += `${age_hours}h ago`;
 
   document.getElementById("chart_title").innerHTML = new_title;
+  document.getElementById("chart_title").hidden = false;
+  add_profile_information();
   document.getElementById("chart_subtitle").innerHTML = subtitle;
   document.getElementById("chart_simc_hash").innerHTML = `SimulationCraft build: <a href=\"https://github.com/simulationcraft/simc/commit/${loaded_data[chosen_class][chosen_spec][data_name][fight_style]["simc_settings"]["simc_hash"]}\" target=\"blank\">#${loaded_data[chosen_class][chosen_spec][data_name][fight_style]["simc_settings"]["simc_hash"].substring(0, 5)}</a>`;
 
@@ -2489,6 +2494,8 @@ function update_trait_stacking_chart() {
 
   // set title and subtitle
   document.getElementById("chart_title").innerHTML = `Itemlevel ${max_ilevel} | different number of traits | pure trait dps`;
+  document.getElementById("chart_title").hidden = false;
+  add_profile_information();
   document.getElementById("chart_subtitle").innerHTML = subtitle;
   document.getElementById("chart_simc_hash").innerHTML = `SimulationCraft build: <a href=\"https://github.com/simulationcraft/simc/commit/${loaded_data[chosen_class][chosen_spec][data_view][fight_style]["simc_settings"]["simc_hash"]}\" target=\"blank\">#${loaded_data[chosen_class][chosen_spec][data_view][fight_style]["simc_settings"]["simc_hash"].substring(0, 5)}</a>`;
 
@@ -2619,12 +2626,159 @@ function empty_charts() {
   }
 
   document.getElementById("chart_title").innerHTML = loaded_data[chosen_class][chosen_spec][data_name][fight_style]["title"];
+  document.getElementById("chart_title").hidden = false;
+  add_profile_information();
   document.getElementById("chart_subtitle").innerHTML = "No data available / Loading...";
 
   // delete all old series data
   while (scatter_chart.series[0]) {
     scatter_chart.series[0].remove(false);
   }
+}
+
+/**
+ * Add profile information from data to website.
+ */
+function add_profile_information() {
+  if (debug) {
+    console.log("add_profile_information");
+  }
+  let talents = document.getElementById("used_talents");
+  let equip = document.getElementById("used_items");
+
+  // empty
+  while (talents.firstChild) {
+    talents.removeChild(talents.firstChild);
+  }
+  while (equip.firstChild) {
+    equip.removeChild(equip.firstChild);
+  }
+
+  // add title
+  talents.appendChild(document.createTextNode("Talents: "));
+
+  // get necessary data
+  let data_name = data_view;
+  if (data_name === "azerite_traits" && ["head", "shoulders", "chest"].includes(chosen_azerite_list_type)) {
+    data_name += "_" + chosen_azerite_list_type;
+  }
+  let talent_data = loaded_data[chosen_class][chosen_spec][data_name][fight_style]["talent_data"];
+  let profile_data = loaded_data[chosen_class][chosen_spec][data_name][fight_style]["profile"];
+
+  // create link section
+  let talent_combination = undefined;
+  try {
+    talent_combination = profile_data["talents"];
+  } catch (error) {
+    document.getElementById("profile_block").hidden = true;
+    return;
+  }
+  for (let row = 0; row < talent_combination.length; row++) {
+    let talent = talent_combination[row];
+    let talent_id = undefined;
+    try {
+      // skip row if no talent was selected (0) in a row
+      talent_id = talent_data[parseInt(row) + 1][parseInt(talent)]["spell_id"];
+    } catch (error) {
+      talents.appendChild(document.createTextNode("0 "))
+      continue;
+    }
+    let link = document.createElement("a");
+    link.href = "https://" + (language === "EN" ? "www" : language.toLowerCase()) + ".wowhead.com";
+    link.href += "spell=" + talent_id;
+    talents.appendChild(link);
+    if (!whTooltips.iconizeLinks) {
+      link.appendChild(document.createTextNode(talent));
+      talents.appendChild(document.createTextNode(" "));
+    } else {
+      link.dataset.whIconSize = "small";
+    }
+  }
+
+  // item links
+  let slots = [
+    "head",
+    "neck",
+    "shoulders",
+    "back",
+    "chest",
+    "wrists",
+    "hands",
+    "waist",
+    "legs",
+    "feet",
+    "finger1",
+    "finger2",
+    "trinket1",
+    "trinket2",
+    "main_hand",
+    "off_hand"
+  ];
+  let abbreviations = {
+    "head": "H",
+    "neck": "N",
+    "shoulders": "S",
+    "back": "B",
+    "chest": "C",
+    "wrists": "Wr",
+    "hands": "H",
+    "waist": "Wa",
+    "legs": "L",
+    "feet": "F",
+    "finger1": "F1",
+    "finger2": "F2",
+    "trinket1": "T1",
+    "trinket2": "T2",
+    "main_hand": "MH",
+    "off_hand": "OH"
+  };
+  let enchants = {
+    "deadly_navigation": 5965,
+    "quick_navigation": 5963,
+    "masterful_navigation": 5964,
+    "versatile_navigation": 5962,
+    "pact_of_critical_strike": 5942,
+    "pact_of_haste": 5943,
+    "pact_of_mastery": 5944,
+    "pact_of_versatility": 5945
+  };
+  for (let slot of slots) {
+    let item_data = profile_data[slot];
+    let link = document.createElement("a");
+    link.href = "https://" + (language === "EN" ? "www" : language.toLowerCase()) + ".wowhead.com";
+    link.href += "item=" + item_data["id"];
+    // add bonus_ids
+    if (item_data["bonus_id"]) {
+      link.href += "?bonus=" + item_data["bonus_id"].replace(/\//g, ":");
+    }
+    // add azerite_powers
+    if (item_data["azerite_powers"]) {
+      link.href += "&azerite-powers=" + loaded_data[chosen_class][chosen_spec][data_name][fight_style]["class_id"] + ":" + item_data["azerite_powers"].replace(/\//g, ":");
+    }
+    // add enchants
+    if (item_data["enchant"]) {
+      try {
+        link.href += "&ench=" + enchants[item_data["enchant"]];
+      } catch (error) {
+        // unknown enchant
+      }
+    }
+    // add link to element
+    equip.appendChild(link);
+    if (!whTooltips.iconizeLinks) {
+      link.appendChild(document.createTextNode(abbreviations[slot]));
+      equip.appendChild(document.createTextNode(" "));
+    } else {
+      // add icon size
+      link.dataset.whIconSize = "small";
+    }
+  }
+
+  // show both
+  talents.hidden = false;
+  equip.hidden = false;
+  document.getElementById("profile_block").hidden = false;
+
 }
 
 /**
@@ -3157,6 +3311,8 @@ function update_scatter_chart() {
   subtitle += `${age_hours}h ago`;
 
   document.getElementById("chart_title").innerHTML = "";//loaded_data[chosen_class][chosen_spec][data_view][fight_style]["title"];
+  document.getElementById("chart_title").hidden = true;
+  add_profile_information();
   document.getElementById("chart_subtitle").innerHTML = subtitle;
   document.getElementById("chart_simc_hash").innerHTML = `SimulationCraft build: <a href=\"https://github.com/simulationcraft/simc/commit/${loaded_data[chosen_class][chosen_spec][data_view][fight_style]["simc_settings"]["simc_hash"]}\" target=\"blank\">#${loaded_data[chosen_class][chosen_spec][data_view][fight_style]["simc_settings"]["simc_hash"].substring(0, 5)}</a>`;
 
@@ -3177,14 +3333,14 @@ function set_iconized_chart_cookie() {
 
 
 /** searches for the iconized charts cookie */
-function seach_iconized_chart_cookie() {
+function search_iconized_chart_cookie() {
   if (debug) {
-    console.log("seach_iconized_chart_cookie");
+    console.log("search_iconized_chart_cookie");
   }
   if (Cookies.get('bloodmallet_iconized_chart')) {
     whTooltips.iconizeLinks = ('true' === Cookies.get('bloodmallet_iconized_chart'));
   }
-  document.getElementById("inconized_charts_checkbox").checked = whTooltips.iconizeLinks;
+  document.getElementById("iconized_charts_checkbox").checked = whTooltips.iconizeLinks;
 }
 
 
@@ -3197,7 +3353,7 @@ function seach_iconized_chart_cookie() {
 
 document.addEventListener("DOMContentLoaded", async function () {
   search_dark_mode_cookie();
-  seach_iconized_chart_cookie();
+  search_iconized_chart_cookie();
   await search_language_cookie();
 
   get_data_from_link();

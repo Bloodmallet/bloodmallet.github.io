@@ -238,8 +238,8 @@
             </select>
           </div>
           <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="inconized_charts_checkbox" style="cursor: pointer">
-            <label class="form-check-label" style="cursor: pointer" id="translate_iconize_chart" for="inconized_charts_checkbox">
+            <input class="form-check-input" type="checkbox" id="iconized_charts_checkbox" style="cursor: pointer">
+            <label class="form-check-label" style="cursor: pointer" id="translate_iconize_chart" for="iconized_charts_checkbox">
               show icons in chart
             </label>
           </div>
@@ -373,7 +373,7 @@
           <span class="translate_tier_2">Tier 2</span></button>
       </div>
       <div class="row d-flex justify-content-center">
-        <button class="btn-data" type="button" data-toggle="collapse" data-target="#advanced_chart_options_area" aria-expanded="false" aria-controls="advanced_chart_options_area" id="advanced_chart_options_button" style="margin-top: 0.6rem; margin-right: 0.6rem;">
+        <button class="btn-data dropdown-toggle" type="button" data-toggle="collapse" data-target="#advanced_chart_options_area" aria-expanded="false" aria-controls="advanced_chart_options_area" id="advanced_chart_options_button" style="margin-top: 0.6rem; margin-right: 0.6rem;">
         Advanced Options
         </button>
       </div>
@@ -582,6 +582,7 @@
       <div id="chart_data" class="row">
         <div class="offset-xl-1 col-xl-10 offset-lg-1 col-lg-10 offset-md-1 col-md-10">
           <p id="chart_title" class="text-center" style="font-size:1.5rem;" ></p>
+          <p class="text-center" id="profile_block" hidden><span id="used_talents" hidden>Talents:</span></p>
         </div>
       </div>
 
@@ -623,6 +624,7 @@
         <li class="translate_dps_only_warning"><strong>Warning:</strong> All charts are about dealing damage ONLY!
         </li>
         <li id="chart_simc_hash"></li>
+        <li>Equip: <span id="used_items" hidden></span></li>
         <li class="translate_tc_warning">
           Please use your spec's theorycrafters resources for more indepth information.
         </li>
