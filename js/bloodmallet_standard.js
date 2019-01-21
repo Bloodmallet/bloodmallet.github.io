@@ -2680,7 +2680,9 @@ function add_profile_information() {
       // skip row if no talent was selected (0) in a row
       talent_id = talent_data[parseInt(row) + 1][parseInt(talent)]["spell_id"];
     } catch (error) {
-      talents.appendChild(document.createTextNode("0 "))
+      if (!whTooltips.iconizeLinks) {
+        talents.appendChild(document.createTextNode("0 "))
+      }
       continue;
     }
     let link = document.createElement("a");
