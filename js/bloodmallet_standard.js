@@ -2743,6 +2743,11 @@ function add_profile_information() {
     "pact_of_versatility": 5945
   };
   for (let slot of slots) {
+    // if itemslot is empty / missing
+    if (!profile_data[slot]) {
+      equip.appendChild(document.createTextNode(slot + " "));
+      continue;
+    }
     let item_data = profile_data[slot];
     let link = document.createElement("a");
     link.href = "https://" + (language === "EN" ? "www" : language.toLowerCase()) + ".wowhead.com";
