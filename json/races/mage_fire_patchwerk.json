@@ -1,23 +1,23 @@
 {
     "class_id": 8,
     "data": {
-        "Blood Elf": 25941,
-        "Dark Iron Dwarf": 25979,
-        "Draenei": 25888,
-        "Dwarf": 26157,
-        "Gnome": 25926,
-        "Goblin": 25935,
-        "Human": 25955,
-        "Lightforged Draenei": 26083,
-        "Maghar Orc": 26017,
-        "Night Elf": 25916,
-        "Nightborne": 26008,
-        "Orc": 26018,
-        "Pandaren": 26002,
-        "Troll": 26069,
-        "Undead": 26036,
-        "Void Elf": 26143,
-        "Worgen": 25884
+        "Blood Elf": 25928,
+        "Dark Iron Dwarf": 26025,
+        "Draenei": 25920,
+        "Dwarf": 26164,
+        "Gnome": 25934,
+        "Goblin": 25918,
+        "Human": 25935,
+        "Lightforged Draenei": 26068,
+        "Maghar Orc": 26095,
+        "Night Elf": 25877,
+        "Nightborne": 26033,
+        "Orc": 25967,
+        "Pandaren": 25954,
+        "Troll": 26055,
+        "Undead": 26097,
+        "Void Elf": 26205,
+        "Worgen": 25938
     },
     "data_type": "races",
     "languages": {
@@ -247,7 +247,7 @@
             "bonus_id": "1587/4819/4775",
             "id": "159254"
         },
-        "talents": "living_bomb,if=active_enemies>1&buff.combustion.down&(cooldown.combustion.remains>cooldown.living_bomb.duration|cooldown.combustion.ready)",
+        "talents": "3031022",
         "trinket1": {
             "bonus_id": "1572/4780",
             "id": "159630"
@@ -270,32 +270,32 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "7dc3bbcf67",
+        "simc_hash": "8b351fa071",
         "spec": "fire",
         "target_error": "0.2",
         "tier": "23"
     },
     "sorted_data_keys": [
-        "Dwarf",
         "Void Elf",
+        "Dwarf",
+        "Undead",
+        "Maghar Orc",
         "Lightforged Draenei",
         "Troll",
-        "Undead",
-        "Orc",
-        "Maghar Orc",
         "Nightborne",
-        "Pandaren",
         "Dark Iron Dwarf",
+        "Orc",
+        "Pandaren",
+        "Worgen",
         "Human",
-        "Blood Elf",
-        "Goblin",
         "Gnome",
-        "Night Elf",
+        "Blood Elf",
         "Draenei",
-        "Worgen"
+        "Goblin",
+        "Night Elf"
     ],
     "spec_id": 63,
-    "subtitle": "UTC 2019-01-21 11:31 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7dc3bbcf67\" target=\"blank\">7dc3bbc</a>",
+    "subtitle": "UTC 2019-01-22 09:37 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/8b351fa071\" target=\"blank\">8b351fa</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -396,6 +396,6 @@
             }
         }
     },
-    "timestamp": "2019-01-21 11:31",
+    "timestamp": "2019-01-22 09:37",
     "title": "Races | Fire Mage | Patchwerk"
 }

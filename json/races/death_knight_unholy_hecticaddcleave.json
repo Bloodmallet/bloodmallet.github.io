@@ -1,18 +1,18 @@
 {
     "class_id": 6,
     "data": {
-        "Blood Elf": 45598,
-        "Draenei": 44906,
-        "Dwarf": 44970,
-        "Gnome": 45089,
-        "Goblin": 45154,
-        "Human": 45077,
-        "Night Elf": 45028,
-        "Orc": 44908,
-        "Tauren": 45034,
-        "Troll": 45106,
-        "Undead": 45061,
-        "Worgen": 45092
+        "Blood Elf": 46291,
+        "Draenei": 45521,
+        "Dwarf": 45579,
+        "Gnome": 45671,
+        "Goblin": 45763,
+        "Human": 45759,
+        "Night Elf": 45759,
+        "Orc": 45653,
+        "Tauren": 45635,
+        "Troll": 45662,
+        "Undead": 45588,
+        "Worgen": 45624
     },
     "data_type": "races",
     "languages": {
@@ -190,8 +190,8 @@
         },
         "talents": "2203032",
         "trinket1": {
-            "bonus_id": "4779/1572",
-            "id": "159627"
+            "bonus_id": "4800/1537",
+            "id": "165580"
         },
         "trinket2": {
             "bonus_id": "4800/1537",
@@ -211,7 +211,7 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "7dc3bbcf67",
+        "simc_hash": "8b351fa071",
         "spec": "unholy",
         "target_error": "0.2",
         "tier": "23"
@@ -219,19 +219,19 @@
     "sorted_data_keys": [
         "Blood Elf",
         "Goblin",
-        "Troll",
-        "Worgen",
-        "Gnome",
         "Human",
-        "Undead",
-        "Tauren",
         "Night Elf",
-        "Dwarf",
+        "Gnome",
+        "Troll",
         "Orc",
+        "Tauren",
+        "Worgen",
+        "Undead",
+        "Dwarf",
         "Draenei"
     ],
     "spec_id": 252,
-    "subtitle": "UTC 2019-01-21 11:36 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7dc3bbcf67\" target=\"blank\">7dc3bbc</a>",
+    "subtitle": "UTC 2019-01-22 09:42 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/8b351fa071\" target=\"blank\">8b351fa</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -332,6 +332,6 @@
             }
         }
     },
-    "timestamp": "2019-01-21 11:36",
+    "timestamp": "2019-01-22 09:42",
     "title": "Races | Unholy Death Knight | Hecticaddcleave"
 }

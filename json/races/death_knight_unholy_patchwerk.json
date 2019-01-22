@@ -1,18 +1,18 @@
 {
     "class_id": 6,
     "data": {
-        "Blood Elf": 23709,
-        "Draenei": 23591,
-        "Dwarf": 23592,
-        "Gnome": 23748,
-        "Goblin": 23675,
-        "Human": 23686,
-        "Night Elf": 23661,
-        "Orc": 23726,
-        "Tauren": 23585,
-        "Troll": 23848,
-        "Undead": 23802,
-        "Worgen": 23675
+        "Blood Elf": 24152,
+        "Draenei": 24040,
+        "Dwarf": 24039,
+        "Gnome": 24107,
+        "Goblin": 24114,
+        "Human": 24093,
+        "Night Elf": 24080,
+        "Orc": 24090,
+        "Tauren": 24029,
+        "Troll": 24230,
+        "Undead": 24257,
+        "Worgen": 24029
     },
     "data_type": "races",
     "languages": {
@@ -190,8 +190,8 @@
         },
         "talents": "2203032",
         "trinket1": {
-            "bonus_id": "4779/1572",
-            "id": "159627"
+            "bonus_id": "4800/1537",
+            "id": "165580"
         },
         "trinket2": {
             "bonus_id": "4800/1537",
@@ -211,27 +211,27 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "7dc3bbcf67",
+        "simc_hash": "8b351fa071",
         "spec": "unholy",
         "target_error": "0.2",
         "tier": "23"
     },
     "sorted_data_keys": [
-        "Troll",
         "Undead",
-        "Gnome",
-        "Orc",
+        "Troll",
         "Blood Elf",
-        "Human",
-        "Worgen",
         "Goblin",
+        "Gnome",
+        "Human",
+        "Orc",
         "Night Elf",
-        "Dwarf",
         "Draenei",
+        "Dwarf",
+        "Worgen",
         "Tauren"
     ],
     "spec_id": 252,
-    "subtitle": "UTC 2019-01-21 11:30 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7dc3bbcf67\" target=\"blank\">7dc3bbc</a>",
+    "subtitle": "UTC 2019-01-22 09:35 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/8b351fa071\" target=\"blank\">8b351fa</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -332,6 +332,6 @@
             }
         }
     },
-    "timestamp": "2019-01-21 11:30",
+    "timestamp": "2019-01-22 09:35",
     "title": "Races | Unholy Death Knight | Patchwerk"
 }

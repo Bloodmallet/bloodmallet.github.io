@@ -1,23 +1,23 @@
 {
     "class_id": 8,
     "data": {
-        "Blood Elf": 28343,
-        "Dark Iron Dwarf": 28401,
-        "Draenei": 28295,
-        "Dwarf": 28552,
-        "Gnome": 28325,
-        "Goblin": 28359,
-        "Human": 28332,
-        "Lightforged Draenei": 27921,
-        "Maghar Orc": 28409,
-        "Night Elf": 28345,
-        "Nightborne": 28413,
-        "Orc": 28404,
-        "Pandaren": 28377,
-        "Troll": 28364,
-        "Undead": 28390,
-        "Void Elf": 28547,
-        "Worgen": 28288
+        "Blood Elf": 28361,
+        "Dark Iron Dwarf": 28405,
+        "Draenei": 28368,
+        "Dwarf": 28556,
+        "Gnome": 28350,
+        "Goblin": 28328,
+        "Human": 28380,
+        "Lightforged Draenei": 27990,
+        "Maghar Orc": 28387,
+        "Night Elf": 28297,
+        "Nightborne": 28424,
+        "Orc": 28387,
+        "Pandaren": 28358,
+        "Troll": 28344,
+        "Undead": 28423,
+        "Void Elf": 28615,
+        "Worgen": 28346
     },
     "data_type": "races",
     "languages": {
@@ -247,7 +247,7 @@
             "bonus_id": "1587/4819/4775",
             "id": "159254"
         },
-        "talents": "living_bomb,if=active_enemies>1&buff.combustion.down&(cooldown.combustion.remains>cooldown.living_bomb.duration|cooldown.combustion.ready)",
+        "talents": "3031022",
         "trinket1": {
             "bonus_id": "1572/4780",
             "id": "159630"
@@ -270,32 +270,32 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "7dc3bbcf67",
+        "simc_hash": "8b351fa071",
         "spec": "fire",
         "target_error": "0.2",
         "tier": "23"
     },
     "sorted_data_keys": [
-        "Dwarf",
         "Void Elf",
+        "Dwarf",
         "Nightborne",
-        "Maghar Orc",
-        "Orc",
-        "Dark Iron Dwarf",
         "Undead",
+        "Dark Iron Dwarf",
+        "Orc",
+        "Maghar Orc",
+        "Human",
+        "Draenei",
+        "Blood Elf",
         "Pandaren",
+        "Gnome",
+        "Worgen",
         "Troll",
         "Goblin",
         "Night Elf",
-        "Blood Elf",
-        "Human",
-        "Gnome",
-        "Draenei",
-        "Worgen",
         "Lightforged Draenei"
     ],
     "spec_id": 63,
-    "subtitle": "UTC 2019-01-21 11:39 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7dc3bbcf67\" target=\"blank\">7dc3bbc</a>",
+    "subtitle": "UTC 2019-01-22 09:45 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/8b351fa071\" target=\"blank\">8b351fa</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -396,6 +396,6 @@
             }
         }
     },
-    "timestamp": "2019-01-21 11:39",
+    "timestamp": "2019-01-22 09:45",
     "title": "Races | Fire Mage | Hecticaddcleave"
 }
