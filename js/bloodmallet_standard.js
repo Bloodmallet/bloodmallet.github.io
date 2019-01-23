@@ -2426,7 +2426,7 @@ function update_trait_stacking_chart() {
         link += "class=\"chart_link\"";
       }
       link += ">";
-      if (tmp_i === "0") { // I have no idea for what reason this is a string...
+      if (tmp_i === "0" || !whTooltips.iconizeLinks) { // I have no idea for what reason this is a string...
         link += get_translated_name(name_portion.trim());
       }
       link += "</a></div>";
