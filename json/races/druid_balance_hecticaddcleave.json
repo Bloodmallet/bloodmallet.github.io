@@ -1,11 +1,11 @@
 {
     "class_id": 11,
     "data": {
-        "Highmountain Tauren": 32877,
-        "Night Elf": 32850,
-        "Tauren": 32788,
-        "Troll": 33053,
-        "Worgen": 32847
+        "Highmountain Tauren": 32914,
+        "Night Elf": 32881,
+        "Tauren": 32812,
+        "Troll": 33084,
+        "Worgen": 32846
     },
     "data_type": "races",
     "languages": {
@@ -62,6 +62,7 @@
     },
     "profile": {
         "back": {
+            "bonus_id": "4800/1537",
             "id": "165512"
         },
         "chest": {
@@ -137,7 +138,7 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "8b351fa071",
+        "simc_hash": "8e2ab02f8d",
         "spec": "balance",
         "target_error": "0.2",
         "tier": "23"
@@ -150,7 +151,7 @@
         "Tauren"
     ],
     "spec_id": 102,
-    "subtitle": "UTC 2019-01-22 09:42 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/8b351fa071\" target=\"blank\">8b351fa</a>",
+    "subtitle": "UTC 2019-01-24 08:59 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/8e2ab02f8d\" target=\"blank\">8e2ab02</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -251,6 +252,6 @@
             }
         }
     },
-    "timestamp": "2019-01-22 09:42",
+    "timestamp": "2019-01-24 08:59",
     "title": "Races | Balance Druid | Hecticaddcleave"
 }

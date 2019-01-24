@@ -1,25 +1,25 @@
 {
     "class_id": 3,
     "data": {
-        "Blood Elf": 40272,
-        "Dark Iron Dwarf": 40102,
-        "Draenei": 40294,
-        "Dwarf": 40404,
-        "Gnome": 40259,
-        "Goblin": 40405,
-        "Highmountain Tauren": 40355,
-        "Human": 40606,
-        "Lightforged Draenei": 41003,
-        "Maghar Orc": 40297,
-        "Night Elf": 40333,
-        "Nightborne": 40055,
-        "Orc": 40245,
-        "Pandaren": 40325,
-        "Tauren": 40383,
-        "Troll": 40526,
-        "Undead": 40244,
-        "Void Elf": 40434,
-        "Worgen": 40347
+        "Blood Elf": 40487,
+        "Dark Iron Dwarf": 40279,
+        "Draenei": 40373,
+        "Dwarf": 40542,
+        "Gnome": 40413,
+        "Goblin": 40312,
+        "Highmountain Tauren": 40468,
+        "Human": 40520,
+        "Lightforged Draenei": 40815,
+        "Maghar Orc": 40435,
+        "Night Elf": 40514,
+        "Nightborne": 40135,
+        "Orc": 40349,
+        "Pandaren": 40450,
+        "Tauren": 40431,
+        "Troll": 40483,
+        "Undead": 40361,
+        "Void Elf": 40566,
+        "Worgen": 40372
     },
     "data_type": "races",
     "languages": {
@@ -267,8 +267,8 @@
         },
         "talents": "1103031",
         "trinket1": {
-            "bonus_id": "4800/1537",
-            "id": "165572"
+            "bonus_id": "1572/4780",
+            "id": "159614"
         },
         "trinket2": {
             "bonus_id": "4800/1537",
@@ -288,34 +288,34 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "8b351fa071",
+        "simc_hash": "8e2ab02f8d",
         "spec": "marksmanship",
         "target_error": "0.2",
         "tier": "23"
     },
     "sorted_data_keys": [
         "Lightforged Draenei",
-        "Human",
-        "Troll",
         "Void Elf",
-        "Goblin",
         "Dwarf",
-        "Tauren",
-        "Highmountain Tauren",
-        "Worgen",
+        "Human",
         "Night Elf",
+        "Blood Elf",
+        "Troll",
+        "Highmountain Tauren",
         "Pandaren",
         "Maghar Orc",
-        "Draenei",
-        "Blood Elf",
+        "Tauren",
         "Gnome",
-        "Orc",
+        "Draenei",
+        "Worgen",
         "Undead",
+        "Orc",
+        "Goblin",
         "Dark Iron Dwarf",
         "Nightborne"
     ],
     "spec_id": 254,
-    "subtitle": "UTC 2019-01-22 09:44 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/8b351fa071\" target=\"blank\">8b351fa</a>",
+    "subtitle": "UTC 2019-01-24 09:01 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/8e2ab02f8d\" target=\"blank\">8e2ab02</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -416,6 +416,6 @@
             }
         }
     },
-    "timestamp": "2019-01-22 09:44",
+    "timestamp": "2019-01-24 09:01",
     "title": "Races | Marksmanship Hunter | Hecticaddcleave"
 }

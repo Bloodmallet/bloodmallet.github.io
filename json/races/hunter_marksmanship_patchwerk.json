@@ -1,25 +1,25 @@
 {
     "class_id": 3,
     "data": {
-        "Blood Elf": 26881,
-        "Dark Iron Dwarf": 26824,
-        "Draenei": 26836,
-        "Dwarf": 26900,
-        "Gnome": 26956,
-        "Goblin": 26888,
-        "Highmountain Tauren": 26895,
-        "Human": 26984,
-        "Lightforged Draenei": 26940,
-        "Maghar Orc": 26859,
-        "Night Elf": 26840,
-        "Nightborne": 26732,
-        "Orc": 26836,
-        "Pandaren": 26914,
-        "Tauren": 26906,
-        "Troll": 26868,
-        "Undead": 26921,
-        "Void Elf": 26950,
-        "Worgen": 26884
+        "Blood Elf": 26872,
+        "Dark Iron Dwarf": 26831,
+        "Draenei": 26880,
+        "Dwarf": 26901,
+        "Gnome": 26968,
+        "Goblin": 26925,
+        "Highmountain Tauren": 26872,
+        "Human": 27031,
+        "Lightforged Draenei": 26921,
+        "Maghar Orc": 26923,
+        "Night Elf": 26883,
+        "Nightborne": 26747,
+        "Orc": 26863,
+        "Pandaren": 26835,
+        "Tauren": 26903,
+        "Troll": 27153,
+        "Undead": 26894,
+        "Void Elf": 26953,
+        "Worgen": 26871
     },
     "data_type": "races",
     "languages": {
@@ -267,8 +267,8 @@
         },
         "talents": "1103031",
         "trinket1": {
-            "bonus_id": "4800/1537",
-            "id": "165572"
+            "bonus_id": "1572/4780",
+            "id": "159614"
         },
         "trinket2": {
             "bonus_id": "4800/1537",
@@ -288,34 +288,34 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "8b351fa071",
+        "simc_hash": "8e2ab02f8d",
         "spec": "marksmanship",
         "target_error": "0.2",
         "tier": "23"
     },
     "sorted_data_keys": [
+        "Troll",
         "Human",
         "Gnome",
         "Void Elf",
+        "Goblin",
+        "Maghar Orc",
         "Lightforged Draenei",
-        "Undead",
-        "Pandaren",
         "Tauren",
         "Dwarf",
-        "Highmountain Tauren",
-        "Goblin",
-        "Worgen",
-        "Blood Elf",
-        "Troll",
-        "Maghar Orc",
+        "Undead",
         "Night Elf",
         "Draenei",
+        "Blood Elf",
+        "Highmountain Tauren",
+        "Worgen",
         "Orc",
+        "Pandaren",
         "Dark Iron Dwarf",
         "Nightborne"
     ],
     "spec_id": 254,
-    "subtitle": "UTC 2019-01-22 09:36 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/8b351fa071\" target=\"blank\">8b351fa</a>",
+    "subtitle": "UTC 2019-01-24 08:49 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/8e2ab02f8d\" target=\"blank\">8e2ab02</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -416,6 +416,6 @@
             }
         }
     },
-    "timestamp": "2019-01-22 09:36",
+    "timestamp": "2019-01-24 08:49",
     "title": "Races | Marksmanship Hunter | Patchwerk"
 }

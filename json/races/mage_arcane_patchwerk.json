@@ -1,23 +1,23 @@
 {
     "class_id": 8,
     "data": {
-        "Blood Elf": 26261,
-        "Dark Iron Dwarf": 26296,
-        "Draenei": 26232,
-        "Dwarf": 26321,
-        "Gnome": 26269,
-        "Goblin": 26207,
-        "Human": 26273,
-        "Lightforged Draenei": 26258,
-        "Maghar Orc": 26257,
-        "Night Elf": 26276,
-        "Nightborne": 26263,
-        "Orc": 26109,
-        "Pandaren": 26249,
-        "Troll": 26563,
-        "Undead": 26248,
-        "Void Elf": 26335,
-        "Worgen": 26247
+        "Blood Elf": 26148,
+        "Dark Iron Dwarf": 26114,
+        "Draenei": 26108,
+        "Dwarf": 26137,
+        "Gnome": 26189,
+        "Goblin": 26069,
+        "Human": 26211,
+        "Lightforged Draenei": 26144,
+        "Maghar Orc": 26252,
+        "Night Elf": 26142,
+        "Nightborne": 26168,
+        "Orc": 26086,
+        "Pandaren": 26134,
+        "Troll": 26519,
+        "Undead": 26152,
+        "Void Elf": 26295,
+        "Worgen": 26141
     },
     "data_type": "races",
     "languages": {
@@ -195,7 +195,7 @@
     "profile": {
         "back": {
             "bonus_id": "4800/1537",
-            "id": "165924"
+            "id": "165512"
         },
         "chest": {
             "azerite_powers": "127/562/30/13",
@@ -212,9 +212,9 @@
             "id": "165565"
         },
         "finger2": {
-            "bonus_id": "1572/4780",
+            "bonus_id": "4800/1537",
             "enchant": "pact_of_versatility",
-            "id": "158362"
+            "id": "165567"
         },
         "hands": {
             "bonus_id": "4800/1537",
@@ -266,7 +266,7 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "8b351fa071",
+        "simc_hash": "8e2ab02f8d",
         "spec": "arcane",
         "target_error": "0.2",
         "tier": "23"
@@ -274,24 +274,24 @@
     "sorted_data_keys": [
         "Troll",
         "Void Elf",
-        "Dwarf",
-        "Dark Iron Dwarf",
-        "Night Elf",
+        "Maghar Orc",
         "Human",
         "Gnome",
         "Nightborne",
+        "Undead",
         "Blood Elf",
         "Lightforged Draenei",
-        "Maghar Orc",
-        "Pandaren",
-        "Undead",
+        "Night Elf",
         "Worgen",
+        "Dwarf",
+        "Pandaren",
+        "Dark Iron Dwarf",
         "Draenei",
-        "Goblin",
-        "Orc"
+        "Orc",
+        "Goblin"
     ],
     "spec_id": 62,
-    "subtitle": "UTC 2019-01-22 09:36 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/8b351fa071\" target=\"blank\">8b351fa</a>",
+    "subtitle": "UTC 2019-01-24 08:50 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/8e2ab02f8d\" target=\"blank\">8e2ab02</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -392,6 +392,6 @@
             }
         }
     },
-    "timestamp": "2019-01-22 09:36",
+    "timestamp": "2019-01-24 08:50",
     "title": "Races | Arcane Mage | Patchwerk"
 }

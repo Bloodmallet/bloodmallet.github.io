@@ -1,17 +1,18 @@
 {
+    "class_id": 6,
     "data": {
-        "Blood Elf": 15811,
-        "Draenei": 15770,
-        "Dwarf": 15761,
-        "Gnome": 15905,
-        "Goblin": 15896,
-        "Human": 15795,
-        "Night Elf": 15804,
-        "Orc": 15757,
-        "Tauren": 15759,
-        "Troll": 15924,
-        "Undead": 15872,
-        "Worgen": 15801
+        "Blood Elf": 21156,
+        "Draenei": 21056,
+        "Dwarf": 21044,
+        "Gnome": 21060,
+        "Goblin": 21089,
+        "Human": 21062,
+        "Night Elf": 21115,
+        "Orc": 21013,
+        "Tauren": 21029,
+        "Troll": 21114,
+        "Undead": 21244,
+        "Worgen": 21100
     },
     "data_type": "races",
     "languages": {
@@ -136,31 +137,201 @@
             "ru_RU": "Ворген"
         }
     },
+    "profile": {
+        "back": {
+            "bonus_id": "4824/1537",
+            "id": "165512"
+        },
+        "chest": {
+            "azerite_powers": "348/560/30/13",
+            "bonus_id": "4824/1537/4775",
+            "id": "165832"
+        },
+        "feet": {
+            "bonus_id": "4824/1537",
+            "id": "165561"
+        },
+        "finger1": {
+            "bonus_id": "4824/1537",
+            "enchant": "pact_of_haste",
+            "id": "165566"
+        },
+        "finger2": {
+            "bonus_id": "4824/1537",
+            "enchant": "pact_of_haste",
+            "id": "165567"
+        },
+        "hands": {
+            "bonus_id": "4824/1537",
+            "id": "165549"
+        },
+        "head": {
+            "azerite_powers": "348/561/31/13",
+            "bonus_id": "4824/1537/4775",
+            "id": "165823"
+        },
+        "legs": {
+            "bonus_id": "4824/1537",
+            "id": "165560"
+        },
+        "main_hand": {
+            "bonus_id": "4800/1537",
+            "enchant": "rune_of_the_fallen_crusader",
+            "id": "165586"
+        },
+        "neck": {
+            "bonus_id": "4929/4930/4936/1566",
+            "id": "158075"
+        },
+        "shoulders": {
+            "azerite_powers": "348/561/22/13",
+            "bonus_id": "4824/1537/4775",
+            "id": "165562"
+        },
+        "talents": "2220022",
+        "trinket1": {
+            "bonus_id": "4824/1537",
+            "id": "165580"
+        },
+        "trinket2": {
+            "bonus_id": "4824/1537",
+            "id": "165570"
+        },
+        "waist": {
+            "bonus_id": "4824/1537",
+            "id": "165559"
+        },
+        "wrists": {
+            "bonus_id": "4824/1537",
+            "id": "165551"
+        }
+    },
     "simc_settings": {
         "class": "death_knight",
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "890b196aca",
+        "simc_hash": "8e2ab02f8d",
         "spec": "blood",
         "target_error": "0.2",
-        "tier": "22"
+        "tier": "23"
     },
     "sorted_data_keys": [
-        "Troll",
-        "Gnome",
-        "Goblin",
         "Undead",
         "Blood Elf",
         "Night Elf",
+        "Troll",
         "Worgen",
+        "Goblin",
         "Human",
+        "Gnome",
         "Draenei",
         "Dwarf",
         "Tauren",
         "Orc"
     ],
-    "subtitle": "UTC 2019-01-03 11:10 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/890b196aca\" target=\"blank\">890b196</a>",
-    "timestamp": "2019-01-03 11:10",
+    "spec_id": 250,
+    "subtitle": "UTC 2019-01-24 08:57 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/8e2ab02f8d\" target=\"blank\">8e2ab02</a>",
+    "talent_data": {
+        "1": {
+            "1": {
+                "name": "Heartbreaker",
+                "spell_id": "221536"
+            },
+            "2": {
+                "name": "Blooddrinker",
+                "spell_id": "206931"
+            },
+            "3": {
+                "name": "Rune Strike",
+                "spell_id": "210764"
+            }
+        },
+        "2": {
+            "1": {
+                "name": "Rapid Decomposition",
+                "spell_id": "194662"
+            },
+            "2": {
+                "name": "Hemostasis",
+                "spell_id": "273946"
+            },
+            "3": {
+                "name": "Consumption",
+                "spell_id": "274156"
+            }
+        },
+        "3": {
+            "1": {
+                "name": "Foul Bulwark",
+                "spell_id": "206974"
+            },
+            "2": {
+                "name": "Ossuary",
+                "spell_id": "219786"
+            },
+            "3": {
+                "name": "Tombstone",
+                "spell_id": "219809"
+            }
+        },
+        "4": {
+            "1": {
+                "name": "Will of the Necropolis",
+                "spell_id": "206967"
+            },
+            "2": {
+                "name": "Anti-Magic Barrier",
+                "spell_id": "205727"
+            },
+            "3": {
+                "name": "Rune Tap",
+                "spell_id": "194679"
+            }
+        },
+        "5": {
+            "1": {
+                "name": "Grip of the Dead",
+                "spell_id": "273952"
+            },
+            "2": {
+                "name": "Tightening Grasp",
+                "spell_id": "206970"
+            },
+            "3": {
+                "name": "Wraith Walk",
+                "spell_id": "212552"
+            }
+        },
+        "6": {
+            "1": {
+                "name": "Voracious",
+                "spell_id": "273953"
+            },
+            "2": {
+                "name": "Bloodworms",
+                "spell_id": "195679"
+            },
+            "3": {
+                "name": "Mark of Blood",
+                "spell_id": "206940"
+            }
+        },
+        "7": {
+            "1": {
+                "name": "Purgatory",
+                "spell_id": "114556"
+            },
+            "2": {
+                "name": "Red Thirst",
+                "spell_id": "205723"
+            },
+            "3": {
+                "name": "Bonestorm",
+                "spell_id": "194844"
+            }
+        }
+    },
+    "timestamp": "2019-01-24 08:57",
     "title": "Races | Blood Death Knight | Hecticaddcleave"
 }

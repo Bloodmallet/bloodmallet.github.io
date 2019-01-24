@@ -1,18 +1,18 @@
 {
     "class_id": 6,
     "data": {
-        "Blood Elf": 24152,
-        "Draenei": 24040,
-        "Dwarf": 24039,
-        "Gnome": 24107,
-        "Goblin": 24114,
-        "Human": 24093,
-        "Night Elf": 24080,
-        "Orc": 24090,
-        "Tauren": 24029,
-        "Troll": 24230,
-        "Undead": 24257,
-        "Worgen": 24029
+        "Blood Elf": 24292,
+        "Draenei": 24176,
+        "Dwarf": 24191,
+        "Gnome": 24269,
+        "Goblin": 24290,
+        "Human": 24234,
+        "Night Elf": 24254,
+        "Orc": 24251,
+        "Tauren": 24186,
+        "Troll": 24426,
+        "Undead": 24389,
+        "Worgen": 24269
     },
     "data_type": "races",
     "languages": {
@@ -143,9 +143,9 @@
             "id": "165512"
         },
         "chest": {
-            "azerite_powers": "199/244/30/14/13",
-            "bonus_id": "5062/1587/4786/4775",
-            "id": "159440"
+            "azerite_powers": "199/109/30/15/13",
+            "bonus_id": "1537/4824/4775",
+            "id": "165557"
         },
         "feet": {
             "bonus_id": "4800/1537",
@@ -195,7 +195,7 @@
         },
         "trinket2": {
             "bonus_id": "4800/1537",
-            "id": "165570"
+            "id": "165574"
         },
         "waist": {
             "bonus_id": "4800/1537",
@@ -211,27 +211,27 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "8b351fa071",
+        "simc_hash": "8e2ab02f8d",
         "spec": "unholy",
         "target_error": "0.2",
         "tier": "23"
     },
     "sorted_data_keys": [
-        "Undead",
         "Troll",
+        "Undead",
         "Blood Elf",
         "Goblin",
         "Gnome",
-        "Human",
-        "Orc",
-        "Night Elf",
-        "Draenei",
-        "Dwarf",
         "Worgen",
-        "Tauren"
+        "Night Elf",
+        "Orc",
+        "Human",
+        "Dwarf",
+        "Tauren",
+        "Draenei"
     ],
     "spec_id": 252,
-    "subtitle": "UTC 2019-01-22 09:35 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/8b351fa071\" target=\"blank\">8b351fa</a>",
+    "subtitle": "UTC 2019-01-24 08:48 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/8e2ab02f8d\" target=\"blank\">8e2ab02</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -332,6 +332,6 @@
             }
         }
     },
-    "timestamp": "2019-01-22 09:35",
+    "timestamp": "2019-01-24 08:48",
     "title": "Races | Unholy Death Knight | Patchwerk"
 }

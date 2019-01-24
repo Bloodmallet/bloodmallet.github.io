@@ -1,21 +1,21 @@
 {
     "class_id": 4,
     "data": {
-        "Blood Elf": 26109,
-        "Dark Iron Dwarf": 26054,
-        "Dwarf": 26029,
-        "Gnome": 26075,
-        "Goblin": 26019,
-        "Human": 26110,
-        "Maghar Orc": 26059,
-        "Night Elf": 26244,
-        "Nightborne": 25862,
-        "Orc": 25996,
-        "Pandaren": 26043,
-        "Troll": 25897,
-        "Undead": 26093,
-        "Void Elf": 26194,
-        "Worgen": 26092
+        "Blood Elf": 26071,
+        "Dark Iron Dwarf": 26006,
+        "Dwarf": 26028,
+        "Gnome": 26109,
+        "Goblin": 25963,
+        "Human": 26081,
+        "Maghar Orc": 26060,
+        "Night Elf": 26278,
+        "Nightborne": 25902,
+        "Orc": 25994,
+        "Pandaren": 26045,
+        "Troll": 25932,
+        "Undead": 26111,
+        "Void Elf": 26230,
+        "Worgen": 26099
     },
     "data_type": "races",
     "languages": {
@@ -249,7 +249,7 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "8b351fa071",
+        "simc_hash": "8e2ab02f8d",
         "spec": "subtlety",
         "target_error": "0.2",
         "tier": "23"
@@ -257,22 +257,22 @@
     "sorted_data_keys": [
         "Night Elf",
         "Void Elf",
+        "Undead",
+        "Gnome",
+        "Worgen",
         "Human",
         "Blood Elf",
-        "Undead",
-        "Worgen",
-        "Gnome",
         "Maghar Orc",
-        "Dark Iron Dwarf",
         "Pandaren",
         "Dwarf",
-        "Goblin",
+        "Dark Iron Dwarf",
         "Orc",
+        "Goblin",
         "Troll",
         "Nightborne"
     ],
     "spec_id": 261,
-    "subtitle": "UTC 2019-01-22 09:39 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/8b351fa071\" target=\"blank\">8b351fa</a>",
+    "subtitle": "UTC 2019-01-24 08:53 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/8e2ab02f8d\" target=\"blank\">8e2ab02</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -373,6 +373,6 @@
             }
         }
     },
-    "timestamp": "2019-01-22 09:39",
+    "timestamp": "2019-01-24 08:53",
     "title": "Races | Subtlety Rogue | Patchwerk"
 }

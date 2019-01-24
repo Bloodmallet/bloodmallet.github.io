@@ -1,18 +1,18 @@
 {
     "class_id": 6,
     "data": {
-        "Blood Elf": 46291,
-        "Draenei": 45521,
-        "Dwarf": 45579,
-        "Gnome": 45671,
-        "Goblin": 45763,
-        "Human": 45759,
-        "Night Elf": 45759,
-        "Orc": 45653,
-        "Tauren": 45635,
-        "Troll": 45662,
-        "Undead": 45588,
-        "Worgen": 45624
+        "Blood Elf": 46816,
+        "Draenei": 46469,
+        "Dwarf": 46462,
+        "Gnome": 46682,
+        "Goblin": 46593,
+        "Human": 46529,
+        "Night Elf": 46573,
+        "Orc": 46454,
+        "Tauren": 46417,
+        "Troll": 46378,
+        "Undead": 46457,
+        "Worgen": 46552
     },
     "data_type": "races",
     "languages": {
@@ -143,9 +143,9 @@
             "id": "165512"
         },
         "chest": {
-            "azerite_powers": "199/244/30/14/13",
-            "bonus_id": "5062/1587/4786/4775",
-            "id": "159440"
+            "azerite_powers": "199/109/30/15/13",
+            "bonus_id": "1537/4824/4775",
+            "id": "165557"
         },
         "feet": {
             "bonus_id": "4800/1537",
@@ -195,7 +195,7 @@
         },
         "trinket2": {
             "bonus_id": "4800/1537",
-            "id": "165570"
+            "id": "165574"
         },
         "waist": {
             "bonus_id": "4800/1537",
@@ -211,27 +211,27 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "8b351fa071",
+        "simc_hash": "8e2ab02f8d",
         "spec": "unholy",
         "target_error": "0.2",
         "tier": "23"
     },
     "sorted_data_keys": [
         "Blood Elf",
-        "Goblin",
-        "Human",
-        "Night Elf",
         "Gnome",
-        "Troll",
+        "Goblin",
+        "Night Elf",
+        "Worgen",
+        "Human",
+        "Draenei",
+        "Dwarf",
+        "Undead",
         "Orc",
         "Tauren",
-        "Worgen",
-        "Undead",
-        "Dwarf",
-        "Draenei"
+        "Troll"
     ],
     "spec_id": 252,
-    "subtitle": "UTC 2019-01-22 09:42 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/8b351fa071\" target=\"blank\">8b351fa</a>",
+    "subtitle": "UTC 2019-01-24 08:59 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/8e2ab02f8d\" target=\"blank\">8e2ab02</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -332,6 +332,6 @@
             }
         }
     },
-    "timestamp": "2019-01-22 09:42",
+    "timestamp": "2019-01-24 08:59",
     "title": "Races | Unholy Death Knight | Hecticaddcleave"
 }
