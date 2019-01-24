@@ -1759,25 +1759,23 @@ function update_chart() {
   }
 
   // cleanse dps_ordered_data from doubled pvp traits
-  let tmp_pvp_trait_names = Object.keys(item_and_trait_equilizer);
-  tmp_pvp_trait_names.concat(Object.values(item_and_trait_equilizer));
+  // alliance names will be deleted
+  // we're essentially just double checking that our item_and_trait_equilizer doesn't try to kill not-present-trinkets/traits
   purge_list = [];
-  // create purgable list
   for (let trait_name of dps_ordered_data) {
-    if (item_and_trait_equilizer[trait_name] && !purge_list.includes(trait_name)) {
-      purge_list.push(item_and_trait_equilizer[trait_name])
+    // if horde trait is found and alliance trait is still in dps ordered list
+    if (item_and_trait_equilizer[trait_name] && !purge_list.includes(trait_name) && dps_ordered_data.includes(item_and_trait_equilizer[trait_name])) {
+      // add alliance name to purge list
+      purge_list.push(item_and_trait_equilizer[trait_name]);
+      // alliance trait found and not yet in purge list
     } else if (Object.values(item_and_trait_equilizer).includes(trait_name) && !purge_list.includes(trait_name)) {
-      for (let tmp_name in item_and_trait_equilizer) {
-        if (item_and_trait_equilizer[tmp_name] == trait_name) {
-          purge_list.push(tmp_name);
-        }
-      }
+      purge_list.push(trait_name);
     }
   }
-  // purge dps_ordered_data with purge_list
   for (let trait_name of purge_list) {
     dps_ordered_data.splice(dps_ordered_data.indexOf(trait_name), 1);
   }
+
 
   // sort dps_ordered_data if max itemlevel is not allowed
   try {
@@ -2335,8 +2333,9 @@ function update_trait_stacking_chart() {
     }
 
   } else {
-    if (debug)
+    if (debug) {
       console.log("Getting sorted_data_keys_2 from data failed. Set unordered dps_ordered_data");
+    }
     var dps_ordered_data = Object.keys(loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"]).slice();
   }
 
@@ -2356,18 +2355,17 @@ function update_trait_stacking_chart() {
   }
 
   // cleanse dps_ordered_data from doubled pvp traits
-  let tmp_pvp_trait_names = Object.keys(item_and_trait_equilizer);
-  tmp_pvp_trait_names.concat(Object.values(item_and_trait_equilizer));
+  // alliance names will be deleted
+  // we're essentially just double checking that our item_and_trait_equilizer doesn't try to kill not-present-traits
   purge_list = [];
   for (let trait_name of dps_ordered_data) {
-    if (item_and_trait_equilizer[trait_name] && !purge_list.includes(trait_name)) {
-      purge_list.push(item_and_trait_equilizer[trait_name])
-    } else if (Object.keys(item_and_trait_equilizer).includes(trait_name) && !purge_list.includes(trait_name)) {
-      for (let tmp_name in item_and_trait_equilizer) {
-        if (item_and_trait_equilizer[tmp_name] == trait_name) {
-          purge_list.push(tmp_name);
-        }
-      }
+    // if horde trait is found and alliance trait is still in dps ordered list
+    if (item_and_trait_equilizer[trait_name] && !purge_list.includes(trait_name) && dps_ordered_data.includes(item_and_trait_equilizer[trait_name])) {
+      // add alliance name to purge list
+      purge_list.push(item_and_trait_equilizer[trait_name]);
+      // alliance trait found and not yet in purge list
+    } else if (Object.values(item_and_trait_equilizer).includes(trait_name) && !purge_list.includes(trait_name)) {
+      purge_list.push(trait_name);
     }
   }
   for (let trait_name of purge_list) {
