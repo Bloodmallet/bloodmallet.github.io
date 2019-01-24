@@ -500,7 +500,7 @@ const standard_chart = Highcharts.chart('chart', empty_chart);
 
 // invalid ilevels to use highcharts base colours but keep the old ones
 const ilevel_color_table = {
-  "340": "#7cb5ec",
+  "415": "#7cb5ec",
   "355": "#d9d9df",
   "370": "#90ed7d",
   "385": "#f7a35c",
