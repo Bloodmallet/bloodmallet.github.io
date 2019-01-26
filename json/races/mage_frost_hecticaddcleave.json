@@ -1,23 +1,23 @@
 {
     "class_id": 8,
     "data": {
-        "Blood Elf": 35058,
-        "Dark Iron Dwarf": 34822,
-        "Draenei": 34953,
-        "Dwarf": 35025,
-        "Gnome": 34951,
-        "Goblin": 34980,
-        "Human": 34917,
-        "Lightforged Draenei": 35423,
-        "Maghar Orc": 34901,
-        "Night Elf": 35014,
-        "Nightborne": 35001,
-        "Orc": 34947,
-        "Pandaren": 35034,
-        "Troll": 34949,
-        "Undead": 34949,
-        "Void Elf": 35160,
-        "Worgen": 34949
+        "Blood Elf": 34963,
+        "Dark Iron Dwarf": 34911,
+        "Draenei": 34910,
+        "Dwarf": 35055,
+        "Gnome": 34988,
+        "Goblin": 35036,
+        "Human": 35013,
+        "Lightforged Draenei": 35463,
+        "Maghar Orc": 34917,
+        "Night Elf": 35035,
+        "Nightborne": 35059,
+        "Orc": 34907,
+        "Pandaren": 35039,
+        "Troll": 34926,
+        "Undead": 34966,
+        "Void Elf": 35070,
+        "Worgen": 34975
     },
     "data_type": "races",
     "languages": {
@@ -266,7 +266,7 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "8e2ab02f8d",
+        "simc_hash": "0e855e697e",
         "spec": "frost",
         "target_error": "0.2",
         "tier": "23"
@@ -274,24 +274,24 @@
     "sorted_data_keys": [
         "Lightforged Draenei",
         "Void Elf",
-        "Blood Elf",
-        "Pandaren",
-        "Dwarf",
-        "Night Elf",
         "Nightborne",
+        "Dwarf",
+        "Pandaren",
         "Goblin",
-        "Draenei",
+        "Night Elf",
+        "Human",
         "Gnome",
         "Worgen",
-        "Troll",
         "Undead",
-        "Orc",
-        "Human",
+        "Blood Elf",
+        "Troll",
         "Maghar Orc",
-        "Dark Iron Dwarf"
+        "Dark Iron Dwarf",
+        "Draenei",
+        "Orc"
     ],
     "spec_id": 64,
-    "subtitle": "UTC 2019-01-24 09:03 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/8e2ab02f8d\" target=\"blank\">8e2ab02</a>",
+    "subtitle": "UTC 2019-01-26 09:19 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/0e855e697e\" target=\"blank\">0e855e6</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -392,6 +392,6 @@
             }
         }
     },
-    "timestamp": "2019-01-24 09:03",
+    "timestamp": "2019-01-26 09:19",
     "title": "Races | Frost Mage | Hecticaddcleave"
 }

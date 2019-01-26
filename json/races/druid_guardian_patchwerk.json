@@ -1,10 +1,11 @@
 {
+    "class_id": 11,
     "data": {
-        "Highmountain Tauren": 11260,
-        "Night Elf": 11255,
-        "Tauren": 11254,
-        "Troll": 11275,
-        "Worgen": 11278
+        "Highmountain Tauren": 15858,
+        "Night Elf": 15846,
+        "Tauren": 15830,
+        "Troll": 15853,
+        "Worgen": 15840
     },
     "data_type": "races",
     "languages": {
@@ -59,24 +60,194 @@
             "ru_RU": "Ворген"
         }
     },
+    "profile": {
+        "back": {
+            "bonus_id": "4800/1537",
+            "id": "165513"
+        },
+        "chest": {
+            "azerite_powers": "241/562/22/14/13",
+            "bonus_id": "4824/1537/4775",
+            "id": "165830"
+        },
+        "feet": {
+            "bonus_id": "4800/1537",
+            "id": "165527"
+        },
+        "finger1": {
+            "bonus_id": "4800/1537",
+            "enchant": "pact_of_haste",
+            "id": "165566"
+        },
+        "finger2": {
+            "bonus_id": "4800/1537",
+            "enchant": "pact_of_haste",
+            "id": "165567"
+        },
+        "hands": {
+            "bonus_id": "4800/1537",
+            "id": "165522"
+        },
+        "head": {
+            "azerite_powers": "359/241/461/87/13",
+            "bonus_id": "4824/1537/4775",
+            "id": "165519"
+        },
+        "legs": {
+            "bonus_id": "4800/1537",
+            "id": "165521"
+        },
+        "main_hand": {
+            "bonus_id": "4800/1537",
+            "enchant": "quick_navigation",
+            "id": "165589"
+        },
+        "neck": {
+            "bonus_id": "4929/4930/4936/1566",
+            "id": "158075"
+        },
+        "shoulders": {
+            "azerite_powers": "241/562/31/85/13",
+            "bonus_id": "4824/1537/4775",
+            "id": "165777"
+        },
+        "talents": "1000131",
+        "trinket1": {
+            "bonus_id": "4800/1537",
+            "id": "165579"
+        },
+        "trinket2": {
+            "bonus_id": "4800/1537",
+            "id": "165572"
+        },
+        "waist": {
+            "bonus_id": "4800/1537",
+            "id": "165525"
+        },
+        "wrists": {
+            "bonus_id": "4800/1537",
+            "id": "165524"
+        }
+    },
     "simc_settings": {
         "class": "druid",
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "890b196aca",
+        "simc_hash": "0e855e697e",
         "spec": "guardian",
         "target_error": "0.2",
-        "tier": "22"
+        "tier": "23"
     },
     "sorted_data_keys": [
-        "Worgen",
-        "Troll",
         "Highmountain Tauren",
+        "Troll",
         "Night Elf",
+        "Worgen",
         "Tauren"
     ],
-    "subtitle": "UTC 2019-01-03 11:05 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/890b196aca\" target=\"blank\">890b196</a>",
-    "timestamp": "2019-01-03 11:05",
+    "spec_id": 104,
+    "subtitle": "UTC 2019-01-26 17:40 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/0e855e697e\" target=\"blank\">0e855e6</a>",
+    "talent_data": {
+        "1": {
+            "1": {
+                "name": "Brambles",
+                "spell_id": "203953"
+            },
+            "2": {
+                "name": "Blood Frenzy",
+                "spell_id": "203962"
+            },
+            "3": {
+                "name": "Bristling Fur",
+                "spell_id": "155835"
+            }
+        },
+        "2": {
+            "1": {
+                "name": "Tiger Dash",
+                "spell_id": "252216"
+            },
+            "2": {
+                "name": "Ursol's Vortex",
+                "spell_id": "102793"
+            },
+            "3": {
+                "name": "Wild Charge",
+                "spell_id": "102401"
+            }
+        },
+        "3": {
+            "1": {
+                "name": "Balance Affinity",
+                "spell_id": "197488"
+            },
+            "2": {
+                "name": "Feral Affinity",
+                "spell_id": "202155"
+            },
+            "3": {
+                "name": "Restoration Affinity",
+                "spell_id": "197492"
+            }
+        },
+        "4": {
+            "1": {
+                "name": "Mighty Bash",
+                "spell_id": "5211"
+            },
+            "2": {
+                "name": "Mass Entanglement",
+                "spell_id": "102359"
+            },
+            "3": {
+                "name": "Typhoon",
+                "spell_id": "132469"
+            }
+        },
+        "5": {
+            "1": {
+                "name": "Soul of the Forest",
+                "spell_id": "158477"
+            },
+            "2": {
+                "name": "Galactic Guardian",
+                "spell_id": "203964"
+            },
+            "3": {
+                "name": "Incarnation",
+                "spell_id": "102558"
+            }
+        },
+        "6": {
+            "1": {
+                "name": "Earthwarden",
+                "spell_id": "203974"
+            },
+            "2": {
+                "name": "Survival of the Fittest",
+                "spell_id": "203965"
+            },
+            "3": {
+                "name": "Guardian of Elune",
+                "spell_id": "155578"
+            }
+        },
+        "7": {
+            "1": {
+                "name": "Rend and Tear",
+                "spell_id": "204053"
+            },
+            "2": {
+                "name": "Lunar Beam",
+                "spell_id": "204066"
+            },
+            "3": {
+                "name": "Pulverize",
+                "spell_id": "80313"
+            }
+        }
+    },
+    "timestamp": "2019-01-26 17:40",
     "title": "Races | Guardian Druid | Patchwerk"
 }
