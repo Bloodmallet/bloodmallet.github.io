@@ -1,25 +1,25 @@
 {
     "class_id": 1,
     "data": {
-        "Blood Elf": 25129,
-        "Dark Iron Dwarf": 24970,
-        "Draenei": 24984,
-        "Dwarf": 25067,
-        "Gnome": 25245,
-        "Goblin": 25186,
-        "Highmountain Tauren": 25086,
-        "Human": 25137,
-        "Lightforged Draenei": 25042,
-        "Maghar Orc": 25026,
-        "Night Elf": 25104,
-        "Nightborne": 24870,
-        "Orc": 24967,
-        "Pandaren": 25049,
-        "Tauren": 25089,
-        "Troll": 25031,
-        "Undead": 25097,
-        "Void Elf": 25078,
-        "Worgen": 25126
+        "Blood Elf": 23863,
+        "Dark Iron Dwarf": 23736,
+        "Draenei": 23768,
+        "Dwarf": 23773,
+        "Gnome": 23949,
+        "Goblin": 23923,
+        "Highmountain Tauren": 23867,
+        "Human": 23906,
+        "Lightforged Draenei": 23833,
+        "Maghar Orc": 23788,
+        "Night Elf": 23877,
+        "Nightborne": 23654,
+        "Orc": 23702,
+        "Pandaren": 23809,
+        "Tauren": 23791,
+        "Troll": 23819,
+        "Undead": 23875,
+        "Void Elf": 23879,
+        "Worgen": 23873
     },
     "data_type": "races",
     "languages": {
@@ -220,7 +220,7 @@
             "id": "165512"
         },
         "chest": {
-            "azerite_powers": "438/119/31/14/13",
+            "azerite_powers": "438/441/31/14/13",
             "bonus_id": "5062/1587/4786/4775",
             "id": "159416"
         },
@@ -293,7 +293,7 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "0e855e697e",
+        "simc_hash": "b6e6431dce",
         "spec": "fury",
         "target_error": "0.2",
         "tier": "23"
@@ -302,25 +302,25 @@
         "Gnome",
         "Goblin",
         "Human",
-        "Blood Elf",
-        "Worgen",
+        "Void Elf",
         "Night Elf",
         "Undead",
-        "Tauren",
+        "Worgen",
         "Highmountain Tauren",
-        "Void Elf",
-        "Dwarf",
-        "Pandaren",
+        "Blood Elf",
         "Lightforged Draenei",
         "Troll",
+        "Pandaren",
+        "Tauren",
         "Maghar Orc",
+        "Dwarf",
         "Draenei",
         "Dark Iron Dwarf",
         "Orc",
         "Nightborne"
     ],
     "spec_id": 72,
-    "subtitle": "UTC 2019-01-26 09:15 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/0e855e697e\" target=\"blank\">0e855e6</a>",
+    "subtitle": "UTC 2019-01-28 09:57 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/b6e6431dce\" target=\"blank\">b6e6431</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -421,6 +421,6 @@
             }
         }
     },
-    "timestamp": "2019-01-26 09:15",
+    "timestamp": "2019-01-28 09:57",
     "title": "Races | Fury Warrior | Patchwerk"
 }
