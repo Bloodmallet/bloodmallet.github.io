@@ -1,21 +1,21 @@
 {
     "class_id": 4,
     "data": {
-        "Blood Elf": 46634,
-        "Dark Iron Dwarf": 46352,
-        "Dwarf": 46711,
-        "Gnome": 46597,
-        "Goblin": 46517,
-        "Human": 46615,
-        "Maghar Orc": 46472,
-        "Night Elf": 46833,
-        "Nightborne": 46280,
-        "Orc": 46330,
-        "Pandaren": 46659,
-        "Troll": 46374,
-        "Undead": 46513,
-        "Void Elf": 46441,
-        "Worgen": 46581
+        "Blood Elf": 46200,
+        "Dark Iron Dwarf": 45911,
+        "Dwarf": 46354,
+        "Gnome": 46102,
+        "Goblin": 46037,
+        "Human": 46146,
+        "Maghar Orc": 46024,
+        "Night Elf": 46349,
+        "Nightborne": 45897,
+        "Orc": 45997,
+        "Pandaren": 46205,
+        "Troll": 45895,
+        "Undead": 46173,
+        "Void Elf": 46046,
+        "Worgen": 46152
     },
     "data_type": "races",
     "languages": {
@@ -176,9 +176,9 @@
             "id": "165924"
         },
         "chest": {
-            "azerite_powers": "446/129/22/13",
-            "bonus_id": "4824/1537/4775",
-            "id": "165830"
+            "azerite_powers": "411/129/31/13",
+            "bonus_id": "1587/4819/4775",
+            "id": "159303"
         },
         "feet": {
             "bonus_id": "4800/1537",
@@ -222,9 +222,9 @@
             "id": "165604"
         },
         "shoulders": {
-            "azerite_powers": "129/562/31/13",
-            "bonus_id": "4824/1537/4775",
-            "id": "165516"
+            "azerite_powers": "129/446/30/13",
+            "bonus_id": "1587/4819/4775",
+            "id": "159339"
         },
         "talents": "2010022",
         "trinket1": {
@@ -249,30 +249,30 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "b6e6431dce",
+        "simc_hash": "5a42ccd8a1",
         "spec": "outlaw",
         "target_error": "0.2",
         "tier": "23"
     },
     "sorted_data_keys": [
-        "Night Elf",
         "Dwarf",
+        "Night Elf",
         "Pandaren",
         "Blood Elf",
+        "Undead",
+        "Worgen",
         "Human",
         "Gnome",
-        "Worgen",
-        "Goblin",
-        "Undead",
-        "Maghar Orc",
         "Void Elf",
-        "Troll",
-        "Dark Iron Dwarf",
+        "Goblin",
+        "Maghar Orc",
         "Orc",
-        "Nightborne"
+        "Dark Iron Dwarf",
+        "Nightborne",
+        "Troll"
     ],
     "spec_id": 260,
-    "subtitle": "UTC 2019-01-28 10:06 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/b6e6431dce\" target=\"blank\">b6e6431</a>",
+    "subtitle": "UTC 2019-01-29 17:57 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/5a42ccd8a1\" target=\"blank\">5a42ccd</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -373,6 +373,6 @@
             }
         }
     },
-    "timestamp": "2019-01-28 10:06",
+    "timestamp": "2019-01-29 17:57",
     "title": "Races | Outlaw Rogue | Hecticaddcleave"
 }

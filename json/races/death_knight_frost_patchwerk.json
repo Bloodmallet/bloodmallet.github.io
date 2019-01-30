@@ -1,18 +1,18 @@
 {
     "class_id": 6,
     "data": {
-        "Blood Elf": 23762,
-        "Draenei": 23505,
-        "Dwarf": 23493,
-        "Gnome": 23562,
-        "Goblin": 23512,
-        "Human": 23487,
-        "Night Elf": 23538,
-        "Orc": 23479,
-        "Tauren": 23540,
-        "Troll": 23541,
-        "Undead": 23688,
-        "Worgen": 23499
+        "Blood Elf": 24156,
+        "Draenei": 23837,
+        "Dwarf": 23869,
+        "Gnome": 23890,
+        "Goblin": 23854,
+        "Human": 23801,
+        "Night Elf": 23871,
+        "Orc": 23841,
+        "Tauren": 23841,
+        "Troll": 23837,
+        "Undead": 23980,
+        "Worgen": 23895
     },
     "data_type": "races",
     "languages": {
@@ -139,12 +139,12 @@
     },
     "profile": {
         "back": {
-            "bonus_id": "4800/1537",
-            "id": "165924"
+            "bonus_id": "4824/1537",
+            "id": "165512"
         },
         "chest": {
             "azerite_powers": "108/562/461/13",
-            "bonus_id": "1537/4824/4775",
+            "bonus_id": "1537/4824",
             "id": "165550"
         },
         "feet": {
@@ -152,14 +152,14 @@
             "id": "165561"
         },
         "finger1": {
-            "bonus_id": "4800/1537",
+            "bonus_id": "4824/1537",
             "enchant": "pact_of_mastery",
-            "id": "165567"
+            "id": "165566"
         },
         "finger2": {
-            "bonus_id": "4800/1537",
+            "bonus_id": "4824/1537",
             "enchant": "pact_of_mastery",
-            "id": "165565"
+            "id": "165567"
         },
         "hands": {
             "bonus_id": "4800/1537",
@@ -167,7 +167,7 @@
         },
         "head": {
             "azerite_powers": "108/562/31/465/13",
-            "bonus_id": "1537/4824/4775",
+            "bonus_id": "1537/4824",
             "id": "165548"
         },
         "legs": {
@@ -190,13 +190,13 @@
         },
         "shoulders": {
             "azerite_powers": "242/562/459/14/13",
-            "bonus_id": "1537/4824/4775",
+            "bonus_id": "1537/4824",
             "id": "165825"
         },
         "talents": "3102013",
         "trinket1": {
-            "bonus_id": "4779/1572",
-            "id": "159625"
+            "bonus_id": "4800/1537",
+            "id": "165574"
         },
         "trinket2": {
             "bonus_id": "4800/1537",
@@ -216,7 +216,7 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "b6e6431dce",
+        "simc_hash": "d764e1122b",
         "spec": "frost",
         "target_error": "0.2",
         "tier": "23"
@@ -224,19 +224,19 @@
     "sorted_data_keys": [
         "Blood Elf",
         "Undead",
-        "Gnome",
-        "Troll",
-        "Tauren",
-        "Night Elf",
-        "Goblin",
-        "Draenei",
         "Worgen",
+        "Gnome",
+        "Night Elf",
         "Dwarf",
-        "Human",
-        "Orc"
+        "Goblin",
+        "Orc",
+        "Tauren",
+        "Draenei",
+        "Troll",
+        "Human"
     ],
     "spec_id": 251,
-    "subtitle": "UTC 2019-01-28 09:51 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/b6e6431dce\" target=\"blank\">b6e6431</a>",
+    "subtitle": "UTC 2019-01-29 17:42 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/d764e1122b\" target=\"blank\">d764e11</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -337,6 +337,6 @@
             }
         }
     },
-    "timestamp": "2019-01-28 09:51",
+    "timestamp": "2019-01-29 17:42",
     "title": "Races | Frost Death Knight | Patchwerk"
 }
