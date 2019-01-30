@@ -1,23 +1,23 @@
 {
     "class_id": 8,
     "data": {
-        "Blood Elf": 32803,
-        "Dark Iron Dwarf": 32628,
-        "Draenei": 32719,
-        "Dwarf": 32754,
-        "Gnome": 32737,
-        "Goblin": 32832,
-        "Human": 32782,
-        "Lightforged Draenei": 33538,
-        "Maghar Orc": 32736,
-        "Night Elf": 32772,
-        "Nightborne": 32834,
-        "Orc": 32419,
-        "Pandaren": 32754,
-        "Troll": 32818,
-        "Undead": 32667,
-        "Void Elf": 32840,
-        "Worgen": 32732
+        "Blood Elf": 31826,
+        "Dark Iron Dwarf": 31723,
+        "Draenei": 31823,
+        "Dwarf": 31780,
+        "Gnome": 31770,
+        "Goblin": 31889,
+        "Human": 31785,
+        "Lightforged Draenei": 32409,
+        "Maghar Orc": 31809,
+        "Night Elf": 31835,
+        "Nightborne": 31911,
+        "Orc": 31647,
+        "Pandaren": 31805,
+        "Troll": 31835,
+        "Undead": 31751,
+        "Void Elf": 31907,
+        "Worgen": 31802
     },
     "data_type": "races",
     "languages": {
@@ -199,8 +199,8 @@
         },
         "chest": {
             "azerite_powers": "127/562/30/13",
-            "bonus_id": "4824/1537/4775",
-            "id": "165834"
+            "bonus_id": "1587/4819/4775",
+            "id": "159241"
         },
         "feet": {
             "bonus_id": "4800/1537",
@@ -221,9 +221,9 @@
             "id": "165764"
         },
         "head": {
-            "azerite_powers": "374/157/30/13",
-            "bonus_id": "1587/4819/4775",
-            "id": "159236"
+            "azerite_powers": "127/562/459/13",
+            "bonus_id": "4824/1537/4775",
+            "id": "165500"
         },
         "legs": {
             "bonus_id": "4800/1537",
@@ -239,7 +239,7 @@
             "id": "158075"
         },
         "shoulders": {
-            "azerite_powers": "88/562/459/13",
+            "azerite_powers": "127/88/459/13",
             "bonus_id": "4824/1537/4775",
             "id": "165497"
         },
@@ -266,32 +266,32 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "5a42ccd8a1",
+        "simc_hash": "7d0ee4c547",
         "spec": "arcane",
         "target_error": "0.2",
         "tier": "23"
     },
     "sorted_data_keys": [
         "Lightforged Draenei",
-        "Void Elf",
         "Nightborne",
+        "Void Elf",
         "Goblin",
+        "Night Elf",
         "Troll",
         "Blood Elf",
-        "Human",
-        "Night Elf",
-        "Dwarf",
-        "Pandaren",
-        "Gnome",
-        "Maghar Orc",
-        "Worgen",
         "Draenei",
+        "Maghar Orc",
+        "Pandaren",
+        "Worgen",
+        "Human",
+        "Dwarf",
+        "Gnome",
         "Undead",
         "Dark Iron Dwarf",
         "Orc"
     ],
     "spec_id": 62,
-    "subtitle": "UTC 2019-01-29 17:53 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/5a42ccd8a1\" target=\"blank\">5a42ccd</a>",
+    "subtitle": "UTC 2019-01-30 05:09 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7d0ee4c547\" target=\"blank\">7d0ee4c</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -392,6 +392,6 @@
             }
         }
     },
-    "timestamp": "2019-01-29 17:53",
+    "timestamp": "2019-01-30 05:09",
     "title": "Races | Arcane Mage | Hecticaddcleave"
 }
