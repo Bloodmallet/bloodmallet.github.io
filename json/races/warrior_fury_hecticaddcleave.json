@@ -1,25 +1,25 @@
 {
     "class_id": 1,
     "data": {
-        "Blood Elf": 37337,
-        "Dark Iron Dwarf": 37149,
-        "Draenei": 37183,
-        "Dwarf": 37230,
-        "Gnome": 37656,
-        "Goblin": 37493,
-        "Highmountain Tauren": 37379,
-        "Human": 37480,
-        "Lightforged Draenei": 37961,
-        "Maghar Orc": 37300,
-        "Night Elf": 37398,
-        "Nightborne": 37006,
-        "Orc": 37193,
-        "Pandaren": 37360,
-        "Tauren": 37301,
-        "Troll": 37084,
-        "Undead": 37293,
-        "Void Elf": 37324,
-        "Worgen": 37362
+        "Blood Elf": 42333,
+        "Dark Iron Dwarf": 42067,
+        "Draenei": 42330,
+        "Dwarf": 42211,
+        "Gnome": 42709,
+        "Goblin": 42344,
+        "Highmountain Tauren": 42314,
+        "Human": 42400,
+        "Lightforged Draenei": 42242,
+        "Maghar Orc": 42038,
+        "Night Elf": 42482,
+        "Nightborne": 41887,
+        "Orc": 42138,
+        "Pandaren": 42281,
+        "Tauren": 42148,
+        "Troll": 42181,
+        "Undead": 42014,
+        "Void Elf": 42264,
+        "Worgen": 42269
     },
     "data_type": "races",
     "languages": {
@@ -220,9 +220,9 @@
             "id": "165512"
         },
         "chest": {
-            "azerite_powers": "438/441/31/14/13",
-            "bonus_id": "5062/1587/4786/4775",
-            "id": "159416"
+            "azerite_powers": "437/176/30/15/13",
+            "bonus_id": "4824/1537/4775",
+            "id": "165832"
         },
         "feet": {
             "bonus_id": "4800/1537",
@@ -243,9 +243,9 @@
             "id": "165549"
         },
         "head": {
-            "azerite_powers": "176/438/21/83/13",
-            "bonus_id": "4824/1537/4775",
-            "id": "165821"
+            "azerite_powers": "119/438/30/476/13",
+            "bonus_id": "5062/1587/4786/4775",
+            "id": "159422"
         },
         "legs": {
             "bonus_id": "4800/1537",
@@ -270,7 +270,7 @@
             "bonus_id": "4824/1537/4775",
             "id": "165562"
         },
-        "talents": "2332123",
+        "talents": "2123123",
         "trinket1": {
             "bonus_id": "4800/1537",
             "id": "165580"
@@ -293,34 +293,34 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "7d0ee4c547",
+        "simc_hash": "f8d1a53f92c0a2933e3c65569e911e20cb8d84c6",
         "spec": "fury",
         "target_error": "0.2",
         "tier": "23"
     },
     "sorted_data_keys": [
-        "Lightforged Draenei",
         "Gnome",
-        "Goblin",
-        "Human",
         "Night Elf",
-        "Highmountain Tauren",
-        "Worgen",
-        "Pandaren",
+        "Human",
+        "Goblin",
         "Blood Elf",
+        "Draenei",
+        "Highmountain Tauren",
+        "Pandaren",
+        "Worgen",
         "Void Elf",
+        "Lightforged Draenei",
+        "Dwarf",
+        "Troll",
         "Tauren",
+        "Orc",
+        "Dark Iron Dwarf",
         "Maghar Orc",
         "Undead",
-        "Dwarf",
-        "Orc",
-        "Draenei",
-        "Dark Iron Dwarf",
-        "Troll",
         "Nightborne"
     ],
     "spec_id": 72,
-    "subtitle": "UTC 2019-01-30 05:16 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7d0ee4c547\" target=\"blank\">7d0ee4c</a>",
+    "subtitle": "UTC 2019-01-30 23:07 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/f8d1a53f92c0a2933e3c65569e911e20cb8d84c6\" target=\"blank\">f8d1a53</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -421,6 +421,6 @@
             }
         }
     },
-    "timestamp": "2019-01-30 05:16",
+    "timestamp": "2019-01-30 23:07",
     "title": "Races | Fury Warrior | Hecticaddcleave"
 }
