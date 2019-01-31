@@ -1,13 +1,13 @@
 {
     "class_id": 2,
     "data": {
-        "Blood Elf": 25612,
-        "Dark Iron Dwarf": 25434,
-        "Draenei": 25448,
-        "Dwarf": 25482,
-        "Human": 25533,
-        "Lightforged Draenei": 25495,
-        "Tauren": 25527
+        "Blood Elf": 25763,
+        "Dark Iron Dwarf": 25642,
+        "Draenei": 25621,
+        "Dwarf": 25706,
+        "Human": 25673,
+        "Lightforged Draenei": 25688,
+        "Tauren": 25698
     },
     "data_type": "races",
     "languages": {
@@ -85,7 +85,7 @@
     "profile": {
         "back": {
             "bonus_id": "4800/1537",
-            "id": "165924"
+            "id": "165512"
         },
         "chest": {
             "azerite_powers": "396/562/461/13",
@@ -98,12 +98,12 @@
         },
         "finger1": {
             "bonus_id": "4800/1537",
-            "enchant": "pact_of_mastery",
+            "enchant": "pact_of_haste",
             "id": "165567"
         },
         "finger2": {
             "bonus_id": "4800/1537",
-            "enchant": "pact_of_mastery",
+            "enchant": "pact_of_haste",
             "id": "165566"
         },
         "hands": {
@@ -156,22 +156,22 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "7d0ee4c547",
+        "simc_hash": "bb3ec52380",
         "spec": "retribution",
         "target_error": "0.2",
         "tier": "23"
     },
     "sorted_data_keys": [
         "Blood Elf",
-        "Human",
+        "Dwarf",
         "Tauren",
         "Lightforged Draenei",
-        "Dwarf",
-        "Draenei",
-        "Dark Iron Dwarf"
+        "Human",
+        "Dark Iron Dwarf",
+        "Draenei"
     ],
     "spec_id": 70,
-    "subtitle": "UTC 2019-01-30 05:01 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7d0ee4c547\" target=\"blank\">7d0ee4c</a>",
+    "subtitle": "UTC 2019-01-31 09:25 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/bb3ec52380\" target=\"blank\">bb3ec52</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -272,6 +272,6 @@
             }
         }
     },
-    "timestamp": "2019-01-30 05:01",
+    "timestamp": "2019-01-31 09:25",
     "title": "Races | Retribution Paladin | Patchwerk"
 }

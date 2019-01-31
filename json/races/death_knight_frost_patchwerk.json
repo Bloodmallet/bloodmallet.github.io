@@ -1,18 +1,18 @@
 {
     "class_id": 6,
     "data": {
-        "Blood Elf": 23853,
-        "Draenei": 23531,
-        "Dwarf": 23556,
-        "Gnome": 23604,
-        "Goblin": 23531,
-        "Human": 23562,
-        "Night Elf": 23560,
-        "Orc": 23545,
-        "Tauren": 23545,
-        "Troll": 23610,
-        "Undead": 23740,
-        "Worgen": 23601
+        "Blood Elf": 23851,
+        "Draenei": 23514,
+        "Dwarf": 23566,
+        "Gnome": 23620,
+        "Goblin": 23593,
+        "Human": 23559,
+        "Night Elf": 23595,
+        "Orc": 23574,
+        "Tauren": 23556,
+        "Troll": 23620,
+        "Undead": 23729,
+        "Worgen": 23628
     },
     "data_type": "races",
     "languages": {
@@ -144,7 +144,7 @@
         },
         "chest": {
             "azerite_powers": "108/562/461/13",
-            "bonus_id": "1537/4824",
+            "bonus_id": "1537/4824/4775",
             "id": "165550"
         },
         "feet": {
@@ -167,7 +167,7 @@
         },
         "head": {
             "azerite_powers": "108/562/31/465/13",
-            "bonus_id": "1537/4824",
+            "bonus_id": "1537/4824/4775",
             "id": "165548"
         },
         "legs": {
@@ -190,7 +190,7 @@
         },
         "shoulders": {
             "azerite_powers": "242/562/459/14/13",
-            "bonus_id": "1537/4824",
+            "bonus_id": "1537/4824/4775",
             "id": "165825"
         },
         "talents": "3102013",
@@ -216,7 +216,7 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "7d0ee4c547",
+        "simc_hash": "bb3ec52380",
         "spec": "frost",
         "target_error": "0.2",
         "tier": "23"
@@ -224,19 +224,19 @@
     "sorted_data_keys": [
         "Blood Elf",
         "Undead",
-        "Troll",
-        "Gnome",
         "Worgen",
-        "Human",
+        "Gnome",
+        "Troll",
         "Night Elf",
-        "Dwarf",
+        "Goblin",
         "Orc",
+        "Dwarf",
+        "Human",
         "Tauren",
-        "Draenei",
-        "Goblin"
+        "Draenei"
     ],
     "spec_id": 251,
-    "subtitle": "UTC 2019-01-30 04:58 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7d0ee4c547\" target=\"blank\">7d0ee4c</a>",
+    "subtitle": "UTC 2019-01-31 09:21 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/bb3ec52380\" target=\"blank\">bb3ec52</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -337,6 +337,6 @@
             }
         }
     },
-    "timestamp": "2019-01-30 04:58",
+    "timestamp": "2019-01-31 09:21",
     "title": "Races | Frost Death Knight | Patchwerk"
 }
