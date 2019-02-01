@@ -1,25 +1,25 @@
 {
     "class_id": 3,
     "data": {
-        "Blood Elf": 39867,
-        "Dark Iron Dwarf": 39803,
-        "Draenei": 39870,
-        "Dwarf": 39893,
-        "Gnome": 39968,
-        "Goblin": 39935,
-        "Highmountain Tauren": 39945,
-        "Human": 40056,
-        "Lightforged Draenei": 41924,
-        "Maghar Orc": 39960,
-        "Night Elf": 39955,
-        "Nightborne": 39627,
-        "Orc": 39929,
-        "Pandaren": 39977,
-        "Tauren": 39876,
-        "Troll": 39910,
-        "Undead": 39764,
-        "Void Elf": 39974,
-        "Worgen": 39921
+        "Blood Elf": 39899,
+        "Dark Iron Dwarf": 39804,
+        "Draenei": 39793,
+        "Dwarf": 39814,
+        "Gnome": 39964,
+        "Goblin": 39908,
+        "Highmountain Tauren": 39842,
+        "Human": 40081,
+        "Lightforged Draenei": 41896,
+        "Maghar Orc": 39955,
+        "Night Elf": 39877,
+        "Nightborne": 39610,
+        "Orc": 39834,
+        "Pandaren": 39922,
+        "Tauren": 39787,
+        "Troll": 39940,
+        "Undead": 39827,
+        "Void Elf": 40023,
+        "Worgen": 39910
     },
     "data_type": "races",
     "languages": {
@@ -288,7 +288,7 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "bb3ec52380",
+        "simc_hash": "51e11266b1",
         "spec": "marksmanship",
         "target_error": "0.2",
         "tier": "23"
@@ -296,26 +296,26 @@
     "sorted_data_keys": [
         "Lightforged Draenei",
         "Human",
-        "Pandaren",
         "Void Elf",
         "Gnome",
         "Maghar Orc",
+        "Troll",
+        "Pandaren",
+        "Worgen",
+        "Goblin",
+        "Blood Elf",
         "Night Elf",
         "Highmountain Tauren",
-        "Goblin",
         "Orc",
-        "Worgen",
-        "Troll",
-        "Dwarf",
-        "Tauren",
-        "Draenei",
-        "Blood Elf",
-        "Dark Iron Dwarf",
         "Undead",
+        "Dwarf",
+        "Dark Iron Dwarf",
+        "Draenei",
+        "Tauren",
         "Nightborne"
     ],
     "spec_id": 254,
-    "subtitle": "UTC 2019-01-31 09:32 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/bb3ec52380\" target=\"blank\">bb3ec52</a>",
+    "subtitle": "UTC 2019-02-01 06:52 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/51e11266b1\" target=\"blank\">51e1126</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -416,6 +416,6 @@
             }
         }
     },
-    "timestamp": "2019-01-31 09:32",
+    "timestamp": "2019-02-01 06:52",
     "title": "Races | Marksmanship Hunter | Hecticaddcleave"
 }
