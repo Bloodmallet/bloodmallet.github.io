@@ -1,22 +1,22 @@
 {
     "class_id": 10,
     "data": {
-        "Blood Elf": 45883,
-        "Dark Iron Dwarf": 44968,
-        "Draenei": 45141,
-        "Dwarf": 45261,
-        "Gnome": 45253,
-        "Highmountain Tauren": 45280,
-        "Human": 45284,
-        "Maghar Orc": 45068,
-        "Night Elf": 45281,
-        "Nightborne": 45006,
-        "Orc": 45025,
-        "Pandaren": 45247,
-        "Tauren": 45299,
-        "Troll": 45031,
-        "Undead": 45066,
-        "Void Elf": 45213
+        "Blood Elf": 45945,
+        "Dark Iron Dwarf": 44988,
+        "Draenei": 45105,
+        "Dwarf": 45197,
+        "Gnome": 45118,
+        "Highmountain Tauren": 45365,
+        "Human": 45268,
+        "Maghar Orc": 45166,
+        "Night Elf": 45348,
+        "Nightborne": 44891,
+        "Orc": 45183,
+        "Pandaren": 45280,
+        "Tauren": 45288,
+        "Troll": 45039,
+        "Undead": 45133,
+        "Void Elf": 45256
     },
     "data_type": "races",
     "languages": {
@@ -260,31 +260,31 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "51e11266b1",
+        "simc_hash": "6babfc234c",
         "spec": "windwalker",
         "target_error": "0.2",
         "tier": "23"
     },
     "sorted_data_keys": [
         "Blood Elf",
-        "Tauren",
-        "Human",
-        "Night Elf",
         "Highmountain Tauren",
-        "Dwarf",
-        "Gnome",
+        "Night Elf",
+        "Tauren",
         "Pandaren",
+        "Human",
         "Void Elf",
-        "Draenei",
+        "Dwarf",
+        "Orc",
         "Maghar Orc",
         "Undead",
+        "Gnome",
+        "Draenei",
         "Troll",
-        "Orc",
-        "Nightborne",
-        "Dark Iron Dwarf"
+        "Dark Iron Dwarf",
+        "Nightborne"
     ],
     "spec_id": 269,
-    "subtitle": "UTC 2019-02-01 06:55 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/51e11266b1\" target=\"blank\">51e1126</a>",
+    "subtitle": "UTC 2019-02-03 11:40 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/6babfc234c\" target=\"blank\">6babfc2</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -385,6 +385,6 @@
             }
         }
     },
-    "timestamp": "2019-02-01 06:55",
+    "timestamp": "2019-02-03 11:40",
     "title": "Races | Windwalker Monk | Hecticaddcleave"
 }

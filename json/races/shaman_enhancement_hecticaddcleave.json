@@ -1,16 +1,16 @@
 {
     "class_id": 7,
     "data": {
-        "Dark Iron Dwarf": 38509,
-        "Draenei": 38643,
-        "Dwarf": 38614,
-        "Goblin": 38733,
-        "Highmountain Tauren": 38742,
-        "Maghar Orc": 38614,
-        "Orc": 38570,
-        "Pandaren": 38718,
-        "Tauren": 38653,
-        "Troll": 38812
+        "Dark Iron Dwarf": 38553,
+        "Draenei": 38660,
+        "Dwarf": 38694,
+        "Goblin": 38675,
+        "Highmountain Tauren": 38737,
+        "Maghar Orc": 38695,
+        "Orc": 38582,
+        "Pandaren": 38694,
+        "Tauren": 38662,
+        "Troll": 38723
     },
     "data_type": "races",
     "languages": {
@@ -194,25 +194,25 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "51e11266b1",
+        "simc_hash": "6babfc234c",
         "spec": "enhancement",
         "target_error": "0.2",
         "tier": "23"
     },
     "sorted_data_keys": [
-        "Troll",
         "Highmountain Tauren",
-        "Goblin",
+        "Troll",
+        "Maghar Orc",
+        "Dwarf",
         "Pandaren",
+        "Goblin",
         "Tauren",
         "Draenei",
-        "Dwarf",
-        "Maghar Orc",
         "Orc",
         "Dark Iron Dwarf"
     ],
     "spec_id": 263,
-    "subtitle": "UTC 2019-02-01 06:58 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/51e11266b1\" target=\"blank\">51e1126</a>",
+    "subtitle": "UTC 2019-02-03 11:43 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/6babfc234c\" target=\"blank\">6babfc2</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -313,6 +313,6 @@
             }
         }
     },
-    "timestamp": "2019-02-01 06:58",
+    "timestamp": "2019-02-03 11:43",
     "title": "Races | Enhancement Shaman | Hecticaddcleave"
 }
