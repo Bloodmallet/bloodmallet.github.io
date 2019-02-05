@@ -1,25 +1,25 @@
 {
     "class_id": 1,
     "data": {
-        "Blood Elf": 28165,
-        "Dark Iron Dwarf": 28070,
-        "Draenei": 28167,
-        "Dwarf": 28132,
-        "Gnome": 28238,
-        "Goblin": 28251,
-        "Highmountain Tauren": 28237,
-        "Human": 28231,
-        "Lightforged Draenei": 28974,
-        "Maghar Orc": 28107,
-        "Night Elf": 28214,
-        "Nightborne": 27997,
-        "Orc": 28074,
-        "Pandaren": 28259,
-        "Tauren": 28163,
-        "Troll": 28139,
-        "Undead": 28217,
-        "Void Elf": 28187,
-        "Worgen": 28238
+        "Blood Elf": 28151,
+        "Dark Iron Dwarf": 27997,
+        "Draenei": 28175,
+        "Dwarf": 28169,
+        "Gnome": 28289,
+        "Goblin": 28279,
+        "Highmountain Tauren": 28258,
+        "Human": 28235,
+        "Lightforged Draenei": 29037,
+        "Maghar Orc": 28067,
+        "Night Elf": 28217,
+        "Nightborne": 28003,
+        "Orc": 28072,
+        "Pandaren": 28207,
+        "Tauren": 28189,
+        "Troll": 28170,
+        "Undead": 28261,
+        "Void Elf": 28210,
+        "Worgen": 28223
     },
     "data_type": "races",
     "languages": {
@@ -292,34 +292,34 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "6babfc234c",
+        "simc_hash": "c1758f7df4",
         "spec": "protection",
         "target_error": "0.2",
         "tier": "23"
     },
     "sorted_data_keys": [
         "Lightforged Draenei",
-        "Pandaren",
-        "Goblin",
         "Gnome",
-        "Worgen",
+        "Goblin",
+        "Undead",
         "Highmountain Tauren",
         "Human",
-        "Undead",
+        "Worgen",
         "Night Elf",
         "Void Elf",
-        "Draenei",
-        "Blood Elf",
+        "Pandaren",
         "Tauren",
+        "Draenei",
         "Troll",
         "Dwarf",
-        "Maghar Orc",
+        "Blood Elf",
         "Orc",
-        "Dark Iron Dwarf",
-        "Nightborne"
+        "Maghar Orc",
+        "Nightborne",
+        "Dark Iron Dwarf"
     ],
     "spec_id": 73,
-    "subtitle": "UTC 2019-02-03 11:47 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/6babfc234c\" target=\"blank\">6babfc2</a>",
+    "subtitle": "UTC 2019-02-05 07:07 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c1758f7df4\" target=\"blank\">c1758f7</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -420,6 +420,6 @@
             }
         }
     },
-    "timestamp": "2019-02-03 11:47",
+    "timestamp": "2019-02-05 07:07",
     "title": "Races | Protection Warrior | Hecticaddcleave"
 }

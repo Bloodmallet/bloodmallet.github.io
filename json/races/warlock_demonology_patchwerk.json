@@ -1,18 +1,18 @@
 {
     "class_id": 9,
     "data": {
-        "Blood Elf": 26660,
-        "Dark Iron Dwarf": 26538,
-        "Dwarf": 26605,
-        "Gnome": 26729,
-        "Goblin": 26683,
-        "Human": 26725,
-        "Nightborne": 26547,
-        "Orc": 26835,
-        "Troll": 26849,
-        "Undead": 26635,
-        "Void Elf": 26545,
-        "Worgen": 26604
+        "Blood Elf": 30088,
+        "Dark Iron Dwarf": 29960,
+        "Dwarf": 29985,
+        "Gnome": 30151,
+        "Goblin": 30078,
+        "Human": 30196,
+        "Nightborne": 29933,
+        "Orc": 30306,
+        "Troll": 30298,
+        "Undead": 30019,
+        "Void Elf": 29857,
+        "Worgen": 30020
     },
     "data_type": "races",
     "languages": {
@@ -143,7 +143,7 @@
             "id": "165512"
         },
         "chest": {
-            "azerite_powers": "429/562/30/13",
+            "azerite_powers": "429/231/30/13",
             "bonus_id": "4824/1537/4775",
             "id": "165834"
         },
@@ -153,12 +153,12 @@
         },
         "finger1": {
             "bonus_id": "4800/1537",
-            "enchant": "pact_of_haste",
+            "enchant": "pact_of_critical_strike",
             "id": "165567"
         },
         "finger2": {
             "bonus_id": "4800/1537",
-            "enchant": "pact_of_haste",
+            "enchant": "pact_of_critical_strike",
             "id": "165566"
         },
         "hands": {
@@ -166,7 +166,7 @@
             "id": "165503"
         },
         "head": {
-            "azerite_powers": "130/562/31/13",
+            "azerite_powers": "231/562/459/13",
             "bonus_id": "4824/1537/4775",
             "id": "165500"
         },
@@ -176,19 +176,15 @@
         },
         "main_hand": {
             "bonus_id": "4800/1537",
-            "enchant": "quick_navigation",
-            "id": "165603"
+            "enchant": "masterful_navigation",
+            "id": "165587"
         },
         "neck": {
             "bonus_id": "4929/4930/4936/1566",
             "id": "158075"
         },
-        "off_hand": {
-            "bonus_id": "4800/1537",
-            "id": "165583"
-        },
         "shoulders": {
-            "azerite_powers": "458/562/459/13",
+            "azerite_powers": "231/562/459/13",
             "bonus_id": "4824/1537/4775",
             "id": "165497"
         },
@@ -198,8 +194,8 @@
             "id": "165571"
         },
         "trinket2": {
-            "bonus_id": "1542/4779",
-            "id": "159615"
+            "bonus_id": "1572/4780",
+            "id": "159630"
         },
         "waist": {
             "bonus_id": "4800/1537",
@@ -207,7 +203,7 @@
         },
         "wrists": {
             "bonus_id": "4800/1537",
-            "id": "165501"
+            "id": "165508"
         }
     },
     "simc_settings": {
@@ -215,27 +211,27 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "6babfc234c",
+        "simc_hash": "c1758f7df4",
         "spec": "demonology",
         "target_error": "0.2",
         "tier": "23"
     },
     "sorted_data_keys": [
-        "Troll",
         "Orc",
-        "Gnome",
+        "Troll",
         "Human",
-        "Goblin",
+        "Gnome",
         "Blood Elf",
+        "Goblin",
+        "Worgen",
         "Undead",
         "Dwarf",
-        "Worgen",
+        "Dark Iron Dwarf",
         "Nightborne",
-        "Void Elf",
-        "Dark Iron Dwarf"
+        "Void Elf"
     ],
     "spec_id": 266,
-    "subtitle": "UTC 2019-02-03 11:33 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/6babfc234c\" target=\"blank\">6babfc2</a>",
+    "subtitle": "UTC 2019-02-05 06:52 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c1758f7df4\" target=\"blank\">c1758f7</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -336,6 +332,6 @@
             }
         }
     },
-    "timestamp": "2019-02-03 11:33",
+    "timestamp": "2019-02-05 06:52",
     "title": "Races | Demonology Warlock | Patchwerk"
 }

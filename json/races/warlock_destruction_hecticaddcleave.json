@@ -1,18 +1,18 @@
 {
     "class_id": 9,
     "data": {
-        "Blood Elf": 28508,
-        "Dark Iron Dwarf": 28436,
-        "Dwarf": 28507,
-        "Gnome": 28607,
-        "Goblin": 28644,
-        "Human": 28682,
-        "Nightborne": 28454,
-        "Orc": 28540,
-        "Troll": 28685,
-        "Undead": 28480,
-        "Void Elf": 28521,
-        "Worgen": 28516
+        "Blood Elf": 28836,
+        "Dark Iron Dwarf": 28787,
+        "Dwarf": 28850,
+        "Gnome": 28873,
+        "Goblin": 28869,
+        "Human": 28907,
+        "Nightborne": 28889,
+        "Orc": 28962,
+        "Troll": 29086,
+        "Undead": 28855,
+        "Void Elf": 28906,
+        "Worgen": 28821
     },
     "data_type": "races",
     "languages": {
@@ -198,7 +198,7 @@
             "id": "165571"
         },
         "trinket2": {
-            "bonus_id": "1542/4779",
+            "bonus_id": "1572/4780",
             "id": "159615"
         },
         "waist": {
@@ -215,27 +215,27 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "6babfc234c",
+        "simc_hash": "c1758f7df4",
         "spec": "destruction",
         "target_error": "0.2",
         "tier": "23"
     },
     "sorted_data_keys": [
         "Troll",
-        "Human",
-        "Goblin",
-        "Gnome",
         "Orc",
+        "Human",
         "Void Elf",
-        "Worgen",
-        "Blood Elf",
-        "Dwarf",
-        "Undead",
         "Nightborne",
+        "Gnome",
+        "Goblin",
+        "Undead",
+        "Dwarf",
+        "Blood Elf",
+        "Worgen",
         "Dark Iron Dwarf"
     ],
     "spec_id": 267,
-    "subtitle": "UTC 2019-02-03 11:45 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/6babfc234c\" target=\"blank\">6babfc2</a>",
+    "subtitle": "UTC 2019-02-05 07:05 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c1758f7df4\" target=\"blank\">c1758f7</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -336,6 +336,6 @@
             }
         }
     },
-    "timestamp": "2019-02-03 11:45",
+    "timestamp": "2019-02-05 07:05",
     "title": "Races | Destruction Warlock | Hecticaddcleave"
 }

@@ -1,21 +1,21 @@
 {
     "class_id": 4,
     "data": {
-        "Blood Elf": 25560,
-        "Dark Iron Dwarf": 25365,
-        "Dwarf": 25608,
-        "Gnome": 25546,
-        "Goblin": 25474,
-        "Human": 25506,
-        "Maghar Orc": 25450,
-        "Night Elf": 25523,
-        "Nightborne": 25319,
-        "Orc": 25432,
-        "Pandaren": 25449,
-        "Troll": 25401,
-        "Undead": 25556,
-        "Void Elf": 25524,
-        "Worgen": 25488
+        "Blood Elf": 25478,
+        "Dark Iron Dwarf": 25311,
+        "Dwarf": 25513,
+        "Gnome": 25484,
+        "Goblin": 25443,
+        "Human": 25475,
+        "Maghar Orc": 25380,
+        "Night Elf": 25445,
+        "Nightborne": 25274,
+        "Orc": 25296,
+        "Pandaren": 25403,
+        "Troll": 25355,
+        "Undead": 25494,
+        "Void Elf": 25462,
+        "Worgen": 25442
     },
     "data_type": "races",
     "languages": {
@@ -173,7 +173,7 @@
     "profile": {
         "back": {
             "bonus_id": "4800/1537",
-            "id": "165924"
+            "id": "165512"
         },
         "chest": {
             "azerite_powers": "411/129/31/13",
@@ -187,7 +187,7 @@
         "finger1": {
             "bonus_id": "4800/1537",
             "enchant": "pact_of_critical_strike",
-            "id": "165565"
+            "id": "165567"
         },
         "finger2": {
             "bonus_id": "4800/1537",
@@ -210,7 +210,7 @@
         "main_hand": {
             "bonus_id": "4800/1537",
             "enchant": "deadly_navigation",
-            "id": "165601"
+            "id": "165604"
         },
         "neck": {
             "bonus_id": "4929/4930/4936/1566",
@@ -219,7 +219,7 @@
         "off_hand": {
             "bonus_id": "4800/1537",
             "enchant": "galeforce_striking",
-            "id": "165604"
+            "id": "165596"
         },
         "shoulders": {
             "azerite_powers": "129/446/30/13",
@@ -249,30 +249,30 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "6babfc234c",
+        "simc_hash": "c1758f7df4",
         "spec": "outlaw",
         "target_error": "0.2",
         "tier": "23"
     },
     "sorted_data_keys": [
         "Dwarf",
-        "Blood Elf",
         "Undead",
         "Gnome",
+        "Blood Elf",
+        "Human",
         "Void Elf",
         "Night Elf",
-        "Human",
-        "Worgen",
         "Goblin",
-        "Maghar Orc",
+        "Worgen",
         "Pandaren",
-        "Orc",
+        "Maghar Orc",
         "Troll",
         "Dark Iron Dwarf",
+        "Orc",
         "Nightborne"
     ],
     "spec_id": 260,
-    "subtitle": "UTC 2019-02-03 11:31 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/6babfc234c\" target=\"blank\">6babfc2</a>",
+    "subtitle": "UTC 2019-02-05 06:51 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c1758f7df4\" target=\"blank\">c1758f7</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -373,6 +373,6 @@
             }
         }
     },
-    "timestamp": "2019-02-03 11:31",
+    "timestamp": "2019-02-05 06:51",
     "title": "Races | Outlaw Rogue | Patchwerk"
 }

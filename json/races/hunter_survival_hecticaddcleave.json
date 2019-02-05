@@ -1,25 +1,25 @@
 {
     "class_id": 3,
     "data": {
-        "Blood Elf": 38250,
-        "Dark Iron Dwarf": 37989,
-        "Draenei": 38064,
-        "Dwarf": 38056,
-        "Gnome": 38354,
-        "Goblin": 38347,
-        "Highmountain Tauren": 38149,
-        "Human": 38189,
-        "Lightforged Draenei": 38783,
-        "Maghar Orc": 38037,
-        "Night Elf": 38063,
-        "Nightborne": 37974,
-        "Orc": 38037,
-        "Pandaren": 38089,
-        "Tauren": 38064,
-        "Troll": 38119,
-        "Undead": 38077,
-        "Void Elf": 38122,
-        "Worgen": 38121
+        "Blood Elf": 38230,
+        "Dark Iron Dwarf": 37918,
+        "Draenei": 38048,
+        "Dwarf": 38048,
+        "Gnome": 38362,
+        "Goblin": 38275,
+        "Highmountain Tauren": 38115,
+        "Human": 38191,
+        "Lightforged Draenei": 38728,
+        "Maghar Orc": 38126,
+        "Night Elf": 38074,
+        "Nightborne": 37948,
+        "Orc": 38072,
+        "Pandaren": 38115,
+        "Tauren": 38010,
+        "Troll": 38162,
+        "Undead": 38027,
+        "Void Elf": 38103,
+        "Worgen": 38018
     },
     "data_type": "races",
     "languages": {
@@ -288,7 +288,7 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "6babfc234c",
+        "simc_hash": "c1758f7df4",
         "spec": "survival",
         "target_error": "0.2",
         "tier": "23"
@@ -299,23 +299,23 @@
         "Goblin",
         "Blood Elf",
         "Human",
+        "Troll",
+        "Maghar Orc",
+        "Pandaren",
         "Highmountain Tauren",
         "Void Elf",
-        "Worgen",
-        "Troll",
-        "Pandaren",
-        "Undead",
-        "Draenei",
-        "Tauren",
         "Night Elf",
-        "Dwarf",
         "Orc",
-        "Maghar Orc",
-        "Dark Iron Dwarf",
-        "Nightborne"
+        "Draenei",
+        "Dwarf",
+        "Undead",
+        "Worgen",
+        "Tauren",
+        "Nightborne",
+        "Dark Iron Dwarf"
     ],
     "spec_id": 255,
-    "subtitle": "UTC 2019-02-03 11:38 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/6babfc234c\" target=\"blank\">6babfc2</a>",
+    "subtitle": "UTC 2019-02-05 06:58 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c1758f7df4\" target=\"blank\">c1758f7</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -416,6 +416,6 @@
             }
         }
     },
-    "timestamp": "2019-02-03 11:38",
+    "timestamp": "2019-02-05 06:58",
     "title": "Races | Survival Hunter | Hecticaddcleave"
 }

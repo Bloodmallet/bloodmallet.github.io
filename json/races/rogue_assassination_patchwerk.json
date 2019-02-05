@@ -1,21 +1,21 @@
 {
     "class_id": 4,
     "data": {
-        "Blood Elf": 25164,
-        "Dark Iron Dwarf": 25014,
-        "Dwarf": 25006,
-        "Gnome": 25143,
-        "Goblin": 25082,
-        "Human": 25043,
+        "Blood Elf": 25158,
+        "Dark Iron Dwarf": 24972,
+        "Dwarf": 25068,
+        "Gnome": 25149,
+        "Goblin": 25044,
+        "Human": 25066,
         "Maghar Orc": 25124,
-        "Night Elf": 25033,
-        "Nightborne": 24977,
-        "Orc": 25083,
-        "Pandaren": 24946,
-        "Troll": 25121,
-        "Undead": 25055,
-        "Void Elf": 25112,
-        "Worgen": 25002
+        "Night Elf": 24988,
+        "Nightborne": 25023,
+        "Orc": 24992,
+        "Pandaren": 25047,
+        "Troll": 25136,
+        "Undead": 25091,
+        "Void Elf": 25145,
+        "Worgen": 24996
     },
     "data_type": "races",
     "languages": {
@@ -249,7 +249,7 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "6babfc234c",
+        "simc_hash": "c1758f7df4",
         "spec": "assassination",
         "target_error": "0.2",
         "tier": "23"
@@ -257,22 +257,22 @@
     "sorted_data_keys": [
         "Blood Elf",
         "Gnome",
-        "Maghar Orc",
-        "Troll",
         "Void Elf",
-        "Orc",
-        "Goblin",
+        "Troll",
+        "Maghar Orc",
         "Undead",
-        "Human",
-        "Night Elf",
-        "Dark Iron Dwarf",
         "Dwarf",
-        "Worgen",
+        "Human",
+        "Pandaren",
+        "Goblin",
         "Nightborne",
-        "Pandaren"
+        "Worgen",
+        "Orc",
+        "Night Elf",
+        "Dark Iron Dwarf"
     ],
     "spec_id": 259,
-    "subtitle": "UTC 2019-02-03 11:31 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/6babfc234c\" target=\"blank\">6babfc2</a>",
+    "subtitle": "UTC 2019-02-05 06:51 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c1758f7df4\" target=\"blank\">c1758f7</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -373,6 +373,6 @@
             }
         }
     },
-    "timestamp": "2019-02-03 11:31",
+    "timestamp": "2019-02-05 06:51",
     "title": "Races | Assassination Rogue | Patchwerk"
 }
