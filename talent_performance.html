@@ -73,7 +73,7 @@
         </li>
 
         <!-- Demon Hunter -->
-        <li class="nav-item dropdown">
+        <!-- --<li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle demon_hunter-color demon_hunter-menu-border translate_demon_hunter" href="#" id="navbarDemonHunterMenu"
             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Demon Hunter
           </a>
@@ -81,7 +81,7 @@
             <a class="dropdown-item demon_hunter-button translate_havoc" href="talent_performance.html#demon_hunter_havoc">Havoc</a>
             <a class="dropdown-item demon_hunter-button translate_vengeance" href="talent_performance.html#demon_hunter_vengeance">Vengeance</a>
           </div>
-        </li>
+        </li> <!-- -->
 
         <!-- Druid -->
         <li class="nav-item dropdown">
@@ -125,7 +125,7 @@
             aria-haspopup="true" aria-expanded="false">Monk
           </a>
           <div class="dropdown-menu monk-border-top" aria-labelledby="navbarMonkMenu">
-            <a class="dropdown-item monk-button translate_brewmaster" href="talent_performance.html#monk_brewmaster">Brewmaster</a>
+            <!-- --<a class="dropdown-item monk-button translate_brewmaster" href="talent_performance.html#monk_brewmaster">Brewmaster</a><!-- -->
             <a class="dropdown-item monk-button translate_windwalker" href="talent_performance.html#monk_windwalker">Windwalker</a>
           </div>
         </li>
@@ -147,7 +147,7 @@
             aria-haspopup="true" aria-expanded="false">Priest
           </a>
           <div class="dropdown-menu priest-border-top" aria-labelledby="navbarPriestMenu">
-            <a class="dropdown-item priest-button translate_holy" href="talent_performance.html#priest_holy">Holy</a>
+            <!-- --<a class="dropdown-item priest-button translate_holy" href="talent_performance.html#priest_holy">Holy</a><!-- -->
             <a class="dropdown-item priest-button translate_shadow" href="talent_performance.html#priest_shadow">Shadow</a>
           </div>
         </li>
@@ -195,6 +195,7 @@
           <div class="dropdown-menu warrior-border-top" aria-labelledby="navbarWarriorMenu">
             <a class="dropdown-item warrior-button translate_arms" href="talent_performance.html#warrior_arms">Arms</a>
             <a class="dropdown-item warrior-button translate_fury" href="talent_performance.html#warrior_fury">Fury</a>
+            <a class="dropdown-item warrior-button translate_protection" href="talent_performance.html#warrior_protection">Protection</a>
           </div>
         </li>
       </ul>
@@ -336,12 +337,12 @@
                 <div class="wow-class-header-content col-12 demon_hunter-border-bottom demon_hunter-color translate_demon_hunter">Demon Hunter</div>
               </div>
               <div class="row">
-                <a class="btn-start spec-switch-button col-12 spec-btn demon_hunter-button translate_havoc" href="talent_performance.html#demon_hunter_havoc"
-                  name="demon_hunter_havoc">Havoc</a>
+                <a class="btn-start spec-switch-button col-12 spec-btn demon_hunter-button translate_havoc disabled"
+                  name="demon_hunter_havoc"  data-toggle="tooltip" data-placement="bottom" title="Too many talent combinations. Data will arrive later.">Havoc</a>
               </div>
               <div class="row">
-                <a class="btn-end spec-switch-button col-12 spec-btn demon_hunter-button translate_vengeance" href="talent_performance.html#demon_hunter_vengeance"
-                  name="demon_hunter_vengeance">Vengeance</a>
+                <a class="btn-end spec-switch-button col-12 spec-btn demon_hunter-button translate_vengeance disabled"
+                  name="demon_hunter_vengeance"  data-toggle="tooltip" data-placement="bottom" title="Too many talent combinations. Data will arrive later.">Vengeance</a>
               </div>
             </div>
             <!-- Druid -->
@@ -398,8 +399,8 @@
                 <div class="wow-class-header-content col-12 monk-border-bottom monk-color translate_monk">Monk</div>
               </div>
               <div class="row">
-                <a class="btn-start spec-switch-button col-12 spec-btn monk-button translate_brewmaster" href="talent_performance.html#monk_brewmaster"
-                  name="monk_brewmaster">Brewmaster</a>
+                <a class="btn-start spec-switch-button col-12 spec-btn monk-button translate_brewmaster disabled"
+                  name="monk_brewmaster"  data-toggle="tooltip" data-placement="bottom" title="No profile">Brewmaster</a>
               </div>
               <div class="row">
                 <a class="btn-end spec-switch-button col-12 spec-btn monk-button translate_windwalker" href="talent_performance.html#monk_windwalker"
@@ -426,7 +427,7 @@
                 <div class="wow-class-header-content col-12 priest-border-bottom priest-color translate_priest">Priest</div>
               </div>
               <div class="row">
-                  <a class="spec-switch-button col-12 spec-btn priest-button translate_holy" href="talent_performance.html#priest_holy" name="priest_holy">Holy</a>
+                  <a class="spec-switch-button col-12 spec-btn priest-button translate_holy disabled" name="priest_holy"  data-toggle="tooltip" data-placement="bottom" title="No profile">Holy</a>
                 </div>
               <div class="row">
                 <a class="spec-switch-button col-12 spec-btn priest-button translate_shadow" href="talent_performance.html#priest_shadow" name="priest_shadow">Shadow</a>
@@ -490,6 +491,9 @@
               </div>
               <div class="row">
                 <a class="btn-end spec-switch-button col-12 spec-btn warrior-button translate_fury" href="talent_performance.html#warrior_fury" name="warrior_fury">Fury</a>
+              </div>
+              <div class="row">
+                <a class="btn-end spec-switch-button col-12 spec-btn warrior-button translate_protection" href="talent_performance.html#warrior_protection" name="warrior_protection">Protection</a>
               </div>
             </div>
           </div>

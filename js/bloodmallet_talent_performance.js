@@ -420,6 +420,10 @@ document.addEventListener("DOMContentLoaded", function () {
     $WowheadPower.refreshLinks();
   });
 
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  })
+
 });
 
 /** Updates dark mode based on dark mode check box. */
