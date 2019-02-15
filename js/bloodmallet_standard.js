@@ -50,6 +50,13 @@ let chosen_talent_combination = "";
 let chosen_azerite_list_type = "trait_stacking";
 let chosen_step_list = []; // array to store the to-be-shown steps
 let chosen_source_list = []; // array to store the to-be-shown sources
+/**
+ * Filter for trinkets by whether they are on Use (active) or not (passive).
+ */
+let chosen_activity = {
+  "active": true,
+  "passive": true
+};
 
 let mode = "welcome";
 let fight_style = "patchwerk";
@@ -1376,7 +1383,63 @@ function update_advanced_chart_options() {
     }
   }
 
-  // add more chart settings here
+  if (data_view === "trinkets") {
+    let activity_filter = document.createElement("div");
+    activity_filter.className = "col-md-4";
+    area.appendChild(activity_filter);
+
+    activity_filter.innerHTML = "Show:<br/>";
+
+    let option1 = document.createElement("div");
+    option1.className = "form-check";
+    activity_filter.appendChild(option1);
+    let on_use = document.createElement("input");
+    on_use.className = "form-check-input";
+    on_use.type = "checkbox";
+    on_use.value = "active";
+    on_use.id = "active_true";
+    // update checked based on user input
+    if (chosen_activity["active"]) {
+      on_use.checked = true;
+    }
+    on_use.addEventListener("change", function (e) {
+      update_activity_list(e.target.value, e.target.checked);
+    });
+    option1.appendChild(on_use);
+
+    let label1 = document.createElement("label");
+    label1.className = "form-check-label";
+    label1.htmlFor = on_use.id;
+    label1.innerHTML = "On Use";
+    option1.appendChild(label1);
+
+
+    let option2 = document.createElement("div");
+    option2.className = "form-check";
+    activity_filter.appendChild(option2);
+    let passive = document.createElement("input");
+    passive.className = "form-check-input";
+    passive.type = "checkbox";
+    passive.value = "passive";
+    passive.id = "active_false";
+    // update checked based on user input
+    if (chosen_activity["passive"]) {
+      passive.checked = true;
+    }
+    passive.addEventListener("change", function (e) {
+      update_activity_list(e.target.value, e.target.checked);
+    });
+    option2.appendChild(passive);
+
+    let label2 = document.createElement("label");
+    label2.className = "form-check-label";
+    label2.htmlFor = passive.id;
+    label2.innerHTML = "Passive";
+    option2.appendChild(label2);
+
+  }
+
+  // add more chart settings or chart filter here
 
   // add apply button
   let apply_area = document.createElement("div");
@@ -1404,6 +1467,18 @@ function update_advanced_chart_options() {
 
 }
 
+/**
+ * Update global chosen_activity "active" and "passive".
+ * @param {string} key
+ * @param {bool} value
+ */
+function update_activity_list(key, value) {
+  if (debug) {
+    console.log("update_activity_list", key, value);
+  }
+  chosen_activity[key] = value;
+
+}
 
 /**
  * Updates global chosen_step_list
@@ -1726,7 +1801,7 @@ function update_chart() {
   }
 
   let data_name = data_view;
-  if (data_view == "azerite_traits" && ["head", "shoulders", "chest"].includes(chosen_azerite_list_type)) {
+  if (data_view === "azerite_traits" && ["head", "shoulders", "chest"].includes(chosen_azerite_list_type)) {
     data_name += "_" + chosen_azerite_list_type;
   }
 
@@ -1775,6 +1850,23 @@ function update_chart() {
   for (let trait_name of purge_list) {
     dps_ordered_data.splice(dps_ordered_data.indexOf(trait_name), 1);
   }
+
+  // cleanse dps_ordered_data from active/passive trinkets if one of either is not allowed
+  if (data_view === "trinkets" && (!chosen_activity["active"] || !chosen_activity["passive"])) {
+    purge_list = [];
+    let data_shorthand = loaded_data[chosen_class][chosen_spec][data_name][fight_style]["data_active"];
+    for (let trinket of dps_ordered_data) {
+      if (!chosen_activity["active"] && data_shorthand[trinket]) {
+        purge_list.push(trinket);
+      } else if (!chosen_activity["passive"] && !data_shorthand[trinket]) {
+        purge_list.push(trinket);
+      }
+    }
+    for (let trait_name of purge_list) {
+      dps_ordered_data.splice(dps_ordered_data.indexOf(trait_name), 1);
+    }
+  }
+
 
 
   // sort dps_ordered_data if max itemlevel is not allowed
