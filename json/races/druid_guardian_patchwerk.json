@@ -1,11 +1,11 @@
 {
     "class_id": 11,
     "data": {
-        "Highmountain Tauren": 15727,
-        "Night Elf": 15728,
-        "Tauren": 15744,
+        "Highmountain Tauren": 15742,
+        "Night Elf": 15754,
+        "Tauren": 15708,
         "Troll": 15746,
-        "Worgen": 15735
+        "Worgen": 15743
     },
     "data_type": "races",
     "languages": {
@@ -134,20 +134,20 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "b8bde97fe2",
+        "simc_hash": "1316c05ac0",
         "spec": "guardian",
         "target_error": "0.2",
         "tier": "23"
     },
     "sorted_data_keys": [
-        "Troll",
-        "Tauren",
-        "Worgen",
         "Night Elf",
-        "Highmountain Tauren"
+        "Troll",
+        "Worgen",
+        "Highmountain Tauren",
+        "Tauren"
     ],
     "spec_id": 104,
-    "subtitle": "UTC 2019-02-11 06:29 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/b8bde97fe2\" target=\"blank\">b8bde97</a>",
+    "subtitle": "UTC 2019-02-17 08:44 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/1316c05ac0\" target=\"blank\">1316c05</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -248,6 +248,6 @@
             }
         }
     },
-    "timestamp": "2019-02-11 06:29",
+    "timestamp": "2019-02-17 08:44",
     "title": "Races | Guardian Druid | Patchwerk"
 }
