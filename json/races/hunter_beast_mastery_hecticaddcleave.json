@@ -1,25 +1,25 @@
 {
     "class_id": 3,
     "data": {
-        "Blood Elf": 41759,
-        "Dark Iron Dwarf": 41629,
-        "Draenei": 41673,
-        "Dwarf": 41680,
-        "Gnome": 41809,
-        "Goblin": 41798,
-        "Highmountain Tauren": 41692,
-        "Human": 41829,
-        "Lightforged Draenei": 42576,
-        "Maghar Orc": 41705,
-        "Night Elf": 41772,
-        "Nightborne": 41385,
-        "Orc": 42046,
-        "Pandaren": 41736,
-        "Tauren": 41711,
-        "Troll": 41630,
-        "Undead": 41616,
-        "Void Elf": 41590,
-        "Worgen": 41764
+        "Blood Elf": 41781,
+        "Dark Iron Dwarf": 41692,
+        "Draenei": 41633,
+        "Dwarf": 41747,
+        "Gnome": 41906,
+        "Goblin": 41831,
+        "Highmountain Tauren": 41812,
+        "Human": 41896,
+        "Lightforged Draenei": 42595,
+        "Maghar Orc": 41744,
+        "Night Elf": 41803,
+        "Nightborne": 41407,
+        "Orc": 41968,
+        "Pandaren": 41809,
+        "Tauren": 41715,
+        "Troll": 41602,
+        "Undead": 41717,
+        "Void Elf": 41505,
+        "Worgen": 41800
     },
     "data_type": "races",
     "languages": {
@@ -288,7 +288,7 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "4e56b8cbc0",
+        "simc_hash": "6af6c48b5b",
         "spec": "beast_mastery",
         "target_error": "0.2",
         "tier": "23"
@@ -296,26 +296,26 @@
     "sorted_data_keys": [
         "Lightforged Draenei",
         "Orc",
-        "Human",
         "Gnome",
+        "Human",
         "Goblin",
+        "Highmountain Tauren",
+        "Pandaren",
         "Night Elf",
         "Worgen",
         "Blood Elf",
-        "Pandaren",
-        "Tauren",
-        "Maghar Orc",
-        "Highmountain Tauren",
         "Dwarf",
+        "Maghar Orc",
+        "Undead",
+        "Tauren",
+        "Dark Iron Dwarf",
         "Draenei",
         "Troll",
-        "Dark Iron Dwarf",
-        "Undead",
         "Void Elf",
         "Nightborne"
     ],
     "spec_id": 253,
-    "subtitle": "UTC 2019-02-20 06:40 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/4e56b8cbc0\" target=\"blank\">4e56b8c</a>",
+    "subtitle": "UTC 2019-02-22 06:46 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/6af6c48b5b\" target=\"blank\">6af6c48</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -416,6 +416,6 @@
             }
         }
     },
-    "timestamp": "2019-02-20 06:40",
+    "timestamp": "2019-02-22 06:46",
     "title": "Races | Beast Mastery Hunter | Hecticaddcleave"
 }
