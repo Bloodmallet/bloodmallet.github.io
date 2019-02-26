@@ -1,25 +1,25 @@
 {
     "class_id": 1,
     "data": {
-        "Blood Elf": 43661,
-        "Dark Iron Dwarf": 43349,
-        "Draenei": 43437,
-        "Dwarf": 43559,
-        "Gnome": 43876,
-        "Goblin": 43608,
-        "Highmountain Tauren": 43611,
-        "Human": 43719,
-        "Lightforged Draenei": 43525,
-        "Maghar Orc": 43416,
-        "Night Elf": 43573,
-        "Nightborne": 43249,
-        "Orc": 43365,
-        "Pandaren": 43597,
-        "Tauren": 43628,
-        "Troll": 43374,
-        "Undead": 43373,
-        "Void Elf": 43599,
-        "Worgen": 43664
+        "Blood Elf": 43588,
+        "Dark Iron Dwarf": 43306,
+        "Draenei": 43498,
+        "Dwarf": 43497,
+        "Gnome": 43866,
+        "Goblin": 43616,
+        "Highmountain Tauren": 43555,
+        "Human": 43650,
+        "Lightforged Draenei": 43508,
+        "Maghar Orc": 43482,
+        "Night Elf": 43607,
+        "Nightborne": 43218,
+        "Orc": 43444,
+        "Pandaren": 43517,
+        "Tauren": 43557,
+        "Troll": 43403,
+        "Undead": 43462,
+        "Void Elf": 43575,
+        "Worgen": 43586
     },
     "data_type": "races",
     "languages": {
@@ -293,7 +293,7 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "6af6c48b5b",
+        "simc_hash": "c791d7b4ec",
         "spec": "fury",
         "target_error": "0.2",
         "tier": "23"
@@ -301,26 +301,26 @@
     "sorted_data_keys": [
         "Gnome",
         "Human",
-        "Worgen",
+        "Goblin",
+        "Night Elf",
         "Blood Elf",
+        "Worgen",
+        "Void Elf",
         "Tauren",
         "Highmountain Tauren",
-        "Goblin",
-        "Void Elf",
         "Pandaren",
-        "Night Elf",
-        "Dwarf",
         "Lightforged Draenei",
         "Draenei",
+        "Dwarf",
         "Maghar Orc",
-        "Troll",
         "Undead",
         "Orc",
+        "Troll",
         "Dark Iron Dwarf",
         "Nightborne"
     ],
     "spec_id": 72,
-    "subtitle": "UTC 2019-02-22 06:55 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/6af6c48b5b\" target=\"blank\">6af6c48</a>",
+    "subtitle": "UTC 2019-02-26 06:55 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c791d7b4ec\" target=\"blank\">c791d7b</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -421,6 +421,6 @@
             }
         }
     },
-    "timestamp": "2019-02-22 06:55",
+    "timestamp": "2019-02-26 06:55",
     "title": "Races | Fury Warrior | Hecticaddcleave"
 }
