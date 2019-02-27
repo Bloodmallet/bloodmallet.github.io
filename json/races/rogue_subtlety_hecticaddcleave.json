@@ -1,21 +1,21 @@
 {
     "class_id": 4,
     "data": {
-        "Blood Elf": 34979,
-        "Dark Iron Dwarf": 34888,
-        "Dwarf": 35084,
-        "Gnome": 35025,
-        "Goblin": 34858,
-        "Human": 35000,
-        "Maghar Orc": 34968,
-        "Night Elf": 35190,
-        "Nightborne": 34769,
-        "Orc": 34924,
-        "Pandaren": 35030,
-        "Troll": 34811,
-        "Undead": 35009,
-        "Void Elf": 35169,
-        "Worgen": 35021
+        "Blood Elf": 34977,
+        "Dark Iron Dwarf": 34869,
+        "Dwarf": 35012,
+        "Gnome": 34988,
+        "Goblin": 34881,
+        "Human": 34997,
+        "Maghar Orc": 34900,
+        "Night Elf": 35227,
+        "Nightborne": 34773,
+        "Orc": 34956,
+        "Pandaren": 35067,
+        "Troll": 34845,
+        "Undead": 35079,
+        "Void Elf": 35157,
+        "Worgen": 34987
     },
     "data_type": "races",
     "languages": {
@@ -249,7 +249,7 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "c791d7b4ec",
+        "simc_hash": "7ff6c0633e",
         "spec": "subtlety",
         "target_error": "0.2",
         "tier": "23"
@@ -257,22 +257,22 @@
     "sorted_data_keys": [
         "Night Elf",
         "Void Elf",
-        "Dwarf",
+        "Undead",
         "Pandaren",
+        "Dwarf",
+        "Human",
         "Gnome",
         "Worgen",
-        "Undead",
-        "Human",
         "Blood Elf",
-        "Maghar Orc",
         "Orc",
-        "Dark Iron Dwarf",
+        "Maghar Orc",
         "Goblin",
+        "Dark Iron Dwarf",
         "Troll",
         "Nightborne"
     ],
     "spec_id": 261,
-    "subtitle": "UTC 2019-02-26 06:51 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c791d7b4ec\" target=\"blank\">c791d7b</a>",
+    "subtitle": "UTC 2019-02-27 06:43 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7ff6c0633e\" target=\"blank\">7ff6c06</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -373,6 +373,6 @@
             }
         }
     },
-    "timestamp": "2019-02-26 06:51",
+    "timestamp": "2019-02-27 06:43",
     "title": "Races | Subtlety Rogue | Hecticaddcleave"
 }

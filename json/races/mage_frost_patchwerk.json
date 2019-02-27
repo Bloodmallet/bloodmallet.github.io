@@ -1,23 +1,23 @@
 {
     "class_id": 8,
     "data": {
-        "Blood Elf": 26303,
-        "Dark Iron Dwarf": 26172,
-        "Draenei": 26192,
-        "Dwarf": 26415,
-        "Gnome": 26269,
-        "Goblin": 26341,
-        "Human": 26316,
-        "Lightforged Draenei": 26159,
-        "Maghar Orc": 26238,
-        "Night Elf": 26282,
-        "Nightborne": 26332,
-        "Orc": 26221,
-        "Pandaren": 26290,
-        "Troll": 26309,
+        "Blood Elf": 26288,
+        "Dark Iron Dwarf": 26163,
+        "Draenei": 26204,
+        "Dwarf": 26400,
+        "Gnome": 26283,
+        "Goblin": 26326,
+        "Human": 26274,
+        "Lightforged Draenei": 26182,
+        "Maghar Orc": 26269,
+        "Night Elf": 26286,
+        "Nightborne": 26305,
+        "Orc": 26269,
+        "Pandaren": 26278,
+        "Troll": 26366,
         "Undead": 26289,
-        "Void Elf": 26390,
-        "Worgen": 26286
+        "Void Elf": 26411,
+        "Worgen": 26257
     },
     "data_type": "races",
     "languages": {
@@ -266,32 +266,32 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "c791d7b4ec",
+        "simc_hash": "7ff6c0633e",
         "spec": "frost",
         "target_error": "0.2",
         "tier": "23"
     },
     "sorted_data_keys": [
-        "Dwarf",
         "Void Elf",
+        "Dwarf",
+        "Troll",
         "Goblin",
         "Nightborne",
-        "Human",
-        "Troll",
-        "Blood Elf",
-        "Pandaren",
         "Undead",
-        "Worgen",
+        "Blood Elf",
         "Night Elf",
         "Gnome",
-        "Maghar Orc",
+        "Pandaren",
+        "Human",
         "Orc",
+        "Maghar Orc",
+        "Worgen",
         "Draenei",
-        "Dark Iron Dwarf",
-        "Lightforged Draenei"
+        "Lightforged Draenei",
+        "Dark Iron Dwarf"
     ],
     "spec_id": 64,
-    "subtitle": "UTC 2019-02-26 06:38 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c791d7b4ec\" target=\"blank\">c791d7b</a>",
+    "subtitle": "UTC 2019-02-27 06:29 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7ff6c0633e\" target=\"blank\">7ff6c06</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -392,6 +392,6 @@
             }
         }
     },
-    "timestamp": "2019-02-26 06:38",
+    "timestamp": "2019-02-27 06:29",
     "title": "Races | Frost Mage | Patchwerk"
 }

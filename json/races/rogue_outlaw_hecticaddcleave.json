@@ -1,21 +1,21 @@
 {
     "class_id": 4,
     "data": {
-        "Blood Elf": 45310,
-        "Dark Iron Dwarf": 45212,
-        "Dwarf": 45540,
-        "Gnome": 45296,
-        "Goblin": 45299,
-        "Human": 45329,
-        "Maghar Orc": 45234,
-        "Night Elf": 45649,
-        "Nightborne": 45113,
-        "Orc": 45224,
-        "Pandaren": 45377,
-        "Troll": 45105,
-        "Undead": 45438,
-        "Void Elf": 45298,
-        "Worgen": 45425
+        "Blood Elf": 45359,
+        "Dark Iron Dwarf": 45201,
+        "Dwarf": 45584,
+        "Gnome": 45264,
+        "Goblin": 45168,
+        "Human": 45278,
+        "Maghar Orc": 45298,
+        "Night Elf": 45741,
+        "Nightborne": 45063,
+        "Orc": 45119,
+        "Pandaren": 45463,
+        "Troll": 45176,
+        "Undead": 45304,
+        "Void Elf": 45199,
+        "Worgen": 45433
     },
     "data_type": "races",
     "languages": {
@@ -249,7 +249,7 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "c791d7b4ec",
+        "simc_hash": "7ff6c0633e",
         "spec": "outlaw",
         "target_error": "0.2",
         "tier": "23"
@@ -257,22 +257,22 @@
     "sorted_data_keys": [
         "Night Elf",
         "Dwarf",
-        "Undead",
-        "Worgen",
         "Pandaren",
-        "Human",
+        "Worgen",
         "Blood Elf",
-        "Goblin",
-        "Void Elf",
-        "Gnome",
+        "Undead",
         "Maghar Orc",
-        "Orc",
+        "Human",
+        "Gnome",
         "Dark Iron Dwarf",
-        "Nightborne",
-        "Troll"
+        "Void Elf",
+        "Troll",
+        "Goblin",
+        "Orc",
+        "Nightborne"
     ],
     "spec_id": 260,
-    "subtitle": "UTC 2019-02-26 06:51 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c791d7b4ec\" target=\"blank\">c791d7b</a>",
+    "subtitle": "UTC 2019-02-27 06:43 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7ff6c0633e\" target=\"blank\">7ff6c06</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -373,6 +373,6 @@
             }
         }
     },
-    "timestamp": "2019-02-26 06:51",
+    "timestamp": "2019-02-27 06:43",
     "title": "Races | Outlaw Rogue | Hecticaddcleave"
 }
