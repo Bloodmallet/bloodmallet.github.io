@@ -1,16 +1,16 @@
 {
     "class_id": 7,
     "data": {
-        "Dark Iron Dwarf": 41380,
-        "Draenei": 41525,
-        "Dwarf": 41721,
-        "Goblin": 41369,
-        "Highmountain Tauren": 41552,
-        "Maghar Orc": 41561,
-        "Orc": 41414,
-        "Pandaren": 41654,
-        "Tauren": 41709,
-        "Troll": 41479
+        "Dark Iron Dwarf": 41978,
+        "Draenei": 42228,
+        "Dwarf": 42422,
+        "Goblin": 42293,
+        "Highmountain Tauren": 42317,
+        "Maghar Orc": 42146,
+        "Orc": 42033,
+        "Pandaren": 42295,
+        "Tauren": 42410,
+        "Troll": 42010
     },
     "data_type": "races",
     "languages": {
@@ -144,9 +144,9 @@
             "id": "165531"
         },
         "head": {
-            "azerite_powers": "447/562/459/539/13",
-            "bonus_id": "4824/1537/4775",
-            "id": "165543"
+            "azerite_powers": "457/416/30/83/13",
+            "bonus_id": "1587/4819/4775",
+            "id": "159391"
         },
         "legs": {
             "bonus_id": "4800/1537",
@@ -154,7 +154,7 @@
         },
         "main_hand": {
             "bonus_id": "4800/1537",
-            "enchant": "deadly_navigation",
+            "enchant": "torrent_of_elements",
             "id": "165594"
         },
         "neck": {
@@ -176,8 +176,8 @@
             "id": "165571"
         },
         "trinket2": {
-            "bonus_id": "1572/4779/1674",
-            "id": "159615"
+            "bonus_id": "4800/1537",
+            "id": "166418"
         },
         "waist": {
             "bonus_id": "4800/1537",
@@ -193,7 +193,7 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "7ff6c0633e",
+        "simc_hash": "02ea1ab4e7",
         "spec": "elemental",
         "target_error": "0.2",
         "tier": "23"
@@ -201,17 +201,17 @@
     "sorted_data_keys": [
         "Dwarf",
         "Tauren",
-        "Pandaren",
-        "Maghar Orc",
         "Highmountain Tauren",
+        "Pandaren",
+        "Goblin",
         "Draenei",
-        "Troll",
+        "Maghar Orc",
         "Orc",
-        "Dark Iron Dwarf",
-        "Goblin"
+        "Troll",
+        "Dark Iron Dwarf"
     ],
     "spec_id": 262,
-    "subtitle": "UTC 2019-02-27 06:43 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7ff6c0633e\" target=\"blank\">7ff6c06</a>",
+    "subtitle": "UTC 2019-03-05 06:53 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/02ea1ab4e7\" target=\"blank\">02ea1ab</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -312,6 +312,6 @@
             }
         }
     },
-    "timestamp": "2019-02-27 06:43",
+    "timestamp": "2019-03-05 06:53",
     "title": "Races | Elemental Shaman | Hecticaddcleave"
 }

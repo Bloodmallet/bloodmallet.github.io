@@ -1,23 +1,23 @@
 {
     "class_id": 5,
     "data": {
-        "Blood Elf": 26026,
-        "Dark Iron Dwarf": 25818,
-        "Draenei": 25944,
-        "Dwarf": 25997,
-        "Gnome": 26127,
-        "Goblin": 26061,
-        "Human": 26132,
-        "Lightforged Draenei": 25839,
-        "Maghar Orc": 25964,
-        "Night Elf": 26044,
-        "Nightborne": 25959,
-        "Pandaren": 26039,
-        "Tauren": 25915,
-        "Troll": 26020,
-        "Undead": 25990,
-        "Void Elf": 25986,
-        "Worgen": 26060
+        "Blood Elf": 25999,
+        "Dark Iron Dwarf": 25909,
+        "Draenei": 25926,
+        "Dwarf": 25971,
+        "Gnome": 26089,
+        "Goblin": 26089,
+        "Human": 26144,
+        "Lightforged Draenei": 25875,
+        "Maghar Orc": 25958,
+        "Night Elf": 26053,
+        "Nightborne": 26031,
+        "Pandaren": 26018,
+        "Tauren": 25989,
+        "Troll": 26019,
+        "Undead": 25992,
+        "Void Elf": 26078,
+        "Worgen": 26021
     },
     "data_type": "races",
     "languages": {
@@ -266,7 +266,7 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "7ff6c0633e",
+        "simc_hash": "02ea1ab4e7",
         "spec": "shadow",
         "target_error": "0.2",
         "tier": "23"
@@ -275,23 +275,23 @@
         "Human",
         "Gnome",
         "Goblin",
-        "Worgen",
+        "Void Elf",
         "Night Elf",
+        "Nightborne",
+        "Worgen",
+        "Troll",
         "Pandaren",
         "Blood Elf",
-        "Troll",
-        "Dwarf",
         "Undead",
-        "Void Elf",
-        "Maghar Orc",
-        "Nightborne",
-        "Draenei",
         "Tauren",
-        "Lightforged Draenei",
-        "Dark Iron Dwarf"
+        "Dwarf",
+        "Maghar Orc",
+        "Draenei",
+        "Dark Iron Dwarf",
+        "Lightforged Draenei"
     ],
     "spec_id": 258,
-    "subtitle": "UTC 2019-02-27 06:30 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7ff6c0633e\" target=\"blank\">7ff6c06</a>",
+    "subtitle": "UTC 2019-03-05 06:39 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/02ea1ab4e7\" target=\"blank\">02ea1ab</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -392,6 +392,6 @@
             }
         }
     },
-    "timestamp": "2019-02-27 06:30",
+    "timestamp": "2019-03-05 06:39",
     "title": "Races | Shadow Priest | Patchwerk"
 }

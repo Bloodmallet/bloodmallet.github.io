@@ -1,21 +1,21 @@
 {
     "class_id": 4,
     "data": {
-        "Blood Elf": 35132,
-        "Dark Iron Dwarf": 34921,
-        "Dwarf": 35044,
-        "Gnome": 35131,
-        "Goblin": 35084,
-        "Human": 35124,
-        "Maghar Orc": 35091,
-        "Night Elf": 35100,
-        "Nightborne": 34879,
-        "Orc": 34924,
-        "Pandaren": 35109,
-        "Troll": 34983,
-        "Undead": 34923,
-        "Void Elf": 35054,
-        "Worgen": 35099
+        "Blood Elf": 35210,
+        "Dark Iron Dwarf": 35032,
+        "Dwarf": 35129,
+        "Gnome": 35258,
+        "Goblin": 35103,
+        "Human": 35215,
+        "Maghar Orc": 35153,
+        "Night Elf": 35224,
+        "Nightborne": 35037,
+        "Orc": 35085,
+        "Pandaren": 35166,
+        "Troll": 35045,
+        "Undead": 35098,
+        "Void Elf": 35165,
+        "Worgen": 35159
     },
     "data_type": "races",
     "languages": {
@@ -249,30 +249,30 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "7ff6c0633e",
+        "simc_hash": "02ea1ab4e7",
         "spec": "assassination",
         "target_error": "0.2",
         "tier": "23"
     },
     "sorted_data_keys": [
-        "Blood Elf",
         "Gnome",
-        "Human",
-        "Pandaren",
         "Night Elf",
+        "Human",
+        "Blood Elf",
+        "Pandaren",
+        "Void Elf",
         "Worgen",
         "Maghar Orc",
-        "Goblin",
-        "Void Elf",
         "Dwarf",
-        "Troll",
-        "Orc",
+        "Goblin",
         "Undead",
-        "Dark Iron Dwarf",
-        "Nightborne"
+        "Orc",
+        "Troll",
+        "Nightborne",
+        "Dark Iron Dwarf"
     ],
     "spec_id": 259,
-    "subtitle": "UTC 2019-02-27 06:42 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7ff6c0633e\" target=\"blank\">7ff6c06</a>",
+    "subtitle": "UTC 2019-03-05 06:51 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/02ea1ab4e7\" target=\"blank\">02ea1ab</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -373,6 +373,6 @@
             }
         }
     },
-    "timestamp": "2019-02-27 06:42",
+    "timestamp": "2019-03-05 06:51",
     "title": "Races | Assassination Rogue | Hecticaddcleave"
 }
