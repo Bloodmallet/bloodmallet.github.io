@@ -1,29 +1,29 @@
 {
     "class_id": 3,
     "data": {
-        "Blood Elf": 26725,
-        "Dark Iron Dwarf": 26733,
-        "Draenei": 26703,
-        "Dwarf": 26782,
-        "Gnome": 26890,
-        "Goblin": 26779,
-        "Highmountain Tauren": 26751,
-        "Human": 26832,
-        "Kul Tiran": 26738,
-        "Lightforged Draenei": 26747,
-        "Maghar Orc": 26853,
-        "Night Elf": 26774,
-        "Nightborne": 26611,
-        "Orc": 26727,
-        "Pandaren": 26749,
-        "Tauren": 26742,
-        "Troll": 26895,
-        "Undead": 26840,
-        "Void Elf": 26831,
-        "Worgen": 26797,
-        "Zandalari Troll Bwonsamdi": 26754,
-        "Zandalari Troll Kimbul": 26769,
-        "Zandalari Troll Paku": 26714
+        "Blood Elf": 27594,
+        "Dark Iron Dwarf": 27610,
+        "Draenei": 27607,
+        "Dwarf": 27575,
+        "Gnome": 27740,
+        "Goblin": 27646,
+        "Highmountain Tauren": 27639,
+        "Human": 27786,
+        "Kul Tiran": 27617,
+        "Lightforged Draenei": 27578,
+        "Maghar Orc": 27672,
+        "Night Elf": 27598,
+        "Nightborne": 27468,
+        "Orc": 27563,
+        "Pandaren": 27630,
+        "Tauren": 27588,
+        "Troll": 27724,
+        "Undead": 27654,
+        "Void Elf": 27715,
+        "Worgen": 27550,
+        "Zandalari Troll Bwonsamdi": 27588,
+        "Zandalari Troll Kimbul": 27577,
+        "Zandalari Troll Paku": 27586
     },
     "data_type": "races",
     "languages": {
@@ -261,12 +261,12 @@
     "profile": {
         "back": {
             "bonus_id": "4800/1537",
-            "id": "165513"
+            "id": "165512"
         },
         "chest": {
-            "azerite_powers": "212/562/31/469/13",
-            "bonus_id": "4824/1537/4775",
-            "id": "165540"
+            "azerite_powers": "36/370/30/14/13",
+            "bonus_id": "1587/5440/4775",
+            "id": "159370"
         },
         "feet": {
             "bonus_id": "4800/1537",
@@ -297,17 +297,17 @@
         },
         "main_hand": {
             "bonus_id": "4800/1537",
-            "enchant": "incendiary_ammunition",
-            "id": "165599"
+            "enchant": "masterful_navigation",
+            "id": "165600"
         },
         "neck": {
-            "bonus_id": "4929/4930/4936/1566",
+            "bonus_id": "4929/5814/4936/1566",
             "id": "158075"
         },
         "shoulders": {
-            "azerite_powers": "36/562/30/203/13",
+            "azerite_powers": "212/36/30/15/13",
             "bonus_id": "4824/1537/4775",
-            "id": "165921"
+            "id": "165923"
         },
         "talents": "1103031",
         "trinket1": {
@@ -338,32 +338,32 @@
         "tier": "23"
     },
     "sorted_data_keys": [
-        "Troll",
+        "Human",
         "Gnome",
+        "Troll",
+        "Void Elf",
         "Maghar Orc",
         "Undead",
-        "Human",
-        "Void Elf",
-        "Worgen",
-        "Dwarf",
         "Goblin",
-        "Night Elf",
-        "Zandalari Troll Kimbul",
-        "Zandalari Troll Bwonsamdi",
         "Highmountain Tauren",
         "Pandaren",
-        "Lightforged Draenei",
-        "Tauren",
         "Kul Tiran",
         "Dark Iron Dwarf",
-        "Orc",
-        "Blood Elf",
-        "Zandalari Troll Paku",
         "Draenei",
+        "Night Elf",
+        "Blood Elf",
+        "Tauren",
+        "Zandalari Troll Bwonsamdi",
+        "Zandalari Troll Paku",
+        "Lightforged Draenei",
+        "Zandalari Troll Kimbul",
+        "Dwarf",
+        "Orc",
+        "Worgen",
         "Nightborne"
     ],
     "spec_id": 254,
-    "subtitle": "UTC 2019-03-14 21:03 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/769c2ae6f6\" target=\"blank\">769c2ae</a>",
+    "subtitle": "UTC 2019-03-14 21:54 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/769c2ae6f6\" target=\"blank\">769c2ae</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -464,6 +464,6 @@
             }
         }
     },
-    "timestamp": "2019-03-14 21:03",
+    "timestamp": "2019-03-14 21:54",
     "title": "Races | Marksmanship Hunter | Patchwerk"
 }

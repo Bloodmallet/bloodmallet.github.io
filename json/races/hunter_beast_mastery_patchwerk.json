@@ -1,29 +1,29 @@
 {
     "class_id": 3,
     "data": {
-        "Blood Elf": 25658,
-        "Dark Iron Dwarf": 25603,
-        "Draenei": 25567,
-        "Dwarf": 25597,
-        "Gnome": 25662,
-        "Goblin": 25655,
-        "Highmountain Tauren": 25684,
-        "Human": 25659,
-        "Kul Tiran": 25627,
-        "Lightforged Draenei": 25731,
-        "Maghar Orc": 25660,
-        "Night Elf": 25631,
-        "Nightborne": 25426,
-        "Orc": 25757,
-        "Pandaren": 25620,
-        "Tauren": 25549,
-        "Troll": 25684,
-        "Undead": 25674,
-        "Void Elf": 25579,
-        "Worgen": 25590,
-        "Zandalari Troll Bwonsamdi": 25584,
-        "Zandalari Troll Kimbul": 25663,
-        "Zandalari Troll Paku": 25651
+        "Blood Elf": 26014,
+        "Dark Iron Dwarf": 26012,
+        "Draenei": 25963,
+        "Dwarf": 25989,
+        "Gnome": 26008,
+        "Goblin": 26054,
+        "Highmountain Tauren": 26064,
+        "Human": 26063,
+        "Kul Tiran": 26074,
+        "Lightforged Draenei": 26156,
+        "Maghar Orc": 26057,
+        "Night Elf": 26012,
+        "Nightborne": 25850,
+        "Orc": 26164,
+        "Pandaren": 26041,
+        "Tauren": 26026,
+        "Troll": 26045,
+        "Undead": 26092,
+        "Void Elf": 25992,
+        "Worgen": 25981,
+        "Zandalari Troll Bwonsamdi": 26004,
+        "Zandalari Troll Kimbul": 26033,
+        "Zandalari Troll Paku": 25953
     },
     "data_type": "races",
     "languages": {
@@ -274,20 +274,20 @@
         },
         "finger1": {
             "bonus_id": "4800/1537",
-            "enchant": "pact_of_haste",
+            "enchant": "pact_of_critical_strike",
             "id": "165567"
         },
         "finger2": {
             "bonus_id": "4800/1537",
-            "enchant": "pact_of_haste",
-            "id": "165566"
+            "enchant": "pact_of_critical_strike",
+            "id": "165565"
         },
         "hands": {
             "bonus_id": "4800/1537",
-            "id": "165531"
+            "id": "165546"
         },
         "head": {
-            "azerite_powers": "366/562/22/14/13",
+            "azerite_powers": "366/562/459/14/13",
             "bonus_id": "4824/1537/4775",
             "id": "165543"
         },
@@ -297,11 +297,11 @@
         },
         "main_hand": {
             "bonus_id": "4800/1537",
-            "enchant": "incendiary_ammunition",
-            "id": "165599"
+            "enchant": "crows_nest_scope",
+            "id": "165600"
         },
         "neck": {
-            "bonus_id": "4929/4930/4936/1566",
+            "bonus_id": "4929/5814/4936/1566",
             "id": "158075"
         },
         "shoulders": {
@@ -340,30 +340,30 @@
     "sorted_data_keys": [
         "Orc",
         "Lightforged Draenei",
-        "Troll",
-        "Highmountain Tauren",
         "Undead",
-        "Zandalari Troll Kimbul",
-        "Gnome",
-        "Maghar Orc",
-        "Human",
-        "Blood Elf",
-        "Goblin",
-        "Zandalari Troll Paku",
-        "Night Elf",
         "Kul Tiran",
+        "Highmountain Tauren",
+        "Human",
+        "Maghar Orc",
+        "Goblin",
+        "Troll",
         "Pandaren",
+        "Zandalari Troll Kimbul",
+        "Tauren",
+        "Blood Elf",
+        "Night Elf",
         "Dark Iron Dwarf",
-        "Dwarf",
-        "Worgen",
+        "Gnome",
         "Zandalari Troll Bwonsamdi",
         "Void Elf",
+        "Dwarf",
+        "Worgen",
         "Draenei",
-        "Tauren",
+        "Zandalari Troll Paku",
         "Nightborne"
     ],
     "spec_id": 253,
-    "subtitle": "UTC 2019-03-14 21:02 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/769c2ae6f6\" target=\"blank\">769c2ae</a>",
+    "subtitle": "UTC 2019-03-14 21:54 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/769c2ae6f6\" target=\"blank\">769c2ae</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -464,6 +464,6 @@
             }
         }
     },
-    "timestamp": "2019-03-14 21:02",
+    "timestamp": "2019-03-14 21:54",
     "title": "Races | Beast Mastery Hunter | Patchwerk"
 }
