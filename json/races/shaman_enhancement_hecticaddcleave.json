@@ -1,16 +1,20 @@
 {
     "class_id": 7,
     "data": {
-        "Dark Iron Dwarf": 38539,
-        "Draenei": 38630,
-        "Dwarf": 38668,
-        "Goblin": 38736,
-        "Highmountain Tauren": 38669,
+        "Dark Iron Dwarf": 38590,
+        "Draenei": 38608,
+        "Dwarf": 38685,
+        "Goblin": 38788,
+        "Highmountain Tauren": 38770,
+        "Kul Tiran": 38795,
         "Maghar Orc": 38638,
-        "Orc": 38526,
-        "Pandaren": 38667,
-        "Tauren": 38542,
-        "Troll": 38812
+        "Orc": 38535,
+        "Pandaren": 38685,
+        "Tauren": 38657,
+        "Troll": 38804,
+        "Zandalari Troll Bwonsamdi": 38541,
+        "Zandalari Troll Kimbul": 38615,
+        "Zandalari Troll Paku": 38683
     },
     "data_type": "races",
     "languages": {
@@ -64,6 +68,16 @@
             "ko_KR": "높은산 타우렌",
             "ru_RU": "Таурен Крутогорья"
         },
+        "Kul Tiran": {
+            "cn_CN": "Kul Tiran",
+            "de_DE": "Kul Tiran",
+            "en_US": "Kul Tiran",
+            "es_ES": "Kul Tiran",
+            "fr_FR": "Kul Tiran",
+            "it_IT": "Kul Tiran",
+            "ko_KR": "Kul Tiran",
+            "ru_RU": "Kul Tiran"
+        },
         "Maghar Orc": {
             "cn_CN": "玛格汉兽人",
             "de_DE": "Mag'har",
@@ -113,6 +127,36 @@
             "it_IT": "Troll",
             "ko_KR": "트롤",
             "ru_RU": "Тролль"
+        },
+        "Zandalari Troll Bwonsamdi": {
+            "cn_CN": "Zandalari Troll Bwonsamdi",
+            "de_DE": "Zandalari Troll Bwonsamdi",
+            "en_US": "Zandalari Troll Bwonsamdi",
+            "es_ES": "Zandalari Troll Bwonsamdi",
+            "fr_FR": "Zandalari Troll Bwonsamdi",
+            "it_IT": "Zandalari Troll Bwonsamdi",
+            "ko_KR": "Zandalari Troll Bwonsamdi",
+            "ru_RU": "Zandalari Troll Bwonsamdi"
+        },
+        "Zandalari Troll Kimbul": {
+            "cn_CN": "Zandalari Troll Kimbul",
+            "de_DE": "Zandalari Troll Kimbul",
+            "en_US": "Zandalari Troll Kimbul",
+            "es_ES": "Zandalari Troll Kimbul",
+            "fr_FR": "Zandalari Troll Kimbul",
+            "it_IT": "Zandalari Troll Kimbul",
+            "ko_KR": "Zandalari Troll Kimbul",
+            "ru_RU": "Zandalari Troll Kimbul"
+        },
+        "Zandalari Troll Paku": {
+            "cn_CN": "Zandalari Troll Paku",
+            "de_DE": "Zandalari Troll Paku",
+            "en_US": "Zandalari Troll Paku",
+            "es_ES": "Zandalari Troll Paku",
+            "fr_FR": "Zandalari Troll Paku",
+            "it_IT": "Zandalari Troll Paku",
+            "ko_KR": "Zandalari Troll Paku",
+            "ru_RU": "Zandalari Troll Paku"
         }
     },
     "profile": {
@@ -194,25 +238,29 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "b4c1ac24cf",
+        "simc_hash": "769c2ae6f6",
         "spec": "enhancement",
         "target_error": "0.2",
         "tier": "23"
     },
     "sorted_data_keys": [
         "Troll",
+        "Kul Tiran",
         "Goblin",
         "Highmountain Tauren",
         "Dwarf",
         "Pandaren",
-        "Maghar Orc",
-        "Draenei",
+        "Zandalari Troll Paku",
         "Tauren",
+        "Maghar Orc",
+        "Zandalari Troll Kimbul",
+        "Draenei",
         "Dark Iron Dwarf",
+        "Zandalari Troll Bwonsamdi",
         "Orc"
     ],
     "spec_id": 263,
-    "subtitle": "UTC 2019-03-13 17:46 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/b4c1ac24cf\" target=\"blank\">b4c1ac2</a>",
+    "subtitle": "UTC 2019-03-14 21:38 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/769c2ae6f6\" target=\"blank\">769c2ae</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -313,6 +361,6 @@
             }
         }
     },
-    "timestamp": "2019-03-13 17:46",
+    "timestamp": "2019-03-14 21:38",
     "title": "Races | Enhancement Shaman | Hecticaddcleave"
 }

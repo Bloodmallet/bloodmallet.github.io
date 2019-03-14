@@ -1,22 +1,26 @@
 {
     "class_id": 10,
     "data": {
-        "Blood Elf": 14558,
-        "Dark Iron Dwarf": 14435,
-        "Draenei": 14506,
-        "Dwarf": 14515,
-        "Gnome": 14525,
-        "Highmountain Tauren": 14530,
-        "Human": 14536,
-        "Maghar Orc": 14483,
-        "Night Elf": 14493,
-        "Nightborne": 14421,
-        "Orc": 14479,
-        "Pandaren": 14517,
-        "Tauren": 14515,
-        "Troll": 14417,
-        "Undead": 14713,
-        "Void Elf": 14540
+        "Blood Elf": 14551,
+        "Dark Iron Dwarf": 14439,
+        "Draenei": 14479,
+        "Dwarf": 14520,
+        "Gnome": 14521,
+        "Highmountain Tauren": 14533,
+        "Human": 14567,
+        "Kul Tiran": 14541,
+        "Maghar Orc": 14503,
+        "Night Elf": 14542,
+        "Nightborne": 14422,
+        "Orc": 14477,
+        "Pandaren": 14500,
+        "Tauren": 14535,
+        "Troll": 14401,
+        "Undead": 14705,
+        "Void Elf": 14546,
+        "Zandalari Troll Bwonsamdi": 14592,
+        "Zandalari Troll Kimbul": 14612,
+        "Zandalari Troll Paku": 14513
     },
     "data_type": "races",
     "languages": {
@@ -89,6 +93,16 @@
             "it_IT": "Umano",
             "ko_KR": "인간",
             "ru_RU": "Человек"
+        },
+        "Kul Tiran": {
+            "cn_CN": "Kul Tiran",
+            "de_DE": "Kul Tiran",
+            "en_US": "Kul Tiran",
+            "es_ES": "Kul Tiran",
+            "fr_FR": "Kul Tiran",
+            "it_IT": "Kul Tiran",
+            "ko_KR": "Kul Tiran",
+            "ru_RU": "Kul Tiran"
         },
         "Maghar Orc": {
             "cn_CN": "玛格汉兽人",
@@ -179,6 +193,36 @@
             "it_IT": "Elfo del Vuoto",
             "ko_KR": "공허 엘프",
             "ru_RU": "Эльф Бездны"
+        },
+        "Zandalari Troll Bwonsamdi": {
+            "cn_CN": "Zandalari Troll Bwonsamdi",
+            "de_DE": "Zandalari Troll Bwonsamdi",
+            "en_US": "Zandalari Troll Bwonsamdi",
+            "es_ES": "Zandalari Troll Bwonsamdi",
+            "fr_FR": "Zandalari Troll Bwonsamdi",
+            "it_IT": "Zandalari Troll Bwonsamdi",
+            "ko_KR": "Zandalari Troll Bwonsamdi",
+            "ru_RU": "Zandalari Troll Bwonsamdi"
+        },
+        "Zandalari Troll Kimbul": {
+            "cn_CN": "Zandalari Troll Kimbul",
+            "de_DE": "Zandalari Troll Kimbul",
+            "en_US": "Zandalari Troll Kimbul",
+            "es_ES": "Zandalari Troll Kimbul",
+            "fr_FR": "Zandalari Troll Kimbul",
+            "it_IT": "Zandalari Troll Kimbul",
+            "ko_KR": "Zandalari Troll Kimbul",
+            "ru_RU": "Zandalari Troll Kimbul"
+        },
+        "Zandalari Troll Paku": {
+            "cn_CN": "Zandalari Troll Paku",
+            "de_DE": "Zandalari Troll Paku",
+            "en_US": "Zandalari Troll Paku",
+            "es_ES": "Zandalari Troll Paku",
+            "fr_FR": "Zandalari Troll Paku",
+            "it_IT": "Zandalari Troll Paku",
+            "ko_KR": "Zandalari Troll Paku",
+            "ru_RU": "Zandalari Troll Paku"
         }
     },
     "profile": {
@@ -255,31 +299,35 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "b4c1ac24cf",
+        "simc_hash": "769c2ae6f6",
         "spec": "brewmaster",
         "target_error": "0.2",
         "tier": "23"
     },
     "sorted_data_keys": [
         "Undead",
+        "Zandalari Troll Kimbul",
+        "Zandalari Troll Bwonsamdi",
+        "Human",
         "Blood Elf",
         "Void Elf",
-        "Human",
+        "Night Elf",
+        "Kul Tiran",
+        "Tauren",
         "Highmountain Tauren",
         "Gnome",
-        "Pandaren",
         "Dwarf",
-        "Tauren",
-        "Draenei",
-        "Night Elf",
+        "Zandalari Troll Paku",
         "Maghar Orc",
+        "Pandaren",
+        "Draenei",
         "Orc",
         "Dark Iron Dwarf",
         "Nightborne",
         "Troll"
     ],
     "spec_id": 268,
-    "subtitle": "UTC 2019-03-13 17:32 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/b4c1ac24cf\" target=\"blank\">b4c1ac2</a>",
+    "subtitle": "UTC 2019-03-14 21:04 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/769c2ae6f6\" target=\"blank\">769c2ae</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -380,6 +428,6 @@
             }
         }
     },
-    "timestamp": "2019-03-13 17:32",
+    "timestamp": "2019-03-14 21:04",
     "title": "Races | Brewmaster Monk | Patchwerk"
 }

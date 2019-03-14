@@ -1,21 +1,25 @@
 {
     "class_id": 4,
     "data": {
-        "Blood Elf": 35004,
-        "Dark Iron Dwarf": 34895,
-        "Dwarf": 35016,
-        "Gnome": 35030,
-        "Goblin": 34933,
-        "Human": 35075,
-        "Maghar Orc": 34963,
-        "Night Elf": 35208,
-        "Nightborne": 34882,
-        "Orc": 34934,
-        "Pandaren": 35059,
-        "Troll": 34857,
-        "Undead": 35050,
-        "Void Elf": 35187,
-        "Worgen": 35028
+        "Blood Elf": 34979,
+        "Dark Iron Dwarf": 34887,
+        "Dwarf": 35028,
+        "Gnome": 34952,
+        "Goblin": 34987,
+        "Human": 34999,
+        "Kul Tiran": 35107,
+        "Maghar Orc": 34945,
+        "Night Elf": 35238,
+        "Nightborne": 34843,
+        "Orc": 34916,
+        "Pandaren": 35023,
+        "Troll": 34877,
+        "Undead": 35009,
+        "Void Elf": 35175,
+        "Worgen": 34984,
+        "Zandalari Troll Bwonsamdi": 34899,
+        "Zandalari Troll Kimbul": 34932,
+        "Zandalari Troll Paku": 34945
     },
     "data_type": "races",
     "languages": {
@@ -78,6 +82,16 @@
             "it_IT": "Umano",
             "ko_KR": "인간",
             "ru_RU": "Человек"
+        },
+        "Kul Tiran": {
+            "cn_CN": "Kul Tiran",
+            "de_DE": "Kul Tiran",
+            "en_US": "Kul Tiran",
+            "es_ES": "Kul Tiran",
+            "fr_FR": "Kul Tiran",
+            "it_IT": "Kul Tiran",
+            "ko_KR": "Kul Tiran",
+            "ru_RU": "Kul Tiran"
         },
         "Maghar Orc": {
             "cn_CN": "玛格汉兽人",
@@ -168,6 +182,36 @@
             "it_IT": "Worgen",
             "ko_KR": "늑대인간",
             "ru_RU": "Ворген"
+        },
+        "Zandalari Troll Bwonsamdi": {
+            "cn_CN": "Zandalari Troll Bwonsamdi",
+            "de_DE": "Zandalari Troll Bwonsamdi",
+            "en_US": "Zandalari Troll Bwonsamdi",
+            "es_ES": "Zandalari Troll Bwonsamdi",
+            "fr_FR": "Zandalari Troll Bwonsamdi",
+            "it_IT": "Zandalari Troll Bwonsamdi",
+            "ko_KR": "Zandalari Troll Bwonsamdi",
+            "ru_RU": "Zandalari Troll Bwonsamdi"
+        },
+        "Zandalari Troll Kimbul": {
+            "cn_CN": "Zandalari Troll Kimbul",
+            "de_DE": "Zandalari Troll Kimbul",
+            "en_US": "Zandalari Troll Kimbul",
+            "es_ES": "Zandalari Troll Kimbul",
+            "fr_FR": "Zandalari Troll Kimbul",
+            "it_IT": "Zandalari Troll Kimbul",
+            "ko_KR": "Zandalari Troll Kimbul",
+            "ru_RU": "Zandalari Troll Kimbul"
+        },
+        "Zandalari Troll Paku": {
+            "cn_CN": "Zandalari Troll Paku",
+            "de_DE": "Zandalari Troll Paku",
+            "en_US": "Zandalari Troll Paku",
+            "es_ES": "Zandalari Troll Paku",
+            "fr_FR": "Zandalari Troll Paku",
+            "it_IT": "Zandalari Troll Paku",
+            "ko_KR": "Zandalari Troll Paku",
+            "ru_RU": "Zandalari Troll Paku"
         }
     },
     "profile": {
@@ -249,7 +293,7 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "b4c1ac24cf",
+        "simc_hash": "769c2ae6f6",
         "spec": "subtlety",
         "target_error": "0.2",
         "tier": "23"
@@ -257,22 +301,26 @@
     "sorted_data_keys": [
         "Night Elf",
         "Void Elf",
-        "Human",
+        "Kul Tiran",
+        "Dwarf",
         "Pandaren",
         "Undead",
-        "Gnome",
-        "Worgen",
-        "Dwarf",
-        "Blood Elf",
-        "Maghar Orc",
-        "Orc",
+        "Human",
         "Goblin",
+        "Worgen",
+        "Blood Elf",
+        "Gnome",
+        "Maghar Orc",
+        "Zandalari Troll Paku",
+        "Zandalari Troll Kimbul",
+        "Orc",
+        "Zandalari Troll Bwonsamdi",
         "Dark Iron Dwarf",
-        "Nightborne",
-        "Troll"
+        "Troll",
+        "Nightborne"
     ],
     "spec_id": 261,
-    "subtitle": "UTC 2019-03-13 17:45 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/b4c1ac24cf\" target=\"blank\">b4c1ac2</a>",
+    "subtitle": "UTC 2019-03-14 21:37 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/769c2ae6f6\" target=\"blank\">769c2ae</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -373,6 +421,6 @@
             }
         }
     },
-    "timestamp": "2019-03-13 17:45",
+    "timestamp": "2019-03-14 21:37",
     "title": "Races | Subtlety Rogue | Hecticaddcleave"
 }

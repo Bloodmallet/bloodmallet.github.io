@@ -1,13 +1,16 @@
 {
     "class_id": 2,
     "data": {
-        "Blood Elf": 26242,
-        "Dark Iron Dwarf": 26172,
-        "Draenei": 26176,
-        "Dwarf": 26183,
-        "Human": 26207,
-        "Lightforged Draenei": 26177,
-        "Tauren": 26220
+        "Blood Elf": 26301,
+        "Dark Iron Dwarf": 26195,
+        "Draenei": 26114,
+        "Dwarf": 26196,
+        "Human": 26180,
+        "Lightforged Draenei": 26216,
+        "Tauren": 26164,
+        "Zandalari Troll Bwonsamdi": 26250,
+        "Zandalari Troll Kimbul": 26209,
+        "Zandalari Troll Paku": 26219
     },
     "data_type": "races",
     "languages": {
@@ -80,6 +83,36 @@
             "it_IT": "Tauren",
             "ko_KR": "타우렌",
             "ru_RU": "Таурен"
+        },
+        "Zandalari Troll Bwonsamdi": {
+            "cn_CN": "Zandalari Troll Bwonsamdi",
+            "de_DE": "Zandalari Troll Bwonsamdi",
+            "en_US": "Zandalari Troll Bwonsamdi",
+            "es_ES": "Zandalari Troll Bwonsamdi",
+            "fr_FR": "Zandalari Troll Bwonsamdi",
+            "it_IT": "Zandalari Troll Bwonsamdi",
+            "ko_KR": "Zandalari Troll Bwonsamdi",
+            "ru_RU": "Zandalari Troll Bwonsamdi"
+        },
+        "Zandalari Troll Kimbul": {
+            "cn_CN": "Zandalari Troll Kimbul",
+            "de_DE": "Zandalari Troll Kimbul",
+            "en_US": "Zandalari Troll Kimbul",
+            "es_ES": "Zandalari Troll Kimbul",
+            "fr_FR": "Zandalari Troll Kimbul",
+            "it_IT": "Zandalari Troll Kimbul",
+            "ko_KR": "Zandalari Troll Kimbul",
+            "ru_RU": "Zandalari Troll Kimbul"
+        },
+        "Zandalari Troll Paku": {
+            "cn_CN": "Zandalari Troll Paku",
+            "de_DE": "Zandalari Troll Paku",
+            "en_US": "Zandalari Troll Paku",
+            "es_ES": "Zandalari Troll Paku",
+            "fr_FR": "Zandalari Troll Paku",
+            "it_IT": "Zandalari Troll Paku",
+            "ko_KR": "Zandalari Troll Paku",
+            "ru_RU": "Zandalari Troll Paku"
         }
     },
     "profile": {
@@ -156,22 +189,25 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "b4c1ac24cf",
+        "simc_hash": "769c2ae6f6",
         "spec": "retribution",
         "target_error": "0.2",
         "tier": "23"
     },
     "sorted_data_keys": [
         "Blood Elf",
-        "Tauren",
-        "Human",
-        "Dwarf",
+        "Zandalari Troll Bwonsamdi",
+        "Zandalari Troll Paku",
         "Lightforged Draenei",
-        "Draenei",
-        "Dark Iron Dwarf"
+        "Zandalari Troll Kimbul",
+        "Dwarf",
+        "Dark Iron Dwarf",
+        "Human",
+        "Tauren",
+        "Draenei"
     ],
     "spec_id": 70,
-    "subtitle": "UTC 2019-03-13 17:33 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/b4c1ac24cf\" target=\"blank\">b4c1ac2</a>",
+    "subtitle": "UTC 2019-03-14 21:05 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/769c2ae6f6\" target=\"blank\">769c2ae</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -272,6 +308,6 @@
             }
         }
     },
-    "timestamp": "2019-03-13 17:33",
+    "timestamp": "2019-03-14 21:05",
     "title": "Races | Retribution Paladin | Patchwerk"
 }
