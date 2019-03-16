@@ -1,15 +1,15 @@
 {
     "class_id": 11,
     "data": {
-        "Highmountain Tauren": 29206,
-        "Kul Tiran": 29203,
-        "Night Elf": 29133,
-        "Tauren": 29105,
-        "Troll": 29228,
-        "Worgen": 29156,
-        "Zandalari Troll Bwonsamdi": 29125,
-        "Zandalari Troll Kimbul": 29174,
-        "Zandalari Troll Paku": 29178
+        "Highmountain Tauren": 29344,
+        "Kul Tiran": 29434,
+        "Night Elf": 29347,
+        "Tauren": 29263,
+        "Troll": 29408,
+        "Worgen": 29358,
+        "Zandalari Troll Bwonsamdi": 29298,
+        "Zandalari Troll Kimbul": 29360,
+        "Zandalari Troll Paku": 29385
     },
     "data_type": "races",
     "languages": {
@@ -147,7 +147,7 @@
             "id": "165592"
         },
         "neck": {
-            "bonus_id": "4929/4930/4936/1566",
+            "bonus_id": "4929/5814/4936/1566",
             "id": "158075"
         },
         "off_hand": {
@@ -182,24 +182,24 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "769c2ae6f6",
+        "simc_hash": "ec07243f4b",
         "spec": "balance",
         "target_error": "0.2",
         "tier": "23"
     },
     "sorted_data_keys": [
-        "Troll",
-        "Highmountain Tauren",
         "Kul Tiran",
+        "Troll",
         "Zandalari Troll Paku",
         "Zandalari Troll Kimbul",
         "Worgen",
         "Night Elf",
+        "Highmountain Tauren",
         "Zandalari Troll Bwonsamdi",
         "Tauren"
     ],
     "spec_id": 102,
-    "subtitle": "UTC 2019-03-14 21:02 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/769c2ae6f6\" target=\"blank\">769c2ae</a>",
+    "subtitle": "UTC 2019-03-15 11:24 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/ec07243f4b\" target=\"blank\">ec07243</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -300,6 +300,6 @@
             }
         }
     },
-    "timestamp": "2019-03-14 21:02",
+    "timestamp": "2019-03-15 11:24",
     "title": "Races | Balance Druid | Patchwerk"
 }

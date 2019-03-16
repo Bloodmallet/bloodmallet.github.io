@@ -1,18 +1,18 @@
 {
     "class_id": 6,
     "data": {
-        "Blood Elf": 21141,
-        "Draenei": 21015,
-        "Dwarf": 21012,
-        "Gnome": 21005,
-        "Goblin": 21089,
-        "Human": 21052,
-        "Night Elf": 21143,
-        "Orc": 20999,
-        "Tauren": 21043,
-        "Troll": 21039,
-        "Undead": 21233,
-        "Worgen": 21053
+        "Blood Elf": 21238,
+        "Draenei": 21149,
+        "Dwarf": 21147,
+        "Gnome": 21162,
+        "Goblin": 21218,
+        "Human": 21212,
+        "Night Elf": 21245,
+        "Orc": 21138,
+        "Tauren": 21131,
+        "Troll": 21202,
+        "Undead": 21343,
+        "Worgen": 21207
     },
     "data_type": "races",
     "languages": {
@@ -180,7 +180,7 @@
             "id": "165586"
         },
         "neck": {
-            "bonus_id": "4929/4930/4936/1566",
+            "bonus_id": "4929/5814/4936/1566",
             "id": "158075"
         },
         "shoulders": {
@@ -211,7 +211,7 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "769c2ae6f6",
+        "simc_hash": "ec07243f4b",
         "spec": "blood",
         "target_error": "0.2",
         "tier": "23"
@@ -221,17 +221,17 @@
         "Night Elf",
         "Blood Elf",
         "Goblin",
-        "Worgen",
         "Human",
-        "Tauren",
+        "Worgen",
         "Troll",
+        "Gnome",
         "Draenei",
         "Dwarf",
-        "Gnome",
-        "Orc"
+        "Orc",
+        "Tauren"
     ],
     "spec_id": 250,
-    "subtitle": "UTC 2019-03-14 21:26 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/769c2ae6f6\" target=\"blank\">769c2ae</a>",
+    "subtitle": "UTC 2019-03-15 11:31 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/ec07243f4b\" target=\"blank\">ec07243</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -332,6 +332,6 @@
             }
         }
     },
-    "timestamp": "2019-03-14 21:26",
+    "timestamp": "2019-03-15 11:31",
     "title": "Races | Blood Death Knight | Hecticaddcleave"
 }

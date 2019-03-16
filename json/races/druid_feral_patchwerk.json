@@ -1,15 +1,15 @@
 {
     "class_id": 11,
     "data": {
-        "Highmountain Tauren": 27012,
-        "Kul Tiran": 27026,
-        "Night Elf": 27502,
-        "Tauren": 27063,
-        "Troll": 26924,
-        "Worgen": 27015,
-        "Zandalari Troll Bwonsamdi": 26907,
-        "Zandalari Troll Kimbul": 26881,
-        "Zandalari Troll Paku": 26967
+        "Highmountain Tauren": 27143,
+        "Kul Tiran": 27219,
+        "Night Elf": 27623,
+        "Tauren": 27222,
+        "Troll": 27070,
+        "Worgen": 27219,
+        "Zandalari Troll Bwonsamdi": 27034,
+        "Zandalari Troll Kimbul": 27112,
+        "Zandalari Troll Paku": 27168
     },
     "data_type": "races",
     "languages": {
@@ -147,7 +147,7 @@
             "id": "165589"
         },
         "neck": {
-            "bonus_id": "4929/4930/4936/1566",
+            "bonus_id": "4929/5814/4936/1566",
             "id": "158075"
         },
         "shoulders": {
@@ -178,7 +178,7 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "769c2ae6f6",
+        "simc_hash": "ec07243f4b",
         "spec": "feral",
         "target_error": "0.2",
         "tier": "23"
@@ -186,16 +186,16 @@
     "sorted_data_keys": [
         "Night Elf",
         "Tauren",
-        "Kul Tiran",
         "Worgen",
-        "Highmountain Tauren",
+        "Kul Tiran",
         "Zandalari Troll Paku",
+        "Highmountain Tauren",
+        "Zandalari Troll Kimbul",
         "Troll",
-        "Zandalari Troll Bwonsamdi",
-        "Zandalari Troll Kimbul"
+        "Zandalari Troll Bwonsamdi"
     ],
     "spec_id": 103,
-    "subtitle": "UTC 2019-03-14 21:02 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/769c2ae6f6\" target=\"blank\">769c2ae</a>",
+    "subtitle": "UTC 2019-03-15 11:24 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/ec07243f4b\" target=\"blank\">ec07243</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -296,6 +296,6 @@
             }
         }
     },
-    "timestamp": "2019-03-14 21:02",
+    "timestamp": "2019-03-15 11:24",
     "title": "Races | Feral Druid | Patchwerk"
 }

@@ -1,16 +1,16 @@
 {
     "class_id": 2,
     "data": {
-        "Blood Elf": 42210,
-        "Dark Iron Dwarf": 41893,
-        "Draenei": 41986,
-        "Dwarf": 42021,
-        "Human": 42027,
-        "Lightforged Draenei": 43598,
-        "Tauren": 42040,
-        "Zandalari Troll Bwonsamdi": 41970,
-        "Zandalari Troll Kimbul": 41981,
-        "Zandalari Troll Paku": 42115
+        "Blood Elf": 42396,
+        "Dark Iron Dwarf": 42082,
+        "Draenei": 42063,
+        "Dwarf": 42200,
+        "Human": 42223,
+        "Lightforged Draenei": 43785,
+        "Tauren": 42230,
+        "Zandalari Troll Bwonsamdi": 42153,
+        "Zandalari Troll Kimbul": 42184,
+        "Zandalari Troll Paku": 42212
     },
     "data_type": "races",
     "languages": {
@@ -158,7 +158,7 @@
             "id": "165586"
         },
         "neck": {
-            "bonus_id": "4929/4930/4936/1566",
+            "bonus_id": "4929/5814/4936/1566",
             "id": "158075"
         },
         "shoulders": {
@@ -189,7 +189,7 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "769c2ae6f6",
+        "simc_hash": "ec07243f4b",
         "spec": "retribution",
         "target_error": "0.2",
         "tier": "23"
@@ -197,17 +197,17 @@
     "sorted_data_keys": [
         "Lightforged Draenei",
         "Blood Elf",
-        "Zandalari Troll Paku",
         "Tauren",
         "Human",
+        "Zandalari Troll Paku",
         "Dwarf",
-        "Draenei",
         "Zandalari Troll Kimbul",
         "Zandalari Troll Bwonsamdi",
-        "Dark Iron Dwarf"
+        "Dark Iron Dwarf",
+        "Draenei"
     ],
     "spec_id": 70,
-    "subtitle": "UTC 2019-03-14 21:35 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/769c2ae6f6\" target=\"blank\">769c2ae</a>",
+    "subtitle": "UTC 2019-03-15 11:40 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/ec07243f4b\" target=\"blank\">ec07243</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -308,6 +308,6 @@
             }
         }
     },
-    "timestamp": "2019-03-14 21:35",
+    "timestamp": "2019-03-15 11:40",
     "title": "Races | Retribution Paladin | Hecticaddcleave"
 }

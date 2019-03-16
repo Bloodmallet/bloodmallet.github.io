@@ -1,15 +1,15 @@
 {
     "class_id": 11,
     "data": {
-        "Highmountain Tauren": 15758,
-        "Kul Tiran": 15733,
-        "Night Elf": 15731,
-        "Tauren": 15702,
-        "Troll": 15736,
-        "Worgen": 15766,
-        "Zandalari Troll Bwonsamdi": 15883,
-        "Zandalari Troll Kimbul": 15899,
-        "Zandalari Troll Paku": 15730
+        "Highmountain Tauren": 15843,
+        "Kul Tiran": 15804,
+        "Night Elf": 15805,
+        "Tauren": 15792,
+        "Troll": 15829,
+        "Worgen": 15805,
+        "Zandalari Troll Bwonsamdi": 15963,
+        "Zandalari Troll Kimbul": 15981,
+        "Zandalari Troll Paku": 15819
     },
     "data_type": "races",
     "languages": {
@@ -147,7 +147,7 @@
             "id": "165589"
         },
         "neck": {
-            "bonus_id": "4929/4930/4936/1566",
+            "bonus_id": "4929/5814/4936/1566",
             "id": "158075"
         },
         "shoulders": {
@@ -178,7 +178,7 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "769c2ae6f6",
+        "simc_hash": "ec07243f4b",
         "spec": "guardian",
         "target_error": "0.2",
         "tier": "23"
@@ -186,16 +186,16 @@
     "sorted_data_keys": [
         "Zandalari Troll Kimbul",
         "Zandalari Troll Bwonsamdi",
-        "Worgen",
         "Highmountain Tauren",
         "Troll",
-        "Kul Tiran",
-        "Night Elf",
         "Zandalari Troll Paku",
+        "Night Elf",
+        "Worgen",
+        "Kul Tiran",
         "Tauren"
     ],
     "spec_id": 104,
-    "subtitle": "UTC 2019-03-14 21:02 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/769c2ae6f6\" target=\"blank\">769c2ae</a>",
+    "subtitle": "UTC 2019-03-15 11:25 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/ec07243f4b\" target=\"blank\">ec07243</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -296,6 +296,6 @@
             }
         }
     },
-    "timestamp": "2019-03-14 21:02",
+    "timestamp": "2019-03-15 11:25",
     "title": "Races | Guardian Druid | Patchwerk"
 }

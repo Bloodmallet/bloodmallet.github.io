@@ -1,18 +1,18 @@
 {
     "class_id": 9,
     "data": {
-        "Blood Elf": 27215,
-        "Dark Iron Dwarf": 27192,
-        "Dwarf": 27167,
-        "Gnome": 27172,
-        "Goblin": 27181,
-        "Human": 27263,
-        "Nightborne": 27136,
-        "Orc": 27408,
-        "Troll": 27433,
-        "Undead": 27203,
-        "Void Elf": 27018,
-        "Worgen": 27228
+        "Blood Elf": 27388,
+        "Dark Iron Dwarf": 27336,
+        "Dwarf": 27326,
+        "Gnome": 27325,
+        "Goblin": 27296,
+        "Human": 27394,
+        "Nightborne": 27180,
+        "Orc": 27584,
+        "Troll": 27597,
+        "Undead": 27296,
+        "Void Elf": 27181,
+        "Worgen": 27375
     },
     "data_type": "races",
     "languages": {
@@ -180,7 +180,7 @@
             "id": "165587"
         },
         "neck": {
-            "bonus_id": "4929/4930/4936/1566",
+            "bonus_id": "4929/5814/4936/1566",
             "id": "158075"
         },
         "shoulders": {
@@ -211,7 +211,7 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "769c2ae6f6",
+        "simc_hash": "ec07243f4b",
         "spec": "demonology",
         "target_error": "0.2",
         "tier": "23"
@@ -220,18 +220,18 @@
         "Troll",
         "Orc",
         "Human",
-        "Worgen",
         "Blood Elf",
-        "Undead",
+        "Worgen",
         "Dark Iron Dwarf",
-        "Goblin",
-        "Gnome",
         "Dwarf",
-        "Nightborne",
-        "Void Elf"
+        "Gnome",
+        "Goblin",
+        "Undead",
+        "Void Elf",
+        "Nightborne"
     ],
     "spec_id": 266,
-    "subtitle": "UTC 2019-03-14 21:07 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/769c2ae6f6\" target=\"blank\">769c2ae</a>",
+    "subtitle": "UTC 2019-03-15 11:30 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/ec07243f4b\" target=\"blank\">ec07243</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -332,6 +332,6 @@
             }
         }
     },
-    "timestamp": "2019-03-14 21:07",
+    "timestamp": "2019-03-15 11:30",
     "title": "Races | Demonology Warlock | Patchwerk"
 }

@@ -1,29 +1,29 @@
 {
     "class_id": 1,
     "data": {
-        "Blood Elf": 26004,
-        "Dark Iron Dwarf": 25792,
-        "Draenei": 25936,
-        "Dwarf": 25945,
-        "Gnome": 26085,
-        "Goblin": 26011,
-        "Highmountain Tauren": 25990,
-        "Human": 26050,
-        "Kul Tiran": 25952,
-        "Lightforged Draenei": 25962,
-        "Maghar Orc": 25953,
-        "Night Elf": 26012,
-        "Nightborne": 25692,
-        "Orc": 25851,
-        "Pandaren": 25924,
-        "Tauren": 25900,
-        "Troll": 25909,
-        "Undead": 25917,
-        "Void Elf": 25962,
-        "Worgen": 25991,
-        "Zandalari Troll Bwonsamdi": 25921,
-        "Zandalari Troll Kimbul": 25974,
-        "Zandalari Troll Paku": 26001
+        "Blood Elf": 26179,
+        "Dark Iron Dwarf": 25981,
+        "Draenei": 26011,
+        "Dwarf": 26073,
+        "Gnome": 26260,
+        "Goblin": 26182,
+        "Highmountain Tauren": 26148,
+        "Human": 26228,
+        "Kul Tiran": 26063,
+        "Lightforged Draenei": 26141,
+        "Maghar Orc": 26108,
+        "Night Elf": 26184,
+        "Nightborne": 25843,
+        "Orc": 26027,
+        "Pandaren": 26065,
+        "Tauren": 26069,
+        "Troll": 26099,
+        "Undead": 26091,
+        "Void Elf": 26158,
+        "Worgen": 26219,
+        "Zandalari Troll Bwonsamdi": 26132,
+        "Zandalari Troll Kimbul": 26131,
+        "Zandalari Troll Paku": 26204
     },
     "data_type": "races",
     "languages": {
@@ -301,7 +301,7 @@
             "id": "165586"
         },
         "neck": {
-            "bonus_id": "4929/4930/4936/1566",
+            "bonus_id": "4929/5814/4936/1566",
             "id": "158075"
         },
         "off_hand": {
@@ -337,7 +337,7 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "769c2ae6f6",
+        "simc_hash": "ec07243f4b",
         "spec": "fury",
         "target_error": "0.2",
         "tier": "23"
@@ -345,30 +345,30 @@
     "sorted_data_keys": [
         "Gnome",
         "Human",
+        "Worgen",
+        "Zandalari Troll Paku",
         "Night Elf",
         "Goblin",
         "Blood Elf",
-        "Zandalari Troll Paku",
-        "Worgen",
-        "Highmountain Tauren",
-        "Zandalari Troll Kimbul",
         "Void Elf",
+        "Highmountain Tauren",
         "Lightforged Draenei",
-        "Maghar Orc",
-        "Kul Tiran",
-        "Dwarf",
-        "Draenei",
-        "Pandaren",
         "Zandalari Troll Bwonsamdi",
-        "Undead",
+        "Zandalari Troll Kimbul",
+        "Maghar Orc",
         "Troll",
+        "Undead",
+        "Dwarf",
         "Tauren",
+        "Pandaren",
+        "Kul Tiran",
         "Orc",
+        "Draenei",
         "Dark Iron Dwarf",
         "Nightborne"
     ],
     "spec_id": 72,
-    "subtitle": "UTC 2019-03-14 21:08 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/769c2ae6f6\" target=\"blank\">769c2ae</a>",
+    "subtitle": "UTC 2019-03-15 11:31 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/ec07243f4b\" target=\"blank\">ec07243</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -469,6 +469,6 @@
             }
         }
     },
-    "timestamp": "2019-03-14 21:08",
+    "timestamp": "2019-03-15 11:31",
     "title": "Races | Fury Warrior | Patchwerk"
 }

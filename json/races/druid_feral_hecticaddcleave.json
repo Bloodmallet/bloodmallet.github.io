@@ -1,15 +1,15 @@
 {
     "class_id": 11,
     "data": {
-        "Highmountain Tauren": 28512,
-        "Kul Tiran": 28531,
-        "Night Elf": 28897,
-        "Tauren": 28488,
-        "Troll": 28414,
-        "Worgen": 28490,
-        "Zandalari Troll Bwonsamdi": 28363,
-        "Zandalari Troll Kimbul": 28410,
-        "Zandalari Troll Paku": 28478
+        "Highmountain Tauren": 28583,
+        "Kul Tiran": 28608,
+        "Night Elf": 29001,
+        "Tauren": 28567,
+        "Troll": 28544,
+        "Worgen": 28576,
+        "Zandalari Troll Bwonsamdi": 28491,
+        "Zandalari Troll Kimbul": 28478,
+        "Zandalari Troll Paku": 28541
     },
     "data_type": "races",
     "languages": {
@@ -147,7 +147,7 @@
             "id": "165589"
         },
         "neck": {
-            "bonus_id": "4929/4930/4936/1566",
+            "bonus_id": "4929/5814/4936/1566",
             "id": "158075"
         },
         "shoulders": {
@@ -178,7 +178,7 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "769c2ae6f6",
+        "simc_hash": "ec07243f4b",
         "spec": "feral",
         "target_error": "0.2",
         "tier": "23"
@@ -189,13 +189,13 @@
         "Highmountain Tauren",
         "Worgen",
         "Tauren",
-        "Zandalari Troll Paku",
         "Troll",
-        "Zandalari Troll Kimbul",
-        "Zandalari Troll Bwonsamdi"
+        "Zandalari Troll Paku",
+        "Zandalari Troll Bwonsamdi",
+        "Zandalari Troll Kimbul"
     ],
     "spec_id": 103,
-    "subtitle": "UTC 2019-03-14 21:29 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/769c2ae6f6\" target=\"blank\">769c2ae</a>",
+    "subtitle": "UTC 2019-03-15 11:34 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/ec07243f4b\" target=\"blank\">ec07243</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -296,6 +296,6 @@
             }
         }
     },
-    "timestamp": "2019-03-14 21:29",
+    "timestamp": "2019-03-15 11:34",
     "title": "Races | Feral Druid | Hecticaddcleave"
 }

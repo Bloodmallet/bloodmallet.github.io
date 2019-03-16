@@ -1,18 +1,18 @@
 {
     "class_id": 6,
     "data": {
-        "Blood Elf": 33146,
-        "Draenei": 32643,
-        "Dwarf": 32631,
-        "Gnome": 32749,
-        "Goblin": 32571,
-        "Human": 32580,
-        "Night Elf": 32802,
-        "Orc": 32627,
-        "Tauren": 32615,
-        "Troll": 32690,
-        "Undead": 32719,
-        "Worgen": 32666
+        "Blood Elf": 33332,
+        "Draenei": 32694,
+        "Dwarf": 32767,
+        "Gnome": 32941,
+        "Goblin": 32739,
+        "Human": 32841,
+        "Night Elf": 33015,
+        "Orc": 32836,
+        "Tauren": 32858,
+        "Troll": 32833,
+        "Undead": 32913,
+        "Worgen": 32898
     },
     "data_type": "races",
     "languages": {
@@ -180,7 +180,7 @@
             "id": "165920"
         },
         "neck": {
-            "bonus_id": "4929/4930/4936/1566",
+            "bonus_id": "4929/5814/4936/1566",
             "id": "158075"
         },
         "off_hand": {
@@ -216,7 +216,7 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "769c2ae6f6",
+        "simc_hash": "ec07243f4b",
         "spec": "frost",
         "target_error": "0.2",
         "tier": "23"
@@ -226,17 +226,17 @@
         "Night Elf",
         "Gnome",
         "Undead",
-        "Troll",
         "Worgen",
-        "Draenei",
-        "Dwarf",
-        "Orc",
         "Tauren",
         "Human",
-        "Goblin"
+        "Orc",
+        "Troll",
+        "Dwarf",
+        "Goblin",
+        "Draenei"
     ],
     "spec_id": 251,
-    "subtitle": "UTC 2019-03-14 21:27 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/769c2ae6f6\" target=\"blank\">769c2ae</a>",
+    "subtitle": "UTC 2019-03-15 11:32 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/ec07243f4b\" target=\"blank\">ec07243</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -337,6 +337,6 @@
             }
         }
     },
-    "timestamp": "2019-03-14 21:27",
+    "timestamp": "2019-03-15 11:32",
     "title": "Races | Frost Death Knight | Hecticaddcleave"
 }

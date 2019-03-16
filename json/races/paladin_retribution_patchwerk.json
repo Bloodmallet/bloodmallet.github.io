@@ -1,16 +1,16 @@
 {
     "class_id": 2,
     "data": {
-        "Blood Elf": 26301,
-        "Dark Iron Dwarf": 26195,
-        "Draenei": 26114,
-        "Dwarf": 26196,
-        "Human": 26180,
-        "Lightforged Draenei": 26216,
-        "Tauren": 26164,
-        "Zandalari Troll Bwonsamdi": 26250,
-        "Zandalari Troll Kimbul": 26209,
-        "Zandalari Troll Paku": 26219
+        "Blood Elf": 26408,
+        "Dark Iron Dwarf": 26255,
+        "Draenei": 26275,
+        "Dwarf": 26324,
+        "Human": 26291,
+        "Lightforged Draenei": 26342,
+        "Tauren": 26325,
+        "Zandalari Troll Bwonsamdi": 26363,
+        "Zandalari Troll Kimbul": 26409,
+        "Zandalari Troll Paku": 26347
     },
     "data_type": "races",
     "languages": {
@@ -158,7 +158,7 @@
             "id": "165586"
         },
         "neck": {
-            "bonus_id": "4929/4930/4936/1566",
+            "bonus_id": "4929/5814/4936/1566",
             "id": "158075"
         },
         "shoulders": {
@@ -189,25 +189,25 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "769c2ae6f6",
+        "simc_hash": "ec07243f4b",
         "spec": "retribution",
         "target_error": "0.2",
         "tier": "23"
     },
     "sorted_data_keys": [
+        "Zandalari Troll Kimbul",
         "Blood Elf",
         "Zandalari Troll Bwonsamdi",
         "Zandalari Troll Paku",
         "Lightforged Draenei",
-        "Zandalari Troll Kimbul",
-        "Dwarf",
-        "Dark Iron Dwarf",
-        "Human",
         "Tauren",
-        "Draenei"
+        "Dwarf",
+        "Human",
+        "Draenei",
+        "Dark Iron Dwarf"
     ],
     "spec_id": 70,
-    "subtitle": "UTC 2019-03-14 21:05 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/769c2ae6f6\" target=\"blank\">769c2ae</a>",
+    "subtitle": "UTC 2019-03-15 11:27 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/ec07243f4b\" target=\"blank\">ec07243</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -308,6 +308,6 @@
             }
         }
     },
-    "timestamp": "2019-03-14 21:05",
+    "timestamp": "2019-03-15 11:27",
     "title": "Races | Retribution Paladin | Patchwerk"
 }

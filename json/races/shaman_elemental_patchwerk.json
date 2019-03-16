@@ -1,20 +1,20 @@
 {
     "class_id": 7,
     "data": {
-        "Dark Iron Dwarf": 28556,
-        "Draenei": 28565,
-        "Dwarf": 28831,
-        "Goblin": 28593,
-        "Highmountain Tauren": 28693,
-        "Kul Tiran": 28700,
-        "Maghar Orc": 28635,
-        "Orc": 28561,
-        "Pandaren": 28586,
-        "Tauren": 28788,
-        "Troll": 28622,
-        "Zandalari Troll Bwonsamdi": 28610,
-        "Zandalari Troll Kimbul": 28645,
-        "Zandalari Troll Paku": 28575
+        "Dark Iron Dwarf": 28698,
+        "Draenei": 28760,
+        "Dwarf": 28975,
+        "Goblin": 28789,
+        "Highmountain Tauren": 28755,
+        "Kul Tiran": 28767,
+        "Maghar Orc": 28784,
+        "Orc": 28783,
+        "Pandaren": 28765,
+        "Tauren": 28944,
+        "Troll": 28778,
+        "Zandalari Troll Bwonsamdi": 28750,
+        "Zandalari Troll Kimbul": 28782,
+        "Zandalari Troll Paku": 28754
     },
     "data_type": "races",
     "languages": {
@@ -202,7 +202,7 @@
             "id": "165594"
         },
         "neck": {
-            "bonus_id": "4929/4930/4936/1566",
+            "bonus_id": "4929/5814/4936/1566",
             "id": "158075"
         },
         "off_hand": {
@@ -237,7 +237,7 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "769c2ae6f6",
+        "simc_hash": "ec07243f4b",
         "spec": "elemental",
         "target_error": "0.2",
         "tier": "23"
@@ -245,21 +245,21 @@
     "sorted_data_keys": [
         "Dwarf",
         "Tauren",
-        "Kul Tiran",
-        "Highmountain Tauren",
-        "Zandalari Troll Kimbul",
-        "Maghar Orc",
-        "Troll",
-        "Zandalari Troll Bwonsamdi",
         "Goblin",
-        "Pandaren",
-        "Zandalari Troll Paku",
-        "Draenei",
+        "Maghar Orc",
         "Orc",
+        "Zandalari Troll Kimbul",
+        "Troll",
+        "Kul Tiran",
+        "Pandaren",
+        "Draenei",
+        "Highmountain Tauren",
+        "Zandalari Troll Paku",
+        "Zandalari Troll Bwonsamdi",
         "Dark Iron Dwarf"
     ],
     "spec_id": 262,
-    "subtitle": "UTC 2019-03-14 21:06 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/769c2ae6f6\" target=\"blank\">769c2ae</a>",
+    "subtitle": "UTC 2019-03-15 11:29 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/ec07243f4b\" target=\"blank\">ec07243</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -360,6 +360,6 @@
             }
         }
     },
-    "timestamp": "2019-03-14 21:06",
+    "timestamp": "2019-03-15 11:29",
     "title": "Races | Elemental Shaman | Patchwerk"
 }
