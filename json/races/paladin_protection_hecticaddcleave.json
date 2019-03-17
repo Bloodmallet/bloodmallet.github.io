@@ -1,16 +1,14 @@
 {
     "class_id": 2,
     "data": {
-        "Blood Elf": 29387,
-        "Dark Iron Dwarf": 29270,
-        "Draenei": 29281,
-        "Dwarf": 29372,
-        "Human": 29473,
-        "Lightforged Draenei": 30750,
-        "Tauren": 29427,
-        "Zandalari Troll Bwonsamdi": 29393,
-        "Zandalari Troll Kimbul": 29371,
-        "Zandalari Troll Paku": 29415
+        "Blood Elf": 29351,
+        "Dark Iron Dwarf": 29260,
+        "Draenei": 29317,
+        "Dwarf": 29427,
+        "Human": 29440,
+        "Lightforged Draenei": 30797,
+        "Tauren": 29409,
+        "Zandalari Troll": 29378
     },
     "data_type": "races",
     "languages": {
@@ -84,36 +82,7 @@
             "ko_KR": "타우렌",
             "ru_RU": "Таурен"
         },
-        "Zandalari Troll Bwonsamdi": {
-            "cn_CN": "Zandalari Troll Bwonsamdi",
-            "de_DE": "Zandalari Troll Bwonsamdi",
-            "en_US": "Zandalari Troll Bwonsamdi",
-            "es_ES": "Zandalari Troll Bwonsamdi",
-            "fr_FR": "Zandalari Troll Bwonsamdi",
-            "it_IT": "Zandalari Troll Bwonsamdi",
-            "ko_KR": "Zandalari Troll Bwonsamdi",
-            "ru_RU": "Zandalari Troll Bwonsamdi"
-        },
-        "Zandalari Troll Kimbul": {
-            "cn_CN": "Zandalari Troll Kimbul",
-            "de_DE": "Zandalari Troll Kimbul",
-            "en_US": "Zandalari Troll Kimbul",
-            "es_ES": "Zandalari Troll Kimbul",
-            "fr_FR": "Zandalari Troll Kimbul",
-            "it_IT": "Zandalari Troll Kimbul",
-            "ko_KR": "Zandalari Troll Kimbul",
-            "ru_RU": "Zandalari Troll Kimbul"
-        },
-        "Zandalari Troll Paku": {
-            "cn_CN": "Zandalari Troll Paku",
-            "de_DE": "Zandalari Troll Paku",
-            "en_US": "Zandalari Troll Paku",
-            "es_ES": "Zandalari Troll Paku",
-            "fr_FR": "Zandalari Troll Paku",
-            "it_IT": "Zandalari Troll Paku",
-            "ko_KR": "Zandalari Troll Paku",
-            "ru_RU": "Zandalari Troll Paku"
-        }
+        "Zandalari Troll": null
     },
     "profile": {
         "back": {
@@ -193,7 +162,7 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "ec07243f4b",
+        "simc_hash": "cff3e43a3e",
         "spec": "protection",
         "target_error": "0.2",
         "tier": "23"
@@ -201,17 +170,15 @@
     "sorted_data_keys": [
         "Lightforged Draenei",
         "Human",
-        "Tauren",
-        "Zandalari Troll Paku",
-        "Zandalari Troll Bwonsamdi",
-        "Blood Elf",
         "Dwarf",
-        "Zandalari Troll Kimbul",
+        "Tauren",
+        "Zandalari Troll",
+        "Blood Elf",
         "Draenei",
         "Dark Iron Dwarf"
     ],
     "spec_id": 66,
-    "subtitle": "UTC 2019-03-15 11:39 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/ec07243f4b\" target=\"blank\">ec07243</a>",
+    "subtitle": "UTC 2019-03-17 08:35 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/cff3e43a3e\" target=\"blank\">cff3e43</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -312,6 +279,6 @@
             }
         }
     },
-    "timestamp": "2019-03-15 11:39",
+    "timestamp": "2019-03-17 08:35",
     "title": "Races | Protection Paladin | Hecticaddcleave"
 }

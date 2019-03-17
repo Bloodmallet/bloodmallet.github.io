@@ -1,29 +1,27 @@
 {
     "class_id": 1,
     "data": {
-        "Blood Elf": 16836,
-        "Dark Iron Dwarf": 16890,
-        "Draenei": 16934,
-        "Dwarf": 16914,
-        "Gnome": 16987,
-        "Goblin": 16996,
-        "Highmountain Tauren": 16953,
-        "Human": 16986,
-        "Kul Tiran": 16957,
-        "Lightforged Draenei": 17139,
-        "Maghar Orc": 16928,
-        "Night Elf": 16936,
-        "Nightborne": 16815,
-        "Orc": 16937,
-        "Pandaren": 16966,
-        "Tauren": 16925,
-        "Troll": 16946,
-        "Undead": 17071,
-        "Void Elf": 16964,
-        "Worgen": 16941,
-        "Zandalari Troll Bwonsamdi": 16996,
-        "Zandalari Troll Kimbul": 17024,
-        "Zandalari Troll Paku": 16960
+        "Blood Elf": 16832,
+        "Dark Iron Dwarf": 16873,
+        "Draenei": 16931,
+        "Dwarf": 16892,
+        "Gnome": 16989,
+        "Goblin": 16969,
+        "Highmountain Tauren": 16948,
+        "Human": 16958,
+        "Kul Tiran": 16954,
+        "Lightforged Draenei": 17120,
+        "Maghar Orc": 16903,
+        "Night Elf": 16948,
+        "Nightborne": 16810,
+        "Orc": 16874,
+        "Pandaren": 16939,
+        "Tauren": 16920,
+        "Troll": 16951,
+        "Undead": 17061,
+        "Void Elf": 16950,
+        "Worgen": 16907,
+        "Zandalari Troll": 16924
     },
     "data_type": "races",
     "languages": {
@@ -107,16 +105,7 @@
             "ko_KR": "인간",
             "ru_RU": "Человек"
         },
-        "Kul Tiran": {
-            "cn_CN": "Kul Tiran",
-            "de_DE": "Kul Tiran",
-            "en_US": "Kul Tiran",
-            "es_ES": "Kul Tiran",
-            "fr_FR": "Kul Tiran",
-            "it_IT": "Kul Tiran",
-            "ko_KR": "Kul Tiran",
-            "ru_RU": "Kul Tiran"
-        },
+        "Kul Tiran": null,
         "Lightforged Draenei": {
             "cn_CN": "光铸德莱尼",
             "de_DE": "Lichtgeschmiedeter Draenei",
@@ -227,36 +216,7 @@
             "ko_KR": "늑대인간",
             "ru_RU": "Ворген"
         },
-        "Zandalari Troll Bwonsamdi": {
-            "cn_CN": "Zandalari Troll Bwonsamdi",
-            "de_DE": "Zandalari Troll Bwonsamdi",
-            "en_US": "Zandalari Troll Bwonsamdi",
-            "es_ES": "Zandalari Troll Bwonsamdi",
-            "fr_FR": "Zandalari Troll Bwonsamdi",
-            "it_IT": "Zandalari Troll Bwonsamdi",
-            "ko_KR": "Zandalari Troll Bwonsamdi",
-            "ru_RU": "Zandalari Troll Bwonsamdi"
-        },
-        "Zandalari Troll Kimbul": {
-            "cn_CN": "Zandalari Troll Kimbul",
-            "de_DE": "Zandalari Troll Kimbul",
-            "en_US": "Zandalari Troll Kimbul",
-            "es_ES": "Zandalari Troll Kimbul",
-            "fr_FR": "Zandalari Troll Kimbul",
-            "it_IT": "Zandalari Troll Kimbul",
-            "ko_KR": "Zandalari Troll Kimbul",
-            "ru_RU": "Zandalari Troll Kimbul"
-        },
-        "Zandalari Troll Paku": {
-            "cn_CN": "Zandalari Troll Paku",
-            "de_DE": "Zandalari Troll Paku",
-            "en_US": "Zandalari Troll Paku",
-            "es_ES": "Zandalari Troll Paku",
-            "fr_FR": "Zandalari Troll Paku",
-            "it_IT": "Zandalari Troll Paku",
-            "ko_KR": "Zandalari Troll Paku",
-            "ru_RU": "Zandalari Troll Paku"
-        }
+        "Zandalari Troll": null
     },
     "profile": {
         "back": {
@@ -336,7 +296,7 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "ec07243f4b",
+        "simc_hash": "cff3e43a3e",
         "spec": "protection",
         "target_error": "0.2",
         "tier": "23"
@@ -344,30 +304,28 @@
     "sorted_data_keys": [
         "Lightforged Draenei",
         "Undead",
-        "Zandalari Troll Kimbul",
-        "Goblin",
-        "Zandalari Troll Bwonsamdi",
         "Gnome",
+        "Goblin",
         "Human",
-        "Pandaren",
-        "Void Elf",
-        "Zandalari Troll Paku",
         "Kul Tiran",
-        "Highmountain Tauren",
         "Troll",
-        "Worgen",
-        "Orc",
+        "Void Elf",
         "Night Elf",
+        "Highmountain Tauren",
+        "Pandaren",
         "Draenei",
-        "Maghar Orc",
+        "Zandalari Troll",
         "Tauren",
+        "Worgen",
+        "Maghar Orc",
         "Dwarf",
+        "Orc",
         "Dark Iron Dwarf",
         "Blood Elf",
         "Nightborne"
     ],
     "spec_id": 73,
-    "subtitle": "UTC 2019-03-15 11:31 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/ec07243f4b\" target=\"blank\">ec07243</a>",
+    "subtitle": "UTC 2019-03-17 08:28 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/cff3e43a3e\" target=\"blank\">cff3e43</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -468,6 +426,6 @@
             }
         }
     },
-    "timestamp": "2019-03-15 11:31",
+    "timestamp": "2019-03-17 08:28",
     "title": "Races | Protection Warrior | Patchwerk"
 }

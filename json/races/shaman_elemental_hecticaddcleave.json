@@ -1,20 +1,18 @@
 {
     "class_id": 7,
     "data": {
-        "Dark Iron Dwarf": 42267,
-        "Draenei": 42424,
-        "Dwarf": 42658,
-        "Goblin": 42546,
-        "Highmountain Tauren": 42587,
-        "Kul Tiran": 42583,
-        "Maghar Orc": 42360,
-        "Orc": 42409,
-        "Pandaren": 42521,
-        "Tauren": 42673,
-        "Troll": 42328,
-        "Zandalari Troll Bwonsamdi": 42357,
-        "Zandalari Troll Kimbul": 42385,
-        "Zandalari Troll Paku": 42535
+        "Dark Iron Dwarf": 42351,
+        "Draenei": 42450,
+        "Dwarf": 42588,
+        "Goblin": 42654,
+        "Highmountain Tauren": 42600,
+        "Kul Tiran": 42564,
+        "Maghar Orc": 42425,
+        "Orc": 42353,
+        "Pandaren": 42624,
+        "Tauren": 42717,
+        "Troll": 42303,
+        "Zandalari Troll": 42573
     },
     "data_type": "races",
     "languages": {
@@ -68,16 +66,7 @@
             "ko_KR": "높은산 타우렌",
             "ru_RU": "Таурен Крутогорья"
         },
-        "Kul Tiran": {
-            "cn_CN": "Kul Tiran",
-            "de_DE": "Kul Tiran",
-            "en_US": "Kul Tiran",
-            "es_ES": "Kul Tiran",
-            "fr_FR": "Kul Tiran",
-            "it_IT": "Kul Tiran",
-            "ko_KR": "Kul Tiran",
-            "ru_RU": "Kul Tiran"
-        },
+        "Kul Tiran": null,
         "Maghar Orc": {
             "cn_CN": "玛格汉兽人",
             "de_DE": "Mag'har",
@@ -128,36 +117,7 @@
             "ko_KR": "트롤",
             "ru_RU": "Тролль"
         },
-        "Zandalari Troll Bwonsamdi": {
-            "cn_CN": "Zandalari Troll Bwonsamdi",
-            "de_DE": "Zandalari Troll Bwonsamdi",
-            "en_US": "Zandalari Troll Bwonsamdi",
-            "es_ES": "Zandalari Troll Bwonsamdi",
-            "fr_FR": "Zandalari Troll Bwonsamdi",
-            "it_IT": "Zandalari Troll Bwonsamdi",
-            "ko_KR": "Zandalari Troll Bwonsamdi",
-            "ru_RU": "Zandalari Troll Bwonsamdi"
-        },
-        "Zandalari Troll Kimbul": {
-            "cn_CN": "Zandalari Troll Kimbul",
-            "de_DE": "Zandalari Troll Kimbul",
-            "en_US": "Zandalari Troll Kimbul",
-            "es_ES": "Zandalari Troll Kimbul",
-            "fr_FR": "Zandalari Troll Kimbul",
-            "it_IT": "Zandalari Troll Kimbul",
-            "ko_KR": "Zandalari Troll Kimbul",
-            "ru_RU": "Zandalari Troll Kimbul"
-        },
-        "Zandalari Troll Paku": {
-            "cn_CN": "Zandalari Troll Paku",
-            "de_DE": "Zandalari Troll Paku",
-            "en_US": "Zandalari Troll Paku",
-            "es_ES": "Zandalari Troll Paku",
-            "fr_FR": "Zandalari Troll Paku",
-            "it_IT": "Zandalari Troll Paku",
-            "ko_KR": "Zandalari Troll Paku",
-            "ru_RU": "Zandalari Troll Paku"
-        }
+        "Zandalari Troll": null
     },
     "profile": {
         "back": {
@@ -237,29 +197,27 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "ec07243f4b",
+        "simc_hash": "cff3e43a3e",
         "spec": "elemental",
         "target_error": "0.2",
         "tier": "23"
     },
     "sorted_data_keys": [
         "Tauren",
-        "Dwarf",
-        "Highmountain Tauren",
-        "Kul Tiran",
         "Goblin",
-        "Zandalari Troll Paku",
         "Pandaren",
+        "Highmountain Tauren",
+        "Dwarf",
+        "Zandalari Troll",
+        "Kul Tiran",
         "Draenei",
-        "Orc",
-        "Zandalari Troll Kimbul",
         "Maghar Orc",
-        "Zandalari Troll Bwonsamdi",
-        "Troll",
-        "Dark Iron Dwarf"
+        "Orc",
+        "Dark Iron Dwarf",
+        "Troll"
     ],
     "spec_id": 262,
-    "subtitle": "UTC 2019-03-15 11:42 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/ec07243f4b\" target=\"blank\">ec07243</a>",
+    "subtitle": "UTC 2019-03-17 08:38 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/cff3e43a3e\" target=\"blank\">cff3e43</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -360,6 +318,6 @@
             }
         }
     },
-    "timestamp": "2019-03-15 11:42",
+    "timestamp": "2019-03-17 08:38",
     "title": "Races | Elemental Shaman | Hecticaddcleave"
 }

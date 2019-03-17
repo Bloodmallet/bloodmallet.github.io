@@ -1,15 +1,13 @@
 {
     "class_id": 11,
     "data": {
-        "Highmountain Tauren": 27143,
-        "Kul Tiran": 27219,
-        "Night Elf": 27623,
-        "Tauren": 27222,
-        "Troll": 27070,
-        "Worgen": 27219,
-        "Zandalari Troll Bwonsamdi": 27034,
-        "Zandalari Troll Kimbul": 27112,
-        "Zandalari Troll Paku": 27168
+        "Highmountain Tauren": 27210,
+        "Kul Tiran": 27170,
+        "Night Elf": 27673,
+        "Tauren": 27168,
+        "Troll": 27066,
+        "Worgen": 27192,
+        "Zandalari Troll": 27205
     },
     "data_type": "races",
     "languages": {
@@ -23,16 +21,7 @@
             "ko_KR": "높은산 타우렌",
             "ru_RU": "Таурен Крутогорья"
         },
-        "Kul Tiran": {
-            "cn_CN": "Kul Tiran",
-            "de_DE": "Kul Tiran",
-            "en_US": "Kul Tiran",
-            "es_ES": "Kul Tiran",
-            "fr_FR": "Kul Tiran",
-            "it_IT": "Kul Tiran",
-            "ko_KR": "Kul Tiran",
-            "ru_RU": "Kul Tiran"
-        },
+        "Kul Tiran": null,
         "Night Elf": {
             "cn_CN": "暗夜精灵",
             "de_DE": "Nachtelf",
@@ -73,36 +62,7 @@
             "ko_KR": "늑대인간",
             "ru_RU": "Ворген"
         },
-        "Zandalari Troll Bwonsamdi": {
-            "cn_CN": "Zandalari Troll Bwonsamdi",
-            "de_DE": "Zandalari Troll Bwonsamdi",
-            "en_US": "Zandalari Troll Bwonsamdi",
-            "es_ES": "Zandalari Troll Bwonsamdi",
-            "fr_FR": "Zandalari Troll Bwonsamdi",
-            "it_IT": "Zandalari Troll Bwonsamdi",
-            "ko_KR": "Zandalari Troll Bwonsamdi",
-            "ru_RU": "Zandalari Troll Bwonsamdi"
-        },
-        "Zandalari Troll Kimbul": {
-            "cn_CN": "Zandalari Troll Kimbul",
-            "de_DE": "Zandalari Troll Kimbul",
-            "en_US": "Zandalari Troll Kimbul",
-            "es_ES": "Zandalari Troll Kimbul",
-            "fr_FR": "Zandalari Troll Kimbul",
-            "it_IT": "Zandalari Troll Kimbul",
-            "ko_KR": "Zandalari Troll Kimbul",
-            "ru_RU": "Zandalari Troll Kimbul"
-        },
-        "Zandalari Troll Paku": {
-            "cn_CN": "Zandalari Troll Paku",
-            "de_DE": "Zandalari Troll Paku",
-            "en_US": "Zandalari Troll Paku",
-            "es_ES": "Zandalari Troll Paku",
-            "fr_FR": "Zandalari Troll Paku",
-            "it_IT": "Zandalari Troll Paku",
-            "ko_KR": "Zandalari Troll Paku",
-            "ru_RU": "Zandalari Troll Paku"
-        }
+        "Zandalari Troll": null
     },
     "profile": {
         "back": {
@@ -178,24 +138,22 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "ec07243f4b",
+        "simc_hash": "cff3e43a3e",
         "spec": "feral",
         "target_error": "0.2",
         "tier": "23"
     },
     "sorted_data_keys": [
         "Night Elf",
-        "Tauren",
+        "Highmountain Tauren",
+        "Zandalari Troll",
         "Worgen",
         "Kul Tiran",
-        "Zandalari Troll Paku",
-        "Highmountain Tauren",
-        "Zandalari Troll Kimbul",
-        "Troll",
-        "Zandalari Troll Bwonsamdi"
+        "Tauren",
+        "Troll"
     ],
     "spec_id": 103,
-    "subtitle": "UTC 2019-03-15 11:24 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/ec07243f4b\" target=\"blank\">ec07243</a>",
+    "subtitle": "UTC 2019-03-17 08:21 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/cff3e43a3e\" target=\"blank\">cff3e43</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -296,6 +254,6 @@
             }
         }
     },
-    "timestamp": "2019-03-15 11:24",
+    "timestamp": "2019-03-17 08:21",
     "title": "Races | Feral Druid | Patchwerk"
 }
