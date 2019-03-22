@@ -1,18 +1,18 @@
 {
     "class_id": 7,
     "data": {
-        "Dark Iron Dwarf": 42351,
-        "Draenei": 42450,
-        "Dwarf": 42588,
-        "Goblin": 42654,
-        "Highmountain Tauren": 42600,
-        "Kul Tiran": 42564,
-        "Maghar Orc": 42425,
-        "Orc": 42353,
-        "Pandaren": 42624,
-        "Tauren": 42717,
-        "Troll": 42303,
-        "Zandalari Troll": 42573
+        "Dark Iron Dwarf": 42353,
+        "Draenei": 42505,
+        "Dwarf": 42653,
+        "Goblin": 42549,
+        "Highmountain Tauren": 42559,
+        "Kul Tiran": 42565,
+        "Maghar Orc": 42349,
+        "Orc": 42374,
+        "Pandaren": 42603,
+        "Tauren": 42682,
+        "Troll": 42268,
+        "Zandalari Troll": 42576
     },
     "data_type": "races",
     "languages": {
@@ -197,27 +197,27 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "cff3e43a3e",
+        "simc_hash": "801a32516b",
         "spec": "elemental",
         "target_error": "0.2",
         "tier": "23"
     },
     "sorted_data_keys": [
         "Tauren",
-        "Goblin",
-        "Pandaren",
-        "Highmountain Tauren",
         "Dwarf",
+        "Pandaren",
         "Zandalari Troll",
         "Kul Tiran",
+        "Highmountain Tauren",
+        "Goblin",
         "Draenei",
-        "Maghar Orc",
         "Orc",
         "Dark Iron Dwarf",
+        "Maghar Orc",
         "Troll"
     ],
     "spec_id": 262,
-    "subtitle": "UTC 2019-03-17 08:38 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/cff3e43a3e\" target=\"blank\">cff3e43</a>",
+    "subtitle": "UTC 2019-03-22 06:46 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/801a32516b\" target=\"blank\">801a325</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -318,6 +318,6 @@
             }
         }
     },
-    "timestamp": "2019-03-17 08:38",
+    "timestamp": "2019-03-22 06:46",
     "title": "Races | Elemental Shaman | Hecticaddcleave"
 }

@@ -1,23 +1,23 @@
 {
     "class_id": 4,
     "data": {
-        "Blood Elf": 26290,
-        "Dark Iron Dwarf": 26132,
-        "Dwarf": 26175,
-        "Gnome": 26294,
-        "Goblin": 26251,
-        "Human": 26243,
-        "Kul Tiran": 26161,
-        "Maghar Orc": 26284,
-        "Night Elf": 26206,
-        "Nightborne": 26074,
-        "Orc": 26196,
-        "Pandaren": 26133,
-        "Troll": 26303,
-        "Undead": 26173,
-        "Void Elf": 26289,
-        "Worgen": 26186,
-        "Zandalari Troll": 26154
+        "Blood Elf": 26239,
+        "Dark Iron Dwarf": 26163,
+        "Dwarf": 26153,
+        "Gnome": 26283,
+        "Goblin": 26252,
+        "Human": 26287,
+        "Kul Tiran": 26127,
+        "Maghar Orc": 26275,
+        "Night Elf": 26191,
+        "Nightborne": 26155,
+        "Orc": 26144,
+        "Pandaren": 26170,
+        "Troll": 26350,
+        "Undead": 26217,
+        "Void Elf": 26223,
+        "Worgen": 26157,
+        "Zandalari Troll": 26187
     },
     "data_type": "races",
     "languages": {
@@ -253,32 +253,32 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "cff3e43a3e",
+        "simc_hash": "801a32516b",
         "spec": "assassination",
         "target_error": "0.2",
         "tier": "23"
     },
     "sorted_data_keys": [
         "Troll",
+        "Human",
         "Gnome",
-        "Blood Elf",
-        "Void Elf",
         "Maghar Orc",
         "Goblin",
-        "Human",
-        "Night Elf",
-        "Orc",
-        "Worgen",
-        "Dwarf",
+        "Blood Elf",
+        "Void Elf",
         "Undead",
-        "Kul Tiran",
+        "Night Elf",
         "Zandalari Troll",
         "Pandaren",
         "Dark Iron Dwarf",
-        "Nightborne"
+        "Worgen",
+        "Nightborne",
+        "Dwarf",
+        "Orc",
+        "Kul Tiran"
     ],
     "spec_id": 259,
-    "subtitle": "UTC 2019-03-17 08:24 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/cff3e43a3e\" target=\"blank\">cff3e43</a>",
+    "subtitle": "UTC 2019-03-22 06:33 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/801a32516b\" target=\"blank\">801a325</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -379,6 +379,6 @@
             }
         }
     },
-    "timestamp": "2019-03-17 08:24",
+    "timestamp": "2019-03-22 06:33",
     "title": "Races | Assassination Rogue | Patchwerk"
 }

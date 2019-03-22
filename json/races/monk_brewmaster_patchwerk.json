@@ -1,24 +1,24 @@
 {
     "class_id": 10,
     "data": {
-        "Blood Elf": 14602,
-        "Dark Iron Dwarf": 14542,
-        "Draenei": 14549,
-        "Dwarf": 14583,
-        "Gnome": 14580,
-        "Highmountain Tauren": 14624,
-        "Human": 14613,
-        "Kul Tiran": 14608,
-        "Maghar Orc": 14547,
-        "Night Elf": 14600,
-        "Nightborne": 14496,
-        "Orc": 14518,
-        "Pandaren": 14588,
-        "Tauren": 14570,
-        "Troll": 14525,
-        "Undead": 14785,
-        "Void Elf": 14604,
-        "Zandalari Troll": 14578
+        "Blood Elf": 14635,
+        "Dark Iron Dwarf": 14544,
+        "Draenei": 14561,
+        "Dwarf": 14563,
+        "Gnome": 14575,
+        "Highmountain Tauren": 14612,
+        "Human": 14596,
+        "Kul Tiran": 14603,
+        "Maghar Orc": 14559,
+        "Night Elf": 14588,
+        "Nightborne": 14501,
+        "Orc": 14556,
+        "Pandaren": 14587,
+        "Tauren": 14623,
+        "Troll": 14482,
+        "Undead": 14777,
+        "Void Elf": 14614,
+        "Zandalari Troll": 14589
     },
     "data_type": "races",
     "languages": {
@@ -259,33 +259,33 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "cff3e43a3e",
+        "simc_hash": "801a32516b",
         "spec": "brewmaster",
         "target_error": "0.2",
         "tier": "23"
     },
     "sorted_data_keys": [
         "Undead",
-        "Highmountain Tauren",
-        "Human",
-        "Kul Tiran",
-        "Void Elf",
         "Blood Elf",
+        "Tauren",
+        "Void Elf",
+        "Highmountain Tauren",
+        "Kul Tiran",
+        "Human",
+        "Zandalari Troll",
         "Night Elf",
         "Pandaren",
-        "Dwarf",
         "Gnome",
-        "Zandalari Troll",
-        "Tauren",
+        "Dwarf",
         "Draenei",
         "Maghar Orc",
-        "Dark Iron Dwarf",
-        "Troll",
         "Orc",
-        "Nightborne"
+        "Dark Iron Dwarf",
+        "Nightborne",
+        "Troll"
     ],
     "spec_id": 268,
-    "subtitle": "UTC 2019-03-17 08:23 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/cff3e43a3e\" target=\"blank\">cff3e43</a>",
+    "subtitle": "UTC 2019-03-22 06:32 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/801a32516b\" target=\"blank\">801a325</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -386,6 +386,6 @@
             }
         }
     },
-    "timestamp": "2019-03-17 08:23",
+    "timestamp": "2019-03-22 06:32",
     "title": "Races | Brewmaster Monk | Patchwerk"
 }

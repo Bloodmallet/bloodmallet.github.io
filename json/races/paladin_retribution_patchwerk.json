@@ -1,14 +1,14 @@
 {
     "class_id": 2,
     "data": {
-        "Blood Elf": 26430,
-        "Dark Iron Dwarf": 26346,
-        "Draenei": 26268,
-        "Dwarf": 26298,
-        "Human": 26357,
-        "Lightforged Draenei": 26377,
-        "Tauren": 26362,
-        "Zandalari Troll": 26283
+        "Blood Elf": 26458,
+        "Dark Iron Dwarf": 26306,
+        "Draenei": 26329,
+        "Dwarf": 26327,
+        "Human": 26360,
+        "Lightforged Draenei": 26362,
+        "Tauren": 26357,
+        "Zandalari Troll": 26295
     },
     "data_type": "races",
     "languages": {
@@ -158,7 +158,7 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "cff3e43a3e",
+        "simc_hash": "801a32516b",
         "spec": "retribution",
         "target_error": "0.2",
         "tier": "23"
@@ -166,15 +166,15 @@
     "sorted_data_keys": [
         "Blood Elf",
         "Lightforged Draenei",
-        "Tauren",
         "Human",
-        "Dark Iron Dwarf",
+        "Tauren",
+        "Draenei",
         "Dwarf",
-        "Zandalari Troll",
-        "Draenei"
+        "Dark Iron Dwarf",
+        "Zandalari Troll"
     ],
     "spec_id": 70,
-    "subtitle": "UTC 2019-03-17 08:23 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/cff3e43a3e\" target=\"blank\">cff3e43</a>",
+    "subtitle": "UTC 2019-03-22 06:33 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/801a32516b\" target=\"blank\">801a325</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -275,6 +275,6 @@
             }
         }
     },
-    "timestamp": "2019-03-17 08:23",
+    "timestamp": "2019-03-22 06:33",
     "title": "Races | Retribution Paladin | Patchwerk"
 }
