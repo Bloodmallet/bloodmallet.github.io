@@ -1,16 +1,16 @@
 {
     "class_id": 2,
     "data": {
-        "Blood Elf": 42260,
-        "Dark Iron Dwarf": 41800,
-        "Draenei": 41922,
-        "Dwarf": 41917,
-        "Human": 41898,
-        "Lightforged Draenei": 43613,
-        "Tauren": 41953,
-        "Zandalari Troll Bwonsamdi": 41854,
-        "Zandalari Troll Kimbul": 41888,
-        "Zandalari Troll Paku": 41918
+        "Blood Elf": 42184,
+        "Dark Iron Dwarf": 41874,
+        "Draenei": 41829,
+        "Dwarf": 41949,
+        "Human": 42024,
+        "Lightforged Draenei": 43592,
+        "Tauren": 41916,
+        "Zandalari Troll Bwonsamdi": 41857,
+        "Zandalari Troll Kimbul": 41885,
+        "Zandalari Troll Paku": 41935
     },
     "data_type": "races",
     "languages": {
@@ -189,7 +189,7 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "0c525ebf31",
+        "simc_hash": "431464566b",
         "spec": "retribution",
         "target_error": "0.2",
         "tier": "23"
@@ -197,17 +197,17 @@
     "sorted_data_keys": [
         "Lightforged Draenei",
         "Blood Elf",
-        "Tauren",
-        "Draenei",
-        "Zandalari Troll Paku",
-        "Dwarf",
         "Human",
+        "Dwarf",
+        "Zandalari Troll Paku",
+        "Tauren",
         "Zandalari Troll Kimbul",
+        "Dark Iron Dwarf",
         "Zandalari Troll Bwonsamdi",
-        "Dark Iron Dwarf"
+        "Draenei"
     ],
     "spec_id": 70,
-    "subtitle": "UTC 2019-03-28 06:48 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/0c525ebf31\" target=\"blank\">0c525eb</a>",
+    "subtitle": "UTC 2019-04-01 04:57 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/431464566b\" target=\"blank\">4314645</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -308,6 +308,6 @@
             }
         }
     },
-    "timestamp": "2019-03-28 06:48",
+    "timestamp": "2019-04-01 04:57",
     "title": "Races | Retribution Paladin | Hecticaddcleave"
 }
