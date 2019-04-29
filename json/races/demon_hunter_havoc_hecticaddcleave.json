@@ -1,8 +1,8 @@
 {
     "class_id": 12,
     "data": {
-        "Blood Elf": 43072,
-        "Night Elf": 43222
+        "Blood Elf": 43138,
+        "Night Elf": 43122
     },
     "data_type": "races",
     "languages": {
@@ -32,6 +32,15 @@
             "bonus_id": "4800/1537",
             "id": "165512"
         },
+        "character": {
+            "class": "demon_hunter",
+            "level": "120",
+            "position": "back",
+            "race": "night_elf",
+            "role": "attack",
+            "spec": "havoc",
+            "talents": "1310221"
+        },
         "chest": {
             "azerite_powers": "13/220/562/22/564",
             "bonus_id": "4824/1537/4775",
@@ -60,10 +69,84 @@
             "bonus_id": "4824/1537/4775",
             "id": "165819"
         },
+        "items": {
+            "back": {
+                "bonus_id": "4800/1537",
+                "id": "165512"
+            },
+            "chest": {
+                "azerite_powers": "13/220/562/22/564",
+                "bonus_id": "4824/1537/4775",
+                "id": "165830"
+            },
+            "feet": {
+                "bonus_id": "4800/1537",
+                "id": "165527"
+            },
+            "finger1": {
+                "bonus_id": "4800/1537",
+                "enchant": "pact_of_haste",
+                "id": "165567"
+            },
+            "finger2": {
+                "bonus_id": "4800/1537",
+                "enchant": "pact_of_haste",
+                "id": "165566"
+            },
+            "hands": {
+                "bonus_id": "4800/1537",
+                "id": "165514"
+            },
+            "head": {
+                "azerite_powers": "13/159/126/30/15",
+                "bonus_id": "4824/1537/4775",
+                "id": "165819"
+            },
+            "legs": {
+                "bonus_id": "4800/1537",
+                "id": "165521"
+            },
+            "main_hand": {
+                "bonus_id": "4800/1537",
+                "enchant": "versatile_navigation",
+                "id": "165604"
+            },
+            "neck": {
+                "bonus_id": "4929/5814/4936/1566",
+                "id": "158075"
+            },
+            "off_hand": {
+                "bonus_id": "4800/1537",
+                "enchant": "deadly_navigation",
+                "id": "165591"
+            },
+            "shoulders": {
+                "azerite_powers": "13/352/159/30/15",
+                "bonus_id": "4824/1537/4775",
+                "id": "165523"
+            },
+            "trinket1": {
+                "bonus_id": "4800/1537",
+                "id": "165579"
+            },
+            "trinket2": {
+                "bonus_id": "4800/1537",
+                "id": "165572"
+            },
+            "waist": {
+                "bonus_id": "4800/1537",
+                "id": "165525"
+            },
+            "wrists": {
+                "bonus_id": "4800/1537",
+                "id": "165517"
+            }
+        },
         "legs": {
             "bonus_id": "4800/1537",
             "id": "165521"
         },
+        "level": "120",
         "main_hand": {
             "bonus_id": "4800/1537",
             "enchant": "versatile_navigation",
@@ -78,11 +161,15 @@
             "enchant": "deadly_navigation",
             "id": "165591"
         },
+        "position": "back",
+        "race": "night_elf",
+        "role": "attack",
         "shoulders": {
             "azerite_powers": "13/352/159/30/15",
             "bonus_id": "4824/1537/4775",
             "id": "165523"
         },
+        "spec": "havoc",
         "talents": "1310221",
         "trinket1": {
             "bonus_id": "4800/1537",
@@ -106,17 +193,17 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "ee448b85c7",
+        "simc_hash": "f5630f4c28",
         "spec": "havoc",
         "target_error": "0.2",
         "tier": "23"
     },
     "sorted_data_keys": [
-        "Night Elf",
-        "Blood Elf"
+        "Blood Elf",
+        "Night Elf"
     ],
     "spec_id": 577,
-    "subtitle": "UTC 2019-04-21 07:08 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/ee448b85c7\" target=\"blank\">ee448b8</a>",
+    "subtitle": "UTC 2019-04-29 04:34 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/f5630f4c28\" target=\"blank\">f5630f4</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -217,6 +304,6 @@
             }
         }
     },
-    "timestamp": "2019-04-21 07:08",
+    "timestamp": "2019-04-29 04:34",
     "title": "Races | Havoc Demon Hunter | Hecticaddcleave"
 }

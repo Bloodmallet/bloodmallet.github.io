@@ -1,18 +1,18 @@
 {
     "class_id": 9,
     "data": {
-        "Blood Elf": 25766,
-        "Dark Iron Dwarf": 25698,
-        "Dwarf": 25857,
-        "Gnome": 25817,
-        "Goblin": 25851,
-        "Human": 25850,
-        "Nightborne": 25809,
-        "Orc": 25825,
-        "Troll": 25901,
-        "Undead": 25750,
-        "Void Elf": 25848,
-        "Worgen": 25766
+        "Blood Elf": 25776,
+        "Dark Iron Dwarf": 25740,
+        "Dwarf": 25860,
+        "Gnome": 25837,
+        "Goblin": 25853,
+        "Human": 25817,
+        "Nightborne": 25796,
+        "Orc": 25795,
+        "Troll": 25893,
+        "Undead": 25746,
+        "Void Elf": 25851,
+        "Worgen": 25735
     },
     "data_type": "races",
     "languages": {
@@ -142,6 +142,15 @@
             "bonus_id": "4800/1537",
             "id": "165512"
         },
+        "character": {
+            "class": "warlock",
+            "level": "120",
+            "position": "ranged_back",
+            "race": "troll",
+            "role": "spell",
+            "spec": "destruction",
+            "talents": "2203023"
+        },
         "chest": {
             "azerite_powers": "432/562/30/13",
             "bonus_id": "4824/1537/4775",
@@ -170,10 +179,83 @@
             "bonus_id": "4824/1537/4775",
             "id": "165500"
         },
+        "items": {
+            "back": {
+                "bonus_id": "4800/1537",
+                "id": "165512"
+            },
+            "chest": {
+                "azerite_powers": "432/562/30/13",
+                "bonus_id": "4824/1537/4775",
+                "id": "165834"
+            },
+            "feet": {
+                "bonus_id": "4800/1537",
+                "id": "165502"
+            },
+            "finger1": {
+                "bonus_id": "4800/1537",
+                "enchant": "pact_of_mastery",
+                "id": "165567"
+            },
+            "finger2": {
+                "bonus_id": "4800/1537",
+                "enchant": "pact_of_mastery",
+                "id": "165566"
+            },
+            "hands": {
+                "bonus_id": "4800/1537",
+                "id": "165503"
+            },
+            "head": {
+                "azerite_powers": "131/562/31/13",
+                "bonus_id": "4824/1537/4775",
+                "id": "165500"
+            },
+            "legs": {
+                "bonus_id": "4800/1537",
+                "id": "165506"
+            },
+            "main_hand": {
+                "bonus_id": "4800/1537",
+                "enchant": "masterful_navigation",
+                "id": "165603"
+            },
+            "neck": {
+                "bonus_id": "4929/5814/4936/1566",
+                "id": "158075"
+            },
+            "off_hand": {
+                "bonus_id": "4800/1537",
+                "id": "165583"
+            },
+            "shoulders": {
+                "azerite_powers": "444/562/459/13",
+                "bonus_id": "4824/1537/4775",
+                "id": "165497"
+            },
+            "trinket1": {
+                "bonus_id": "4800/1537",
+                "id": "165571"
+            },
+            "trinket2": {
+                "bonus_id": "1572/4780",
+                "id": "159615"
+            },
+            "waist": {
+                "bonus_id": "4800/1537",
+                "id": "165504"
+            },
+            "wrists": {
+                "bonus_id": "4800/1537",
+                "id": "165508"
+            }
+        },
         "legs": {
             "bonus_id": "4800/1537",
             "id": "165506"
         },
+        "level": "120",
         "main_hand": {
             "bonus_id": "4800/1537",
             "enchant": "masterful_navigation",
@@ -187,11 +269,15 @@
             "bonus_id": "4800/1537",
             "id": "165583"
         },
+        "position": "ranged_back",
+        "race": "troll",
+        "role": "spell",
         "shoulders": {
             "azerite_powers": "444/562/459/13",
             "bonus_id": "4824/1537/4775",
             "id": "165497"
         },
+        "spec": "destruction",
         "talents": "2203023",
         "trinket1": {
             "bonus_id": "4800/1537",
@@ -215,7 +301,7 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "ee448b85c7",
+        "simc_hash": "f5630f4c28",
         "spec": "destruction",
         "target_error": "0.2",
         "tier": "23"
@@ -224,18 +310,18 @@
         "Troll",
         "Dwarf",
         "Goblin",
-        "Human",
         "Void Elf",
-        "Orc",
         "Gnome",
+        "Human",
         "Nightborne",
-        "Worgen",
+        "Orc",
         "Blood Elf",
         "Undead",
-        "Dark Iron Dwarf"
+        "Dark Iron Dwarf",
+        "Worgen"
     ],
     "spec_id": 267,
-    "subtitle": "UTC 2019-04-21 07:04 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/ee448b85c7\" target=\"blank\">ee448b8</a>",
+    "subtitle": "UTC 2019-04-29 04:31 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/f5630f4c28\" target=\"blank\">f5630f4</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -336,6 +422,6 @@
             }
         }
     },
-    "timestamp": "2019-04-21 07:04",
+    "timestamp": "2019-04-29 04:31",
     "title": "Races | Destruction Warlock | Patchwerk"
 }

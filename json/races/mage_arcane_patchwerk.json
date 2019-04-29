@@ -1,27 +1,27 @@
 {
     "class_id": 8,
     "data": {
-        "Blood Elf": 27658,
-        "Dark Iron Dwarf": 27643,
-        "Draenei": 27638,
-        "Dwarf": 27649,
-        "Gnome": 27776,
-        "Goblin": 27704,
-        "Human": 27722,
-        "Kul Tiran": 27672,
-        "Lightforged Draenei": 27691,
-        "Maghar Orc": 27767,
-        "Night Elf": 27725,
-        "Nightborne": 27756,
-        "Orc": 27575,
-        "Pandaren": 27740,
-        "Troll": 28218,
-        "Undead": 27700,
-        "Void Elf": 27886,
-        "Worgen": 27689,
-        "Zandalari Troll Bwonsamdi": 27661,
-        "Zandalari Troll Kimbul": 27695,
-        "Zandalari Troll Paku": 27625
+        "Blood Elf": 27713,
+        "Dark Iron Dwarf": 27678,
+        "Draenei": 27627,
+        "Dwarf": 27681,
+        "Gnome": 27721,
+        "Goblin": 27671,
+        "Human": 27691,
+        "Kul Tiran": 27669,
+        "Lightforged Draenei": 27667,
+        "Maghar Orc": 27824,
+        "Night Elf": 27670,
+        "Nightborne": 27705,
+        "Orc": 27533,
+        "Pandaren": 27723,
+        "Troll": 28180,
+        "Undead": 27694,
+        "Void Elf": 27852,
+        "Worgen": 27673,
+        "Zandalari Troll Bwonsamdi": 27650,
+        "Zandalari Troll Kimbul": 27714,
+        "Zandalari Troll Paku": 27622
     },
     "data_type": "races",
     "languages": {
@@ -241,6 +241,15 @@
             "bonus_id": "4800/1537",
             "id": "165512"
         },
+        "character": {
+            "class": "mage",
+            "level": "120",
+            "position": "ranged_back",
+            "race": "troll",
+            "role": "spell",
+            "spec": "arcane",
+            "talents": "2032021"
+        },
         "chest": {
             "azerite_powers": "127/562/30/13",
             "bonus_id": "1587/4819/4775",
@@ -269,10 +278,79 @@
             "bonus_id": "4824/1537/4775",
             "id": "165500"
         },
+        "items": {
+            "back": {
+                "bonus_id": "4800/1537",
+                "id": "165512"
+            },
+            "chest": {
+                "azerite_powers": "127/562/30/13",
+                "bonus_id": "1587/4819/4775",
+                "id": "159241"
+            },
+            "feet": {
+                "bonus_id": "4800/1537",
+                "id": "165502"
+            },
+            "finger1": {
+                "bonus_id": "4800/1537",
+                "enchant": "pact_of_versatility",
+                "id": "165565"
+            },
+            "finger2": {
+                "bonus_id": "4800/1537",
+                "enchant": "pact_of_versatility",
+                "id": "165567"
+            },
+            "hands": {
+                "bonus_id": "4800/1537",
+                "id": "165764"
+            },
+            "head": {
+                "azerite_powers": "127/562/459/13",
+                "bonus_id": "4824/1537/4775",
+                "id": "165500"
+            },
+            "legs": {
+                "bonus_id": "4800/1537",
+                "id": "165499"
+            },
+            "main_hand": {
+                "bonus_id": "4800/1537",
+                "enchant": "torrent_of_elements",
+                "id": "165587"
+            },
+            "neck": {
+                "bonus_id": "4929/5814/4936/1566",
+                "id": "158075"
+            },
+            "shoulders": {
+                "azerite_powers": "127/88/459/13",
+                "bonus_id": "4824/1537/4775",
+                "id": "165497"
+            },
+            "trinket1": {
+                "bonus_id": "1572/4780",
+                "id": "159630"
+            },
+            "trinket2": {
+                "bonus_id": "4800/1537",
+                "id": "165571"
+            },
+            "waist": {
+                "bonus_id": "4800/1537",
+                "id": "165504"
+            },
+            "wrists": {
+                "bonus_id": "4800/1537",
+                "id": "165508"
+            }
+        },
         "legs": {
             "bonus_id": "4800/1537",
             "id": "165499"
         },
+        "level": "120",
         "main_hand": {
             "bonus_id": "4800/1537",
             "enchant": "torrent_of_elements",
@@ -282,11 +360,15 @@
             "bonus_id": "4929/5814/4936/1566",
             "id": "158075"
         },
+        "position": "ranged_back",
+        "race": "troll",
+        "role": "spell",
         "shoulders": {
             "azerite_powers": "127/88/459/13",
             "bonus_id": "4824/1537/4775",
             "id": "165497"
         },
+        "spec": "arcane",
         "talents": "2032021",
         "trinket1": {
             "bonus_id": "1572/4780",
@@ -310,7 +392,7 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "ee448b85c7",
+        "simc_hash": "f5630f4c28",
         "spec": "arcane",
         "target_error": "0.2",
         "tier": "23"
@@ -318,28 +400,28 @@
     "sorted_data_keys": [
         "Troll",
         "Void Elf",
-        "Gnome",
         "Maghar Orc",
-        "Nightborne",
         "Pandaren",
-        "Night Elf",
-        "Human",
-        "Goblin",
-        "Undead",
+        "Gnome",
         "Zandalari Troll Kimbul",
-        "Lightforged Draenei",
-        "Worgen",
-        "Kul Tiran",
-        "Zandalari Troll Bwonsamdi",
         "Blood Elf",
+        "Nightborne",
+        "Undead",
+        "Human",
         "Dwarf",
         "Dark Iron Dwarf",
+        "Worgen",
+        "Goblin",
+        "Night Elf",
+        "Kul Tiran",
+        "Lightforged Draenei",
+        "Zandalari Troll Bwonsamdi",
         "Draenei",
         "Zandalari Troll Paku",
         "Orc"
     ],
     "spec_id": 62,
-    "subtitle": "UTC 2019-04-21 07:00 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/ee448b85c7\" target=\"blank\">ee448b8</a>",
+    "subtitle": "UTC 2019-04-29 04:26 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/f5630f4c28\" target=\"blank\">f5630f4</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -440,6 +522,6 @@
             }
         }
     },
-    "timestamp": "2019-04-21 07:00",
+    "timestamp": "2019-04-29 04:26",
     "title": "Races | Arcane Mage | Patchwerk"
 }

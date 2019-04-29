@@ -1,26 +1,26 @@
 {
     "class_id": 10,
     "data": {
-        "Blood Elf": 26068,
-        "Dark Iron Dwarf": 25967,
-        "Draenei": 25941,
-        "Dwarf": 25997,
-        "Gnome": 26002,
-        "Highmountain Tauren": 26014,
-        "Human": 26036,
-        "Kul Tiran": 26058,
-        "Maghar Orc": 26045,
-        "Night Elf": 26032,
-        "Nightborne": 25792,
-        "Orc": 25987,
-        "Pandaren": 25968,
-        "Tauren": 26105,
-        "Troll": 25904,
-        "Undead": 26031,
-        "Void Elf": 26097,
-        "Zandalari Troll Bwonsamdi": 25982,
-        "Zandalari Troll Kimbul": 25974,
-        "Zandalari Troll Paku": 25955
+        "Blood Elf": 26062,
+        "Dark Iron Dwarf": 25942,
+        "Draenei": 25913,
+        "Dwarf": 26034,
+        "Gnome": 25992,
+        "Highmountain Tauren": 26051,
+        "Human": 25992,
+        "Kul Tiran": 26073,
+        "Maghar Orc": 26053,
+        "Night Elf": 26028,
+        "Nightborne": 25803,
+        "Orc": 25979,
+        "Pandaren": 26042,
+        "Tauren": 26138,
+        "Troll": 25950,
+        "Undead": 26066,
+        "Void Elf": 26047,
+        "Zandalari Troll Bwonsamdi": 26014,
+        "Zandalari Troll Kimbul": 26005,
+        "Zandalari Troll Paku": 25985
     },
     "data_type": "races",
     "languages": {
@@ -230,6 +230,15 @@
             "bonus_id": "4800/1537",
             "id": "165924"
         },
+        "character": {
+            "class": "monk",
+            "level": "120",
+            "position": "back",
+            "race": "pandaren",
+            "role": "dps",
+            "spec": "windwalker",
+            "talents": "2022032"
+        },
         "chest": {
             "azerite_powers": "389/117/22/14/13",
             "bonus_id": "4824/1537/4775",
@@ -258,10 +267,84 @@
             "bonus_id": "5062/1587/4786/4775",
             "id": "159302"
         },
+        "items": {
+            "back": {
+                "bonus_id": "4800/1537",
+                "id": "165924"
+            },
+            "chest": {
+                "azerite_powers": "389/117/22/14/13",
+                "bonus_id": "4824/1537/4775",
+                "id": "165830"
+            },
+            "feet": {
+                "bonus_id": "4800/1537",
+                "id": "165527"
+            },
+            "finger1": {
+                "bonus_id": "4800/1537",
+                "enchant": "pact_of_versatility",
+                "id": "165565"
+            },
+            "finger2": {
+                "bonus_id": "4800/1537",
+                "enchant": "pact_of_versatility",
+                "id": "165566"
+            },
+            "hands": {
+                "bonus_id": "4800/1537",
+                "id": "165522"
+            },
+            "head": {
+                "azerite_powers": "390/389/22/218/13",
+                "bonus_id": "5062/1587/4786/4775",
+                "id": "159302"
+            },
+            "legs": {
+                "bonus_id": "4800/1537",
+                "id": "165521"
+            },
+            "main_hand": {
+                "bonus_id": "4800/1537",
+                "enchant": "deadly_navigation",
+                "id": "165601"
+            },
+            "neck": {
+                "bonus_id": "4929/5814/4936/1566",
+                "id": "158075"
+            },
+            "off_hand": {
+                "bonus_id": "4800/1537",
+                "enchant": "versatile_navigation",
+                "id": "165604"
+            },
+            "shoulders": {
+                "azerite_powers": "389/388/461/83/13",
+                "bonus_id": "5062/1587/4786/4775",
+                "id": "158304"
+            },
+            "trinket1": {
+                "bonus_id": "4800/1537",
+                "id": "165579"
+            },
+            "trinket2": {
+                "bonus_id": "4800/1537",
+                "id": "165572"
+            },
+            "waist": {
+                "bonus_id": "4800/1537",
+                "id": "165525"
+            },
+            "wrists": {
+                "bonus_id": "4800/1537",
+                "id": "165517"
+            }
+        },
         "legs": {
             "bonus_id": "4800/1537",
             "id": "165521"
         },
+        "level": "120",
         "main_hand": {
             "bonus_id": "4800/1537",
             "enchant": "deadly_navigation",
@@ -276,11 +359,15 @@
             "enchant": "versatile_navigation",
             "id": "165604"
         },
+        "position": "back",
+        "race": "pandaren",
+        "role": "dps",
         "shoulders": {
             "azerite_powers": "389/388/461/83/13",
             "bonus_id": "5062/1587/4786/4775",
             "id": "158304"
         },
+        "spec": "windwalker",
         "talents": "2022032",
         "trinket1": {
             "bonus_id": "4800/1537",
@@ -304,35 +391,35 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "ee448b85c7",
+        "simc_hash": "f5630f4c28",
         "spec": "windwalker",
         "target_error": "0.2",
         "tier": "23"
     },
     "sorted_data_keys": [
         "Tauren",
-        "Void Elf",
-        "Blood Elf",
         "Kul Tiran",
-        "Maghar Orc",
-        "Human",
-        "Night Elf",
         "Undead",
+        "Blood Elf",
+        "Maghar Orc",
         "Highmountain Tauren",
-        "Gnome",
+        "Void Elf",
+        "Pandaren",
         "Dwarf",
-        "Orc",
+        "Night Elf",
         "Zandalari Troll Bwonsamdi",
         "Zandalari Troll Kimbul",
-        "Pandaren",
-        "Dark Iron Dwarf",
+        "Gnome",
+        "Human",
         "Zandalari Troll Paku",
-        "Draenei",
+        "Orc",
         "Troll",
+        "Dark Iron Dwarf",
+        "Draenei",
         "Nightborne"
     ],
     "spec_id": 269,
-    "subtitle": "UTC 2019-04-21 07:01 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/ee448b85c7\" target=\"blank\">ee448b8</a>",
+    "subtitle": "UTC 2019-04-29 04:27 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/f5630f4c28\" target=\"blank\">f5630f4</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -433,6 +520,6 @@
             }
         }
     },
-    "timestamp": "2019-04-21 07:01",
+    "timestamp": "2019-04-29 04:27",
     "title": "Races | Windwalker Monk | Patchwerk"
 }

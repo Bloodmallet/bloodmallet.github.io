@@ -1,15 +1,15 @@
 {
     "class_id": 11,
     "data": {
-        "Highmountain Tauren": 34579,
-        "Kul Tiran": 34596,
-        "Night Elf": 34595,
-        "Tauren": 34395,
-        "Troll": 34582,
-        "Worgen": 34516,
-        "Zandalari Troll Bwonsamdi": 34529,
-        "Zandalari Troll Kimbul": 34450,
-        "Zandalari Troll Paku": 34575
+        "Highmountain Tauren": 34637,
+        "Kul Tiran": 34586,
+        "Night Elf": 34525,
+        "Tauren": 34485,
+        "Troll": 34613,
+        "Worgen": 34527,
+        "Zandalari Troll Bwonsamdi": 34488,
+        "Zandalari Troll Kimbul": 34425,
+        "Zandalari Troll Paku": 34494
     },
     "data_type": "races",
     "languages": {
@@ -109,6 +109,15 @@
             "bonus_id": "4800/1537",
             "id": "165512"
         },
+        "character": {
+            "class": "druid",
+            "level": "120",
+            "position": "ranged_back",
+            "race": "troll",
+            "role": "spell",
+            "spec": "balance",
+            "talents": "1000231"
+        },
         "chest": {
             "azerite_powers": "/122/250/462/13",
             "bonus_id": "4824/1537/4775",
@@ -137,10 +146,83 @@
             "bonus_id": "4824/1537/4775",
             "id": "165819"
         },
+        "items": {
+            "back": {
+                "bonus_id": "4800/1537",
+                "id": "165512"
+            },
+            "chest": {
+                "azerite_powers": "/122/250/462/13",
+                "bonus_id": "4824/1537/4775",
+                "id": "165515"
+            },
+            "feet": {
+                "bonus_id": "4800/1537",
+                "id": "165527"
+            },
+            "finger1": {
+                "bonus_id": "4800/1537",
+                "enchant": "pact_of_haste",
+                "id": "165566"
+            },
+            "finger2": {
+                "bonus_id": "4800/1537",
+                "enchant": "pact_of_haste",
+                "id": "165567"
+            },
+            "hands": {
+                "bonus_id": "4800/1537",
+                "id": "165514"
+            },
+            "head": {
+                "azerite_powers": "200/122/30/13",
+                "bonus_id": "4824/1537/4775",
+                "id": "165819"
+            },
+            "legs": {
+                "bonus_id": "4800/1537",
+                "id": "165528"
+            },
+            "main_hand": {
+                "bonus_id": "4800/1537",
+                "enchant": "torrent_of_elements",
+                "id": "165592"
+            },
+            "neck": {
+                "bonus_id": "4929/5814/4936/1566",
+                "id": "158075"
+            },
+            "off_hand": {
+                "bonus_id": "4800/1537",
+                "id": "165583"
+            },
+            "shoulders": {
+                "azerite_powers": "/122/562/31/13",
+                "bonus_id": "4824/1537/4775",
+                "id": "165516"
+            },
+            "trinket1": {
+                "bonus_id": "4800/1537",
+                "id": "165571"
+            },
+            "trinket2": {
+                "bonus_id": "4800/1537",
+                "id": "165581"
+            },
+            "waist": {
+                "bonus_id": "4800/1537",
+                "id": "165525"
+            },
+            "wrists": {
+                "bonus_id": "4800/1537",
+                "id": "165524"
+            }
+        },
         "legs": {
             "bonus_id": "4800/1537",
             "id": "165528"
         },
+        "level": "120",
         "main_hand": {
             "bonus_id": "4800/1537",
             "enchant": "torrent_of_elements",
@@ -154,11 +236,15 @@
             "bonus_id": "4800/1537",
             "id": "165583"
         },
+        "position": "ranged_back",
+        "race": "troll",
+        "role": "spell",
         "shoulders": {
             "azerite_powers": "/122/562/31/13",
             "bonus_id": "4824/1537/4775",
             "id": "165516"
         },
+        "spec": "balance",
         "talents": "1000231",
         "trinket1": {
             "bonus_id": "4800/1537",
@@ -182,24 +268,24 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "ee448b85c7",
+        "simc_hash": "f5630f4c28",
         "spec": "balance",
         "target_error": "0.2",
         "tier": "23"
     },
     "sorted_data_keys": [
-        "Kul Tiran",
-        "Night Elf",
-        "Troll",
         "Highmountain Tauren",
+        "Troll",
+        "Kul Tiran",
+        "Worgen",
+        "Night Elf",
         "Zandalari Troll Paku",
         "Zandalari Troll Bwonsamdi",
-        "Worgen",
-        "Zandalari Troll Kimbul",
-        "Tauren"
+        "Tauren",
+        "Zandalari Troll Kimbul"
     ],
     "spec_id": 102,
-    "subtitle": "UTC 2019-04-21 07:08 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/ee448b85c7\" target=\"blank\">ee448b8</a>",
+    "subtitle": "UTC 2019-04-29 04:34 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/f5630f4c28\" target=\"blank\">f5630f4</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -300,6 +386,6 @@
             }
         }
     },
-    "timestamp": "2019-04-21 07:08",
+    "timestamp": "2019-04-29 04:34",
     "title": "Races | Balance Druid | Hecticaddcleave"
 }

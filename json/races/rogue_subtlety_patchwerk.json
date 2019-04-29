@@ -1,25 +1,25 @@
 {
     "class_id": 4,
     "data": {
-        "Blood Elf": 25894,
-        "Dark Iron Dwarf": 25776,
-        "Dwarf": 25882,
-        "Gnome": 25889,
-        "Goblin": 25873,
-        "Human": 25898,
-        "Kul Tiran": 25830,
-        "Maghar Orc": 25848,
-        "Night Elf": 26052,
-        "Nightborne": 25732,
-        "Orc": 25868,
-        "Pandaren": 25833,
-        "Troll": 25771,
-        "Undead": 25933,
-        "Void Elf": 26093,
-        "Worgen": 25858,
-        "Zandalari Troll Bwonsamdi": 25808,
-        "Zandalari Troll Kimbul": 25825,
-        "Zandalari Troll Paku": 25888
+        "Blood Elf": 25954,
+        "Dark Iron Dwarf": 25832,
+        "Dwarf": 25894,
+        "Gnome": 25911,
+        "Goblin": 25838,
+        "Human": 25963,
+        "Kul Tiran": 25881,
+        "Maghar Orc": 25871,
+        "Night Elf": 26115,
+        "Nightborne": 25727,
+        "Orc": 25788,
+        "Pandaren": 25878,
+        "Troll": 25732,
+        "Undead": 25922,
+        "Void Elf": 26047,
+        "Worgen": 25828,
+        "Zandalari Troll Bwonsamdi": 25828,
+        "Zandalari Troll Kimbul": 25898,
+        "Zandalari Troll Paku": 25855
     },
     "data_type": "races",
     "languages": {
@@ -219,6 +219,15 @@
             "bonus_id": "4800/1537",
             "id": "165512"
         },
+        "character": {
+            "class": "rogue",
+            "level": "120",
+            "position": "back",
+            "race": "night_elf",
+            "role": "attack",
+            "spec": "subtlety",
+            "talents": "2320031"
+        },
         "chest": {
             "azerite_powers": "240/562/22/13",
             "bonus_id": "4824/1537/4775",
@@ -247,10 +256,84 @@
             "bonus_id": "4824/1537/4775",
             "id": "165519"
         },
+        "items": {
+            "back": {
+                "bonus_id": "4800/1537",
+                "id": "165512"
+            },
+            "chest": {
+                "azerite_powers": "240/562/22/13",
+                "bonus_id": "4824/1537/4775",
+                "id": "165830"
+            },
+            "feet": {
+                "bonus_id": "4800/1537",
+                "id": "165527"
+            },
+            "finger1": {
+                "bonus_id": "4800/1537",
+                "enchant": "pact_of_mastery",
+                "id": "165565"
+            },
+            "finger2": {
+                "bonus_id": "4800/1537",
+                "enchant": "pact_of_mastery",
+                "id": "165567"
+            },
+            "hands": {
+                "bonus_id": "4800/1537",
+                "id": "165522"
+            },
+            "head": {
+                "azerite_powers": "414/562/30/13",
+                "bonus_id": "4824/1537/4775",
+                "id": "165519"
+            },
+            "legs": {
+                "bonus_id": "4800/1537",
+                "id": "165521"
+            },
+            "main_hand": {
+                "bonus_id": "4800/1537",
+                "enchant": "deadly_navigation",
+                "id": "165596"
+            },
+            "neck": {
+                "bonus_id": "4929/5814/4936/1566",
+                "id": "158075"
+            },
+            "off_hand": {
+                "bonus_id": "4800/1537",
+                "enchant": "masterful_navigation",
+                "id": "165596"
+            },
+            "shoulders": {
+                "azerite_powers": "413/175/30/13",
+                "bonus_id": "4824/1537/4775",
+                "id": "165523"
+            },
+            "trinket1": {
+                "bonus_id": "4800/1537",
+                "id": "165579"
+            },
+            "trinket2": {
+                "bonus_id": "4800/1537",
+                "id": "165572"
+            },
+            "waist": {
+                "bonus_id": "4800/1537",
+                "id": "165525"
+            },
+            "wrists": {
+                "bonus_id": "4800/1537",
+                "id": "165517"
+            }
+        },
         "legs": {
             "bonus_id": "4800/1537",
             "id": "165521"
         },
+        "level": "120",
         "main_hand": {
             "bonus_id": "4800/1537",
             "enchant": "deadly_navigation",
@@ -265,11 +348,15 @@
             "enchant": "masterful_navigation",
             "id": "165596"
         },
+        "position": "back",
+        "race": "night_elf",
+        "role": "attack",
         "shoulders": {
             "azerite_powers": "413/175/30/13",
             "bonus_id": "4824/1537/4775",
             "id": "165523"
         },
+        "spec": "subtlety",
         "talents": "2320031",
         "trinket1": {
             "bonus_id": "4800/1537",
@@ -293,34 +380,34 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "ee448b85c7",
+        "simc_hash": "f5630f4c28",
         "spec": "subtlety",
         "target_error": "0.2",
         "tier": "23"
     },
     "sorted_data_keys": [
-        "Void Elf",
         "Night Elf",
-        "Undead",
+        "Void Elf",
         "Human",
         "Blood Elf",
+        "Undead",
         "Gnome",
-        "Zandalari Troll Paku",
-        "Dwarf",
-        "Goblin",
-        "Orc",
-        "Worgen",
-        "Maghar Orc",
-        "Pandaren",
-        "Kul Tiran",
         "Zandalari Troll Kimbul",
-        "Zandalari Troll Bwonsamdi",
+        "Dwarf",
+        "Kul Tiran",
+        "Pandaren",
+        "Maghar Orc",
+        "Zandalari Troll Paku",
+        "Goblin",
         "Dark Iron Dwarf",
+        "Worgen",
+        "Zandalari Troll Bwonsamdi",
+        "Orc",
         "Troll",
         "Nightborne"
     ],
     "spec_id": 261,
-    "subtitle": "UTC 2019-04-21 07:03 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/ee448b85c7\" target=\"blank\">ee448b8</a>",
+    "subtitle": "UTC 2019-04-29 04:29 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/f5630f4c28\" target=\"blank\">f5630f4</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -421,6 +508,6 @@
             }
         }
     },
-    "timestamp": "2019-04-21 07:03",
+    "timestamp": "2019-04-29 04:29",
     "title": "Races | Subtlety Rogue | Patchwerk"
 }

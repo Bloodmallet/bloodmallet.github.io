@@ -2,17 +2,17 @@
     "class_id": 6,
     "data": {
         "Blood Elf": 46317,
-        "Draenei": 45653,
-        "Dwarf": 45704,
-        "Gnome": 45814,
-        "Goblin": 45867,
-        "Human": 45889,
-        "Night Elf": 45829,
-        "Orc": 45662,
-        "Tauren": 45685,
-        "Troll": 45772,
-        "Undead": 45638,
-        "Worgen": 45790
+        "Draenei": 45685,
+        "Dwarf": 45689,
+        "Gnome": 45724,
+        "Goblin": 45772,
+        "Human": 45803,
+        "Night Elf": 45862,
+        "Orc": 45639,
+        "Tauren": 45678,
+        "Troll": 45735,
+        "Undead": 45690,
+        "Worgen": 45719
     },
     "data_type": "races",
     "languages": {
@@ -142,6 +142,15 @@
             "bonus_id": "4800/1537",
             "id": "165512"
         },
+        "character": {
+            "class": "death_knight",
+            "level": "120",
+            "position": "back",
+            "race": "troll",
+            "role": "attack",
+            "spec": "unholy",
+            "talents": "2203032"
+        },
         "chest": {
             "azerite_powers": "199/109/30/15/13",
             "bonus_id": "1537/4824/4775",
@@ -170,10 +179,79 @@
             "bonus_id": "1537/4824/4775",
             "id": "165548"
         },
+        "items": {
+            "back": {
+                "bonus_id": "4800/1537",
+                "id": "165512"
+            },
+            "chest": {
+                "azerite_powers": "199/109/30/15/13",
+                "bonus_id": "1537/4824/4775",
+                "id": "165557"
+            },
+            "feet": {
+                "bonus_id": "4800/1537",
+                "id": "165561"
+            },
+            "finger1": {
+                "bonus_id": "4800/1537",
+                "enchant": "pact_of_haste",
+                "id": "165567"
+            },
+            "finger2": {
+                "bonus_id": "4800/1537",
+                "enchant": "pact_of_haste",
+                "id": "165565"
+            },
+            "hands": {
+                "bonus_id": "4800/1537",
+                "id": "165549"
+            },
+            "head": {
+                "azerite_powers": "199/562/31/465/13",
+                "bonus_id": "1537/4824/4775",
+                "id": "165548"
+            },
+            "legs": {
+                "bonus_id": "4800/1537",
+                "id": "165560"
+            },
+            "main_hand": {
+                "bonus_id": "4800/1537",
+                "enchant": "rune_of_the_fallen_crusader",
+                "id": "165586"
+            },
+            "neck": {
+                "bonus_id": "4929/5814/4936/1566",
+                "id": "158075"
+            },
+            "shoulders": {
+                "azerite_powers": "199/562/459/14/13",
+                "bonus_id": "1537/4824/4775",
+                "id": "165825"
+            },
+            "trinket1": {
+                "bonus_id": "4800/1537",
+                "id": "165580"
+            },
+            "trinket2": {
+                "bonus_id": "4800/1537",
+                "id": "165574"
+            },
+            "waist": {
+                "bonus_id": "4800/1537",
+                "id": "165552"
+            },
+            "wrists": {
+                "bonus_id": "4800/1537",
+                "id": "165551"
+            }
+        },
         "legs": {
             "bonus_id": "4800/1537",
             "id": "165560"
         },
+        "level": "120",
         "main_hand": {
             "bonus_id": "4800/1537",
             "enchant": "rune_of_the_fallen_crusader",
@@ -183,11 +261,15 @@
             "bonus_id": "4929/5814/4936/1566",
             "id": "158075"
         },
+        "position": "back",
+        "race": "troll",
+        "role": "attack",
         "shoulders": {
             "azerite_powers": "199/562/459/14/13",
             "bonus_id": "1537/4824/4775",
             "id": "165825"
         },
+        "spec": "unholy",
         "talents": "2203032",
         "trinket1": {
             "bonus_id": "4800/1537",
@@ -211,27 +293,27 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "ee448b85c7",
+        "simc_hash": "f5630f4c28",
         "spec": "unholy",
         "target_error": "0.2",
         "tier": "23"
     },
     "sorted_data_keys": [
         "Blood Elf",
+        "Night Elf",
         "Human",
         "Goblin",
-        "Night Elf",
+        "Troll",
         "Gnome",
         "Worgen",
-        "Troll",
+        "Undead",
         "Dwarf",
-        "Tauren",
-        "Orc",
         "Draenei",
-        "Undead"
+        "Tauren",
+        "Orc"
     ],
     "spec_id": 252,
-    "subtitle": "UTC 2019-04-21 07:07 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/ee448b85c7\" target=\"blank\">ee448b8</a>",
+    "subtitle": "UTC 2019-04-29 04:33 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/f5630f4c28\" target=\"blank\">f5630f4</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -332,6 +414,6 @@
             }
         }
     },
-    "timestamp": "2019-04-21 07:07",
+    "timestamp": "2019-04-29 04:33",
     "title": "Races | Unholy Death Knight | Hecticaddcleave"
 }

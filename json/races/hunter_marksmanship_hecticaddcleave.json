@@ -1,29 +1,29 @@
 {
     "class_id": 3,
     "data": {
-        "Blood Elf": 41106,
-        "Dark Iron Dwarf": 41023,
-        "Draenei": 41115,
-        "Dwarf": 41091,
-        "Gnome": 41357,
-        "Goblin": 41182,
-        "Highmountain Tauren": 41275,
-        "Human": 41408,
-        "Kul Tiran": 41214,
-        "Lightforged Draenei": 42036,
-        "Maghar Orc": 41140,
-        "Night Elf": 41160,
-        "Nightborne": 40804,
-        "Orc": 41158,
-        "Pandaren": 41233,
-        "Tauren": 41065,
-        "Troll": 41326,
-        "Undead": 41019,
-        "Void Elf": 41252,
-        "Worgen": 41127,
-        "Zandalari Troll Bwonsamdi": 40888,
-        "Zandalari Troll Kimbul": 41019,
-        "Zandalari Troll Paku": 41165
+        "Blood Elf": 41102,
+        "Dark Iron Dwarf": 41140,
+        "Draenei": 41076,
+        "Dwarf": 41106,
+        "Gnome": 41375,
+        "Goblin": 41116,
+        "Highmountain Tauren": 41152,
+        "Human": 41298,
+        "Kul Tiran": 41173,
+        "Lightforged Draenei": 42009,
+        "Maghar Orc": 41137,
+        "Night Elf": 41143,
+        "Nightborne": 40773,
+        "Orc": 41015,
+        "Pandaren": 41107,
+        "Tauren": 41164,
+        "Troll": 41251,
+        "Undead": 40996,
+        "Void Elf": 41345,
+        "Worgen": 41055,
+        "Zandalari Troll Bwonsamdi": 41052,
+        "Zandalari Troll Kimbul": 40976,
+        "Zandalari Troll Paku": 41094
     },
     "data_type": "races",
     "languages": {
@@ -263,6 +263,15 @@
             "bonus_id": "4800/1537",
             "id": "165512"
         },
+        "character": {
+            "class": "hunter",
+            "level": "120",
+            "position": "ranged_back",
+            "race": "human",
+            "role": "attack",
+            "spec": "marksmanship",
+            "talents": "1103031"
+        },
         "chest": {
             "azerite_powers": "36/370/30/14/13",
             "bonus_id": "1587/5440/4775",
@@ -291,10 +300,79 @@
             "bonus_id": "4824/1537/4775",
             "id": "165543"
         },
+        "items": {
+            "back": {
+                "bonus_id": "4800/1537",
+                "id": "165512"
+            },
+            "chest": {
+                "azerite_powers": "36/370/30/14/13",
+                "bonus_id": "1587/5440/4775",
+                "id": "159370"
+            },
+            "feet": {
+                "bonus_id": "4800/1537",
+                "id": "165533"
+            },
+            "finger1": {
+                "bonus_id": "4800/1537",
+                "enchant": "pact_of_mastery",
+                "id": "165567"
+            },
+            "finger2": {
+                "bonus_id": "4800/1537",
+                "enchant": "pact_of_mastery",
+                "id": "165566"
+            },
+            "hands": {
+                "bonus_id": "4800/1537",
+                "id": "165546"
+            },
+            "head": {
+                "azerite_powers": "212/36/22/14/13",
+                "bonus_id": "4824/1537/4775",
+                "id": "165543"
+            },
+            "legs": {
+                "bonus_id": "4800/1537",
+                "id": "165536"
+            },
+            "main_hand": {
+                "bonus_id": "4800/1537",
+                "enchant": "masterful_navigation",
+                "id": "165600"
+            },
+            "neck": {
+                "bonus_id": "4929/5814/4936/1566",
+                "id": "158075"
+            },
+            "shoulders": {
+                "azerite_powers": "212/36/30/15/13",
+                "bonus_id": "4824/1537/4775",
+                "id": "165923"
+            },
+            "trinket1": {
+                "bonus_id": "1572/4780",
+                "id": "159614"
+            },
+            "trinket2": {
+                "bonus_id": "4800/1537",
+                "id": "165579"
+            },
+            "waist": {
+                "bonus_id": "4800/1537",
+                "id": "165538"
+            },
+            "wrists": {
+                "bonus_id": "4800/1537",
+                "id": "165534"
+            }
+        },
         "legs": {
             "bonus_id": "4800/1537",
             "id": "165536"
         },
+        "level": "120",
         "main_hand": {
             "bonus_id": "4800/1537",
             "enchant": "masterful_navigation",
@@ -304,11 +382,15 @@
             "bonus_id": "4929/5814/4936/1566",
             "id": "158075"
         },
+        "position": "ranged_back",
+        "race": "human",
+        "role": "attack",
         "shoulders": {
             "azerite_powers": "212/36/30/15/13",
             "bonus_id": "4824/1537/4775",
             "id": "165923"
         },
+        "spec": "marksmanship",
         "talents": "1103031",
         "trinket1": {
             "bonus_id": "1572/4780",
@@ -332,38 +414,38 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "ee448b85c7",
+        "simc_hash": "f5630f4c28",
         "spec": "marksmanship",
         "target_error": "0.2",
         "tier": "23"
     },
     "sorted_data_keys": [
         "Lightforged Draenei",
-        "Human",
         "Gnome",
-        "Troll",
-        "Highmountain Tauren",
         "Void Elf",
-        "Pandaren",
+        "Human",
+        "Troll",
         "Kul Tiran",
-        "Goblin",
-        "Zandalari Troll Paku",
-        "Night Elf",
-        "Orc",
-        "Maghar Orc",
-        "Worgen",
-        "Draenei",
-        "Blood Elf",
-        "Dwarf",
         "Tauren",
+        "Highmountain Tauren",
+        "Night Elf",
         "Dark Iron Dwarf",
+        "Maghar Orc",
+        "Goblin",
+        "Pandaren",
+        "Dwarf",
+        "Blood Elf",
+        "Zandalari Troll Paku",
+        "Draenei",
+        "Worgen",
+        "Zandalari Troll Bwonsamdi",
+        "Orc",
         "Undead",
         "Zandalari Troll Kimbul",
-        "Zandalari Troll Bwonsamdi",
         "Nightborne"
     ],
     "spec_id": 254,
-    "subtitle": "UTC 2019-04-21 07:11 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/ee448b85c7\" target=\"blank\">ee448b8</a>",
+    "subtitle": "UTC 2019-04-29 04:36 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/f5630f4c28\" target=\"blank\">f5630f4</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -464,6 +546,6 @@
             }
         }
     },
-    "timestamp": "2019-04-21 07:11",
+    "timestamp": "2019-04-29 04:36",
     "title": "Races | Marksmanship Hunter | Hecticaddcleave"
 }

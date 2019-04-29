@@ -1,25 +1,25 @@
 {
     "class_id": 4,
     "data": {
-        "Blood Elf": 35176,
-        "Dark Iron Dwarf": 35100,
-        "Dwarf": 35190,
-        "Gnome": 35242,
-        "Goblin": 35186,
-        "Human": 35142,
-        "Kul Tiran": 35241,
-        "Maghar Orc": 35155,
-        "Night Elf": 35405,
-        "Nightborne": 34987,
-        "Orc": 35200,
-        "Pandaren": 35352,
-        "Troll": 35133,
-        "Undead": 35174,
-        "Void Elf": 35436,
-        "Worgen": 35253,
-        "Zandalari Troll Bwonsamdi": 35180,
-        "Zandalari Troll Kimbul": 35112,
-        "Zandalari Troll Paku": 35190
+        "Blood Elf": 35262,
+        "Dark Iron Dwarf": 35107,
+        "Dwarf": 35246,
+        "Gnome": 35317,
+        "Goblin": 35116,
+        "Human": 35184,
+        "Kul Tiran": 35283,
+        "Maghar Orc": 35226,
+        "Night Elf": 35406,
+        "Nightborne": 34941,
+        "Orc": 35168,
+        "Pandaren": 35246,
+        "Troll": 35180,
+        "Undead": 35249,
+        "Void Elf": 35394,
+        "Worgen": 35185,
+        "Zandalari Troll Bwonsamdi": 35165,
+        "Zandalari Troll Kimbul": 35121,
+        "Zandalari Troll Paku": 35273
     },
     "data_type": "races",
     "languages": {
@@ -219,6 +219,15 @@
             "bonus_id": "4800/1537",
             "id": "165512"
         },
+        "character": {
+            "class": "rogue",
+            "level": "120",
+            "position": "back",
+            "race": "night_elf",
+            "role": "attack",
+            "spec": "subtlety",
+            "talents": "2320031"
+        },
         "chest": {
             "azerite_powers": "240/562/22/13",
             "bonus_id": "4824/1537/4775",
@@ -247,10 +256,84 @@
             "bonus_id": "4824/1537/4775",
             "id": "165519"
         },
+        "items": {
+            "back": {
+                "bonus_id": "4800/1537",
+                "id": "165512"
+            },
+            "chest": {
+                "azerite_powers": "240/562/22/13",
+                "bonus_id": "4824/1537/4775",
+                "id": "165830"
+            },
+            "feet": {
+                "bonus_id": "4800/1537",
+                "id": "165527"
+            },
+            "finger1": {
+                "bonus_id": "4800/1537",
+                "enchant": "pact_of_mastery",
+                "id": "165565"
+            },
+            "finger2": {
+                "bonus_id": "4800/1537",
+                "enchant": "pact_of_mastery",
+                "id": "165567"
+            },
+            "hands": {
+                "bonus_id": "4800/1537",
+                "id": "165522"
+            },
+            "head": {
+                "azerite_powers": "414/562/30/13",
+                "bonus_id": "4824/1537/4775",
+                "id": "165519"
+            },
+            "legs": {
+                "bonus_id": "4800/1537",
+                "id": "165521"
+            },
+            "main_hand": {
+                "bonus_id": "4800/1537",
+                "enchant": "deadly_navigation",
+                "id": "165596"
+            },
+            "neck": {
+                "bonus_id": "4929/5814/4936/1566",
+                "id": "158075"
+            },
+            "off_hand": {
+                "bonus_id": "4800/1537",
+                "enchant": "masterful_navigation",
+                "id": "165596"
+            },
+            "shoulders": {
+                "azerite_powers": "413/175/30/13",
+                "bonus_id": "4824/1537/4775",
+                "id": "165523"
+            },
+            "trinket1": {
+                "bonus_id": "4800/1537",
+                "id": "165579"
+            },
+            "trinket2": {
+                "bonus_id": "4800/1537",
+                "id": "165572"
+            },
+            "waist": {
+                "bonus_id": "4800/1537",
+                "id": "165525"
+            },
+            "wrists": {
+                "bonus_id": "4800/1537",
+                "id": "165517"
+            }
+        },
         "legs": {
             "bonus_id": "4800/1537",
             "id": "165521"
         },
+        "level": "120",
         "main_hand": {
             "bonus_id": "4800/1537",
             "enchant": "deadly_navigation",
@@ -265,11 +348,15 @@
             "enchant": "masterful_navigation",
             "id": "165596"
         },
+        "position": "back",
+        "race": "night_elf",
+        "role": "attack",
         "shoulders": {
             "azerite_powers": "413/175/30/13",
             "bonus_id": "4824/1537/4775",
             "id": "165523"
         },
+        "spec": "subtlety",
         "talents": "2320031",
         "trinket1": {
             "bonus_id": "4800/1537",
@@ -293,34 +380,34 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "ee448b85c7",
+        "simc_hash": "f5630f4c28",
         "spec": "subtlety",
         "target_error": "0.2",
         "tier": "23"
     },
     "sorted_data_keys": [
-        "Void Elf",
         "Night Elf",
-        "Pandaren",
-        "Worgen",
+        "Void Elf",
         "Gnome",
         "Kul Tiran",
-        "Orc",
-        "Dwarf",
         "Zandalari Troll Paku",
-        "Goblin",
-        "Zandalari Troll Bwonsamdi",
         "Blood Elf",
         "Undead",
+        "Dwarf",
+        "Pandaren",
         "Maghar Orc",
+        "Worgen",
         "Human",
         "Troll",
+        "Orc",
+        "Zandalari Troll Bwonsamdi",
         "Zandalari Troll Kimbul",
+        "Goblin",
         "Dark Iron Dwarf",
         "Nightborne"
     ],
     "spec_id": 261,
-    "subtitle": "UTC 2019-04-21 07:17 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/ee448b85c7\" target=\"blank\">ee448b8</a>",
+    "subtitle": "UTC 2019-04-29 04:42 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/f5630f4c28\" target=\"blank\">f5630f4</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -421,6 +508,6 @@
             }
         }
     },
-    "timestamp": "2019-04-21 07:17",
+    "timestamp": "2019-04-29 04:42",
     "title": "Races | Subtlety Rogue | Hecticaddcleave"
 }

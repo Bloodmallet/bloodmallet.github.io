@@ -1,15 +1,15 @@
 {
     "class_id": 11,
     "data": {
-        "Highmountain Tauren": 16560,
-        "Kul Tiran": 16551,
-        "Night Elf": 16485,
-        "Tauren": 16471,
-        "Troll": 16516,
-        "Worgen": 16543,
-        "Zandalari Troll Bwonsamdi": 16639,
-        "Zandalari Troll Kimbul": 16721,
-        "Zandalari Troll Paku": 16518
+        "Highmountain Tauren": 16547,
+        "Kul Tiran": 16526,
+        "Night Elf": 16490,
+        "Tauren": 16481,
+        "Troll": 16547,
+        "Worgen": 16504,
+        "Zandalari Troll Bwonsamdi": 16653,
+        "Zandalari Troll Kimbul": 16687,
+        "Zandalari Troll Paku": 16544
     },
     "data_type": "races",
     "languages": {
@@ -109,6 +109,15 @@
             "bonus_id": "4800/1537",
             "id": "165513"
         },
+        "character": {
+            "class": "druid",
+            "level": "120",
+            "position": "front",
+            "race": "troll",
+            "role": "tank",
+            "spec": "guardian",
+            "talents": "1000131"
+        },
         "chest": {
             "azerite_powers": "241/562/22/14/13",
             "bonus_id": "4824/1537/4775",
@@ -137,10 +146,79 @@
             "bonus_id": "4824/1537/4775",
             "id": "165519"
         },
+        "items": {
+            "back": {
+                "bonus_id": "4800/1537",
+                "id": "165513"
+            },
+            "chest": {
+                "azerite_powers": "241/562/22/14/13",
+                "bonus_id": "4824/1537/4775",
+                "id": "165830"
+            },
+            "feet": {
+                "bonus_id": "4800/1537",
+                "id": "165527"
+            },
+            "finger1": {
+                "bonus_id": "4800/1537",
+                "enchant": "pact_of_haste",
+                "id": "165566"
+            },
+            "finger2": {
+                "bonus_id": "4800/1537",
+                "enchant": "pact_of_haste",
+                "id": "165567"
+            },
+            "hands": {
+                "bonus_id": "4800/1537",
+                "id": "165522"
+            },
+            "head": {
+                "azerite_powers": "359/241/461/87/13",
+                "bonus_id": "4824/1537/4775",
+                "id": "165519"
+            },
+            "legs": {
+                "bonus_id": "4800/1537",
+                "id": "165521"
+            },
+            "main_hand": {
+                "bonus_id": "4800/1537",
+                "enchant": "quick_navigation",
+                "id": "165589"
+            },
+            "neck": {
+                "bonus_id": "4929/5814/4936/1566",
+                "id": "158075"
+            },
+            "shoulders": {
+                "azerite_powers": "241/562/31/85/13",
+                "bonus_id": "4824/1537/4775",
+                "id": "165777"
+            },
+            "trinket1": {
+                "bonus_id": "4800/1537",
+                "id": "165579"
+            },
+            "trinket2": {
+                "bonus_id": "4800/1537",
+                "id": "165572"
+            },
+            "waist": {
+                "bonus_id": "4800/1537",
+                "id": "165525"
+            },
+            "wrists": {
+                "bonus_id": "4800/1537",
+                "id": "165524"
+            }
+        },
         "legs": {
             "bonus_id": "4800/1537",
             "id": "165521"
         },
+        "level": "120",
         "main_hand": {
             "bonus_id": "4800/1537",
             "enchant": "quick_navigation",
@@ -150,11 +228,15 @@
             "bonus_id": "4929/5814/4936/1566",
             "id": "158075"
         },
+        "position": "front",
+        "race": "troll",
+        "role": "tank",
         "shoulders": {
             "azerite_powers": "241/562/31/85/13",
             "bonus_id": "4824/1537/4775",
             "id": "165777"
         },
+        "spec": "guardian",
         "talents": "1000131",
         "trinket1": {
             "bonus_id": "4800/1537",
@@ -178,7 +260,7 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "ee448b85c7",
+        "simc_hash": "f5630f4c28",
         "spec": "guardian",
         "target_error": "0.2",
         "tier": "23"
@@ -186,16 +268,16 @@
     "sorted_data_keys": [
         "Zandalari Troll Kimbul",
         "Zandalari Troll Bwonsamdi",
+        "Troll",
         "Highmountain Tauren",
+        "Zandalari Troll Paku",
         "Kul Tiran",
         "Worgen",
-        "Zandalari Troll Paku",
-        "Troll",
         "Night Elf",
         "Tauren"
     ],
     "spec_id": 104,
-    "subtitle": "UTC 2019-04-21 06:59 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/ee448b85c7\" target=\"blank\">ee448b8</a>",
+    "subtitle": "UTC 2019-04-29 04:25 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/f5630f4c28\" target=\"blank\">f5630f4</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -296,6 +378,6 @@
             }
         }
     },
-    "timestamp": "2019-04-21 06:59",
+    "timestamp": "2019-04-29 04:25",
     "title": "Races | Guardian Druid | Patchwerk"
 }

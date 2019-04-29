@@ -1,15 +1,15 @@
 {
     "class_id": 11,
     "data": {
-        "Highmountain Tauren": 25586,
-        "Kul Tiran": 25619,
-        "Night Elf": 26032,
-        "Tauren": 25656,
-        "Troll": 25551,
-        "Worgen": 25631,
-        "Zandalari Troll Bwonsamdi": 25495,
-        "Zandalari Troll Kimbul": 25501,
-        "Zandalari Troll Paku": 25606
+        "Highmountain Tauren": 25565,
+        "Kul Tiran": 25586,
+        "Night Elf": 26021,
+        "Tauren": 25623,
+        "Troll": 25526,
+        "Worgen": 25597,
+        "Zandalari Troll Bwonsamdi": 25450,
+        "Zandalari Troll Kimbul": 25503,
+        "Zandalari Troll Paku": 25591
     },
     "data_type": "races",
     "languages": {
@@ -109,6 +109,15 @@
             "bonus_id": "4800/1537",
             "id": "165924"
         },
+        "character": {
+            "class": "druid",
+            "level": "120",
+            "position": "back",
+            "race": "night_elf",
+            "role": "attack",
+            "spec": "feral",
+            "talents": "2000122"
+        },
         "chest": {
             "azerite_powers": "247/209/31/44/13",
             "bonus_id": "5062/1587/4786/4775",
@@ -137,10 +146,79 @@
             "bonus_id": "4824/1537/4775",
             "id": "165526"
         },
+        "items": {
+            "back": {
+                "bonus_id": "4800/1537",
+                "id": "165924"
+            },
+            "chest": {
+                "azerite_powers": "247/209/31/44/13",
+                "bonus_id": "5062/1587/4786/4775",
+                "id": "159335"
+            },
+            "feet": {
+                "bonus_id": "4800/1537",
+                "id": "165527"
+            },
+            "finger1": {
+                "bonus_id": "4800/1537",
+                "enchant": "pact_of_critical_strike",
+                "id": "165565"
+            },
+            "finger2": {
+                "bonus_id": "4800/1537",
+                "enchant": "pact_of_critical_strike",
+                "id": "165566"
+            },
+            "hands": {
+                "bonus_id": "4800/1537",
+                "id": "165522"
+            },
+            "head": {
+                "azerite_powers": "247/359/18/83/13",
+                "bonus_id": "4824/1537/4775",
+                "id": "165526"
+            },
+            "legs": {
+                "bonus_id": "4800/1537",
+                "id": "165521"
+            },
+            "main_hand": {
+                "bonus_id": "4800/1537",
+                "enchant": "deadly_navigation",
+                "id": "165589"
+            },
+            "neck": {
+                "bonus_id": "4929/5814/4936/1566",
+                "id": "158075"
+            },
+            "shoulders": {
+                "azerite_powers": "359/247/459/467/13",
+                "bonus_id": "4824/1537/4775",
+                "id": "165824"
+            },
+            "trinket1": {
+                "bonus_id": "4800/1537",
+                "id": "165579"
+            },
+            "trinket2": {
+                "bonus_id": "4800/1537",
+                "id": "165572"
+            },
+            "waist": {
+                "bonus_id": "4800/1537",
+                "id": "165525"
+            },
+            "wrists": {
+                "bonus_id": "4800/1537",
+                "id": "165517"
+            }
+        },
         "legs": {
             "bonus_id": "4800/1537",
             "id": "165521"
         },
+        "level": "120",
         "main_hand": {
             "bonus_id": "4800/1537",
             "enchant": "deadly_navigation",
@@ -150,11 +228,15 @@
             "bonus_id": "4929/5814/4936/1566",
             "id": "158075"
         },
+        "position": "back",
+        "race": "night_elf",
+        "role": "attack",
         "shoulders": {
             "azerite_powers": "359/247/459/467/13",
             "bonus_id": "4824/1537/4775",
             "id": "165824"
         },
+        "spec": "feral",
         "talents": "2000122",
         "trinket1": {
             "bonus_id": "4800/1537",
@@ -178,7 +260,7 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "ee448b85c7",
+        "simc_hash": "f5630f4c28",
         "spec": "feral",
         "target_error": "0.2",
         "tier": "23"
@@ -187,15 +269,15 @@
         "Night Elf",
         "Tauren",
         "Worgen",
-        "Kul Tiran",
         "Zandalari Troll Paku",
+        "Kul Tiran",
         "Highmountain Tauren",
         "Troll",
         "Zandalari Troll Kimbul",
         "Zandalari Troll Bwonsamdi"
     ],
     "spec_id": 103,
-    "subtitle": "UTC 2019-04-21 06:59 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/ee448b85c7\" target=\"blank\">ee448b8</a>",
+    "subtitle": "UTC 2019-04-29 04:25 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/f5630f4c28\" target=\"blank\">f5630f4</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -296,6 +378,6 @@
             }
         }
     },
-    "timestamp": "2019-04-21 06:59",
+    "timestamp": "2019-04-29 04:25",
     "title": "Races | Feral Druid | Patchwerk"
 }

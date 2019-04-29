@@ -1,16 +1,16 @@
 {
     "class_id": 2,
     "data": {
-        "Blood Elf": 26310,
-        "Dark Iron Dwarf": 26170,
-        "Draenei": 26150,
-        "Dwarf": 26165,
-        "Human": 26213,
-        "Lightforged Draenei": 26184,
-        "Tauren": 26165,
-        "Zandalari Troll Bwonsamdi": 26173,
-        "Zandalari Troll Kimbul": 26193,
-        "Zandalari Troll Paku": 26163
+        "Blood Elf": 26270,
+        "Dark Iron Dwarf": 26208,
+        "Draenei": 26119,
+        "Dwarf": 26132,
+        "Human": 26143,
+        "Lightforged Draenei": 26230,
+        "Tauren": 26217,
+        "Zandalari Troll Bwonsamdi": 26200,
+        "Zandalari Troll Kimbul": 26216,
+        "Zandalari Troll Paku": 26152
     },
     "data_type": "races",
     "languages": {
@@ -120,6 +120,15 @@
             "bonus_id": "4800/1537",
             "id": "165512"
         },
+        "character": {
+            "class": "paladin",
+            "level": "120",
+            "position": "back",
+            "race": "blood_elf",
+            "role": "attack",
+            "spec": "retribution",
+            "talents": "2303103"
+        },
         "chest": {
             "azerite_powers": "396/562/461/13",
             "bonus_id": "4824/1537/4775",
@@ -148,10 +157,79 @@
             "bonus_id": "4824/1537/4775",
             "id": "165548"
         },
+        "items": {
+            "back": {
+                "bonus_id": "4800/1537",
+                "id": "165512"
+            },
+            "chest": {
+                "azerite_powers": "396/562/461/13",
+                "bonus_id": "4824/1537/4775",
+                "id": "165550"
+            },
+            "feet": {
+                "bonus_id": "4800/1537",
+                "id": "165561"
+            },
+            "finger1": {
+                "bonus_id": "4800/1537",
+                "enchant": "pact_of_haste",
+                "id": "165567"
+            },
+            "finger2": {
+                "bonus_id": "4800/1537",
+                "enchant": "pact_of_haste",
+                "id": "165566"
+            },
+            "hands": {
+                "bonus_id": "4800/1537",
+                "id": "165549"
+            },
+            "head": {
+                "azerite_powers": "125/562/31/13",
+                "bonus_id": "4824/1537/4775",
+                "id": "165548"
+            },
+            "legs": {
+                "bonus_id": "4800/1537",
+                "id": "165560"
+            },
+            "main_hand": {
+                "bonus_id": "4800/1537",
+                "enchant": "masterful_navigation",
+                "id": "165586"
+            },
+            "neck": {
+                "bonus_id": "4929/5814/4936/1566",
+                "id": "158075"
+            },
+            "shoulders": {
+                "azerite_powers": "453/562/22/13",
+                "bonus_id": "4824/1537/4775",
+                "id": "165825"
+            },
+            "trinket1": {
+                "bonus_id": "4800/1537",
+                "id": "165580"
+            },
+            "trinket2": {
+                "bonus_id": "4800/1537",
+                "id": "165570"
+            },
+            "waist": {
+                "bonus_id": "4800/1537",
+                "id": "165552"
+            },
+            "wrists": {
+                "bonus_id": "4800/1537",
+                "id": "165551"
+            }
+        },
         "legs": {
             "bonus_id": "4800/1537",
             "id": "165560"
         },
+        "level": "120",
         "main_hand": {
             "bonus_id": "4800/1537",
             "enchant": "masterful_navigation",
@@ -161,11 +239,15 @@
             "bonus_id": "4929/5814/4936/1566",
             "id": "158075"
         },
+        "position": "back",
+        "race": "blood_elf",
+        "role": "attack",
         "shoulders": {
             "azerite_powers": "453/562/22/13",
             "bonus_id": "4824/1537/4775",
             "id": "165825"
         },
+        "spec": "retribution",
         "talents": "2303103",
         "trinket1": {
             "bonus_id": "4800/1537",
@@ -189,25 +271,25 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "ee448b85c7",
+        "simc_hash": "f5630f4c28",
         "spec": "retribution",
         "target_error": "0.2",
         "tier": "23"
     },
     "sorted_data_keys": [
         "Blood Elf",
-        "Human",
-        "Zandalari Troll Kimbul",
         "Lightforged Draenei",
-        "Zandalari Troll Bwonsamdi",
-        "Dark Iron Dwarf",
-        "Dwarf",
         "Tauren",
+        "Zandalari Troll Kimbul",
+        "Dark Iron Dwarf",
+        "Zandalari Troll Bwonsamdi",
         "Zandalari Troll Paku",
+        "Human",
+        "Dwarf",
         "Draenei"
     ],
     "spec_id": 70,
-    "subtitle": "UTC 2019-04-21 07:02 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/ee448b85c7\" target=\"blank\">ee448b8</a>",
+    "subtitle": "UTC 2019-04-29 04:28 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/f5630f4c28\" target=\"blank\">f5630f4</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -308,6 +390,6 @@
             }
         }
     },
-    "timestamp": "2019-04-21 07:02",
+    "timestamp": "2019-04-29 04:28",
     "title": "Races | Retribution Paladin | Patchwerk"
 }

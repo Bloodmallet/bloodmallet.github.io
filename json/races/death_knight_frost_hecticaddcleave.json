@@ -1,18 +1,18 @@
 {
     "class_id": 6,
     "data": {
-        "Blood Elf": 33289,
-        "Draenei": 32789,
-        "Dwarf": 32795,
-        "Gnome": 32957,
-        "Goblin": 32667,
-        "Human": 32748,
-        "Night Elf": 32884,
-        "Orc": 32825,
-        "Tauren": 32802,
-        "Troll": 32871,
-        "Undead": 32901,
-        "Worgen": 32840
+        "Blood Elf": 33321,
+        "Draenei": 32796,
+        "Dwarf": 32763,
+        "Gnome": 33000,
+        "Goblin": 32715,
+        "Human": 32760,
+        "Night Elf": 32962,
+        "Orc": 32847,
+        "Tauren": 32787,
+        "Troll": 32897,
+        "Undead": 32861,
+        "Worgen": 32869
     },
     "data_type": "races",
     "languages": {
@@ -142,6 +142,15 @@
             "bonus_id": "4824/1537",
             "id": "165512"
         },
+        "character": {
+            "class": "death_knight",
+            "level": "120",
+            "position": "back",
+            "race": "blood_elf",
+            "role": "attack",
+            "spec": "frost",
+            "talents": "3102013"
+        },
         "chest": {
             "azerite_powers": "108/562/461/13",
             "bonus_id": "1537/4824/4775",
@@ -170,10 +179,84 @@
             "bonus_id": "1537/4824/4775",
             "id": "165548"
         },
+        "items": {
+            "back": {
+                "bonus_id": "4824/1537",
+                "id": "165512"
+            },
+            "chest": {
+                "azerite_powers": "108/562/461/13",
+                "bonus_id": "1537/4824/4775",
+                "id": "165550"
+            },
+            "feet": {
+                "bonus_id": "4800/1537",
+                "id": "165561"
+            },
+            "finger1": {
+                "bonus_id": "4824/1537",
+                "enchant": "pact_of_mastery",
+                "id": "165566"
+            },
+            "finger2": {
+                "bonus_id": "4824/1537",
+                "enchant": "pact_of_mastery",
+                "id": "165567"
+            },
+            "hands": {
+                "bonus_id": "4800/1537",
+                "id": "165556"
+            },
+            "head": {
+                "azerite_powers": "108/562/31/465/13",
+                "bonus_id": "1537/4824/4775",
+                "id": "165548"
+            },
+            "legs": {
+                "bonus_id": "4800/1537",
+                "id": "165560"
+            },
+            "main_hand": {
+                "bonus_id": "4800/1537",
+                "enchant": "rune_of_razorice",
+                "id": "165920"
+            },
+            "neck": {
+                "bonus_id": "4929/5814/4936/1566",
+                "id": "158075"
+            },
+            "off_hand": {
+                "bonus_id": "4800/1537",
+                "enchant": "rune_of_the_fallen_crusader",
+                "id": "165920"
+            },
+            "shoulders": {
+                "azerite_powers": "242/562/459/14/13",
+                "bonus_id": "1537/4824/4775",
+                "id": "165825"
+            },
+            "trinket1": {
+                "bonus_id": "4800/1537",
+                "id": "165574"
+            },
+            "trinket2": {
+                "bonus_id": "4800/1537",
+                "id": "165570"
+            },
+            "waist": {
+                "bonus_id": "4800/1537",
+                "id": "165559"
+            },
+            "wrists": {
+                "bonus_id": "4800/1537",
+                "id": "165551"
+            }
+        },
         "legs": {
             "bonus_id": "4800/1537",
             "id": "165560"
         },
+        "level": "120",
         "main_hand": {
             "bonus_id": "4800/1537",
             "enchant": "rune_of_razorice",
@@ -188,11 +271,15 @@
             "enchant": "rune_of_the_fallen_crusader",
             "id": "165920"
         },
+        "position": "back",
+        "race": "blood_elf",
+        "role": "attack",
         "shoulders": {
             "azerite_powers": "242/562/459/14/13",
             "bonus_id": "1537/4824/4775",
             "id": "165825"
         },
+        "spec": "frost",
         "talents": "3102013",
         "trinket1": {
             "bonus_id": "4800/1537",
@@ -216,7 +303,7 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "ee448b85c7",
+        "simc_hash": "f5630f4c28",
         "spec": "frost",
         "target_error": "0.2",
         "tier": "23"
@@ -224,19 +311,19 @@
     "sorted_data_keys": [
         "Blood Elf",
         "Gnome",
-        "Undead",
         "Night Elf",
         "Troll",
         "Worgen",
+        "Undead",
         "Orc",
+        "Draenei",
         "Tauren",
         "Dwarf",
-        "Draenei",
         "Human",
         "Goblin"
     ],
     "spec_id": 251,
-    "subtitle": "UTC 2019-04-21 07:06 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/ee448b85c7\" target=\"blank\">ee448b8</a>",
+    "subtitle": "UTC 2019-04-29 04:33 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/f5630f4c28\" target=\"blank\">f5630f4</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -337,6 +424,6 @@
             }
         }
     },
-    "timestamp": "2019-04-21 07:06",
+    "timestamp": "2019-04-29 04:33",
     "title": "Races | Frost Death Knight | Hecticaddcleave"
 }

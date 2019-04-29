@@ -1,20 +1,20 @@
 {
     "class_id": 7,
     "data": {
-        "Dark Iron Dwarf": 38796,
-        "Draenei": 38887,
-        "Dwarf": 38909,
-        "Goblin": 38994,
-        "Highmountain Tauren": 38925,
-        "Kul Tiran": 39028,
-        "Maghar Orc": 38997,
-        "Orc": 38788,
-        "Pandaren": 38975,
-        "Tauren": 38931,
-        "Troll": 39022,
-        "Zandalari Troll Bwonsamdi": 38818,
-        "Zandalari Troll Kimbul": 38828,
-        "Zandalari Troll Paku": 38900
+        "Dark Iron Dwarf": 38814,
+        "Draenei": 38809,
+        "Dwarf": 38930,
+        "Goblin": 38946,
+        "Highmountain Tauren": 38991,
+        "Kul Tiran": 38981,
+        "Maghar Orc": 38900,
+        "Orc": 38777,
+        "Pandaren": 39014,
+        "Tauren": 38913,
+        "Troll": 39025,
+        "Zandalari Troll Bwonsamdi": 38829,
+        "Zandalari Troll Kimbul": 38816,
+        "Zandalari Troll Paku": 38879
     },
     "data_type": "races",
     "languages": {
@@ -164,6 +164,15 @@
             "bonus_id": "4800/1537",
             "id": "165512"
         },
+        "character": {
+            "class": "shaman",
+            "level": "120",
+            "position": "back",
+            "race": "troll",
+            "role": "attack",
+            "spec": "enhancement",
+            "talents": "2302031"
+        },
         "chest": {
             "azerite_powers": "137/416/22/474/13",
             "bonus_id": "4800/1537/5482/4775",
@@ -192,10 +201,84 @@
             "bonus_id": "4786/1587/5481/4775",
             "id": "159391"
         },
+        "items": {
+            "back": {
+                "bonus_id": "4800/1537",
+                "id": "165512"
+            },
+            "chest": {
+                "azerite_powers": "137/416/22/474/13",
+                "bonus_id": "4800/1537/5482/4775",
+                "id": "165540"
+            },
+            "feet": {
+                "bonus_id": "4800/1537",
+                "id": "165541"
+            },
+            "finger1": {
+                "bonus_id": "4800/1537",
+                "enchant": "pact_of_mastery",
+                "id": "165567"
+            },
+            "finger2": {
+                "bonus_id": "4800/1537",
+                "enchant": "pact_of_mastery",
+                "id": "165566"
+            },
+            "hands": {
+                "bonus_id": "4800/1537",
+                "id": "165531"
+            },
+            "head": {
+                "azerite_powers": "137/416/30/539/13",
+                "bonus_id": "4786/1587/5481/4775",
+                "id": "159391"
+            },
+            "legs": {
+                "bonus_id": "4800/1537",
+                "id": "165536"
+            },
+            "main_hand": {
+                "bonus_id": "4800/1537",
+                "enchant": "quick_navigation",
+                "id": "165588"
+            },
+            "neck": {
+                "bonus_id": "4929/5814/4936/1566",
+                "id": "158075"
+            },
+            "off_hand": {
+                "bonus_id": "4800/1537",
+                "enchant": "masterful_navigation",
+                "id": "165588"
+            },
+            "shoulders": {
+                "azerite_powers": "137/416/461/207/13",
+                "bonus_id": "4786/1587/5480/4775",
+                "id": "159352"
+            },
+            "trinket1": {
+                "bonus_id": "4786/1572",
+                "id": "159614"
+            },
+            "trinket2": {
+                "bonus_id": "4800/1537",
+                "id": "165572"
+            },
+            "waist": {
+                "bonus_id": "4800/1537",
+                "id": "165538"
+            },
+            "wrists": {
+                "bonus_id": "4800/1537",
+                "id": "165534"
+            }
+        },
         "legs": {
             "bonus_id": "4800/1537",
             "id": "165536"
         },
+        "level": "120",
         "main_hand": {
             "bonus_id": "4800/1537",
             "enchant": "quick_navigation",
@@ -210,11 +293,15 @@
             "enchant": "masterful_navigation",
             "id": "165588"
         },
+        "position": "back",
+        "race": "troll",
+        "role": "attack",
         "shoulders": {
             "azerite_powers": "137/416/461/207/13",
             "bonus_id": "4786/1587/5480/4775",
             "id": "159352"
         },
+        "spec": "enhancement",
         "talents": "2302031",
         "trinket1": {
             "bonus_id": "4786/1572",
@@ -238,29 +325,29 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "ee448b85c7",
+        "simc_hash": "f5630f4c28",
         "spec": "enhancement",
         "target_error": "0.2",
         "tier": "23"
     },
     "sorted_data_keys": [
-        "Kul Tiran",
         "Troll",
-        "Maghar Orc",
-        "Goblin",
         "Pandaren",
-        "Tauren",
         "Highmountain Tauren",
+        "Kul Tiran",
+        "Goblin",
         "Dwarf",
+        "Tauren",
+        "Maghar Orc",
         "Zandalari Troll Paku",
-        "Draenei",
-        "Zandalari Troll Kimbul",
         "Zandalari Troll Bwonsamdi",
+        "Zandalari Troll Kimbul",
         "Dark Iron Dwarf",
+        "Draenei",
         "Orc"
     ],
     "spec_id": 263,
-    "subtitle": "UTC 2019-04-21 07:18 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/ee448b85c7\" target=\"blank\">ee448b8</a>",
+    "subtitle": "UTC 2019-04-29 04:43 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/f5630f4c28\" target=\"blank\">f5630f4</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -361,6 +448,6 @@
             }
         }
     },
-    "timestamp": "2019-04-21 07:18",
+    "timestamp": "2019-04-29 04:43",
     "title": "Races | Enhancement Shaman | Hecticaddcleave"
 }
