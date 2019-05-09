@@ -1,0 +1,443 @@
+{
+    "class_id": 7,
+    "data": {
+        "Dark Iron Dwarf": 24597,
+        "Draenei": 24646,
+        "Dwarf": 24818,
+        "Goblin": 24706,
+        "Highmountain Tauren": 24683,
+        "Kul Tiran": 24724,
+        "Maghar Orc": 24567,
+        "Orc": 24547,
+        "Pandaren": 24659,
+        "Tauren": 24799,
+        "Troll": 24690,
+        "Zandalari Troll Bwonsamdi": 24663,
+        "Zandalari Troll Kimbul": 24681,
+        "Zandalari Troll Paku": 24596
+    },
+    "data_type": "races",
+    "languages": {
+        "Dark Iron Dwarf": {
+            "cn_CN": "黑铁矮人",
+            "de_DE": "Dunkeleisenzwerg",
+            "en_US": "Dark Iron Dwarf",
+            "es_ES": "Enano Hierro Negro",
+            "fr_FR": "Nain sombrefer",
+            "it_IT": "Nano Ferroscuro",
+            "ko_KR": "검은무쇠 드워프",
+            "ru_RU": "Дворф из клана Черного Железа"
+        },
+        "Draenei": {
+            "cn_CN": "德莱尼",
+            "de_DE": "Draenei",
+            "en_US": "Draenei",
+            "es_ES": "Draenei",
+            "fr_FR": "Draeneï",
+            "it_IT": "Draenei",
+            "ko_KR": "드레나이",
+            "ru_RU": "Дреней"
+        },
+        "Dwarf": {
+            "cn_CN": "矮人",
+            "de_DE": "Zwerg",
+            "en_US": "Dwarf",
+            "es_ES": "Enano",
+            "fr_FR": "Nain",
+            "it_IT": "Nano",
+            "ko_KR": "드워프",
+            "ru_RU": "Дворф"
+        },
+        "Goblin": {
+            "cn_CN": "地精",
+            "de_DE": "Goblin",
+            "en_US": "Goblin",
+            "es_ES": "Goblin",
+            "fr_FR": "Gobelin",
+            "it_IT": "Goblin",
+            "ko_KR": "고블린",
+            "ru_RU": "Гоблин"
+        },
+        "Highmountain Tauren": {
+            "cn_CN": "至高岭牛头人",
+            "de_DE": "Hochbergtauren",
+            "en_US": "Highmountain Tauren",
+            "es_ES": "Tauren Monte Alto",
+            "fr_FR": "Tauren de Haut-Roc",
+            "it_IT": "Tauren di Alto Monte",
+            "ko_KR": "높은산 타우렌",
+            "ru_RU": "Таурен Крутогорья"
+        },
+        "Kul Tiran": {
+            "cn_CN": "Kul Tiran",
+            "de_DE": "Kul Tiran",
+            "en_US": "Kul Tiran",
+            "es_ES": "Kul Tiran",
+            "fr_FR": "Kul Tiran",
+            "it_IT": "Kul Tiran",
+            "ko_KR": "Kul Tiran",
+            "ru_RU": "Kul Tiran"
+        },
+        "Maghar Orc": {
+            "cn_CN": "玛格汉兽人",
+            "de_DE": "Mag'har",
+            "en_US": "Mag'har Orc",
+            "es_ES": "Orco Mag'har",
+            "fr_FR": "Orc mag’har",
+            "it_IT": "Orco Mag'har",
+            "ko_KR": "마그하르 오크",
+            "ru_RU": "Маг'хар"
+        },
+        "Orc": {
+            "cn_CN": "兽人",
+            "de_DE": "Orc",
+            "en_US": "Orc",
+            "es_ES": "Orco",
+            "fr_FR": "Orc",
+            "it_IT": "Orco",
+            "ko_KR": "오크",
+            "ru_RU": "Орк"
+        },
+        "Pandaren": {
+            "cn_CN": "熊猫人",
+            "de_DE": "Pandaren",
+            "en_US": "Pandaren",
+            "es_ES": "Pandaren",
+            "fr_FR": "Pandaren",
+            "it_IT": "Pandaren",
+            "ko_KR": "판다렌",
+            "ru_RU": "Пандарен"
+        },
+        "Tauren": {
+            "cn_CN": "牛头人",
+            "de_DE": "Tauren",
+            "en_US": "Tauren",
+            "es_ES": "Tauren",
+            "fr_FR": "Tauren",
+            "it_IT": "Tauren",
+            "ko_KR": "타우렌",
+            "ru_RU": "Таурен"
+        },
+        "Troll": {
+            "cn_CN": "巨魔",
+            "de_DE": "Troll",
+            "en_US": "Troll",
+            "es_ES": "Trol",
+            "fr_FR": "Troll",
+            "it_IT": "Troll",
+            "ko_KR": "트롤",
+            "ru_RU": "Тролль"
+        },
+        "Zandalari Troll Bwonsamdi": {
+            "cn_CN": "Zandalari Troll Bwonsamdi",
+            "de_DE": "Zandalari Troll Bwonsamdi",
+            "en_US": "Zandalari Troll Bwonsamdi",
+            "es_ES": "Zandalari Troll Bwonsamdi",
+            "fr_FR": "Zandalari Troll Bwonsamdi",
+            "it_IT": "Zandalari Troll Bwonsamdi",
+            "ko_KR": "Zandalari Troll Bwonsamdi",
+            "ru_RU": "Zandalari Troll Bwonsamdi"
+        },
+        "Zandalari Troll Kimbul": {
+            "cn_CN": "Zandalari Troll Kimbul",
+            "de_DE": "Zandalari Troll Kimbul",
+            "en_US": "Zandalari Troll Kimbul",
+            "es_ES": "Zandalari Troll Kimbul",
+            "fr_FR": "Zandalari Troll Kimbul",
+            "it_IT": "Zandalari Troll Kimbul",
+            "ko_KR": "Zandalari Troll Kimbul",
+            "ru_RU": "Zandalari Troll Kimbul"
+        },
+        "Zandalari Troll Paku": {
+            "cn_CN": "Zandalari Troll Paku",
+            "de_DE": "Zandalari Troll Paku",
+            "en_US": "Zandalari Troll Paku",
+            "es_ES": "Zandalari Troll Paku",
+            "fr_FR": "Zandalari Troll Paku",
+            "it_IT": "Zandalari Troll Paku",
+            "ko_KR": "Zandalari Troll Paku",
+            "ru_RU": "Zandalari Troll Paku"
+        }
+    },
+    "profile": {
+        "back": {
+            "bonus_id": "4800/1537",
+            "id": "165512"
+        },
+        "character": {
+            "class": "shaman",
+            "level": "120",
+            "position": "ranged_back",
+            "race": "tauren",
+            "role": "spell",
+            "spec": "restoration",
+            "talents": "1132221"
+        },
+        "chest": {
+            "azerite_powers": "457/562/31/474/13",
+            "bonus_id": "1537/4823/4775",
+            "id": "165540"
+        },
+        "feet": {
+            "bonus_id": "4800/1537",
+            "id": "165541"
+        },
+        "finger1": {
+            "bonus_id": "4800/1537",
+            "enchant": "pact_of_versatility",
+            "id": "165567"
+        },
+        "finger2": {
+            "bonus_id": "1572/4777",
+            "enchant": "pact_of_versatility",
+            "id": "159458"
+        },
+        "hands": {
+            "bonus_id": "1572/4777",
+            "id": "155892"
+        },
+        "head": {
+            "azerite_powers": "457/416/30/83/13",
+            "bonus_id": "1587/4819/4775",
+            "id": "159391"
+        },
+        "items": {
+            "back": {
+                "bonus_id": "4800/1537",
+                "id": "165512"
+            },
+            "chest": {
+                "azerite_powers": "457/562/31/474/13",
+                "bonus_id": "1537/4823/4775",
+                "id": "165540"
+            },
+            "feet": {
+                "bonus_id": "4800/1537",
+                "id": "165541"
+            },
+            "finger1": {
+                "bonus_id": "4800/1537",
+                "enchant": "pact_of_versatility",
+                "id": "165567"
+            },
+            "finger2": {
+                "bonus_id": "1572/4777",
+                "enchant": "pact_of_versatility",
+                "id": "159458"
+            },
+            "hands": {
+                "bonus_id": "1572/4777",
+                "id": "155892"
+            },
+            "head": {
+                "azerite_powers": "457/416/30/83/13",
+                "bonus_id": "1587/4819/4775",
+                "id": "159391"
+            },
+            "legs": {
+                "bonus_id": "1572/4777",
+                "id": "159375"
+            },
+            "main_hand": {
+                "bonus_id": "4800/1537/4786",
+                "enchant": "versatile_navigation",
+                "id": "165597"
+            },
+            "neck": {
+                "bonus_id": "4929/5814/4936/1566",
+                "id": "158075"
+            },
+            "shoulders": {
+                "azerite_powers": "457/194/38/83/13",
+                "bonus_id": "1587/4819/4775",
+                "id": "159385"
+            },
+            "trinket1": {
+                "bonus_id": "4800/1537",
+                "id": "165581"
+            },
+            "trinket2": {
+                "bonus_id": "4800/1537",
+                "id": "165576"
+            },
+            "waist": {
+                "bonus_id": "4800/1537",
+                "id": "165538"
+            },
+            "wrists": {
+                "bonus_id": "4800/1537",
+                "id": "165542"
+            }
+        },
+        "legs": {
+            "bonus_id": "1572/4777",
+            "id": "159375"
+        },
+        "level": "120",
+        "main_hand": {
+            "bonus_id": "4800/1537/4786",
+            "enchant": "versatile_navigation",
+            "id": "165597"
+        },
+        "neck": {
+            "bonus_id": "4929/5814/4936/1566",
+            "id": "158075"
+        },
+        "position": "ranged_back",
+        "race": "tauren",
+        "role": "spell",
+        "shoulders": {
+            "azerite_powers": "457/194/38/83/13",
+            "bonus_id": "1587/4819/4775",
+            "id": "159385"
+        },
+        "spec": "restoration",
+        "talents": "1132221",
+        "trinket1": {
+            "bonus_id": "4800/1537",
+            "id": "165581"
+        },
+        "trinket2": {
+            "bonus_id": "4800/1537",
+            "id": "165576"
+        },
+        "waist": {
+            "bonus_id": "4800/1537",
+            "id": "165538"
+        },
+        "wrists": {
+            "bonus_id": "4800/1537",
+            "id": "165542"
+        }
+    },
+    "simc_settings": {
+        "class": "shaman",
+        "fight_style": "hecticaddcleave",
+        "iterations": "20000",
+        "ptr": "0",
+        "simc_hash": "4d4e8a0fba",
+        "spec": "restoration",
+        "target_error": "0.2",
+        "tier": "23"
+    },
+    "sorted_data_keys": [
+        "Dwarf",
+        "Tauren",
+        "Kul Tiran",
+        "Goblin",
+        "Troll",
+        "Highmountain Tauren",
+        "Zandalari Troll Kimbul",
+        "Zandalari Troll Bwonsamdi",
+        "Pandaren",
+        "Draenei",
+        "Dark Iron Dwarf",
+        "Zandalari Troll Paku",
+        "Maghar Orc",
+        "Orc"
+    ],
+    "spec_id": 264,
+    "subtitle": "UTC 2019-05-09 10:12 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/4d4e8a0fba\" target=\"blank\">4d4e8a0</a>",
+    "talent_data": {
+        "1": {
+            "1": {
+                "name": "Torrent",
+                "spell_id": "200072"
+            },
+            "2": {
+                "name": "Undulation",
+                "spell_id": "200071"
+            },
+            "3": {
+                "name": "Unleash Life",
+                "spell_id": "73685"
+            }
+        },
+        "2": {
+            "1": {
+                "name": "Echo of the Elements",
+                "spell_id": "108283"
+            },
+            "2": {
+                "name": "Deluge",
+                "spell_id": "200076"
+            },
+            "3": {
+                "name": "Earth Shield",
+                "spell_id": "974"
+            }
+        },
+        "3": {
+            "1": {
+                "name": "Spirit Wolf",
+                "spell_id": "260878"
+            },
+            "2": {
+                "name": "Earthgrab Totem",
+                "spell_id": "51485"
+            },
+            "3": {
+                "name": "Static Charge",
+                "spell_id": "265046"
+            }
+        },
+        "4": {
+            "1": {
+                "name": "Ancestral Vigor",
+                "spell_id": "207401"
+            },
+            "2": {
+                "name": "Earthen Wall Totem",
+                "spell_id": "198838"
+            },
+            "3": {
+                "name": "Ancestral Protection Totem",
+                "spell_id": "207399"
+            }
+        },
+        "5": {
+            "1": {
+                "name": "Nature's Guardian",
+                "spell_id": "30884"
+            },
+            "2": {
+                "name": "Graceful Spirit",
+                "spell_id": "192088"
+            },
+            "3": {
+                "name": "Wind Rush Totem",
+                "spell_id": "192077"
+            }
+        },
+        "6": {
+            "1": {
+                "name": "Flash Flood",
+                "spell_id": "280614"
+            },
+            "2": {
+                "name": "Downpour",
+                "spell_id": "207778"
+            },
+            "3": {
+                "name": "Cloudburst Totem",
+                "spell_id": "157153"
+            }
+        },
+        "7": {
+            "1": {
+                "name": "High Tide",
+                "spell_id": "157154"
+            },
+            "2": {
+                "name": "Wellspring",
+                "spell_id": "197995"
+            },
+            "3": {
+                "name": "Ascendance",
+                "spell_id": "114052"
+            }
+        }
+    },
+    "timestamp": "2019-05-09 10:12",
+    "title": "Races | Restoration Shaman | Hecticaddcleave"
+}

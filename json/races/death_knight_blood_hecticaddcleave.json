@@ -1,18 +1,18 @@
 {
     "class_id": 6,
     "data": {
-        "Blood Elf": 20931,
-        "Draenei": 20880,
-        "Dwarf": 20814,
-        "Gnome": 20850,
-        "Goblin": 20868,
-        "Human": 20879,
-        "Night Elf": 20869,
-        "Orc": 20856,
-        "Tauren": 20828,
-        "Troll": 20850,
-        "Undead": 21044,
-        "Worgen": 20877
+        "Blood Elf": 22020,
+        "Draenei": 21950,
+        "Dwarf": 21918,
+        "Gnome": 21919,
+        "Goblin": 21943,
+        "Human": 21929,
+        "Night Elf": 21973,
+        "Orc": 21879,
+        "Tauren": 21900,
+        "Troll": 22044,
+        "Undead": 22114,
+        "Worgen": 21939
     },
     "data_type": "races",
     "languages": {
@@ -152,9 +152,9 @@
             "talents": "2220022"
         },
         "chest": {
-            "azerite_powers": "348/560/30/13",
+            "azerite_powers": "106/562/462/13",
             "bonus_id": "4824/1537/4775",
-            "id": "165832"
+            "id": "165550"
         },
         "feet": {
             "bonus_id": "4824/1537",
@@ -162,12 +162,12 @@
         },
         "finger1": {
             "bonus_id": "4824/1537",
-            "enchant": "pact_of_haste",
-            "id": "165566"
+            "enchant": "pact_of_versatility",
+            "id": "165565"
         },
         "finger2": {
             "bonus_id": "4824/1537",
-            "enchant": "pact_of_haste",
+            "enchant": "pact_of_versatility",
             "id": "165567"
         },
         "hands": {
@@ -185,9 +185,9 @@
                 "id": "165512"
             },
             "chest": {
-                "azerite_powers": "348/560/30/13",
+                "azerite_powers": "106/562/462/13",
                 "bonus_id": "4824/1537/4775",
-                "id": "165832"
+                "id": "165550"
             },
             "feet": {
                 "bonus_id": "4824/1537",
@@ -195,12 +195,12 @@
             },
             "finger1": {
                 "bonus_id": "4824/1537",
-                "enchant": "pact_of_haste",
-                "id": "165566"
+                "enchant": "pact_of_versatility",
+                "id": "165565"
             },
             "finger2": {
                 "bonus_id": "4824/1537",
-                "enchant": "pact_of_haste",
+                "enchant": "pact_of_versatility",
                 "id": "165567"
             },
             "hands": {
@@ -226,13 +226,13 @@
                 "id": "158075"
             },
             "shoulders": {
-                "azerite_powers": "348/561/22/13",
+                "azerite_powers": "243/562/459/13",
                 "bonus_id": "4824/1537/4775",
-                "id": "165562"
+                "id": "165825"
             },
             "trinket1": {
                 "bonus_id": "4824/1537",
-                "id": "165580"
+                "id": "165574"
             },
             "trinket2": {
                 "bonus_id": "4824/1537",
@@ -265,15 +265,15 @@
         "race": "undead",
         "role": "tank",
         "shoulders": {
-            "azerite_powers": "348/561/22/13",
+            "azerite_powers": "243/562/459/13",
             "bonus_id": "4824/1537/4775",
-            "id": "165562"
+            "id": "165825"
         },
         "spec": "blood",
         "talents": "2220022",
         "trinket1": {
             "bonus_id": "4824/1537",
-            "id": "165580"
+            "id": "165574"
         },
         "trinket2": {
             "bonus_id": "4824/1537",
@@ -293,27 +293,27 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "f5630f4c28",
+        "simc_hash": "4d4e8a0fba",
         "spec": "blood",
         "target_error": "0.2",
         "tier": "23"
     },
     "sorted_data_keys": [
         "Undead",
-        "Blood Elf",
-        "Draenei",
-        "Human",
-        "Worgen",
-        "Night Elf",
-        "Goblin",
-        "Orc",
-        "Gnome",
         "Troll",
+        "Blood Elf",
+        "Night Elf",
+        "Draenei",
+        "Goblin",
+        "Worgen",
+        "Human",
+        "Gnome",
+        "Dwarf",
         "Tauren",
-        "Dwarf"
+        "Orc"
     ],
     "spec_id": 250,
-    "subtitle": "UTC 2019-04-29 04:32 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/f5630f4c28\" target=\"blank\">f5630f4</a>",
+    "subtitle": "UTC 2019-05-09 10:01 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/4d4e8a0fba\" target=\"blank\">4d4e8a0</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -414,6 +414,6 @@
             }
         }
     },
-    "timestamp": "2019-04-29 04:32",
+    "timestamp": "2019-05-09 10:01",
     "title": "Races | Blood Death Knight | Hecticaddcleave"
 }

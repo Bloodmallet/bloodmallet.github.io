@@ -1,0 +1,1700 @@
+{
+    "azerite_forge_patchwerk_itemlevel": "AZFORGE:7:264^[457]370:1148,385:1428,400:1722,415:2120,^[157]370:375,385:594,400:828,415:1073,^[478]370:418,385:594,400:831,415:1073,^[562]370:395,385:613,400:827,415:1066,^[479]370:409,385:598,400:814,415:1065,^[488]370:393,385:535,400:748,415:1025,^[194]370:375,385:561,400:778,415:999,^[494]370:362,385:555,400:766,415:993,^[523]370:353,385:517,400:670,415:969,^[482]370:346,385:514,400:718,415:968,^[522]370:359,385:553,400:711,415:939,^[526]370:360,385:520,400:719,415:886,^[504]370:297,385:476,400:647,415:885,^[448]370:262,385:451,400:651,415:877,^[501]370:316,385:463,400:657,415:854,^[195]370:274,385:442,400:625,415:850,^[495]370:243,385:443,400:623,415:847,^[489]370:246,385:412,400:595,415:845,^[416]370:303,385:489,400:648,415:844,^[498]370:258,385:443,400:618,415:843,^[156]370:264,385:401,400:570,415:824,^[193]370:275,385:448,400:598,415:810,^[500]370:207,385:379,400:581,415:799,^[521]370:245,385:408,400:566,415:783,^[82]370:282,385:458,400:570,415:777,^[561]370:210,385:398,400:572,415:776,^[480]370:281,385:415,400:556,415:757,^[196]370:257,385:398,400:580,415:757,^[30]370:249,385:360,400:534,415:717,^[22]370:171,385:313,400:501,415:716,^[31]370:195,385:344,400:525,415:701,^[486]370:227,385:356,400:504,415:695,^[499]370:151,385:292,400:487,415:686,^[492]370:232,385:384,400:535,415:678,^[462]370:118,385:264,400:396,415:608,^[192]370:125,385:296,400:444,415:608,^[560]370:151,385:282,400:398,415:600,^[541]370:103,385:225,400:407,415:589,^[461]370:106,385:229,400:399,415:575,^[459]370:131,385:245,400:385,415:574,^[38]370:101,385:245,400:401,415:568,^[21]370:106,385:226,400:408,415:565,^[447]370:144,385:278,400:413,415:560,^[491]370:99,385:214,400:395,415:538,^[496]370:64,385:150,400:343,415:531,^[497]370:89,385:217,400:362,415:529,^[490]370:59,385:195,400:340,415:521,^[485]370:338,385:513,^[13]370:73,385:185,400:350,415:485,^[483]370:288,385:475,^[487]370:-13,385:126,400:293,415:457,^[481]370:-4,385:107,400:252,415:442,^[493]370:8,385:116,400:269,415:442,^[505]370:-15,385:127,400:265,415:434,^[18]370:-16,385:138,400:272,415:410,^",
+    "azerite_forge_patchwerk_trait_stacking": "AZFORGE:7:264^[457]1:1678,2:3172,3:4676,^[157]1:631,2:1230,3:1852,^[478]1:631,2:1247,3:1869,^[562]1:624,2:1226,3:1862,^[479]1:623,2:1286,3:1919,^[488]1:583,2:1105,3:1670,^[194]1:557,2:1182,3:1714,^[494]1:551,2:1105,3:1650,^[523]1:527,2:991,3:1489,^[482]1:526,2:1054,3:1602,^[522]1:497,2:946,3:1408,^[526]1:444,2:923,3:1412,^[504]1:443,2:893,3:1325,^[448]1:435,2:827,3:1212,^[501]1:412,^[195]1:408,2:794,3:1218,^[495]1:405,2:792,3:1173,^[489]1:403,2:792,3:1180,^[416]1:402,2:793,3:1184,^[498]1:401,^[156]1:382,2:747,3:1102,^[193]1:368,2:725,3:1137,^[500]1:357,^[521]1:341,2:643,3:937,^[82]1:335,2:667,3:1012,^[561]1:334,2:687,3:1025,^[480]1:315,2:616,3:924,^[196]1:315,2:685,3:974,^[30]1:275,2:587,3:860,^[22]1:274,2:526,3:808,^[31]1:259,2:574,3:870,^[486]1:253,2:561,3:771,^[499]1:244,^[492]1:236,2:521,3:779,^[462]1:166,2:342,3:531,^[192]1:166,2:361,3:540,^[560]1:158,2:298,3:444,^[541]1:147,2:287,3:412,^[461]1:133,2:280,3:413,^[459]1:132,2:265,3:384,^[38]1:126,2:276,3:403,^[21]1:123,2:199,3:335,^[447]1:118,2:125,3:172,^[491]1:96,2:261,3:379,^[496]1:89,2:154,3:228,^[497]1:87,2:207,3:308,^[490]1:79,2:160,3:218,^[485]^[13]1:43,2:129,3:209,^[483]^[487]1:15,2:33,3:19,^[481]1:0,2:-4,3:-4,^[493]1:0,2:13,3:-7,^[505]1:-8,2:5,3:6,^[18]1:-32,2:-18,3:-14,^",
+    "azerite_weight_patchwerk": "( AzeritePowerWeights:1:\"Patchwerk Restoration Shaman\":7:264: 457=1678, 157=631, 478=631, 562=624, 479=623, 488=583, 194=557, 494=551, 523=527, 482=526, 522=497, 526=444, 504=443, 448=435, 501=412, 195=408, 495=405, 489=403, 416=402, 498=401, 156=382, 193=368, 500=357, 521=341, 82=335, 561=334, 480=315, 196=315, 30=275, 22=274, 31=259, 486=253, 499=244, 492=236, 462=166, 192=166, 560=158, 541=147, 461=133, 459=132, 38=126, 21=123, 447=118, 491=96, 496=89, 497=87, 490=79, 485=408, 13=43, 483=370, 487=15, 481=0, 493=0, 505=-8, 18=-32 )",
+    "class_id": 7,
+    "data": {
+        "Ancestral Resonance": {
+            "1_370": 14741,
+            "1_385": 14875,
+            "1_400": 15010,
+            "1_415": 15157,
+            "2_415": 15164,
+            "3_415": 15211
+        },
+        "Ancients' Bulwark": {
+            "1_370": 14956,
+            "1_385": 15150,
+            "1_400": 15308,
+            "1_415": 15536,
+            "2_415": 15985,
+            "3_415": 16447
+        },
+        "Anduin's Dedication": {
+            "1_370": 14840,
+            "1_385": 15040,
+            "1_400": 15220,
+            "1_415": 15444,
+            "2_415": 15831,
+            "3_415": 16212
+        },
+        "Apothecary's Concoctions": {
+            "1_370": 14950,
+            "1_385": 15114,
+            "1_400": 15267,
+            "1_415": 15566,
+            "2_415": 16030,
+            "3_415": 16528
+        },
+        "Archive of the Titans": {
+            "1_370": 14885,
+            "1_385": 15072,
+            "2_385": 15435,
+            "3_385": 15766
+        },
+        "Azerite Empowered": {
+            "1_370": 14670,
+            "1_385": 14782,
+            "1_400": 14947,
+            "1_415": 15082,
+            "2_415": 15168,
+            "3_415": 15248
+        },
+        "Azerite Globules": {
+            "1_370": 14715,
+            "1_385": 14861,
+            "1_400": 14993,
+            "1_415": 15205,
+            "2_415": 15381,
+            "3_415": 15570
+        },
+        "Barrage Of Many Bombs": {
+            "1_370": 14855,
+            "1_385": 15040,
+            "1_400": 15215,
+            "1_415": 15440
+        },
+        "Battlefield Focus": {
+            "1_370": 14990,
+            "1_385": 15132,
+            "1_400": 15345,
+            "1_415": 15622,
+            "2_415": 16144,
+            "3_415": 16709
+        },
+        "Battlefield Precision": {
+            "1_370": 14959,
+            "1_385": 15152,
+            "1_400": 15363,
+            "1_415": 15590,
+            "2_415": 16144,
+            "3_415": 16689
+        },
+        "Blightborne Infusion": {
+            "1_370": 14872,
+            "1_385": 15045,
+            "1_400": 15195,
+            "1_415": 15407,
+            "2_415": 15764,
+            "3_415": 16176
+        },
+        "Blood Rite": {
+            "1_370": 14878,
+            "1_385": 15012,
+            "1_400": 15153,
+            "1_415": 15354,
+            "2_415": 15655,
+            "3_415": 15963
+        },
+        "Blood Siphon": {
+            "1_370": 14581,
+            "1_385": 14735,
+            "1_400": 14869,
+            "1_415": 15007,
+            "2_415": 15021,
+            "3_415": 15025
+        },
+        "Bonded Souls": {
+            "1_370": 14748,
+            "1_385": 14879,
+            "1_400": 14995,
+            "1_415": 15197,
+            "2_415": 15337,
+            "3_415": 15483
+        },
+        "Champion of Azeroth": {
+            "1_370": 14879,
+            "1_385": 15055,
+            "1_400": 15167,
+            "1_415": 15374,
+            "2_415": 15706,
+            "3_415": 16051
+        },
+        "Collective Will": {
+            "1_370": 14696,
+            "1_385": 14811,
+            "1_400": 14992,
+            "1_415": 15135,
+            "2_415": 15300,
+            "3_415": 15418
+        },
+        "Combined Might": {
+            "1_370": 14656,
+            "1_385": 14792,
+            "1_400": 14937,
+            "1_415": 15118,
+            "2_415": 15199,
+            "3_415": 15257
+        },
+        "Dagger in the Back": {
+            "1_370": 15006,
+            "1_385": 15195,
+            "1_400": 15411,
+            "1_415": 15662,
+            "2_415": 16325,
+            "3_415": 16958
+        },
+        "Earthlink": {
+            "1_370": 14703,
+            "1_385": 14826,
+            "1_400": 14996,
+            "1_415": 15172,
+            "2_415": 15319,
+            "3_415": 15452
+        },
+        "Elemental Whirl": {
+            "1_370": 14703,
+            "1_385": 14823,
+            "1_400": 15005,
+            "1_415": 15162,
+            "2_415": 15238,
+            "3_415": 15374
+        },
+        "Endless Hunger": {
+            "1_370": 14957,
+            "1_385": 15117,
+            "1_400": 15316,
+            "1_415": 15483,
+            "2_415": 15962,
+            "3_415": 16451
+        },
+        "Fight or Flight": {
+            "1_370": 14700,
+            "1_385": 14822,
+            "1_400": 15004,
+            "1_415": 15186,
+            "2_415": 15326,
+            "3_415": 15451
+        },
+        "Filthy Transfusion": {
+            "1_370": 14972,
+            "1_385": 15158,
+            "1_400": 15375,
+            "1_415": 15596,
+            "2_415": 16221,
+            "3_415": 16753
+        },
+        "Glory in Battle": {
+            "1_370": 14824,
+            "1_385": 14953,
+            "1_400": 15101,
+            "1_415": 15292,
+            "2_415": 15600,
+            "3_415": 15810
+        },
+        "Gutripper": {
+            "1_370": 14792,
+            "1_385": 14941,
+            "1_400": 15122,
+            "1_415": 15298,
+            "2_415": 15613,
+            "3_415": 15909
+        },
+        "Heed My Call": {
+            "1_370": 14768,
+            "1_385": 14910,
+            "1_400": 15098,
+            "1_415": 15313,
+            "2_415": 15565,
+            "3_415": 15847
+        },
+        "Igneous Potential": {
+            "1_370": 15745,
+            "1_385": 16025,
+            "1_400": 16319,
+            "1_415": 16717,
+            "2_415": 18211,
+            "3_415": 19715
+        },
+        "Incite the Pack": {
+            "1_370": 14593,
+            "1_385": 14704,
+            "1_400": 14849,
+            "1_415": 15039,
+            "2_415": 15035,
+            "3_415": 15035
+        },
+        "Laser Matrix": {
+            "1_370": 14935,
+            "1_385": 15110,
+            "2_385": 15531,
+            "3_385": 15953
+        },
+        "Last Gift": {
+            "1_370": 14605,
+            "1_385": 14713,
+            "1_400": 14866,
+            "1_415": 15039,
+            "2_415": 15052,
+            "3_415": 15032
+        },
+        "Liberator's Might": {
+            "1_370": 14829,
+            "1_385": 14981,
+            "1_400": 15132,
+            "1_415": 15275,
+            "2_415": 15560,
+            "3_415": 15818
+        },
+        "Meticulous Scheming": {
+            "1_370": 14722,
+            "1_385": 14893,
+            "1_400": 15041,
+            "1_415": 15205,
+            "2_415": 15400,
+            "3_415": 15579
+        },
+        "Natural Harmony": {
+            "1_370": 14900,
+            "1_385": 15086,
+            "1_400": 15245,
+            "1_415": 15441,
+            "2_415": 15832,
+            "3_415": 16223
+        },
+        "On My Way": {
+            "1_370": 14698,
+            "1_385": 14842,
+            "1_400": 14998,
+            "1_415": 15165,
+            "2_415": 15315,
+            "3_415": 15442
+        },
+        "Overwhelming Power": {
+            "1_370": 14846,
+            "1_385": 14957,
+            "1_400": 15131,
+            "1_415": 15314,
+            "2_415": 15626,
+            "3_415": 15899
+        },
+        "Relational Normalization Gizmo": {
+            "1_370": 14913,
+            "1_385": 15060,
+            "1_400": 15254,
+            "1_415": 15451
+        },
+        "Retaliatory Fury": {
+            "1_370": 14584,
+            "1_385": 14723,
+            "1_400": 14890,
+            "1_415": 15054,
+            "2_415": 15072,
+            "3_415": 15058
+        },
+        "Rezan's Fury": {
+            "1_370": 14972,
+            "1_385": 15191,
+            "1_400": 15425,
+            "1_415": 15670,
+            "2_415": 16269,
+            "3_415": 16891
+        },
+        "Ricocheting Inflatable Pyrosaw": {
+            "1_370": 14748,
+            "1_385": 14889,
+            "1_400": 15084,
+            "1_415": 15283
+        },
+        "Ruinous Bolt": {
+            "1_370": 14861,
+            "1_385": 14998,
+            "1_400": 15167,
+            "1_415": 15421,
+            "2_415": 15786,
+            "3_415": 16141
+        },
+        "Secrets of the Deep": {
+            "1_370": 14871,
+            "1_385": 15039,
+            "1_400": 15222,
+            "1_415": 15447,
+            "2_415": 15833,
+            "3_415": 16257
+        },
+        "Seductive Power": {
+            "1_370": 14807,
+            "1_385": 14995,
+            "1_400": 15169,
+            "1_415": 15373,
+            "2_415": 15726,
+            "3_415": 16064
+        },
+        "Shadow of Elune": {
+            "1_370": 14842,
+            "1_385": 15005,
+            "1_400": 15163,
+            "1_415": 15380,
+            "2_415": 15682,
+            "3_415": 15976
+        },
+        "Stand As One": {
+            "1_370": 14686,
+            "1_385": 14814,
+            "1_400": 14959,
+            "1_415": 15126,
+            "2_415": 15246,
+            "3_415": 15347
+        },
+        "Stronger Together": {
+            "1_370": 14661,
+            "1_385": 14747,
+            "1_400": 14940,
+            "1_415": 15128,
+            "2_415": 15193,
+            "3_415": 15267
+        },
+        "Swirling Sands": {
+            "1_370": 14854,
+            "1_385": 14995,
+            "1_400": 15177,
+            "1_415": 15354,
+            "2_415": 15724,
+            "3_415": 16013
+        },
+        "Sylvanas' Resolve": {
+            "1_370": 14843,
+            "1_385": 15009,
+            "1_400": 15192,
+            "1_415": 15442,
+            "2_415": 15831,
+            "3_415": 16219
+        },
+        "Synapse Shock": {
+            "1_370": 14859,
+            "1_385": 15048,
+            "1_400": 15248,
+            "1_415": 15474,
+            "2_415": 15866,
+            "3_415": 16251
+        },
+        "Synaptic Spark Capacitor": {
+            "1_370": 14804,
+            "1_385": 14976,
+            "1_400": 15178,
+            "1_415": 15396
+        },
+        "Thunderous Blast": {
+            "1_370": 14943,
+            "1_385": 15111,
+            "1_400": 15315,
+            "1_415": 15565,
+            "2_415": 16093,
+            "3_415": 16641
+        },
+        "Tidal Surge": {
+            "1_370": 15015,
+            "1_385": 15191,
+            "1_400": 15428,
+            "1_415": 15670,
+            "2_415": 16286,
+            "3_415": 16908
+        },
+        "Tradewinds": {
+            "1_370": 14582,
+            "1_385": 14724,
+            "1_400": 14862,
+            "1_415": 15031,
+            "2_415": 15044,
+            "3_415": 15045
+        },
+        "Treacherous Covenant": {
+            "1_370": 14992,
+            "1_385": 15210,
+            "1_400": 15424,
+            "1_415": 15663,
+            "2_415": 16265,
+            "3_415": 16901
+        },
+        "Unstable Catalyst": {
+            "1_370": 14894,
+            "1_385": 15073,
+            "1_400": 15244,
+            "1_415": 15482,
+            "2_415": 15932,
+            "3_415": 16364
+        },
+        "Unstable Flames": {
+            "1_370": 14728,
+            "1_385": 14842,
+            "1_400": 14982,
+            "1_415": 15171,
+            "2_415": 15304,
+            "3_415": 15423
+        },
+        "baseline": {
+            "1_370": 14597,
+            "1_385": 14702,
+            "1_400": 14864,
+            "1_415": 15039
+        }
+    },
+    "data_type": "azerite_traits",
+    "languages": {
+        "Ancestral Resonance": {
+            "cn_CN": "先祖共鸣",
+            "de_DE": "Resonanz der Ahnen",
+            "en_US": "Ancestral Resonance",
+            "es_ES": "Resonancia ancestral",
+            "fr_FR": "Résonance ancestrale",
+            "it_IT": "Risonanza Ancestrale",
+            "ko_KR": "고대의 공명",
+            "pt_BR": "Ressonância Ancestral",
+            "ru_RU": "Отголосок предков"
+        },
+        "Ancients' Bulwark": {
+            "cn_CN": "Ancients' Bulwark",
+            "de_DE": "Ancients' Bulwark",
+            "en_US": "Ancients' Bulwark",
+            "es_ES": "Ancients' Bulwark",
+            "fr_FR": "Ancients' Bulwark",
+            "it_IT": "Ancients' Bulwark",
+            "ko_KR": "Ancients' Bulwark",
+            "pt_BR": "Ancients' Bulwark",
+            "ru_RU": "Ancients' Bulwark"
+        },
+        "Anduin's Dedication": {
+            "cn_CN": "安杜因的奉献",
+            "de_DE": "Anduins Hingabe",
+            "en_US": "Anduin's Dedication",
+            "es_ES": "Dedicación de Anduin",
+            "fr_FR": "Dévouement à Anduin",
+            "it_IT": "Devozione di Anduin",
+            "ko_KR": "안두인의 헌신",
+            "pt_BR": "Dedicação de Anduin",
+            "ru_RU": "Преданность Андуина"
+        },
+        "Apothecary's Concoctions": {
+            "cn_CN": "Apothecary's Concoctions",
+            "de_DE": "Apothecary's Concoctions",
+            "en_US": "Apothecary's Concoctions",
+            "es_ES": "Apothecary's Concoctions",
+            "fr_FR": "Apothecary's Concoctions",
+            "it_IT": "Apothecary's Concoctions",
+            "ko_KR": "Apothecary's Concoctions",
+            "pt_BR": "Apothecary's Concoctions",
+            "ru_RU": "Apothecary's Concoctions"
+        },
+        "Archive of the Titans": {
+            "cn_CN": "泰坦档案库",
+            "de_DE": "Archiv der Titanen",
+            "en_US": "Archive of the Titans",
+            "es_ES": "Archivo de los titanes",
+            "fr_FR": "Archive des titans",
+            "it_IT": "Archivio dei Titani",
+            "ko_KR": "티탄의 기록",
+            "pt_BR": "Arquivo dos Titãs",
+            "ru_RU": "Архив титанов"
+        },
+        "Azerite Empowered": {
+            "cn_CN": "艾泽里特强化",
+            "de_DE": "Azeritverstärkt",
+            "en_US": "Azerite Empowered",
+            "es_ES": "Azerita potenciada",
+            "fr_FR": "Renforcé par l’azérite",
+            "it_IT": "Potenziamento d'Azerite",
+            "ko_KR": "강화된 아제라이트",
+            "pt_BR": "Potencializado com Azerita",
+            "ru_RU": "Азеритовое усиление"
+        },
+        "Azerite Globules": {
+            "cn_CN": "艾泽里特液球",
+            "de_DE": "Azeritkugeln",
+            "en_US": "Azerite Globules",
+            "es_ES": "Glóbulos de azerita",
+            "fr_FR": "Globules d’azérite",
+            "it_IT": "Globuli d'Azerite",
+            "ko_KR": "아제라이트 방울",
+            "pt_BR": "Glóbulos de Azerita",
+            "ru_RU": "Капли азерита"
+        },
+        "Barrage Of Many Bombs": {
+            "cn_CN": "分裂炸弹",
+            "de_DE": "Streubombenhagel",
+            "en_US": "Barrage Of Many Bombs",
+            "es_ES": "Tromba de muchas bombas",
+            "fr_FR": "Barrage de bombes",
+            "it_IT": "Raffica di Molte Bombe",
+            "ko_KR": "폭탄폭탄 포화",
+            "pt_BR": "Barragem de Muitas Bombas",
+            "ru_RU": "Бомбы, бомбы и еще раз бомбы"
+        },
+        "Battlefield Focus": {
+            "cn_CN": "战场集火",
+            "de_DE": "Schlachtfeldfokus",
+            "en_US": "Battlefield Focus",
+            "es_ES": "Foco del campo de batalla",
+            "fr_FR": "Concentration du combattant",
+            "it_IT": "Focus del Campo di Battaglia",
+            "ko_KR": "전장의 주목",
+            "pt_BR": "Concentração no Campo de Batalha",
+            "ru_RU": "Боевое сосредоточение"
+        },
+        "Battlefield Precision": {
+            "cn_CN": "战场精准",
+            "de_DE": "Schlachtfeldpräzision",
+            "en_US": "Battlefield Precision",
+            "es_ES": "Precisión de campo de batalla",
+            "fr_FR": "Précision du champ de bataille",
+            "it_IT": "Precisione del Campo di Battaglia",
+            "ko_KR": "전장의 치밀함",
+            "pt_BR": "Precisão no Campo de Batalha",
+            "ru_RU": "Боевая точность"
+        },
+        "Blightborne Infusion": {
+            "cn_CN": "枯败灌注",
+            "de_DE": "Seuchenerbeninfusion",
+            "en_US": "Blightborne Infusion",
+            "es_ES": "Infusión de vástagos del añublo",
+            "fr_FR": "Infusion chancre-née",
+            "it_IT": "Infusione della Piaga Nascente",
+            "ko_KR": "파멸뿌리 주입",
+            "pt_BR": "Infusão Filha da Praga",
+            "ru_RU": "Насыщение гнилью"
+        },
+        "Blood Rite": {
+            "cn_CN": "血祭之力",
+            "de_DE": "Blutritus",
+            "en_US": "Blood Rite",
+            "es_ES": "Rito de sangre",
+            "fr_FR": "Rite de sang",
+            "it_IT": "Rito del Sangue",
+            "ko_KR": "피의 의례",
+            "pt_BR": "Rito de Sangue",
+            "ru_RU": "Кровавый ритуал"
+        },
+        "Blood Siphon": {
+            "cn_CN": "鲜血虹吸",
+            "de_DE": "Blutsog",
+            "en_US": "Blood Siphon",
+            "es_ES": "Succión de sangre",
+            "fr_FR": "Siphon de sang",
+            "it_IT": "Aspirazione del Sangue",
+            "ko_KR": "피의 착취",
+            "pt_BR": "Sifão de Sangue",
+            "ru_RU": "Вытягивание крови"
+        },
+        "Bonded Souls": {
+            "cn_CN": "Bonded Souls",
+            "de_DE": "Bonded Souls",
+            "en_US": "Bonded Souls",
+            "es_ES": "Bonded Souls",
+            "fr_FR": "Bonded Souls",
+            "it_IT": "Bonded Souls",
+            "ko_KR": "Bonded Souls",
+            "pt_BR": "Bonded Souls",
+            "ru_RU": "Bonded Souls"
+        },
+        "Champion of Azeroth": {
+            "cn_CN": "艾泽拉斯的勇士",
+            "de_DE": "Champion von Azeroth",
+            "en_US": "Champion of Azeroth",
+            "es_ES": "Campeón de Azeroth",
+            "fr_FR": "Champion d’Azeroth",
+            "it_IT": "Campione di Azeroth",
+            "ko_KR": "아제로스의 용사",
+            "pt_BR": "Campeão de Azeroth",
+            "ru_RU": "Защитник Азерот"
+        },
+        "Collective Will": {
+            "cn_CN": "集体意志",
+            "de_DE": "Vereinter Wille",
+            "en_US": "Collective Will",
+            "es_ES": "Voluntad colectiva",
+            "fr_FR": "Volonté collective",
+            "it_IT": "Volontà Collettiva",
+            "ko_KR": "단합된 의지",
+            "pt_BR": "Vontade Coletiva",
+            "ru_RU": "Совместная воля"
+        },
+        "Combined Might": {
+            "cn_CN": "团结之力",
+            "de_DE": "Geballte Macht",
+            "en_US": "Combined Might",
+            "es_ES": "Poderío combinado",
+            "fr_FR": "Puissance combinée",
+            "it_IT": "Vigore Combinato",
+            "ko_KR": "하나된 힘",
+            "pt_BR": "Força Combinada",
+            "ru_RU": "Объединенная мощь"
+        },
+        "Dagger in the Back": {
+            "cn_CN": "影中暗刃",
+            "de_DE": "Dolch im Rücken",
+            "en_US": "Dagger in the Back",
+            "es_ES": "Daga en la espalda",
+            "fr_FR": "Dague surprise",
+            "it_IT": "Pugnalata alla Schiena",
+            "ko_KR": "등 뒤의 단도",
+            "pt_BR": "Adaga nas Costas",
+            "ru_RU": "Кинжал в спину"
+        },
+        "Earthlink": {
+            "cn_CN": "大地链接",
+            "de_DE": "Erdenband",
+            "en_US": "Earthlink",
+            "es_ES": "Vínculo terrestre",
+            "fr_FR": "Lien de terre",
+            "it_IT": "Legame Terrestre",
+            "ko_KR": "대지연결",
+            "pt_BR": "Vínculo Terreno",
+            "ru_RU": "Узы земли"
+        },
+        "Elemental Whirl": {
+            "cn_CN": "元素回旋",
+            "de_DE": "Elementarwirbel",
+            "en_US": "Elemental Whirl",
+            "es_ES": "Remolino elemental",
+            "fr_FR": "Tourbillon élémentaire",
+            "it_IT": "Turbine Elementale",
+            "ko_KR": "정령 소용돌이",
+            "pt_BR": "Redemoinho Elemental",
+            "ru_RU": "Круговерть стихий"
+        },
+        "Endless Hunger": {
+            "cn_CN": "Endless Hunger",
+            "de_DE": "Endless Hunger",
+            "en_US": "Endless Hunger",
+            "es_ES": "Endless Hunger",
+            "fr_FR": "Endless Hunger",
+            "it_IT": "Endless Hunger",
+            "ko_KR": "Endless Hunger",
+            "pt_BR": "Endless Hunger",
+            "ru_RU": "Endless Hunger"
+        },
+        "Fight or Flight": {
+            "cn_CN": "Fight or Flight",
+            "de_DE": "Fight or Flight",
+            "en_US": "Fight or Flight",
+            "es_ES": "Fight or Flight",
+            "fr_FR": "Fight or Flight",
+            "it_IT": "Fight or Flight",
+            "ko_KR": "Fight or Flight",
+            "pt_BR": "Fight or Flight",
+            "ru_RU": "Fight or Flight"
+        },
+        "Filthy Transfusion": {
+            "cn_CN": "污秽传输",
+            "de_DE": "Schmutzige Transfusion",
+            "en_US": "Filthy Transfusion",
+            "es_ES": "Transfusión inmunda",
+            "fr_FR": "Transfusion contaminée",
+            "it_IT": "Trasfusione Sudicia",
+            "ko_KR": "타락 주입",
+            "pt_BR": "Transfusão Imunda",
+            "ru_RU": "Пагубное переливание"
+        },
+        "Glory in Battle": {
+            "cn_CN": "战斗荣耀",
+            "de_DE": "Ruhm im Kampf",
+            "en_US": "Glory in Battle",
+            "es_ES": "Gloria en la batalla",
+            "fr_FR": "Gloire au combat",
+            "it_IT": "Gloria in Battaglia",
+            "ko_KR": "전장의 영광",
+            "pt_BR": "Glória em Combate",
+            "ru_RU": "Боевая слава"
+        },
+        "Gutripper": {
+            "cn_CN": "裂肠者",
+            "de_DE": "Magenfetzer",
+            "en_US": "Gutripper",
+            "es_ES": "Arrancatripas",
+            "fr_FR": "Arrache-tripes",
+            "it_IT": "Sbudellamento",
+            "ko_KR": "내장 파열",
+            "pt_BR": "Rasgatripa",
+            "ru_RU": "Вспарывание"
+        },
+        "Heed My Call": {
+            "cn_CN": "听从我的召唤",
+            "de_DE": "Hört meinen Ruf",
+            "en_US": "Heed My Call",
+            "es_ES": "Escuchar mi llamada",
+            "fr_FR": "Entendez mon appel",
+            "it_IT": "Ascolto della Chiamata",
+            "ko_KR": "내 부름에 응하라",
+            "pt_BR": "Ouça Meu Chamado",
+            "ru_RU": "Услышь мой зов"
+        },
+        "Igneous Potential": {
+            "cn_CN": "火岩潜能",
+            "de_DE": "Eruptives Potenzial",
+            "en_US": "Igneous Potential",
+            "es_ES": "Potencial ígneo",
+            "fr_FR": "Potentiel igné",
+            "it_IT": "Potenziale Igneo",
+            "ko_KR": "화성암의 잠재력",
+            "pt_BR": "Potencial Ígneo",
+            "ru_RU": "Горючий потенциал"
+        },
+        "Incite the Pack": {
+            "cn_CN": "激励兽群",
+            "de_DE": "Rudelansporn",
+            "en_US": "Incite the Pack",
+            "es_ES": "Incitar a la manada",
+            "fr_FR": "Provoquer la meute",
+            "it_IT": "Incitamento del Branco",
+            "ko_KR": "무리 선동자",
+            "pt_BR": "Incitar a Matilha",
+            "ru_RU": "Азарт стаи"
+        },
+        "Laser Matrix": {
+            "cn_CN": "激光矩阵",
+            "de_DE": "Lasermatrix",
+            "en_US": "Laser Matrix",
+            "es_ES": "Matriz láser",
+            "fr_FR": "Matrice laser",
+            "it_IT": "Matrice Laser",
+            "ko_KR": "레이저 매트릭스",
+            "pt_BR": "Matriz de Laser",
+            "ru_RU": "Лазерная решетка"
+        },
+        "Last Gift": {
+            "cn_CN": "最终赠礼",
+            "de_DE": "Letzte Gabe",
+            "en_US": "Last Gift",
+            "es_ES": "Última ofrenda",
+            "fr_FR": "Dernière offrande",
+            "it_IT": "Ultimo Dono",
+            "ko_KR": "마지막 선물",
+            "pt_BR": "Última Dádiva",
+            "ru_RU": "Прощальный дар"
+        },
+        "Liberator's Might": {
+            "cn_CN": "解放者之力",
+            "de_DE": "Macht des Befreiers",
+            "en_US": "Liberator's Might",
+            "es_ES": "Poderío de liberador",
+            "fr_FR": "Puissance du libérateur",
+            "it_IT": "Vigore del Liberatore",
+            "ko_KR": "해방자의 힘",
+            "pt_BR": "Poder do Libertador",
+            "ru_RU": "Мощь освободителя"
+        },
+        "Meticulous Scheming": {
+            "cn_CN": "缜密计谋",
+            "de_DE": "Durchtriebene Intrigen",
+            "en_US": "Meticulous Scheming",
+            "es_ES": "Intriga meticulosa",
+            "fr_FR": "Planification méticuleuse",
+            "it_IT": "Intrigo Meticoloso",
+            "ko_KR": "절묘한 계획",
+            "pt_BR": "Maquinações Meticulosas",
+            "ru_RU": "Скрупулезное планирование"
+        },
+        "Natural Harmony": {
+            "cn_CN": "自然和谐",
+            "de_DE": "Naturgegebene Harmonie",
+            "en_US": "Natural Harmony",
+            "es_ES": "Armonía natural",
+            "fr_FR": "Harmonie naturelle",
+            "it_IT": "Armonia Naturale",
+            "ko_KR": "자연 친화",
+            "pt_BR": "Harmonia Natural",
+            "ru_RU": "Гармония стихий"
+        },
+        "On My Way": {
+            "cn_CN": "正在赶来",
+            "de_DE": "Unterwegs",
+            "en_US": "On My Way",
+            "es_ES": "En camino",
+            "fr_FR": "En route",
+            "it_IT": "Sulla Strada",
+            "ko_KR": "지금 갑니다",
+            "pt_BR": "A Caminho",
+            "ru_RU": "Полный вперед"
+        },
+        "Overwhelming Power": {
+            "cn_CN": "压倒能量",
+            "de_DE": "Überwältigende Kraft",
+            "en_US": "Overwhelming Power",
+            "es_ES": "Poder sobrecogedor",
+            "fr_FR": "Puissance accablante",
+            "it_IT": "Potenza Opprimente",
+            "ko_KR": "압도적인 힘",
+            "pt_BR": "Poder Subjugador",
+            "ru_RU": "Переполняющая мощь"
+        },
+        "Relational Normalization Gizmo": {
+            "cn_CN": "相对性常态化装置",
+            "de_DE": "Relationsnormalisierungsskalierer",
+            "en_US": "Relational Normalization Gizmo",
+            "es_ES": "Chisme de normalización relacional",
+            "fr_FR": "Bidule de normalisation relationnelle",
+            "it_IT": "Ingranaggio Normalizzante Relazionale",
+            "ko_KR": "상대적 대상 표준화 장치",
+            "pt_BR": "Dispositivo de Normalização Relacional",
+            "ru_RU": "Релятивистский нормализационный гаджет"
+        },
+        "Retaliatory Fury": {
+            "cn_CN": "反击之怒",
+            "de_DE": "Vergeltungsfuror",
+            "en_US": "Retaliatory Fury",
+            "es_ES": "Furia vengativa",
+            "fr_FR": "Fureur de représailles",
+            "it_IT": "Furia di Rappresaglia",
+            "ko_KR": "분노의 복수",
+            "pt_BR": "Fúria Retaliatória",
+            "ru_RU": "Яростная контратака"
+        },
+        "Rezan's Fury": {
+            "cn_CN": "莱赞之怒",
+            "de_DE": "Rezans Furor",
+            "en_US": "Rezan's Fury",
+            "es_ES": "Furia de Rezan",
+            "fr_FR": "Fureur de Rezan",
+            "it_IT": "Furia di Rezan",
+            "ko_KR": "레잔의 격노",
+            "pt_BR": "Fúria de Rezan",
+            "ru_RU": "Ярость Резана"
+        },
+        "Ricocheting Inflatable Pyrosaw": {
+            "cn_CN": "炽热弹射油锯",
+            "de_DE": "Rumspringende irritierende Pyrosäge",
+            "en_US": "Ricocheting Inflatable Pyrosaw",
+            "es_ES": "Rebotador inflable pírico",
+            "fr_FR": "Robo-scie Imprévisible Pyromaniaque",
+            "it_IT": "Rimbalzante Ingombante Pirosega",
+            "ko_KR": "잠시 드리우면 소각하는 서슬톱",
+            "pt_BR": "Rotosserra Inflável Pirotequicante",
+            "ru_RU": "Гоблинская рикошетящая огненная бензопила"
+        },
+        "Ruinous Bolt": {
+            "cn_CN": "毁灭箭",
+            "de_DE": "Zermürbender Blitz",
+            "en_US": "Ruinous Bolt",
+            "es_ES": "Descarga ruinosa",
+            "fr_FR": "Éclair ruineux",
+            "it_IT": "Dardo Rovinoso",
+            "ko_KR": "황폐의 화살",
+            "pt_BR": "Seta Ruinosa",
+            "ru_RU": "Губительная стрела"
+        },
+        "Secrets of the Deep": {
+            "cn_CN": "深渊秘密",
+            "de_DE": "Geheimnisse der Tiefe",
+            "en_US": "Secrets of the Deep",
+            "es_ES": "Secretos de las profundidades",
+            "fr_FR": "Secrets des profondeurs",
+            "it_IT": "Segreti del Profondo",
+            "ko_KR": "심연의 비밀",
+            "pt_BR": "Segredos das Profundezas",
+            "ru_RU": "Тайны глубин"
+        },
+        "Seductive Power": {
+            "cn_CN": "Seductive Power",
+            "de_DE": "Seductive Power",
+            "en_US": "Seductive Power",
+            "es_ES": "Seductive Power",
+            "fr_FR": "Seductive Power",
+            "it_IT": "Seductive Power",
+            "ko_KR": "Seductive Power",
+            "pt_BR": "Seductive Power",
+            "ru_RU": "Seductive Power"
+        },
+        "Shadow of Elune": {
+            "cn_CN": "Shadow of Elune",
+            "de_DE": "Shadow of Elune",
+            "en_US": "Shadow of Elune",
+            "es_ES": "Shadow of Elune",
+            "fr_FR": "Shadow of Elune",
+            "it_IT": "Shadow of Elune",
+            "ko_KR": "Shadow of Elune",
+            "pt_BR": "Shadow of Elune",
+            "ru_RU": "Shadow of Elune"
+        },
+        "Stand As One": {
+            "cn_CN": "团结一致",
+            "de_DE": "Vereint stehen",
+            "en_US": "Stand As One",
+            "es_ES": "Luchar unidos",
+            "fr_FR": "Front uni",
+            "it_IT": "Combattere Uniti",
+            "ko_KR": "하나된 결의",
+            "pt_BR": "Todos Juntos",
+            "ru_RU": "Все за мной!"
+        },
+        "Stronger Together": {
+            "cn_CN": "众志成城",
+            "de_DE": "Gemeinsam stärker",
+            "en_US": "Stronger Together",
+            "es_ES": "La unión hace la fuerza",
+            "fr_FR": "L’union fait la force",
+            "it_IT": "Uniti si Vince",
+            "ko_KR": "강인한 협력",
+            "pt_BR": "Juntos Somos Mais Fortes",
+            "ru_RU": "Сила в единстве"
+        },
+        "Swirling Sands": {
+            "cn_CN": "呼啸狂沙",
+            "de_DE": "Wirbelnde Sande",
+            "en_US": "Swirling Sands",
+            "es_ES": "Remolino de arena",
+            "fr_FR": "Sables tourbillonnants",
+            "it_IT": "Sabbie Vorticanti",
+            "ko_KR": "소용돌이치는 모래",
+            "pt_BR": "Turbilhão de Areia",
+            "ru_RU": "Песчаный вихрь"
+        },
+        "Sylvanas' Resolve": {
+            "cn_CN": "希尔瓦娜斯的决心",
+            "de_DE": "Sylvanas' Entschlossenheit",
+            "en_US": "Sylvanas' Resolve",
+            "es_ES": "Resolución de Sylvanas",
+            "fr_FR": "Résolution de Sylvanas",
+            "it_IT": "Risolutezza di Sylvanas",
+            "ko_KR": "실바나스의 결의",
+            "pt_BR": "Determinação de Sylvana",
+            "ru_RU": "Непреклонность Сильваны"
+        },
+        "Synapse Shock": {
+            "cn_CN": "神经电激",
+            "de_DE": "Synapsenschock",
+            "en_US": "Synapse Shock",
+            "es_ES": "Choque de sinapsis",
+            "fr_FR": "Choc synaptique",
+            "it_IT": "Folgore delle Sinapsi",
+            "ko_KR": "신경전달 충격",
+            "pt_BR": "Choque Sináptico",
+            "ru_RU": "Подзарядка синапсов"
+        },
+        "Synaptic Spark Capacitor": {
+            "cn_CN": "突触火花电容",
+            "de_DE": "Synaptischer Funkenkompensator",
+            "en_US": "Synaptic Spark Capacitor",
+            "es_ES": "Condensador de chispas sináptico",
+            "fr_FR": "Condensateur d’allumage synaptique",
+            "it_IT": "Condensatore di Scintille Sinaptico",
+            "ko_KR": "신경계 전깃불 축전기",
+            "pt_BR": "Capacitador de Centelhas Sinápticas",
+            "ru_RU": "Конденсатор синаптического разряда"
+        },
+        "Thunderous Blast": {
+            "cn_CN": "雷霆冲击",
+            "de_DE": "Donnernder Einschlag",
+            "en_US": "Thunderous Blast",
+            "es_ES": "Explosión atronadora",
+            "fr_FR": "Explosion tonitruante",
+            "it_IT": "Detonazione Tonante",
+            "ko_KR": "천둥 작렬",
+            "pt_BR": "Impacto Trovejante",
+            "ru_RU": "Раскатистый гром"
+        },
+        "Tidal Surge": {
+            "cn_CN": "海潮涌动",
+            "de_DE": "Gezeitenwoge",
+            "en_US": "Tidal Surge",
+            "es_ES": "Fuerza del oleaje",
+            "fr_FR": "Reflux des marée",
+            "it_IT": "Inoculazione Mareale",
+            "ko_KR": "굽이치는 파도",
+            "pt_BR": "Surto das Marés",
+            "ru_RU": "Приливная волна"
+        },
+        "Tradewinds": {
+            "cn_CN": "汇帆",
+            "de_DE": "Handelswinde",
+            "en_US": "Tradewinds",
+            "es_ES": "Vientos alisios",
+            "fr_FR": "Alizés",
+            "it_IT": "Ventisaldi",
+            "ko_KR": "무역풍",
+            "pt_BR": "Vento Mercante",
+            "ru_RU": "Семь Ветров"
+        },
+        "Treacherous Covenant": {
+            "cn_CN": "Treacherous Covenant",
+            "de_DE": "Treacherous Covenant",
+            "en_US": "Treacherous Covenant",
+            "es_ES": "Treacherous Covenant",
+            "fr_FR": "Treacherous Covenant",
+            "it_IT": "Treacherous Covenant",
+            "ko_KR": "Treacherous Covenant",
+            "pt_BR": "Treacherous Covenant",
+            "ru_RU": "Treacherous Covenant"
+        },
+        "Unstable Catalyst": {
+            "cn_CN": "不稳定的催化剂",
+            "de_DE": "Instabiler Katalysator",
+            "en_US": "Unstable Catalyst",
+            "es_ES": "Catalizador inestable",
+            "fr_FR": "Catalyseur instable",
+            "it_IT": "Catalizzatore Instabile",
+            "ko_KR": "불안정한 촉매",
+            "pt_BR": "Catalisador Instável",
+            "ru_RU": "Неустойчивый катализатор"
+        },
+        "Unstable Flames": {
+            "cn_CN": "不稳定的烈焰",
+            "de_DE": "Instabile Flammen",
+            "en_US": "Unstable Flames",
+            "es_ES": "Llamas inestables",
+            "fr_FR": "Flammes instables",
+            "it_IT": "Fiamme Instabili",
+            "ko_KR": "불안정한 불길",
+            "pt_BR": "Chamas Instáveis",
+            "ru_RU": "Нестабильное пламя"
+        }
+    },
+    "profile": {
+        "back": {
+            "bonus_id": "4800/1537",
+            "id": "165512"
+        },
+        "character": {
+            "class": "shaman",
+            "level": "120",
+            "position": "ranged_back",
+            "race": "tauren",
+            "role": "spell",
+            "spec": "restoration",
+            "talents": "1132221"
+        },
+        "chest": {
+            "bonus_id": "1537/4823/4775",
+            "id": "165540"
+        },
+        "feet": {
+            "bonus_id": "4800/1537",
+            "id": "165541"
+        },
+        "finger1": {
+            "bonus_id": "4800/1537",
+            "enchant": "pact_of_versatility",
+            "id": "165567"
+        },
+        "finger2": {
+            "bonus_id": "1572/4777",
+            "enchant": "pact_of_versatility",
+            "id": "159458"
+        },
+        "hands": {
+            "bonus_id": "1572/4777",
+            "id": "155892"
+        },
+        "head": {
+            "bonus_id": "1587/4819/4775",
+            "id": "159391"
+        },
+        "items": {
+            "back": {
+                "bonus_id": "4800/1537",
+                "id": "165512"
+            },
+            "chest": {
+                "azerite_powers": "457/562/31/474/13",
+                "bonus_id": "1537/4823/4775",
+                "id": "165540"
+            },
+            "feet": {
+                "bonus_id": "4800/1537",
+                "id": "165541"
+            },
+            "finger1": {
+                "bonus_id": "4800/1537",
+                "enchant": "pact_of_versatility",
+                "id": "165567"
+            },
+            "finger2": {
+                "bonus_id": "1572/4777",
+                "enchant": "pact_of_versatility",
+                "id": "159458"
+            },
+            "hands": {
+                "bonus_id": "1572/4777",
+                "id": "155892"
+            },
+            "head": {
+                "azerite_powers": "457/416/30/83/13",
+                "bonus_id": "1587/4819/4775",
+                "id": "159391"
+            },
+            "legs": {
+                "bonus_id": "1572/4777",
+                "id": "159375"
+            },
+            "main_hand": {
+                "bonus_id": "4800/1537/4786",
+                "enchant": "versatile_navigation",
+                "id": "165597"
+            },
+            "neck": {
+                "bonus_id": "4929/5814/4936/1566",
+                "id": "158075"
+            },
+            "shoulders": {
+                "azerite_powers": "457/194/38/83/13",
+                "bonus_id": "1587/4819/4775",
+                "id": "159385"
+            },
+            "trinket1": {
+                "bonus_id": "4800/1537",
+                "id": "165581"
+            },
+            "trinket2": {
+                "bonus_id": "4800/1537",
+                "id": "165576"
+            },
+            "waist": {
+                "bonus_id": "4800/1537",
+                "id": "165538"
+            },
+            "wrists": {
+                "bonus_id": "4800/1537",
+                "id": "165542"
+            }
+        },
+        "legs": {
+            "bonus_id": "1572/4777",
+            "id": "159375"
+        },
+        "level": "120",
+        "main_hand": {
+            "bonus_id": "4800/1537/4786",
+            "enchant": "versatile_navigation",
+            "id": "165597"
+        },
+        "neck": {
+            "bonus_id": "4929/5814/4936/1566",
+            "id": "158075"
+        },
+        "position": "ranged_back",
+        "race": "tauren",
+        "role": "spell",
+        "shoulders": {
+            "bonus_id": "1587/4819/4775",
+            "id": "159385"
+        },
+        "spec": "restoration",
+        "talents": "1132221",
+        "trinket1": {
+            "bonus_id": "4800/1537",
+            "id": "165581"
+        },
+        "trinket2": {
+            "bonus_id": "4800/1537",
+            "id": "165576"
+        },
+        "waist": {
+            "bonus_id": "4800/1537",
+            "id": "165538"
+        },
+        "wrists": {
+            "bonus_id": "4800/1537",
+            "id": "165542"
+        }
+    },
+    "simc_settings": {
+        "class": "shaman",
+        "fight_style": "patchwerk",
+        "iterations": "20000",
+        "ptr": "0",
+        "simc_hash": "4d4e8a0fba",
+        "spec": "restoration",
+        "target_error": "0.2",
+        "tier": "23"
+    },
+    "simulated_steps": [
+        "1_415",
+        "1_400",
+        "1_385",
+        "1_370"
+    ],
+    "sorted_azerite_tier_1_itemlevel": [
+        "Igneous Potential",
+        "Rezan's Fury",
+        "Tidal Surge",
+        "Treacherous Covenant",
+        "Dagger in the Back",
+        "Battlefield Focus",
+        "Filthy Transfusion",
+        "Battlefield Precision",
+        "Apothecary's Concoctions",
+        "Thunderous Blast",
+        "Ancients' Bulwark",
+        "Endless Hunger",
+        "Unstable Catalyst",
+        "Synapse Shock",
+        "Relational Normalization Gizmo",
+        "Secrets of the Deep",
+        "Anduin's Dedication",
+        "Sylvanas' Resolve",
+        "Natural Harmony",
+        "Barrage Of Many Bombs",
+        "Ruinous Bolt",
+        "Blightborne Infusion",
+        "Synaptic Spark Capacitor",
+        "Shadow of Elune",
+        "Champion of Azeroth",
+        "Seductive Power",
+        "Blood Rite",
+        "Swirling Sands",
+        "Glory in Battle",
+        "Ricocheting Inflatable Pyrosaw",
+        "Liberator's Might",
+        "Meticulous Scheming",
+        "Bonded Souls",
+        "Fight or Flight",
+        "Ancestral Resonance",
+        "Collective Will",
+        "Stronger Together",
+        "Stand As One",
+        "Combined Might",
+        "Laser Matrix",
+        "Archive of the Titans",
+        "Retaliatory Fury",
+        "Incite the Pack",
+        "Last Gift",
+        "Tradewinds"
+    ],
+    "sorted_azerite_tier_1_trait_stacking": [
+        "Igneous Potential",
+        "Dagger in the Back",
+        "Tidal Surge",
+        "Treacherous Covenant",
+        "Rezan's Fury",
+        "Filthy Transfusion",
+        "Battlefield Focus",
+        "Battlefield Precision",
+        "Thunderous Blast",
+        "Apothecary's Concoctions",
+        "Endless Hunger",
+        "Ancients' Bulwark",
+        "Unstable Catalyst",
+        "Laser Matrix",
+        "Secrets of the Deep",
+        "Synapse Shock",
+        "Natural Harmony",
+        "Sylvanas' Resolve",
+        "Anduin's Dedication",
+        "Blightborne Infusion",
+        "Ruinous Bolt",
+        "Archive of the Titans",
+        "Seductive Power",
+        "Champion of Azeroth",
+        "Swirling Sands",
+        "Shadow of Elune",
+        "Blood Rite",
+        "Liberator's Might",
+        "Glory in Battle",
+        "Meticulous Scheming",
+        "Bonded Souls",
+        "Relational Normalization Gizmo",
+        "Fight or Flight",
+        "Barrage Of Many Bombs",
+        "Collective Will",
+        "Synaptic Spark Capacitor",
+        "Stand As One",
+        "Ricocheting Inflatable Pyrosaw",
+        "Stronger Together",
+        "Combined Might",
+        "Ancestral Resonance",
+        "Retaliatory Fury",
+        "Tradewinds",
+        "Incite the Pack",
+        "Last Gift"
+    ],
+    "sorted_azerite_tier_2_itemlevel": [
+        "Overwhelming Power",
+        "Heed My Call",
+        "Gutripper",
+        "Azerite Globules",
+        "Earthlink",
+        "Unstable Flames",
+        "On My Way",
+        "Elemental Whirl",
+        "Blood Siphon"
+    ],
+    "sorted_azerite_tier_2_trait_stacking": [
+        "Gutripper",
+        "Overwhelming Power",
+        "Heed My Call",
+        "Azerite Globules",
+        "Earthlink",
+        "On My Way",
+        "Unstable Flames",
+        "Elemental Whirl",
+        "Blood Siphon"
+    ],
+    "sorted_azerite_tier_3_itemlevel": [
+        "Igneous Potential",
+        "Rezan's Fury",
+        "Tidal Surge",
+        "Treacherous Covenant",
+        "Dagger in the Back",
+        "Battlefield Focus",
+        "Filthy Transfusion",
+        "Battlefield Precision",
+        "Apothecary's Concoctions",
+        "Thunderous Blast",
+        "Ancients' Bulwark",
+        "Endless Hunger",
+        "Unstable Catalyst",
+        "Synapse Shock",
+        "Relational Normalization Gizmo",
+        "Secrets of the Deep",
+        "Anduin's Dedication",
+        "Sylvanas' Resolve",
+        "Natural Harmony",
+        "Barrage Of Many Bombs",
+        "Ruinous Bolt",
+        "Blightborne Infusion",
+        "Synaptic Spark Capacitor",
+        "Shadow of Elune",
+        "Champion of Azeroth",
+        "Seductive Power",
+        "Blood Rite",
+        "Swirling Sands",
+        "Glory in Battle",
+        "Ricocheting Inflatable Pyrosaw",
+        "Liberator's Might",
+        "Meticulous Scheming",
+        "Bonded Souls",
+        "Fight or Flight",
+        "Ancestral Resonance",
+        "Collective Will",
+        "Stronger Together",
+        "Stand As One",
+        "Combined Might",
+        "Laser Matrix",
+        "Archive of the Titans",
+        "Retaliatory Fury",
+        "Incite the Pack",
+        "Last Gift",
+        "Tradewinds"
+    ],
+    "sorted_azerite_tier_3_trait_stacking": [
+        "Igneous Potential",
+        "Dagger in the Back",
+        "Tidal Surge",
+        "Treacherous Covenant",
+        "Rezan's Fury",
+        "Filthy Transfusion",
+        "Battlefield Focus",
+        "Battlefield Precision",
+        "Thunderous Blast",
+        "Apothecary's Concoctions",
+        "Endless Hunger",
+        "Ancients' Bulwark",
+        "Unstable Catalyst",
+        "Laser Matrix",
+        "Secrets of the Deep",
+        "Synapse Shock",
+        "Natural Harmony",
+        "Sylvanas' Resolve",
+        "Anduin's Dedication",
+        "Blightborne Infusion",
+        "Ruinous Bolt",
+        "Archive of the Titans",
+        "Seductive Power",
+        "Champion of Azeroth",
+        "Swirling Sands",
+        "Shadow of Elune",
+        "Blood Rite",
+        "Liberator's Might",
+        "Glory in Battle",
+        "Meticulous Scheming",
+        "Bonded Souls",
+        "Relational Normalization Gizmo",
+        "Fight or Flight",
+        "Barrage Of Many Bombs",
+        "Collective Will",
+        "Synaptic Spark Capacitor",
+        "Stand As One",
+        "Ricocheting Inflatable Pyrosaw",
+        "Stronger Together",
+        "Combined Might",
+        "Ancestral Resonance",
+        "Retaliatory Fury",
+        "Tradewinds",
+        "Incite the Pack",
+        "Last Gift"
+    ],
+    "sorted_data_keys": [
+        "Igneous Potential",
+        "Rezan's Fury",
+        "Tidal Surge",
+        "Treacherous Covenant",
+        "Dagger in the Back",
+        "Battlefield Focus",
+        "Filthy Transfusion",
+        "Battlefield Precision",
+        "Apothecary's Concoctions",
+        "Thunderous Blast",
+        "Ancients' Bulwark",
+        "Endless Hunger",
+        "Unstable Catalyst",
+        "Synapse Shock",
+        "Relational Normalization Gizmo",
+        "Secrets of the Deep",
+        "Anduin's Dedication",
+        "Sylvanas' Resolve",
+        "Natural Harmony",
+        "Barrage Of Many Bombs",
+        "Ruinous Bolt",
+        "Blightborne Infusion",
+        "Synaptic Spark Capacitor",
+        "Shadow of Elune",
+        "Champion of Azeroth",
+        "Seductive Power",
+        "Blood Rite",
+        "Swirling Sands",
+        "Overwhelming Power",
+        "Heed My Call",
+        "Gutripper",
+        "Glory in Battle",
+        "Ricocheting Inflatable Pyrosaw",
+        "Liberator's Might",
+        "Azerite Globules",
+        "Meticulous Scheming",
+        "Bonded Souls",
+        "Fight or Flight",
+        "Earthlink",
+        "Unstable Flames",
+        "On My Way",
+        "Elemental Whirl",
+        "Ancestral Resonance",
+        "Collective Will",
+        "Stronger Together",
+        "Stand As One",
+        "Combined Might",
+        "Laser Matrix",
+        "Azerite Empowered",
+        "Archive of the Titans",
+        "Retaliatory Fury",
+        "baseline",
+        "Incite the Pack",
+        "Last Gift",
+        "Tradewinds",
+        "Blood Siphon"
+    ],
+    "sorted_data_keys_2": [
+        "Igneous Potential",
+        "Dagger in the Back",
+        "Tidal Surge",
+        "Treacherous Covenant",
+        "Rezan's Fury",
+        "Filthy Transfusion",
+        "Battlefield Focus",
+        "Battlefield Precision",
+        "Thunderous Blast",
+        "Apothecary's Concoctions",
+        "Endless Hunger",
+        "Ancients' Bulwark",
+        "Unstable Catalyst",
+        "Secrets of the Deep",
+        "Synapse Shock",
+        "Natural Harmony",
+        "Sylvanas' Resolve",
+        "Anduin's Dedication",
+        "Blightborne Infusion",
+        "Ruinous Bolt",
+        "Seductive Power",
+        "Champion of Azeroth",
+        "Swirling Sands",
+        "Shadow of Elune",
+        "Blood Rite",
+        "Laser Matrix",
+        "Gutripper",
+        "Overwhelming Power",
+        "Heed My Call",
+        "Liberator's Might",
+        "Glory in Battle",
+        "Archive of the Titans",
+        "Meticulous Scheming",
+        "Azerite Globules",
+        "Bonded Souls",
+        "Earthlink",
+        "Relational Normalization Gizmo",
+        "Fight or Flight",
+        "On My Way",
+        "Barrage Of Many Bombs",
+        "Unstable Flames",
+        "Collective Will",
+        "Synaptic Spark Capacitor",
+        "Elemental Whirl",
+        "Stand As One",
+        "Ricocheting Inflatable Pyrosaw",
+        "Stronger Together",
+        "Combined Might",
+        "Azerite Empowered",
+        "Ancestral Resonance",
+        "Retaliatory Fury",
+        "Tradewinds",
+        "Incite the Pack",
+        "Last Gift",
+        "Blood Siphon"
+    ],
+    "spec_id": 264,
+    "spell_ids": {
+        "Ancestral Resonance": "277666",
+        "Ancients' Bulwark": "287604",
+        "Anduin's Dedication": "280628",
+        "Apothecary's Concoctions": "287631",
+        "Archive of the Titans": "280555",
+        "Azerite Empowered": "263978",
+        "Azerite Globules": "266936",
+        "Barrage Of Many Bombs": "280163",
+        "Battlefield Focus": "280582",
+        "Battlefield Precision": "280627",
+        "Blightborne Infusion": "273823",
+        "Blood Rite": "280407",
+        "Blood Siphon": "264108",
+        "Bonded Souls": "288802",
+        "Champion of Azeroth": "280710",
+        "Collective Will": "280581",
+        "Combined Might": "280580",
+        "Dagger in the Back": "280284",
+        "Earthlink": "279926",
+        "Elemental Whirl": "263984",
+        "Endless Hunger": "287662",
+        "Fight or Flight": "287818",
+        "Filthy Transfusion": "273834",
+        "Glory in Battle": "280577",
+        "Gutripper": "266937",
+        "Heed My Call": "263987",
+        "Igneous Potential": "279829",
+        "Incite the Pack": "280410",
+        "Laser Matrix": "280559",
+        "Last Gift": "280624",
+        "Liberator's Might": "280623",
+        "Meticulous Scheming": "273682",
+        "Natural Harmony": "278697",
+        "On My Way": "267879",
+        "Overwhelming Power": "266180",
+        "Relational Normalization Gizmo": "280178",
+        "Retaliatory Fury": "280579",
+        "Rezan's Fury": "273790",
+        "Ricocheting Inflatable Pyrosaw": "280168",
+        "Ruinous Bolt": "273150",
+        "Secrets of the Deep": "273829",
+        "Seductive Power": "288749",
+        "Shadow of Elune": "287467",
+        "Stand As One": "280626",
+        "Stronger Together": "280625",
+        "Swirling Sands": "280429",
+        "Sylvanas' Resolve": "280598",
+        "Synapse Shock": "277671",
+        "Synaptic Spark Capacitor": "280174",
+        "Thunderous Blast": "280380",
+        "Tidal Surge": "280402",
+        "Tradewinds": "281841",
+        "Treacherous Covenant": "288953",
+        "Unstable Catalyst": "281514",
+        "Unstable Flames": "279899"
+    },
+    "subtitle": "UTC 2019-05-09 15:55 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/4d4e8a0fba\" target=\"blank\">4d4e8a0</a>",
+    "talent_data": {
+        "1": {
+            "1": {
+                "name": "Torrent",
+                "spell_id": "200072"
+            },
+            "2": {
+                "name": "Undulation",
+                "spell_id": "200071"
+            },
+            "3": {
+                "name": "Unleash Life",
+                "spell_id": "73685"
+            }
+        },
+        "2": {
+            "1": {
+                "name": "Echo of the Elements",
+                "spell_id": "108283"
+            },
+            "2": {
+                "name": "Deluge",
+                "spell_id": "200076"
+            },
+            "3": {
+                "name": "Earth Shield",
+                "spell_id": "974"
+            }
+        },
+        "3": {
+            "1": {
+                "name": "Spirit Wolf",
+                "spell_id": "260878"
+            },
+            "2": {
+                "name": "Earthgrab Totem",
+                "spell_id": "51485"
+            },
+            "3": {
+                "name": "Static Charge",
+                "spell_id": "265046"
+            }
+        },
+        "4": {
+            "1": {
+                "name": "Ancestral Vigor",
+                "spell_id": "207401"
+            },
+            "2": {
+                "name": "Earthen Wall Totem",
+                "spell_id": "198838"
+            },
+            "3": {
+                "name": "Ancestral Protection Totem",
+                "spell_id": "207399"
+            }
+        },
+        "5": {
+            "1": {
+                "name": "Nature's Guardian",
+                "spell_id": "30884"
+            },
+            "2": {
+                "name": "Graceful Spirit",
+                "spell_id": "192088"
+            },
+            "3": {
+                "name": "Wind Rush Totem",
+                "spell_id": "192077"
+            }
+        },
+        "6": {
+            "1": {
+                "name": "Flash Flood",
+                "spell_id": "280614"
+            },
+            "2": {
+                "name": "Downpour",
+                "spell_id": "207778"
+            },
+            "3": {
+                "name": "Cloudburst Totem",
+                "spell_id": "157153"
+            }
+        },
+        "7": {
+            "1": {
+                "name": "High Tide",
+                "spell_id": "157154"
+            },
+            "2": {
+                "name": "Wellspring",
+                "spell_id": "197995"
+            },
+            "3": {
+                "name": "Ascendance",
+                "spell_id": "114052"
+            }
+        }
+    },
+    "timestamp": "2019-05-09 15:55",
+    "title": "Azerite Traits | Restoration Shaman | Patchwerk"
+}

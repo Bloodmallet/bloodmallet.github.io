@@ -119,6 +119,7 @@ const translation_classes = [
   "translate_subtlety",
   "translate_elemental",
   "translate_enhancement",
+  "translate_restoration",
   "translate_affliction",
   "translate_demonology",
   "translate_destruction",
