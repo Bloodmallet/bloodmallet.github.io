@@ -404,6 +404,15 @@ const empty_chart = {
       fontSize: font_size,
     },
     useHTML: true,
+    positioner: function (labelWidth, labelHeight, point) {
+      console.log(labelWidth, labelHeight, point);
+      console.log(standard_chart.plotLeft, standard_chart.plotTop);
+      let y = point.plotY - labelHeight / 2 - 22;
+      if (y < 0) {
+        y = point.plotY + labelHeight / 2 + 18;
+      }
+      return { x: standard_chart.plotLeft, y: y };
+    }
   },
   xAxis: {
     categories: [
