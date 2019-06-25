@@ -2191,8 +2191,6 @@ function update_chart() {
         let max_ilevel = chosen_step_list[0];
         let baseline_dps = loaded_data[chosen_class][chosen_spec][data_name][fight_style]["data"]["baseline"][loaded_data[chosen_class][chosen_spec][data_name][fight_style]["simulated_steps"][loaded_data[chosen_class][chosen_spec][data_name][fight_style]["simulated_steps"].length - 1]]
 
-        console.log('basedps: ', baseline_dps);
-
         // check for zero dps values and don't change them
         if (dps > 0) {
 
