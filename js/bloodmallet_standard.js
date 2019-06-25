@@ -143,6 +143,7 @@ const translation_classes = [
 
 const data_view_IDs = [
   "show_trinkets_data", // => trinkets
+  "show_essences_data", // => essences
   "show_azerite_traits_data", // => azerite_traits
   "show_races_data", // => races
   "show_secondary_distributions_data",
@@ -405,8 +406,8 @@ const empty_chart = {
     },
     useHTML: true,
     positioner: function (labelWidth, labelHeight, point) {
-      console.log(labelWidth, labelHeight, point);
-      console.log(standard_chart.plotLeft, standard_chart.plotTop);
+      // console.log(labelWidth, labelHeight, point);
+      // console.log(standard_chart.plotLeft, standard_chart.plotTop);
       let y = point.plotY - labelHeight / 2 - 22;
       if (y < 0) {
         y = point.plotY + labelHeight / 2 + 18;
@@ -1104,6 +1105,7 @@ function addFightStyleClickEvent(elementId, new_fight_style) {
 document.addEventListener("DOMContentLoaded", function () {
   try {
     addDataViewClickEvent("show_trinkets_data", "trinkets");
+    addDataViewClickEvent("show_essences_data", "essences");
     addDataViewClickEvent("show_azerite_traits_data", "azerite_traits");
     addDataViewClickEvent("show_races_data", "races");
     addDataViewClickEvent("show_secondary_distributions_data", "secondary_distributions");
@@ -1296,7 +1298,7 @@ function update_advanced_chart_options() {
   let itemlevels = loaded_data[chosen_class][chosen_spec][data_name][fight_style]["simulated_steps"];
 
   // add itemlevel filtering
-  if (itemlevels && (data_view === "trinkets" || data_view === "azerite_traits" && ["head", "shoulders", "chest", "itemlevel"].includes(chosen_azerite_list_type))) {
+  if (itemlevels && (data_view === "trinkets" || data_view === "essences" || data_view === "azerite_traits" && ["head", "shoulders", "chest", "itemlevel"].includes(chosen_azerite_list_type))) {
 
     // update chosen_step_list to the new max list (create a copy)
     // update only if nothing was selected or if the current values aren't present in the actual new data view (trinket -> azerite itemlevel)
@@ -1309,6 +1311,9 @@ function update_advanced_chart_options() {
     area.appendChild(ilevel_filtering);
 
     ilevel_filtering.innerHTML = "Itemlevels:<br/>";
+    if (data_view === "essences") {
+      ilevel_filtering.innerHTML = "Ranks:<br/>";
+    }
     for (const step of itemlevels) {
       let form_check = document.createElement("div");
       form_check.className = "form-check";
@@ -1842,7 +1847,6 @@ function update_chart() {
   }
   for (let thing of purge_list) {
     dps_ordered_data.splice(dps_ordered_data.indexOf(thing), 1);
-
   }
 
 
@@ -1909,7 +1913,7 @@ function update_chart() {
 
   // change item/spell names to wowhead links
   ordered_trinket_list = [];
-  if (data_view == "trinkets" || data_view == "azerite_traits") {
+  if (data_view == "trinkets" || data_view == "azerite_traits" || data_view == "essences") {
     for (let i in dps_ordered_data) {
 
       if (dps_ordered_data[i].indexOf("baseline") > -1) {
@@ -1917,7 +1921,7 @@ function update_chart() {
         continue;
       }
 
-      if (data_view == "azerite_traits" && ["itemlevel", "trait_stacking"].includes(chosen_azerite_list_type)) {
+      if (data_view === "essences" || data_view == "azerite_traits" && ["itemlevel", "trait_stacking"].includes(chosen_azerite_list_type)) {
 
         let spell_id = loaded_data[chosen_class][chosen_spec][data_name][fight_style]["spell_ids"][dps_ordered_data[i]];
         let trait_name = dps_ordered_data[i];
@@ -1948,7 +1952,11 @@ function update_chart() {
             link += language.toLowerCase();
           }
 
-          link += ".wowhead.com/spell=";
+          if (data_view === "essences") {
+            link += ".wowhead.com/azerite-essence-power/";
+          } else {
+            link += ".wowhead.com/spell=";
+          }
 
           try {
             portion_spell_id = loaded_data[chosen_class][chosen_spec][data_name][fight_style]["spell_ids"][name_portion.trim()];
@@ -1956,10 +1964,15 @@ function update_chart() {
             portion_spell_id = spell_id;
           }
 
+          if (data_view === "essences") {
+            portion_spell_id = loaded_data[chosen_class][chosen_spec][data_name][fight_style]["power_ids"][dps_ordered_data[i]];
+          }
+
           link += portion_spell_id;
 
-          link += "/" + slugify(trait_name);
-
+          if (data_view !== "essences") {
+            link += "/" + slugify(trait_name);
+          }
 
           link += "\" target=\"blank\"";
 
@@ -2178,6 +2191,8 @@ function update_chart() {
         let max_ilevel = chosen_step_list[0];
         let baseline_dps = loaded_data[chosen_class][chosen_spec][data_name][fight_style]["data"]["baseline"][loaded_data[chosen_class][chosen_spec][data_name][fight_style]["simulated_steps"][loaded_data[chosen_class][chosen_spec][data_name][fight_style]["simulated_steps"].length - 1]]
 
+        console.log('basedps: ', baseline_dps);
+
         // check for zero dps values and don't change them
         if (dps > 0) {
 
@@ -2283,6 +2298,8 @@ function update_chart() {
     standard_chart.legend.title.attr({ text: "" });
   } else if (data_view === "azerite_traits" && chosen_azerite_list_type === "trait_stacking") {
     standard_chart.legend.title.attr({ text: "Trait count" });
+  } else if (data_view === "essences") {
+    standard_chart.legend.title.attr({ text: "Rank" });
   }
 
   // adjust axis titles
