@@ -1,18 +1,18 @@
 {
     "class_id": 6,
     "data": {
-        "Blood Elf": 15580,
-        "Draenei": 15540,
-        "Dwarf": 15533,
-        "Gnome": 15543,
-        "Goblin": 15558,
-        "Human": 15542,
-        "Night Elf": 15540,
-        "Orc": 15514,
-        "Tauren": 15528,
-        "Troll": 15551,
-        "Undead": 15760,
-        "Worgen": 15550
+        "Blood Elf": 16339,
+        "Draenei": 16237,
+        "Dwarf": 16247,
+        "Gnome": 16279,
+        "Goblin": 16282,
+        "Human": 16271,
+        "Night Elf": 16276,
+        "Orc": 16232,
+        "Tauren": 16250,
+        "Troll": 16281,
+        "Undead": 16460,
+        "Worgen": 16290
     },
     "data_type": "races",
     "languages": {
@@ -293,27 +293,27 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "8023daf737f4e8163db400e5987ed39563ca7616",
+        "simc_hash": "a99c19dabdf78ab602cdb31819695d42b72b9468",
         "spec": "blood",
-        "target_error": "0.2",
+        "target_error": "0.1",
         "tier": "23"
     },
     "sorted_data_keys": [
         "Undead",
         "Blood Elf",
+        "Worgen",
         "Goblin",
         "Troll",
-        "Worgen",
         "Gnome",
-        "Human",
-        "Draenei",
         "Night Elf",
-        "Dwarf",
+        "Human",
         "Tauren",
+        "Dwarf",
+        "Draenei",
         "Orc"
     ],
     "spec_id": 250,
-    "subtitle": "UTC 2019-05-26 07:09 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/8023daf737f4e8163db400e5987ed39563ca7616\" target=\"blank\">8023daf</a>",
+    "subtitle": "UTC 2019-06-26 04:25 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/a99c19dabdf78ab602cdb31819695d42b72b9468\" target=\"blank\">a99c19d</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -414,6 +414,6 @@
             }
         }
     },
-    "timestamp": "2019-05-26 07:09",
+    "timestamp": "2019-06-26 04:25",
     "title": "Races | Blood Death Knight | Patchwerk"
 }
