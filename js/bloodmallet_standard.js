@@ -57,6 +57,13 @@ let chosen_activity = {
   "active": true,
   "passive": true
 };
+/**
+ * Filter for essences
+ */
+let chosen_type = {
+  "combined": true,
+  "minor": true
+};
 
 let mode = "welcome";
 let fight_style = "patchwerk";
@@ -1454,6 +1461,61 @@ function update_advanced_chart_options() {
 
   }
 
+  if (data_view === "essences") {
+    let type_filter = document.createElement("div");
+    type_filter.className = "col-md-4";
+    area.appendChild(type_filter);
+
+    type_filter.innerHTML = "Show:<br/>";
+
+    let option1 = document.createElement("div");
+    option1.className = "form-check";
+    type_filter.appendChild(option1);
+    let combined = document.createElement("input");
+    combined.className = "form-check-input";
+    combined.type = "checkbox";
+    combined.value = "combined";
+    combined.id = "combined_true";
+    // update checked based on user input
+    if (chosen_type["combined"]) {
+      combined.checked = true;
+    }
+    combined.addEventListener("change", function (e) {
+      update_type_list(e.target.value, e.target.checked);
+    });
+    option1.appendChild(combined);
+
+    let label1 = document.createElement("label");
+    label1.className = "form-check-label";
+    label1.htmlFor = combined.id;
+    label1.innerHTML = "Combined (major and minor)";
+    option1.appendChild(label1);
+
+
+    let option2 = document.createElement("div");
+    option2.className = "form-check";
+    type_filter.appendChild(option2);
+    let minor = document.createElement("input");
+    minor.className = "form-check-input";
+    minor.type = "checkbox";
+    minor.value = "minor";
+    minor.id = "minor_true";
+    // update checked based on user input
+    if (chosen_type["minor"]) {
+      minor.checked = true;
+    }
+    minor.addEventListener("change", function (e) {
+      update_type_list(e.target.value, e.target.checked);
+    });
+    option2.appendChild(minor);
+
+    let label2 = document.createElement("label");
+    label2.className = "form-check-label";
+    label2.htmlFor = minor.id;
+    label2.innerHTML = "Minor";
+    option2.appendChild(label2);
+  }
+
   // add more chart settings or chart filter here
 
   // add apply button
@@ -1492,6 +1554,19 @@ function update_activity_list(key, value) {
     console.log("update_activity_list", key, value);
   }
   chosen_activity[key] = value;
+
+}
+
+/**
+ * Update global chosen_activity "active" and "passive".
+ * @param {string} key
+ * @param {bool} value
+ */
+function update_type_list(key, value) {
+  if (debug) {
+    console.log("update_type_list", key, value);
+  }
+  chosen_type[key] = value;
 
 }
 
@@ -1877,6 +1952,23 @@ function update_chart() {
     }
     for (let trait_name of purge_list) {
       dps_ordered_data.splice(dps_ordered_data.indexOf(trait_name), 1);
+    }
+  }
+
+
+  if (data_view === "essences") {
+    purge_list = [];
+    for (let essence of dps_ordered_data) {
+      // if it's a major + minor essence, so no "minor" name addition
+      if (!chosen_type['combined'] && essence.indexOf(' minor') === -1) {
+        purge_list.push(essence);
+      }
+      if (!chosen_type['minor'] && essence.indexOf(' minor') > -1) {
+        purge_list.push(essence);
+      }
+    }
+    for (let essence_name of purge_list) {
+      dps_ordered_data.splice(dps_ordered_data.indexOf(essence_name), 1);
     }
   }
 
