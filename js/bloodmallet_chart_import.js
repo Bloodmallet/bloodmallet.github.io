@@ -611,6 +611,8 @@ function bloodmallet_chart_import() {
       chart.legend.title.attr({ text: "" });
     } else if (data_type === "azerite_traits_stacking") {
       chart.legend.title.attr({ text: "Trait count" });
+    } else if (data_type === "essences") {
+      chart.legend.title.attr({ text: "Rank" });
     }
 
     html_element.style.height = 200 + dps_ordered_keys.length * 30 + "px";
@@ -683,7 +685,9 @@ function bloodmallet_chart_import() {
     if (state.tooltip_engine == "wowhead") {
       let a = document.createElement("a");
       a.href = "https://" + (state.language === "en" ? "www" : state.language) + ".wowhead.com/";
-      if (data.hasOwnProperty("item_ids") && data["item_ids"].hasOwnProperty(key)) {
+      if (data.hasOwnProperty("power_ids") && data["power_ids"].hasOwnProperty(key)) {
+        a.href += "azerite-essence-power/" + data["power_ids"][key];
+      } else if (data.hasOwnProperty("item_ids") && data["item_ids"].hasOwnProperty(key)) {
         a.href += "item=" + data["item_ids"][key] + "/" + slugify(key);
 
         if (data.hasOwnProperty("class_id") && data.hasOwnProperty("used_azerite_traits_per_item")) {
@@ -704,6 +708,7 @@ function bloodmallet_chart_import() {
       } else if (data.hasOwnProperty("spell_ids") && data["spell_ids"].hasOwnProperty(key)) {
         a.href += "spell=" + data["spell_ids"][key] + '/' + slugify(key);
       }
+
       try {
         a.appendChild(document.createTextNode(data.languages[key][language_table[state.language]]));
       } catch (error) {
