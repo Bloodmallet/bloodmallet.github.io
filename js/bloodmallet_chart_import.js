@@ -111,6 +111,15 @@ function bloodmallet_chart_import() {
   let loaded_data = {};
 
   /**
+   * Collecting all active filters. These should always be named appropriately:
+   *
+   *  - data-filter-<name>="<value>;<value>"
+   *
+   */
+  let filters = {};
+
+
+  /**
    *
    * Functions
    *
@@ -156,6 +165,7 @@ function bloodmallet_chart_import() {
           data_type: default_data_type,
           azerite_tier: default_azerite_tier,
           fight_style: default_fight_style,
+          filters: filters,
           // style
           axis_color: default_axis_color,
           background_color: default_background_color,
@@ -226,6 +236,11 @@ function bloodmallet_chart_import() {
         }
         if (html_element.getAttribute("data-language")) {
           state.language = html_element.getAttribute("data-language");
+        }
+
+        // filters (opt-out)
+        if (html_element.getAttribute("data-filter-essence-types")) {
+          state.filters.essence_types = html_element.getAttribute("data-filter-essence-types").split(";");
         }
 
         // preparing necessary input to load data
@@ -433,6 +448,37 @@ function bloodmallet_chart_import() {
       console.log("Baseline dps: " + baseline_dps);
     }
 
+    let simulated_steps = [];
+    if (data_type == "azerite_traits_stacking") {
+      let base_ilevel = data["simulated_steps"][0].replace("1_", "");
+      simulated_steps.push("3_" + base_ilevel);
+      simulated_steps.push("2_" + base_ilevel);
+      simulated_steps.push("1_" + base_ilevel);
+    } else {
+      simulated_steps = data["simulated_steps"];
+    }
+    if (debug) {
+      console.log("simulated_steps: " + simulated_steps);
+    }
+
+    // Applying filters
+    if (data_type === "essences") {
+      purge_list = [];
+      for (let essence of dps_ordered_keys) {
+        // filter essence types
+        // if it's a major + minor essence, so no "minor" name addition
+        if (state.filters.hasOwnProperty("essence_types")) {
+          if (state.filters.essence_types.indexOf('minor') > -1 && essence.indexOf(' minor') > -1) {
+            purge_list.push(essence);
+          } else if (state.filters.essence_types.indexOf('combined') > -1 && essence.indexOf(' minor') === -1) {
+            purge_list.push(essence);
+          }
+        }
+      }
+      for (let essence_name of purge_list) {
+        dps_ordered_keys.splice(dps_ordered_keys.indexOf(essence_name), 1);
+      }
+    }
 
     // set title and subtitle
     chart.setTitle(
@@ -470,19 +516,6 @@ function bloodmallet_chart_import() {
       }, false);
     } else if (chart_engine == "highcharts_old") {
       chart.xAxis[0].setCategories(category_list, false);
-    }
-
-    let simulated_steps = [];
-    if (data_type == "azerite_traits_stacking") {
-      let base_ilevel = data["simulated_steps"][0].replace("1_", "");
-      simulated_steps.push("3_" + base_ilevel);
-      simulated_steps.push("2_" + base_ilevel);
-      simulated_steps.push("1_" + base_ilevel);
-    } else {
-      simulated_steps = data["simulated_steps"];
-    }
-    if (debug) {
-      console.log("simulated_steps: " + simulated_steps);
     }
 
     if (simulated_steps) {
