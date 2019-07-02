@@ -2,117 +2,127 @@
     "class_id": 11,
     "data": {
         "Blood of the Enemy": {
-            "1": 31788,
-            "2": 32250,
-            "3": 32741
+            "1": 31764,
+            "2": 32201,
+            "3": 32753
         },
         "Blood of the Enemy minor": {
-            "1": 31140,
-            "2": 31627,
-            "3": 31663
+            "1": 31163,
+            "2": 31595,
+            "3": 31675
         },
         "Condensed Life-Force": {
-            "1": 32092,
-            "2": 32645,
-            "3": 34406
+            "1": 32086,
+            "2": 32654,
+            "3": 34396
         },
         "Condensed Life-Force minor": {
-            "1": 31288,
-            "2": 31429,
-            "3": 31915
+            "1": 31326,
+            "2": 31438,
+            "3": 31919
         },
         "Conflict and Strife": {
-            "1": 33346,
-            "2": 33624,
-            "3": 33977
+            "1": 33304,
+            "2": 33622,
+            "3": 33990
         },
         "Conflict and Strife minor": {
-            "1": 31260,
-            "2": 31553,
-            "3": 31901
+            "1": 31288,
+            "2": 31547,
+            "3": 31924
         },
         "Essence of the Focusing Iris": {
-            "1": 31862,
-            "2": 32426,
-            "3": 32420
+            "1": 31820,
+            "2": 32445,
+            "3": 32455
         },
         "Essence of the Focusing Iris minor": {
-            "1": 31598,
-            "2": 32014,
-            "3": 32030
+            "1": 31627,
+            "2": 32034,
+            "3": 31996
         },
         "Memory of Lucid Dreams": {
-            "1": 32347,
-            "2": 32549,
-            "3": 32895
+            "1": 32360,
+            "2": 32577,
+            "3": 32865
         },
         "Memory of Lucid Dreams minor": {
-            "1": 31696,
-            "2": 31708,
-            "3": 31985
+            "1": 31716,
+            "2": 31717,
+            "3": 31964
         },
         "Purification Protocol": {
-            "1": 31333,
-            "2": 31305,
-            "3": 31420
+            "1": 31357,
+            "2": 31297,
+            "3": 31452
         },
         "Purification Protocol minor": {
-            "1": 31251,
-            "2": 31226,
-            "3": 31359
+            "1": 31242,
+            "2": 31223,
+            "3": 31324
         },
         "Ripple in Space": {
-            "1": 31084,
-            "2": 31236,
-            "3": 31190
+            "1": 31076,
+            "2": 31198,
+            "3": 31208
         },
         "Ripple in Space minor": {
-            "1": 30822,
-            "2": 30799,
-            "3": 30800
+            "1": 30809,
+            "2": 30809,
+            "3": 30794
         },
         "The Crucible of Flame": {
-            "1": 31427,
-            "2": 32142,
-            "3": 32808
+            "1": 31414,
+            "2": 32144,
+            "3": 32802
         },
         "The Crucible of Flame minor": {
-            "1": 31443,
-            "2": 31588,
-            "3": 32244
+            "1": 31436,
+            "2": 31568,
+            "3": 32224
         },
         "The Unbound Force": {
-            "1": 31105,
-            "2": 31358,
-            "3": 31936
+            "1": 31138,
+            "2": 31334,
+            "3": 31885
         },
         "The Unbound Force minor": {
-            "1": 31225,
-            "2": 31382,
-            "3": 31598
+            "1": 31251,
+            "2": 31415,
+            "3": 31610
         },
         "Vision of Perfection": {
-            "1": 33408,
-            "2": 34046,
-            "3": 34307
+            "1": 33395,
+            "2": 34071,
+            "3": 34329
         },
         "Vision of Perfection minor": {
-            "1": 31100,
-            "2": 31105,
-            "3": 31273
+            "1": 31102,
+            "2": 31064,
+            "3": 31277
         },
         "Worldvein Resonance": {
-            "1": 30700,
-            "2": 31020,
-            "3": 31190
+            "1": 30677,
+            "2": 31011,
+            "3": 31202
+        },
+        "Worldvein Resonance +3": {
+            "1": 31276,
+            "2": 31743,
+            "3": 31880
         },
         "Worldvein Resonance minor": {
-            "1": 31015,
-            "2": 31147,
-            "3": 31395
+            "1": 31037,
+            "2": 31118,
+            "3": 31365
+        },
+        "Worldvein Resonance minor +3": {
+            "1": 31643,
+            "2": 32136,
+            "3": 32359
         },
         "baseline": {
-            "1": 30787
+            "1": 30790
         }
     },
     "data_type": "essences",
@@ -139,7 +149,9 @@
         "Vision of Perfection": 81,
         "Vision of Perfection minor": 81,
         "Worldvein Resonance": 15,
-        "Worldvein Resonance minor": 15
+        "Worldvein Resonance +3": 15,
+        "Worldvein Resonance minor": 15,
+        "Worldvein Resonance minor +3": 15
     },
     "profile": {
         "back": {
@@ -305,7 +317,7 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "671c7d0e8b",
+        "simc_hash": "a6751170f3",
         "spec": "balance",
         "target_error": "0.1",
         "tier": "23"
@@ -323,48 +335,52 @@
         "The Crucible of Flame",
         "Blood of the Enemy",
         "Essence of the Focusing Iris",
+        "Worldvein Resonance minor +3",
         "The Crucible of Flame minor",
         "Essence of the Focusing Iris minor",
         "Memory of Lucid Dreams minor",
-        "The Unbound Force",
-        "Condensed Life-Force minor",
         "Conflict and Strife minor",
+        "Condensed Life-Force minor",
+        "The Unbound Force",
+        "Worldvein Resonance +3",
         "Blood of the Enemy minor",
         "The Unbound Force minor",
         "Purification Protocol",
         "Worldvein Resonance minor",
         "Purification Protocol minor",
         "Vision of Perfection minor",
-        "Worldvein Resonance",
         "Ripple in Space",
+        "Worldvein Resonance",
         "Ripple in Space minor"
     ],
     "spec_id": 102,
     "spell_ids": {
         "Blood of the Enemy": 298277,
-        "Blood of the Enemy minor": 298277,
+        "Blood of the Enemy minor": 298275,
         "Condensed Life-Force": 299358,
-        "Condensed Life-Force minor": 299358,
+        "Condensed Life-Force minor": 299357,
         "Conflict and Strife": 304121,
-        "Conflict and Strife minor": 304121,
+        "Conflict and Strife minor": 304123,
         "Essence of the Focusing Iris": 299338,
-        "Essence of the Focusing Iris minor": 299338,
+        "Essence of the Focusing Iris minor": 299337,
         "Memory of Lucid Dreams": 299374,
-        "Memory of Lucid Dreams minor": 299374,
+        "Memory of Lucid Dreams minor": 299373,
         "Purification Protocol": 299347,
-        "Purification Protocol minor": 299347,
+        "Purification Protocol minor": 299346,
         "Ripple in Space": 302983,
-        "Ripple in Space minor": 302983,
+        "Ripple in Space minor": 302985,
         "The Crucible of Flame": 299353,
-        "The Crucible of Flame minor": 299353,
+        "The Crucible of Flame minor": 299350,
         "The Unbound Force": 299378,
-        "The Unbound Force minor": 299378,
+        "The Unbound Force minor": 299377,
         "Vision of Perfection": 299370,
-        "Vision of Perfection minor": 299370,
+        "Vision of Perfection minor": 299369,
         "Worldvein Resonance": 299334,
-        "Worldvein Resonance minor": 299334
+        "Worldvein Resonance +3": 299334,
+        "Worldvein Resonance minor": 299333,
+        "Worldvein Resonance minor +3": 299333
     },
-    "subtitle": "UTC 2019-07-01 14:05 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/671c7d0e8b\" target=\"blank\">671c7d0</a>",
+    "subtitle": "UTC 2019-07-02 14:12 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/a6751170f3\" target=\"blank\">a675117</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -465,6 +481,6 @@
             }
         }
     },
-    "timestamp": "2019-07-01 14:05",
+    "timestamp": "2019-07-02 14:12",
     "title": "Essences | Balance Druid | Patchwerk"
 }

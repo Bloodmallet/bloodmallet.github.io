@@ -2,97 +2,107 @@
     "class_id": 7,
     "data": {
         "Artifice of Time": {
-            "1": 23000,
-            "2": 22974,
-            "3": 22953
+            "1": 22982,
+            "2": 22971,
+            "3": 22975
         },
         "Artifice of Time minor": {
-            "1": 22963,
-            "2": 22953,
-            "3": 22968
+            "1": 22975,
+            "2": 22970,
+            "3": 22984
         },
         "Conflict and Strife": {
-            "1": 23286,
-            "2": 23488,
-            "3": 23719
+            "1": 23274,
+            "2": 23481,
+            "3": 23713
         },
         "Conflict and Strife minor": {
-            "1": 23285,
-            "2": 23473,
-            "3": 23742
+            "1": 23267,
+            "2": 23457,
+            "3": 23728
         },
         "Memory of Lucid Dreams": {
-            "1": 22967,
-            "2": 22974,
-            "3": 22968
+            "1": 22985,
+            "2": 23019,
+            "3": 22973
         },
         "Memory of Lucid Dreams minor": {
-            "1": 22972,
-            "2": 22963,
-            "3": 22983
+            "1": 22975,
+            "2": 22960,
+            "3": 22964
         },
         "Ripple in Space": {
-            "1": 23321,
-            "2": 23414,
-            "3": 23391
+            "1": 23313,
+            "2": 23403,
+            "3": 23403
         },
         "Ripple in Space minor": {
-            "1": 22935,
-            "2": 22984,
-            "3": 23002
+            "1": 22963,
+            "2": 22975,
+            "3": 22953
         },
         "The Crucible of Flame": {
-            "1": 24166,
-            "2": 25035,
-            "3": 26049
+            "1": 24201,
+            "2": 25045,
+            "3": 26064
         },
         "The Crucible of Flame minor": {
-            "1": 23768,
-            "2": 23931,
-            "3": 24884
+            "1": 23724,
+            "2": 23939,
+            "3": 24906
         },
         "The Ever-Rising Tide": {
-            "1": 22969,
-            "2": 22957,
+            "1": 22967,
+            "2": 22962,
             "3": 22960
         },
         "The Ever-Rising Tide minor": {
-            "1": 22973,
-            "2": 22988,
-            "3": 22972
+            "1": 22981,
+            "2": 22970,
+            "3": 22970
         },
         "The Well of Existence": {
-            "1": 22949,
-            "2": 22932,
-            "3": 22941
+            "1": 22956,
+            "2": 22973,
+            "3": 22962
         },
         "The Well of Existence minor": {
-            "1": 22969,
-            "2": 22956,
-            "3": 22955
+            "1": 22984,
+            "2": 22983,
+            "3": 22976
         },
         "Vision of Perfection": {
-            "1": 22967,
+            "1": 22972,
             "2": 22974,
-            "3": 23089
+            "3": 23073
         },
         "Vision of Perfection minor": {
-            "1": 22974,
-            "2": 22955,
-            "3": 23087
+            "1": 22963,
+            "2": 22976,
+            "3": 23095
         },
         "Worldvein Resonance": {
-            "1": 22937,
-            "2": 23134,
-            "3": 23278
+            "1": 22909,
+            "2": 23156,
+            "3": 23262
+        },
+        "Worldvein Resonance +3": {
+            "1": 23346,
+            "2": 23627,
+            "3": 23741
         },
         "Worldvein Resonance minor": {
-            "1": 23127,
-            "2": 23182,
-            "3": 23357
+            "1": 23123,
+            "2": 23180,
+            "3": 23341
+        },
+        "Worldvein Resonance minor +3": {
+            "1": 23552,
+            "2": 23864,
+            "3": 24042
         },
         "baseline": {
-            "1": 22960
+            "1": 22968
         }
     },
     "data_type": "essences",
@@ -115,7 +125,9 @@
         "Vision of Perfection": 81,
         "Vision of Perfection minor": 81,
         "Worldvein Resonance": 15,
-        "Worldvein Resonance minor": 15
+        "Worldvein Resonance +3": 15,
+        "Worldvein Resonance minor": 15,
+        "Worldvein Resonance minor +3": 15
     },
     "profile": {
         "back": {
@@ -273,7 +285,7 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "671c7d0e8b",
+        "simc_hash": "a6751170f3",
         "spec": "restoration",
         "target_error": "0.1",
         "tier": "23"
@@ -286,45 +298,49 @@
     "sorted_data_keys": [
         "The Crucible of Flame",
         "The Crucible of Flame minor",
+        "Worldvein Resonance minor +3",
+        "Worldvein Resonance +3",
         "Conflict and Strife minor",
         "Conflict and Strife",
         "Ripple in Space",
         "Worldvein Resonance minor",
         "Worldvein Resonance",
-        "Vision of Perfection",
         "Vision of Perfection minor",
-        "Ripple in Space minor",
-        "Memory of Lucid Dreams minor",
-        "The Ever-Rising Tide minor",
+        "Vision of Perfection",
         "Artifice of Time minor",
-        "Memory of Lucid Dreams",
-        "The Ever-Rising Tide",
         "The Well of Existence minor",
         "Artifice of Time",
-        "The Well of Existence"
+        "Memory of Lucid Dreams",
+        "The Ever-Rising Tide minor",
+        "Memory of Lucid Dreams minor",
+        "The Well of Existence",
+        "The Ever-Rising Tide",
+        "Ripple in Space minor"
     ],
     "spec_id": 264,
     "spell_ids": {
         "Artifice of Time": 299883,
-        "Artifice of Time minor": 299883,
+        "Artifice of Time minor": 299887,
         "Conflict and Strife": 304121,
-        "Conflict and Strife minor": 304121,
+        "Conflict and Strife minor": 304123,
         "Memory of Lucid Dreams": 299374,
-        "Memory of Lucid Dreams minor": 299374,
+        "Memory of Lucid Dreams minor": 299373,
         "Ripple in Space": 302983,
-        "Ripple in Space minor": 302983,
+        "Ripple in Space minor": 302985,
         "The Crucible of Flame": 299353,
-        "The Crucible of Flame minor": 299353,
+        "The Crucible of Flame minor": 299350,
         "The Ever-Rising Tide": 299876,
-        "The Ever-Rising Tide minor": 299876,
+        "The Ever-Rising Tide minor": 299879,
         "The Well of Existence": 299933,
-        "The Well of Existence minor": 299933,
+        "The Well of Existence minor": 299936,
         "Vision of Perfection": 299370,
-        "Vision of Perfection minor": 299370,
+        "Vision of Perfection minor": 299369,
         "Worldvein Resonance": 299334,
-        "Worldvein Resonance minor": 299334
+        "Worldvein Resonance +3": 299334,
+        "Worldvein Resonance minor": 299333,
+        "Worldvein Resonance minor +3": 299333
     },
-    "subtitle": "UTC 2019-07-01 14:28 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/671c7d0e8b\" target=\"blank\">671c7d0</a>",
+    "subtitle": "UTC 2019-07-02 14:37 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/a6751170f3\" target=\"blank\">a675117</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -425,6 +441,6 @@
             }
         }
     },
-    "timestamp": "2019-07-01 14:28",
+    "timestamp": "2019-07-02 14:37",
     "title": "Essences | Restoration Shaman | Patchwerk"
 }
