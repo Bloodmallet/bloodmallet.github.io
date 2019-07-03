@@ -111,15 +111,6 @@ function bloodmallet_chart_import() {
   let loaded_data = {};
 
   /**
-   * Collecting all active filters. These should always be named appropriately:
-   *
-   *  - data-filter-<name>="<value>;<value>"
-   *
-   */
-  let filters = {};
-
-
-  /**
    *
    * Functions
    *
@@ -165,7 +156,7 @@ function bloodmallet_chart_import() {
           data_type: default_data_type,
           azerite_tier: default_azerite_tier,
           fight_style: default_fight_style,
-          filters: filters,
+          filters: {},
           // style
           axis_color: default_axis_color,
           background_color: default_background_color,
