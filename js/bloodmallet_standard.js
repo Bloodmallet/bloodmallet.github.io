@@ -84,7 +84,9 @@ const translation_IDs = [
   "translate_dark_mode",
   "translate_faq",
   "translate_report_an_error",
-  "translate_language"
+  "translate_language",
+  "translate_alert_message",
+  "used_talents"
 ];
 
 /**
@@ -134,6 +136,7 @@ const translation_classes = [
   "translate_fury",
   "translate_trinkets",
   "translate_azerite_traits",
+  "translate_essences",
   "translate_races",
   "translate_secondary_distributions",
   "translate_patchwerk",
@@ -145,7 +148,10 @@ const translation_classes = [
   "translate_chest",
   "translate_link_to_chart",
   "translate_link_was_copied_to_clipboard",
-  "translate_dps_only_warning"
+  "translate_dps_only_warning",
+  "translate_advanced_options",
+  "translate_tc_warning",
+  "translate_theorycrafter_resource"
 ];
 
 const data_view_IDs = [
