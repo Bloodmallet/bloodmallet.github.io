@@ -1,18 +1,18 @@
 {
     "class_id": 6,
     "data": {
-        "Blood Elf": 16338,
-        "Draenei": 16234,
-        "Dwarf": 16249,
-        "Gnome": 16288,
-        "Goblin": 16291,
-        "Human": 16275,
-        "Night Elf": 16268,
-        "Orc": 16240,
-        "Tauren": 16250,
-        "Troll": 16288,
-        "Undead": 16490,
-        "Worgen": 16298
+        "Blood Elf": 16344,
+        "Draenei": 16257,
+        "Dwarf": 16248,
+        "Gnome": 16280,
+        "Goblin": 16303,
+        "Human": 16262,
+        "Night Elf": 16271,
+        "Orc": 16238,
+        "Tauren": 16275,
+        "Troll": 16278,
+        "Undead": 16494,
+        "Worgen": 16278
     },
     "data_type": "races",
     "languages": {
@@ -293,7 +293,7 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "5c251610196c1ff8b4274e25ece4409bc8b8affd",
+        "simc_hash": "a63627e3775c4d8d9412cbe3c6951fae32064628",
         "spec": "blood",
         "target_error": "0.1",
         "tier": "23"
@@ -301,19 +301,19 @@
     "sorted_data_keys": [
         "Undead",
         "Blood Elf",
-        "Worgen",
         "Goblin",
         "Gnome",
+        "Worgen",
         "Troll",
-        "Human",
-        "Night Elf",
         "Tauren",
+        "Night Elf",
+        "Human",
+        "Draenei",
         "Dwarf",
-        "Orc",
-        "Draenei"
+        "Orc"
     ],
     "spec_id": 250,
-    "subtitle": "UTC 2019-07-03 05:10 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/5c251610196c1ff8b4274e25ece4409bc8b8affd\" target=\"blank\">5c25161</a>",
+    "subtitle": "UTC 2019-07-04 04:53 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/a63627e3775c4d8d9412cbe3c6951fae32064628\" target=\"blank\">a63627e</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -414,6 +414,6 @@
             }
         }
     },
-    "timestamp": "2019-07-03 05:10",
+    "timestamp": "2019-07-04 04:53",
     "title": "Races | Blood Death Knight | Patchwerk"
 }
