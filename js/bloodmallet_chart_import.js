@@ -401,22 +401,22 @@ function bloodmallet_chart_import() {
       if (data_type === "azerite_traits_stacking") {
 
         if (state.azerite_tier === "all") {
-          dps_ordered_keys = data["sorted_data_keys_2"].slice(0, data_entries);
+          dps_ordered_keys = data["sorted_data_keys_2"].slice(0, data["sorted_data_keys_2"].length);
         } else if (state.azerite_tier === "1" || state.azerite_tier === "3") {
-          dps_ordered_keys = data["sorted_azerite_tier_3_trait_stacking"].slice(0, data_entries);
+          dps_ordered_keys = data["sorted_azerite_tier_3_trait_stacking"].slice(0, data["sorted_azerite_tier_3_trait_stacking"].length);
         } else if (state.azerite_tier === "2") {
-          dps_ordered_keys = data["sorted_azerite_tier_2_trait_stacking"].slice(0, data_entries);
+          dps_ordered_keys = data["sorted_azerite_tier_2_trait_stacking"].slice(0, data["sorted_azerite_tier_2_trait_stacking"].length);
         }
         baseline_dps = data["data"]["baseline"][data["simulated_steps"][0]];
 
       } else if (data_type === "azerite_traits_itemlevel") {
 
         if (state.azerite_tier === "all") {
-          dps_ordered_keys = data["sorted_data_keys"].slice(0, data_entries);
+          dps_ordered_keys = data["sorted_data_keys"].slice(0, data["sorted_data_keys"].length);
         } else if (state.azerite_tier === "1" || state.azerite_tier === "3") {
-          dps_ordered_keys = data["sorted_azerite_tier_3_itemlevel"].slice(0, data_entries);
+          dps_ordered_keys = data["sorted_azerite_tier_3_itemlevel"].slice(0, data["sorted_azerite_tier_3_itemlevel"].length);
         } else if (state.azerite_tier === "2") {
-          dps_ordered_keys = data["sorted_azerite_tier_2_itemlevel"].slice(0, data_entries);
+          dps_ordered_keys = data["sorted_azerite_tier_2_itemlevel"].slice(0, data["sorted_azerite_tier_2_itemlevel"].length);
         }
         baseline_dps = data["data"]["baseline"][data["simulated_steps"][data["simulated_steps"].length - 1]];
 
@@ -426,7 +426,7 @@ function bloodmallet_chart_import() {
       }
 
     } else {
-      dps_ordered_keys = data["sorted_data_keys"].slice(0, data_entries);
+      dps_ordered_keys = data["sorted_data_keys"].slice(0, data["sorted_data_keys"].length);
       if (data_type === "races") {
         baseline_dps = 0;
       } else {
@@ -470,6 +470,9 @@ function bloodmallet_chart_import() {
         dps_ordered_keys.splice(dps_ordered_keys.indexOf(essence_name), 1);
       }
     }
+
+    // final purge based on list length
+    dps_ordered_keys = dps_ordered_keys.slice(0, data_entries);
 
     // set title and subtitle
     chart.setTitle(
