@@ -1,15 +1,15 @@
 {
     "class_id": 11,
     "data": {
-        "Highmountain Tauren": 27727,
-        "Kul Tiran": 27740,
-        "Night Elf": 28205,
-        "Tauren": 27745,
-        "Troll": 27741,
-        "Worgen": 27817,
-        "Zandalari Troll Bwonsamdi": 27667,
-        "Zandalari Troll Kimbul": 27670,
-        "Zandalari Troll Paku": 27786
+        "Highmountain Tauren": 28019,
+        "Kul Tiran": 28017,
+        "Night Elf": 28413,
+        "Tauren": 28097,
+        "Troll": 27965,
+        "Worgen": 28001,
+        "Zandalari Troll Bwonsamdi": 27948,
+        "Zandalari Troll Kimbul": 27923,
+        "Zandalari Troll Paku": 28000
     },
     "data_type": "races",
     "languages": {
@@ -147,6 +147,7 @@
             "id": "165526"
         },
         "items": {
+            "azerite_essences": {},
             "back": {
                 "bonus_id": "4800/1537",
                 "id": "165924"
@@ -189,7 +190,8 @@
                 "id": "165589"
             },
             "neck": {
-                "bonus_id": "4929/5814/4936/1566",
+                "azerite_level": "65",
+                "bonus_id": "4929/5814/4936/1600",
                 "id": "158075"
             },
             "shoulders": {
@@ -225,7 +227,8 @@
             "id": "165589"
         },
         "neck": {
-            "bonus_id": "4929/5814/4936/1566",
+            "azerite_level": "65",
+            "bonus_id": "4929/5814/4936/1600",
             "id": "158075"
         },
         "position": "back",
@@ -260,24 +263,24 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "2538b67964",
+        "simc_hash": "bce0fda7c0",
         "spec": "feral",
         "target_error": "0.2",
-        "tier": "23"
+        "tier": "24"
     },
     "sorted_data_keys": [
         "Night Elf",
+        "Tauren",
+        "Highmountain Tauren",
+        "Kul Tiran",
         "Worgen",
         "Zandalari Troll Paku",
-        "Tauren",
         "Troll",
-        "Kul Tiran",
-        "Highmountain Tauren",
-        "Zandalari Troll Kimbul",
-        "Zandalari Troll Bwonsamdi"
+        "Zandalari Troll Bwonsamdi",
+        "Zandalari Troll Kimbul"
     ],
     "spec_id": 103,
-    "subtitle": "UTC 2019-07-09 04:47 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/2538b67964\" target=\"blank\">2538b67</a>",
+    "subtitle": "UTC 2019-07-11 04:43 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/bce0fda7c0\" target=\"blank\">bce0fda</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -378,6 +381,6 @@
             }
         }
     },
-    "timestamp": "2019-07-09 04:47",
+    "timestamp": "2019-07-11 04:43",
     "title": "Races | Feral Druid | Hecticaddcleave"
 }

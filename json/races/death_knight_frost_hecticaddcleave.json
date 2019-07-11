@@ -1,18 +1,18 @@
 {
     "class_id": 6,
     "data": {
-        "Blood Elf": 35415,
-        "Draenei": 34261,
-        "Dwarf": 34271,
-        "Gnome": 34471,
-        "Goblin": 34261,
-        "Human": 34162,
-        "Night Elf": 34651,
-        "Orc": 34293,
-        "Tauren": 34264,
-        "Troll": 34463,
-        "Undead": 34422,
-        "Worgen": 34351
+        "Blood Elf": 36108,
+        "Draenei": 34815,
+        "Dwarf": 34916,
+        "Gnome": 35307,
+        "Goblin": 35029,
+        "Human": 35036,
+        "Night Elf": 35323,
+        "Orc": 34824,
+        "Tauren": 34894,
+        "Troll": 35071,
+        "Undead": 34961,
+        "Worgen": 34958
     },
     "data_type": "races",
     "languages": {
@@ -180,6 +180,7 @@
             "id": "165548"
         },
         "items": {
+            "azerite_essences": {},
             "back": {
                 "bonus_id": "4824/1537",
                 "id": "165512"
@@ -222,7 +223,8 @@
                 "id": "165920"
             },
             "neck": {
-                "bonus_id": "4929/5814/4936/1566",
+                "azerite_level": "65",
+                "bonus_id": "4929/5814/4936/1600",
                 "id": "158075"
             },
             "off_hand": {
@@ -263,7 +265,8 @@
             "id": "165920"
         },
         "neck": {
-            "bonus_id": "4929/5814/4936/1566",
+            "azerite_level": "65",
+            "bonus_id": "4929/5814/4936/1600",
             "id": "158075"
         },
         "off_hand": {
@@ -303,27 +306,27 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "2538b67964",
+        "simc_hash": "bce0fda7c0",
         "spec": "frost",
         "target_error": "0.2",
-        "tier": "23"
+        "tier": "24"
     },
     "sorted_data_keys": [
         "Blood Elf",
         "Night Elf",
         "Gnome",
         "Troll",
+        "Human",
+        "Goblin",
         "Undead",
         "Worgen",
-        "Orc",
         "Dwarf",
         "Tauren",
-        "Draenei",
-        "Goblin",
-        "Human"
+        "Orc",
+        "Draenei"
     ],
     "spec_id": 251,
-    "subtitle": "UTC 2019-07-09 04:46 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/2538b67964\" target=\"blank\">2538b67</a>",
+    "subtitle": "UTC 2019-07-11 04:41 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/bce0fda7c0\" target=\"blank\">bce0fda</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -424,6 +427,6 @@
             }
         }
     },
-    "timestamp": "2019-07-09 04:46",
+    "timestamp": "2019-07-11 04:41",
     "title": "Races | Frost Death Knight | Hecticaddcleave"
 }

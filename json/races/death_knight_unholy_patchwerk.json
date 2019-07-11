@@ -1,18 +1,18 @@
 {
     "class_id": 6,
     "data": {
-        "Blood Elf": 26961,
-        "Draenei": 26799,
-        "Dwarf": 26827,
-        "Gnome": 26970,
-        "Goblin": 26897,
-        "Human": 26905,
-        "Night Elf": 26866,
-        "Orc": 26894,
-        "Tauren": 26827,
-        "Troll": 27052,
-        "Undead": 26963,
-        "Worgen": 26889
+        "Blood Elf": 27465,
+        "Draenei": 27335,
+        "Dwarf": 27353,
+        "Gnome": 27460,
+        "Goblin": 27418,
+        "Human": 27427,
+        "Night Elf": 27381,
+        "Orc": 27437,
+        "Tauren": 27362,
+        "Troll": 27561,
+        "Undead": 27532,
+        "Worgen": 27417
     },
     "data_type": "races",
     "languages": {
@@ -180,6 +180,7 @@
             "id": "165548"
         },
         "items": {
+            "azerite_essences": {},
             "back": {
                 "bonus_id": "4800/1537",
                 "id": "165512"
@@ -222,7 +223,8 @@
                 "id": "165586"
             },
             "neck": {
-                "bonus_id": "4929/5814/4936/1566",
+                "azerite_level": "65",
+                "bonus_id": "4929/5814/4936/1600",
                 "id": "158075"
             },
             "shoulders": {
@@ -258,7 +260,8 @@
             "id": "165586"
         },
         "neck": {
-            "bonus_id": "4929/5814/4936/1566",
+            "azerite_level": "65",
+            "bonus_id": "4929/5814/4936/1600",
             "id": "158075"
         },
         "position": "back",
@@ -293,27 +296,27 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "2538b67964",
+        "simc_hash": "bce0fda7c0",
         "spec": "unholy",
         "target_error": "0.1",
-        "tier": "23"
+        "tier": "24"
     },
     "sorted_data_keys": [
         "Troll",
-        "Gnome",
         "Undead",
         "Blood Elf",
+        "Gnome",
+        "Orc",
         "Human",
         "Goblin",
-        "Orc",
         "Worgen",
         "Night Elf",
-        "Dwarf",
         "Tauren",
+        "Dwarf",
         "Draenei"
     ],
     "spec_id": 252,
-    "subtitle": "UTC 2019-07-09 04:34 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/2538b67964\" target=\"blank\">2538b67</a>",
+    "subtitle": "UTC 2019-07-11 04:29 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/bce0fda7c0\" target=\"blank\">bce0fda</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -414,6 +417,6 @@
             }
         }
     },
-    "timestamp": "2019-07-09 04:34",
+    "timestamp": "2019-07-11 04:29",
     "title": "Races | Unholy Death Knight | Patchwerk"
 }

@@ -2,97 +2,97 @@
     "class_id": 11,
     "data": {
         "Aegis of the Deep": {
-            "1": 18851,
-            "2": 18859,
-            "3": 18836
+            "1": 18970,
+            "2": 18966,
+            "3": 18964
         },
         "Aegis of the Deep minor": {
-            "1": 18845,
-            "2": 18834,
-            "3": 18849
+            "1": 18926,
+            "2": 18951,
+            "3": 18943
         },
         "Anima of Death": {
-            "1": 18967,
-            "2": 19033,
-            "3": 19043
+            "1": 19111,
+            "2": 19207,
+            "3": 19207
         },
         "Anima of Death minor": {
-            "1": 18725,
-            "2": 18704,
-            "3": 18717
+            "1": 18821,
+            "2": 18790,
+            "3": 18805
         },
         "Conflict and Strife": {
-            "1": 19967,
-            "2": 20166,
-            "3": 20388
+            "1": 20120,
+            "2": 20300,
+            "3": 20567
         },
         "Conflict and Strife minor": {
-            "1": 18995,
-            "2": 19187,
-            "3": 19376
+            "1": 19112,
+            "2": 19305,
+            "3": 19539
         },
         "Memory of Lucid Dreams": {
-            "1": 18906,
-            "2": 18952,
-            "3": 19128
+            "1": 19007,
+            "2": 19019,
+            "3": 19240
         },
         "Memory of Lucid Dreams minor": {
-            "1": 18846,
-            "2": 18828,
-            "3": 19006
+            "1": 18935,
+            "2": 18935,
+            "3": 19114
         },
         "Ripple in Space": {
-            "1": 19074,
-            "2": 19175,
-            "3": 19183
+            "1": 19390,
+            "2": 19512,
+            "3": 19514
         },
         "Ripple in Space minor": {
-            "1": 18709,
-            "2": 18724,
-            "3": 18715
+            "1": 18818,
+            "2": 18799,
+            "3": 18812
         },
         "The Crucible of Flame": {
-            "1": 19785,
-            "2": 20532,
-            "3": 21141
+            "1": 20298,
+            "2": 21261,
+            "3": 22006
         },
         "The Crucible of Flame minor": {
-            "1": 19309,
-            "2": 19427,
-            "3": 19954
+            "1": 19448,
+            "2": 19609,
+            "3": 20186
         },
         "Vision of Perfection": {
-            "1": 18740,
-            "2": 18691,
-            "3": 18817
+            "1": 18824,
+            "2": 18790,
+            "3": 18904
         },
         "Vision of Perfection minor": {
-            "1": 18722,
-            "2": 18727,
-            "3": 18784
+            "1": 18806,
+            "2": 18812,
+            "3": 18908
         },
         "Worldvein Resonance": {
-            "1": 18695,
-            "2": 18893,
-            "3": 19006
+            "1": 18891,
+            "2": 19141,
+            "3": 19299
         },
         "Worldvein Resonance +3": {
-            "1": 19060,
-            "2": 19312,
-            "3": 19403
+            "1": 19374,
+            "2": 19702,
+            "3": 19842
         },
         "Worldvein Resonance minor": {
-            "1": 18850,
-            "2": 18920,
-            "3": 19043
+            "1": 18994,
+            "2": 19069,
+            "3": 19258
         },
         "Worldvein Resonance minor +3": {
-            "1": 19238,
-            "2": 19467,
-            "3": 19632
+            "1": 19518,
+            "2": 19840,
+            "3": 20050
         },
         "baseline": {
-            "1": 18734
+            "1": 18839
         }
     },
     "data_type": "essences",
@@ -160,6 +160,7 @@
             "id": "165519"
         },
         "items": {
+            "azerite_essences": {},
             "back": {
                 "bonus_id": "4800/1537",
                 "id": "165513"
@@ -202,7 +203,8 @@
                 "id": "165589"
             },
             "neck": {
-                "bonus_id": "4929/5814/4936/1566",
+                "azerite_level": "65",
+                "bonus_id": "4929/5814/4936/1600",
                 "id": "158075"
             },
             "shoulders": {
@@ -238,7 +240,8 @@
             "id": "165589"
         },
         "neck": {
-            "bonus_id": "4929/5814/4936/1566",
+            "azerite_level": "65",
+            "bonus_id": "4929/5814/4936/1600",
             "id": "158075"
         },
         "position": "front",
@@ -273,10 +276,10 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "3f3bf8f4e7",
+        "simc_hash": "45101b62a4",
         "spec": "guardian",
         "target_error": "0.1",
-        "tier": "23"
+        "tier": "24"
     },
     "simulated_steps": [
         3,
@@ -291,17 +294,17 @@
         "Worldvein Resonance +3",
         "Conflict and Strife minor",
         "Ripple in Space",
-        "Memory of Lucid Dreams",
-        "Worldvein Resonance minor",
-        "Anima of Death",
         "Worldvein Resonance",
+        "Worldvein Resonance minor",
+        "Memory of Lucid Dreams",
+        "Anima of Death",
         "Memory of Lucid Dreams minor",
-        "Aegis of the Deep minor",
         "Aegis of the Deep",
-        "Vision of Perfection",
+        "Aegis of the Deep minor",
         "Vision of Perfection minor",
-        "Anima of Death minor",
-        "Ripple in Space minor"
+        "Vision of Perfection",
+        "Ripple in Space minor",
+        "Anima of Death minor"
     ],
     "spec_id": 104,
     "spell_ids": {
@@ -324,7 +327,7 @@
         "Worldvein Resonance minor": 299333,
         "Worldvein Resonance minor +3": 299333
     },
-    "subtitle": "UTC 2019-07-09 16:24 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/3f3bf8f4e7\" target=\"blank\">3f3bf8f</a>",
+    "subtitle": "UTC 2019-07-11 16:51 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/45101b62a4\" target=\"blank\">45101b6</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -425,6 +428,6 @@
             }
         }
     },
-    "timestamp": "2019-07-09 16:24",
+    "timestamp": "2019-07-11 16:51",
     "title": "Essences | Guardian Druid | Patchwerk"
 }

@@ -1,29 +1,29 @@
 {
     "class_id": 3,
     "data": {
-        "Blood Elf": 44928,
-        "Dark Iron Dwarf": 44746,
-        "Draenei": 44781,
-        "Dwarf": 45009,
-        "Gnome": 45077,
-        "Goblin": 45013,
-        "Highmountain Tauren": 44890,
-        "Human": 45118,
-        "Kul Tiran": 44878,
-        "Lightforged Draenei": 45846,
-        "Maghar Orc": 44858,
-        "Night Elf": 44988,
-        "Nightborne": 44473,
-        "Orc": 45071,
-        "Pandaren": 44904,
-        "Tauren": 45013,
-        "Troll": 44948,
-        "Undead": 44774,
-        "Void Elf": 44620,
-        "Worgen": 44940,
-        "Zandalari Troll Bwonsamdi": 44727,
-        "Zandalari Troll Kimbul": 44704,
-        "Zandalari Troll Paku": 44954
+        "Blood Elf": 46057,
+        "Dark Iron Dwarf": 45862,
+        "Draenei": 45924,
+        "Dwarf": 46108,
+        "Gnome": 46256,
+        "Goblin": 46198,
+        "Highmountain Tauren": 46072,
+        "Human": 46091,
+        "Kul Tiran": 46048,
+        "Lightforged Draenei": 47049,
+        "Maghar Orc": 46042,
+        "Night Elf": 46050,
+        "Nightborne": 45671,
+        "Orc": 46372,
+        "Pandaren": 46075,
+        "Tauren": 46153,
+        "Troll": 46090,
+        "Undead": 45938,
+        "Void Elf": 45890,
+        "Worgen": 46163,
+        "Zandalari Troll Bwonsamdi": 45785,
+        "Zandalari Troll Kimbul": 45895,
+        "Zandalari Troll Paku": 46158
     },
     "data_type": "races",
     "languages": {
@@ -301,6 +301,7 @@
             "id": "159398"
         },
         "items": {
+            "azerite_essences": {},
             "back": {
                 "bonus_id": "4800/1537",
                 "id": "165512"
@@ -343,7 +344,8 @@
                 "id": "165599"
             },
             "neck": {
-                "bonus_id": "4929/5814/4936/1566",
+                "azerite_level": "65",
+                "bonus_id": "4929/5814/4936/1600",
                 "id": "158075"
             },
             "shoulders": {
@@ -379,7 +381,8 @@
             "id": "165599"
         },
         "neck": {
-            "bonus_id": "4929/5814/4936/1566",
+            "azerite_level": "65",
+            "bonus_id": "4929/5814/4936/1600",
             "id": "158075"
         },
         "position": "ranged_back",
@@ -414,38 +417,38 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "2538b67964",
+        "simc_hash": "bce0fda7c0",
         "spec": "beast_mastery",
         "target_error": "0.2",
-        "tier": "23"
+        "tier": "24"
     },
     "sorted_data_keys": [
         "Lightforged Draenei",
-        "Human",
-        "Gnome",
         "Orc",
+        "Gnome",
         "Goblin",
+        "Worgen",
+        "Zandalari Troll Paku",
         "Tauren",
         "Dwarf",
-        "Night Elf",
-        "Zandalari Troll Paku",
+        "Human",
         "Troll",
-        "Worgen",
-        "Blood Elf",
         "Pandaren",
         "Highmountain Tauren",
+        "Blood Elf",
+        "Night Elf",
         "Kul Tiran",
         "Maghar Orc",
-        "Draenei",
         "Undead",
-        "Dark Iron Dwarf",
-        "Zandalari Troll Bwonsamdi",
+        "Draenei",
         "Zandalari Troll Kimbul",
         "Void Elf",
+        "Dark Iron Dwarf",
+        "Zandalari Troll Bwonsamdi",
         "Nightborne"
     ],
     "spec_id": 253,
-    "subtitle": "UTC 2019-07-09 04:48 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/2538b67964\" target=\"blank\">2538b67</a>",
+    "subtitle": "UTC 2019-07-11 04:44 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/bce0fda7c0\" target=\"blank\">bce0fda</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -546,6 +549,6 @@
             }
         }
     },
-    "timestamp": "2019-07-09 04:48",
+    "timestamp": "2019-07-11 04:44",
     "title": "Races | Beast Mastery Hunter | Hecticaddcleave"
 }

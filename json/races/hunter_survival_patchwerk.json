@@ -1,29 +1,29 @@
 {
     "class_id": 3,
     "data": {
-        "Blood Elf": 28262,
-        "Dark Iron Dwarf": 28064,
-        "Draenei": 28064,
-        "Dwarf": 28111,
-        "Gnome": 28417,
-        "Goblin": 28322,
-        "Highmountain Tauren": 28152,
-        "Human": 28228,
-        "Kul Tiran": 28154,
-        "Lightforged Draenei": 28125,
-        "Maghar Orc": 28145,
-        "Night Elf": 28113,
-        "Nightborne": 27938,
-        "Orc": 28134,
-        "Pandaren": 28136,
-        "Tauren": 28085,
-        "Troll": 28345,
-        "Undead": 28152,
-        "Void Elf": 28179,
-        "Worgen": 28152,
-        "Zandalari Troll Bwonsamdi": 28099,
-        "Zandalari Troll Kimbul": 28124,
-        "Zandalari Troll Paku": 28159
+        "Blood Elf": 28874,
+        "Dark Iron Dwarf": 28628,
+        "Draenei": 28679,
+        "Dwarf": 28703,
+        "Gnome": 29002,
+        "Goblin": 28931,
+        "Highmountain Tauren": 28769,
+        "Human": 28841,
+        "Kul Tiran": 28742,
+        "Lightforged Draenei": 28720,
+        "Maghar Orc": 28800,
+        "Night Elf": 28747,
+        "Nightborne": 28576,
+        "Orc": 28725,
+        "Pandaren": 28731,
+        "Tauren": 28703,
+        "Troll": 28924,
+        "Undead": 28758,
+        "Void Elf": 28756,
+        "Worgen": 28721,
+        "Zandalari Troll Bwonsamdi": 28701,
+        "Zandalari Troll Kimbul": 28731,
+        "Zandalari Troll Paku": 28751
     },
     "data_type": "races",
     "languages": {
@@ -301,6 +301,7 @@
             "id": "159381"
         },
         "items": {
+            "azerite_essences": {},
             "back": {
                 "bonus_id": "4800/1537",
                 "id": "165512"
@@ -343,7 +344,8 @@
                 "id": "165589"
             },
             "neck": {
-                "bonus_id": "4929/5814/4936/1566",
+                "azerite_level": "65",
+                "bonus_id": "4929/5814/4936/1600",
                 "id": "158075"
             },
             "shoulders": {
@@ -379,7 +381,8 @@
             "id": "165589"
         },
         "neck": {
-            "bonus_id": "4929/5814/4936/1566",
+            "azerite_level": "65",
+            "bonus_id": "4929/5814/4936/1600",
             "id": "158075"
         },
         "position": "back",
@@ -414,38 +417,38 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "2538b67964",
+        "simc_hash": "bce0fda7c0",
         "spec": "survival",
         "target_error": "0.1",
-        "tier": "23"
+        "tier": "24"
     },
     "sorted_data_keys": [
         "Gnome",
-        "Troll",
         "Goblin",
+        "Troll",
         "Blood Elf",
         "Human",
+        "Maghar Orc",
+        "Highmountain Tauren",
+        "Undead",
         "Void Elf",
         "Zandalari Troll Paku",
-        "Kul Tiran",
-        "Worgen",
-        "Undead",
-        "Highmountain Tauren",
-        "Maghar Orc",
-        "Pandaren",
-        "Orc",
-        "Lightforged Draenei",
-        "Zandalari Troll Kimbul",
         "Night Elf",
+        "Kul Tiran",
+        "Pandaren",
+        "Zandalari Troll Kimbul",
+        "Orc",
+        "Worgen",
+        "Lightforged Draenei",
         "Dwarf",
-        "Zandalari Troll Bwonsamdi",
         "Tauren",
+        "Zandalari Troll Bwonsamdi",
         "Draenei",
         "Dark Iron Dwarf",
         "Nightborne"
     ],
     "spec_id": 255,
-    "subtitle": "UTC 2019-07-09 04:37 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/2538b67964\" target=\"blank\">2538b67</a>",
+    "subtitle": "UTC 2019-07-11 04:31 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/bce0fda7c0\" target=\"blank\">bce0fda</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -546,6 +549,6 @@
             }
         }
     },
-    "timestamp": "2019-07-09 04:37",
+    "timestamp": "2019-07-11 04:31",
     "title": "Races | Survival Hunter | Patchwerk"
 }
