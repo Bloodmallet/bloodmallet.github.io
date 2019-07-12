@@ -1,18 +1,18 @@
 {
     "class_id": 6,
     "data": {
-        "Blood Elf": 16654,
-        "Draenei": 16581,
-        "Dwarf": 16553,
-        "Gnome": 16608,
-        "Goblin": 16604,
-        "Human": 16597,
-        "Night Elf": 16589,
+        "Blood Elf": 16660,
+        "Draenei": 16563,
+        "Dwarf": 16566,
+        "Gnome": 16591,
+        "Goblin": 16606,
+        "Human": 16609,
+        "Night Elf": 16596,
         "Orc": 16552,
-        "Tauren": 16560,
-        "Troll": 16595,
-        "Undead": 16818,
-        "Worgen": 16605
+        "Tauren": 16576,
+        "Troll": 16587,
+        "Undead": 16806,
+        "Worgen": 16603
     },
     "data_type": "races",
     "languages": {
@@ -180,7 +180,6 @@
             "id": "165823"
         },
         "items": {
-            "azerite_essences": {},
             "back": {
                 "bonus_id": "4824/1537",
                 "id": "165512"
@@ -296,7 +295,7 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "45101b62a48efa954dcd57e07741395146dd6cb1",
+        "simc_hash": "f7c48de472ad575d8c13572367d1da75f3e0a36d",
         "spec": "blood",
         "target_error": "0.1",
         "tier": "24"
@@ -304,19 +303,19 @@
     "sorted_data_keys": [
         "Undead",
         "Blood Elf",
-        "Gnome",
-        "Worgen",
-        "Goblin",
         "Human",
-        "Troll",
+        "Goblin",
+        "Worgen",
         "Night Elf",
-        "Draenei",
+        "Gnome",
+        "Troll",
         "Tauren",
         "Dwarf",
+        "Draenei",
         "Orc"
     ],
     "spec_id": 250,
-    "subtitle": "UTC 2019-07-11 04:28 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/45101b62a48efa954dcd57e07741395146dd6cb1\" target=\"blank\">45101b6</a>",
+    "subtitle": "UTC 2019-07-12 04:36 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/f7c48de472ad575d8c13572367d1da75f3e0a36d\" target=\"blank\">f7c48de</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -417,6 +416,6 @@
             }
         }
     },
-    "timestamp": "2019-07-11 04:28",
+    "timestamp": "2019-07-12 04:36",
     "title": "Races | Blood Death Knight | Patchwerk"
 }

@@ -1,18 +1,18 @@
 {
     "class_id": 6,
     "data": {
-        "Blood Elf": 36108,
-        "Draenei": 34815,
-        "Dwarf": 34916,
-        "Gnome": 35307,
-        "Goblin": 35029,
-        "Human": 35036,
-        "Night Elf": 35323,
-        "Orc": 34824,
-        "Tauren": 34894,
-        "Troll": 35071,
-        "Undead": 34961,
-        "Worgen": 34958
+        "Blood Elf": 36086,
+        "Draenei": 34876,
+        "Dwarf": 34866,
+        "Gnome": 35232,
+        "Goblin": 35019,
+        "Human": 35030,
+        "Night Elf": 35308,
+        "Orc": 34944,
+        "Tauren": 34854,
+        "Troll": 35052,
+        "Undead": 35023,
+        "Worgen": 34995
     },
     "data_type": "races",
     "languages": {
@@ -180,7 +180,6 @@
             "id": "165548"
         },
         "items": {
-            "azerite_essences": {},
             "back": {
                 "bonus_id": "4824/1537",
                 "id": "165512"
@@ -306,7 +305,7 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "bce0fda7c0",
+        "simc_hash": "45101b62a4",
         "spec": "frost",
         "target_error": "0.2",
         "tier": "24"
@@ -317,16 +316,16 @@
         "Gnome",
         "Troll",
         "Human",
-        "Goblin",
         "Undead",
+        "Goblin",
         "Worgen",
-        "Dwarf",
-        "Tauren",
         "Orc",
-        "Draenei"
+        "Draenei",
+        "Dwarf",
+        "Tauren"
     ],
     "spec_id": 251,
-    "subtitle": "UTC 2019-07-11 04:41 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/bce0fda7c0\" target=\"blank\">bce0fda</a>",
+    "subtitle": "UTC 2019-07-12 04:49 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/45101b62a4\" target=\"blank\">45101b6</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -427,6 +426,6 @@
             }
         }
     },
-    "timestamp": "2019-07-11 04:41",
+    "timestamp": "2019-07-12 04:49",
     "title": "Races | Frost Death Knight | Hecticaddcleave"
 }

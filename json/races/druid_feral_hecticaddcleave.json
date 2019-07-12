@@ -1,15 +1,15 @@
 {
     "class_id": 11,
     "data": {
-        "Highmountain Tauren": 28019,
-        "Kul Tiran": 28017,
-        "Night Elf": 28413,
-        "Tauren": 28097,
-        "Troll": 27965,
-        "Worgen": 28001,
-        "Zandalari Troll Bwonsamdi": 27948,
-        "Zandalari Troll Kimbul": 27923,
-        "Zandalari Troll Paku": 28000
+        "Highmountain Tauren": 28040,
+        "Kul Tiran": 28071,
+        "Night Elf": 28445,
+        "Tauren": 28071,
+        "Troll": 27998,
+        "Worgen": 28018,
+        "Zandalari Troll Bwonsamdi": 27969,
+        "Zandalari Troll Kimbul": 27934,
+        "Zandalari Troll Paku": 28011
     },
     "data_type": "races",
     "languages": {
@@ -147,7 +147,6 @@
             "id": "165526"
         },
         "items": {
-            "azerite_essences": {},
             "back": {
                 "bonus_id": "4800/1537",
                 "id": "165924"
@@ -263,16 +262,16 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "bce0fda7c0",
+        "simc_hash": "45101b62a4",
         "spec": "feral",
         "target_error": "0.2",
         "tier": "24"
     },
     "sorted_data_keys": [
         "Night Elf",
+        "Kul Tiran",
         "Tauren",
         "Highmountain Tauren",
-        "Kul Tiran",
         "Worgen",
         "Zandalari Troll Paku",
         "Troll",
@@ -280,7 +279,7 @@
         "Zandalari Troll Kimbul"
     ],
     "spec_id": 103,
-    "subtitle": "UTC 2019-07-11 04:43 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/bce0fda7c0\" target=\"blank\">bce0fda</a>",
+    "subtitle": "UTC 2019-07-12 04:51 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/45101b62a4\" target=\"blank\">45101b6</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -381,6 +380,6 @@
             }
         }
     },
-    "timestamp": "2019-07-11 04:43",
+    "timestamp": "2019-07-12 04:51",
     "title": "Races | Feral Druid | Hecticaddcleave"
 }
