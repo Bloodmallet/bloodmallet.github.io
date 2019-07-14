@@ -121,32 +121,10 @@ function bloodmallet_chart_import() {
       console.log("init_charts");
     }
     // scan for divs / what data is wanted
-    let chart_list = document.querySelectorAll("div.bloodmallet_chart");
-
-    // check for unique IDs
-    let tmp_id_list = [];
-
+    let chart_list = document.querySelectorAll("div.bloodmallet_chart, [data-bloodmallet='chart']");
 
     for (let i = 0; i < chart_list.length; i++) {
       const html_element = chart_list[i];
-      if (tmp_id_list.indexOf(html_element.id) > -1) {
-        console.error("Multiple Elements use the same ID ('" + html_element.id + "'). Aborting bloodmallet_chart_import.js.");
-        return;
-      } else {
-        tmp_id_list.push(html_element.id);
-      }
-    }
-
-    for (let i = 0; i < chart_list.length; i++) {
-      //const html_element = chart_list[i];
-      let html_id = undefined;
-      try {
-        html_id = chart_list[i].id;
-      } catch (error) {
-        console.log("No bloodmallet_chart was found.");
-        return;
-      }
-      const html_element = document.getElementById(chart_list[i].id);
 
       if (html_element) {
 
@@ -237,12 +215,14 @@ function bloodmallet_chart_import() {
         // preparing necessary input to load data
         let requirements = true;
         if (!html_element.getAttribute("data-wow-class")) {
-          console.log("Required 'data-wow-class' attribute wasn't found in " + html_id + ".")
+          console.error("Required 'data-wow-class' attribute wasn't found in the following element.")
+          console.log(html_element);
           requirements = false;
         }
         state.wow_class = html_element.getAttribute("data-wow-class");
         if (!html_element.getAttribute("data-wow-spec")) {
-          console.log("Required 'data-wow-spec' attribute wasn't found in " + html_id + ".")
+          console.error("Required 'data-wow-spec' attribute wasn't found in the following element.")
+          console.log(html_element);
           requirements = false;
         }
         state.wow_spec = html_element.getAttribute("data-wow-spec");
@@ -253,34 +233,31 @@ function bloodmallet_chart_import() {
         let new_chart = false;
         if (state.chart_engine == "highcharts") {
           try {
-            new_chart = Highcharts.chart(html_id, styled_chart);
+            new_chart = Highcharts.chart(html_element, styled_chart);
           } catch (error) {
-            console.log("When trying to create a highcharts chart the following error occured. Did you include the necessary Highcharts scripts?");
+            console.error("When trying to create a highcharts chart the following error occured. Did you include the necessary Highcharts scripts?");
             console.log(error);
             return;
           }
         } else if (state.chart_engine == "highcharts_old") {
           try {
             let tmp_styled_chart = styled_chart;
-            tmp_styled_chart["chart"]["renderTo"] = html_id;
+            tmp_styled_chart["chart"]["renderTo"] = html_element;
             new_chart = new Highcharts.Chart(tmp_styled_chart);
           } catch (error) {
-            console.log("When trying to create a highcharts_old chart the following error occured. Did you include the necessary Highcharts scripts?");
+            console.error("When trying to create a highcharts_old chart the following error occured. Did you include the necessary Highcharts scripts?");
             console.log(error);
             return;
           }
         }
-        // save new chart for later
-        let key_value = {};
-        key_value[html_id] = new_chart;
 
         if (requirements) {
           load_data(state);
+          setTimeout(update_chart, 2000, state, html_element, new_chart, 0);
         } else {
           requirements_error(new_chart);
         }
 
-        setTimeout(update_chart, 2000, state, html_element, new_chart, 0);
       }
     }
   }
