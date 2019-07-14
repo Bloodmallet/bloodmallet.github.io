@@ -1,16 +1,16 @@
 {
     "class_id": 2,
     "data": {
-        "Blood Elf": 34807,
-        "Dark Iron Dwarf": 34572,
-        "Draenei": 34544,
-        "Dwarf": 34796,
-        "Human": 34742,
-        "Lightforged Draenei": 34506,
-        "Tauren": 34776,
-        "Zandalari Troll Bwonsamdi": 34599,
-        "Zandalari Troll Kimbul": 34634,
-        "Zandalari Troll Paku": 34723
+        "Blood Elf": 38604,
+        "Dark Iron Dwarf": 38179,
+        "Draenei": 38168,
+        "Dwarf": 38429,
+        "Human": 38410,
+        "Lightforged Draenei": 38170,
+        "Tauren": 38427,
+        "Zandalari Troll Bwonsamdi": 38218,
+        "Zandalari Troll Kimbul": 38248,
+        "Zandalari Troll Paku": 38374
     },
     "data_type": "races",
     "languages": {
@@ -130,9 +130,9 @@
             "talents": "3303103"
         },
         "chest": {
-            "azerite_powers": "125/187/22/13",
+            "azerite_powers": "187/125/38/13",
             "bonus_id": "4824/1517/4775",
-            "id": "159432"
+            "id": "168361"
         },
         "feet": {
             "bonus_id": "1512",
@@ -162,9 +162,9 @@
                 "id": "168604"
             },
             "chest": {
-                "azerite_powers": "125/187/22/13",
+                "azerite_powers": "187/125/38/13",
                 "bonus_id": "4824/1517/4775",
-                "id": "159432"
+                "id": "168361"
             },
             "feet": {
                 "bonus_id": "1512",
@@ -270,7 +270,7 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "45101b62a4",
+        "simc_hash": "1336d930b0",
         "spec": "retribution",
         "target_error": "0.1",
         "tier": "24"
@@ -284,11 +284,11 @@
         "Zandalari Troll Kimbul",
         "Zandalari Troll Bwonsamdi",
         "Dark Iron Dwarf",
-        "Draenei",
-        "Lightforged Draenei"
+        "Lightforged Draenei",
+        "Draenei"
     ],
     "spec_id": 70,
-    "subtitle": "UTC 2019-07-12 04:42 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/45101b62a4\" target=\"blank\">45101b6</a>",
+    "subtitle": "UTC 2019-07-14 07:03 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/1336d930b0\" target=\"blank\">1336d93</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -389,6 +389,6 @@
             }
         }
     },
-    "timestamp": "2019-07-12 04:42",
+    "timestamp": "2019-07-14 07:03",
     "title": "Races | Retribution Paladin | Patchwerk"
 }
