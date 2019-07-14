@@ -525,15 +525,15 @@ const standard_chart = Highcharts.chart('chart', empty_chart);
 
 // invalid ilevels to use highcharts base colours but keep the old ones
 const ilevel_color_table = {
-  "415": "#7cb5ec",
-  "355": "#d9d9df",
-  "370": "#90ed7d",
-  "385": "#f7a35c",
-  "400": "#8085e9",
+  "445": "#7cb5ec",
+  "430": "#d9d9df",
+  "415": "#90ed7d",
+  "400": "#f7a35c",
+  "380": "#8085e9",
   "50": "#f15c80",
   "60": "#e4d354",
-  "445": "#2b908f",
-  "430": "#91e8e1"
+  "70": "#2b908f",
+  "80": "#91e8e1"
 };
 
 const class_colors = {
