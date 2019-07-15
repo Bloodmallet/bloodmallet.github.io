@@ -155,6 +155,8 @@ const data_view_IDs = [
   "show_races_data", // => races
   "show_secondary_distributions_data",
   "talent_combination_selector",
+  "chart_type_essences",
+  "chart_type_essence_combinations",
   "chart_type_itemlevel",
   "chart_type_trait_stacking",
   "chart_type_head",
@@ -1113,6 +1115,8 @@ document.addEventListener("DOMContentLoaded", function () {
   try {
     addDataViewClickEvent("show_trinkets_data", "trinkets");
     addDataViewClickEvent("show_essences_data", "essences");
+    addDataViewClickEvent("chart_type_essences", "essences");
+    addDataViewClickEvent("chart_type_essence_combinations", "essence_combinations");
     addDataViewClickEvent("show_azerite_traits_data", "azerite_traits");
     addDataViewClickEvent("show_races_data", "races");
     addDataViewClickEvent("show_secondary_distributions_data", "secondary_distributions");
@@ -1690,6 +1694,7 @@ function switch_to_data() {
   update_page_content();
   update_data_buttons();
   update_fight_style_buttons();
+  update_essence_buttons();
   update_azerite_buttons();
   load_data();
   translate_page();
@@ -1719,11 +1724,19 @@ function update_data_buttons() {
     }
   });
   // set "active" to class color
-  document.getElementById("show_" + data_view + "_data").classList.add(chosen_class + "-border-bottom");
+  let tmp_name_fix = data_view;
+  if (tmp_name_fix === "essence_combinations") {
+    tmp_name_fix = "essences"
+  }
+  document.getElementById("show_" + tmp_name_fix + "_data").classList.add(chosen_class + "-border-bottom");
 
   // unhide/hide talent combination selection if necessary
   document.getElementById("talent_combination_selector").hidden = (data_view !== "secondary_distributions");
   document.getElementById("talent_selector_label").hidden = (data_view !== "secondary_distributions");
+
+  let is_essence = (data_view === "essences" || data_view === "essence_combinations");
+  document.getElementById("chart_type_essences").hidden = !is_essence;
+  document.getElementById("chart_type_essence_combinations").hidden = !is_essence;
 
   let is_azerite = (data_view === "azerite_traits");
   document.getElementById("chart_type_head").hidden = !is_azerite;
@@ -1815,6 +1828,31 @@ function update_azerite_buttons() {
   // set "active" to class color
   document.getElementById("chart_type_" + chosen_azerite_list_type).classList.add(chosen_class + "-border-bottom");
   document.getElementById("azerite_traits_tier_" + chosen_azerite_tier).classList.add(chosen_class + "-border-bottom");
+}
+
+/**
+ * Resets colors of all fight style buttons and sets active button to class color.
+ */
+function update_essence_buttons() {
+  if (debug)
+    console.log("update_essence_buttons");
+  if (data_view !== "essences" && data_view !== "essence_combinations") {
+    if (debug)
+      console.log("update_essence_buttons early exit");
+    return;
+  }
+
+  if (chosen_class === "" || chosen_spec === "") {
+    debug && console.log("update_essence_buttons aborted. No chosen_class or spec found.")
+    return;
+  }
+
+  // reset buttons to standard visual
+  ["chart_type_essences", "chart_type_essence_combinations"].forEach(element => {
+    document.getElementById(element).className = "btn-data " + chosen_class + "-button";
+  });
+  // set "active" to class color
+  document.getElementById("chart_type_" + data_view).classList.add(chosen_class + "-border-bottom");
 }
 
 /**
