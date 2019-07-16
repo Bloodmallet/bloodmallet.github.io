@@ -1,18 +1,18 @@
 {
     "class_id": 9,
     "data": {
-        "Blood Elf": 38406,
-        "Dark Iron Dwarf": 38258,
-        "Dwarf": 38364,
-        "Gnome": 38483,
-        "Goblin": 38464,
-        "Human": 38512,
-        "Nightborne": 38251,
-        "Orc": 38512,
-        "Troll": 38909,
-        "Undead": 38387,
-        "Void Elf": 38221,
-        "Worgen": 38415
+        "Blood Elf": 38920,
+        "Dark Iron Dwarf": 38772,
+        "Dwarf": 38903,
+        "Gnome": 39039,
+        "Goblin": 39113,
+        "Human": 39108,
+        "Nightborne": 38739,
+        "Orc": 39082,
+        "Troll": 39457,
+        "Undead": 38870,
+        "Void Elf": 38744,
+        "Worgen": 38899
     },
     "data_type": "races",
     "languages": {
@@ -149,7 +149,7 @@
             "race": "troll",
             "role": "spell",
             "spec": "demonology",
-            "talents": "3102012"
+            "talents": "2303032"
         },
         "chest": {
             "azerite_powers": "429/576/30/13",
@@ -273,7 +273,7 @@
             "id": "159273"
         },
         "spec": "demonology",
-        "talents": "3102012",
+        "talents": "2303032",
         "trinket1": {
             "bonus_id": "4800/1517",
             "id": "169304"
@@ -296,27 +296,27 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "1336d930b0",
+        "simc_hash": "ef27fa1bda",
         "spec": "demonology",
         "target_error": "0.1",
         "tier": "24"
     },
     "sorted_data_keys": [
         "Troll",
+        "Goblin",
         "Human",
         "Orc",
         "Gnome",
-        "Goblin",
-        "Worgen",
         "Blood Elf",
-        "Undead",
         "Dwarf",
+        "Worgen",
+        "Undead",
         "Dark Iron Dwarf",
-        "Nightborne",
-        "Void Elf"
+        "Void Elf",
+        "Nightborne"
     ],
     "spec_id": 266,
-    "subtitle": "UTC 2019-07-14 07:07 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/1336d930b0\" target=\"blank\">1336d93</a>",
+    "subtitle": "UTC 2019-07-15 04:55 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/ef27fa1bda\" target=\"blank\">ef27fa1</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -417,6 +417,6 @@
             }
         }
     },
-    "timestamp": "2019-07-14 07:07",
+    "timestamp": "2019-07-15 04:55",
     "title": "Races | Demonology Warlock | Patchwerk"
 }
