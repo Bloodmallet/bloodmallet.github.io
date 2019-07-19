@@ -1994,6 +1994,7 @@ function update_chart() {
   }
 
 
+  // purge essences by type (combined/minor)
   if (data_view === "essences") {
     purge_list = [];
     for (let essence of dps_ordered_data) {
@@ -2043,7 +2044,7 @@ function update_chart() {
 
   // change item/spell names to wowhead links
   ordered_trinket_list = [];
-  if (data_view == "trinkets" || data_view == "azerite_traits" || data_view == "essences") {
+  if (data_view === "trinkets" || data_view === "azerite_traits" || data_view === "essences" || data_view === "essence_combinations") {
     for (let i in dps_ordered_data) {
 
       if (dps_ordered_data[i].indexOf("baseline") > -1) {
@@ -2051,7 +2052,7 @@ function update_chart() {
         continue;
       }
 
-      if (data_view === "essences" || data_view == "azerite_traits" && ["itemlevel", "trait_stacking"].includes(chosen_azerite_list_type)) {
+      if (data_view === "essence_combinations" || data_view === "essences" || data_view == "azerite_traits" && ["itemlevel", "trait_stacking"].includes(chosen_azerite_list_type)) {
 
         let spell_id = loaded_data[chosen_class][chosen_spec][data_name][fight_style]["spell_ids"][dps_ordered_data[i]];
         let trait_name = dps_ordered_data[i];
@@ -2082,7 +2083,7 @@ function update_chart() {
             link += language.toLowerCase();
           }
 
-          if (data_view === "essences") {
+          if (data_view === "essences" || data_view === "essence_combinations") {
             link += ".wowhead.com/azerite-essence-power/";
           } else {
             link += ".wowhead.com/spell=";
@@ -2097,10 +2098,13 @@ function update_chart() {
           if (data_view === "essences") {
             portion_spell_id = loaded_data[chosen_class][chosen_spec][data_name][fight_style]["power_ids"][dps_ordered_data[i]];
           }
+          if (data_view === "essences" || data_view === "essence_combinations") {
+            portion_spell_id = loaded_data[chosen_class][chosen_spec][data_name][fight_style]["power_ids"][name_portion.trim()];
+          }
 
           link += portion_spell_id;
 
-          if (data_view !== "essences") {
+          if (data_view !== "essences" && data_view !== "essence_combinations") {
             link += "/" + slugify(trait_name);
           }
 
