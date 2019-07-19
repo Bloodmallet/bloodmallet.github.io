@@ -406,6 +406,8 @@ function bloodmallet_chart_import() {
       dps_ordered_keys = data["sorted_data_keys"].slice(0, data["sorted_data_keys"].length);
       if (data_type === "races") {
         baseline_dps = 0;
+      } else if (data_type === "essence_combinations") {
+        baseline_dps = data["data"]["baseline"];
       } else {
         baseline_dps = data["data"]["baseline"][data["simulated_steps"][data["simulated_steps"].length - 1]];
       }
@@ -589,7 +591,7 @@ function bloodmallet_chart_import() {
         }, false);
 
       }
-    } else { // race simulations
+    } else { // race + essence combination simulations
       var dps_array = [];
 
       for (let i = 0; i < dps_ordered_keys.length; i++) {
@@ -689,8 +691,13 @@ function bloodmallet_chart_import() {
     if (state.tooltip_engine == "wowhead") {
       let a = document.createElement("a");
       a.href = "https://" + (state.language === "en" ? "www" : state.language) + ".wowhead.com/";
-      if (data.hasOwnProperty("power_ids") && data["power_ids"].hasOwnProperty(key)) {
-        a.href += "azerite-essence-power/" + data["power_ids"][key];
+      if (data.hasOwnProperty("power_ids") && (data["power_ids"].hasOwnProperty(key) || data["power_ids"].hasOwnProperty(key.split(" +")[0]))) {
+        if (data["power_ids"].hasOwnProperty(key)) {
+          a.href += "azerite-essence-power/" + data["power_ids"][key];
+        } else if (data["power_ids"].hasOwnProperty(key.split(" +")[0])) {
+          a.href += "azerite-essence-power/" + data["power_ids"][key.split(" +")[0]];
+        }
+
       } else if (data.hasOwnProperty("item_ids") && data["item_ids"].hasOwnProperty(key)) {
         a.href += "item=" + data["item_ids"][key] + "/" + slugify(key);
 
@@ -721,9 +728,8 @@ function bloodmallet_chart_import() {
       }
 
       return a.outerHTML;
-    }
 
-    if (state.tooltip_engine == "wowdb") {
+    } else if (state.tooltip_engine == "wowdb") {
       let a = document.createElement('a');
       a.href = "http://www.wowdb.com/";
       try {
@@ -753,16 +759,21 @@ function bloodmallet_chart_import() {
             a.href += ":" + trait["id"];
           }
         }
-      }
-
-      try {
-        a.href += "spells/" + data["spell_ids"][key]; // spell id
-      } catch (error) {
-        if (debug) {
-          console.log(error);
-          console.log("We're probably looking at an item.");
+      } else {
+        try {
+          if (state.data_type === "essence_combinations") {
+            a.href += "spells/" + data["spell_ids"][key.split(" +")[0]];
+          } else {
+            a.href += "spells/" + data["spell_ids"][key]; // spell id
+          }
+        } catch (error) {
+          if (debug) {
+            console.log(error);
+            console.log("We're probably looking at an item.");
+          }
         }
       }
+
 
       a.dataset.tooltipHref = a.href;
 
