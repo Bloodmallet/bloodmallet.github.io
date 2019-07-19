@@ -2307,8 +2307,9 @@ function update_chart() {
   // basically: if something was simmed with multiple itemlevels
   if ("simulated_steps" in loaded_data[chosen_class][chosen_spec][data_name][fight_style]) {
 
-    if (debug)
+    if (debug) {
       console.log("simulated_steps in data found.");
+    }
 
     for (let itemlevel_position = 0; itemlevel_position < chosen_step_list.length; itemlevel_position++) {
       const itemlevel = chosen_step_list[itemlevel_position];
@@ -2412,14 +2413,28 @@ function update_chart() {
 
     var dps_values = [];
     for (let category of dps_ordered_data) {
-      dps_values.push(loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"][category]);
+      if (data_name === "essence_combinations") {
+        let dps = loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"][category];
+        let baseline_dps = loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"]["baseline"];
+
+        if (chosen_value_style === "absolute_gain") {
+          dps_values.push(dps - baseline_dps);
+        } else if (chosen_value_style === "relative_gain") {
+          dps_values.push(Math.round((dps - baseline_dps) * 10000 / baseline_dps) / 100);
+        } else if (chosen_value_style === "absolute_value") {
+          dps_values.push(dps);
+        }
+
+      } else {
+        dps_values.push(loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"][category]);
+      }
     }
 
     standard_chart.addSeries({
       color: class_colors[chosen_class],
       data: dps_values,
       name: "Race",
-      showInLegend: true
+      showInLegend: false
     }, false);
   }
 
