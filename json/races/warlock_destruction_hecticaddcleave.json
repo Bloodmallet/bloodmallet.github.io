@@ -1,18 +1,18 @@
 {
     "class_id": 9,
     "data": {
-        "Blood Elf": 49939,
-        "Dark Iron Dwarf": 49679,
-        "Dwarf": 50130,
-        "Gnome": 50223,
-        "Goblin": 50188,
-        "Human": 50082,
-        "Nightborne": 49837,
-        "Orc": 49904,
-        "Troll": 50440,
-        "Undead": 49747,
-        "Void Elf": 49877,
-        "Worgen": 49933
+        "Blood Elf": 49535,
+        "Dark Iron Dwarf": 49300,
+        "Dwarf": 49701,
+        "Gnome": 49646,
+        "Goblin": 49748,
+        "Human": 49648,
+        "Nightborne": 49446,
+        "Orc": 49516,
+        "Troll": 50107,
+        "Undead": 49300,
+        "Void Elf": 49486,
+        "Worgen": 49417
     },
     "data_type": "races",
     "languages": {
@@ -140,7 +140,7 @@
     "profile": {
         "back": {
             "bonus_id": "4800/1517",
-            "id": "168604"
+            "id": "168391"
         },
         "character": {
             "class": "warlock",
@@ -162,12 +162,12 @@
         },
         "finger1": {
             "bonus_id": "4800/1517",
-            "enchant": "accord_of_haste",
+            "enchant": "accord_of_versatility",
             "id": "168891"
         },
         "finger2": {
             "bonus_id": "4800/1517",
-            "enchant": "accord_of_haste",
+            "enchant": "accord_of_versatility",
             "id": "168890"
         },
         "hands": {
@@ -183,7 +183,7 @@
             "azerite_essences": {},
             "back": {
                 "bonus_id": "4800/1517",
-                "id": "168604"
+                "id": "168391"
             },
             "chest": {
                 "azerite_powers": "131/576/30/13",
@@ -196,12 +196,12 @@
             },
             "finger1": {
                 "bonus_id": "4800/1517",
-                "enchant": "accord_of_haste",
+                "enchant": "accord_of_versatility",
                 "id": "168891"
             },
             "finger2": {
                 "bonus_id": "4800/1517",
-                "enchant": "accord_of_haste",
+                "enchant": "accord_of_versatility",
                 "id": "168890"
             },
             "hands": {
@@ -296,27 +296,27 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "1dd181cdcb",
+        "simc_hash": "8b8bb41e82",
         "spec": "destruction",
         "target_error": "0.2",
         "tier": "24"
     },
     "sorted_data_keys": [
         "Troll",
-        "Gnome",
         "Goblin",
         "Dwarf",
         "Human",
+        "Gnome",
         "Blood Elf",
-        "Worgen",
         "Orc",
         "Void Elf",
         "Nightborne",
-        "Undead",
-        "Dark Iron Dwarf"
+        "Worgen",
+        "Dark Iron Dwarf",
+        "Undead"
     ],
     "spec_id": 267,
-    "subtitle": "UTC 2019-07-19 04:46 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/1dd181cdcb\" target=\"blank\">1dd181c</a>",
+    "subtitle": "UTC 2019-07-21 07:24 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/8b8bb41e82\" target=\"blank\">8b8bb41</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -417,6 +417,6 @@
             }
         }
     },
-    "timestamp": "2019-07-19 04:46",
+    "timestamp": "2019-07-21 07:24",
     "title": "Races | Destruction Warlock | Hecticaddcleave"
 }

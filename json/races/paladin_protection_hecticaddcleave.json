@@ -1,16 +1,16 @@
 {
     "class_id": 2,
     "data": {
-        "Blood Elf": 46794,
-        "Dark Iron Dwarf": 46625,
-        "Draenei": 46621,
-        "Dwarf": 46970,
-        "Human": 47062,
-        "Lightforged Draenei": 48864,
-        "Tauren": 47065,
-        "Zandalari Troll Bwonsamdi": 46695,
-        "Zandalari Troll Kimbul": 46837,
-        "Zandalari Troll Paku": 46783
+        "Blood Elf": 46536,
+        "Dark Iron Dwarf": 46291,
+        "Draenei": 46346,
+        "Dwarf": 46777,
+        "Human": 46906,
+        "Lightforged Draenei": 48593,
+        "Tauren": 46748,
+        "Zandalari Troll Bwonsamdi": 46574,
+        "Zandalari Troll Kimbul": 46564,
+        "Zandalari Troll Paku": 46571
     },
     "data_type": "races",
     "languages": {
@@ -154,9 +154,8 @@
         },
         "head": {
             "azerite_powers": "395/157/30/13",
-            "bonus_id": "4775",
-            "id": "155866",
-            "ilevel": "450"
+            "bonus_id": "1617/4819/4775",
+            "id": "155866"
         },
         "items": {
             "azerite_essences": {},
@@ -189,13 +188,12 @@
             },
             "head": {
                 "azerite_powers": "395/157/30/13",
-                "bonus_id": "4775",
-                "id": "155866",
-                "ilevel": "450"
+                "bonus_id": "1617/4819/4775",
+                "id": "155866"
             },
             "legs": {
-                "id": "167217",
-                "ilevel": "425"
+                "bonus_id": "4800/1547",
+                "id": "167217"
             },
             "main_hand": {
                 "bonus_id": "4800/1517",
@@ -234,8 +232,8 @@
             }
         },
         "legs": {
-            "id": "167217",
-            "ilevel": "425"
+            "bonus_id": "4800/1547",
+            "id": "167217"
         },
         "level": "120",
         "main_hand": {
@@ -284,25 +282,25 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "1dd181cdcb",
+        "simc_hash": "8b8bb41e82",
         "spec": "protection",
         "target_error": "0.2",
         "tier": "24"
     },
     "sorted_data_keys": [
         "Lightforged Draenei",
-        "Tauren",
         "Human",
         "Dwarf",
+        "Tauren",
+        "Zandalari Troll Bwonsamdi",
+        "Zandalari Troll Paku",
         "Zandalari Troll Kimbul",
         "Blood Elf",
-        "Zandalari Troll Paku",
-        "Zandalari Troll Bwonsamdi",
-        "Dark Iron Dwarf",
-        "Draenei"
+        "Draenei",
+        "Dark Iron Dwarf"
     ],
     "spec_id": 66,
-    "subtitle": "UTC 2019-07-19 04:42 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/1dd181cdcb\" target=\"blank\">1dd181c</a>",
+    "subtitle": "UTC 2019-07-21 07:19 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/8b8bb41e82\" target=\"blank\">8b8bb41</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -403,6 +401,6 @@
             }
         }
     },
-    "timestamp": "2019-07-19 04:42",
+    "timestamp": "2019-07-21 07:19",
     "title": "Races | Protection Paladin | Hecticaddcleave"
 }
