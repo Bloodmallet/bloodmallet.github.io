@@ -1,18 +1,18 @@
 {
     "class_id": 6,
     "data": {
-        "Blood Elf": 16656,
-        "Draenei": 16566,
-        "Dwarf": 16571,
-        "Gnome": 16615,
-        "Goblin": 16591,
-        "Human": 16605,
-        "Night Elf": 16597,
-        "Orc": 16555,
-        "Tauren": 16570,
-        "Troll": 16601,
-        "Undead": 16810,
-        "Worgen": 16623
+        "Blood Elf": 16661,
+        "Draenei": 16556,
+        "Dwarf": 16568,
+        "Gnome": 16591,
+        "Goblin": 16618,
+        "Human": 16614,
+        "Night Elf": 16598,
+        "Orc": 16541,
+        "Tauren": 16565,
+        "Troll": 16603,
+        "Undead": 16795,
+        "Worgen": 16601
     },
     "data_type": "races",
     "languages": {
@@ -295,7 +295,7 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "8b8bb41e820bc0cec633df5470c260e5891e8287",
+        "simc_hash": "d821ca57434c76a5e237969dfe2dc5ed32350976",
         "spec": "blood",
         "target_error": "0.1",
         "tier": "24"
@@ -303,19 +303,19 @@
     "sorted_data_keys": [
         "Undead",
         "Blood Elf",
-        "Worgen",
-        "Gnome",
+        "Goblin",
         "Human",
         "Troll",
+        "Worgen",
         "Night Elf",
-        "Goblin",
+        "Gnome",
         "Dwarf",
         "Tauren",
         "Draenei",
         "Orc"
     ],
     "spec_id": 250,
-    "subtitle": "UTC 2019-07-21 06:59 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/8b8bb41e820bc0cec633df5470c260e5891e8287\" target=\"blank\">8b8bb41</a>",
+    "subtitle": "UTC 2019-07-22 06:20 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/d821ca57434c76a5e237969dfe2dc5ed32350976\" target=\"blank\">d821ca5</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -416,6 +416,6 @@
             }
         }
     },
-    "timestamp": "2019-07-21 06:59",
+    "timestamp": "2019-07-22 06:20",
     "title": "Races | Blood Death Knight | Patchwerk"
 }
