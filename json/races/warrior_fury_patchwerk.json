@@ -1,29 +1,29 @@
 {
     "class_id": 1,
     "data": {
-        "Blood Elf": 42377,
-        "Dark Iron Dwarf": 42102,
-        "Draenei": 42151,
-        "Dwarf": 42479,
-        "Gnome": 42490,
-        "Goblin": 42404,
-        "Highmountain Tauren": 42362,
-        "Human": 42501,
-        "Kul Tiran": 42379,
-        "Lightforged Draenei": 42286,
-        "Maghar Orc": 42255,
-        "Night Elf": 42379,
-        "Nightborne": 42025,
-        "Orc": 42138,
-        "Pandaren": 42534,
-        "Tauren": 42440,
-        "Troll": 42334,
-        "Undead": 42285,
-        "Void Elf": 42494,
-        "Worgen": 42408,
-        "Zandalari Troll Bwonsamdi": 42219,
-        "Zandalari Troll Kimbul": 42301,
-        "Zandalari Troll Paku": 42494
+        "Blood Elf": 43060,
+        "Dark Iron Dwarf": 42803,
+        "Draenei": 42866,
+        "Dwarf": 43180,
+        "Gnome": 43226,
+        "Goblin": 43184,
+        "Highmountain Tauren": 43080,
+        "Human": 43236,
+        "Kul Tiran": 43084,
+        "Lightforged Draenei": 42975,
+        "Maghar Orc": 43013,
+        "Night Elf": 43064,
+        "Nightborne": 42765,
+        "Orc": 42833,
+        "Pandaren": 43157,
+        "Tauren": 43170,
+        "Troll": 43011,
+        "Undead": 43023,
+        "Void Elf": 43227,
+        "Worgen": 43078,
+        "Zandalari Troll Bwonsamdi": 42970,
+        "Zandalari Troll Kimbul": 43012,
+        "Zandalari Troll Paku": 43233
     },
     "data_type": "races",
     "languages": {
@@ -270,12 +270,12 @@
             "race": "gnome",
             "role": "attack",
             "spec": "fury",
-            "talents": "2123123"
+            "talents": "2133123"
         },
         "chest": {
-            "azerite_powers": "176/119/18/83/13",
+            "azerite_powers": "119/576/30/15/13",
             "bonus_id": "4824/1517/4775",
-            "id": "168361"
+            "id": "168363"
         },
         "feet": {
             "bonus_id": "1512",
@@ -307,9 +307,9 @@
                 "id": "168604"
             },
             "chest": {
-                "azerite_powers": "176/119/18/83/13",
+                "azerite_powers": "119/576/30/15/13",
                 "bonus_id": "4824/1517/4775",
-                "id": "168361"
+                "id": "168363"
             },
             "feet": {
                 "bonus_id": "1512",
@@ -341,7 +341,7 @@
             "main_hand": {
                 "bonus_id": "4800/1517",
                 "enchant": "force_multiplier",
-                "id": "168897"
+                "id": "168478"
             },
             "neck": {
                 "azerite_level": "65",
@@ -349,9 +349,9 @@
                 "id": "158075"
             },
             "off_hand": {
-                "bonus_id": "4800/1517",
+                "bonus_id": "5010/1602/4786",
                 "enchant": "deadly_navigation",
-                "id": "168897"
+                "id": "159644"
             },
             "shoulders": {
                 "azerite_powers": "176/196/30/15/13",
@@ -383,7 +383,7 @@
         "main_hand": {
             "bonus_id": "4800/1517",
             "enchant": "force_multiplier",
-            "id": "168897"
+            "id": "168478"
         },
         "neck": {
             "azerite_level": "65",
@@ -391,9 +391,9 @@
             "id": "158075"
         },
         "off_hand": {
-            "bonus_id": "4800/1517",
+            "bonus_id": "5010/1602/4786",
             "enchant": "deadly_navigation",
-            "id": "168897"
+            "id": "159644"
         },
         "position": "back",
         "race": "gnome",
@@ -404,7 +404,7 @@
             "id": "159439"
         },
         "spec": "fury",
-        "talents": "2123123",
+        "talents": "2133123",
         "trinket1": {
             "bonus_id": "4800/1517",
             "id": "169311"
@@ -427,30 +427,30 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "459ed729f8",
+        "simc_hash": "1c605c77af",
         "spec": "fury",
         "target_error": "0.1",
         "tier": "24"
     },
     "sorted_data_keys": [
-        "Pandaren",
         "Human",
-        "Void Elf",
         "Zandalari Troll Paku",
+        "Void Elf",
         "Gnome",
+        "Goblin",
         "Dwarf",
         "Tauren",
-        "Worgen",
-        "Goblin",
-        "Night Elf",
+        "Pandaren",
         "Kul Tiran",
-        "Blood Elf",
         "Highmountain Tauren",
-        "Troll",
-        "Zandalari Troll Kimbul",
-        "Lightforged Draenei",
+        "Worgen",
+        "Night Elf",
+        "Blood Elf",
         "Undead",
         "Maghar Orc",
+        "Zandalari Troll Kimbul",
+        "Troll",
+        "Lightforged Draenei",
         "Zandalari Troll Bwonsamdi",
         "Draenei",
         "Orc",
@@ -458,7 +458,7 @@
         "Nightborne"
     ],
     "spec_id": 72,
-    "subtitle": "UTC 2019-07-29 06:32 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/459ed729f8\" target=\"blank\">459ed72</a>",
+    "subtitle": "UTC 2019-07-30 06:32 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/1c605c77af\" target=\"blank\">1c605c7</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -559,6 +559,6 @@
             }
         }
     },
-    "timestamp": "2019-07-29 06:32",
+    "timestamp": "2019-07-30 06:32",
     "title": "Races | Fury Warrior | Patchwerk"
 }

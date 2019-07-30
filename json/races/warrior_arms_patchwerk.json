@@ -1,29 +1,29 @@
 {
     "class_id": 1,
     "data": {
-        "Blood Elf": 38192,
-        "Dark Iron Dwarf": 37852,
-        "Draenei": 37879,
-        "Dwarf": 37987,
-        "Gnome": 38141,
-        "Goblin": 38133,
-        "Highmountain Tauren": 38087,
-        "Human": 38176,
-        "Kul Tiran": 38043,
-        "Lightforged Draenei": 38270,
-        "Maghar Orc": 37980,
-        "Night Elf": 38063,
-        "Nightborne": 37778,
-        "Orc": 37826,
-        "Pandaren": 38158,
-        "Tauren": 37971,
-        "Troll": 38135,
-        "Undead": 38069,
-        "Void Elf": 38166,
-        "Worgen": 38082,
-        "Zandalari Troll Bwonsamdi": 37953,
-        "Zandalari Troll Kimbul": 38043,
-        "Zandalari Troll Paku": 38129
+        "Blood Elf": 39400,
+        "Dark Iron Dwarf": 38986,
+        "Draenei": 39065,
+        "Dwarf": 39254,
+        "Gnome": 39435,
+        "Goblin": 39365,
+        "Highmountain Tauren": 39290,
+        "Human": 39395,
+        "Kul Tiran": 39285,
+        "Lightforged Draenei": 39436,
+        "Maghar Orc": 39184,
+        "Night Elf": 39298,
+        "Nightborne": 38976,
+        "Orc": 39032,
+        "Pandaren": 39371,
+        "Tauren": 39205,
+        "Troll": 39357,
+        "Undead": 39282,
+        "Void Elf": 39355,
+        "Worgen": 39309,
+        "Zandalari Troll Bwonsamdi": 39183,
+        "Zandalari Troll Kimbul": 39194,
+        "Zandalari Troll Paku": 39331
     },
     "data_type": "races",
     "languages": {
@@ -355,7 +355,7 @@
             },
             "trinket1": {
                 "bonus_id": "4800/1517",
-                "id": "169307"
+                "id": "169311"
             },
             "trinket2": {
                 "bonus_id": "4800/1517",
@@ -397,7 +397,7 @@
         "talents": "3322211",
         "trinket1": {
             "bonus_id": "4800/1517",
-            "id": "169307"
+            "id": "169311"
         },
         "trinket2": {
             "bonus_id": "4800/1517",
@@ -417,38 +417,38 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "459ed729f8",
+        "simc_hash": "1c605c77af",
         "spec": "arms",
         "target_error": "0.1",
         "tier": "24"
     },
     "sorted_data_keys": [
         "Lightforged Draenei",
+        "Gnome",
         "Blood Elf",
         "Human",
-        "Void Elf",
         "Pandaren",
-        "Gnome",
-        "Troll",
         "Goblin",
+        "Troll",
+        "Void Elf",
         "Zandalari Troll Paku",
-        "Highmountain Tauren",
         "Worgen",
-        "Undead",
         "Night Elf",
+        "Highmountain Tauren",
         "Kul Tiran",
-        "Zandalari Troll Kimbul",
+        "Undead",
         "Dwarf",
-        "Maghar Orc",
         "Tauren",
+        "Zandalari Troll Kimbul",
+        "Maghar Orc",
         "Zandalari Troll Bwonsamdi",
         "Draenei",
-        "Dark Iron Dwarf",
         "Orc",
+        "Dark Iron Dwarf",
         "Nightborne"
     ],
     "spec_id": 71,
-    "subtitle": "UTC 2019-07-29 06:31 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/459ed729f8\" target=\"blank\">459ed72</a>",
+    "subtitle": "UTC 2019-07-30 06:32 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/1c605c77af\" target=\"blank\">1c605c7</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -549,6 +549,6 @@
             }
         }
     },
-    "timestamp": "2019-07-29 06:31",
+    "timestamp": "2019-07-30 06:32",
     "title": "Races | Arms Warrior | Patchwerk"
 }
