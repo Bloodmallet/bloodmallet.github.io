@@ -1748,7 +1748,7 @@ function update_data_buttons() {
   let is_traits = (data_view === "azerite_traits" && (chosen_azerite_list_type === "itemlevel" || chosen_azerite_list_type === "trait_stacking"));
   document.getElementById("azerite_traits_tier_3").hidden = !is_traits;
   document.getElementById("azerite_traits_tier_2").hidden = !is_traits;
-  document.getElementById("copy_azerite_weights").hidden = !is_traits;
+  document.getElementById("copy_azerite_weights").hidden = !(is_traits || data_view == "essences");
   document.getElementById("copy_azerite_forge").hidden = !is_traits;
 }
 
