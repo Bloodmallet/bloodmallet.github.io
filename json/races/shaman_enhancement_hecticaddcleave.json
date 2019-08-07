@@ -1,20 +1,20 @@
 {
     "class_id": 7,
     "data": {
-        "Dark Iron Dwarf": 63240,
-        "Draenei": 63282,
-        "Dwarf": 63731,
-        "Goblin": 63685,
-        "Highmountain Tauren": 63593,
-        "Kul Tiran": 63630,
-        "Maghar Orc": 63474,
+        "Dark Iron Dwarf": 63281,
+        "Draenei": 63419,
+        "Dwarf": 63756,
+        "Goblin": 63618,
+        "Highmountain Tauren": 63618,
+        "Kul Tiran": 63618,
+        "Maghar Orc": 63547,
         "Orc": 63290,
-        "Pandaren": 63624,
-        "Tauren": 63768,
-        "Troll": 63809,
-        "Zandalari Troll Bwonsamdi": 63400,
-        "Zandalari Troll Kimbul": 63378,
-        "Zandalari Troll Paku": 63638
+        "Pandaren": 63630,
+        "Tauren": 63634,
+        "Troll": 63800,
+        "Zandalari Troll Bwonsamdi": 63357,
+        "Zandalari Troll Kimbul": 63294,
+        "Zandalari Troll Paku": 63585
     },
     "data_type": "races",
     "languages": {
@@ -328,29 +328,29 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "b0e80dc5bc",
+        "simc_hash": "9ef2ebe25e",
         "spec": "enhancement",
         "target_error": "0.2",
         "tier": "24"
     },
     "sorted_data_keys": [
         "Troll",
-        "Tauren",
         "Dwarf",
-        "Goblin",
-        "Zandalari Troll Paku",
-        "Kul Tiran",
+        "Tauren",
         "Pandaren",
+        "Kul Tiran",
+        "Goblin",
         "Highmountain Tauren",
+        "Zandalari Troll Paku",
         "Maghar Orc",
+        "Draenei",
         "Zandalari Troll Bwonsamdi",
         "Zandalari Troll Kimbul",
         "Orc",
-        "Draenei",
         "Dark Iron Dwarf"
     ],
     "spec_id": 263,
-    "subtitle": "UTC 2019-08-05 06:43 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/b0e80dc5bc\" target=\"blank\">b0e80dc</a>",
+    "subtitle": "UTC 2019-08-06 06:44 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/9ef2ebe25e\" target=\"blank\">9ef2ebe</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -451,6 +451,6 @@
             }
         }
     },
-    "timestamp": "2019-08-05 06:43",
+    "timestamp": "2019-08-06 06:44",
     "title": "Races | Enhancement Shaman | Hecticaddcleave"
 }
