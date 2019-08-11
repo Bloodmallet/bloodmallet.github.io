@@ -1,27 +1,27 @@
 {
     "class_id": 8,
     "data": {
-        "Blood Elf": 39727,
-        "Dark Iron Dwarf": 39934,
-        "Draenei": 39684,
-        "Dwarf": 40141,
-        "Gnome": 39823,
-        "Goblin": 39830,
-        "Human": 39967,
-        "Kul Tiran": 39841,
-        "Lightforged Draenei": 39942,
-        "Maghar Orc": 40108,
-        "Night Elf": 39739,
-        "Nightborne": 39859,
-        "Orc": 39918,
-        "Pandaren": 39830,
-        "Troll": 40444,
-        "Undead": 39842,
-        "Void Elf": 40238,
-        "Worgen": 39712,
-        "Zandalari Troll Bwonsamdi": 39752,
-        "Zandalari Troll Kimbul": 39738,
-        "Zandalari Troll Paku": 39711
+        "Blood Elf": 39768,
+        "Dark Iron Dwarf": 39924,
+        "Draenei": 39706,
+        "Dwarf": 40129,
+        "Gnome": 39849,
+        "Goblin": 39829,
+        "Human": 39994,
+        "Kul Tiran": 39872,
+        "Lightforged Draenei": 39978,
+        "Maghar Orc": 40124,
+        "Night Elf": 39710,
+        "Nightborne": 39897,
+        "Orc": 39873,
+        "Pandaren": 39835,
+        "Troll": 40452,
+        "Undead": 39886,
+        "Void Elf": 40215,
+        "Worgen": 39683,
+        "Zandalari Troll Bwonsamdi": 39730,
+        "Zandalari Troll Kimbul": 39778,
+        "Zandalari Troll Paku": 39774
     },
     "data_type": "races",
     "languages": {
@@ -403,7 +403,7 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "85ae1205b2",
+        "simc_hash": "7a9b9f1d72",
         "spec": "fire",
         "target_error": "0.1",
         "tier": "24"
@@ -416,23 +416,23 @@
         "Human",
         "Lightforged Draenei",
         "Dark Iron Dwarf",
-        "Orc",
         "Nightborne",
         "Undead",
+        "Orc",
         "Kul Tiran",
+        "Gnome",
         "Pandaren",
         "Goblin",
-        "Gnome",
+        "Zandalari Troll Kimbul",
+        "Zandalari Troll Paku",
+        "Blood Elf",
         "Zandalari Troll Bwonsamdi",
         "Night Elf",
-        "Zandalari Troll Kimbul",
-        "Blood Elf",
-        "Worgen",
-        "Zandalari Troll Paku",
-        "Draenei"
+        "Draenei",
+        "Worgen"
     ],
     "spec_id": 63,
-    "subtitle": "UTC 2019-08-09 06:24 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/85ae1205b2\" target=\"blank\">85ae120</a>",
+    "subtitle": "UTC 2019-08-10 06:24 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7a9b9f1d72\" target=\"blank\">7a9b9f1</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -533,6 +533,6 @@
             }
         }
     },
-    "timestamp": "2019-08-09 06:24",
+    "timestamp": "2019-08-10 06:24",
     "title": "Races | Fire Mage | Patchwerk"
 }
