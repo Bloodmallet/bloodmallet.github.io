@@ -1,18 +1,18 @@
 {
     "class_id": 9,
     "data": {
-        "Blood Elf": 47927,
-        "Dark Iron Dwarf": 47677,
-        "Dwarf": 48166,
-        "Gnome": 48260,
-        "Goblin": 48225,
-        "Human": 48156,
-        "Nightborne": 47901,
-        "Orc": 47902,
-        "Troll": 48534,
-        "Undead": 47845,
-        "Void Elf": 47829,
-        "Worgen": 48030
+        "Blood Elf": 46152,
+        "Dark Iron Dwarf": 46028,
+        "Dwarf": 46297,
+        "Gnome": 46271,
+        "Goblin": 46419,
+        "Human": 46359,
+        "Nightborne": 46093,
+        "Orc": 46174,
+        "Troll": 47042,
+        "Undead": 46053,
+        "Void Elf": 46036,
+        "Worgen": 46179
     },
     "data_type": "races",
     "languages": {
@@ -152,7 +152,7 @@
             "talents": "2103023"
         },
         "chest": {
-            "azerite_powers": "131/576/30/13",
+            "azerite_powers": "432/576/30/13",
             "bonus_id": "4824/1517/4775",
             "id": "168337"
         },
@@ -162,12 +162,12 @@
         },
         "finger1": {
             "bonus_id": "4800/1517",
-            "enchant": "accord_of_versatility",
+            "enchant": "accord_of_critical_strike",
             "id": "168891"
         },
         "finger2": {
             "bonus_id": "4800/1517",
-            "enchant": "accord_of_versatility",
+            "enchant": "accord_of_mastery",
             "id": "168890"
         },
         "hands": {
@@ -175,7 +175,7 @@
             "id": "170333"
         },
         "head": {
-            "azerite_powers": "460/576/30/13",
+            "azerite_powers": "444/576/30/13",
             "bonus_id": "4824/1517/4775",
             "id": "168336"
         },
@@ -186,7 +186,7 @@
                 "id": "168391"
             },
             "chest": {
-                "azerite_powers": "131/576/30/13",
+                "azerite_powers": "432/576/30/13",
                 "bonus_id": "4824/1517/4775",
                 "id": "168337"
             },
@@ -196,12 +196,12 @@
             },
             "finger1": {
                 "bonus_id": "4800/1517",
-                "enchant": "accord_of_versatility",
+                "enchant": "accord_of_critical_strike",
                 "id": "168891"
             },
             "finger2": {
                 "bonus_id": "4800/1517",
-                "enchant": "accord_of_versatility",
+                "enchant": "accord_of_mastery",
                 "id": "168890"
             },
             "hands": {
@@ -209,13 +209,13 @@
                 "id": "170333"
             },
             "head": {
-                "azerite_powers": "460/576/30/13",
+                "azerite_powers": "444/576/30/13",
                 "bonus_id": "4824/1517/4775",
                 "id": "168336"
             },
             "legs": {
                 "bonus_id": "4800/1517",
-                "id": "168371"
+                "id": "168876"
             },
             "main_hand": {
                 "bonus_id": "4800/1517",
@@ -251,7 +251,7 @@
         },
         "legs": {
             "bonus_id": "4800/1517",
-            "id": "168371"
+            "id": "168876"
         },
         "level": "120",
         "main_hand": {
@@ -296,27 +296,27 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "7a9b9f1d72",
+        "simc_hash": "000a2dbd36",
         "spec": "destruction",
         "target_error": "0.2",
         "tier": "24"
     },
     "sorted_data_keys": [
         "Troll",
-        "Gnome",
         "Goblin",
-        "Dwarf",
         "Human",
+        "Dwarf",
+        "Gnome",
         "Worgen",
-        "Blood Elf",
         "Orc",
+        "Blood Elf",
         "Nightborne",
         "Undead",
         "Void Elf",
         "Dark Iron Dwarf"
     ],
     "spec_id": 267,
-    "subtitle": "UTC 2019-08-10 06:47 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7a9b9f1d72\" target=\"blank\">7a9b9f1</a>",
+    "subtitle": "UTC 2019-08-11 06:46 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/000a2dbd36\" target=\"blank\">000a2db</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -417,6 +417,6 @@
             }
         }
     },
-    "timestamp": "2019-08-10 06:47",
+    "timestamp": "2019-08-11 06:46",
     "title": "Races | Destruction Warlock | Hecticaddcleave"
 }
