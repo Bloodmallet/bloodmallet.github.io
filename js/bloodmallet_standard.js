@@ -2109,10 +2109,14 @@ function update_chart() {
           }
 
           link += "\" target=\"blank\"";
-
+          link += "class=\"";
           if (whTooltips.iconizeLinks && !item_and_trait_equilizer[trait_name] && name_portions.length === 1) {
-            link += "class=\"chart_link\"";
+            link += "chart_link";
           }
+          if (tmp_i > 0) {
+            link += " monk-color small_text";
+          }
+          link += "\"";
 
           link += ">";
 
@@ -2125,7 +2129,7 @@ function update_chart() {
             if (tmp_i % 4 === 0 || tmp_i === "0") {
               link += "<br/>";
             }
-            link += "+";
+            link += "<span class=\"small_text\">+</span>";
           }
 
         }
