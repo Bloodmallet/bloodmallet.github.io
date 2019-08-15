@@ -1,25 +1,25 @@
 {
     "class_id": 4,
     "data": {
-        "Blood Elf": 40933,
+        "Blood Elf": 40924,
         "Dark Iron Dwarf": 40674,
-        "Dwarf": 40869,
-        "Gnome": 40978,
-        "Goblin": 40870,
-        "Human": 40933,
-        "Kul Tiran": 40811,
-        "Maghar Orc": 40968,
-        "Night Elf": 40792,
-        "Nightborne": 40737,
-        "Orc": 40663,
-        "Pandaren": 40737,
-        "Troll": 40990,
-        "Undead": 40812,
-        "Void Elf": 40874,
-        "Worgen": 40787,
-        "Zandalari Troll Bwonsamdi": 40674,
-        "Zandalari Troll Kimbul": 40685,
-        "Zandalari Troll Paku": 40823
+        "Dwarf": 40877,
+        "Gnome": 40962,
+        "Goblin": 40852,
+        "Human": 40938,
+        "Kul Tiran": 40845,
+        "Maghar Orc": 40989,
+        "Night Elf": 40787,
+        "Nightborne": 40718,
+        "Orc": 40644,
+        "Pandaren": 40764,
+        "Troll": 40952,
+        "Undead": 40750,
+        "Void Elf": 40886,
+        "Worgen": 40786,
+        "Zandalari Troll Bwonsamdi": 40665,
+        "Zandalari Troll Kimbul": 40680,
+        "Zandalari Troll Paku": 40809
     },
     "data_type": "races",
     "languages": {
@@ -383,26 +383,26 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "3449e37472",
+        "simc_hash": "8ba9d61754",
         "spec": "assassination",
         "target_error": "0.1",
         "tier": "24"
     },
     "sorted_data_keys": [
-        "Troll",
-        "Gnome",
         "Maghar Orc",
+        "Gnome",
+        "Troll",
         "Human",
         "Blood Elf",
         "Void Elf",
-        "Goblin",
         "Dwarf",
-        "Zandalari Troll Paku",
-        "Undead",
+        "Goblin",
         "Kul Tiran",
+        "Zandalari Troll Paku",
         "Night Elf",
         "Worgen",
         "Pandaren",
+        "Undead",
         "Nightborne",
         "Zandalari Troll Kimbul",
         "Dark Iron Dwarf",
@@ -410,7 +410,7 @@
         "Orc"
     ],
     "spec_id": 259,
-    "subtitle": "UTC 2019-08-13 06:28 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/3449e37472\" target=\"blank\">3449e37</a>",
+    "subtitle": "UTC 2019-08-14 06:27 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/8ba9d61754\" target=\"blank\">8ba9d61</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -511,6 +511,6 @@
             }
         }
     },
-    "timestamp": "2019-08-13 06:28",
+    "timestamp": "2019-08-14 06:27",
     "title": "Races | Assassination Rogue | Patchwerk"
 }
