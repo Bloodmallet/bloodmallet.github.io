@@ -1,20 +1,20 @@
 {
     "class_id": 7,
     "data": {
-        "Dark Iron Dwarf": 34497,
-        "Draenei": 34532,
-        "Dwarf": 34802,
-        "Goblin": 34695,
-        "Highmountain Tauren": 34683,
-        "Kul Tiran": 34691,
-        "Maghar Orc": 34543,
-        "Orc": 34505,
-        "Pandaren": 34611,
-        "Tauren": 34796,
-        "Troll": 34617,
-        "Zandalari Troll Bwonsamdi": 34628,
-        "Zandalari Troll Kimbul": 34650,
-        "Zandalari Troll Paku": 34565
+        "Dark Iron Dwarf": 34459,
+        "Draenei": 34538,
+        "Dwarf": 34785,
+        "Goblin": 34676,
+        "Highmountain Tauren": 34709,
+        "Kul Tiran": 34686,
+        "Maghar Orc": 34559,
+        "Orc": 34482,
+        "Pandaren": 34588,
+        "Tauren": 34785,
+        "Troll": 34667,
+        "Zandalari Troll Bwonsamdi": 34626,
+        "Zandalari Troll Kimbul": 34660,
+        "Zandalari Troll Paku": 34569
     },
     "data_type": "races",
     "languages": {
@@ -326,7 +326,7 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "8ba9d61754",
+        "simc_hash": "5917a20813",
         "spec": "restoration",
         "target_error": "0.1",
         "tier": "24"
@@ -334,12 +334,12 @@
     "sorted_data_keys": [
         "Dwarf",
         "Tauren",
-        "Goblin",
-        "Kul Tiran",
         "Highmountain Tauren",
+        "Kul Tiran",
+        "Goblin",
+        "Troll",
         "Zandalari Troll Kimbul",
         "Zandalari Troll Bwonsamdi",
-        "Troll",
         "Pandaren",
         "Zandalari Troll Paku",
         "Maghar Orc",
@@ -348,7 +348,7 @@
         "Dark Iron Dwarf"
     ],
     "spec_id": 264,
-    "subtitle": "UTC 2019-08-14 06:31 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/8ba9d61754\" target=\"blank\">8ba9d61</a>",
+    "subtitle": "UTC 2019-08-15 06:31 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/5917a20813\" target=\"blank\">5917a20</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -449,6 +449,6 @@
             }
         }
     },
-    "timestamp": "2019-08-14 06:31",
+    "timestamp": "2019-08-15 06:31",
     "title": "Races | Restoration Shaman | Patchwerk"
 }
