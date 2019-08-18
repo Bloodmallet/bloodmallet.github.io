@@ -1,18 +1,18 @@
 {
     "class_id": 6,
     "data": {
-        "Blood Elf": 39351,
-        "Draenei": 38962,
-        "Dwarf": 39181,
-        "Gnome": 39186,
-        "Goblin": 39054,
-        "Human": 39153,
-        "Night Elf": 39055,
-        "Orc": 38954,
-        "Tauren": 39181,
-        "Troll": 39150,
-        "Undead": 39160,
-        "Worgen": 39075
+        "Blood Elf": 40674,
+        "Draenei": 40134,
+        "Dwarf": 40413,
+        "Gnome": 40381,
+        "Goblin": 40298,
+        "Human": 40435,
+        "Night Elf": 40248,
+        "Orc": 40196,
+        "Tauren": 40419,
+        "Troll": 40333,
+        "Undead": 40392,
+        "Worgen": 40297
     },
     "data_type": "races",
     "languages": {
@@ -243,7 +243,7 @@
             },
             "trinket2": {
                 "bonus_id": "4800/1517",
-                "id": "169319"
+                "id": "169314"
             },
             "waist": {
                 "bonus_id": "4800/1517",
@@ -290,7 +290,7 @@
         },
         "trinket2": {
             "bonus_id": "4800/1517",
-            "id": "169319"
+            "id": "169314"
         },
         "waist": {
             "bonus_id": "4800/1517",
@@ -306,27 +306,27 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "5917a20813",
+        "simc_hash": "cca48a9682",
         "spec": "frost",
         "target_error": "0.1",
         "tier": "24"
     },
     "sorted_data_keys": [
         "Blood Elf",
-        "Gnome",
-        "Dwarf",
-        "Tauren",
-        "Undead",
         "Human",
+        "Tauren",
+        "Dwarf",
+        "Undead",
+        "Gnome",
         "Troll",
+        "Goblin",
         "Worgen",
         "Night Elf",
-        "Goblin",
-        "Draenei",
-        "Orc"
+        "Orc",
+        "Draenei"
     ],
     "spec_id": 251,
-    "subtitle": "UTC 2019-08-15 06:20 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/5917a20813\" target=\"blank\">5917a20</a>",
+    "subtitle": "UTC 2019-08-17 06:20 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/cca48a9682\" target=\"blank\">cca48a9</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -427,6 +427,6 @@
             }
         }
     },
-    "timestamp": "2019-08-15 06:20",
+    "timestamp": "2019-08-17 06:20",
     "title": "Races | Frost Death Knight | Patchwerk"
 }
