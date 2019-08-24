@@ -1,29 +1,29 @@
 {
     "class_id": 3,
     "data": {
-        "Blood Elf": 42069,
-        "Dark Iron Dwarf": 41965,
-        "Draenei": 41950,
-        "Dwarf": 42288,
-        "Gnome": 42119,
-        "Goblin": 42088,
-        "Highmountain Tauren": 42139,
-        "Human": 42274,
-        "Kul Tiran": 42156,
-        "Lightforged Draenei": 42099,
-        "Maghar Orc": 42178,
-        "Night Elf": 42089,
-        "Nightborne": 41870,
-        "Orc": 41989,
-        "Pandaren": 42102,
-        "Tauren": 42235,
-        "Troll": 42315,
-        "Undead": 42115,
-        "Void Elf": 42243,
-        "Worgen": 42030,
-        "Zandalari Troll Bwonsamdi": 42029,
-        "Zandalari Troll Kimbul": 42064,
-        "Zandalari Troll Paku": 42099
+        "Blood Elf": 43328,
+        "Dark Iron Dwarf": 43242,
+        "Draenei": 43209,
+        "Dwarf": 43499,
+        "Gnome": 43458,
+        "Goblin": 43395,
+        "Highmountain Tauren": 43430,
+        "Human": 43590,
+        "Kul Tiran": 43428,
+        "Lightforged Draenei": 43370,
+        "Maghar Orc": 43531,
+        "Night Elf": 43313,
+        "Nightborne": 43138,
+        "Orc": 43253,
+        "Pandaren": 43432,
+        "Tauren": 43498,
+        "Troll": 43658,
+        "Undead": 43353,
+        "Void Elf": 43544,
+        "Worgen": 43298,
+        "Zandalari Troll Bwonsamdi": 43261,
+        "Zandalari Troll Kimbul": 43296,
+        "Zandalari Troll Paku": 43345
     },
     "data_type": "races",
     "languages": {
@@ -261,7 +261,7 @@
     "profile": {
         "back": {
             "bonus_id": "4800/1517",
-            "id": "168604"
+            "id": "168391"
         },
         "character": {
             "class": "hunter",
@@ -283,13 +283,13 @@
         },
         "finger1": {
             "bonus_id": "4800/1517",
-            "enchant": "accord_of_critical_strike",
+            "enchant": "accord_of_mastery",
             "id": "168891"
         },
         "finger2": {
             "bonus_id": "4800/1517",
-            "enchant": "accord_of_critical_strike",
-            "id": "168890"
+            "enchant": "accord_of_versatility",
+            "id": "168889"
         },
         "hands": {
             "bonus_id": "1512",
@@ -304,7 +304,7 @@
             "azerite_essences": {},
             "back": {
                 "bonus_id": "4800/1517",
-                "id": "168604"
+                "id": "168391"
             },
             "chest": {
                 "azerite_powers": "36/370/30/14/13",
@@ -317,13 +317,13 @@
             },
             "finger1": {
                 "bonus_id": "4800/1517",
-                "enchant": "accord_of_critical_strike",
+                "enchant": "accord_of_mastery",
                 "id": "168891"
             },
             "finger2": {
                 "bonus_id": "4800/1517",
-                "enchant": "accord_of_critical_strike",
-                "id": "168890"
+                "enchant": "accord_of_versatility",
+                "id": "168889"
             },
             "hands": {
                 "bonus_id": "1512",
@@ -336,11 +336,11 @@
             },
             "legs": {
                 "bonus_id": "4800/1517",
-                "id": "168383"
+                "id": "168874"
             },
             "main_hand": {
                 "bonus_id": "4800/1517",
-                "enchant": "crows_nest_scope",
+                "enchant": "versatile_navigation",
                 "id": "168273"
             },
             "neck": {
@@ -349,7 +349,7 @@
                 "id": "158075"
             },
             "shoulders": {
-                "azerite_powers": "36/576/30/15/13",
+                "azerite_powers": "36/212/30/15/13",
                 "bonus_id": "4824/1517/4775",
                 "id": "169588"
             },
@@ -372,12 +372,12 @@
         },
         "legs": {
             "bonus_id": "4800/1517",
-            "id": "168383"
+            "id": "168874"
         },
         "level": "120",
         "main_hand": {
             "bonus_id": "4800/1517",
-            "enchant": "crows_nest_scope",
+            "enchant": "versatile_navigation",
             "id": "168273"
         },
         "neck": {
@@ -389,7 +389,7 @@
         "race": "human",
         "role": "attack",
         "shoulders": {
-            "azerite_powers": "36/576/30/15/13",
+            "azerite_powers": "36/212/30/15/13",
             "bonus_id": "4824/1517/4775",
             "id": "169588"
         },
@@ -424,23 +424,23 @@
     },
     "sorted_data_keys": [
         "Troll",
-        "Dwarf",
         "Human",
         "Void Elf",
-        "Tauren",
         "Maghar Orc",
-        "Kul Tiran",
-        "Highmountain Tauren",
+        "Dwarf",
+        "Tauren",
         "Gnome",
-        "Undead",
         "Pandaren",
-        "Lightforged Draenei",
-        "Zandalari Troll Paku",
-        "Night Elf",
+        "Highmountain Tauren",
+        "Kul Tiran",
         "Goblin",
+        "Lightforged Draenei",
+        "Undead",
+        "Zandalari Troll Paku",
         "Blood Elf",
-        "Zandalari Troll Kimbul",
+        "Night Elf",
         "Worgen",
+        "Zandalari Troll Kimbul",
         "Zandalari Troll Bwonsamdi",
         "Orc",
         "Dark Iron Dwarf",
@@ -448,7 +448,7 @@
         "Nightborne"
     ],
     "spec_id": 254,
-    "subtitle": "UTC 2019-08-22 06:23 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/d9b9ba1f64\" target=\"blank\">d9b9ba1</a>",
+    "subtitle": "UTC 2019-08-23 06:23 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/d9b9ba1f64\" target=\"blank\">d9b9ba1</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -549,6 +549,6 @@
             }
         }
     },
-    "timestamp": "2019-08-22 06:23",
+    "timestamp": "2019-08-23 06:23",
     "title": "Races | Marksmanship Hunter | Patchwerk"
 }

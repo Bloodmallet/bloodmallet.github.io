@@ -1,29 +1,29 @@
 {
     "class_id": 3,
     "data": {
-        "Blood Elf": 41180,
-        "Dark Iron Dwarf": 40907,
-        "Draenei": 40941,
-        "Dwarf": 41179,
-        "Gnome": 41302,
-        "Goblin": 41276,
-        "Highmountain Tauren": 41125,
-        "Human": 41185,
-        "Kul Tiran": 41069,
-        "Lightforged Draenei": 41094,
-        "Maghar Orc": 41190,
-        "Night Elf": 41050,
-        "Nightborne": 40883,
-        "Orc": 41015,
-        "Pandaren": 41129,
-        "Tauren": 41198,
-        "Troll": 41174,
-        "Undead": 41139,
-        "Void Elf": 41132,
-        "Worgen": 41020,
-        "Zandalari Troll Bwonsamdi": 41025,
-        "Zandalari Troll Kimbul": 41022,
-        "Zandalari Troll Paku": 41056
+        "Blood Elf": 42076,
+        "Dark Iron Dwarf": 41739,
+        "Draenei": 41795,
+        "Dwarf": 42025,
+        "Gnome": 42250,
+        "Goblin": 42128,
+        "Highmountain Tauren": 41990,
+        "Human": 42118,
+        "Kul Tiran": 41968,
+        "Lightforged Draenei": 41903,
+        "Maghar Orc": 41979,
+        "Night Elf": 41931,
+        "Nightborne": 41709,
+        "Orc": 41857,
+        "Pandaren": 42034,
+        "Tauren": 42039,
+        "Troll": 42023,
+        "Undead": 42030,
+        "Void Elf": 41975,
+        "Worgen": 41915,
+        "Zandalari Troll Bwonsamdi": 41882,
+        "Zandalari Troll Kimbul": 41897,
+        "Zandalari Troll Paku": 41902
     },
     "data_type": "races",
     "languages": {
@@ -283,13 +283,13 @@
         },
         "finger1": {
             "bonus_id": "4800/1517",
-            "enchant": "accord_of_critical_strike",
+            "enchant": "accord_of_haste",
             "id": "168891"
         },
         "finger2": {
-            "bonus_id": "4800/1517",
-            "enchant": "accord_of_critical_strike",
-            "id": "168890"
+            "bonus_id": "1602/4779",
+            "enchant": "accord_of_haste",
+            "id": "158314"
         },
         "hands": {
             "bonus_id": "1512",
@@ -317,13 +317,13 @@
             },
             "finger1": {
                 "bonus_id": "4800/1517",
-                "enchant": "accord_of_critical_strike",
+                "enchant": "accord_of_haste",
                 "id": "168891"
             },
             "finger2": {
-                "bonus_id": "4800/1517",
-                "enchant": "accord_of_critical_strike",
-                "id": "168890"
+                "bonus_id": "1602/4779",
+                "enchant": "accord_of_haste",
+                "id": "158314"
             },
             "hands": {
                 "bonus_id": "1512",
@@ -425,30 +425,30 @@
     "sorted_data_keys": [
         "Gnome",
         "Goblin",
-        "Tauren",
-        "Maghar Orc",
         "Human",
         "Blood Elf",
+        "Tauren",
+        "Pandaren",
+        "Undead",
         "Dwarf",
         "Troll",
-        "Undead",
-        "Void Elf",
-        "Pandaren",
         "Highmountain Tauren",
-        "Lightforged Draenei",
+        "Maghar Orc",
+        "Void Elf",
         "Kul Tiran",
-        "Zandalari Troll Paku",
         "Night Elf",
-        "Zandalari Troll Bwonsamdi",
-        "Zandalari Troll Kimbul",
         "Worgen",
+        "Lightforged Draenei",
+        "Zandalari Troll Paku",
+        "Zandalari Troll Kimbul",
+        "Zandalari Troll Bwonsamdi",
         "Orc",
         "Draenei",
         "Dark Iron Dwarf",
         "Nightborne"
     ],
     "spec_id": 255,
-    "subtitle": "UTC 2019-08-22 06:23 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/d9b9ba1f64\" target=\"blank\">d9b9ba1</a>",
+    "subtitle": "UTC 2019-08-23 06:23 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/d9b9ba1f64\" target=\"blank\">d9b9ba1</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -549,6 +549,6 @@
             }
         }
     },
-    "timestamp": "2019-08-22 06:23",
+    "timestamp": "2019-08-23 06:23",
     "title": "Races | Survival Hunter | Patchwerk"
 }

@@ -1,29 +1,29 @@
 {
     "class_id": 3,
     "data": {
-        "Blood Elf": 53252,
-        "Dark Iron Dwarf": 52924,
-        "Draenei": 53041,
-        "Dwarf": 53315,
-        "Gnome": 53395,
-        "Goblin": 53404,
-        "Highmountain Tauren": 53239,
-        "Human": 53408,
-        "Kul Tiran": 53196,
-        "Lightforged Draenei": 54085,
-        "Maghar Orc": 53163,
-        "Night Elf": 53257,
-        "Nightborne": 53040,
-        "Orc": 53122,
-        "Pandaren": 53325,
-        "Tauren": 53382,
-        "Troll": 53182,
-        "Undead": 53136,
-        "Void Elf": 53276,
-        "Worgen": 53335,
-        "Zandalari Troll Bwonsamdi": 53078,
-        "Zandalari Troll Kimbul": 53017,
-        "Zandalari Troll Paku": 53266
+        "Blood Elf": 54391,
+        "Dark Iron Dwarf": 53922,
+        "Draenei": 54072,
+        "Dwarf": 54372,
+        "Gnome": 54349,
+        "Goblin": 54373,
+        "Highmountain Tauren": 54139,
+        "Human": 54386,
+        "Kul Tiran": 54156,
+        "Lightforged Draenei": 54921,
+        "Maghar Orc": 54080,
+        "Night Elf": 54212,
+        "Nightborne": 54001,
+        "Orc": 54014,
+        "Pandaren": 54292,
+        "Tauren": 54248,
+        "Troll": 53966,
+        "Undead": 54092,
+        "Void Elf": 54142,
+        "Worgen": 54202,
+        "Zandalari Troll Bwonsamdi": 53972,
+        "Zandalari Troll Kimbul": 53980,
+        "Zandalari Troll Paku": 54167
     },
     "data_type": "races",
     "languages": {
@@ -283,13 +283,13 @@
         },
         "finger1": {
             "bonus_id": "4800/1517",
-            "enchant": "accord_of_critical_strike",
+            "enchant": "accord_of_haste",
             "id": "168891"
         },
         "finger2": {
-            "bonus_id": "4800/1517",
-            "enchant": "accord_of_critical_strike",
-            "id": "168890"
+            "bonus_id": "1602/4779",
+            "enchant": "accord_of_haste",
+            "id": "158314"
         },
         "hands": {
             "bonus_id": "1512",
@@ -317,13 +317,13 @@
             },
             "finger1": {
                 "bonus_id": "4800/1517",
-                "enchant": "accord_of_critical_strike",
+                "enchant": "accord_of_haste",
                 "id": "168891"
             },
             "finger2": {
-                "bonus_id": "4800/1517",
-                "enchant": "accord_of_critical_strike",
-                "id": "168890"
+                "bonus_id": "1602/4779",
+                "enchant": "accord_of_haste",
+                "id": "158314"
             },
             "hands": {
                 "bonus_id": "1512",
@@ -424,31 +424,31 @@
     },
     "sorted_data_keys": [
         "Lightforged Draenei",
+        "Blood Elf",
         "Human",
         "Goblin",
-        "Gnome",
-        "Tauren",
-        "Worgen",
-        "Pandaren",
         "Dwarf",
-        "Void Elf",
-        "Zandalari Troll Paku",
+        "Gnome",
+        "Pandaren",
+        "Tauren",
         "Night Elf",
-        "Blood Elf",
-        "Highmountain Tauren",
+        "Worgen",
+        "Zandalari Troll Paku",
         "Kul Tiran",
-        "Troll",
-        "Maghar Orc",
+        "Void Elf",
+        "Highmountain Tauren",
         "Undead",
-        "Orc",
-        "Zandalari Troll Bwonsamdi",
+        "Maghar Orc",
         "Draenei",
+        "Orc",
         "Nightborne",
         "Zandalari Troll Kimbul",
+        "Zandalari Troll Bwonsamdi",
+        "Troll",
         "Dark Iron Dwarf"
     ],
     "spec_id": 255,
-    "subtitle": "UTC 2019-08-22 06:38 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/d9b9ba1f64\" target=\"blank\">d9b9ba1</a>",
+    "subtitle": "UTC 2019-08-23 06:39 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/d9b9ba1f64\" target=\"blank\">d9b9ba1</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -549,6 +549,6 @@
             }
         }
     },
-    "timestamp": "2019-08-22 06:38",
+    "timestamp": "2019-08-23 06:39",
     "title": "Races | Survival Hunter | Hecticaddcleave"
 }
