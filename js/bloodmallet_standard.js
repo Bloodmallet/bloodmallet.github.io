@@ -3197,7 +3197,7 @@ function copy_azerite_weights() {
 function copy_relative_azerite_forge() {
   if(debug)
     console.log("copy_relative_azerite_forge")
-  var relative_weight_string = loaded_data[chosen_class][chosen_spec][data_view][fight_style]["azerite_forge_" + fight_style + "_" + chosen_azerite_list_type];
+  var relative_weight_string = loaded_data[chosen_class][chosen_spec][data_view][fight_style]["azerite_forge_relative_" + fight_style + "_" + chosen_azerite_list_type];
   let relative_link_helper = document.getElementById("copy_relative_azerite_forge_generator")
   relative_link_helper.innerHTML = relative_weight_string;
   relative_link_helper.style.display = "block";
@@ -3215,7 +3215,6 @@ function copy_relative_azerite_forge() {
 function copy_azerite_forge() {
   if (debug)
     console.log("copy_azerite_forge");
-
   var weight_string = loaded_data[chosen_class][chosen_spec][data_view][fight_style]["azerite_forge_" + fight_style + "_" + chosen_azerite_list_type];
 
   let link_helper = document.getElementById("copy_azerite_forge_generator");
