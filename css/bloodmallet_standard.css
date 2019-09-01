@@ -868,12 +868,12 @@ However, delay the fade out process for 2.5 seconds */
   z-index:100;
 }
 
-#copy_link, #copy_azerite_weights, #copy_azerite_forge {
+#copy_link, #copy_azerite_weights, #copy_azerite_forge, #copy_relative_azerite_forge {
   color: #3e9bff;
   cursor: pointer;
 }
 
-#copy_link:hover, #copy_azerite_weights:hover, #copy_azerite_forge:hover {
+#copy_link:hover, #copy_azerite_weights:hover, #copy_azerite_forge:hover, #copy_relative_azerite_forge:hover {
   color: #3273b9;
   text-decoration: underline;
 }

@@ -1139,6 +1139,9 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("copy_azerite_forge").addEventListener("click", function () {
       copy_azerite_forge();
     });
+    document.getElementById("copy_relative_azerite_forge").addEventListener("click", function () {
+      copy_relative_azerite_forge();
+    });
 
   } catch (err) {
     console.log("Couldn't bind click events");
@@ -1750,6 +1753,7 @@ function update_data_buttons() {
   document.getElementById("azerite_traits_tier_2").hidden = !is_traits;
   document.getElementById("copy_azerite_weights").hidden = !(is_traits || data_view == "essences");
   document.getElementById("copy_azerite_forge").hidden = !is_traits;
+  document.getElementById("copy_relative_azerite_forge").hidden = !is_traits;
 }
 
 /**
@@ -3190,6 +3194,23 @@ function copy_azerite_weights() {
 
 }
 
+function copy_relative_azerite_forge() {
+  if(debug)
+    console.log("copy_relative_azerite_forge")
+  var relative_weight_string = loaded_data[chosen_class][chosen_spec][data_view][fight_style]["azerite_forge_" + fight_style + "_" + chosen_azerite_list_type];
+  let relative_link_helper = document.getElementById("copy_relative_azerite_forge_generator")
+  relative_link_helper.innerHTML = relative_weight_string;
+  relative_link_helper.style.display = "block";
+  window.getSelection().selectAllChildren(relative_link_helper);
+  document.execCommand("copy")
+  relative_link_helper.style.display="none";
+
+  let success_message = document.getElementById("copy_weights_success");
+  success_message.className = "show";
+  setTimeout(function () {
+    success_message.className = success_message.className.replace("show", "");
+  }, 3000);
+}
 
 function copy_azerite_forge() {
   if (debug)
