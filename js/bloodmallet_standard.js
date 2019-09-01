@@ -3201,7 +3201,7 @@ function copy_relative_azerite_forge() {
   if(debug)
     console.log("copy_relative_azerite_forge")
   var relative_weight_string = loaded_data[chosen_class][chosen_spec][data_view][fight_style]["azerite_forge_relative_" + fight_style + "_" + chosen_azerite_list_type];
-  if(relative_weight_string == undefined){
+  if(relative_weight_string === undefined){
       console.log("This is undefined returning!");
       let success_message = document.getElementById("copy_weights_success");
       success_message.className = "show";
