@@ -574,6 +574,7 @@ const item_and_trait_equilizer = {
   //"Lion's Strength": "Doom's Fury"
 }
 
+var relative_azerite_string = false;
 /*---------------------------------------------------------
 //
 //  Dark Mode
@@ -598,6 +599,11 @@ document.addEventListener("DOMContentLoaded", function () {
     whTooltips.iconizeLinks = e.target.checked;
     set_iconized_chart_cookie();
     $WowheadPower.refreshLinks();
+  });
+
+  document.getElementById("relative_azerite_forge").addEventListener("change", function (e) {
+    relative_azerite_string = e.target.checked;
+    set_relative_azerite_cookie()
   });
 
 });
@@ -1138,9 +1144,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     document.getElementById("copy_azerite_forge").addEventListener("click", function () {
       copy_azerite_forge();
-    });
-    document.getElementById("copy_relative_azerite_forge").addEventListener("click", function () {
-      copy_relative_azerite_forge();
     });
 
   } catch (err) {
@@ -1753,7 +1756,6 @@ function update_data_buttons() {
   document.getElementById("azerite_traits_tier_2").hidden = !is_traits;
   document.getElementById("copy_azerite_weights").hidden = !(is_traits || data_view == "essences");
   document.getElementById("copy_azerite_forge").hidden = !is_traits;
-  document.getElementById("copy_relative_azerite_forge").hidden = !is_traits;
 }
 
 /**
@@ -3197,42 +3199,28 @@ function copy_azerite_weights() {
 /**
  * Copy's the relative azerite forge string to your clipboard.
  */
-function copy_relative_azerite_forge() {
-  if(debug)
-    console.log("copy_relative_azerite_forge")
-  var relative_weight_string = loaded_data[chosen_class][chosen_spec][data_view][fight_style]["azerite_forge_relative_" + fight_style + "_" + chosen_azerite_list_type];
-  if(relative_weight_string === undefined){
-      console.log("This is undefined returning!");
-      let success_message = document.getElementById("copy_weights_success");
-      success_message.className = "show";
-      tempText = success_message.innerText;
-      success_message.innerText = "This feature is still work in progress!"
-      setTimeout(function () {
-          success_message.className = success_message.className.replace("show", "");
-          success_message.innerText = tempText
-      }, 3000);
-      return;
-  }
-  let relative_link_helper = document.getElementById("copy_relative_azerite_forge_generator")
-  relative_link_helper.innerHTML = relative_weight_string;
-  relative_link_helper.style.display = "block";
-  window.getSelection().selectAllChildren(relative_link_helper);
-  document.execCommand("copy")
-  relative_link_helper.style.display="none";
-
-  let success_message = document.getElementById("copy_weights_success");
-  success_message.className = "show";
-  setTimeout(function () {
-    success_message.className = success_message.className.replace("show", "");
-  }, 3000);
-}
 
 function copy_azerite_forge() {
   if (debug)
     console.log("copy_azerite_forge");
-  var weight_string = loaded_data[chosen_class][chosen_spec][data_view][fight_style]["azerite_forge_" + fight_style + "_" + chosen_azerite_list_type];
 
+  var weight_string = loaded_data[chosen_class][chosen_spec][data_view][fight_style]["azerite_forge_" + fight_style + "_" + chosen_azerite_list_type];
   let link_helper = document.getElementById("copy_azerite_forge_generator");
+
+  if(relative_azerite_string){
+    //TODO: Generate Relative String
+    let success_message = document.getElementById("copy_weights_success");
+    success_message.className = "show";
+    tempText = success_message.innerText;
+    success_message.innerText = "This feature is still WIP!";
+
+    setTimeout(function () {
+      success_message.className = success_message.className.replace("show", "");
+      success_message.innerText = tempText;
+    }, 3000);
+    return;
+  }
+
   link_helper.innerHTML = weight_string;
   link_helper.style.display = "block";
   window.getSelection().selectAllChildren(link_helper);
@@ -3659,6 +3647,24 @@ function search_iconized_chart_cookie() {
   document.getElementById("iconized_charts_checkbox").checked = whTooltips.iconizeLinks;
 }
 
+/**
+ * Sets the relative azerite cookie
+ */
+function set_relative_azerite_cookie(){
+  if(debug)
+    console.log("set_relative_azerite_cookie");
+  Cookies.set("bloodmallet_relative_azerite", relative_azerite_string, {expires: 31, path: ''})
+}
+
+function search_relative_azerite_cookie(){
+  if(debug)
+    console.log("search_relative_azerite_cookie");
+  if(Cookies.get("bloodmallet_relative_azerite")){
+    relative_azerite_string = ('true' === Cookies.get('bloodmallet_relative_azerite'));
+  }
+  document.getElementById("relative_azerite_forge").checked = relative_azerite_string;
+}
+
 
 /******************************************************************************
  *
@@ -3670,6 +3676,7 @@ function search_iconized_chart_cookie() {
 document.addEventListener("DOMContentLoaded", async function () {
   search_dark_mode_cookie();
   search_iconized_chart_cookie();
+  search_relative_azerite_cookie();
   await search_language_cookie();
 
   get_data_from_link();
