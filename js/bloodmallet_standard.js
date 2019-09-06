@@ -3218,21 +3218,21 @@ function copy_azerite_forge() {
     let threeStack;
     let section;
 
-    let simIlvl = data["simulated_steps"][0].toString().split("_")[1];
+    let maxItemLevel = data["simulated_steps"][0].toString().split("_")[1];
     for (let spell in data["azerite_ids"]) {
-      baseline = data["data"]["baseline"]["1_" + simIlvl];
+      baseline = data["data"]["baseline"]["1_" + maxItemLevel];
       traitID = data["azerite_ids"][spell];
 
       try {
-        oneStack = data["data"][spell]["1_" + simIlvl] - baseline;
+        oneStack = data["data"][spell]["1_" + maxItemLevel] - baseline;
       } catch (e) {oneStack = NaN;}
 
       try {
-        twoStack = data["data"][spell]["2_" + simIlvl] - baseline;
+        twoStack = data["data"][spell]["2_" + maxItemLevel] - baseline;
       } catch (e) {twoStack = NaN;}
 
       try {
-        threeStack = data["data"][spell]["3_" + simIlvl] - baseline;
+        threeStack = data["data"][spell]["3_" + maxItemLevel] - baseline;
       } catch (e) {
         threeStack = NaN;
       }
