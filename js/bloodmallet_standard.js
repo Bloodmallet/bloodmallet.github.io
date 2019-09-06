@@ -3206,17 +3206,18 @@ function copy_azerite_forge() {
 
   var weight_string = loaded_data[chosen_class][chosen_spec][data_view][fight_style]["azerite_forge_" + fight_style + "_" + chosen_azerite_list_type];
   let link_helper = document.getElementById("copy_azerite_forge_generator");
+  let data = loaded_data[chosen_class][chosen_spec][data_view][fight_style];
 
-  let relative_string = weight_string.split("^")[0] + "^";
-  let baseline;
-  let traitID;
-  let oneStack;
-  let twoStack;
-  let threeStack;
-  let section;
+  let relative_string = `AZFORGE:${data["class_id"]}:${data["spec_id"]}`;
+
   if (relative_azerite_string && chosen_azerite_list_type === "trait_stacking") {
+    let baseline;
+    let traitID;
+    let oneStack;
+    let twoStack;
+    let threeStack;
+    let section;
 
-    let data = loaded_data[chosen_class][chosen_spec][data_view][fight_style];
     let simIlvl = data["simulated_steps"][0].toString().split("_")[1];
     for (let spell in data["azerite_ids"]) {
       baseline = data["data"]["baseline"]["1_" + simIlvl];
