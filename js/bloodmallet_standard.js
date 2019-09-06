@@ -3207,42 +3207,7 @@ function copy_azerite_forge() {
   var weight_string = loaded_data[chosen_class][chosen_spec][data_view][fight_style]["azerite_forge_" + fight_style + "_" + chosen_azerite_list_type];
   let link_helper = document.getElementById("copy_azerite_forge_generator");
 
-  var testData = {};
-  testData["azerite_ids"] = {};
-  testData["data"] = {};
-  testData["azerite_ids"]["Ancestral Resonance"] = "447";
-  testData["azerite_ids"]["Test123"] = "446";
-  testData["azerite_ids"]["SuperPowerFullSpell"] = "445";
-  testData["data"]["baseline"] = {}
-  for(spell in testData["azerite_ids"]){
-    testData["data"][spell] = {};
-  }
-  console.log(testData)
-  testData["data"]["Ancestral Resonance"]["1_400"] = "30565";
-  testData["data"]["Ancestral Resonance"]["1_415"] = "30565";
-  testData["data"]["Ancestral Resonance"]["1_430"] = "30565";
-  testData["data"]["Ancestral Resonance"]["1_445"] = "30565";
-  testData["data"]["Ancestral Resonance"]["2_445"] = "30565";
-  testData["data"]["Ancestral Resonance"]["3_445"] = "30565";
-
-  testData["data"]["Test123"]["1_400"] = "30565";
-  testData["data"]["Test123"]["1_415"] = "30565";
-  testData["data"]["Test123"]["1_430"] = "30565";
-  testData["data"]["Test123"]["1_445"] = "30565";
-  testData["data"]["Test123"]["2_445"] = "30565";
-  testData["data"]["Test123"]["3_445"] = "30565";
-
-  testData["data"]["SuperPowerFullSpell"]["1_400"] = "30565";
-  testData["data"]["SuperPowerFullSpell"]["1_415"] = "30565";
-  testData["data"]["SuperPowerFullSpell"]["1_430"] = "30565";
-  testData["data"]["SuperPowerFullSpell"]["1_445"] = "30565";
-  testData["data"]["SuperPowerFullSpell"]["2_445"] = "30565";
-  testData["data"]["SuperPowerFullSpell"]["3_445"] = "30565";
-
-  testData["data"]["baseline"]["445"] = "28000";
-
-  //TODO: Wait For Real Data
-
+  let relative_string = weight_string.split("^")[0] + "^";
   let baseline;
   let traitID;
   let oneStack;
@@ -3250,25 +3215,35 @@ function copy_azerite_forge() {
   let threeStack;
   let section;
   if (relative_azerite_string && chosen_azerite_list_type === "trait_stacking") {
-    let relative_string = weight_string.split("^")[0] + "^";
-    for (let spell in testData["azerite_ids"]) {
 
-      baseline = testData["data"]["baseline"]["445"];
-      traitID = testData["azerite_ids"][spell];
+    let data = loaded_data[chosen_class][chosen_spec][data_view][fight_style];
+    for (let spell in data["azerite_ids"]) {
+      baseline = data["data"]["baseline"]["1_445"];
+      traitID = data["azerite_ids"][spell];
 
-      oneStack = testData["data"][spell]["1_445"] - baseline;
-      twoStack = testData["data"][spell]["2_445"] - baseline;
-      threeStack = testData["data"][spell]["3_445"] - baseline;
+      try {
+        oneStack = data["data"][spell]["1_445"] - baseline;
+      } catch (e) {oneStack = NaN;}
+
+      try {
+        twoStack = data["data"][spell]["2_445"] - baseline;
+      } catch (e) {twoStack = NaN;}
+
+      try {
+        threeStack = data["data"][spell]["3_445"] - baseline;
+      } catch (e) {
+        threeStack = NaN;
+      }
 
       section = `[${traitID}]`;
       if (!isNaN(oneStack)) {
-        section += `1:${oneStack},`
+        section += `1:${(oneStack)},`
       }
       if (!isNaN(twoStack)) {
-        section += `2:${twoStack},`
+        section += `2:${twoStack - oneStack},`
       }
       if (!isNaN(threeStack)) {
-        section += `3:${threeStack},`
+        section += `3:${threeStack - twoStack},`
       }
       section += "^";
       relative_string += section;
