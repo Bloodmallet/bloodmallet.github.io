@@ -3217,20 +3217,21 @@ function copy_azerite_forge() {
   if (relative_azerite_string && chosen_azerite_list_type === "trait_stacking") {
 
     let data = loaded_data[chosen_class][chosen_spec][data_view][fight_style];
+    let simIlvl = data["simulated_steps"][0].toString().split("_")[1];
     for (let spell in data["azerite_ids"]) {
-      baseline = data["data"]["baseline"]["1_445"];
+      baseline = data["data"]["baseline"]["1_" + simIlvl];
       traitID = data["azerite_ids"][spell];
 
       try {
-        oneStack = data["data"][spell]["1_445"] - baseline;
+        oneStack = data["data"][spell]["1_" + simIlvl] - baseline;
       } catch (e) {oneStack = NaN;}
 
       try {
-        twoStack = data["data"][spell]["2_445"] - baseline;
+        twoStack = data["data"][spell]["2_" + simIlvl] - baseline;
       } catch (e) {twoStack = NaN;}
 
       try {
-        threeStack = data["data"][spell]["3_445"] - baseline;
+        threeStack = data["data"][spell]["3_" + simIlvl] - baseline;
       } catch (e) {
         threeStack = NaN;
       }
