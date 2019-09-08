@@ -574,7 +574,7 @@ const item_and_trait_equilizer = {
   //"Lion's Strength": "Doom's Fury"
 }
 
-var relative_azerite_string = false;
+var relative_azerite_forge_traits_stacking_import = false;
 /*---------------------------------------------------------
 //
 //  Dark Mode
@@ -602,8 +602,8 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   document.getElementById("relative_azerite_forge").addEventListener("change", function (e) {
-    relative_azerite_string = e.target.checked;
-    set_relative_azerite_cookie()
+    relative_azerite_forge_traits_stacking_import = e.target.checked;
+    set_relative_azerite_forge_import_cookie();
   });
 
 });
@@ -3208,9 +3208,9 @@ function copy_azerite_forge() {
   let link_helper = document.getElementById("copy_azerite_forge_generator");
   let data = loaded_data[chosen_class][chosen_spec][data_view][fight_style];
 
-  let relative_string = `AZFORGE:${data["class_id"]}:${data["spec_id"]}`;
+  let relative_string = `AZFORGE:${data["class_id"]}:${data["spec_id"]}^`;
 
-  if (relative_azerite_string && chosen_azerite_list_type === "trait_stacking") {
+  if (relative_azerite_forge_traits_stacking_import && chosen_azerite_list_type === "trait_stacking") {
     let baseline;
     let traitID;
     let oneStack;
@@ -3239,22 +3239,25 @@ function copy_azerite_forge() {
 
       section = `[${traitID}]`;
       if (!isNaN(oneStack)) {
-        section += `1:${(oneStack)},`
+        section += `1:${(oneStack)},`;
       }
       if (!isNaN(twoStack)) {
-        section += `2:${twoStack - oneStack},`
+        section += `2:${twoStack - oneStack},`;
       }
       if (!isNaN(threeStack)) {
-        section += `3:${threeStack - twoStack},`
+        section += `3:${threeStack - twoStack},`;
       }
       section += "^";
       relative_string += section;
     }
-
-    weight_string = relative_string;
   }
-
-  link_helper.innerHTML = weight_string;
+  // For some reason it does not like it when i just overwrite weight_string (Just worked some of the times) OwO
+  // So doing this in an if OwO
+  if(relative_azerite_forge_traits_stacking_import && chosen_azerite_list_type === "trait_stacking"){
+    link_helper.innerHTML = relative_string;
+  } else {
+    link_helper.innerHTML = weight_string;
+  }
   link_helper.style.display = "block";
   window.getSelection().selectAllChildren(link_helper);
   document.execCommand("copy");
@@ -3683,19 +3686,22 @@ function search_iconized_chart_cookie() {
 /**
  * Sets the relative azerite cookie
  */
-function set_relative_azerite_cookie(){
+function set_relative_azerite_forge_import_cookie(){
   if(debug)
-    console.log("set_relative_azerite_cookie");
-  Cookies.set("bloodmallet_relative_azerite", relative_azerite_string, {expires: 31, path: ''})
+    console.log("set_relative_azerite_forge_import_cookie");
+  Cookies.set("bloodmallet_relative_azerite_forge_import_string", relative_azerite_forge_traits_stacking_import, {expires: 31, path: ''});
 }
 
-function search_relative_azerite_cookie(){
+/**
+ * Gets the relative azerite cookie
+ */
+function search_relative_azerite_forge_import_cookie(){
   if(debug)
-    console.log("search_relative_azerite_cookie");
-  if(Cookies.get("bloodmallet_relative_azerite")){
-    relative_azerite_string = ('true' === Cookies.get('bloodmallet_relative_azerite'));
+    console.log("search_relative_azerite_forge_import_cookie");
+  if(Cookies.get("bloodmallet_relative_azerite_forge_import_string")){
+    relative_azerite_forge_traits_stacking_import = ('true' === Cookies.get('bloodmallet_relative_azerite_forge_import_string'));
   }
-  document.getElementById("relative_azerite_forge").checked = relative_azerite_string;
+  document.getElementById("relative_azerite_forge").checked = relative_azerite_forge_traits_stacking_import;
 }
 
 
@@ -3709,7 +3715,7 @@ function search_relative_azerite_cookie(){
 document.addEventListener("DOMContentLoaded", async function () {
   search_dark_mode_cookie();
   search_iconized_chart_cookie();
-  search_relative_azerite_cookie();
+  search_relative_azerite_forge_import_cookie();
   await search_language_cookie();
 
   get_data_from_link();
