@@ -1,20 +1,20 @@
 {
     "class_id": 7,
     "data": {
-        "Dark Iron Dwarf": 37694,
-        "Draenei": 37640,
-        "Dwarf": 38010,
-        "Goblin": 37845,
-        "Highmountain Tauren": 37861,
-        "Kul Tiran": 37880,
-        "Maghar Orc": 37726,
-        "Orc": 37673,
-        "Pandaren": 37766,
-        "Tauren": 38022,
-        "Troll": 37948,
-        "Zandalari Troll Bwonsamdi": 37776,
-        "Zandalari Troll Kimbul": 37871,
-        "Zandalari Troll Paku": 37739
+        "Dark Iron Dwarf": 37585,
+        "Draenei": 37718,
+        "Dwarf": 37977,
+        "Goblin": 37957,
+        "Highmountain Tauren": 37831,
+        "Kul Tiran": 37923,
+        "Maghar Orc": 37681,
+        "Orc": 37638,
+        "Pandaren": 37792,
+        "Tauren": 38057,
+        "Troll": 37896,
+        "Zandalari Troll Bwonsamdi": 37794,
+        "Zandalari Troll Kimbul": 37855,
+        "Zandalari Troll Paku": 37808
     },
     "data_type": "races",
     "languages": {
@@ -326,7 +326,7 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "22ce7d5e57",
+        "simc_hash": "4a155a4dbc",
         "spec": "restoration",
         "target_error": "0.2",
         "tier": "24"
@@ -334,21 +334,21 @@
     "sorted_data_keys": [
         "Tauren",
         "Dwarf",
-        "Troll",
+        "Goblin",
         "Kul Tiran",
+        "Troll",
         "Zandalari Troll Kimbul",
         "Highmountain Tauren",
-        "Goblin",
+        "Zandalari Troll Paku",
         "Zandalari Troll Bwonsamdi",
         "Pandaren",
-        "Zandalari Troll Paku",
+        "Draenei",
         "Maghar Orc",
-        "Dark Iron Dwarf",
         "Orc",
-        "Draenei"
+        "Dark Iron Dwarf"
     ],
     "spec_id": 264,
-    "subtitle": "UTC 2019-09-10 06:49 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/22ce7d5e57\" target=\"blank\">22ce7d5</a>",
+    "subtitle": "UTC 2019-09-11 06:48 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/4a155a4dbc\" target=\"blank\">4a155a4</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -449,6 +449,6 @@
             }
         }
     },
-    "timestamp": "2019-09-10 06:49",
+    "timestamp": "2019-09-11 06:48",
     "title": "Races | Restoration Shaman | Hecticaddcleave"
 }
