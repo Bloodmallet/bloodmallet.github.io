@@ -1,25 +1,25 @@
 {
     "class_id": 4,
     "data": {
-        "Blood Elf": 49721,
-        "Dark Iron Dwarf": 49591,
-        "Dwarf": 49876,
-        "Gnome": 50062,
-        "Goblin": 49717,
-        "Human": 49775,
-        "Kul Tiran": 49811,
-        "Maghar Orc": 49731,
-        "Night Elf": 49930,
-        "Nightborne": 49637,
-        "Orc": 49566,
-        "Pandaren": 49811,
-        "Troll": 49607,
-        "Undead": 49824,
-        "Void Elf": 49936,
-        "Worgen": 49858,
-        "Zandalari Troll Bwonsamdi": 49650,
-        "Zandalari Troll Kimbul": 49657,
-        "Zandalari Troll Paku": 49834
+        "Blood Elf": 49820,
+        "Dark Iron Dwarf": 49612,
+        "Dwarf": 49875,
+        "Gnome": 50121,
+        "Goblin": 49718,
+        "Human": 49854,
+        "Kul Tiran": 49898,
+        "Maghar Orc": 49597,
+        "Night Elf": 49879,
+        "Nightborne": 49621,
+        "Orc": 49602,
+        "Pandaren": 49801,
+        "Troll": 49532,
+        "Undead": 49787,
+        "Void Elf": 49960,
+        "Worgen": 49829,
+        "Zandalari Troll Bwonsamdi": 49598,
+        "Zandalari Troll Kimbul": 49587,
+        "Zandalari Troll Paku": 49799
     },
     "data_type": "races",
     "languages": {
@@ -383,7 +383,7 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "4a155a4dbc",
+        "simc_hash": "4fb9d71da8",
         "spec": "subtlety",
         "target_error": "0.2",
         "tier": "24"
@@ -391,26 +391,26 @@
     "sorted_data_keys": [
         "Gnome",
         "Void Elf",
+        "Kul Tiran",
         "Night Elf",
         "Dwarf",
+        "Human",
         "Worgen",
+        "Blood Elf",
+        "Pandaren",
         "Zandalari Troll Paku",
         "Undead",
-        "Pandaren",
-        "Kul Tiran",
-        "Human",
-        "Maghar Orc",
-        "Blood Elf",
         "Goblin",
-        "Zandalari Troll Kimbul",
-        "Zandalari Troll Bwonsamdi",
         "Nightborne",
-        "Troll",
         "Dark Iron Dwarf",
-        "Orc"
+        "Orc",
+        "Zandalari Troll Bwonsamdi",
+        "Maghar Orc",
+        "Zandalari Troll Kimbul",
+        "Troll"
     ],
     "spec_id": 261,
-    "subtitle": "UTC 2019-09-11 06:46 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/4a155a4dbc\" target=\"blank\">4a155a4</a>",
+    "subtitle": "UTC 2019-09-12 06:47 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/4fb9d71da8\" target=\"blank\">4fb9d71</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -511,6 +511,6 @@
             }
         }
     },
-    "timestamp": "2019-09-11 06:46",
+    "timestamp": "2019-09-12 06:47",
     "title": "Races | Subtlety Rogue | Hecticaddcleave"
 }
