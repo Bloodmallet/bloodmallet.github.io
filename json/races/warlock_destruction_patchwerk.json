@@ -1,18 +1,18 @@
 {
     "class_id": 9,
     "data": {
-        "Blood Elf": 38651,
-        "Dark Iron Dwarf": 38512,
-        "Dwarf": 38832,
-        "Gnome": 38747,
-        "Goblin": 38699,
-        "Human": 38806,
-        "Nightborne": 38647,
-        "Orc": 38600,
-        "Troll": 38934,
-        "Undead": 38575,
-        "Void Elf": 38682,
-        "Worgen": 38614
+        "Blood Elf": 38630,
+        "Dark Iron Dwarf": 38496,
+        "Dwarf": 38791,
+        "Gnome": 38686,
+        "Goblin": 38686,
+        "Human": 38793,
+        "Nightborne": 38636,
+        "Orc": 38599,
+        "Troll": 38980,
+        "Undead": 38602,
+        "Void Elf": 38696,
+        "Worgen": 38645
     },
     "data_type": "races",
     "languages": {
@@ -296,27 +296,27 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "382387cf87",
+        "simc_hash": "fe67e11ca2",
         "spec": "destruction",
         "target_error": "0.1",
         "tier": "24"
     },
     "sorted_data_keys": [
         "Troll",
-        "Dwarf",
         "Human",
+        "Dwarf",
+        "Void Elf",
         "Gnome",
         "Goblin",
-        "Void Elf",
-        "Blood Elf",
-        "Nightborne",
         "Worgen",
-        "Orc",
+        "Nightborne",
+        "Blood Elf",
         "Undead",
+        "Orc",
         "Dark Iron Dwarf"
     ],
     "spec_id": 267,
-    "subtitle": "UTC 2019-09-13 06:34 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/382387cf87\" target=\"blank\">382387c</a>",
+    "subtitle": "UTC 2019-09-14 06:34 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/fe67e11ca2\" target=\"blank\">fe67e11</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -417,6 +417,6 @@
             }
         }
     },
-    "timestamp": "2019-09-13 06:34",
+    "timestamp": "2019-09-14 06:34",
     "title": "Races | Destruction Warlock | Patchwerk"
 }
