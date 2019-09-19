@@ -1,18 +1,18 @@
 {
     "class_id": 6,
     "data": {
-        "Blood Elf": 24350,
-        "Draenei": 24252,
-        "Dwarf": 24291,
-        "Gnome": 24290,
-        "Goblin": 24316,
-        "Human": 24327,
-        "Night Elf": 24356,
-        "Orc": 24241,
-        "Tauren": 24332,
-        "Troll": 24371,
-        "Undead": 24492,
-        "Worgen": 24332
+        "Blood Elf": 24255,
+        "Draenei": 24297,
+        "Dwarf": 24337,
+        "Gnome": 24261,
+        "Goblin": 24286,
+        "Human": 24272,
+        "Night Elf": 24363,
+        "Orc": 24231,
+        "Tauren": 24278,
+        "Troll": 24339,
+        "Undead": 24477,
+        "Worgen": 24368
     },
     "data_type": "races",
     "languages": {
@@ -295,27 +295,27 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "fe67e11ca2",
+        "simc_hash": "6abc4acebc",
         "spec": "blood",
         "target_error": "0.2",
         "tier": "24"
     },
     "sorted_data_keys": [
         "Undead",
-        "Troll",
-        "Night Elf",
-        "Blood Elf",
         "Worgen",
+        "Night Elf",
+        "Troll",
+        "Dwarf",
+        "Draenei",
+        "Goblin",
         "Tauren",
         "Human",
-        "Goblin",
-        "Dwarf",
         "Gnome",
-        "Draenei",
+        "Blood Elf",
         "Orc"
     ],
     "spec_id": 250,
-    "subtitle": "UTC 2019-09-17 06:37 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/fe67e11ca2\" target=\"blank\">fe67e11</a>",
+    "subtitle": "UTC 2019-09-18 06:35 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/6abc4acebc\" target=\"blank\">6abc4ac</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -416,6 +416,6 @@
             }
         }
     },
-    "timestamp": "2019-09-17 06:37",
+    "timestamp": "2019-09-18 06:35",
     "title": "Races | Blood Death Knight | Hecticaddcleave"
 }
