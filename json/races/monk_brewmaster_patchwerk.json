@@ -1,26 +1,26 @@
 {
     "class_id": 10,
     "data": {
-        "Blood Elf": 23855,
-        "Dark Iron Dwarf": 23702,
-        "Draenei": 23767,
-        "Dwarf": 23894,
-        "Gnome": 23792,
-        "Highmountain Tauren": 23853,
-        "Human": 23866,
+        "Blood Elf": 23860,
+        "Dark Iron Dwarf": 23700,
+        "Draenei": 23745,
+        "Dwarf": 23919,
+        "Gnome": 23781,
+        "Highmountain Tauren": 23852,
+        "Human": 23855,
         "Kul Tiran": 23854,
-        "Maghar Orc": 23780,
-        "Night Elf": 23820,
-        "Nightborne": 23724,
-        "Orc": 23725,
-        "Pandaren": 23813,
-        "Tauren": 23914,
-        "Troll": 23767,
-        "Undead": 24045,
-        "Void Elf": 23943,
-        "Zandalari Troll Bwonsamdi": 23854,
-        "Zandalari Troll Kimbul": 23904,
-        "Zandalari Troll Paku": 23813
+        "Maghar Orc": 23774,
+        "Night Elf": 23834,
+        "Nightborne": 23700,
+        "Orc": 23736,
+        "Pandaren": 23803,
+        "Tauren": 23908,
+        "Troll": 23757,
+        "Undead": 24040,
+        "Void Elf": 23928,
+        "Zandalari Troll Bwonsamdi": 23859,
+        "Zandalari Troll Kimbul": 23890,
+        "Zandalari Troll Paku": 23808
     },
     "data_type": "races",
     "languages": {
@@ -384,7 +384,7 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "cad1ff76d8",
+        "simc_hash": "a45e9e2d8f",
         "spec": "brewmaster",
         "target_error": "0.1",
         "tier": "24"
@@ -392,27 +392,27 @@
     "sorted_data_keys": [
         "Undead",
         "Void Elf",
+        "Dwarf",
         "Tauren",
         "Zandalari Troll Kimbul",
-        "Dwarf",
-        "Human",
         "Blood Elf",
-        "Kul Tiran",
         "Zandalari Troll Bwonsamdi",
+        "Human",
+        "Kul Tiran",
         "Highmountain Tauren",
         "Night Elf",
-        "Pandaren",
         "Zandalari Troll Paku",
+        "Pandaren",
         "Gnome",
         "Maghar Orc",
-        "Draenei",
         "Troll",
+        "Draenei",
         "Orc",
-        "Nightborne",
-        "Dark Iron Dwarf"
+        "Dark Iron Dwarf",
+        "Nightborne"
     ],
     "spec_id": 268,
-    "subtitle": "UTC 2019-09-27 06:26 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/cad1ff76d8\" target=\"blank\">cad1ff7</a>",
+    "subtitle": "UTC 2019-09-30 06:25 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/a45e9e2d8f\" target=\"blank\">a45e9e2</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -513,6 +513,6 @@
             }
         }
     },
-    "timestamp": "2019-09-27 06:26",
+    "timestamp": "2019-09-30 06:25",
     "title": "Races | Brewmaster Monk | Patchwerk"
 }
