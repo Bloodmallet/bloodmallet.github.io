@@ -1,18 +1,18 @@
 {
     "class_id": 6,
     "data": {
-        "Blood Elf": 42033,
-        "Draenei": 41783,
-        "Dwarf": 41967,
-        "Gnome": 42033,
-        "Goblin": 41991,
-        "Human": 42002,
-        "Night Elf": 41916,
-        "Orc": 41897,
-        "Tauren": 41985,
-        "Troll": 42289,
-        "Undead": 42018,
-        "Worgen": 41917
+        "Blood Elf": 42066,
+        "Draenei": 41795,
+        "Dwarf": 41972,
+        "Gnome": 42047,
+        "Goblin": 42035,
+        "Human": 42021,
+        "Night Elf": 41914,
+        "Orc": 41890,
+        "Tauren": 41983,
+        "Troll": 42320,
+        "Undead": 42034,
+        "Worgen": 41940
     },
     "data_type": "races",
     "languages": {
@@ -296,18 +296,18 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "f3cbb92ab3",
+        "simc_hash": "3fe966bb14",
         "spec": "unholy",
         "target_error": "0.1",
         "tier": "24"
     },
     "sorted_data_keys": [
         "Troll",
-        "Gnome",
         "Blood Elf",
+        "Gnome",
+        "Goblin",
         "Undead",
         "Human",
-        "Goblin",
         "Tauren",
         "Dwarf",
         "Worgen",
@@ -316,7 +316,7 @@
         "Draenei"
     ],
     "spec_id": 252,
-    "subtitle": "UTC 2019-10-17 06:20 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/f3cbb92ab3\" target=\"blank\">f3cbb92</a>",
+    "subtitle": "UTC 2019-10-18 06:20 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/3fe966bb14\" target=\"blank\">3fe966b</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -417,6 +417,6 @@
             }
         }
     },
-    "timestamp": "2019-10-17 06:20",
+    "timestamp": "2019-10-18 06:20",
     "title": "Races | Unholy Death Knight | Patchwerk"
 }
