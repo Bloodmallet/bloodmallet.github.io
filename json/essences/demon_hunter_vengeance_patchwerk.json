@@ -1,99 +1,99 @@
 {
-    "azerite_weight_patchwerk": "( AzeritePowerWeights:2:\"Patchwerk Vengeance Demon_Hunter essences\":12:581: : 4=1067/1106, 7=520/-12, 12=3447/1350, 15=815/1, 22=328/142, 25=96/82, 27=398/343, 32=486/485, )",
+    "azerite_weight_patchwerk": "( AzeritePowerWeights:2:\"Patchwerk Vengeance Demon_Hunter essences\":12:581: : 4=1093/1122, 7=538/7, 12=3479/1381, 15=833/7, 22=329/151, 25=99/89, 27=396/342, 32=488/496, )",
     "class_id": 12,
     "data": {
         "Aegis of the Deep": {
-            "1": 12952,
-            "2": 12955,
-            "3": 12956
+            "1": 12941,
+            "2": 12949,
+            "3": 12948
         },
         "Aegis of the Deep minor": {
-            "1": 12936,
-            "2": 12954,
-            "3": 12942
+            "1": 12943,
+            "2": 12944,
+            "3": 12938
         },
         "Anima of Death": {
-            "1": 13289,
-            "2": 13386,
-            "3": 13380
+            "1": 13287,
+            "2": 13407,
+            "3": 13387
         },
         "Anima of Death minor": {
-            "1": 12854,
-            "2": 12850,
-            "3": 12848
+            "1": 12862,
+            "2": 12859,
+            "3": 12856
         },
         "Conflict and Strife": {
-            "1": 13044,
-            "2": 13186,
-            "3": 13346
+            "1": 13049,
+            "2": 13188,
+            "3": 13337
         },
         "Conflict and Strife minor": {
-            "1": 13060,
-            "2": 13187,
+            "1": 13046,
+            "2": 13178,
             "3": 13345
         },
         "Memory of Lucid Dreams": {
-            "1": 13036,
-            "2": 13062,
-            "3": 13258
+            "1": 13050,
+            "2": 13056,
+            "3": 13245
         },
         "Memory of Lucid Dreams minor": {
-            "1": 13009,
-            "2": 13032,
-            "3": 13203
+            "1": 13011,
+            "2": 13017,
+            "3": 13191
         },
         "Ripple in Space": {
-            "1": 13569,
-            "2": 13676,
-            "3": 13675
+            "1": 13580,
+            "2": 13684,
+            "3": 13682
         },
         "Ripple in Space minor": {
             "1": 12858,
-            "2": 12853,
-            "3": 12861
+            "2": 12850,
+            "3": 12856
         },
         "The Crucible of Flame": {
-            "1": 14709,
-            "2": 15690,
-            "3": 16307
+            "1": 14691,
+            "2": 15689,
+            "3": 16328
         },
         "The Crucible of Flame minor": {
-            "1": 13486,
-            "2": 13637,
-            "3": 14210
+            "1": 13494,
+            "2": 13656,
+            "3": 14230
         },
         "Vision of Perfection": {
-            "1": 13013,
-            "2": 13030,
-            "3": 13188
+            "1": 13012,
+            "2": 13040,
+            "3": 13178
         },
         "Vision of Perfection minor": {
-            "1": 12870,
-            "2": 12854,
-            "3": 13002
+            "1": 12863,
+            "2": 12873,
+            "3": 13000
         },
         "Worldvein Resonance": {
-            "1": 13075,
-            "2": 13333,
-            "3": 13456
+            "1": 13069,
+            "2": 13321,
+            "3": 13452
         },
         "Worldvein Resonance +3": {
-            "1": 13524,
-            "2": 13833,
-            "3": 13927
+            "1": 13529,
+            "2": 13835,
+            "3": 13942
         },
         "Worldvein Resonance minor": {
-            "1": 13017,
-            "2": 13092,
-            "3": 13264
+            "1": 13022,
+            "2": 13094,
+            "3": 13268
         },
         "Worldvein Resonance minor +3": {
-            "1": 13508,
-            "2": 13816,
-            "3": 13966
+            "1": 13497,
+            "2": 13818,
+            "3": 13971
         },
         "baseline": {
-            "1": 12860
+            "1": 12849
         }
     },
     "data_type": "essences",
@@ -286,7 +286,7 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "d8ee6b8aca",
+        "simc_hash": "88a24fda29",
         "spec": "vengeance",
         "target_error": "0.1",
         "tier": "24"
@@ -304,8 +304,8 @@
         "Ripple in Space",
         "Worldvein Resonance",
         "Anima of Death",
-        "Conflict and Strife",
         "Conflict and Strife minor",
+        "Conflict and Strife",
         "Worldvein Resonance minor",
         "Memory of Lucid Dreams",
         "Memory of Lucid Dreams minor",
@@ -313,8 +313,8 @@
         "Vision of Perfection minor",
         "Aegis of the Deep",
         "Aegis of the Deep minor",
-        "Ripple in Space minor",
-        "Anima of Death minor"
+        "Anima of Death minor",
+        "Ripple in Space minor"
     ],
     "spec_id": 581,
     "spell_ids": {
@@ -337,7 +337,7 @@
         "Worldvein Resonance minor": 299333,
         "Worldvein Resonance minor +3": 299333
     },
-    "subtitle": "UTC 2019-11-08 18:59 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/d8ee6b8aca\" target=\"blank\">d8ee6b8</a>",
+    "subtitle": "UTC 2019-11-09 17:40 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/88a24fda29\" target=\"blank\">88a24fd</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -438,6 +438,6 @@
             }
         }
     },
-    "timestamp": "2019-11-08 18:59",
+    "timestamp": "2019-11-09 17:40",
     "title": "Essences | Vengeance Demon Hunter | Patchwerk"
 }
