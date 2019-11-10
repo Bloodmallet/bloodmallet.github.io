@@ -1,18 +1,29 @@
 {
     "class_id": 6,
     "data": {
-        "Blood Elf": 42059,
-        "Draenei": 41740,
-        "Dwarf": 41973,
-        "Gnome": 42031,
-        "Goblin": 42025,
-        "Human": 42002,
-        "Night Elf": 41899,
-        "Orc": 41890,
-        "Tauren": 41977,
-        "Troll": 42365,
-        "Undead": 41984,
-        "Worgen": 41919
+        "Blood Elf": 42036,
+        "Dark Iron Dwarf": 41607,
+        "Draenei": 41745,
+        "Dwarf": 41962,
+        "Gnome": 42010,
+        "Goblin": 42020,
+        "Highmountain Tauren": 42052,
+        "Human": 42041,
+        "Kul Tiran": 41997,
+        "Lightforged Draenei": 41576,
+        "Maghar Orc": 41627,
+        "Night Elf": 41925,
+        "Nightborne": 41817,
+        "Orc": 41914,
+        "Pandaren": 42060,
+        "Tauren": 42008,
+        "Troll": 42374,
+        "Undead": 41974,
+        "Void Elf": 41873,
+        "Worgen": 41933,
+        "Zandalari Troll Bwonsamdi": 41887,
+        "Zandalari Troll Kimbul": 41987,
+        "Zandalari Troll Paku": 41931
     },
     "data_type": "races",
     "languages": {
@@ -25,6 +36,16 @@
             "it_IT": "Elfo del Sangue",
             "ko_KR": "블러드 엘프",
             "ru_RU": "Эльф крови"
+        },
+        "Dark Iron Dwarf": {
+            "cn_CN": "黑铁矮人",
+            "de_DE": "Dunkeleisenzwerg",
+            "en_US": "Dark Iron Dwarf",
+            "es_ES": "Enano Hierro Negro",
+            "fr_FR": "Nain sombrefer",
+            "it_IT": "Nano Ferroscuro",
+            "ko_KR": "검은무쇠 드워프",
+            "ru_RU": "Дворф из клана Черного Железа"
         },
         "Draenei": {
             "cn_CN": "德莱尼",
@@ -66,6 +87,16 @@
             "ko_KR": "고블린",
             "ru_RU": "Гоблин"
         },
+        "Highmountain Tauren": {
+            "cn_CN": "至高岭牛头人",
+            "de_DE": "Hochbergtauren",
+            "en_US": "Highmountain Tauren",
+            "es_ES": "Tauren Monte Alto",
+            "fr_FR": "Tauren de Haut-Roc",
+            "it_IT": "Tauren di Alto Monte",
+            "ko_KR": "높은산 타우렌",
+            "ru_RU": "Таурен Крутогорья"
+        },
         "Human": {
             "cn_CN": "人类",
             "de_DE": "Mensch",
@@ -75,6 +106,36 @@
             "it_IT": "Umano",
             "ko_KR": "인간",
             "ru_RU": "Человек"
+        },
+        "Kul Tiran": {
+            "cn_CN": "Kul Tiran",
+            "de_DE": "Kul Tiran",
+            "en_US": "Kul Tiran",
+            "es_ES": "Kul Tiran",
+            "fr_FR": "Kul Tiran",
+            "it_IT": "Kul Tiran",
+            "ko_KR": "Kul Tiran",
+            "ru_RU": "Kul Tiran"
+        },
+        "Lightforged Draenei": {
+            "cn_CN": "光铸德莱尼",
+            "de_DE": "Lichtgeschmiedeter Draenei",
+            "en_US": "Lightforged Draenei",
+            "es_ES": "Draenei forjado por la Luz",
+            "fr_FR": "Draeneï sancteforge",
+            "it_IT": "Draenei Forgialuce",
+            "ko_KR": "빛벼림 드레나이",
+            "ru_RU": "Озаренный дреней"
+        },
+        "Maghar Orc": {
+            "cn_CN": "玛格汉兽人",
+            "de_DE": "Mag'har",
+            "en_US": "Mag'har Orc",
+            "es_ES": "Orco Mag'har",
+            "fr_FR": "Orc mag’har",
+            "it_IT": "Orco Mag'har",
+            "ko_KR": "마그하르 오크",
+            "ru_RU": "Маг'хар"
         },
         "Night Elf": {
             "cn_CN": "暗夜精灵",
@@ -86,6 +147,16 @@
             "ko_KR": "나이트 엘프",
             "ru_RU": "Ночной эльф"
         },
+        "Nightborne": {
+            "cn_CN": "夜之子",
+            "de_DE": "Nachtgeborener",
+            "en_US": "Nightborne",
+            "es_ES": "Nocheterna",
+            "fr_FR": "Sacrenuit",
+            "it_IT": "Nobile Oscuro",
+            "ko_KR": "나이트본",
+            "ru_RU": "Ночнорожденный"
+        },
         "Orc": {
             "cn_CN": "兽人",
             "de_DE": "Orc",
@@ -95,6 +166,16 @@
             "it_IT": "Orco",
             "ko_KR": "오크",
             "ru_RU": "Орк"
+        },
+        "Pandaren": {
+            "cn_CN": "熊猫人",
+            "de_DE": "Pandaren",
+            "en_US": "Pandaren",
+            "es_ES": "Pandaren",
+            "fr_FR": "Pandaren",
+            "it_IT": "Pandaren",
+            "ko_KR": "판다렌",
+            "ru_RU": "Пандарен"
         },
         "Tauren": {
             "cn_CN": "牛头人",
@@ -126,6 +207,16 @@
             "ko_KR": "언데드",
             "ru_RU": "Нежить"
         },
+        "Void Elf": {
+            "cn_CN": "虚空精灵",
+            "de_DE": "Leerenelf",
+            "en_US": "Void Elf",
+            "es_ES": "Elfo del Vacío",
+            "fr_FR": "Elfe du Vide",
+            "it_IT": "Elfo del Vuoto",
+            "ko_KR": "공허 엘프",
+            "ru_RU": "Эльф Бездны"
+        },
         "Worgen": {
             "cn_CN": "狼人",
             "de_DE": "Worgen",
@@ -135,6 +226,36 @@
             "it_IT": "Worgen",
             "ko_KR": "늑대인간",
             "ru_RU": "Ворген"
+        },
+        "Zandalari Troll Bwonsamdi": {
+            "cn_CN": "Zandalari Troll Bwonsamdi",
+            "de_DE": "Zandalari Troll Bwonsamdi",
+            "en_US": "Zandalari Troll Bwonsamdi",
+            "es_ES": "Zandalari Troll Bwonsamdi",
+            "fr_FR": "Zandalari Troll Bwonsamdi",
+            "it_IT": "Zandalari Troll Bwonsamdi",
+            "ko_KR": "Zandalari Troll Bwonsamdi",
+            "ru_RU": "Zandalari Troll Bwonsamdi"
+        },
+        "Zandalari Troll Kimbul": {
+            "cn_CN": "Zandalari Troll Kimbul",
+            "de_DE": "Zandalari Troll Kimbul",
+            "en_US": "Zandalari Troll Kimbul",
+            "es_ES": "Zandalari Troll Kimbul",
+            "fr_FR": "Zandalari Troll Kimbul",
+            "it_IT": "Zandalari Troll Kimbul",
+            "ko_KR": "Zandalari Troll Kimbul",
+            "ru_RU": "Zandalari Troll Kimbul"
+        },
+        "Zandalari Troll Paku": {
+            "cn_CN": "Zandalari Troll Paku",
+            "de_DE": "Zandalari Troll Paku",
+            "en_US": "Zandalari Troll Paku",
+            "es_ES": "Zandalari Troll Paku",
+            "fr_FR": "Zandalari Troll Paku",
+            "it_IT": "Zandalari Troll Paku",
+            "ko_KR": "Zandalari Troll Paku",
+            "ru_RU": "Zandalari Troll Paku"
         }
     },
     "profile": {
@@ -303,20 +424,31 @@
     },
     "sorted_data_keys": [
         "Troll",
-        "Blood Elf",
-        "Gnome",
-        "Goblin",
+        "Pandaren",
+        "Highmountain Tauren",
         "Human",
-        "Undead",
+        "Blood Elf",
+        "Goblin",
+        "Gnome",
         "Tauren",
+        "Kul Tiran",
+        "Zandalari Troll Kimbul",
+        "Undead",
         "Dwarf",
         "Worgen",
+        "Zandalari Troll Paku",
         "Night Elf",
         "Orc",
-        "Draenei"
+        "Zandalari Troll Bwonsamdi",
+        "Void Elf",
+        "Nightborne",
+        "Draenei",
+        "Maghar Orc",
+        "Dark Iron Dwarf",
+        "Lightforged Draenei"
     ],
     "spec_id": 252,
-    "subtitle": "UTC 2019-11-09 07:20 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/88a24fda29\" target=\"blank\">88a24fd</a>",
+    "subtitle": "UTC 2019-11-10 07:21 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/88a24fda29\" target=\"blank\">88a24fd</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -417,6 +549,6 @@
             }
         }
     },
-    "timestamp": "2019-11-09 07:20",
+    "timestamp": "2019-11-10 07:21",
     "title": "Races | Unholy Death Knight | Patchwerk"
 }
