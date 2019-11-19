@@ -1,20 +1,20 @@
 {
     "class_id": 7,
     "data": {
-        "Dark Iron Dwarf": 34472,
-        "Draenei": 34547,
-        "Dwarf": 34811,
-        "Goblin": 34680,
-        "Highmountain Tauren": 34713,
-        "Kul Tiran": 34658,
-        "Maghar Orc": 34545,
-        "Orc": 34489,
-        "Pandaren": 34624,
-        "Tauren": 34774,
-        "Troll": 34689,
-        "Zandalari Troll Bwonsamdi": 34616,
-        "Zandalari Troll Kimbul": 34688,
-        "Zandalari Troll Paku": 34558
+        "Dark Iron Dwarf": 34490,
+        "Draenei": 34534,
+        "Dwarf": 34810,
+        "Goblin": 34690,
+        "Highmountain Tauren": 34647,
+        "Kul Tiran": 34710,
+        "Maghar Orc": 34528,
+        "Orc": 34463,
+        "Pandaren": 34626,
+        "Tauren": 34828,
+        "Troll": 34643,
+        "Zandalari Troll Bwonsamdi": 34645,
+        "Zandalari Troll Kimbul": 34640,
+        "Zandalari Troll Paku": 34570
     },
     "data_type": "races",
     "languages": {
@@ -326,29 +326,29 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "fbb51f6719",
+        "simc_hash": "fee7ed2f21",
         "spec": "restoration",
         "target_error": "0.1",
         "tier": "24"
     },
     "sorted_data_keys": [
-        "Dwarf",
         "Tauren",
+        "Dwarf",
+        "Kul Tiran",
+        "Goblin",
         "Highmountain Tauren",
+        "Zandalari Troll Bwonsamdi",
         "Troll",
         "Zandalari Troll Kimbul",
-        "Goblin",
-        "Kul Tiran",
         "Pandaren",
-        "Zandalari Troll Bwonsamdi",
         "Zandalari Troll Paku",
         "Draenei",
         "Maghar Orc",
-        "Orc",
-        "Dark Iron Dwarf"
+        "Dark Iron Dwarf",
+        "Orc"
     ],
     "spec_id": 264,
-    "subtitle": "UTC 2019-11-18 07:32 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/fbb51f6719\" target=\"blank\">fbb51f6</a>",
+    "subtitle": "UTC 2019-11-19 07:30 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/fee7ed2f21\" target=\"blank\">fee7ed2</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -449,6 +449,6 @@
             }
         }
     },
-    "timestamp": "2019-11-18 07:32",
+    "timestamp": "2019-11-19 07:30",
     "title": "Races | Restoration Shaman | Patchwerk"
 }
