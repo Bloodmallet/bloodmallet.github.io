@@ -1,18 +1,18 @@
 {
     "class_id": 9,
     "data": {
-        "Blood Elf": 52547,
-        "Dark Iron Dwarf": 52389,
-        "Dwarf": 52817,
-        "Gnome": 52669,
-        "Goblin": 52752,
-        "Human": 52952,
-        "Nightborne": 52452,
-        "Orc": 52716,
-        "Troll": 52746,
-        "Undead": 52579,
-        "Void Elf": 52419,
-        "Worgen": 52659
+        "Blood Elf": 52632,
+        "Dark Iron Dwarf": 52405,
+        "Dwarf": 52718,
+        "Gnome": 52680,
+        "Goblin": 52735,
+        "Human": 53010,
+        "Nightborne": 52382,
+        "Orc": 52782,
+        "Troll": 52684,
+        "Undead": 52523,
+        "Void Elf": 52393,
+        "Worgen": 52678
     },
     "data_type": "races",
     "languages": {
@@ -296,27 +296,27 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "a387863304",
+        "simc_hash": "f064bcc742",
         "spec": "demonology",
         "target_error": "0.2",
         "tier": "24"
     },
     "sorted_data_keys": [
         "Human",
-        "Dwarf",
-        "Goblin",
-        "Troll",
         "Orc",
+        "Goblin",
+        "Dwarf",
+        "Troll",
         "Gnome",
         "Worgen",
-        "Undead",
         "Blood Elf",
-        "Nightborne",
+        "Undead",
+        "Dark Iron Dwarf",
         "Void Elf",
-        "Dark Iron Dwarf"
+        "Nightborne"
     ],
     "spec_id": 266,
-    "subtitle": "UTC 2019-12-01 07:42 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/a387863304\" target=\"blank\">a387863</a>",
+    "subtitle": "UTC 2019-12-02 07:44 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/f064bcc742\" target=\"blank\">f064bcc</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -417,6 +417,6 @@
             }
         }
     },
-    "timestamp": "2019-12-01 07:42",
+    "timestamp": "2019-12-02 07:44",
     "title": "Races | Demonology Warlock | Hecticaddcleave"
 }

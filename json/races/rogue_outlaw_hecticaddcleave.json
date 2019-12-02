@@ -1,25 +1,25 @@
 {
     "class_id": 4,
     "data": {
-        "Blood Elf": 59016,
-        "Dark Iron Dwarf": 58653,
-        "Dwarf": 59481,
-        "Gnome": 59102,
-        "Goblin": 58978,
-        "Human": 59147,
-        "Kul Tiran": 59181,
-        "Maghar Orc": 58962,
-        "Night Elf": 59300,
-        "Nightborne": 58599,
-        "Orc": 58752,
-        "Pandaren": 58999,
-        "Troll": 58771,
-        "Undead": 58991,
-        "Void Elf": 59137,
-        "Worgen": 59141,
-        "Zandalari Troll Bwonsamdi": 58848,
-        "Zandalari Troll Kimbul": 58853,
-        "Zandalari Troll Paku": 59196
+        "Blood Elf": 59068,
+        "Dark Iron Dwarf": 58712,
+        "Dwarf": 59388,
+        "Gnome": 59057,
+        "Goblin": 58961,
+        "Human": 59121,
+        "Kul Tiran": 59295,
+        "Maghar Orc": 58919,
+        "Night Elf": 59267,
+        "Nightborne": 58568,
+        "Orc": 58781,
+        "Pandaren": 59108,
+        "Troll": 58847,
+        "Undead": 59089,
+        "Void Elf": 59010,
+        "Worgen": 59110,
+        "Zandalari Troll Bwonsamdi": 58853,
+        "Zandalari Troll Kimbul": 58909,
+        "Zandalari Troll Paku": 59204
     },
     "data_type": "races",
     "languages": {
@@ -383,23 +383,23 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "a387863304",
+        "simc_hash": "f064bcc742",
         "spec": "outlaw",
         "target_error": "0.2",
         "tier": "24"
     },
     "sorted_data_keys": [
         "Dwarf",
+        "Kul Tiran",
         "Night Elf",
         "Zandalari Troll Paku",
-        "Kul Tiran",
         "Human",
         "Worgen",
-        "Void Elf",
-        "Gnome",
-        "Blood Elf",
         "Pandaren",
         "Undead",
+        "Blood Elf",
+        "Gnome",
+        "Void Elf",
         "Goblin",
         "Maghar Orc",
         "Zandalari Troll Kimbul",
@@ -410,7 +410,7 @@
         "Nightborne"
     ],
     "spec_id": 260,
-    "subtitle": "UTC 2019-12-01 07:39 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/a387863304\" target=\"blank\">a387863</a>",
+    "subtitle": "UTC 2019-12-02 07:41 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/f064bcc742\" target=\"blank\">f064bcc</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -511,6 +511,6 @@
             }
         }
     },
-    "timestamp": "2019-12-01 07:39",
+    "timestamp": "2019-12-02 07:41",
     "title": "Races | Outlaw Rogue | Hecticaddcleave"
 }
