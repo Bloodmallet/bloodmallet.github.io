@@ -1,20 +1,20 @@
 {
     "class_id": 7,
     "data": {
-        "Dark Iron Dwarf": 42820,
-        "Draenei": 42848,
-        "Dwarf": 43078,
-        "Goblin": 43046,
-        "Highmountain Tauren": 43004,
-        "Kul Tiran": 43023,
-        "Maghar Orc": 42905,
-        "Orc": 42814,
-        "Pandaren": 43085,
-        "Tauren": 43047,
-        "Troll": 43296,
-        "Zandalari Troll Bwonsamdi": 42858,
-        "Zandalari Troll Kimbul": 42915,
-        "Zandalari Troll Paku": 42978
+        "Dark Iron Dwarf": 42797,
+        "Draenei": 42816,
+        "Dwarf": 43051,
+        "Goblin": 43054,
+        "Highmountain Tauren": 42994,
+        "Kul Tiran": 43016,
+        "Maghar Orc": 42926,
+        "Orc": 42822,
+        "Pandaren": 43088,
+        "Tauren": 43048,
+        "Troll": 43232,
+        "Zandalari Troll Bwonsamdi": 42910,
+        "Zandalari Troll Kimbul": 42936,
+        "Zandalari Troll Paku": 43006
     },
     "data_type": "races",
     "languages": {
@@ -328,7 +328,7 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "e525452ecb",
+        "simc_hash": "ca76d0206a",
         "spec": "enhancement",
         "target_error": "0.1",
         "tier": "24"
@@ -336,21 +336,21 @@
     "sorted_data_keys": [
         "Troll",
         "Pandaren",
+        "Goblin",
         "Dwarf",
         "Tauren",
-        "Goblin",
         "Kul Tiran",
-        "Highmountain Tauren",
         "Zandalari Troll Paku",
+        "Highmountain Tauren",
         "Zandalari Troll Kimbul",
         "Maghar Orc",
         "Zandalari Troll Bwonsamdi",
+        "Orc",
         "Draenei",
-        "Dark Iron Dwarf",
-        "Orc"
+        "Dark Iron Dwarf"
     ],
     "spec_id": 263,
-    "subtitle": "UTC 2019-12-03 07:28 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/e525452ecb\" target=\"blank\">e525452</a>",
+    "subtitle": "UTC 2019-12-04 07:28 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/ca76d0206a\" target=\"blank\">ca76d02</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -451,6 +451,6 @@
             }
         }
     },
-    "timestamp": "2019-12-03 07:28",
+    "timestamp": "2019-12-04 07:28",
     "title": "Races | Enhancement Shaman | Patchwerk"
 }
