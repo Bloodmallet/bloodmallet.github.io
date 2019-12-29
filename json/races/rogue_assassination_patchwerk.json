@@ -1,25 +1,25 @@
 {
     "class_id": 4,
     "data": {
-        "Blood Elf": 40975,
-        "Dark Iron Dwarf": 40739,
-        "Dwarf": 40907,
-        "Gnome": 41000,
-        "Goblin": 40906,
-        "Human": 40996,
-        "Kul Tiran": 40885,
-        "Maghar Orc": 41023,
-        "Night Elf": 40814,
-        "Nightborne": 40747,
-        "Orc": 40685,
-        "Pandaren": 40764,
-        "Troll": 41011,
-        "Undead": 40811,
-        "Void Elf": 40970,
-        "Worgen": 40810,
-        "Zandalari Troll Bwonsamdi": 40691,
+        "Blood Elf": 40995,
+        "Dark Iron Dwarf": 40726,
+        "Dwarf": 40949,
+        "Gnome": 40990,
+        "Goblin": 40917,
+        "Human": 40998,
+        "Kul Tiran": 40867,
+        "Maghar Orc": 41013,
+        "Night Elf": 40840,
+        "Nightborne": 40771,
+        "Orc": 40688,
+        "Pandaren": 40791,
+        "Troll": 41070,
+        "Undead": 40829,
+        "Void Elf": 40947,
+        "Worgen": 40829,
+        "Zandalari Troll Bwonsamdi": 40701,
         "Zandalari Troll Kimbul": 40751,
-        "Zandalari Troll Paku": 40830
+        "Zandalari Troll Paku": 40865
     },
     "data_type": "races",
     "languages": {
@@ -383,34 +383,34 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "137562a192",
+        "simc_hash": "4e4cda5c4c",
         "spec": "assassination",
         "target_error": "0.1",
         "tier": "24"
     },
     "sorted_data_keys": [
-        "Maghar Orc",
         "Troll",
-        "Gnome",
+        "Maghar Orc",
         "Human",
         "Blood Elf",
-        "Void Elf",
+        "Gnome",
         "Dwarf",
+        "Void Elf",
         "Goblin",
         "Kul Tiran",
         "Zandalari Troll Paku",
         "Night Elf",
-        "Undead",
         "Worgen",
+        "Undead",
         "Pandaren",
-        "Zandalari Troll Kimbul",
         "Nightborne",
+        "Zandalari Troll Kimbul",
         "Dark Iron Dwarf",
         "Zandalari Troll Bwonsamdi",
         "Orc"
     ],
     "spec_id": 259,
-    "subtitle": "UTC 2019-12-21 07:28 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/137562a192\" target=\"blank\">137562a</a>",
+    "subtitle": "UTC 2019-12-29 12:57 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/4e4cda5c4c\" target=\"blank\">4e4cda5</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -511,6 +511,6 @@
             }
         }
     },
-    "timestamp": "2019-12-21 07:28",
+    "timestamp": "2019-12-29 12:57",
     "title": "Races | Assassination Rogue | Patchwerk"
 }
