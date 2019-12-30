@@ -1,25 +1,25 @@
 {
     "class_id": 4,
     "data": {
-        "Blood Elf": 39095,
-        "Dark Iron Dwarf": 38808,
-        "Dwarf": 38981,
-        "Gnome": 39161,
-        "Goblin": 39015,
-        "Human": 39099,
-        "Kul Tiran": 38997,
-        "Maghar Orc": 39003,
-        "Night Elf": 39255,
-        "Nightborne": 38824,
-        "Orc": 38798,
-        "Pandaren": 38944,
-        "Troll": 38942,
-        "Undead": 38967,
-        "Void Elf": 39205,
-        "Worgen": 38953,
-        "Zandalari Troll Bwonsamdi": 38829,
-        "Zandalari Troll Kimbul": 38863,
-        "Zandalari Troll Paku": 38984
+        "Blood Elf": 39087,
+        "Dark Iron Dwarf": 38821,
+        "Dwarf": 39003,
+        "Gnome": 39132,
+        "Goblin": 39030,
+        "Human": 39117,
+        "Kul Tiran": 38984,
+        "Maghar Orc": 38994,
+        "Night Elf": 39269,
+        "Nightborne": 38767,
+        "Orc": 38793,
+        "Pandaren": 38946,
+        "Troll": 38951,
+        "Undead": 38946,
+        "Void Elf": 39216,
+        "Worgen": 38949,
+        "Zandalari Troll Bwonsamdi": 38879,
+        "Zandalari Troll Kimbul": 38869,
+        "Zandalari Troll Paku": 38964
     },
     "data_type": "races",
     "languages": {
@@ -383,7 +383,7 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "4e4cda5c4c",
+        "simc_hash": "d373a4a89e",
         "spec": "subtlety",
         "target_error": "0.1",
         "tier": "24"
@@ -395,22 +395,22 @@
         "Human",
         "Blood Elf",
         "Goblin",
+        "Dwarf",
         "Maghar Orc",
         "Kul Tiran",
         "Zandalari Troll Paku",
-        "Dwarf",
-        "Undead",
+        "Troll",
         "Worgen",
         "Pandaren",
-        "Troll",
-        "Zandalari Troll Kimbul",
+        "Undead",
         "Zandalari Troll Bwonsamdi",
-        "Nightborne",
+        "Zandalari Troll Kimbul",
         "Dark Iron Dwarf",
-        "Orc"
+        "Orc",
+        "Nightborne"
     ],
     "spec_id": 261,
-    "subtitle": "UTC 2019-12-29 12:58 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/4e4cda5c4c\" target=\"blank\">4e4cda5</a>",
+    "subtitle": "UTC 2019-12-30 07:30 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/d373a4a89e\" target=\"blank\">d373a4a</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -511,6 +511,6 @@
             }
         }
     },
-    "timestamp": "2019-12-29 12:58",
+    "timestamp": "2019-12-30 07:30",
     "title": "Races | Subtlety Rogue | Patchwerk"
 }

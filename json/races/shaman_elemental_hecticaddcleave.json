@@ -1,20 +1,20 @@
 {
     "class_id": 7,
     "data": {
-        "Dark Iron Dwarf": 59480,
-        "Draenei": 59661,
-        "Dwarf": 60114,
-        "Goblin": 59856,
-        "Highmountain Tauren": 59797,
-        "Kul Tiran": 59845,
-        "Maghar Orc": 59607,
-        "Orc": 59635,
-        "Pandaren": 60000,
-        "Tauren": 60102,
-        "Troll": 59608,
-        "Zandalari Troll Bwonsamdi": 59646,
-        "Zandalari Troll Kimbul": 59641,
-        "Zandalari Troll Paku": 59883
+        "Dark Iron Dwarf": 59604,
+        "Draenei": 59680,
+        "Dwarf": 60120,
+        "Goblin": 59793,
+        "Highmountain Tauren": 59892,
+        "Kul Tiran": 59876,
+        "Maghar Orc": 59648,
+        "Orc": 59581,
+        "Pandaren": 60060,
+        "Tauren": 60101,
+        "Troll": 59594,
+        "Zandalari Troll Bwonsamdi": 59586,
+        "Zandalari Troll Kimbul": 59592,
+        "Zandalari Troll Paku": 59905
     },
     "data_type": "races",
     "languages": {
@@ -326,7 +326,7 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "4e4cda5c4c",
+        "simc_hash": "d373a4a89e",
         "spec": "elemental",
         "target_error": "0.2",
         "tier": "24"
@@ -336,19 +336,19 @@
         "Tauren",
         "Pandaren",
         "Zandalari Troll Paku",
-        "Goblin",
-        "Kul Tiran",
         "Highmountain Tauren",
+        "Kul Tiran",
+        "Goblin",
         "Draenei",
-        "Zandalari Troll Bwonsamdi",
-        "Zandalari Troll Kimbul",
-        "Orc",
-        "Troll",
         "Maghar Orc",
-        "Dark Iron Dwarf"
+        "Dark Iron Dwarf",
+        "Troll",
+        "Zandalari Troll Kimbul",
+        "Zandalari Troll Bwonsamdi",
+        "Orc"
     ],
     "spec_id": 262,
-    "subtitle": "UTC 2019-12-29 13:12 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/4e4cda5c4c\" target=\"blank\">4e4cda5</a>",
+    "subtitle": "UTC 2019-12-30 07:47 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/d373a4a89e\" target=\"blank\">d373a4a</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -449,6 +449,6 @@
             }
         }
     },
-    "timestamp": "2019-12-29 13:12",
+    "timestamp": "2019-12-30 07:47",
     "title": "Races | Elemental Shaman | Hecticaddcleave"
 }
