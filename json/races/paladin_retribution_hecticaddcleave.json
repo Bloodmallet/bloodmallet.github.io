@@ -1,16 +1,16 @@
 {
     "class_id": 2,
     "data": {
-        "Blood Elf": 56228,
-        "Dark Iron Dwarf": 56226,
-        "Draenei": 56254,
-        "Dwarf": 56469,
-        "Human": 56615,
-        "Lightforged Draenei": 58146,
-        "Tauren": 56558,
-        "Zandalari Troll Bwonsamdi": 56109,
-        "Zandalari Troll Kimbul": 56227,
-        "Zandalari Troll Paku": 56523
+        "Blood Elf": 56141,
+        "Dark Iron Dwarf": 56243,
+        "Draenei": 56148,
+        "Dwarf": 56545,
+        "Human": 56558,
+        "Lightforged Draenei": 58175,
+        "Tauren": 56599,
+        "Zandalari Troll Bwonsamdi": 56209,
+        "Zandalari Troll Kimbul": 56117,
+        "Zandalari Troll Paku": 56424
     },
     "data_type": "races",
     "languages": {
@@ -270,25 +270,25 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "d373a4a89e",
+        "simc_hash": "d3b3ee76b6",
         "spec": "retribution",
         "target_error": "0.2",
         "tier": "24"
     },
     "sorted_data_keys": [
         "Lightforged Draenei",
-        "Human",
         "Tauren",
-        "Zandalari Troll Paku",
+        "Human",
         "Dwarf",
+        "Zandalari Troll Paku",
+        "Dark Iron Dwarf",
+        "Zandalari Troll Bwonsamdi",
         "Draenei",
         "Blood Elf",
-        "Zandalari Troll Kimbul",
-        "Dark Iron Dwarf",
-        "Zandalari Troll Bwonsamdi"
+        "Zandalari Troll Kimbul"
     ],
     "spec_id": 70,
-    "subtitle": "UTC 2019-12-30 07:44 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/d373a4a89e\" target=\"blank\">d373a4a</a>",
+    "subtitle": "UTC 2020-01-03 10:09 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/d3b3ee76b6\" target=\"blank\">d3b3ee7</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -389,6 +389,6 @@
             }
         }
     },
-    "timestamp": "2019-12-30 07:44",
+    "timestamp": "2020-01-03 10:09",
     "title": "Races | Retribution Paladin | Hecticaddcleave"
 }
