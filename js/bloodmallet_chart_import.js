@@ -84,6 +84,8 @@ function bloodmallet_chart_import() {
 
   const default_azerite_tier = "all"
 
+  const default_corruption_representation = "dps";
+
   const default_language = "en";
 
   /******************************************************************************
@@ -134,6 +136,7 @@ function bloodmallet_chart_import() {
           data_type: default_data_type,
           azerite_tier: default_azerite_tier,
           fight_style: default_fight_style,
+          corruption_representation: default_corruption_representation,
           filters: {},
           // style
           axis_color: default_axis_color,
@@ -169,6 +172,9 @@ function bloodmallet_chart_import() {
           if (bloodmallet.settings.language !== undefined) {
             state.language = bloodmallet.settings.language;
           }
+          if (bloodmallet.settings.corruption_representation !== undefined) {
+            state.corruption_representation = bloodmallet.settings.corruption_representation;
+          }
         } catch (error) {
           if (debug) {
             console.log("Applying page wide settings failed.");
@@ -202,6 +208,9 @@ function bloodmallet_chart_import() {
         }
         if (html_element.getAttribute("data-chart-engine")) {
           state.chart_engine = html_element.getAttribute("data-chart-engine");
+        }
+        if (html_element.getAttribute("data-corruption-representation")) {
+          state.corruption_representation = html_element.getAttribute("data-corruption-representation");
         }
         if (html_element.getAttribute("data-language")) {
           state.language = html_element.getAttribute("data-language");
@@ -252,8 +261,20 @@ function bloodmallet_chart_import() {
         }
 
         if (requirements) {
-          load_data(state);
-          setTimeout(update_chart, 2000, state, html_element, new_chart, 0);
+          let error = load_data(state);
+          if (error === true) {
+            new_chart.setTitle(
+              { // title
+                text: "Connection error"
+              },
+              { // subtitle
+                text: "Establishing a connection to bloodmallet.com failed. Is the website blocked?"
+              },
+              false
+            );
+          } else {
+            setTimeout(update_chart, 0, state, html_element, new_chart, 0);
+          }
         } else {
           requirements_error(new_chart);
         }
@@ -338,10 +359,13 @@ function bloodmallet_chart_import() {
         }
       }
     };
+    let error = false;
     request.onerror = function (e) {
       console.error('Fetching data from bloodmallet.com encountered an error, ', e);
+      error = true;
     };
     request.send(null);
+    return error;
   }
 
   /**
@@ -370,7 +394,8 @@ function bloodmallet_chart_import() {
     }
     const data = spec_data;
 
-    // Azerite Trait stacking uses the second sorted data key list
+    // Azerite Trait stacking and Corruption representation dps/rating use the
+    // second sorted data key list
     let dps_ordered_keys;
     let baseline_dps;
     if (data_type.indexOf("azerite_traits") > -1) {
@@ -402,6 +427,9 @@ function bloodmallet_chart_import() {
         return;
       }
 
+    } else if (data_type === "corruptions" && state.corruption_representation === "dps/rating") {
+      dps_ordered_keys = data["sorted_data_keys_2"].slice(0, data["sorted_data_keys_2"].length);
+      baseline_dps = data["data"]["baseline"]["1"];
     } else {
       dps_ordered_keys = data["sorted_data_keys"].slice(0, data["sorted_data_keys"].length);
       if (data_type === "races") {
@@ -419,7 +447,7 @@ function bloodmallet_chart_import() {
     }
 
     let simulated_steps = [];
-    if (data_type == "azerite_traits_stacking") {
+    if (data_type === "azerite_traits_stacking") {
       let base_ilevel = data["simulated_steps"][0].replace("1_", "");
       simulated_steps.push("3_" + base_ilevel);
       simulated_steps.push("2_" + base_ilevel);
@@ -457,7 +485,8 @@ function bloodmallet_chart_import() {
     chart.setTitle(
       {
         text: data["title"]
-      }, {
+      },
+      {
         text: data["subtitle"]
       },
       false
@@ -480,7 +509,7 @@ function bloodmallet_chart_import() {
       console.log(category_list);
     }
 
-    // rewrite the trinket names
+    // rewrite category names
     if (chart_engine == "highcharts") {
       chart.update({
         xAxis: {
@@ -491,7 +520,7 @@ function bloodmallet_chart_import() {
       chart.xAxis[0].setCategories(category_list, false);
     }
 
-    if (simulated_steps) {
+    if (simulated_steps && !(data_type === "corruptions" && state.corruption_representation === "dps/rating")) {
       for (let simulation_step_position = 0; simulation_step_position < simulated_steps.length; simulation_step_position++) {
 
         let simulation_step = simulated_steps[simulation_step_position];
@@ -591,20 +620,37 @@ function bloodmallet_chart_import() {
         }, false);
 
       }
-    } else { // race + essence combination simulations
+    } else { // race + essence combination simulations + corruptions dps/rating
       var dps_array = [];
 
       for (let i = 0; i < dps_ordered_keys.length; i++) {
         let dps_key = dps_ordered_keys[i];
 
-        let dps_key_values = data["data"][dps_key];
+        // extracting correct dps value
+        let dps_key_value = 0;
+        if (data_type === "corruptions" && state.corruption_representation === "dps/rating") {
 
-        dps_array.push(dps_key_values);
+          // Structure: "Strikethrough 2" "NAME RANK", with rank being one digit
+          let corruption_name = dps_key.slice(0, dps_key.length - 2);
+          let corruption_rank = dps_key.slice(dps_key.length - 1, dps_key.length);
+          let dps = data["data"][corruption_name][corruption_rank];
+
+          dps_key_value = (dps - baseline_dps) / data["corruption_rating"][corruption_name][corruption_rank];
+        } else {
+          dps_key_value = data["data"][dps_key];
+        }
+
+        dps_array.push(dps_key_value);
+      }
+
+      let name = "";
+      if (data_type === "races") {
+        name = "Race";
       }
 
       chart.addSeries({
         data: dps_array,
-        name: "Race",
+        name: name,
         showInLegend: true
       }, false);
 
@@ -617,8 +663,21 @@ function bloodmallet_chart_import() {
       chart.legend.title.attr({ text: "" });
     } else if (data_type === "azerite_traits_stacking") {
       chart.legend.title.attr({ text: "Trait count" });
-    } else if (data_type === "essences") {
+    } else if (data_type === "essences" || (data_type === "corruptions" && state.corruption_representation === "dps")) {
       chart.legend.title.attr({ text: "Rank" });
+    } else {
+      chart.legend.title.attr({ text: "" });
+    }
+
+    // update axis name
+    if (data_type === "corruptions" && state.corruption_representation === "dps/rating") {
+      chart.yAxis[1].setTitle({
+        text: '\u0394 Damage per second / corruption rating'
+      });
+      // not sure what the first yAxis actually does
+      chart.yAxis[0].setTitle({
+        text: '\u0394 Damage per second / corruption rating'
+      });
     }
 
     html_element.style.height = 200 + dps_ordered_keys.length * 30 + "px";
@@ -678,17 +737,25 @@ function bloodmallet_chart_import() {
     // wowhead, wowdb, or plain text if no matching origin is provided
 
     // fallback
-    if (state.tooltip_engine != "wowhead" && state.tooltip_engine != "wowdb") {
-      return data["languages"][key][language_table[state.language]];
+    if (state.tooltip_engine !== "wowhead" && state.tooltip_engine !== "wowdb") {
+      try {
+        return data["languages"][key][language_table[state.language]];
+      } catch (error) {
+        return key;
+      }
     }
 
     // races don't have links/tooltips
     if (state.data_type === "races") {
-      return data["languages"][key][language_table[state.language]];
+      try {
+        return data["languages"][key][language_table[state.language]];
+      } catch (error) {
+        return key;
+      }
     }
 
     // wowhead
-    if (state.tooltip_engine == "wowhead") {
+    if (state.tooltip_engine === "wowhead") {
       let a = document.createElement("a");
       a.href = "https://" + (state.language === "en" ? "www" : state.language) + ".wowhead.com/";
       if (data.hasOwnProperty("power_ids") && (data["power_ids"].hasOwnProperty(key) || data["power_ids"].hasOwnProperty(key.split(" +")[0]))) {
@@ -716,8 +783,18 @@ function bloodmallet_chart_import() {
           }
         }
         a.href += "&ilvl=" + ilvl;
-      } else if (data.hasOwnProperty("spell_ids") && data["spell_ids"].hasOwnProperty(key)) {
-        a.href += "spell=" + data["spell_ids"][key] + '/' + slugify(key);
+      } else if (data.hasOwnProperty("spell_ids") && (data["spell_ids"].hasOwnProperty(key) || data["spell_ids"].hasOwnProperty(key.slice(0, key.length - 2)))) {
+
+        // special handling
+        if (state.data_type === "corruptions" && state.corruption_representation === "dps/rating") {
+          let corruption_name = key.slice(0, key.length - 2);
+          let corruption_rank = key.slice(key.length - 1, key.length);
+          a.href += "spell=" + data["spell_ids"][corruption_name][corruption_rank] + '/' + slugify(key);
+        } else if (state.data_type === "corruptions" && state.corruption_representation === "dps") {
+          a.href += "spell=" + data["spell_ids"][key]["1"] + '/' + slugify(key);
+        } else {
+          a.href += "spell=" + data["spell_ids"][key] + '/' + slugify(key);
+        }
       }
 
       try {
@@ -763,6 +840,12 @@ function bloodmallet_chart_import() {
         try {
           if (state.data_type === "essence_combinations") {
             a.href += "spells/" + data["spell_ids"][key.split(" +")[0]];
+          } else if (state.data_type === "corruptions" && state.corruption_representation === "dps/rating") {
+            let corruption_name = key.slice(0, key.length - 2);
+            let corruption_rank = key.slice(key.length - 1, key.length);
+            a.href += "spell/" + data["spell_ids"][corruption_name][corruption_rank];
+          } else if (state.data_type === "corruptions" && state.corruption_representation === "dps") {
+            a.href += "spell/" + data["spell_ids"][key]["1"];
           } else {
             a.href += "spells/" + data["spell_ids"][key]; // spell id
           }
@@ -778,7 +861,6 @@ function bloodmallet_chart_import() {
       a.dataset.tooltipHref = a.href;
 
       try {
-
         a.appendChild(document.createTextNode(data["languages"][key][language_table[state.language]]));
       } catch (error) {
         a.appendChild(document.createTextNode(key));
@@ -887,41 +969,6 @@ function bloodmallet_chart_import() {
           }
         },
         series: [
-          {
-            color: default_font_color,
-            data: [
-              1,
-              1,
-              3,
-              1,
-              3
-            ],
-            name: "b main",
-            showInLegend: false
-          },
-          {
-            color: default_background_color,
-            data: [
-              0,
-              0,
-              0,
-              1,
-              0
-            ],
-            name: "b's emptiness",
-            showInLegend: false
-          }, {
-            color: default_font_color,
-            data: [
-              0,
-              0,
-              0,
-              1,
-              0
-            ],
-            name: "b's finishing touch",
-            showInLegend: false
-          }
         ],
         title: {
           text: "Loading data...", //"Title placeholder",
