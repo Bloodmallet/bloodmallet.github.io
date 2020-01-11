@@ -47,6 +47,9 @@
             "2": 15,
             "3": 20
         },
+        "Obsidian Skin": {
+            "1": 50
+        },
         "Poison": {
             "1": 1
         },
@@ -54,9 +57,6 @@
             "1": 15,
             "2": 20,
             "3": 35
-        },
-        "Searing Flames": {
-            "1": 30
         },
         "Severe": {
             "1": 10,
@@ -96,99 +96,99 @@
     },
     "data": {
         "Avoidant": {
-            "1": 47742,
-            "2": 47791,
-            "3": 47739
+            "1": 80448,
+            "2": 80632,
+            "3": 80449
         },
         "Deadly Momentum": {
-            "1": 48070,
-            "2": 48162,
-            "3": 48555
+            "1": 81288,
+            "2": 81268,
+            "3": 81824
         },
         "Echoing Void": {
-            "1": 51045,
-            "2": 52746,
-            "3": 56055
+            "1": 82768,
+            "2": 84154,
+            "3": 86481
         },
         "Expedient": {
-            "1": 48222,
-            "2": 48438,
-            "3": 48701
+            "1": 81641,
+            "2": 82006,
+            "3": 82383
         },
         "Glimpse of Clarity": {
-            "1": 48026,
-            "2": 48073
+            "1": 81219,
+            "2": 81136
         },
         "Gushing Wound": {
-            "1": 49723
+            "1": 82490
         },
         "Honed Mind": {
-            "1": 48605,
-            "2": 48884,
-            "3": 49708
+            "1": 82379,
+            "2": 83272,
+            "3": 85049
         },
         "Ineffable Truth": {
-            "1": 48112,
-            "2": 48079
+            "1": 80915,
+            "2": 80595
         },
         "Infinite Stars": {
-            "1": 51570,
-            "2": 57237,
-            "3": 61958
+            "1": 83086,
+            "2": 86864,
+            "3": 90344
         },
         "Masterful": {
-            "1": 48120,
-            "2": 48341,
-            "3": 48516
+            "1": 80784,
+            "2": 80931,
+            "3": 81297
+        },
+        "Obsidian Skin": {
+            "1": 80408
         },
         "Poison": {
-            "1": 47738
+            "1": 80410
         },
         "Racing Pulse": {
-            "1": 48560,
-            "2": 48839,
-            "3": 49587
-        },
-        "Searing Flames": {
-            "1": 48325
+            "1": 81862,
+            "2": 82515,
+            "3": 84027
         },
         "Severe": {
-            "1": 48434,
-            "2": 48781,
-            "3": 49196
+            "1": 81493,
+            "2": 81914,
+            "3": 82259
         },
         "Strikethrough": {
-            "1": 48297,
-            "2": 48622,
-            "3": 48858
+            "1": 81078,
+            "2": 81395,
+            "3": 81636
         },
         "Surging Vitality": {
-            "1": 47793,
-            "2": 47724,
-            "3": 47768
+            "1": 80500,
+            "2": 80410,
+            "3": 80454
         },
         "Twilight Devastation": {
-            "1": 48509,
-            "2": 49122,
-            "3": 49854
+            "1": 82864,
+            "2": 85389,
+            "3": 87796
         },
         "Twisted Appendage": {
-            "1": 47733,
-            "2": 47729,
-            "3": 47764
+            "1": 80276,
+            "2": 80399,
+            "3": 80427
         },
         "Versatile": {
-            "1": 47811,
-            "2": 47865,
-            "3": 47866
+            "1": 80662,
+            "2": 80808,
+            "3": 81133
         },
         "Void Ritual": {
-            "1": 48094,
-            "2": 48577,
-            "3": 49417
+            "1": 81184,
+            "2": 82122,
+            "3": 83538
         },
         "baseline": {
-            "1": 47792
+            "1": 80472
         }
     },
     "data_type": "corruptions",
@@ -197,20 +197,20 @@
         "azerite_essences": "14:4:1/27:4:0/4:4:0",
         "back": {
             "bonus_id": "4800/1517",
-            "id": "168391"
+            "id": "168604"
         },
         "character": {
             "azerite_essences": "14:4:1/27:4:0/4:4:0",
             "class": "death_knight",
             "level": "120",
             "position": "back",
-            "race": "blood_elf",
+            "race": "troll",
             "role": "attack",
-            "spec": "frost",
-            "talents": "3102013"
+            "spec": "unholy",
+            "talents": "2203032"
         },
         "chest": {
-            "azerite_powers": "108/576/30/13",
+            "azerite_powers": "109/199/30/13",
             "bonus_id": "1517/4824/4775",
             "id": "168363"
         },
@@ -220,12 +220,12 @@
         },
         "finger1": {
             "bonus_id": "4779/1472",
-            "enchant": "accord_of_critical_strike",
+            "enchant": "accord_of_haste",
             "id": "169159"
         },
         "finger2": {
             "bonus_id": "4779/1472",
-            "enchant": "accord_of_critical_strike",
+            "enchant": "accord_of_haste",
             "id": "169157"
         },
         "hands": {
@@ -233,17 +233,17 @@
             "id": "170336"
         },
         "head": {
-            "azerite_powers": "108/576/459/13",
-            "bonus_id": "1517/4824/4775",
-            "id": "168360"
+            "azerite_powers": "109/199/30/13",
+            "bonus_id": "1617/4918/4775",
+            "id": "159430"
         },
         "items": {
             "back": {
                 "bonus_id": "4800/1517",
-                "id": "168391"
+                "id": "168604"
             },
             "chest": {
-                "azerite_powers": "108/576/30/13",
+                "azerite_powers": "109/199/30/13",
                 "bonus_id": "1517/4824/4775",
                 "id": "168363"
             },
@@ -253,12 +253,12 @@
             },
             "finger1": {
                 "bonus_id": "4779/1472",
-                "enchant": "accord_of_critical_strike",
+                "enchant": "accord_of_haste",
                 "id": "169159"
             },
             "finger2": {
                 "bonus_id": "4779/1472",
-                "enchant": "accord_of_critical_strike",
+                "enchant": "accord_of_haste",
                 "id": "169157"
             },
             "hands": {
@@ -266,9 +266,9 @@
                 "id": "170336"
             },
             "head": {
-                "azerite_powers": "108/576/459/13",
-                "bonus_id": "1517/4824/4775",
-                "id": "168360"
+                "azerite_powers": "109/199/30/13",
+                "bonus_id": "1617/4918/4775",
+                "id": "159430"
             },
             "legs": {
                 "bonus_id": "4800/1547",
@@ -276,23 +276,18 @@
             },
             "main_hand": {
                 "bonus_id": "4800/1517",
-                "enchant": "rune_of_razorice",
-                "id": "168902"
+                "enchant": "rune_of_the_fallen_crusader",
+                "id": "168478"
             },
             "neck": {
                 "azerite_level": "65",
                 "bonus_id": "4929/5814/4936/1600",
                 "id": "158075"
             },
-            "off_hand": {
-                "bonus_id": "4800/1517",
-                "enchant": "rune_of_the_fallen_crusader",
-                "id": "168902"
-            },
             "shoulders": {
-                "azerite_powers": "347/196/30/13",
-                "bonus_id": "1617/4918/4775",
-                "id": "159439"
+                "azerite_powers": "199/575/31/13",
+                "bonus_id": "1517/4824/4775",
+                "id": "168364"
             },
             "trinket1": {
                 "bonus_id": "4800/1517",
@@ -318,29 +313,24 @@
         "level": "120",
         "main_hand": {
             "bonus_id": "4800/1517",
-            "enchant": "rune_of_razorice",
-            "id": "168902"
+            "enchant": "rune_of_the_fallen_crusader",
+            "id": "168478"
         },
         "neck": {
             "azerite_level": "65",
             "bonus_id": "4929/5814/4936/1600",
             "id": "158075"
         },
-        "off_hand": {
-            "bonus_id": "4800/1517",
-            "enchant": "rune_of_the_fallen_crusader",
-            "id": "168902"
-        },
         "position": "back",
-        "race": "blood_elf",
+        "race": "troll",
         "role": "attack",
         "shoulders": {
-            "azerite_powers": "347/196/30/13",
-            "bonus_id": "1617/4918/4775",
-            "id": "159439"
+            "azerite_powers": "199/575/31/13",
+            "bonus_id": "1517/4824/4775",
+            "id": "168364"
         },
-        "spec": "frost",
-        "talents": "3102013",
+        "spec": "unholy",
+        "talents": "2203032",
         "trinket1": {
             "bonus_id": "4800/1517",
             "id": "169311"
@@ -360,12 +350,12 @@
     },
     "simc_settings": {
         "class": "death_knight",
-        "fight_style": "patchwerk",
+        "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "1",
         "simc_hash": "d372055c39",
-        "spec": "frost",
-        "target_error": "0.1",
+        "spec": "unholy",
+        "target_error": "0.2",
         "tier": "24"
     },
     "simulated_steps": [
@@ -375,81 +365,81 @@
     ],
     "sorted_data_keys": [
         "Infinite Stars",
-        "Echoing Void",
         "Twilight Devastation",
-        "Gushing Wound",
+        "Echoing Void",
         "Honed Mind",
         "Racing Pulse",
         "Void Ritual",
-        "Severe",
-        "Strikethrough",
+        "Gushing Wound",
         "Expedient",
+        "Severe",
         "Deadly Momentum",
+        "Strikethrough",
         "Masterful",
-        "Searing Flames",
-        "Ineffable Truth",
         "Glimpse of Clarity",
         "Versatile",
+        "Ineffable Truth",
         "Surging Vitality",
-        "Twisted Appendage",
         "Avoidant",
-        "Poison"
+        "Twisted Appendage",
+        "Poison",
+        "Obsidian Skin"
     ],
     "sorted_data_keys_2": [
+        "Honed Mind 2",
+        "Gushing Wound 1",
+        "Infinite Stars 3",
+        "Honed Mind 3",
         "Infinite Stars 1",
         "Infinite Stars 2",
-        "Infinite Stars 3",
-        "Echoing Void 2",
-        "Echoing Void 3",
-        "Echoing Void 1",
-        "Gushing Wound 1",
-        "Severe 3",
-        "Severe 2",
-        "Severe 1",
-        "Strikethrough 2",
-        "Honed Mind 3",
-        "Honed Mind 2",
         "Honed Mind 1",
-        "Strikethrough 3",
-        "Racing Pulse 2",
-        "Racing Pulse 3",
-        "Racing Pulse 1",
-        "Strikethrough 1",
-        "Expedient 3",
-        "Expedient 2",
         "Expedient 1",
-        "Masterful 2",
-        "Masterful 3",
-        "Masterful 1",
-        "Twilight Devastation 1",
-        "Twilight Devastation 3",
+        "Echoing Void 2",
+        "Expedient 2",
+        "Racing Pulse 2",
+        "Severe 1",
+        "Racing Pulse 3",
+        "Echoing Void 3",
         "Twilight Devastation 2",
-        "Void Ritual 3",
+        "Twilight Devastation 3",
+        "Severe 2",
+        "Twilight Devastation 1",
+        "Expedient 3",
+        "Racing Pulse 1",
+        "Echoing Void 1",
+        "Severe 3",
         "Glimpse of Clarity 1",
-        "Void Ritual 2",
-        "Deadly Momentum 3",
-        "Ineffable Truth 1",
-        "Void Ritual 1",
-        "Glimpse of Clarity 2",
+        "Strikethrough 2",
+        "Strikethrough 1",
+        "Strikethrough 3",
         "Deadly Momentum 1",
+        "Void Ritual 1",
+        "Void Ritual 2",
+        "Void Ritual 3",
+        "Glimpse of Clarity 2",
+        "Masterful 3",
         "Deadly Momentum 2",
-        "Searing Flames 1",
-        "Ineffable Truth 2",
-        "Versatile 2",
+        "Deadly Momentum 3",
         "Versatile 3",
+        "Masterful 1",
+        "Masterful 2",
+        "Ineffable Truth 1",
+        "Versatile 2",
         "Versatile 1",
-        "Surging Vitality 1",
         "Avoidant 2",
-        "Twisted Appendage 3",
+        "Ineffable Truth 2",
+        "Surging Vitality 1",
         "Surging Vitality 3",
-        "Twisted Appendage 2",
+        "Twisted Appendage 3",
         "Avoidant 3",
+        "Obsidian Skin 1",
+        "Twisted Appendage 2",
+        "Avoidant 1",
         "Surging Vitality 2",
         "Twisted Appendage 1",
-        "Avoidant 1",
         "Poison 1"
     ],
-    "spec_id": 251,
+    "spec_id": 252,
     "spell_ids": {
         "Avoidant": {
             "1": 315607,
@@ -497,6 +487,9 @@
             "2": 315530,
             "3": 315531
         },
+        "Obsidian Skin": {
+            "1": 316651
+        },
         "Poison": {
             "1": 13518
         },
@@ -504,9 +497,6 @@
             "1": 318266,
             "2": 318492,
             "3": 318496
-        },
-        "Searing Flames": {
-            "1": 318293
         },
         "Severe": {
             "1": 315554,
@@ -544,68 +534,68 @@
             "3": 318480
         }
     },
-    "subtitle": "UTC 2020-01-11 22:06 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/d372055c39\" target=\"blank\">d372055</a>",
+    "subtitle": "UTC 2020-01-11 22:35 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/d372055c39\" target=\"blank\">d372055</a>",
     "talent_data": {
         "1": {
             "1": {
-                "name": "Inexorable Assault",
-                "spell_id": "253593"
+                "name": "Infected Claws",
+                "spell_id": "207272"
             },
             "2": {
-                "name": "Icy Talons",
-                "spell_id": "194878"
+                "name": "All Will Serve",
+                "spell_id": "194916"
             },
             "3": {
-                "name": "Cold Heart",
-                "spell_id": "281208"
+                "name": "Clawing Shadows",
+                "spell_id": "207311"
             }
         },
         "2": {
             "1": {
-                "name": "Runic Attenuation",
-                "spell_id": "207104"
+                "name": "Bursting Sores",
+                "spell_id": "207264"
             },
             "2": {
-                "name": "Murderous Efficiency",
-                "spell_id": "207061"
+                "name": "Ebon Fever",
+                "spell_id": "207269"
             },
             "3": {
-                "name": "Horn of Winter",
-                "spell_id": "57330"
+                "name": "Unholy Blight",
+                "spell_id": "115989"
             }
         },
         "3": {
             "1": {
+                "name": "Grip of the Dead",
+                "spell_id": "273952"
+            },
+            "2": {
                 "name": "Death's Reach",
                 "spell_id": "276079"
             },
-            "2": {
+            "3": {
                 "name": "Asphyxiate",
                 "spell_id": "108194"
-            },
-            "3": {
-                "name": "Blinding Sleet",
-                "spell_id": "207167"
             }
         },
         "4": {
             "1": {
-                "name": "Avalanche",
-                "spell_id": "207142"
+                "name": "Pestilent Pustules",
+                "spell_id": "194917"
             },
             "2": {
-                "name": "Frozen Pulse",
-                "spell_id": "194909"
+                "name": "Harbinger of Doom",
+                "spell_id": "276023"
             },
             "3": {
-                "name": "Frostscythe",
-                "spell_id": "207230"
+                "name": "Soul Reaper",
+                "spell_id": "130736"
             }
         },
         "5": {
             "1": {
-                "name": "Permafrost",
-                "spell_id": "207200"
+                "name": "Spell Eater",
+                "spell_id": "207321"
             },
             "2": {
                 "name": "Wraith Walk",
@@ -618,33 +608,33 @@
         },
         "6": {
             "1": {
-                "name": "Gathering Storm",
-                "spell_id": "194912"
+                "name": "Pestilence",
+                "spell_id": "277234"
             },
             "2": {
-                "name": "Glacial Advance",
-                "spell_id": "194913"
+                "name": "Defile",
+                "spell_id": "152280"
             },
             "3": {
-                "name": "Frostwyrm's Fury",
-                "spell_id": "279302"
+                "name": "Epidemic",
+                "spell_id": "207317"
             }
         },
         "7": {
             "1": {
-                "name": "Icecap",
-                "spell_id": "207126"
+                "name": "Army of the Damned",
+                "spell_id": "276837"
             },
             "2": {
-                "name": "Obliteration",
-                "spell_id": "281238"
+                "name": "Unholy Frenzy",
+                "spell_id": "207289"
             },
             "3": {
-                "name": "Breath of Sindragosa",
-                "spell_id": "152279"
+                "name": "Summon Gargoyle",
+                "spell_id": "49206"
             }
         }
     },
-    "timestamp": "2020-01-11 22:06",
-    "title": "Corruptions | Frost Death Knight | Patchwerk"
+    "timestamp": "2020-01-11 22:35",
+    "title": "Corruptions | Unholy Death Knight | Hecticaddcleave"
 }
