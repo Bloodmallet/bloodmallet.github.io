@@ -1,20 +1,20 @@
 {
     "class_id": 7,
     "data": {
-        "Dark Iron Dwarf": 42506,
-        "Draenei": 42571,
-        "Dwarf": 42967,
-        "Goblin": 42698,
-        "Highmountain Tauren": 42731,
-        "Kul Tiran": 42735,
-        "Maghar Orc": 42597,
-        "Orc": 42563,
-        "Pandaren": 42735,
-        "Tauren": 42921,
-        "Troll": 42643,
-        "Zandalari Troll Bwonsamdi": 42601,
-        "Zandalari Troll Kimbul": 42644,
-        "Zandalari Troll Paku": 42574
+        "Dark Iron Dwarf": 42090,
+        "Draenei": 42155,
+        "Dwarf": 42531,
+        "Goblin": 42312,
+        "Highmountain Tauren": 42303,
+        "Kul Tiran": 42294,
+        "Maghar Orc": 42210,
+        "Orc": 42154,
+        "Pandaren": 42353,
+        "Tauren": 42599,
+        "Troll": 42228,
+        "Zandalari Troll Bwonsamdi": 42201,
+        "Zandalari Troll Kimbul": 42237,
+        "Zandalari Troll Paku": 42254
     },
     "data_type": "races",
     "languages": {
@@ -202,7 +202,6 @@
             "id": "159391"
         },
         "items": {
-            "azerite_essences": {},
             "back": {
                 "bonus_id": "4800/1517",
                 "id": "168604"
@@ -325,30 +324,30 @@
         "class": "shaman",
         "fight_style": "patchwerk",
         "iterations": "20000",
-        "ptr": "0",
-        "simc_hash": "67250d7b8b",
+        "ptr": "1",
+        "simc_hash": "d372055c39",
         "spec": "elemental",
         "target_error": "0.1",
         "tier": "24"
     },
     "sorted_data_keys": [
-        "Dwarf",
         "Tauren",
+        "Dwarf",
         "Pandaren",
-        "Kul Tiran",
-        "Highmountain Tauren",
         "Goblin",
+        "Highmountain Tauren",
+        "Kul Tiran",
+        "Zandalari Troll Paku",
         "Zandalari Troll Kimbul",
         "Troll",
-        "Zandalari Troll Bwonsamdi",
         "Maghar Orc",
-        "Zandalari Troll Paku",
+        "Zandalari Troll Bwonsamdi",
         "Draenei",
         "Orc",
         "Dark Iron Dwarf"
     ],
     "spec_id": 262,
-    "subtitle": "UTC 2020-01-10 07:29 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/67250d7b8b\" target=\"blank\">67250d7</a>",
+    "subtitle": "UTC 2020-01-11 08:16 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/d372055c39\" target=\"blank\">d372055</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -449,6 +448,6 @@
             }
         }
     },
-    "timestamp": "2020-01-10 07:29",
+    "timestamp": "2020-01-11 08:16",
     "title": "Races | Elemental Shaman | Patchwerk"
 }
