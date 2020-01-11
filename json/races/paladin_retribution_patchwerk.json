@@ -1,16 +1,16 @@
 {
     "class_id": 2,
     "data": {
-        "Blood Elf": 39602,
-        "Dark Iron Dwarf": 39307,
-        "Draenei": 39290,
-        "Dwarf": 39542,
-        "Human": 39549,
+        "Blood Elf": 39551,
+        "Dark Iron Dwarf": 39339,
+        "Draenei": 39263,
+        "Dwarf": 39493,
+        "Human": 39538,
         "Lightforged Draenei": 39229,
-        "Tauren": 39577,
-        "Zandalari Troll Bwonsamdi": 39324,
-        "Zandalari Troll Kimbul": 39369,
-        "Zandalari Troll Paku": 39481
+        "Tauren": 39579,
+        "Zandalari Troll Bwonsamdi": 39356,
+        "Zandalari Troll Kimbul": 39399,
+        "Zandalari Troll Paku": 39479
     },
     "data_type": "races",
     "languages": {
@@ -156,7 +156,6 @@
             "id": "168365"
         },
         "items": {
-            "azerite_essences": {},
             "back": {
                 "bonus_id": "4800/1517",
                 "id": "168604"
@@ -269,15 +268,15 @@
         "class": "paladin",
         "fight_style": "patchwerk",
         "iterations": "20000",
-        "ptr": "0",
-        "simc_hash": "67250d7b8b",
+        "ptr": "1",
+        "simc_hash": "d372055c39",
         "spec": "retribution",
         "target_error": "0.1",
         "tier": "24"
     },
     "sorted_data_keys": [
-        "Blood Elf",
         "Tauren",
+        "Blood Elf",
         "Human",
         "Dwarf",
         "Zandalari Troll Paku",
@@ -288,7 +287,7 @@
         "Lightforged Draenei"
     ],
     "spec_id": 70,
-    "subtitle": "UTC 2020-01-10 07:27 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/67250d7b8b\" target=\"blank\">67250d7</a>",
+    "subtitle": "UTC 2020-01-11 07:24 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/d372055c39\" target=\"blank\">d372055</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -389,6 +388,6 @@
             }
         }
     },
-    "timestamp": "2020-01-10 07:27",
+    "timestamp": "2020-01-11 07:24",
     "title": "Races | Retribution Paladin | Patchwerk"
 }

@@ -1,16 +1,16 @@
 {
     "class_id": 2,
     "data": {
-        "Blood Elf": 32281,
-        "Dark Iron Dwarf": 32151,
-        "Draenei": 32137,
-        "Dwarf": 32365,
-        "Human": 32433,
-        "Lightforged Draenei": 32646,
-        "Tauren": 32404,
-        "Zandalari Troll Bwonsamdi": 32326,
-        "Zandalari Troll Kimbul": 32391,
-        "Zandalari Troll Paku": 32294
+        "Blood Elf": 32132,
+        "Dark Iron Dwarf": 32009,
+        "Draenei": 31999,
+        "Dwarf": 32207,
+        "Human": 32297,
+        "Lightforged Draenei": 32507,
+        "Tauren": 32237,
+        "Zandalari Troll Bwonsamdi": 32186,
+        "Zandalari Troll Kimbul": 32227,
+        "Zandalari Troll Paku": 32104
     },
     "data_type": "races",
     "languages": {
@@ -158,7 +158,6 @@
             "id": "155866"
         },
         "items": {
-            "azerite_essences": {},
             "back": {
                 "bonus_id": "4800/1517",
                 "id": "168604"
@@ -281,8 +280,8 @@
         "class": "paladin",
         "fight_style": "patchwerk",
         "iterations": "20000",
-        "ptr": "0",
-        "simc_hash": "67250d7b8b",
+        "ptr": "1",
+        "simc_hash": "d372055c39",
         "spec": "protection",
         "target_error": "0.1",
         "tier": "24"
@@ -294,13 +293,13 @@
         "Zandalari Troll Kimbul",
         "Dwarf",
         "Zandalari Troll Bwonsamdi",
-        "Zandalari Troll Paku",
         "Blood Elf",
+        "Zandalari Troll Paku",
         "Dark Iron Dwarf",
         "Draenei"
     ],
     "spec_id": 66,
-    "subtitle": "UTC 2020-01-10 07:27 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/67250d7b8b\" target=\"blank\">67250d7</a>",
+    "subtitle": "UTC 2020-01-11 07:24 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/d372055c39\" target=\"blank\">d372055</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -401,6 +400,6 @@
             }
         }
     },
-    "timestamp": "2020-01-10 07:27",
+    "timestamp": "2020-01-11 07:24",
     "title": "Races | Protection Paladin | Patchwerk"
 }
