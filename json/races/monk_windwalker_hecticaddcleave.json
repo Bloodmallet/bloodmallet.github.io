@@ -1,26 +1,26 @@
 {
     "class_id": 10,
     "data": {
-        "Blood Elf": 61153,
-        "Dark Iron Dwarf": 60692,
-        "Draenei": 60743,
-        "Dwarf": 61092,
-        "Gnome": 60593,
-        "Highmountain Tauren": 61116,
-        "Human": 61053,
-        "Kul Tiran": 61125,
-        "Maghar Orc": 60847,
-        "Night Elf": 60989,
-        "Nightborne": 60672,
-        "Orc": 60794,
-        "Pandaren": 61042,
-        "Tauren": 61167,
-        "Troll": 60648,
-        "Undead": 60872,
-        "Void Elf": 61044,
-        "Zandalari Troll Bwonsamdi": 60722,
-        "Zandalari Troll Kimbul": 60847,
-        "Zandalari Troll Paku": 60962
+        "Blood Elf": 62276,
+        "Dark Iron Dwarf": 61586,
+        "Draenei": 61984,
+        "Dwarf": 62237,
+        "Gnome": 61684,
+        "Highmountain Tauren": 62151,
+        "Human": 62190,
+        "Kul Tiran": 62143,
+        "Maghar Orc": 62006,
+        "Night Elf": 62045,
+        "Nightborne": 61700,
+        "Orc": 61904,
+        "Pandaren": 62302,
+        "Tauren": 62269,
+        "Troll": 61710,
+        "Undead": 61916,
+        "Void Elf": 62276,
+        "Zandalari Troll Bwonsamdi": 61761,
+        "Zandalari Troll Kimbul": 61775,
+        "Zandalari Troll Paku": 62185
     },
     "data_type": "races",
     "languages": {
@@ -268,7 +268,6 @@
             "id": "168347"
         },
         "items": {
-            "azerite_essences": {},
             "back": {
                 "bonus_id": "4800/1517",
                 "id": "168602"
@@ -393,36 +392,36 @@
         "class": "monk",
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
-        "ptr": "0",
-        "simc_hash": "67250d7b8b",
+        "ptr": "1",
+        "simc_hash": "d372055c39",
         "spec": "windwalker",
         "target_error": "0.2",
         "tier": "24"
     },
     "sorted_data_keys": [
-        "Tauren",
+        "Pandaren",
+        "Void Elf",
         "Blood Elf",
-        "Kul Tiran",
-        "Highmountain Tauren",
+        "Tauren",
         "Dwarf",
         "Human",
-        "Void Elf",
-        "Pandaren",
-        "Night Elf",
         "Zandalari Troll Paku",
-        "Undead",
+        "Highmountain Tauren",
+        "Kul Tiran",
+        "Night Elf",
         "Maghar Orc",
-        "Zandalari Troll Kimbul",
-        "Orc",
         "Draenei",
+        "Undead",
+        "Orc",
+        "Zandalari Troll Kimbul",
         "Zandalari Troll Bwonsamdi",
-        "Dark Iron Dwarf",
-        "Nightborne",
         "Troll",
-        "Gnome"
+        "Nightborne",
+        "Gnome",
+        "Dark Iron Dwarf"
     ],
     "spec_id": 269,
-    "subtitle": "UTC 2020-01-10 07:39 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/67250d7b8b\" target=\"blank\">67250d7</a>",
+    "subtitle": "UTC 2020-01-11 08:46 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/d372055c39\" target=\"blank\">d372055</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -523,6 +522,6 @@
             }
         }
     },
-    "timestamp": "2020-01-10 07:39",
+    "timestamp": "2020-01-11 08:46",
     "title": "Races | Windwalker Monk | Hecticaddcleave"
 }

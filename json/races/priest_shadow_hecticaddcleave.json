@@ -1,27 +1,27 @@
 {
     "class_id": 5,
     "data": {
-        "Blood Elf": 48995,
-        "Dark Iron Dwarf": 48603,
-        "Draenei": 48704,
-        "Dwarf": 49057,
-        "Gnome": 49211,
-        "Goblin": 49196,
-        "Human": 49285,
-        "Kul Tiran": 48949,
-        "Lightforged Draenei": 49892,
-        "Maghar Orc": 48739,
-        "Night Elf": 49087,
-        "Nightborne": 49021,
-        "Pandaren": 49303,
-        "Tauren": 49065,
-        "Troll": 48994,
-        "Undead": 48772,
-        "Void Elf": 48714,
-        "Worgen": 48916,
-        "Zandalari Troll Bwonsamdi": 48701,
-        "Zandalari Troll Kimbul": 48801,
-        "Zandalari Troll Paku": 49036
+        "Blood Elf": 45031,
+        "Dark Iron Dwarf": 44661,
+        "Draenei": 44823,
+        "Dwarf": 45035,
+        "Gnome": 45086,
+        "Goblin": 45206,
+        "Human": 45250,
+        "Kul Tiran": 44962,
+        "Lightforged Draenei": 45961,
+        "Maghar Orc": 44900,
+        "Night Elf": 45150,
+        "Nightborne": 45093,
+        "Pandaren": 45305,
+        "Tauren": 45075,
+        "Troll": 45094,
+        "Undead": 44821,
+        "Void Elf": 44842,
+        "Worgen": 44988,
+        "Zandalari Troll Bwonsamdi": 44823,
+        "Zandalari Troll Kimbul": 44902,
+        "Zandalari Troll Paku": 45036
     },
     "data_type": "races",
     "languages": {
@@ -279,7 +279,6 @@
             "id": "168336"
         },
         "items": {
-            "azerite_essences": {},
             "back": {
                 "bonus_id": "4800/1517",
                 "id": "168604"
@@ -394,8 +393,8 @@
         "class": "priest",
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
-        "ptr": "0",
-        "simc_hash": "67250d7b8b",
+        "ptr": "1",
+        "simc_hash": "d372055c39",
         "spec": "shadow",
         "target_error": "0.2",
         "tier": "24"
@@ -404,27 +403,27 @@
         "Lightforged Draenei",
         "Pandaren",
         "Human",
-        "Gnome",
         "Goblin",
         "Night Elf",
-        "Tauren",
-        "Dwarf",
-        "Zandalari Troll Paku",
-        "Nightborne",
-        "Blood Elf",
         "Troll",
-        "Kul Tiran",
+        "Nightborne",
+        "Gnome",
+        "Tauren",
+        "Zandalari Troll Paku",
+        "Dwarf",
+        "Blood Elf",
         "Worgen",
+        "Kul Tiran",
         "Zandalari Troll Kimbul",
-        "Undead",
         "Maghar Orc",
         "Void Elf",
         "Draenei",
         "Zandalari Troll Bwonsamdi",
+        "Undead",
         "Dark Iron Dwarf"
     ],
     "spec_id": 258,
-    "subtitle": "UTC 2020-01-10 07:41 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/67250d7b8b\" target=\"blank\">67250d7</a>",
+    "subtitle": "UTC 2020-01-11 08:47 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/d372055c39\" target=\"blank\">d372055</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -525,6 +524,6 @@
             }
         }
     },
-    "timestamp": "2020-01-10 07:41",
+    "timestamp": "2020-01-11 08:47",
     "title": "Races | Shadow Priest | Hecticaddcleave"
 }

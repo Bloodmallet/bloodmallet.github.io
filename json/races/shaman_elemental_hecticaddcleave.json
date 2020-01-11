@@ -1,20 +1,20 @@
 {
     "class_id": 7,
     "data": {
-        "Dark Iron Dwarf": 59453,
-        "Draenei": 59651,
-        "Dwarf": 59977,
-        "Goblin": 59883,
-        "Highmountain Tauren": 59783,
-        "Kul Tiran": 59851,
-        "Maghar Orc": 59654,
-        "Orc": 59711,
-        "Pandaren": 59881,
-        "Tauren": 60048,
-        "Troll": 59603,
-        "Zandalari Troll Bwonsamdi": 59633,
-        "Zandalari Troll Kimbul": 59600,
-        "Zandalari Troll Paku": 59800
+        "Dark Iron Dwarf": 57008,
+        "Draenei": 57111,
+        "Dwarf": 57551,
+        "Goblin": 57224,
+        "Highmountain Tauren": 57324,
+        "Kul Tiran": 57165,
+        "Maghar Orc": 56998,
+        "Orc": 56977,
+        "Pandaren": 57460,
+        "Tauren": 57528,
+        "Troll": 56976,
+        "Zandalari Troll Bwonsamdi": 57101,
+        "Zandalari Troll Kimbul": 57039,
+        "Zandalari Troll Paku": 57343
     },
     "data_type": "races",
     "languages": {
@@ -202,7 +202,6 @@
             "id": "159391"
         },
         "items": {
-            "azerite_essences": {},
             "back": {
                 "bonus_id": "4800/1517",
                 "id": "168604"
@@ -325,30 +324,30 @@
         "class": "shaman",
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
-        "ptr": "0",
-        "simc_hash": "67250d7b8b",
+        "ptr": "1",
+        "simc_hash": "d372055c39",
         "spec": "elemental",
         "target_error": "0.2",
         "tier": "24"
     },
     "sorted_data_keys": [
-        "Tauren",
         "Dwarf",
-        "Goblin",
+        "Tauren",
         "Pandaren",
-        "Kul Tiran",
         "Zandalari Troll Paku",
         "Highmountain Tauren",
-        "Orc",
-        "Maghar Orc",
+        "Goblin",
+        "Kul Tiran",
         "Draenei",
         "Zandalari Troll Bwonsamdi",
-        "Troll",
         "Zandalari Troll Kimbul",
-        "Dark Iron Dwarf"
+        "Dark Iron Dwarf",
+        "Maghar Orc",
+        "Orc",
+        "Troll"
     ],
     "spec_id": 262,
-    "subtitle": "UTC 2020-01-10 07:42 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/67250d7b8b\" target=\"blank\">67250d7</a>",
+    "subtitle": "UTC 2020-01-11 08:49 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/d372055c39\" target=\"blank\">d372055</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -449,6 +448,6 @@
             }
         }
     },
-    "timestamp": "2020-01-10 07:42",
+    "timestamp": "2020-01-11 08:49",
     "title": "Races | Elemental Shaman | Hecticaddcleave"
 }

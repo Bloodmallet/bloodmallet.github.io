@@ -1,15 +1,15 @@
 {
     "class_id": 11,
     "data": {
-        "Highmountain Tauren": 50316,
-        "Kul Tiran": 50369,
-        "Night Elf": 50366,
-        "Tauren": 50327,
-        "Troll": 50378,
-        "Worgen": 50176,
-        "Zandalari Troll Bwonsamdi": 50157,
-        "Zandalari Troll Kimbul": 50169,
-        "Zandalari Troll Paku": 50359
+        "Highmountain Tauren": 48154,
+        "Kul Tiran": 48134,
+        "Night Elf": 48074,
+        "Tauren": 48106,
+        "Troll": 48133,
+        "Worgen": 48042,
+        "Zandalari Troll Bwonsamdi": 47985,
+        "Zandalari Troll Kimbul": 47952,
+        "Zandalari Troll Paku": 48194
     },
     "data_type": "races",
     "languages": {
@@ -147,7 +147,6 @@
             "id": "168349"
         },
         "items": {
-            "azerite_essences": {},
             "back": {
                 "bonus_id": "4800/1517",
                 "id": "168604"
@@ -262,25 +261,25 @@
         "class": "druid",
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
-        "ptr": "0",
-        "simc_hash": "67250d7b8b",
+        "ptr": "1",
+        "simc_hash": "d372055c39",
         "spec": "balance",
         "target_error": "0.2",
         "tier": "24"
     },
     "sorted_data_keys": [
-        "Troll",
-        "Kul Tiran",
-        "Night Elf",
         "Zandalari Troll Paku",
-        "Tauren",
         "Highmountain Tauren",
+        "Kul Tiran",
+        "Troll",
+        "Tauren",
+        "Night Elf",
         "Worgen",
-        "Zandalari Troll Kimbul",
-        "Zandalari Troll Bwonsamdi"
+        "Zandalari Troll Bwonsamdi",
+        "Zandalari Troll Kimbul"
     ],
     "spec_id": 102,
-    "subtitle": "UTC 2020-01-10 07:35 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/67250d7b8b\" target=\"blank\">67250d7</a>",
+    "subtitle": "UTC 2020-01-11 08:41 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/d372055c39\" target=\"blank\">d372055</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -381,6 +380,6 @@
             }
         }
     },
-    "timestamp": "2020-01-10 07:35",
+    "timestamp": "2020-01-11 08:41",
     "title": "Races | Balance Druid | Hecticaddcleave"
 }

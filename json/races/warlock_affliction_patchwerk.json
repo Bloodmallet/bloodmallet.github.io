@@ -1,18 +1,18 @@
 {
     "class_id": 9,
     "data": {
-        "Blood Elf": 40063,
-        "Dark Iron Dwarf": 39915,
-        "Dwarf": 40019,
-        "Gnome": 40254,
-        "Goblin": 40247,
-        "Human": 40273,
-        "Nightborne": 40039,
-        "Orc": 39967,
-        "Troll": 40564,
-        "Undead": 40102,
-        "Void Elf": 40200,
-        "Worgen": 40068
+        "Blood Elf": 38287,
+        "Dark Iron Dwarf": 38055,
+        "Dwarf": 38151,
+        "Gnome": 38375,
+        "Goblin": 38398,
+        "Human": 38401,
+        "Nightborne": 38255,
+        "Orc": 38164,
+        "Troll": 38680,
+        "Undead": 38284,
+        "Void Elf": 38335,
+        "Worgen": 38239
     },
     "data_type": "races",
     "languages": {
@@ -180,7 +180,6 @@
             "id": "159236"
         },
         "items": {
-            "azerite_essences": {},
             "back": {
                 "bonus_id": "4800/1517",
                 "id": "168391"
@@ -303,8 +302,8 @@
         "class": "warlock",
         "fight_style": "patchwerk",
         "iterations": "20000",
-        "ptr": "0",
-        "simc_hash": "67250d7b8b",
+        "ptr": "1",
+        "simc_hash": "d372055c39",
         "spec": "affliction",
         "target_error": "0.1",
         "tier": "24"
@@ -312,19 +311,19 @@
     "sorted_data_keys": [
         "Troll",
         "Human",
-        "Gnome",
         "Goblin",
+        "Gnome",
         "Void Elf",
-        "Undead",
-        "Worgen",
         "Blood Elf",
+        "Undead",
         "Nightborne",
-        "Dwarf",
+        "Worgen",
         "Orc",
+        "Dwarf",
         "Dark Iron Dwarf"
     ],
     "spec_id": 265,
-    "subtitle": "UTC 2020-01-10 07:30 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/67250d7b8b\" target=\"blank\">67250d7</a>",
+    "subtitle": "UTC 2020-01-11 08:36 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/d372055c39\" target=\"blank\">d372055</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -425,6 +424,6 @@
             }
         }
     },
-    "timestamp": "2020-01-10 07:30",
+    "timestamp": "2020-01-11 08:36",
     "title": "Races | Affliction Warlock | Patchwerk"
 }

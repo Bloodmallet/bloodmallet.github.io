@@ -1,20 +1,20 @@
 {
     "class_id": 7,
     "data": {
-        "Dark Iron Dwarf": 37691,
-        "Draenei": 37672,
-        "Dwarf": 38071,
-        "Goblin": 37896,
-        "Highmountain Tauren": 37899,
-        "Kul Tiran": 37847,
-        "Maghar Orc": 37764,
-        "Orc": 37753,
-        "Pandaren": 37790,
-        "Tauren": 37917,
-        "Troll": 37792,
-        "Zandalari Troll Bwonsamdi": 37737,
-        "Zandalari Troll Kimbul": 37804,
-        "Zandalari Troll Paku": 37667
+        "Dark Iron Dwarf": 37411,
+        "Draenei": 37469,
+        "Dwarf": 37861,
+        "Goblin": 37759,
+        "Highmountain Tauren": 37755,
+        "Kul Tiran": 37765,
+        "Maghar Orc": 37579,
+        "Orc": 37519,
+        "Pandaren": 37701,
+        "Tauren": 37883,
+        "Troll": 37656,
+        "Zandalari Troll Bwonsamdi": 37694,
+        "Zandalari Troll Kimbul": 37687,
+        "Zandalari Troll Paku": 37573
     },
     "data_type": "races",
     "languages": {
@@ -202,7 +202,6 @@
             "id": "168357"
         },
         "items": {
-            "azerite_essences": {},
             "back": {
                 "bonus_id": "4800/1517",
                 "id": "168604"
@@ -325,30 +324,30 @@
         "class": "shaman",
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
-        "ptr": "0",
-        "simc_hash": "67250d7b8b",
+        "ptr": "1",
+        "simc_hash": "d372055c39",
         "spec": "restoration",
         "target_error": "0.2",
         "tier": "24"
     },
     "sorted_data_keys": [
-        "Dwarf",
         "Tauren",
-        "Highmountain Tauren",
-        "Goblin",
+        "Dwarf",
         "Kul Tiran",
+        "Goblin",
+        "Highmountain Tauren",
+        "Pandaren",
+        "Zandalari Troll Bwonsamdi",
         "Zandalari Troll Kimbul",
         "Troll",
-        "Pandaren",
         "Maghar Orc",
+        "Zandalari Troll Paku",
         "Orc",
-        "Zandalari Troll Bwonsamdi",
-        "Dark Iron Dwarf",
         "Draenei",
-        "Zandalari Troll Paku"
+        "Dark Iron Dwarf"
     ],
     "spec_id": 264,
-    "subtitle": "UTC 2020-01-10 07:43 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/67250d7b8b\" target=\"blank\">67250d7</a>",
+    "subtitle": "UTC 2020-01-11 08:49 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/d372055c39\" target=\"blank\">d372055</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -449,6 +448,6 @@
             }
         }
     },
-    "timestamp": "2020-01-10 07:43",
+    "timestamp": "2020-01-11 08:49",
     "title": "Races | Restoration Shaman | Hecticaddcleave"
 }

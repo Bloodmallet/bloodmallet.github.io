@@ -1,109 +1,109 @@
 {
-    "azerite_weight_hecticaddcleave": "( AzeritePowerWeights:2:\"Hecticaddcleave Restoration Shaman essences\":7:264: : 4=1137/1524, 12=3609/1879, 15=1634/-85, 17=31/-3, 18=-58/-77, 19=-44/-30, 22=293/280, 27=-47/36, 32=1383/1437, )",
+    "azerite_weight_hecticaddcleave": "( AzeritePowerWeights:2:\"Hecticaddcleave Restoration Shaman essences\":7:264: : 4=2628/1522, 12=3652/1934, 15=1629/74, 17=13/39, 18=-40/13, 19=54/13, 22=370/395, 27=-50/-6, 32=1400/1420, )",
     "class_id": 7,
     "data": {
         "Artifice of Time": {
-            "1": 37990,
-            "2": 38051,
-            "3": 37993
+            "1": 37880,
+            "2": 37904,
+            "3": 37811
         },
         "Artifice of Time minor": {
-            "1": 38024,
-            "2": 38002,
-            "3": 37974
+            "1": 37844,
+            "2": 37845,
+            "3": 37864
         },
         "Conflict and Strife": {
-            "1": 38669,
-            "2": 38995,
-            "3": 39434
+            "1": 38454,
+            "2": 38842,
+            "3": 39251
         },
         "Conflict and Strife minor": {
-            "1": 38645,
-            "2": 39010,
-            "3": 39488
+            "1": 38434,
+            "2": 38785,
+            "3": 39271
         },
         "Memory of Lucid Dreams": {
-            "1": 38038,
-            "2": 37950,
-            "3": 38004
+            "1": 37902,
+            "2": 37849,
+            "3": 37801
         },
         "Memory of Lucid Dreams minor": {
-            "1": 38009,
-            "2": 38017,
-            "3": 38087
+            "1": 37807,
+            "2": 37930,
+            "3": 37845
         },
         "Ripple in Space": {
-            "1": 39059,
-            "2": 39652,
-            "3": 39685
+            "1": 38962,
+            "2": 39482,
+            "3": 39480
         },
         "Ripple in Space minor": {
-            "1": 38038,
-            "2": 38020,
-            "3": 37966
+            "1": 37919,
+            "2": 37811,
+            "3": 37925
         },
         "The Crucible of Flame": {
-            "1": 39605,
-            "2": 40717,
-            "3": 41660
+            "1": 39458,
+            "2": 40627,
+            "3": 41503
         },
         "The Crucible of Flame minor": {
-            "1": 38976,
-            "2": 39142,
-            "3": 39930
+            "1": 38812,
+            "2": 38978,
+            "3": 39785
         },
         "The Ever-Rising Tide": {
-            "1": 38028,
-            "2": 38025,
-            "3": 38082
+            "1": 37845,
+            "2": 37847,
+            "3": 37864
         },
         "The Ever-Rising Tide minor": {
-            "1": 37999,
-            "2": 38054,
-            "3": 38048
+            "1": 37828,
+            "2": 37854,
+            "3": 37890
         },
         "The Well of Existence": {
-            "1": 37962,
-            "2": 37995,
-            "3": 38007
+            "1": 37855,
+            "2": 37953,
+            "3": 37905
         },
         "The Well of Existence minor": {
-            "1": 37993,
-            "2": 38032,
-            "3": 38021
+            "1": 37888,
+            "2": 37813,
+            "3": 37864
         },
         "Vision of Perfection": {
-            "1": 38040,
-            "2": 38077,
-            "3": 38344
+            "1": 37855,
+            "2": 37899,
+            "3": 38221
         },
         "Vision of Perfection minor": {
-            "1": 38018,
-            "2": 38044,
-            "3": 38331
+            "1": 37909,
+            "2": 37836,
+            "3": 38246
         },
         "Worldvein Resonance": {
-            "1": 38021,
-            "2": 38271,
-            "3": 38505
+            "1": 38470,
+            "2": 39508,
+            "3": 39666
         },
         "Worldvein Resonance +3": {
-            "1": 38609,
-            "2": 39045,
-            "3": 39188
+            "1": 39529,
+            "2": 40286,
+            "3": 40479
         },
         "Worldvein Resonance minor": {
-            "1": 38194,
-            "2": 38357,
-            "3": 38565
+            "1": 38094,
+            "2": 38210,
+            "3": 38458
         },
         "Worldvein Resonance minor +3": {
-            "1": 38905,
-            "2": 39367,
-            "3": 39575
+            "1": 38834,
+            "2": 39144,
+            "3": 39373
         },
         "baseline": {
-            "1": 38051
+            "1": 37851
         }
     },
     "data_type": "essences",
@@ -131,11 +131,13 @@
         "Worldvein Resonance minor +3": 15
     },
     "profile": {
+        "azerite_essences": "12:3/32:3/4:3",
         "back": {
             "bonus_id": "4800/1517",
             "id": "168604"
         },
         "character": {
+            "azerite_essences": "12:3/32:3/4:3",
             "class": "shaman",
             "level": "120",
             "position": "ranged_back",
@@ -173,7 +175,6 @@
             "id": "168357"
         },
         "items": {
-            "azerite_essences": {},
             "back": {
                 "bonus_id": "4800/1517",
                 "id": "168604"
@@ -296,8 +297,8 @@
         "class": "shaman",
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
-        "ptr": "0",
-        "simc_hash": "67250d7b8b",
+        "ptr": "1",
+        "simc_hash": "d372055c39",
         "spec": "restoration",
         "target_error": "0.2",
         "tier": "24"
@@ -309,25 +310,25 @@
     ],
     "sorted_data_keys": [
         "The Crucible of Flame",
+        "Worldvein Resonance +3",
         "The Crucible of Flame minor",
+        "Worldvein Resonance",
         "Ripple in Space",
         "Worldvein Resonance minor +3",
         "Conflict and Strife minor",
         "Conflict and Strife",
-        "Worldvein Resonance +3",
         "Worldvein Resonance minor",
-        "Worldvein Resonance",
-        "Vision of Perfection",
         "Vision of Perfection minor",
-        "Memory of Lucid Dreams minor",
-        "The Ever-Rising Tide",
-        "The Ever-Rising Tide minor",
-        "The Well of Existence minor",
+        "Vision of Perfection",
+        "Ripple in Space minor",
         "The Well of Existence",
-        "Memory of Lucid Dreams",
-        "Artifice of Time",
+        "The Ever-Rising Tide minor",
+        "The Ever-Rising Tide",
         "Artifice of Time minor",
-        "Ripple in Space minor"
+        "The Well of Existence minor",
+        "Memory of Lucid Dreams minor",
+        "Artifice of Time",
+        "Memory of Lucid Dreams"
     ],
     "spec_id": 264,
     "spell_ids": {
@@ -352,7 +353,7 @@
         "Worldvein Resonance minor": 299333,
         "Worldvein Resonance minor +3": 299333
     },
-    "subtitle": "UTC 2020-01-10 18:14 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/67250d7b8b\" target=\"blank\">67250d7</a>",
+    "subtitle": "UTC 2020-01-11 19:13 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/d372055c39\" target=\"blank\">d372055</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -453,6 +454,6 @@
             }
         }
     },
-    "timestamp": "2020-01-10 18:14",
+    "timestamp": "2020-01-11 19:13",
     "title": "Essences | Restoration Shaman | Hecticaddcleave"
 }
