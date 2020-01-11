@@ -336,7 +336,7 @@
         <div class="offset-xl-2 col-xl-8 offset-lg-2 col-lg-8 offset-md-1 col-md-10">
           <p id="data_introduction"></p>
           <p class="translate_dps_only_warning text-center">
-            <strong>Warning:</strong> All charts are about dealing damage ONLY!
+            <strong>Warning:</strong> All charts are about dealing damage ONLY! Furthermore all values depend on the used profile and could be strongly affected by changing it.
           </p>
         </div>
       </div>
@@ -344,11 +344,12 @@
 
       <!-- Data buttons -->
       <div class="row d-flex justify-content-center">
-        <button class="col-md-3 col-4 btn-data translate_trinkets" id="show_trinkets_data" style="margin-top: 0.6rem; margin-right: 0.6rem;">Trinkets</button>
-        <button class="col-md-3 col-4 btn-data translate_essences" id="show_essences_data" style="margin-top: 0.6rem; margin-right: 0.6rem;">Essences</button>
-        <button class="col-md-3 col-4 btn-data translate_azerite_traits" id="show_azerite_traits_data" style="margin-top: 0.6rem; margin-right: 0.6rem;">Azerite</button>
-        <button class="col-md-3 col-4 btn-data btn-secondary translate_races" id="show_races_data" style="margin-top: 0.6rem; margin-right: 0.6rem;">Races</button>
-        <button class="col-md-3 col-4 btn-data btn-secondary translate_secondary_distributions" id="show_secondary_distributions_data"
+        <button class="btn-data translate_trinkets" id="show_trinkets_data" style="margin-top: 0.6rem; margin-right: 0.6rem;">Trinkets</button>
+        <button class="btn-data translate_essences" id="show_essences_data" style="margin-top: 0.6rem; margin-right: 0.6rem;">Essences</button>
+        <button class="btn-data translate_azerite_traits" id="show_azerite_traits_data" style="margin-top: 0.6rem; margin-right: 0.6rem;">Azerite</button>
+        <button class="btn-data translate_corruptions" id="show_corruptions_data" style="margin-top: 0.6rem; margin-right: 0.6rem;">Corruptions</button>
+        <button class="btn-data btn-secondary translate_races" id="show_races_data" style="margin-top: 0.6rem; margin-right: 0.6rem;">Races</button>
+        <button class="btn-data btn-secondary translate_secondary_distributions" id="show_secondary_distributions_data"
           style="margin-top: 0.6rem;">Secondary distributions</button>
       </div>
       <div class="row d-flex justify-content-center">
@@ -366,6 +367,10 @@
         <button class="btn-data translate_shoulders" id="chart_type_shoulders" style="margin-top: 0.6rem; margin-right: 0.6rem;"
         hidden>Shoulders</button>
         <button class="btn-data translate_chest" id="chart_type_chest" style="margin-top: 0.6rem; margin-right: 0.6rem;" hidden>Chest</button>
+      </div>
+      <div class="row d-flex justify-content-center">
+        <button class="btn-data translate_dps" id="chart_type_dps" style="margin-top: 0.6rem; margin-right: 0.6rem;" hidden>DPS</button>
+        <button class="btn-data translate_dps_corruption_rating" id="chart_type_dps_corruption_rating" style="margin-top: 0.6rem; margin-right: 0.6rem;" hidden>DPS / Corruption rating</button>
       </div>
       <div class="row d-flex justify-content-center">
         <button class="btn-data translate_patchwerk" id="fight_style_patchwerk" style="margin-top: 0.6rem; margin-right: 0.6rem;" data-toggle="tooltip" data-placement="bottom" title="Single Boss">Patchwerk</button>
@@ -643,7 +648,7 @@
     <!-- TC resources -->
     <div class="container-fluid" id="tc_resources" hidden>
       <ul type="square" class="offset-xl-2 col-xl-8 offset-lg-2 col-lg-8 offset-md-1 col-md-10">
-        <li class="translate_dps_only_warning"><strong>Warning:</strong> All charts are about dealing damage ONLY!
+        <li class="translate_dps_only_warning"><strong>Warning:</strong> All charts are about dealing damage ONLY! Furthermore all values depend on the used profile and could be strongly affected by changing it.
         </li>
         <li id="chart_simc_hash"></li>
         <li>Equip: <span id="used_items" hidden></span></li>

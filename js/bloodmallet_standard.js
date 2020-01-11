@@ -64,6 +64,11 @@ let chosen_type = {
   "combined": true,
   "minor": true
 };
+/**
+ * User determines, which sorted list will be visible.
+ * Values: "dps" and "dps_corruption_rating"
+ */
+let chosen_corruption_representation = "dps";
 
 let mode = "welcome";
 let fight_style = "patchwerk";
@@ -153,6 +158,7 @@ const data_view_IDs = [
   "show_essences_data", // => essences
   "show_azerite_traits_data", // => azerite_traits
   "show_races_data", // => races
+  "show_corruptions_data", // => corruptions
   "show_secondary_distributions_data",
   "talent_combination_selector",
   "chart_type_essences",
@@ -162,6 +168,8 @@ const data_view_IDs = [
   "chart_type_head",
   "chart_type_shoulders",
   "chart_type_chest",
+  "chart_type_dps",
+  "chart_type_dps_corruption_rating",
   "advanced_chart_options_button"
 ];
 const fight_style_IDs = [
@@ -180,6 +188,11 @@ const azerite_trait_view_type_IDs = [
 const azerite_trait_tier_IDs = [
   "azerite_traits_tier_3",
   "azerite_traits_tier_2"
+];
+
+const corruption_representation_IDs = [
+  "chart_type_dps",
+  "chart_type_dps_corruption_rating",
 ];
 
 const chart_value_mode = {
@@ -376,7 +389,13 @@ const empty_chart = {
             //' text-shadow: 0px 0px 2px black;' +
             '\">' +
             this.points[i].series.name +
-            '</span>:&nbsp;&nbsp;' +
+            '</span>';
+
+          if (this.points[i].series.name !== "") {
+            s += ':';
+          }
+
+          s += '&nbsp;&nbsp;' +
             Intl.NumberFormat().format(cumulative_amount);
 
           if (chosen_value_style === "absolute_gain" || data_view === "races" || chosen_value_style === "absolute_value") {
@@ -1110,6 +1129,14 @@ function addAzeriteTierClickEvent(elementId, new_azerite_tier) {
   });
 }
 
+function addCorruptionRepresentationClickEvent(elementId, new_corruption_representation) {
+
+  document.getElementById(elementId).addEventListener("click", function () {
+    chosen_corruption_representation = new_corruption_representation;
+    push_state();
+  });
+}
+
 function addFightStyleClickEvent(elementId, new_fight_style) {
   document.getElementById(elementId).addEventListener("click", function () {
     fight_style = new_fight_style;
@@ -1124,6 +1151,7 @@ document.addEventListener("DOMContentLoaded", function () {
     addDataViewClickEvent("chart_type_essences", "essences");
     addDataViewClickEvent("chart_type_essence_combinations", "essence_combinations");
     addDataViewClickEvent("show_azerite_traits_data", "azerite_traits");
+    addDataViewClickEvent("show_corruptions_data", "corruptions");
     addDataViewClickEvent("show_races_data", "races");
     addDataViewClickEvent("show_secondary_distributions_data", "secondary_distributions");
     addAzeriteViewClickEvent("chart_type_head", "head");
@@ -1133,6 +1161,8 @@ document.addEventListener("DOMContentLoaded", function () {
     addAzeriteViewClickEvent("chart_type_trait_stacking", "trait_stacking");
     addAzeriteTierClickEvent("azerite_traits_tier_3", 3);
     addAzeriteTierClickEvent("azerite_traits_tier_2", 2);
+    addCorruptionRepresentationClickEvent("chart_type_dps", "dps");
+    addCorruptionRepresentationClickEvent("chart_type_dps_corruption_rating", "dps_corruption_rating");
     addFightStyleClickEvent("fight_style_patchwerk", "patchwerk");
     addFightStyleClickEvent("fight_style_hecticaddcleave", "hecticaddcleave");
 
@@ -1234,6 +1264,8 @@ async function get_data_from_link() {
       }
     } else if (key === "lang") {
       await switch_language(value);
+    } else if (key === "repr") {
+      chosen_corruption_representation = value;
     }
   }
 
@@ -1315,7 +1347,7 @@ function update_advanced_chart_options() {
   let itemlevels = loaded_data[chosen_class][chosen_spec][data_name][fight_style]["simulated_steps"];
 
   // add itemlevel filtering
-  if (itemlevels && (data_view === "trinkets" || data_view === "essences" || data_view === "azerite_traits" && ["head", "shoulders", "chest", "itemlevel"].includes(chosen_azerite_list_type))) {
+  if (itemlevels && (data_view === "trinkets" || data_view === "essences" || data_view === "azerite_traits" && ["head", "shoulders", "chest", "itemlevel"].includes(chosen_azerite_list_type)) || data_view === "corruptions") {
 
     // update chosen_step_list to the new max list (create a copy)
     // update only if nothing was selected or if the current values aren't present in the actual new data view (trinket -> azerite itemlevel)
@@ -1702,6 +1734,7 @@ function switch_to_data() {
   update_fight_style_buttons();
   update_essence_buttons();
   update_azerite_buttons();
+  update_corruption_representation_buttons();
   load_data();
   translate_page();
 }
@@ -1736,14 +1769,16 @@ function update_data_buttons() {
   }
   document.getElementById("show_" + tmp_name_fix + "_data").classList.add(chosen_class + "-border-bottom");
 
-  // unhide/hide talent combination selection if necessary
+  // show/hide talent combination selection
   document.getElementById("talent_combination_selector").hidden = (data_view !== "secondary_distributions");
   document.getElementById("talent_selector_label").hidden = (data_view !== "secondary_distributions");
 
+  // show/hide essence buttons
   let is_essence = (data_view === "essences" || data_view === "essence_combinations");
   document.getElementById("chart_type_essences").hidden = !is_essence;
   document.getElementById("chart_type_essence_combinations").hidden = !is_essence;
 
+  // show/hide azerite buttons
   let is_azerite = (data_view === "azerite_traits");
   document.getElementById("chart_type_head").hidden = !is_azerite;
   document.getElementById("chart_type_shoulders").hidden = !is_azerite;
@@ -1751,11 +1786,17 @@ function update_data_buttons() {
   document.getElementById("chart_type_itemlevel").hidden = !is_azerite;
   document.getElementById("chart_type_trait_stacking").hidden = !is_azerite;
 
+  // show/hide more azerite buttons
   let is_traits = (data_view === "azerite_traits" && (chosen_azerite_list_type === "itemlevel" || chosen_azerite_list_type === "trait_stacking"));
   document.getElementById("azerite_traits_tier_3").hidden = !is_traits;
   document.getElementById("azerite_traits_tier_2").hidden = !is_traits;
   document.getElementById("copy_azerite_weights").hidden = !(is_traits || data_view == "essences");
   document.getElementById("copy_azerite_forge").hidden = !is_traits;
+
+  // show/hide corruption buttons
+  let is_corruption = (data_view === "corruptions");
+  document.getElementById("chart_type_dps").hidden = !is_corruption;
+  document.getElementById("chart_type_dps_corruption_rating").hidden = !is_corruption;
 }
 
 /**
@@ -1805,6 +1846,28 @@ function update_fight_style_buttons() {
   });
   // set "active" to class color
   document.getElementById("fight_style_" + fight_style).classList.add(chosen_class + "-border-bottom");
+}
+
+
+/**
+ * Resets colors of all corruption representation buttons and sets active button to class color.
+ */
+function update_corruption_representation_buttons() {
+  if (debug) {
+    console.log("update_corruption_representation_buttons");
+  }
+
+  if (chosen_class === "" || chosen_spec === "") {
+    debug && console.log("update_corruption_representation_buttons aborted. No chosen_class or spec found.")
+    return;
+  }
+
+  // reset buttons to standard visual
+  corruption_representation_IDs.forEach(element => {
+    document.getElementById(element).className = "btn-data " + chosen_class + "-button";
+  });
+  // set "active" to class color
+  document.getElementById("chart_type_" + chosen_corruption_representation).classList.add(chosen_class + "-border-bottom");
 }
 
 /**
@@ -1945,6 +2008,8 @@ function update_chart() {
     // copy the correct presorted list
     if (data_view === "azerite_traits" && ["itemlevel", "trait_stacking"].includes(chosen_azerite_list_type)) {
       dps_ordered_data = loaded_data[chosen_class][chosen_spec][data_name][fight_style]["sorted_azerite_tier_" + chosen_azerite_tier + "_" + chosen_azerite_list_type].slice();
+    } else if (data_view === "corruptions" && chosen_corruption_representation === "dps_corruption_rating") {
+      dps_ordered_data = loaded_data[chosen_class][chosen_spec][data_name][fight_style]["sorted_data_keys_2"].slice();
     } else {
       dps_ordered_data = loaded_data[chosen_class][chosen_spec][data_name][fight_style]["sorted_data_keys"].slice();
     }
@@ -2050,7 +2115,7 @@ function update_chart() {
 
   // change item/spell names to wowhead links
   ordered_trinket_list = [];
-  if (data_view === "trinkets" || data_view === "azerite_traits" || data_view === "essences" || data_view === "essence_combinations") {
+  if (data_view === "trinkets" || data_view === "azerite_traits" || data_view === "essences" || data_view === "essence_combinations" || data_view === "corruptions") {
     for (let i in dps_ordered_data) {
 
       if (dps_ordered_data[i].indexOf("baseline") > -1) {
@@ -2058,10 +2123,10 @@ function update_chart() {
         continue;
       }
 
-      if (data_view === "essence_combinations" || data_view === "essences" || data_view == "azerite_traits" && ["itemlevel", "trait_stacking"].includes(chosen_azerite_list_type)) {
+      if (data_view === "essence_combinations" || data_view === "essences" || data_view === "azerite_traits" && ["itemlevel", "trait_stacking"].includes(chosen_azerite_list_type) || data_view === "corruptions") {
 
-        let spell_id = loaded_data[chosen_class][chosen_spec][data_name][fight_style]["spell_ids"][dps_ordered_data[i]];
         let trait_name = dps_ordered_data[i];
+        let spell_id = loaded_data[chosen_class][chosen_spec][data_name][fight_style]["spell_ids"][trait_name];
 
         // if the present trait is a value in the collection of equal data (horde/alliance) we have to adjust the trait name and id
         if (Object.values(item_and_trait_equilizer).includes(trait_name)) {
@@ -2095,10 +2160,21 @@ function update_chart() {
             link += ".wowhead.com/spell=";
           }
 
-          try {
-            portion_spell_id = loaded_data[chosen_class][chosen_spec][data_name][fight_style]["spell_ids"][name_portion.trim()];
-          } catch (error) {
-            portion_spell_id = spell_id;
+          if (data_view !== "corruptions") {
+            try {
+              portion_spell_id = loaded_data[chosen_class][chosen_spec][data_name][fight_style]["spell_ids"][name_portion.trim()];
+            } catch (error) {
+              portion_spell_id = spell_id;
+            }
+          } else {
+            if (chosen_corruption_representation === "dps") {
+              portion_spell_id = loaded_data[chosen_class][chosen_spec][data_name][fight_style]["spell_ids"][trait_name]["1"];
+            } else {
+              // split name into rank and name
+              let rank = trait_name.slice(trait_name.length - 1, trait_name.length);
+              let name = trait_name.slice(0, trait_name.length - 2);
+              portion_spell_id = loaded_data[chosen_class][chosen_spec][data_name][fight_style]["spell_ids"][name][rank];
+            }
           }
 
           if (data_view === "essences") {
@@ -2315,7 +2391,7 @@ function update_chart() {
     standard_chart.series[0].remove(false);
   }
   // basically: if something was simmed with multiple itemlevels
-  if ("simulated_steps" in loaded_data[chosen_class][chosen_spec][data_name][fight_style]) {
+  if ("simulated_steps" in loaded_data[chosen_class][chosen_spec][data_name][fight_style] && !(data_view === "corruptions" && chosen_corruption_representation === "dps_corruption_rating")) {
 
     if (debug) {
       console.log("simulated_steps in data found.");
@@ -2435,15 +2511,34 @@ function update_chart() {
           dps_values.push(dps);
         }
 
+      } else if (data_view === "corruptions" && chosen_corruption_representation === "dps_corruption_rating") {
+        console.log('special case reached');
+        let name = category.slice(0, category.length - 2);
+        let rank = category.slice(category.length - 1, category.length);
+
+        let corruption = loaded_data[chosen_class][chosen_spec][data_view][fight_style]["corruption_rating"][name][rank];
+        let dps = loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"][name][rank];
+        let baseline_dps = loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"]["baseline"]["1"];
+
+        if (chosen_value_style === "relative_gain") {
+          dps_values.push(Math.round((dps - baseline_dps) * 10000 / baseline_dps) / 100 / corruption);
+        } else {
+          dps_values.push((dps - baseline_dps) / corruption);
+        }
       } else {
         dps_values.push(loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"][category]);
       }
     }
 
+    let name = "";
+    if (data_view === "races") {
+      name = "Race"
+    }
+
     standard_chart.addSeries({
       color: class_colors[chosen_class],
       data: dps_values,
-      name: "Race",
+      name: name,
       showInLegend: false
     }, false);
   }
@@ -2457,6 +2552,10 @@ function update_chart() {
     standard_chart.legend.title.attr({ text: "Trait count" });
   } else if (data_view === "essences") {
     standard_chart.legend.title.attr({ text: "Rank" });
+  } else if (data_view === "corruptions" && chosen_corruption_representation === "dps") {
+    standard_chart.legend.title.attr({ text: "Rank" });
+  } else {
+    standard_chart.legend.title.attr({ text: "" });
   }
 
   // adjust axis titles
@@ -3140,11 +3239,13 @@ function create_link() {
   if (fight_style !== "patchwerk") {
     path += "&fight_style=" + fight_style;
   }
-  if (data_view == "azerite_traits") {
+  if (data_view === "azerite_traits") {
     path += "&type=" + chosen_azerite_list_type;
     if (chosen_azerite_list_type === "itemlevel" || chosen_azerite_list_type === "trait_stacking") {
       path += "&tier=" + chosen_azerite_tier;
     }
+  } else if (data_view === "corruptions" && chosen_corruption_representation === "dps_corruption_rating") {
+    path += "&repr=" + chosen_corruption_representation;
   }
   if (language !== "EN") {
     path += "&lang=" + language;
@@ -3225,11 +3326,11 @@ function copy_azerite_forge() {
 
       try {
         oneStack = data["data"][spell]["1_" + maxItemLevel] - baseline;
-      } catch (e) {oneStack = NaN;}
+      } catch (e) { oneStack = NaN; }
 
       try {
         twoStack = data["data"][spell]["2_" + maxItemLevel] - baseline;
-      } catch (e) {twoStack = NaN;}
+      } catch (e) { twoStack = NaN; }
 
       try {
         threeStack = data["data"][spell]["3_" + maxItemLevel] - baseline;
@@ -3253,7 +3354,7 @@ function copy_azerite_forge() {
   }
   // For some reason it does not like it when i just overwrite weight_string (Just worked some of the times) OwO
   // So doing this in an if OwO
-  if(relative_azerite_forge_traits_stacking_import && chosen_azerite_list_type === "trait_stacking"){
+  if (relative_azerite_forge_traits_stacking_import && chosen_azerite_list_type === "trait_stacking") {
     link_helper.innerHTML = relative_string;
   } else {
     link_helper.innerHTML = weight_string;
@@ -3686,19 +3787,19 @@ function search_iconized_chart_cookie() {
 /**
  * Sets the relative azerite cookie
  */
-function set_relative_azerite_forge_import_cookie(){
-  if(debug)
+function set_relative_azerite_forge_import_cookie() {
+  if (debug)
     console.log("set_relative_azerite_forge_import_cookie");
-  Cookies.set("bloodmallet_relative_azerite_forge_import_string", relative_azerite_forge_traits_stacking_import, {expires: 31, path: ''});
+  Cookies.set("bloodmallet_relative_azerite_forge_import_string", relative_azerite_forge_traits_stacking_import, { expires: 31, path: '' });
 }
 
 /**
  * Gets the relative azerite cookie
  */
-function search_relative_azerite_forge_import_cookie(){
-  if(debug)
+function search_relative_azerite_forge_import_cookie() {
+  if (debug)
     console.log("search_relative_azerite_forge_import_cookie");
-  if(Cookies.get("bloodmallet_relative_azerite_forge_import_string")){
+  if (Cookies.get("bloodmallet_relative_azerite_forge_import_string")) {
     relative_azerite_forge_traits_stacking_import = ('true' === Cookies.get('bloodmallet_relative_azerite_forge_import_string'));
   }
   document.getElementById("relative_azerite_forge").checked = relative_azerite_forge_traits_stacking_import;
