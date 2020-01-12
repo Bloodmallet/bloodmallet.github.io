@@ -2,67 +2,67 @@
     "class_id": 3,
     "data": {
         "Abyssal Commander's Mantle": {
-            "1_430": 56069,
-            "1_445": 56943
+            "1_430": 56294,
+            "1_445": 56946
         },
         "Amalgamated Abomination Spaulders": {
-            "1_430": 55626,
-            "1_445": 56348
+            "1_430": 55741,
+            "1_445": 56222
         },
         "Azsh'ari Stormsurger Shoulderguards": {
-            "1_430": 56080
+            "1_430": 56103
         },
         "Cannoneer's Mantle": {
-            "1_430": 55441,
-            "1_445": 56429
+            "1_430": 55599,
+            "1_445": 56416
         },
         "Crashguard Spaulders": {
-            "1_430": 54511,
-            "1_445": 55831
+            "1_430": 54764,
+            "1_445": 55970
         },
         "Gaping Maw Shoulderguard": {
-            "1_430": 56144,
-            "1_445": 57069
+            "1_430": 56429,
+            "1_445": 57053
         },
         "Gardbrace of Fractured Reality": {
-            "1_430": 57059,
-            "1_445": 57591
+            "1_430": 57037,
+            "1_445": 57382
         },
         "Hook-Barbed Spaulders": {
-            "1_430": 55292,
-            "1_445": 55930
+            "1_430": 55204,
+            "1_445": 56035
         },
         "Notorious Aspirant's Chain Spaulders": {
-            "1_430": 56541
+            "1_430": 56682
         },
         "Notorious Gladiator's Chain Epaulets": {
-            "1_430": 56541
+            "1_430": 56682
         },
         "Notorious Gladiator's Chain Mantle": {
-            "1_430": 55358
+            "1_430": 55326
         },
         "Notorious Gladiator's Chain Pauldrons": {
-            "1_430": 56541
+            "1_430": 56682
         },
         "Notorious Gladiator's Chain Shoulderguards": {
-            "1_430": 55138
+            "1_430": 55143
         },
         "Notorious Gladiator's Chain Spaulders": {
-            "1_430": 56541
+            "1_430": 56682
         },
         "Shoulderguards of Crushing Depths": {
-            "1_430": 56196,
-            "1_445": 57054
+            "1_430": 56376,
+            "1_445": 57077
         },
         "Spaulders of Prime Emperor": {
-            "1_430": 55995,
-            "1_445": 57044
+            "1_430": 56203,
+            "1_445": 57029
         },
         "baseline": {
-            "1_430": 51924,
-            "1_445": 52415,
-            "1_460": 52973,
-            "1_475": 53585
+            "1_430": 51875,
+            "1_445": 52384,
+            "1_460": 52997,
+            "1_475": 53670
         }
     },
     "data_type": "azerite_items_shoulders",
@@ -889,7 +889,7 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "1",
-        "simc_hash": "d372055c39",
+        "simc_hash": "db8933bb34",
         "spec": "marksmanship",
         "target_error": "0.2",
         "tier": "24"
@@ -902,8 +902,8 @@
     ],
     "sorted_data_keys": [
         "Gardbrace of Fractured Reality",
-        "Gaping Maw Shoulderguard",
         "Shoulderguards of Crushing Depths",
+        "Gaping Maw Shoulderguard",
         "Spaulders of Prime Emperor",
         "Abyssal Commander's Mantle",
         "Notorious Gladiator's Chain Spaulders",
@@ -919,7 +919,7 @@
         "Notorious Gladiator's Chain Shoulderguards"
     ],
     "spec_id": 254,
-    "subtitle": "UTC 2020-01-11 15:41 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/d372055c39\" target=\"blank\">d372055</a>",
+    "subtitle": "UTC 2020-01-12 14:39 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/db8933bb34\" target=\"blank\">db8933b</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -1020,14 +1020,14 @@
             }
         }
     },
-    "timestamp": "2020-01-11 15:41",
+    "timestamp": "2020-01-12 14:39",
     "title": "Azerite Items Shoulders | Marksmanship Hunter | Hecticaddcleave",
     "used_azerite_traits_per_item": {
         "Abyssal Commander's Mantle": [
             {
-                "id": 31,
-                "name": "Gutripper",
-                "spell_id": 266937
+                "id": 18,
+                "name": "Blood Siphon",
+                "spell_id": 264108
             },
             {
                 "id": 36,
@@ -1076,9 +1076,9 @@
         ],
         "Cannoneer's Mantle": [
             {
-                "id": 462,
-                "name": "Azerite Globules",
-                "spell_id": 266936
+                "id": 18,
+                "name": "Blood Siphon",
+                "spell_id": 264108
             },
             {
                 "id": 162,
@@ -1093,9 +1093,9 @@
         ],
         "Crashguard Spaulders": [
             {
-                "id": 22,
-                "name": "Heed My Call",
-                "spell_id": 263987
+                "id": 459,
+                "name": "Unstable Flames",
+                "spell_id": 279899
             },
             {
                 "id": 504,
@@ -1149,14 +1149,14 @@
                 "spell_id": 263984
             },
             {
-                "id": 370,
-                "name": "Focused Fire",
-                "spell_id": 278531
+                "id": 479,
+                "name": "Dagger in the Back",
+                "spell_id": 280284
             },
             {
-                "id": 212,
-                "name": "Unerring Vision",
-                "spell_id": 274444
+                "id": 369,
+                "name": "Rapid Reload",
+                "spell_id": 278530
             }
         ],
         "Notorious Aspirant's Chain Spaulders": [
@@ -1234,9 +1234,9 @@
                 "spell_id": 263984
             },
             {
-                "id": 368,
-                "name": "Steady Aim",
-                "spell_id": 277651
+                "id": 490,
+                "name": "Combined Might",
+                "spell_id": 280580
             },
             {
                 "id": 212,
@@ -1280,9 +1280,9 @@
         ],
         "Spaulders of Prime Emperor": [
             {
-                "id": 22,
-                "name": "Heed My Call",
-                "spell_id": 263987
+                "id": 459,
+                "name": "Unstable Flames",
+                "spell_id": 279899
             },
             {
                 "id": 212,

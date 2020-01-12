@@ -1,16 +1,16 @@
 {
     "class_id": 2,
     "data": {
-        "Blood Elf": 56160,
-        "Dark Iron Dwarf": 56278,
-        "Draenei": 56191,
-        "Dwarf": 56451,
-        "Human": 56608,
-        "Lightforged Draenei": 58119,
-        "Tauren": 56709,
-        "Zandalari Troll Bwonsamdi": 56189,
-        "Zandalari Troll Kimbul": 56230,
-        "Zandalari Troll Paku": 56355
+        "Blood Elf": 69818,
+        "Dark Iron Dwarf": 69122,
+        "Draenei": 69057,
+        "Dwarf": 69634,
+        "Human": 69547,
+        "Lightforged Draenei": 70892,
+        "Tauren": 69568,
+        "Zandalari Troll Bwonsamdi": 68929,
+        "Zandalari Troll Kimbul": 69064,
+        "Zandalari Troll Paku": 69400
     },
     "data_type": "races",
     "languages": {
@@ -116,11 +116,13 @@
         }
     },
     "profile": {
+        "azerite_essences": "14:3/12:3/22:3",
         "back": {
             "bonus_id": "4800/1517",
             "id": "168604"
         },
         "character": {
+            "azerite_essences": "14:3/12:3/22:3",
             "class": "paladin",
             "level": "120",
             "position": "back",
@@ -269,25 +271,25 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "1",
-        "simc_hash": "d372055c39",
+        "simc_hash": "db8933bb34",
         "spec": "retribution",
         "target_error": "0.2",
         "tier": "24"
     },
     "sorted_data_keys": [
         "Lightforged Draenei",
+        "Blood Elf",
+        "Dwarf",
         "Tauren",
         "Human",
-        "Dwarf",
         "Zandalari Troll Paku",
         "Dark Iron Dwarf",
         "Zandalari Troll Kimbul",
         "Draenei",
-        "Zandalari Troll Bwonsamdi",
-        "Blood Elf"
+        "Zandalari Troll Bwonsamdi"
     ],
     "spec_id": 70,
-    "subtitle": "UTC 2020-01-11 08:47 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/d372055c39\" target=\"blank\">d372055</a>",
+    "subtitle": "UTC 2020-01-12 07:39 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/db8933bb34\" target=\"blank\">db8933b</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -388,6 +390,6 @@
             }
         }
     },
-    "timestamp": "2020-01-11 08:47",
+    "timestamp": "2020-01-12 07:39",
     "title": "Races | Retribution Paladin | Hecticaddcleave"
 }

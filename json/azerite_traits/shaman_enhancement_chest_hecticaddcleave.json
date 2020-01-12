@@ -2,67 +2,67 @@
     "class_id": 7,
     "data": {
         "Azsh'ari Stormsurger Vest": {
-            "1_430": 56800
+            "1_430": 56651
         },
         "Chestguard of the Submerged": {
-            "1_430": 57415,
-            "1_445": 58080
+            "1_430": 57219,
+            "1_445": 58119
         },
         "Corrupted Hexxer's Vestments": {
-            "1_430": 56371,
-            "1_445": 56807
+            "1_430": 56248,
+            "1_445": 57046
         },
         "Deathslaver's Hauberk": {
-            "1_430": 58310,
-            "1_445": 59016
+            "1_430": 58125,
+            "1_445": 59202
         },
         "Hauberk of Sunken Despair": {
-            "1_430": 56592,
-            "1_445": 56990
+            "1_430": 56327,
+            "1_445": 57338
         },
         "Loa-Blessed Chestguard": {
-            "1_430": 56837,
-            "1_445": 57361
+            "1_430": 56668,
+            "1_445": 57537
         },
         "Notorious Aspirant's Chain Armor": {
-            "1_430": 56851
+            "1_430": 56774
         },
         "Notorious Gladiator's Chain Armor": {
-            "1_430": 56851
+            "1_430": 56774
         },
         "Notorious Gladiator's Chain Chestguard": {
-            "1_430": 57936
+            "1_430": 57735
         },
         "Notorious Gladiator's Chain Hauberk": {
-            "1_430": 58307
+            "1_430": 58041
         },
         "Notorious Gladiator's Chain Vest": {
-            "1_430": 56851
+            "1_430": 56774
         },
         "Notorious Gladiator's Chainmail": {
-            "1_430": 54709
+            "1_430": 54575
         },
         "Scalemail of Unnatural Selection": {
-            "1_430": 56818,
-            "1_445": 56906
+            "1_430": 56261,
+            "1_445": 57442
         },
         "Servitor's Heartguard": {
-            "1_430": 58312,
-            "1_445": 58651
+            "1_430": 58041,
+            "1_445": 58992
         },
         "Shrapnel-Dampening Chestguard": {
-            "1_430": 58692,
-            "1_445": 59433
+            "1_430": 58528,
+            "1_445": 59593
         },
         "Tri-Heart Chestguard": {
-            "1_430": 58560,
-            "1_445": 58949
+            "1_430": 58249,
+            "1_445": 59226
         },
         "baseline": {
-            "1_430": 52226,
-            "1_445": 52941,
-            "1_460": 53438,
-            "1_475": 54183
+            "1_430": 52376,
+            "1_445": 52882,
+            "1_460": 53452,
+            "1_475": 54246
         }
     },
     "data_type": "azerite_items_chest",
@@ -877,7 +877,7 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "1",
-        "simc_hash": "d372055c39",
+        "simc_hash": "db8933bb34",
         "spec": "enhancement",
         "target_error": "0.2",
         "tier": "24"
@@ -890,24 +890,24 @@
     ],
     "sorted_data_keys": [
         "Shrapnel-Dampening Chestguard",
-        "Deathslaver's Hauberk",
         "Tri-Heart Chestguard",
+        "Deathslaver's Hauberk",
         "Servitor's Heartguard",
-        "Notorious Gladiator's Chain Hauberk",
         "Chestguard of the Submerged",
+        "Notorious Gladiator's Chain Hauberk",
         "Notorious Gladiator's Chain Chestguard",
         "Loa-Blessed Chestguard",
-        "Hauberk of Sunken Despair",
         "Scalemail of Unnatural Selection",
+        "Hauberk of Sunken Despair",
+        "Corrupted Hexxer's Vestments",
         "Notorious Gladiator's Chain Armor",
         "Notorious Gladiator's Chain Vest",
         "Notorious Aspirant's Chain Armor",
-        "Corrupted Hexxer's Vestments",
         "Azsh'ari Stormsurger Vest",
         "Notorious Gladiator's Chainmail"
     ],
     "spec_id": 263,
-    "subtitle": "UTC 2020-01-11 17:28 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/d372055c39\" target=\"blank\">d372055</a>",
+    "subtitle": "UTC 2020-01-12 16:27 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/db8933bb34\" target=\"blank\">db8933b</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -1008,14 +1008,14 @@
             }
         }
     },
-    "timestamp": "2020-01-11 17:28",
+    "timestamp": "2020-01-12 16:27",
     "title": "Azerite Items Chest | Enhancement Shaman | Hecticaddcleave",
     "used_azerite_traits_per_item": {
         "Azsh'ari Stormsurger Vest": [
             {
-                "id": 462,
-                "name": "Azerite Globules",
-                "spell_id": 266936
+                "id": 30,
+                "name": "Overwhelming Power",
+                "spell_id": 266180
             },
             {
                 "id": 447,
@@ -1023,9 +1023,9 @@
                 "spell_id": 277666
             },
             {
-                "id": 223,
-                "name": "Lightning Conduit",
-                "spell_id": 275388
+                "id": 179,
+                "name": "Strength of Earth",
+                "spell_id": 273461
             }
         ],
         "Chestguard of the Submerged": [
@@ -1166,9 +1166,9 @@
         ],
         "Notorious Gladiator's Chain Hauberk": [
             {
-                "id": 18,
-                "name": "Blood Siphon",
-                "spell_id": 264108
+                "id": 459,
+                "name": "Unstable Flames",
+                "spell_id": 279899
             },
             {
                 "id": 420,
@@ -1210,9 +1210,9 @@
                 "spell_id": 280579
             },
             {
-                "id": 223,
-                "name": "Lightning Conduit",
-                "spell_id": 275388
+                "id": 179,
+                "name": "Strength of Earth",
+                "spell_id": 273461
             }
         ],
         "Scalemail of Unnatural Selection": [
@@ -1234,9 +1234,9 @@
         ],
         "Servitor's Heartguard": [
             {
-                "id": 22,
-                "name": "Heed My Call",
-                "spell_id": 263987
+                "id": 459,
+                "name": "Unstable Flames",
+                "spell_id": 279899
             },
             {
                 "id": 420,

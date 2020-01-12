@@ -2,67 +2,67 @@
     "class_id": 8,
     "data": {
         "Blood-Drenched Robes": {
-            "1_430": 36154,
-            "1_445": 36662
+            "1_430": 36070,
+            "1_445": 36726
         },
         "Inmate's Straight Robe": {
-            "1_430": 37350,
-            "1_445": 38100
+            "1_430": 37352,
+            "1_445": 38119
         },
         "Loa Betrayer's Vestments": {
-            "1_430": 36135,
-            "1_445": 36697
+            "1_430": 36113,
+            "1_445": 36765
         },
         "Notorious Aspirant's Silk Robe": {
-            "1_430": 36188
+            "1_430": 36192
         },
         "Notorious Gladiator's Silk Armor": {
-            "1_430": 36188
+            "1_430": 36192
         },
         "Notorious Gladiator's Silk Chestwrap": {
-            "1_430": 37217
+            "1_430": 37198
         },
         "Notorious Gladiator's Silk Raiment": {
-            "1_430": 36218
+            "1_430": 36159
         },
         "Notorious Gladiator's Silk Robe": {
-            "1_430": 36188
+            "1_430": 36192
         },
         "Notorious Gladiator's Silk Vestments": {
-            "1_430": 37408
+            "1_430": 37391
         },
         "Petticoat of the Self-Stylized Azerite Baron": {
-            "1_430": 36307,
-            "1_445": 36914
+            "1_430": 36344,
+            "1_445": 36976
         },
         "Robes of Sunken Nobility": {
-            "1_430": 36081,
-            "1_445": 36669
+            "1_430": 36071,
+            "1_445": 36741
         },
         "Robes of the Reborn Serpent": {
-            "1_430": 36127,
-            "1_445": 36710
+            "1_430": 36149,
+            "1_445": 36792
         },
         "Ruffled Poet Blouse": {
-            "1_430": 37403,
-            "1_445": 38148
+            "1_430": 37391,
+            "1_445": 38106
         },
         "Shirakess Wraps": {
-            "1_430": 36302
+            "1_430": 36247
         },
         "Siren Mystic's Vestments": {
-            "1_430": 37599,
-            "1_445": 38434
+            "1_430": 37596,
+            "1_445": 38497
         },
         "Vestments of Creeping Terror": {
-            "1_430": 36277,
-            "1_445": 36836
+            "1_430": 36260,
+            "1_445": 36883
         },
         "baseline": {
-            "1_430": 34298,
-            "1_445": 34652,
-            "1_460": 34997,
-            "1_475": 35463
+            "1_430": 34314,
+            "1_445": 34619,
+            "1_460": 34987,
+            "1_475": 35467
         }
     },
     "data_type": "azerite_items_chest",
@@ -856,7 +856,7 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "1",
-        "simc_hash": "d372055c39",
+        "simc_hash": "db8933bb34",
         "spec": "frost",
         "target_error": "0.1",
         "tier": "24"
@@ -869,8 +869,8 @@
     ],
     "sorted_data_keys": [
         "Siren Mystic's Vestments",
-        "Ruffled Poet Blouse",
         "Inmate's Straight Robe",
+        "Ruffled Poet Blouse",
         "Notorious Gladiator's Silk Vestments",
         "Notorious Gladiator's Silk Chestwrap",
         "Petticoat of the Self-Stylized Azerite Baron",
@@ -880,13 +880,13 @@
         "Robes of Sunken Nobility",
         "Blood-Drenched Robes",
         "Shirakess Wraps",
-        "Notorious Gladiator's Silk Raiment",
         "Notorious Gladiator's Silk Robe",
         "Notorious Gladiator's Silk Armor",
-        "Notorious Aspirant's Silk Robe"
+        "Notorious Aspirant's Silk Robe",
+        "Notorious Gladiator's Silk Raiment"
     ],
     "spec_id": 64,
-    "subtitle": "UTC 2020-01-11 12:32 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/d372055c39\" target=\"blank\">d372055</a>",
+    "subtitle": "UTC 2020-01-12 11:31 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/db8933bb34\" target=\"blank\">db8933b</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -987,7 +987,7 @@
             }
         }
     },
-    "timestamp": "2020-01-11 12:32",
+    "timestamp": "2020-01-12 11:31",
     "title": "Azerite Items Chest | Frost Mage | Patchwerk",
     "used_azerite_traits_per_item": {
         "Blood-Drenched Robes": [
@@ -1036,9 +1036,9 @@
                 "spell_id": 278542
             },
             {
-                "id": 225,
-                "name": "Glacial Assault",
-                "spell_id": 279854
+                "id": 379,
+                "name": "Tunnel of Ice",
+                "spell_id": 277663
             }
         ],
         "Notorious Aspirant's Silk Robe": [
@@ -1172,9 +1172,9 @@
                 "spell_id": 278541
             },
             {
-                "id": 225,
-                "name": "Glacial Assault",
-                "spell_id": 279854
+                "id": 379,
+                "name": "Tunnel of Ice",
+                "spell_id": 277663
             }
         ],
         "Robes of the Reborn Serpent": [
@@ -1189,9 +1189,9 @@
                 "spell_id": 279854
             },
             {
-                "id": 132,
-                "name": "Packed Ice",
-                "spell_id": 272968
+                "id": 380,
+                "name": "Whiteout",
+                "spell_id": 278541
             }
         ],
         "Ruffled Poet Blouse": [

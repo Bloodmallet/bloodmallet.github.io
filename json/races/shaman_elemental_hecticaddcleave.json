@@ -1,20 +1,20 @@
 {
     "class_id": 7,
     "data": {
-        "Dark Iron Dwarf": 57008,
-        "Draenei": 57111,
-        "Dwarf": 57551,
-        "Goblin": 57224,
-        "Highmountain Tauren": 57324,
-        "Kul Tiran": 57165,
-        "Maghar Orc": 56998,
-        "Orc": 56977,
-        "Pandaren": 57460,
-        "Tauren": 57528,
-        "Troll": 56976,
-        "Zandalari Troll Bwonsamdi": 57101,
-        "Zandalari Troll Kimbul": 57039,
-        "Zandalari Troll Paku": 57343
+        "Dark Iron Dwarf": 64795,
+        "Draenei": 64941,
+        "Dwarf": 65539,
+        "Goblin": 65328,
+        "Highmountain Tauren": 65365,
+        "Kul Tiran": 65233,
+        "Maghar Orc": 65199,
+        "Orc": 64966,
+        "Pandaren": 65377,
+        "Tauren": 65437,
+        "Troll": 65482,
+        "Zandalari Troll Bwonsamdi": 64996,
+        "Zandalari Troll Kimbul": 65061,
+        "Zandalari Troll Paku": 65246
     },
     "data_type": "races",
     "languages": {
@@ -160,11 +160,13 @@
         }
     },
     "profile": {
+        "azerite_essences": "14:3/32:3/4:3",
         "back": {
             "bonus_id": "4800/1517",
             "id": "168604"
         },
         "character": {
+            "azerite_essences": "14:3/32:3/4:3",
             "class": "shaman",
             "level": "120",
             "position": "ranged_back",
@@ -325,29 +327,29 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "1",
-        "simc_hash": "d372055c39",
+        "simc_hash": "db8933bb34",
         "spec": "elemental",
         "target_error": "0.2",
         "tier": "24"
     },
     "sorted_data_keys": [
         "Dwarf",
+        "Troll",
         "Tauren",
         "Pandaren",
-        "Zandalari Troll Paku",
         "Highmountain Tauren",
         "Goblin",
+        "Zandalari Troll Paku",
         "Kul Tiran",
-        "Draenei",
-        "Zandalari Troll Bwonsamdi",
-        "Zandalari Troll Kimbul",
-        "Dark Iron Dwarf",
         "Maghar Orc",
+        "Zandalari Troll Kimbul",
+        "Zandalari Troll Bwonsamdi",
         "Orc",
-        "Troll"
+        "Draenei",
+        "Dark Iron Dwarf"
     ],
     "spec_id": 262,
-    "subtitle": "UTC 2020-01-11 08:49 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/d372055c39\" target=\"blank\">d372055</a>",
+    "subtitle": "UTC 2020-01-12 07:41 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/db8933bb34\" target=\"blank\">db8933b</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -448,6 +450,6 @@
             }
         }
     },
-    "timestamp": "2020-01-11 08:49",
+    "timestamp": "2020-01-12 07:41",
     "title": "Races | Elemental Shaman | Hecticaddcleave"
 }

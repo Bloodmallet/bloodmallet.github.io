@@ -1,8 +1,8 @@
 {
     "class_id": 12,
     "data": {
-        "Blood Elf": 42156,
-        "Night Elf": 42166
+        "Blood Elf": 51085,
+        "Night Elf": 51068
     },
     "data_type": "races",
     "languages": {
@@ -28,11 +28,13 @@
         }
     },
     "profile": {
+        "azerite_essences": "14:3/32:3/12:3",
         "back": {
             "bonus_id": "4800/1517",
             "id": "168604"
         },
         "character": {
+            "azerite_essences": "14:3/32:3/12:3",
             "class": "demon_hunter",
             "level": "120",
             "position": "back",
@@ -195,17 +197,17 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "1",
-        "simc_hash": "d372055c39",
+        "simc_hash": "db8933bb34",
         "spec": "havoc",
         "target_error": "0.1",
         "tier": "24"
     },
     "sorted_data_keys": [
-        "Night Elf",
-        "Blood Elf"
+        "Blood Elf",
+        "Night Elf"
     ],
     "spec_id": 577,
-    "subtitle": "UTC 2020-01-11 08:27 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/d372055c39\" target=\"blank\">d372055</a>",
+    "subtitle": "UTC 2020-01-12 07:21 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/db8933bb34\" target=\"blank\">db8933b</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -306,6 +308,6 @@
             }
         }
     },
-    "timestamp": "2020-01-11 08:27",
+    "timestamp": "2020-01-12 07:21",
     "title": "Races | Havoc Demon Hunter | Patchwerk"
 }

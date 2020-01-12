@@ -2,63 +2,63 @@
     "class_id": 4,
     "data": {
         "Blackwater Shimmerscale Vest": {
-            "1_430": 51081,
-            "1_445": 51883
+            "1_430": 51006,
+            "1_445": 51793
         },
         "Cephalohide Jacket": {
-            "1_430": 52137,
-            "1_445": 53059
+            "1_430": 52074,
+            "1_445": 53053
         },
         "Fathomstalker Wraps": {
-            "1_430": 52393
+            "1_430": 52332
         },
         "Gore-Splattered Vest": {
-            "1_430": 52258,
-            "1_445": 53089
+            "1_430": 52054,
+            "1_445": 52943
         },
         "Notorious Aspirant's Leather Tunic": {
-            "1_430": 51926
+            "1_430": 51904
         },
         "Notorious Gladiator's Leather Chestguard": {
-            "1_430": 52311
+            "1_430": 52104
         },
         "Notorious Gladiator's Leather Harness": {
-            "1_430": 51926
+            "1_430": 51904
         },
         "Notorious Gladiator's Leather Jerkin": {
-            "1_430": 52061
+            "1_430": 51911
         },
         "Notorious Gladiator's Leather Tunic": {
-            "1_430": 51926
+            "1_430": 51904
         },
         "Notorious Gladiator's Leather Vest": {
-            "1_430": 52008
+            "1_430": 51967
         },
         "Raiment of the Blighted Tribe": {
-            "1_430": 52061,
-            "1_445": 52784
+            "1_430": 51749,
+            "1_445": 52841
         },
         "Spymaster's Wrap": {
-            "1_430": 52386,
-            "1_445": 53236
+            "1_430": 52298,
+            "1_445": 53173
         },
         "Tunic of the Sycophant": {
-            "1_430": 52432,
-            "1_445": 53130
+            "1_430": 52351,
+            "1_445": 53003
         },
         "Venture Co. Plenipotentiary Vest": {
-            "1_430": 52173,
-            "1_445": 53054
+            "1_430": 52104,
+            "1_445": 52937
         },
         "Vest of Reverent Adoration": {
-            "1_430": 51146,
-            "1_445": 51978
+            "1_430": 51112,
+            "1_445": 51962
         },
         "baseline": {
-            "1_430": 48762,
-            "1_445": 49287,
-            "1_460": 49804,
-            "1_475": 50469
+            "1_430": 48759,
+            "1_445": 49293,
+            "1_460": 49862,
+            "1_475": 50497
         }
     },
     "data_type": "azerite_items_chest",
@@ -916,7 +916,7 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "1",
-        "simc_hash": "d372055c39",
+        "simc_hash": "db8933bb34",
         "spec": "subtlety",
         "target_error": "0.2",
         "tier": "24"
@@ -929,23 +929,23 @@
     ],
     "sorted_data_keys": [
         "Spymaster's Wrap",
+        "Cephalohide Jacket",
         "Tunic of the Sycophant",
         "Gore-Splattered Vest",
-        "Cephalohide Jacket",
         "Venture Co. Plenipotentiary Vest",
         "Raiment of the Blighted Tribe",
         "Fathomstalker Wraps",
         "Notorious Gladiator's Leather Chestguard",
-        "Notorious Gladiator's Leather Jerkin",
         "Notorious Gladiator's Leather Vest",
         "Vest of Reverent Adoration",
+        "Notorious Gladiator's Leather Jerkin",
         "Notorious Gladiator's Leather Tunic",
         "Notorious Gladiator's Leather Harness",
         "Notorious Aspirant's Leather Tunic",
         "Blackwater Shimmerscale Vest"
     ],
     "spec_id": 261,
-    "subtitle": "UTC 2020-01-11 17:10 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/d372055c39\" target=\"blank\">d372055</a>",
+    "subtitle": "UTC 2020-01-12 16:09 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/db8933bb34\" target=\"blank\">db8933b</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -1046,7 +1046,7 @@
             }
         }
     },
-    "timestamp": "2020-01-11 17:10",
+    "timestamp": "2020-01-12 16:09",
     "title": "Azerite Items Chest | Subtlety Rogue | Hecticaddcleave",
     "used_azerite_traits_per_item": {
         "Blackwater Shimmerscale Vest": [
@@ -1068,9 +1068,9 @@
         ],
         "Cephalohide Jacket": [
             {
-                "id": 459,
-                "name": "Unstable Flames",
-                "spell_id": 279899
+                "id": 30,
+                "name": "Overwhelming Power",
+                "spell_id": 266180
             },
             {
                 "id": 479,
@@ -1136,9 +1136,9 @@
         ],
         "Notorious Gladiator's Leather Chestguard": [
             {
-                "id": 21,
-                "name": "Elemental Whirl",
-                "spell_id": 263984
+                "id": 22,
+                "name": "Heed My Call",
+                "spell_id": 263987
             },
             {
                 "id": 124,
@@ -1170,9 +1170,9 @@
         ],
         "Notorious Gladiator's Leather Jerkin": [
             {
-                "id": 21,
-                "name": "Elemental Whirl",
-                "spell_id": 263984
+                "id": 459,
+                "name": "Unstable Flames",
+                "spell_id": 279899
             },
             {
                 "id": 414,
@@ -1204,9 +1204,9 @@
         ],
         "Notorious Gladiator's Leather Vest": [
             {
-                "id": 462,
-                "name": "Azerite Globules",
-                "spell_id": 266936
+                "id": 22,
+                "name": "Heed My Call",
+                "spell_id": 263987
             },
             {
                 "id": 413,
@@ -1221,9 +1221,9 @@
         ],
         "Raiment of the Blighted Tribe": [
             {
-                "id": 21,
-                "name": "Elemental Whirl",
-                "spell_id": 263984
+                "id": 461,
+                "name": "Earthlink",
+                "spell_id": 279926
             },
             {
                 "id": 413,
@@ -1255,9 +1255,9 @@
         ],
         "Tunic of the Sycophant": [
             {
-                "id": 21,
-                "name": "Elemental Whirl",
-                "spell_id": 263984
+                "id": 22,
+                "name": "Heed My Call",
+                "spell_id": 263987
             },
             {
                 "id": 575,
@@ -1272,9 +1272,9 @@
         ],
         "Venture Co. Plenipotentiary Vest": [
             {
-                "id": 459,
-                "name": "Unstable Flames",
-                "spell_id": 279899
+                "id": 22,
+                "name": "Heed My Call",
+                "spell_id": 263987
             },
             {
                 "id": 124,

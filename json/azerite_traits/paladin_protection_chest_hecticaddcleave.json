@@ -2,67 +2,67 @@
     "class_id": 2,
     "data": {
         "Ashvane Warden's Cuirass": {
-            "1_430": 46948,
-            "1_445": 47771
+            "1_430": 47062,
+            "1_445": 47550
         },
         "Barnacle-Crusted Breastplate": {
-            "1_430": 46060,
-            "1_445": 46886
+            "1_430": 46113,
+            "1_445": 46722
         },
         "Breastplate of Arterial Protection": {
-            "1_430": 46632,
-            "1_445": 47279
+            "1_430": 46400,
+            "1_445": 47122
         },
         "Breastplate of the Vengeful": {
-            "1_430": 45676,
-            "1_445": 46226
+            "1_430": 45709,
+            "1_445": 46361
         },
         "Chestguard of the Deep Denizen": {
-            "1_430": 46625,
-            "1_445": 47418
+            "1_430": 46458,
+            "1_445": 47318
         },
         "Dark Passenger's Breastplate": {
-            "1_430": 46428,
-            "1_445": 47014
+            "1_430": 46471,
+            "1_445": 47156
         },
         "Desert Guardian's Breastplate": {
-            "1_430": 46011,
-            "1_445": 46919
+            "1_430": 46038,
+            "1_445": 46611
         },
         "Harpooner's Plate Cuirass": {
-            "1_430": 46263,
-            "1_445": 46899
+            "1_430": 46282,
+            "1_445": 46854
         },
         "Naga Centaur's Shellplate": {
-            "1_430": 47111,
-            "1_445": 47950
+            "1_430": 47191,
+            "1_445": 47802
         },
         "Notorious Aspirant's Plate Chestpiece": {
-            "1_430": 45813
+            "1_430": 45709
         },
         "Notorious Gladiator's Plate Armor": {
-            "1_430": 46706
+            "1_430": 46842
         },
         "Notorious Gladiator's Plate Breastplate": {
-            "1_430": 45449
+            "1_430": 45480
         },
         "Notorious Gladiator's Plate Chestguard": {
-            "1_430": 47157
+            "1_430": 47258
         },
         "Notorious Gladiator's Plate Chestpiece": {
-            "1_430": 45813
+            "1_430": 45709
         },
         "Notorious Gladiator's Plate Chestplate": {
-            "1_430": 45813
+            "1_430": 45709
         },
         "Zanj'ir Scaleguard Chestplate": {
-            "1_430": 46445
+            "1_430": 46502
         },
         "baseline": {
-            "1_430": 43889,
-            "1_445": 44231,
-            "1_460": 44640,
-            "1_475": 45222
+            "1_430": 43875,
+            "1_445": 44208,
+            "1_460": 44757,
+            "1_475": 45176
         }
     },
     "data_type": "azerite_items_chest",
@@ -963,7 +963,7 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "1",
-        "simc_hash": "d372055c39",
+        "simc_hash": "db8933bb34",
         "spec": "protection",
         "target_error": "0.2",
         "tier": "24"
@@ -978,13 +978,13 @@
         "Naga Centaur's Shellplate",
         "Ashvane Warden's Cuirass",
         "Chestguard of the Deep Denizen",
-        "Breastplate of Arterial Protection",
         "Notorious Gladiator's Plate Chestguard",
         "Dark Passenger's Breastplate",
-        "Desert Guardian's Breastplate",
+        "Breastplate of Arterial Protection",
         "Harpooner's Plate Cuirass",
-        "Barnacle-Crusted Breastplate",
         "Notorious Gladiator's Plate Armor",
+        "Barnacle-Crusted Breastplate",
+        "Desert Guardian's Breastplate",
         "Zanj'ir Scaleguard Chestplate",
         "Breastplate of the Vengeful",
         "Notorious Gladiator's Plate Chestpiece",
@@ -993,7 +993,7 @@
         "Notorious Gladiator's Plate Breastplate"
     ],
     "spec_id": 66,
-    "subtitle": "UTC 2020-01-11 16:34 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/d372055c39\" target=\"blank\">d372055</a>",
+    "subtitle": "UTC 2020-01-12 15:32 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/db8933bb34\" target=\"blank\">db8933b</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -1094,7 +1094,7 @@
             }
         }
     },
-    "timestamp": "2020-01-11 16:34",
+    "timestamp": "2020-01-12 15:32",
     "title": "Azerite Items Chest | Protection Paladin | Hecticaddcleave",
     "used_azerite_traits_per_item": {
         "Ashvane Warden's Cuirass": [
@@ -1162,9 +1162,9 @@
         ],
         "Chestguard of the Deep Denizen": [
             {
-                "id": 20,
-                "name": "Lifespeed",
-                "spell_id": 267665
+                "id": 22,
+                "name": "Heed My Call",
+                "spell_id": 263987
             },
             {
                 "id": 195,
@@ -1223,9 +1223,9 @@
                 "spell_id": 280284
             },
             {
-                "id": 150,
-                "name": "Soaring Shield",
-                "spell_id": 278605
+                "id": 395,
+                "name": "Inspiring Vanguard",
+                "spell_id": 278609
             }
         ],
         "Naga Centaur's Shellplate": [

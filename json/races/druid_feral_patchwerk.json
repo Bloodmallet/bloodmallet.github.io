@@ -1,15 +1,15 @@
 {
     "class_id": 11,
     "data": {
-        "Highmountain Tauren": 38586,
-        "Kul Tiran": 38565,
-        "Night Elf": 39153,
-        "Tauren": 38692,
-        "Troll": 38396,
-        "Worgen": 38520,
-        "Zandalari Troll Bwonsamdi": 38401,
-        "Zandalari Troll Kimbul": 38420,
-        "Zandalari Troll Paku": 38537
+        "Highmountain Tauren": 44870,
+        "Kul Tiran": 44852,
+        "Night Elf": 45417,
+        "Tauren": 45034,
+        "Troll": 44741,
+        "Worgen": 44803,
+        "Zandalari Troll Bwonsamdi": 44666,
+        "Zandalari Troll Kimbul": 44665,
+        "Zandalari Troll Paku": 44783
     },
     "data_type": "races",
     "languages": {
@@ -105,11 +105,13 @@
         }
     },
     "profile": {
+        "azerite_essences": "14:3/27:3/4:3",
         "back": {
             "id": "168604",
             "ilevel": "445"
         },
         "character": {
+            "azerite_essences": "14:3/27:3/4:3",
             "class": "druid",
             "level": "120",
             "position": "back",
@@ -266,7 +268,7 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "1",
-        "simc_hash": "d372055c39",
+        "simc_hash": "db8933bb34",
         "spec": "feral",
         "target_error": "0.1",
         "tier": "24"
@@ -276,14 +278,14 @@
         "Tauren",
         "Highmountain Tauren",
         "Kul Tiran",
-        "Zandalari Troll Paku",
         "Worgen",
-        "Zandalari Troll Kimbul",
+        "Zandalari Troll Paku",
+        "Troll",
         "Zandalari Troll Bwonsamdi",
-        "Troll"
+        "Zandalari Troll Kimbul"
     ],
     "spec_id": 103,
-    "subtitle": "UTC 2020-01-11 08:28 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/d372055c39\" target=\"blank\">d372055</a>",
+    "subtitle": "UTC 2020-01-12 07:22 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/db8933bb34\" target=\"blank\">db8933b</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -384,6 +386,6 @@
             }
         }
     },
-    "timestamp": "2020-01-11 08:28",
+    "timestamp": "2020-01-12 07:22",
     "title": "Races | Feral Druid | Patchwerk"
 }

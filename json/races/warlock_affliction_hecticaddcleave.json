@@ -1,18 +1,18 @@
 {
     "class_id": 9,
     "data": {
-        "Blood Elf": 42584,
-        "Dark Iron Dwarf": 42308,
-        "Dwarf": 42514,
-        "Gnome": 42704,
-        "Goblin": 42676,
-        "Human": 42732,
-        "Nightborne": 42519,
-        "Orc": 42458,
-        "Troll": 43048,
-        "Undead": 42521,
-        "Void Elf": 42646,
-        "Worgen": 42620
+        "Blood Elf": 49793,
+        "Dark Iron Dwarf": 49558,
+        "Dwarf": 49597,
+        "Gnome": 49908,
+        "Goblin": 49923,
+        "Human": 50008,
+        "Nightborne": 49696,
+        "Orc": 49775,
+        "Troll": 50359,
+        "Undead": 49732,
+        "Void Elf": 49814,
+        "Worgen": 49763
     },
     "data_type": "races",
     "languages": {
@@ -138,11 +138,13 @@
         }
     },
     "profile": {
+        "azerite_essences": "14:3:1/12:3:0/4:3:0",
         "back": {
             "bonus_id": "4800/1517",
             "id": "168391"
         },
         "character": {
+            "azerite_essences": "14:3:1/12:3:0/4:3:0",
             "class": "warlock",
             "level": "120",
             "position": "ranged_back",
@@ -303,7 +305,7 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "1",
-        "simc_hash": "d372055c39",
+        "simc_hash": "db8933bb34",
         "spec": "affliction",
         "target_error": "0.2",
         "tier": "24"
@@ -311,19 +313,19 @@
     "sorted_data_keys": [
         "Troll",
         "Human",
-        "Gnome",
         "Goblin",
+        "Gnome",
         "Void Elf",
-        "Worgen",
         "Blood Elf",
+        "Orc",
+        "Worgen",
         "Undead",
         "Nightborne",
         "Dwarf",
-        "Orc",
         "Dark Iron Dwarf"
     ],
     "spec_id": 265,
-    "subtitle": "UTC 2020-01-11 08:50 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/d372055c39\" target=\"blank\">d372055</a>",
+    "subtitle": "UTC 2020-01-12 07:42 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/db8933bb34\" target=\"blank\">db8933b</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -424,6 +426,6 @@
             }
         }
     },
-    "timestamp": "2020-01-11 08:50",
+    "timestamp": "2020-01-12 07:42",
     "title": "Races | Affliction Warlock | Hecticaddcleave"
 }

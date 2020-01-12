@@ -1,18 +1,18 @@
 {
     "class_id": 9,
     "data": {
-        "Blood Elf": 39884,
-        "Dark Iron Dwarf": 39806,
-        "Dwarf": 40012,
-        "Gnome": 39970,
-        "Goblin": 40001,
-        "Human": 40100,
-        "Nightborne": 39721,
-        "Orc": 40098,
-        "Troll": 40234,
-        "Undead": 39832,
-        "Void Elf": 39698,
-        "Worgen": 39850
+        "Blood Elf": 47342,
+        "Dark Iron Dwarf": 47169,
+        "Dwarf": 47418,
+        "Gnome": 47413,
+        "Goblin": 47424,
+        "Human": 47577,
+        "Nightborne": 47131,
+        "Orc": 47542,
+        "Troll": 47837,
+        "Undead": 47229,
+        "Void Elf": 47147,
+        "Worgen": 47325
     },
     "data_type": "races",
     "languages": {
@@ -138,11 +138,13 @@
         }
     },
     "profile": {
+        "azerite_essences": "14:3:1/4:3:0/32:3:0",
         "back": {
             "bonus_id": "4800/1517",
             "id": "168391"
         },
         "character": {
+            "azerite_essences": "14:3:1/4:3:0/32:3:0",
             "class": "warlock",
             "level": "120",
             "position": "ranged_back",
@@ -295,7 +297,7 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "1",
-        "simc_hash": "d372055c39",
+        "simc_hash": "db8933bb34",
         "spec": "demonology",
         "target_error": "0.1",
         "tier": "24"
@@ -304,18 +306,18 @@
         "Troll",
         "Human",
         "Orc",
-        "Dwarf",
         "Goblin",
+        "Dwarf",
         "Gnome",
         "Blood Elf",
         "Worgen",
         "Undead",
         "Dark Iron Dwarf",
-        "Nightborne",
-        "Void Elf"
+        "Void Elf",
+        "Nightborne"
     ],
     "spec_id": 266,
-    "subtitle": "UTC 2020-01-11 08:37 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/d372055c39\" target=\"blank\">d372055</a>",
+    "subtitle": "UTC 2020-01-12 07:29 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/db8933bb34\" target=\"blank\">db8933b</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -416,6 +418,6 @@
             }
         }
     },
-    "timestamp": "2020-01-11 08:37",
+    "timestamp": "2020-01-12 07:29",
     "title": "Races | Demonology Warlock | Patchwerk"
 }

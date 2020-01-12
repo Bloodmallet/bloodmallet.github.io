@@ -1,20 +1,20 @@
 {
     "class_id": 7,
     "data": {
-        "Dark Iron Dwarf": 42920,
-        "Draenei": 42905,
-        "Dwarf": 43162,
-        "Goblin": 43229,
-        "Highmountain Tauren": 43094,
-        "Kul Tiran": 43098,
-        "Maghar Orc": 43017,
-        "Orc": 42886,
-        "Pandaren": 43204,
-        "Tauren": 43175,
-        "Troll": 43373,
-        "Zandalari Troll Bwonsamdi": 42987,
-        "Zandalari Troll Kimbul": 43037,
-        "Zandalari Troll Paku": 43095
+        "Dark Iron Dwarf": 50263,
+        "Draenei": 50270,
+        "Dwarf": 50530,
+        "Goblin": 50619,
+        "Highmountain Tauren": 50431,
+        "Kul Tiran": 50486,
+        "Maghar Orc": 50401,
+        "Orc": 50248,
+        "Pandaren": 50595,
+        "Tauren": 50532,
+        "Troll": 50719,
+        "Zandalari Troll Bwonsamdi": 50346,
+        "Zandalari Troll Kimbul": 50395,
+        "Zandalari Troll Paku": 50492
     },
     "data_type": "races",
     "languages": {
@@ -160,11 +160,13 @@
         }
     },
     "profile": {
+        "azerite_essences": "14:3/5:3/4:3",
         "back": {
             "bonus_id": "4800/1517",
             "id": "168604"
         },
         "character": {
+            "azerite_essences": "14:3/5:3/4:3",
             "class": "shaman",
             "level": "120",
             "position": "back",
@@ -327,7 +329,7 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "1",
-        "simc_hash": "d372055c39",
+        "simc_hash": "db8933bb34",
         "spec": "enhancement",
         "target_error": "0.1",
         "tier": "24"
@@ -338,18 +340,18 @@
         "Pandaren",
         "Tauren",
         "Dwarf",
-        "Kul Tiran",
         "Zandalari Troll Paku",
+        "Kul Tiran",
         "Highmountain Tauren",
-        "Zandalari Troll Kimbul",
         "Maghar Orc",
+        "Zandalari Troll Kimbul",
         "Zandalari Troll Bwonsamdi",
-        "Dark Iron Dwarf",
         "Draenei",
+        "Dark Iron Dwarf",
         "Orc"
     ],
     "spec_id": 263,
-    "subtitle": "UTC 2020-01-11 08:35 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/d372055c39\" target=\"blank\">d372055</a>",
+    "subtitle": "UTC 2020-01-12 07:28 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/db8933bb34\" target=\"blank\">db8933b</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -450,6 +452,6 @@
             }
         }
     },
-    "timestamp": "2020-01-11 08:35",
+    "timestamp": "2020-01-12 07:28",
     "title": "Races | Enhancement Shaman | Patchwerk"
 }

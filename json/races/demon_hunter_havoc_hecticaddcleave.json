@@ -1,8 +1,8 @@
 {
     "class_id": 12,
     "data": {
-        "Blood Elf": 63851,
-        "Night Elf": 63768
+        "Blood Elf": 73716,
+        "Night Elf": 73691
     },
     "data_type": "races",
     "languages": {
@@ -28,11 +28,13 @@
         }
     },
     "profile": {
+        "azerite_essences": "14:3/32:3/12:3",
         "back": {
             "bonus_id": "4800/1517",
             "id": "168604"
         },
         "character": {
+            "azerite_essences": "14:3/32:3/12:3",
             "class": "demon_hunter",
             "level": "120",
             "position": "back",
@@ -195,7 +197,7 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "1",
-        "simc_hash": "d372055c39",
+        "simc_hash": "db8933bb34",
         "spec": "havoc",
         "target_error": "0.2",
         "tier": "24"
@@ -205,7 +207,7 @@
         "Night Elf"
     ],
     "spec_id": 577,
-    "subtitle": "UTC 2020-01-11 08:40 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/d372055c39\" target=\"blank\">d372055</a>",
+    "subtitle": "UTC 2020-01-12 07:33 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/db8933bb34\" target=\"blank\">db8933b</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -306,6 +308,6 @@
             }
         }
     },
-    "timestamp": "2020-01-11 08:40",
+    "timestamp": "2020-01-12 07:33",
     "title": "Races | Havoc Demon Hunter | Hecticaddcleave"
 }
