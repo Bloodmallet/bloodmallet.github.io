@@ -1,29 +1,29 @@
 {
     "class_id": 3,
     "data": {
-        "Blood Elf": 77828,
-        "Dark Iron Dwarf": 77233,
-        "Draenei": 77401,
-        "Dwarf": 78054,
-        "Gnome": 78081,
-        "Goblin": 78062,
-        "Highmountain Tauren": 77558,
-        "Human": 78273,
-        "Kul Tiran": 77734,
-        "Lightforged Draenei": 78797,
-        "Maghar Orc": 77763,
-        "Night Elf": 77911,
-        "Nightborne": 76943,
-        "Orc": 77890,
-        "Pandaren": 78148,
-        "Tauren": 77996,
-        "Troll": 77757,
-        "Undead": 77404,
-        "Void Elf": 77464,
-        "Worgen": 77916,
-        "Zandalari Troll Bwonsamdi": 77277,
-        "Zandalari Troll Kimbul": 77168,
-        "Zandalari Troll Paku": 77739
+        "Blood Elf": 78995,
+        "Dark Iron Dwarf": 78140,
+        "Draenei": 78259,
+        "Dwarf": 79047,
+        "Gnome": 78930,
+        "Goblin": 78796,
+        "Highmountain Tauren": 78613,
+        "Human": 79196,
+        "Kul Tiran": 78788,
+        "Lightforged Draenei": 80195,
+        "Maghar Orc": 78731,
+        "Night Elf": 78822,
+        "Nightborne": 77971,
+        "Orc": 78769,
+        "Pandaren": 79193,
+        "Tauren": 78936,
+        "Troll": 79048,
+        "Undead": 78555,
+        "Void Elf": 78160,
+        "Worgen": 78868,
+        "Zandalari Troll Bwonsamdi": 78231,
+        "Zandalari Troll Kimbul": 78277,
+        "Zandalari Troll Paku": 78871
     },
     "data_type": "races",
     "languages": {
@@ -272,7 +272,7 @@
             "race": "human",
             "role": "attack",
             "spec": "beast_mastery",
-            "talents": "1203011"
+            "talents": "2202012"
         },
         "chest": {
             "azerite_powers": "211/161/30/87/13",
@@ -341,7 +341,6 @@
             },
             "main_hand": {
                 "bonus_id": "4800/1517",
-                "enchant": "crows_nest_scope",
                 "id": "168273"
             },
             "neck": {
@@ -378,7 +377,6 @@
         "level": "120",
         "main_hand": {
             "bonus_id": "4800/1517",
-            "enchant": "crows_nest_scope",
             "id": "168273"
         },
         "neck": {
@@ -395,7 +393,7 @@
             "id": "159393"
         },
         "spec": "beast_mastery",
-        "talents": "1203011",
+        "talents": "2202012",
         "trinket1": {
             "bonus_id": "4800/1517",
             "id": "169311"
@@ -418,7 +416,7 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "1",
-        "simc_hash": "dc28297456",
+        "simc_hash": "a72074e253",
         "spec": "beast_mastery",
         "target_error": "0.2",
         "tier": "24"
@@ -427,29 +425,29 @@
         "Lightforged Draenei",
         "Human",
         "Pandaren",
-        "Gnome",
-        "Goblin",
+        "Troll",
         "Dwarf",
+        "Blood Elf",
         "Tauren",
+        "Gnome",
+        "Zandalari Troll Paku",
         "Worgen",
         "Night Elf",
-        "Orc",
-        "Blood Elf",
-        "Maghar Orc",
-        "Troll",
-        "Zandalari Troll Paku",
+        "Goblin",
         "Kul Tiran",
+        "Orc",
+        "Maghar Orc",
         "Highmountain Tauren",
-        "Void Elf",
         "Undead",
+        "Zandalari Troll Kimbul",
         "Draenei",
         "Zandalari Troll Bwonsamdi",
+        "Void Elf",
         "Dark Iron Dwarf",
-        "Zandalari Troll Kimbul",
         "Nightborne"
     ],
     "spec_id": 253,
-    "subtitle": "UTC 2020-01-13 07:39 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/dc28297456\" target=\"blank\">dc28297</a>",
+    "subtitle": "UTC 2020-01-14 07:37 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/a72074e253\" target=\"blank\">a72074e</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -550,6 +548,6 @@
             }
         }
     },
-    "timestamp": "2020-01-13 07:39",
+    "timestamp": "2020-01-14 07:37",
     "title": "Races | Beast Mastery Hunter | Hecticaddcleave"
 }

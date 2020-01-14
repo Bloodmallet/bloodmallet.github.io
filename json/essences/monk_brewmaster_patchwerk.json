@@ -1,99 +1,99 @@
 {
-    "azerite_weight_patchwerk": "( AzeritePowerWeights:2:\"Patchwerk Brewmaster Monk essences\":10:268: : 4=2177/1116, 7=490/-9, 12=4131/1593, 15=926/-14, 22=234/223, 25=151/185, 27=289/237, 32=887/890, )",
+    "azerite_weight_patchwerk": "( AzeritePowerWeights:2:\"Patchwerk Brewmaster Monk essences\":10:268: : 4=2226/1143, 7=528/23, 12=4170/1619, 15=956/29, 22=285/230, 25=167/182, 27=304/284, 32=926/903, )",
     "class_id": 10,
     "data": {
         "Aegis of the Deep": {
-            "1": 24225,
-            "2": 24233,
+            "1": 24215,
+            "2": 24243,
             "3": 24212
         },
         "Aegis of the Deep minor": {
-            "1": 24207,
-            "2": 24236,
-            "3": 24246
+            "1": 24217,
+            "2": 24226,
+            "3": 24227
         },
         "Anima of Death": {
-            "1": 24463,
-            "2": 24551,
-            "3": 24551
+            "1": 24445,
+            "2": 24559,
+            "3": 24573
         },
         "Anima of Death minor": {
-            "1": 24028,
-            "2": 24040,
-            "3": 24052
+            "1": 24052,
+            "2": 24036,
+            "3": 24068
         },
         "Conflict and Strife": {
-            "1": 24405,
-            "2": 24642,
-            "3": 24948
+            "1": 24433,
+            "2": 24667,
+            "3": 24971
         },
         "Conflict and Strife minor": {
-            "1": 24430,
-            "2": 24640,
-            "3": 24951
+            "1": 24437,
+            "2": 24644,
+            "3": 24948
         },
         "Memory of Lucid Dreams": {
-            "1": 24163,
-            "2": 24153,
-            "3": 24350
+            "1": 24167,
+            "2": 24168,
+            "3": 24349
         },
         "Memory of Lucid Dreams minor": {
-            "1": 24161,
-            "2": 24136,
-            "3": 24298
+            "1": 24131,
+            "2": 24141,
+            "3": 24329
         },
         "Ripple in Space": {
-            "1": 24887,
-            "2": 24998,
-            "3": 24987
+            "1": 24877,
+            "2": 24985,
+            "3": 25001
         },
         "Ripple in Space minor": {
-            "1": 24057,
-            "2": 24056,
-            "3": 24047
+            "1": 24072,
+            "2": 24060,
+            "3": 24074
         },
         "The Crucible of Flame": {
-            "1": 26266,
-            "2": 27323,
-            "3": 28192
+            "1": 26281,
+            "2": 27342,
+            "3": 28215
         },
         "The Crucible of Flame minor": {
-            "1": 24827,
-            "2": 25028,
-            "3": 25654
+            "1": 24823,
+            "2": 24991,
+            "3": 25664
         },
         "Vision of Perfection": {
-            "1": 24060,
-            "2": 24064,
-            "3": 24295
+            "1": 24054,
+            "2": 24058,
+            "3": 24330
         },
         "Vision of Perfection minor": {
-            "1": 24055,
-            "2": 24058,
-            "3": 24284
+            "1": 24066,
+            "2": 24050,
+            "3": 24275
         },
         "Worldvein Resonance": {
-            "1": 24809,
-            "2": 25610,
-            "3": 25765
+            "1": 24810,
+            "2": 25603,
+            "3": 25756
         },
         "Worldvein Resonance +3": {
-            "1": 25565,
-            "2": 26141,
-            "3": 26238
+            "1": 25593,
+            "2": 26174,
+            "3": 26271
         },
         "Worldvein Resonance minor": {
-            "1": 24215,
-            "2": 24272,
-            "3": 24463
+            "1": 24209,
+            "2": 24309,
+            "3": 24480
         },
         "Worldvein Resonance minor +3": {
-            "1": 24748,
-            "2": 25017,
-            "3": 25177
+            "1": 24727,
+            "2": 25003,
+            "3": 25188
         },
         "baseline": {
-            "1": 24061
+            "1": 24045
         }
     },
     "data_type": "essences",
@@ -278,7 +278,7 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "1",
-        "simc_hash": "dc28297456",
+        "simc_hash": "a72074e253",
         "spec": "brewmaster",
         "target_error": "0.1",
         "tier": "24"
@@ -295,18 +295,18 @@
         "The Crucible of Flame minor",
         "Worldvein Resonance minor +3",
         "Ripple in Space",
-        "Conflict and Strife minor",
         "Conflict and Strife",
+        "Conflict and Strife minor",
         "Anima of Death",
         "Worldvein Resonance minor",
         "Memory of Lucid Dreams",
-        "Memory of Lucid Dreams minor",
         "Vision of Perfection",
+        "Memory of Lucid Dreams minor",
         "Vision of Perfection minor",
         "Aegis of the Deep minor",
         "Aegis of the Deep",
-        "Anima of Death minor",
-        "Ripple in Space minor"
+        "Ripple in Space minor",
+        "Anima of Death minor"
     ],
     "spec_id": 268,
     "spell_ids": {
@@ -329,7 +329,7 @@
         "Worldvein Resonance minor": 299333,
         "Worldvein Resonance minor +3": 299333
     },
-    "subtitle": "UTC 2020-01-13 17:32 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/dc28297456\" target=\"blank\">dc28297</a>",
+    "subtitle": "UTC 2020-01-14 17:23 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/a72074e253\" target=\"blank\">a72074e</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -430,6 +430,6 @@
             }
         }
     },
-    "timestamp": "2020-01-13 17:32",
+    "timestamp": "2020-01-14 17:23",
     "title": "Essences | Brewmaster Monk | Patchwerk"
 }

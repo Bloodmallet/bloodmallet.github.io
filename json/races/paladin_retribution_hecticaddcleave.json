@@ -1,16 +1,16 @@
 {
     "class_id": 2,
     "data": {
-        "Blood Elf": 69744,
-        "Dark Iron Dwarf": 69094,
-        "Draenei": 69126,
-        "Dwarf": 69702,
-        "Human": 69612,
-        "Lightforged Draenei": 70808,
-        "Tauren": 69580,
-        "Zandalari Troll Bwonsamdi": 69081,
-        "Zandalari Troll Kimbul": 68996,
-        "Zandalari Troll Paku": 69312
+        "Blood Elf": 69724,
+        "Dark Iron Dwarf": 69019,
+        "Draenei": 68957,
+        "Dwarf": 69509,
+        "Human": 69584,
+        "Lightforged Draenei": 70753,
+        "Tauren": 69502,
+        "Zandalari Troll Bwonsamdi": 68955,
+        "Zandalari Troll Kimbul": 69037,
+        "Zandalari Troll Paku": 69266
     },
     "data_type": "races",
     "languages": {
@@ -271,7 +271,7 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "1",
-        "simc_hash": "dc28297456",
+        "simc_hash": "a72074e253",
         "spec": "retribution",
         "target_error": "0.2",
         "tier": "24"
@@ -279,17 +279,17 @@
     "sorted_data_keys": [
         "Lightforged Draenei",
         "Blood Elf",
-        "Dwarf",
         "Human",
+        "Dwarf",
         "Tauren",
         "Zandalari Troll Paku",
-        "Draenei",
+        "Zandalari Troll Kimbul",
         "Dark Iron Dwarf",
-        "Zandalari Troll Bwonsamdi",
-        "Zandalari Troll Kimbul"
+        "Draenei",
+        "Zandalari Troll Bwonsamdi"
     ],
     "spec_id": 70,
-    "subtitle": "UTC 2020-01-13 07:43 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/dc28297456\" target=\"blank\">dc28297</a>",
+    "subtitle": "UTC 2020-01-14 07:42 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/a72074e253\" target=\"blank\">a72074e</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -390,6 +390,6 @@
             }
         }
     },
-    "timestamp": "2020-01-13 07:43",
+    "timestamp": "2020-01-14 07:42",
     "title": "Races | Retribution Paladin | Hecticaddcleave"
 }
