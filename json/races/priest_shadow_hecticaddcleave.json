@@ -1,27 +1,27 @@
 {
     "class_id": 5,
     "data": {
-        "Blood Elf": 53344,
-        "Dark Iron Dwarf": 52968,
-        "Draenei": 53123,
-        "Dwarf": 53478,
-        "Gnome": 53448,
-        "Goblin": 53510,
-        "Human": 53712,
-        "Kul Tiran": 53291,
-        "Lightforged Draenei": 54211,
-        "Maghar Orc": 53071,
-        "Night Elf": 53415,
-        "Nightborne": 53418,
-        "Pandaren": 53524,
-        "Tauren": 53413,
-        "Troll": 53211,
-        "Undead": 53167,
-        "Void Elf": 53179,
-        "Worgen": 53307,
-        "Zandalari Troll Bwonsamdi": 53161,
-        "Zandalari Troll Kimbul": 53276,
-        "Zandalari Troll Paku": 53480
+        "Blood Elf": 101634,
+        "Dark Iron Dwarf": 101159,
+        "Draenei": 101121,
+        "Dwarf": 102303,
+        "Gnome": 102111,
+        "Goblin": 102011,
+        "Human": 102655,
+        "Kul Tiran": 101845,
+        "Lightforged Draenei": 103087,
+        "Maghar Orc": 101362,
+        "Night Elf": 102000,
+        "Nightborne": 102088,
+        "Pandaren": 102212,
+        "Tauren": 102300,
+        "Troll": 101775,
+        "Undead": 101332,
+        "Void Elf": 101698,
+        "Worgen": 101699,
+        "Zandalari Troll Bwonsamdi": 101278,
+        "Zandalari Troll Kimbul": 101295,
+        "Zandalari Troll Paku": 101956
     },
     "data_type": "races",
     "languages": {
@@ -237,13 +237,13 @@
         }
     },
     "profile": {
-        "azerite_essences": "27:3:1/5:3:0/12:3:0",
+        "azerite_essences": "27:3:1/5:3:0/12:3:0/35:3:0",
         "back": {
-            "bonus_id": "4800/1517",
-            "id": "168604"
+            "bonus_id": "6286",
+            "id": "169223"
         },
         "character": {
-            "azerite_essences": "27:3:1/5:3:0/12:3:0",
+            "azerite_essences": "27:3:1/5:3:0/12:3:0/35:3:0",
             "class": "priest",
             "level": "120",
             "position": "ranged_back",
@@ -253,179 +253,187 @@
             "talents": "3111111"
         },
         "chest": {
-            "azerite_powers": "405/236/30/13",
+            "azerite_powers": "236/405/21/13",
             "bonus_id": "4824/1517/4775",
-            "id": "168337"
+            "id": "174115"
         },
         "feet": {
-            "bonus_id": "4800/1517",
-            "id": "168373"
+            "bonus_id": "4824/1517",
+            "id": "174123"
         },
         "finger1": {
-            "bonus_id": "4800/1517",
+            "bonus_id": "4824/1517",
             "enchant": "accord_of_haste",
-            "id": "168890"
+            "id": "174530"
         },
         "finger2": {
-            "bonus_id": "4800/1517",
+            "bonus_id": "4824/1517",
             "enchant": "accord_of_haste",
-            "id": "168891"
+            "id": "174533"
         },
         "hands": {
-            "bonus_id": "4800/1517",
-            "id": "168375"
+            "bonus_id": "4824/1517/6476",
+            "id": "174125"
         },
         "head": {
-            "azerite_powers": "403/405/30/13",
+            "azerite_powers": "405/403/30/13",
             "bonus_id": "4824/1517/4775",
-            "id": "168336"
+            "id": "174116"
         },
         "items": {
             "back": {
-                "bonus_id": "4800/1517",
-                "id": "168604"
+                "bonus_id": "6286",
+                "id": "169223"
             },
             "chest": {
-                "azerite_powers": "405/236/30/13",
+                "azerite_powers": "236/405/21/13",
                 "bonus_id": "4824/1517/4775",
-                "id": "168337"
+                "id": "174115"
             },
             "feet": {
-                "bonus_id": "4800/1517",
-                "id": "168373"
+                "bonus_id": "4824/1517",
+                "id": "174123"
             },
             "finger1": {
-                "bonus_id": "4800/1517",
+                "bonus_id": "4824/1517",
                 "enchant": "accord_of_haste",
-                "id": "168890"
+                "id": "174530"
             },
             "finger2": {
-                "bonus_id": "4800/1517",
+                "bonus_id": "4824/1517",
                 "enchant": "accord_of_haste",
-                "id": "168891"
+                "id": "174533"
             },
             "hands": {
-                "bonus_id": "4800/1517",
-                "id": "168375"
+                "bonus_id": "4824/1517/6476",
+                "id": "174125"
             },
             "head": {
-                "azerite_powers": "403/405/30/13",
+                "azerite_powers": "405/403/30/13",
                 "bonus_id": "4824/1517/4775",
-                "id": "168336"
+                "id": "174116"
             },
             "legs": {
-                "bonus_id": "4800/1517",
-                "id": "168876"
+                "bonus_id": "4824/1517",
+                "id": "174121"
             },
             "main_hand": {
-                "bonus_id": "4800/1517",
-                "enchant": "machinists_brilliance",
-                "id": "168275"
+                "bonus_id": "4824/1517",
+                "enchant": "quick_navigation",
+                "id": "172196"
             },
             "neck": {
-                "azerite_level": "65",
-                "bonus_id": "4929/5814/4936/1600",
+                "azerite_level": "80",
+                "bonus_id": "4929/5814/4936/1630",
                 "id": "158075"
             },
+            "off_hand": {
+                "bonus_id": "4824/1517",
+                "id": "172190"
+            },
             "shoulders": {
-                "azerite_powers": "405/577/18/13",
+                "azerite_powers": "403/405/18/13",
                 "bonus_id": "4824/1517/4775",
-                "id": "168338"
+                "id": "174117"
             },
             "trinket1": {
-                "bonus_id": "4800/1517",
-                "id": "169304"
+                "bonus_id": "4824/1517/6560",
+                "id": "174060"
             },
             "trinket2": {
-                "bonus_id": "4800/1517",
-                "id": "169306"
+                "bonus_id": "4824/1517/6552",
+                "id": "173944"
             },
             "waist": {
-                "bonus_id": "4800/1517",
-                "id": "168872"
+                "bonus_id": "4824/1517/6482",
+                "id": "174124"
             },
             "wrists": {
-                "bonus_id": "4800/1517",
-                "id": "168884"
+                "bonus_id": "4824/1517",
+                "id": "174122"
             }
         },
         "legs": {
-            "bonus_id": "4800/1517",
-            "id": "168876"
+            "bonus_id": "4824/1517",
+            "id": "174121"
         },
         "level": "120",
         "main_hand": {
-            "bonus_id": "4800/1517",
-            "enchant": "machinists_brilliance",
-            "id": "168275"
+            "bonus_id": "4824/1517",
+            "enchant": "quick_navigation",
+            "id": "172196"
         },
         "neck": {
-            "azerite_level": "65",
-            "bonus_id": "4929/5814/4936/1600",
+            "azerite_level": "80",
+            "bonus_id": "4929/5814/4936/1630",
             "id": "158075"
+        },
+        "off_hand": {
+            "bonus_id": "4824/1517",
+            "id": "172190"
         },
         "position": "ranged_back",
         "race": "human",
         "role": "spell",
         "shoulders": {
-            "azerite_powers": "405/577/18/13",
+            "azerite_powers": "403/405/18/13",
             "bonus_id": "4824/1517/4775",
-            "id": "168338"
+            "id": "174117"
         },
         "spec": "shadow",
         "talents": "3111111",
         "trinket1": {
-            "bonus_id": "4800/1517",
-            "id": "169304"
+            "bonus_id": "4824/1517/6560",
+            "id": "174060"
         },
         "trinket2": {
-            "bonus_id": "4800/1517",
-            "id": "169306"
+            "bonus_id": "4824/1517/6552",
+            "id": "173944"
         },
         "waist": {
-            "bonus_id": "4800/1517",
-            "id": "168872"
+            "bonus_id": "4824/1517/6482",
+            "id": "174124"
         },
         "wrists": {
-            "bonus_id": "4800/1517",
-            "id": "168884"
+            "bonus_id": "4824/1517",
+            "id": "174122"
         }
     },
     "simc_settings": {
         "class": "priest",
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
-        "ptr": "1",
-        "simc_hash": "a72074e253",
+        "ptr": "0",
+        "simc_hash": "c8c8a05a8e",
         "spec": "shadow",
         "target_error": "0.2",
-        "tier": "24"
+        "tier": "25"
     },
     "sorted_data_keys": [
         "Lightforged Draenei",
         "Human",
-        "Pandaren",
-        "Goblin",
-        "Zandalari Troll Paku",
         "Dwarf",
+        "Tauren",
+        "Pandaren",
         "Gnome",
         "Nightborne",
+        "Goblin",
         "Night Elf",
-        "Tauren",
-        "Blood Elf",
-        "Worgen",
+        "Zandalari Troll Paku",
         "Kul Tiran",
-        "Zandalari Troll Kimbul",
         "Troll",
+        "Worgen",
         "Void Elf",
-        "Undead",
-        "Zandalari Troll Bwonsamdi",
-        "Draenei",
+        "Blood Elf",
         "Maghar Orc",
-        "Dark Iron Dwarf"
+        "Undead",
+        "Zandalari Troll Kimbul",
+        "Zandalari Troll Bwonsamdi",
+        "Dark Iron Dwarf",
+        "Draenei"
     ],
     "spec_id": 258,
-    "subtitle": "UTC 2020-01-14 07:42 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/a72074e253\" target=\"blank\">a72074e</a>",
+    "subtitle": "UTC 2020-01-15 07:31 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c8c8a05a8e\" target=\"blank\">c8c8a05</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -526,6 +534,6 @@
             }
         }
     },
-    "timestamp": "2020-01-14 07:42",
+    "timestamp": "2020-01-15 07:31",
     "title": "Races | Shadow Priest | Hecticaddcleave"
 }

@@ -1,11 +1,6 @@
 {
     "class_id": 1,
     "corruption_rating": {
-        "Avoidant": {
-            "1": 10,
-            "2": 15,
-            "3": 20
-        },
         "Deadly Momentum": {
             "1": 15,
             "2": 20,
@@ -92,97 +87,92 @@
         }
     },
     "data": {
-        "Avoidant": {
-            "1": 38043,
-            "2": 38036,
-            "3": 38045
-        },
         "Deadly Momentum": {
-            "1": 38328,
-            "2": 38413,
-            "3": 38653
+            "1": 38299,
+            "2": 38394,
+            "3": 38687
         },
         "Echoing Void": {
-            "1": 43396,
-            "2": 46058,
-            "3": 51400
+            "1": 43392,
+            "2": 46020,
+            "3": 51403
         },
         "Expedient": {
-            "1": 38356,
-            "2": 38601,
-            "3": 38738
+            "1": 38407,
+            "2": 38530,
+            "3": 38731
         },
         "Glimpse of Clarity": {
-            "1": 38096,
-            "2": 38120
+            "1": 38103,
+            "2": 38158
         },
         "Gushing Wound": {
-            "1": 39834
+            "1": 39864
         },
         "Honed Mind": {
-            "1": 38409,
-            "2": 38531,
-            "3": 38925
+            "1": 38381,
+            "2": 38529,
+            "3": 38896
         },
         "Ineffable Truth": {
-            "1": 38312,
-            "2": 38548
+            "1": 38351,
+            "2": 38516
         },
         "Infinite Stars": {
-            "1": 41658,
-            "2": 47063,
-            "3": 51581
+            "1": 41641,
+            "2": 47041,
+            "3": 51610
         },
         "Masterful": {
-            "1": 38184,
-            "2": 38212,
-            "3": 38337
+            "1": 38191,
+            "2": 38251,
+            "3": 38315
         },
         "Racing Pulse": {
-            "1": 38672,
-            "2": 38893,
-            "3": 39479
+            "1": 38674,
+            "2": 38881,
+            "3": 39491
         },
         "Searing Flames": {
-            "1": 39160
+            "1": 39144
         },
         "Severe": {
-            "1": 38387,
-            "2": 38662,
-            "3": 38819
+            "1": 38433,
+            "2": 38588,
+            "3": 38820
         },
         "Strikethrough": {
-            "1": 38357,
-            "2": 38486,
-            "3": 38635
+            "1": 38361,
+            "2": 38503,
+            "3": 38690
         },
         "Surging Vitality": {
-            "1": 38720,
-            "2": 38940,
-            "3": 39634
+            "1": 38701,
+            "2": 38931,
+            "3": 39607
         },
         "Twilight Devastation": {
-            "1": 39403,
-            "2": 40728,
-            "3": 42006
+            "1": 39357,
+            "2": 40677,
+            "3": 42000
         },
         "Twisted Appendage": {
-            "1": 38617,
-            "2": 40178,
-            "3": 42059
+            "1": 38640,
+            "2": 40180,
+            "3": 42079
         },
         "Versatile": {
-            "1": 38238,
-            "2": 38313,
-            "3": 38400
+            "1": 38270,
+            "2": 38308,
+            "3": 38410
         },
         "Void Ritual": {
-            "1": 38258,
-            "2": 38624,
-            "3": 39169
+            "1": 38266,
+            "2": 38620,
+            "3": 39150
         },
         "baseline": {
-            "1": 38059
+            "1": 38065
         }
     },
     "data_type": "corruptions",
@@ -354,11 +344,11 @@
         "class": "warrior",
         "fight_style": "patchwerk",
         "iterations": "20000",
-        "ptr": "1",
+        "ptr": "0",
         "simc_hash": "c8c8a05a8e",
         "spec": "protection",
         "target_error": "0.1",
-        "tier": "24"
+        "tier": "25"
     },
     "simulated_steps": [
         "3",
@@ -378,74 +368,35 @@
         "Honed Mind",
         "Severe",
         "Expedient",
-        "Deadly Momentum",
         "Strikethrough",
+        "Deadly Momentum",
         "Ineffable Truth",
         "Versatile",
         "Masterful",
-        "Glimpse of Clarity",
-        "Avoidant"
+        "Glimpse of Clarity"
     ],
     "sorted_data_keys_2": [
-        "Echoing Void 2",
-        "Echoing Void 3",
-        "Echoing Void 1",
-        "Infinite Stars 3",
-        "Infinite Stars 2",
-        "Infinite Stars 1",
-        "Gushing Wound 1",
-        "Twisted Appendage 3",
-        "Twisted Appendage 2",
-        "Twisted Appendage 1",
-        "Twilight Devastation 1",
-        "Twilight Devastation 2",
-        "Twilight Devastation 3",
-        "Surging Vitality 3",
-        "Surging Vitality 1",
-        "Surging Vitality 2",
-        "Racing Pulse 2",
-        "Racing Pulse 1",
-        "Racing Pulse 3",
-        "Severe 2",
-        "Severe 3",
-        "Searing Flames 1",
-        "Expedient 2",
-        "Expedient 3",
-        "Severe 1",
-        "Strikethrough 1",
-        "Expedient 1",
-        "Strikethrough 3",
-        "Strikethrough 2",
-        "Honed Mind 3",
-        "Honed Mind 2",
-        "Honed Mind 1",
-        "Deadly Momentum 1",
-        "Versatile 1",
-        "Deadly Momentum 2",
-        "Versatile 3",
-        "Deadly Momentum 3",
-        "Versatile 2",
-        "Ineffable Truth 1",
-        "Void Ritual 3",
-        "Void Ritual 2",
-        "Ineffable Truth 2",
-        "Masterful 3",
-        "Void Ritual 1",
-        "Masterful 1",
-        "Masterful 2",
-        "Glimpse of Clarity 2",
-        "Glimpse of Clarity 1",
-        "Avoidant 3",
-        "Avoidant 2",
-        "Avoidant 1"
+        "Echoing Void",
+        "Infinite Stars",
+        "Gushing Wound",
+        "Twisted Appendage",
+        "Twilight Devastation",
+        "Surging Vitality",
+        "Racing Pulse",
+        "Severe",
+        "Searing Flames",
+        "Expedient",
+        "Strikethrough",
+        "Honed Mind",
+        "Deadly Momentum",
+        "Versatile",
+        "Void Ritual",
+        "Ineffable Truth",
+        "Masterful",
+        "Glimpse of Clarity"
     ],
     "spec_id": 73,
     "spell_ids": {
-        "Avoidant": {
-            "1": 315607,
-            "2": 315608,
-            "3": 315609
-        },
         "Deadly Momentum": {
             "1": 318268,
             "2": 318493,
@@ -531,7 +482,7 @@
             "3": 318480
         }
     },
-    "subtitle": "UTC 2020-01-14 21:24 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c8c8a05a8e\" target=\"blank\">c8c8a05</a>",
+    "subtitle": "UTC 2020-01-15 16:30 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c8c8a05a8e\" target=\"blank\">c8c8a05</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -632,6 +583,6 @@
             }
         }
     },
-    "timestamp": "2020-01-14 21:24",
+    "timestamp": "2020-01-15 16:30",
     "title": "Corruptions | Protection Warrior | Patchwerk"
 }
