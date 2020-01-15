@@ -630,9 +630,20 @@ function bloodmallet_chart_import() {
         let dps_key_value = 0;
         if (data_type === "corruptions" && state.corruption_representation === "dps/rating") {
 
-          // Structure: "Strikethrough 2" "NAME RANK", with rank being one digit
-          let corruption_name = dps_key.slice(0, dps_key.length - 2);
-          let corruption_rank = dps_key.slice(dps_key.length - 1, dps_key.length);
+          let corruption_name = "";
+          let corruption_rank = "";
+          if (isNaN(parseInt(dps_key.slice(dps_key.length - 1, dps_key.length)))) {
+            // new format
+            corruption_name = dps_key;
+            let ranks = Object.keys(data["corruption_rating"][corruption_name]);
+            corruption_rank = ranks.sort()[ranks.length - 1];
+          } else {
+            // old format
+            // Structure: "Strikethrough 2" "NAME RANK", with rank being one digit
+            corruption_name = dps_key.slice(0, dps_key.length - 2);
+            corruption_rank = dps_key.slice(dps_key.length - 1, dps_key.length);
+          }
+
           let dps = data["data"][corruption_name][corruption_rank];
 
           dps_key_value = (dps - baseline_dps) / data["corruption_rating"][corruption_name][corruption_rank];

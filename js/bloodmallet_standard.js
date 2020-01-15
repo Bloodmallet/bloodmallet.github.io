@@ -2512,9 +2512,19 @@ function update_chart() {
         }
 
       } else if (data_view === "corruptions" && chosen_corruption_representation === "dps_corruption_rating") {
-        console.log('special case reached');
-        let name = category.slice(0, category.length - 2);
-        let rank = category.slice(category.length - 1, category.length);
+        let name = "";
+        let rank = "";
+        if (isNaN(parseInt(dps_key.slice(dps_key.length - 1, dps_key.length)))) {
+          // new format
+          name = category;
+          let ranks = Objects.keys(loaded_data[chosen_class][chosen_spec][data_view][fight_style]["corruption_rating"][name]);
+          rank = ranks.sort()[ranks.length - 1];
+        } else {
+          // old format
+          name = category.slice(0, category.length - 2);
+          rank = category.slice(category.length - 1, category.length);
+        }
+
 
         let corruption = loaded_data[chosen_class][chosen_spec][data_view][fight_style]["corruption_rating"][name][rank];
         let dps = loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"][name][rank];
