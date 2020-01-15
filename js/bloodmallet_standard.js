@@ -2170,9 +2170,21 @@ function update_chart() {
             if (chosen_corruption_representation === "dps") {
               portion_spell_id = loaded_data[chosen_class][chosen_spec][data_name][fight_style]["spell_ids"][trait_name]["1"];
             } else {
-              // split name into rank and name
-              let rank = trait_name.slice(trait_name.length - 1, trait_name.length);
-              let name = trait_name.slice(0, trait_name.length - 2);
+
+
+              let rank = '';
+              let name = '';
+              if (isNaN(parseInt(trait_name.slice(trait_name.length - 1, trait_name.length)))) {
+                // new format
+                name = trait_name;
+                let ranks = Object.keys(loaded_data[chosen_class][chosen_spec][data_view][fight_style]["corruption_rating"][name]);
+                rank = ranks.sort()[ranks.length - 1];
+              } else {
+                // old format
+                name = trait_name.slice(0, trait_name.length - 2);
+                rank = trait_name.slice(trait_name.length - 1, trait_name.length);
+              }
+
               portion_spell_id = loaded_data[chosen_class][chosen_spec][data_name][fight_style]["spell_ids"][name][rank];
             }
           }
@@ -2514,10 +2526,10 @@ function update_chart() {
       } else if (data_view === "corruptions" && chosen_corruption_representation === "dps_corruption_rating") {
         let name = "";
         let rank = "";
-        if (isNaN(parseInt(dps_key.slice(dps_key.length - 1, dps_key.length)))) {
+        if (isNaN(parseInt(category.slice(category.length - 1, category.length)))) {
           // new format
           name = category;
-          let ranks = Objects.keys(loaded_data[chosen_class][chosen_spec][data_view][fight_style]["corruption_rating"][name]);
+          let ranks = Object.keys(loaded_data[chosen_class][chosen_spec][data_view][fight_style]["corruption_rating"][name]);
           rank = ranks.sort()[ranks.length - 1];
         } else {
           // old format
