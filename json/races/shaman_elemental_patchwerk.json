@@ -1,20 +1,21 @@
 {
     "class_id": 7,
     "data": {
-        "Dark Iron Dwarf": 94692,
-        "Draenei": 94686,
+        "Dark Iron Dwarf": 94709,
+        "Draenei": 94733,
         "Dwarf": 95800,
-        "Goblin": 95315,
-        "Highmountain Tauren": 95285,
-        "Kul Tiran": 95242,
-        "Maghar Orc": 95089,
-        "Orc": 94728,
-        "Pandaren": 95292,
-        "Tauren": 95759,
-        "Troll": 95314,
-        "Zandalari Troll Bwonsamdi": 94910,
-        "Zandalari Troll Kimbul": 95173,
-        "Zandalari Troll Paku": 95160
+        "Goblin": 95368,
+        "Highmountain Tauren": 95286,
+        "Kul Tiran": 95204,
+        "Maghar Orc": 95103,
+        "Orc": 94803,
+        "Pandaren": 95226,
+        "Tauren": 95799,
+        "Troll": 95264,
+        "Vulpera": 94478,
+        "Zandalari Troll Bwonsamdi": 94819,
+        "Zandalari Troll Kimbul": 95112,
+        "Zandalari Troll Paku": 95186
     },
     "data_type": "races",
     "languages": {
@@ -127,6 +128,16 @@
             "it_IT": "Troll",
             "ko_KR": "트롤",
             "ru_RU": "Тролль"
+        },
+        "Vulpera": {
+            "cn_CN": "Vulpera",
+            "de_DE": "Vulpera",
+            "en_US": "Vulpera",
+            "es_ES": "Vulpera",
+            "fr_FR": "Vulpera",
+            "it_IT": "Vulpera",
+            "ko_KR": "Vulpera",
+            "ru_RU": "Vulpera"
         },
         "Zandalari Troll Bwonsamdi": {
             "cn_CN": "Zandalari Troll Bwonsamdi",
@@ -329,7 +340,7 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "c8c8a05a8e",
+        "simc_hash": "4fbf72f6b7",
         "spec": "elemental",
         "target_error": "0.1",
         "tier": "25"
@@ -338,20 +349,21 @@
         "Dwarf",
         "Tauren",
         "Goblin",
+        "Highmountain Tauren",
         "Troll",
         "Pandaren",
-        "Highmountain Tauren",
         "Kul Tiran",
-        "Zandalari Troll Kimbul",
         "Zandalari Troll Paku",
+        "Zandalari Troll Kimbul",
         "Maghar Orc",
         "Zandalari Troll Bwonsamdi",
         "Orc",
+        "Draenei",
         "Dark Iron Dwarf",
-        "Draenei"
+        "Vulpera"
     ],
     "spec_id": 262,
-    "subtitle": "UTC 2020-01-15 07:27 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c8c8a05a8e\" target=\"blank\">c8c8a05</a>",
+    "subtitle": "UTC 2020-01-16 07:27 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/4fbf72f6b7\" target=\"blank\">4fbf72f</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -452,6 +464,6 @@
             }
         }
     },
-    "timestamp": "2020-01-15 07:27",
+    "timestamp": "2020-01-16 07:27",
     "title": "Races | Elemental Shaman | Patchwerk"
 }

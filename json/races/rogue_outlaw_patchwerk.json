@@ -1,25 +1,26 @@
 {
     "class_id": 4,
     "data": {
-        "Blood Elf": 86953,
-        "Dark Iron Dwarf": 86213,
-        "Dwarf": 87106,
-        "Gnome": 87001,
-        "Goblin": 86835,
-        "Human": 87032,
-        "Kul Tiran": 86768,
-        "Maghar Orc": 86587,
-        "Night Elf": 86835,
-        "Nightborne": 86371,
-        "Orc": 86211,
-        "Pandaren": 86433,
-        "Troll": 86675,
-        "Undead": 86647,
-        "Void Elf": 86921,
-        "Worgen": 86755,
-        "Zandalari Troll Bwonsamdi": 86480,
-        "Zandalari Troll Kimbul": 86523,
-        "Zandalari Troll Paku": 86809
+        "Blood Elf": 91063,
+        "Dark Iron Dwarf": 90294,
+        "Dwarf": 91377,
+        "Gnome": 91011,
+        "Goblin": 90967,
+        "Human": 91202,
+        "Kul Tiran": 90893,
+        "Maghar Orc": 90653,
+        "Mechagnome": 91089,
+        "Night Elf": 91015,
+        "Nightborne": 90559,
+        "Orc": 90299,
+        "Pandaren": 90755,
+        "Troll": 90708,
+        "Undead": 90667,
+        "Void Elf": 91194,
+        "Worgen": 90829,
+        "Zandalari Troll Bwonsamdi": 90507,
+        "Zandalari Troll Kimbul": 90532,
+        "Zandalari Troll Paku": 91042
     },
     "data_type": "races",
     "languages": {
@@ -102,6 +103,16 @@
             "it_IT": "Orco Mag'har",
             "ko_KR": "마그하르 오크",
             "ru_RU": "Маг'хар"
+        },
+        "Mechagnome": {
+            "cn_CN": "Mechagnome",
+            "de_DE": "Mechagnome",
+            "en_US": "Mechagnome",
+            "es_ES": "Mechagnome",
+            "fr_FR": "Mechagnome",
+            "it_IT": "Mechagnome",
+            "ko_KR": "Mechagnome",
+            "ru_RU": "Mechagnome"
         },
         "Night Elf": {
             "cn_CN": "暗夜精灵",
@@ -225,7 +236,7 @@
             "class": "rogue",
             "level": "120",
             "position": "back",
-            "race": "pandaren",
+            "race": "human",
             "role": "attack",
             "spec": "outlaw",
             "talents": "2020022"
@@ -247,7 +258,7 @@
         "finger2": {
             "bonus_id": "4824/1517",
             "enchant": "accord_of_critical_strike",
-            "id": "174531"
+            "id": "174533"
         },
         "hands": {
             "bonus_id": "4824/1517/6552",
@@ -280,7 +291,7 @@
             "finger2": {
                 "bonus_id": "4824/1517",
                 "enchant": "accord_of_critical_strike",
-                "id": "174531"
+                "id": "174533"
             },
             "hands": {
                 "bonus_id": "4824/1517/6552",
@@ -320,16 +331,16 @@
                 "id": "169311"
             },
             "trinket2": {
-                "bonus_id": "4800/1517",
-                "id": "169319"
+                "bonus_id": "4824/1517",
+                "id": "174044"
             },
             "waist": {
                 "bonus_id": "4824/1517",
-                "id": "174140"
+                "id": "174142"
             },
             "wrists": {
                 "bonus_id": "4824/1517/6554",
-                "id": "174145"
+                "id": "174138"
             }
         },
         "legs": {
@@ -353,7 +364,7 @@
             "id": "172185"
         },
         "position": "back",
-        "race": "pandaren",
+        "race": "human",
         "role": "attack",
         "shoulders": {
             "azerite_powers": "411/129/21/13",
@@ -367,16 +378,16 @@
             "id": "169311"
         },
         "trinket2": {
-            "bonus_id": "4800/1517",
-            "id": "169319"
+            "bonus_id": "4824/1517",
+            "id": "174044"
         },
         "waist": {
             "bonus_id": "4824/1517",
-            "id": "174140"
+            "id": "174142"
         },
         "wrists": {
             "bonus_id": "4824/1517/6554",
-            "id": "174145"
+            "id": "174138"
         }
     },
     "simc_settings": {
@@ -384,7 +395,7 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "c8c8a05a8e",
+        "simc_hash": "4fbf72f6b7",
         "spec": "outlaw",
         "target_error": "0.1",
         "tier": "25"
@@ -392,26 +403,27 @@
     "sorted_data_keys": [
         "Dwarf",
         "Human",
-        "Gnome",
-        "Blood Elf",
         "Void Elf",
-        "Night Elf",
-        "Goblin",
+        "Mechagnome",
+        "Blood Elf",
         "Zandalari Troll Paku",
+        "Night Elf",
+        "Gnome",
+        "Goblin",
         "Kul Tiran",
         "Worgen",
+        "Pandaren",
         "Troll",
         "Undead",
         "Maghar Orc",
+        "Nightborne",
         "Zandalari Troll Kimbul",
         "Zandalari Troll Bwonsamdi",
-        "Pandaren",
-        "Nightborne",
-        "Dark Iron Dwarf",
-        "Orc"
+        "Orc",
+        "Dark Iron Dwarf"
     ],
     "spec_id": 260,
-    "subtitle": "UTC 2020-01-15 07:25 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c8c8a05a8e\" target=\"blank\">c8c8a05</a>",
+    "subtitle": "UTC 2020-01-16 07:25 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/4fbf72f6b7\" target=\"blank\">4fbf72f</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -512,6 +524,6 @@
             }
         }
     },
-    "timestamp": "2020-01-15 07:25",
+    "timestamp": "2020-01-16 07:25",
     "title": "Races | Outlaw Rogue | Patchwerk"
 }

@@ -1,27 +1,29 @@
 {
     "class_id": 8,
     "data": {
-        "Blood Elf": 83810,
-        "Dark Iron Dwarf": 83260,
-        "Draenei": 83515,
-        "Dwarf": 84165,
-        "Gnome": 83583,
-        "Goblin": 83673,
-        "Human": 84029,
-        "Kul Tiran": 83819,
-        "Lightforged Draenei": 84430,
-        "Maghar Orc": 83509,
-        "Night Elf": 83733,
-        "Nightborne": 83868,
-        "Orc": 83528,
-        "Pandaren": 83731,
-        "Troll": 83573,
-        "Undead": 83558,
-        "Void Elf": 83975,
-        "Worgen": 83746,
-        "Zandalari Troll Bwonsamdi": 83505,
-        "Zandalari Troll Kimbul": 83370,
-        "Zandalari Troll Paku": 83685
+        "Blood Elf": 83839,
+        "Dark Iron Dwarf": 83256,
+        "Draenei": 83390,
+        "Dwarf": 84090,
+        "Gnome": 83694,
+        "Goblin": 83811,
+        "Human": 84191,
+        "Kul Tiran": 83824,
+        "Lightforged Draenei": 84422,
+        "Maghar Orc": 83599,
+        "Mechagnome": 84100,
+        "Night Elf": 83711,
+        "Nightborne": 83815,
+        "Orc": 83437,
+        "Pandaren": 83812,
+        "Troll": 83618,
+        "Undead": 83567,
+        "Void Elf": 83946,
+        "Vulpera": 82923,
+        "Worgen": 83758,
+        "Zandalari Troll Bwonsamdi": 83638,
+        "Zandalari Troll Kimbul": 83567,
+        "Zandalari Troll Paku": 84028
     },
     "data_type": "races",
     "languages": {
@@ -125,6 +127,16 @@
             "ko_KR": "마그하르 오크",
             "ru_RU": "Маг'хар"
         },
+        "Mechagnome": {
+            "cn_CN": "Mechagnome",
+            "de_DE": "Mechagnome",
+            "en_US": "Mechagnome",
+            "es_ES": "Mechagnome",
+            "fr_FR": "Mechagnome",
+            "it_IT": "Mechagnome",
+            "ko_KR": "Mechagnome",
+            "ru_RU": "Mechagnome"
+        },
         "Night Elf": {
             "cn_CN": "暗夜精灵",
             "de_DE": "Nachtelf",
@@ -194,6 +206,16 @@
             "it_IT": "Elfo del Vuoto",
             "ko_KR": "공허 엘프",
             "ru_RU": "Эльф Бездны"
+        },
+        "Vulpera": {
+            "cn_CN": "Vulpera",
+            "de_DE": "Vulpera",
+            "en_US": "Vulpera",
+            "es_ES": "Vulpera",
+            "fr_FR": "Vulpera",
+            "it_IT": "Vulpera",
+            "ko_KR": "Vulpera",
+            "ru_RU": "Vulpera"
         },
         "Worgen": {
             "cn_CN": "狼人",
@@ -404,36 +426,38 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "c8c8a05a8e",
+        "simc_hash": "4fbf72f6b7",
         "spec": "frost",
         "target_error": "0.2",
         "tier": "25"
     },
     "sorted_data_keys": [
         "Lightforged Draenei",
-        "Dwarf",
         "Human",
+        "Mechagnome",
+        "Dwarf",
+        "Zandalari Troll Paku",
         "Void Elf",
-        "Nightborne",
-        "Kul Tiran",
         "Blood Elf",
+        "Kul Tiran",
+        "Nightborne",
+        "Pandaren",
+        "Goblin",
         "Worgen",
         "Night Elf",
-        "Pandaren",
-        "Zandalari Troll Paku",
-        "Goblin",
         "Gnome",
+        "Zandalari Troll Bwonsamdi",
         "Troll",
+        "Maghar Orc",
         "Undead",
+        "Zandalari Troll Kimbul",
         "Orc",
         "Draenei",
-        "Maghar Orc",
-        "Zandalari Troll Bwonsamdi",
-        "Zandalari Troll Kimbul",
-        "Dark Iron Dwarf"
+        "Dark Iron Dwarf",
+        "Vulpera"
     ],
     "spec_id": 64,
-    "subtitle": "UTC 2020-01-15 07:30 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c8c8a05a8e\" target=\"blank\">c8c8a05</a>",
+    "subtitle": "UTC 2020-01-16 07:32 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/4fbf72f6b7\" target=\"blank\">4fbf72f</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -534,6 +558,6 @@
             }
         }
     },
-    "timestamp": "2020-01-15 07:30",
+    "timestamp": "2020-01-16 07:32",
     "title": "Races | Frost Mage | Hecticaddcleave"
 }

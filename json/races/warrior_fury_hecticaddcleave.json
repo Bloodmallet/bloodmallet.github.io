@@ -1,29 +1,31 @@
 {
     "class_id": 1,
     "data": {
-        "Blood Elf": 142213,
-        "Dark Iron Dwarf": 141428,
-        "Draenei": 141416,
-        "Dwarf": 143707,
-        "Gnome": 142879,
-        "Goblin": 142121,
-        "Highmountain Tauren": 142569,
-        "Human": 143566,
-        "Kul Tiran": 142345,
-        "Lightforged Draenei": 141900,
-        "Maghar Orc": 142121,
-        "Night Elf": 141915,
-        "Nightborne": 141283,
-        "Orc": 141543,
-        "Pandaren": 143459,
-        "Tauren": 143361,
-        "Troll": 141908,
-        "Undead": 141865,
-        "Void Elf": 142722,
-        "Worgen": 142111,
-        "Zandalari Troll Bwonsamdi": 141458,
-        "Zandalari Troll Kimbul": 141631,
-        "Zandalari Troll Paku": 142574
+        "Blood Elf": 137026,
+        "Dark Iron Dwarf": 136091,
+        "Draenei": 136421,
+        "Dwarf": 138340,
+        "Gnome": 137580,
+        "Goblin": 137027,
+        "Highmountain Tauren": 137150,
+        "Human": 138268,
+        "Kul Tiran": 137413,
+        "Lightforged Draenei": 136822,
+        "Maghar Orc": 136796,
+        "Mechagnome": 137035,
+        "Night Elf": 137105,
+        "Nightborne": 135968,
+        "Orc": 136321,
+        "Pandaren": 138078,
+        "Tauren": 138355,
+        "Troll": 137058,
+        "Undead": 136452,
+        "Void Elf": 137293,
+        "Vulpera": 134496,
+        "Worgen": 137138,
+        "Zandalari Troll Bwonsamdi": 136484,
+        "Zandalari Troll Kimbul": 136382,
+        "Zandalari Troll Paku": 137572
     },
     "data_type": "races",
     "languages": {
@@ -137,6 +139,16 @@
             "ko_KR": "마그하르 오크",
             "ru_RU": "Маг'хар"
         },
+        "Mechagnome": {
+            "cn_CN": "Mechagnome",
+            "de_DE": "Mechagnome",
+            "en_US": "Mechagnome",
+            "es_ES": "Mechagnome",
+            "fr_FR": "Mechagnome",
+            "it_IT": "Mechagnome",
+            "ko_KR": "Mechagnome",
+            "ru_RU": "Mechagnome"
+        },
         "Night Elf": {
             "cn_CN": "暗夜精灵",
             "de_DE": "Nachtelf",
@@ -216,6 +228,16 @@
             "it_IT": "Elfo del Vuoto",
             "ko_KR": "공허 엘프",
             "ru_RU": "Эльф Бездны"
+        },
+        "Vulpera": {
+            "cn_CN": "Vulpera",
+            "de_DE": "Vulpera",
+            "en_US": "Vulpera",
+            "es_ES": "Vulpera",
+            "fr_FR": "Vulpera",
+            "it_IT": "Vulpera",
+            "ko_KR": "Vulpera",
+            "ru_RU": "Vulpera"
         },
         "Worgen": {
             "cn_CN": "狼人",
@@ -424,38 +446,40 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "c8c8a05a8e",
+        "simc_hash": "4fbf72f6b7",
         "spec": "fury",
         "target_error": "0.2",
         "tier": "25"
     },
     "sorted_data_keys": [
+        "Tauren",
         "Dwarf",
         "Human",
         "Pandaren",
-        "Tauren",
         "Gnome",
-        "Void Elf",
         "Zandalari Troll Paku",
-        "Highmountain Tauren",
         "Kul Tiran",
-        "Blood Elf",
-        "Goblin",
-        "Maghar Orc",
+        "Void Elf",
+        "Highmountain Tauren",
         "Worgen",
         "Night Elf",
         "Troll",
+        "Mechagnome",
+        "Goblin",
+        "Blood Elf",
         "Lightforged Draenei",
+        "Maghar Orc",
+        "Zandalari Troll Bwonsamdi",
         "Undead",
+        "Draenei",
         "Zandalari Troll Kimbul",
         "Orc",
-        "Zandalari Troll Bwonsamdi",
         "Dark Iron Dwarf",
-        "Draenei",
-        "Nightborne"
+        "Nightborne",
+        "Vulpera"
     ],
     "spec_id": 72,
-    "subtitle": "UTC 2020-01-15 07:34 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c8c8a05a8e\" target=\"blank\">c8c8a05</a>",
+    "subtitle": "UTC 2020-01-16 07:37 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/4fbf72f6b7\" target=\"blank\">4fbf72f</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -556,6 +580,6 @@
             }
         }
     },
-    "timestamp": "2020-01-15 07:34",
+    "timestamp": "2020-01-16 07:37",
     "title": "Races | Fury Warrior | Hecticaddcleave"
 }

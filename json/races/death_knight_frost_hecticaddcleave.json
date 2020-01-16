@@ -1,29 +1,31 @@
 {
     "class_id": 6,
     "data": {
-        "Blood Elf": 106551,
-        "Dark Iron Dwarf": 106975,
-        "Draenei": 107175,
-        "Dwarf": 108401,
-        "Gnome": 108147,
-        "Goblin": 108188,
-        "Highmountain Tauren": 107835,
-        "Human": 108793,
-        "Kul Tiran": 107515,
-        "Lightforged Draenei": 109730,
-        "Maghar Orc": 107448,
-        "Night Elf": 108112,
-        "Nightborne": 108280,
-        "Orc": 107037,
-        "Pandaren": 107869,
-        "Tauren": 108478,
-        "Troll": 107564,
-        "Undead": 107705,
-        "Void Elf": 107879,
-        "Worgen": 107430,
-        "Zandalari Troll Bwonsamdi": 107256,
-        "Zandalari Troll Kimbul": 107251,
-        "Zandalari Troll Paku": 107493
+        "Blood Elf": 102999,
+        "Dark Iron Dwarf": 103346,
+        "Draenei": 103480,
+        "Dwarf": 104656,
+        "Gnome": 104598,
+        "Goblin": 104301,
+        "Highmountain Tauren": 104121,
+        "Human": 105117,
+        "Kul Tiran": 104055,
+        "Lightforged Draenei": 106095,
+        "Maghar Orc": 104102,
+        "Mechagnome": 104309,
+        "Night Elf": 104481,
+        "Nightborne": 104760,
+        "Orc": 103424,
+        "Pandaren": 104255,
+        "Tauren": 104603,
+        "Troll": 104088,
+        "Undead": 104024,
+        "Void Elf": 104118,
+        "Vulpera": 103001,
+        "Worgen": 103924,
+        "Zandalari Troll Bwonsamdi": 103972,
+        "Zandalari Troll Kimbul": 103595,
+        "Zandalari Troll Paku": 103862
     },
     "data_type": "races",
     "languages": {
@@ -137,6 +139,16 @@
             "ko_KR": "마그하르 오크",
             "ru_RU": "Маг'хар"
         },
+        "Mechagnome": {
+            "cn_CN": "Mechagnome",
+            "de_DE": "Mechagnome",
+            "en_US": "Mechagnome",
+            "es_ES": "Mechagnome",
+            "fr_FR": "Mechagnome",
+            "it_IT": "Mechagnome",
+            "ko_KR": "Mechagnome",
+            "ru_RU": "Mechagnome"
+        },
         "Night Elf": {
             "cn_CN": "暗夜精灵",
             "de_DE": "Nachtelf",
@@ -216,6 +228,16 @@
             "it_IT": "Elfo del Vuoto",
             "ko_KR": "공허 엘프",
             "ru_RU": "Эльф Бездны"
+        },
+        "Vulpera": {
+            "cn_CN": "Vulpera",
+            "de_DE": "Vulpera",
+            "en_US": "Vulpera",
+            "es_ES": "Vulpera",
+            "fr_FR": "Vulpera",
+            "it_IT": "Vulpera",
+            "ko_KR": "Vulpera",
+            "ru_RU": "Vulpera"
         },
         "Worgen": {
             "cn_CN": "狼人",
@@ -428,7 +450,7 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "c8c8a05a8e",
+        "simc_hash": "4fbf72f6b7",
         "spec": "frost",
         "target_error": "0.2",
         "tier": "25"
@@ -436,30 +458,32 @@
     "sorted_data_keys": [
         "Lightforged Draenei",
         "Human",
-        "Tauren",
-        "Dwarf",
         "Nightborne",
-        "Goblin",
+        "Dwarf",
+        "Tauren",
         "Gnome",
         "Night Elf",
-        "Void Elf",
+        "Mechagnome",
+        "Goblin",
         "Pandaren",
         "Highmountain Tauren",
-        "Undead",
+        "Void Elf",
+        "Maghar Orc",
         "Troll",
         "Kul Tiran",
-        "Zandalari Troll Paku",
-        "Maghar Orc",
-        "Worgen",
+        "Undead",
         "Zandalari Troll Bwonsamdi",
+        "Worgen",
+        "Zandalari Troll Paku",
         "Zandalari Troll Kimbul",
         "Draenei",
         "Orc",
         "Dark Iron Dwarf",
+        "Vulpera",
         "Blood Elf"
     ],
     "spec_id": 251,
-    "subtitle": "UTC 2020-01-15 07:28 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c8c8a05a8e\" target=\"blank\">c8c8a05</a>",
+    "subtitle": "UTC 2020-01-16 07:29 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/4fbf72f6b7\" target=\"blank\">4fbf72f</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -560,6 +584,6 @@
             }
         }
     },
-    "timestamp": "2020-01-15 07:28",
+    "timestamp": "2020-01-16 07:29",
     "title": "Races | Frost Death Knight | Hecticaddcleave"
 }

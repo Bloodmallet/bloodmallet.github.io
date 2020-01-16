@@ -1,29 +1,31 @@
 {
     "class_id": 1,
     "data": {
-        "Blood Elf": 89203,
-        "Dark Iron Dwarf": 88951,
-        "Draenei": 88917,
-        "Dwarf": 90235,
-        "Gnome": 89576,
-        "Goblin": 89445,
-        "Highmountain Tauren": 89590,
-        "Human": 90014,
-        "Kul Tiran": 89516,
-        "Lightforged Draenei": 89210,
-        "Maghar Orc": 89277,
-        "Night Elf": 89248,
-        "Nightborne": 88859,
-        "Orc": 88881,
-        "Pandaren": 89811,
-        "Tauren": 90239,
-        "Troll": 89296,
-        "Undead": 89341,
-        "Void Elf": 89716,
-        "Worgen": 89271,
-        "Zandalari Troll Bwonsamdi": 89121,
-        "Zandalari Troll Kimbul": 89224,
-        "Zandalari Troll Paku": 89452
+        "Blood Elf": 86658,
+        "Dark Iron Dwarf": 86263,
+        "Draenei": 86338,
+        "Dwarf": 87533,
+        "Gnome": 86884,
+        "Goblin": 86769,
+        "Highmountain Tauren": 86916,
+        "Human": 87375,
+        "Kul Tiran": 86972,
+        "Lightforged Draenei": 86544,
+        "Maghar Orc": 86595,
+        "Mechagnome": 86859,
+        "Night Elf": 86647,
+        "Nightborne": 86301,
+        "Orc": 86304,
+        "Pandaren": 87265,
+        "Tauren": 87500,
+        "Troll": 86596,
+        "Undead": 86743,
+        "Void Elf": 87086,
+        "Vulpera": 85683,
+        "Worgen": 86610,
+        "Zandalari Troll Bwonsamdi": 86548,
+        "Zandalari Troll Kimbul": 86584,
+        "Zandalari Troll Paku": 86810
     },
     "data_type": "races",
     "languages": {
@@ -137,6 +139,16 @@
             "ko_KR": "마그하르 오크",
             "ru_RU": "Маг'хар"
         },
+        "Mechagnome": {
+            "cn_CN": "Mechagnome",
+            "de_DE": "Mechagnome",
+            "en_US": "Mechagnome",
+            "es_ES": "Mechagnome",
+            "fr_FR": "Mechagnome",
+            "it_IT": "Mechagnome",
+            "ko_KR": "Mechagnome",
+            "ru_RU": "Mechagnome"
+        },
         "Night Elf": {
             "cn_CN": "暗夜精灵",
             "de_DE": "Nachtelf",
@@ -216,6 +228,16 @@
             "it_IT": "Elfo del Vuoto",
             "ko_KR": "공허 엘프",
             "ru_RU": "Эльф Бездны"
+        },
+        "Vulpera": {
+            "cn_CN": "Vulpera",
+            "de_DE": "Vulpera",
+            "en_US": "Vulpera",
+            "es_ES": "Vulpera",
+            "fr_FR": "Vulpera",
+            "it_IT": "Vulpera",
+            "ko_KR": "Vulpera",
+            "ru_RU": "Vulpera"
         },
         "Worgen": {
             "cn_CN": "狼人",
@@ -424,38 +446,40 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "c8c8a05a8e",
+        "simc_hash": "4fbf72f6b7",
         "spec": "fury",
         "target_error": "0.1",
         "tier": "25"
     },
     "sorted_data_keys": [
-        "Tauren",
         "Dwarf",
+        "Tauren",
         "Human",
         "Pandaren",
         "Void Elf",
+        "Kul Tiran",
         "Highmountain Tauren",
         "Gnome",
-        "Kul Tiran",
+        "Mechagnome",
         "Zandalari Troll Paku",
         "Goblin",
         "Undead",
+        "Blood Elf",
+        "Night Elf",
+        "Worgen",
         "Troll",
         "Maghar Orc",
-        "Worgen",
-        "Night Elf",
         "Zandalari Troll Kimbul",
-        "Lightforged Draenei",
-        "Blood Elf",
         "Zandalari Troll Bwonsamdi",
-        "Dark Iron Dwarf",
+        "Lightforged Draenei",
         "Draenei",
         "Orc",
-        "Nightborne"
+        "Nightborne",
+        "Dark Iron Dwarf",
+        "Vulpera"
     ],
     "spec_id": 72,
-    "subtitle": "UTC 2020-01-15 07:28 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c8c8a05a8e\" target=\"blank\">c8c8a05</a>",
+    "subtitle": "UTC 2020-01-16 07:28 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/4fbf72f6b7\" target=\"blank\">4fbf72f</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -556,6 +580,6 @@
             }
         }
     },
-    "timestamp": "2020-01-15 07:28",
+    "timestamp": "2020-01-16 07:28",
     "title": "Races | Fury Warrior | Patchwerk"
 }

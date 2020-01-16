@@ -1,25 +1,26 @@
 {
     "class_id": 4,
     "data": {
-        "Blood Elf": 93528,
-        "Dark Iron Dwarf": 93012,
-        "Dwarf": 93728,
-        "Gnome": 93787,
-        "Goblin": 93688,
-        "Human": 93934,
-        "Kul Tiran": 93533,
-        "Maghar Orc": 93671,
-        "Night Elf": 93356,
-        "Nightborne": 93370,
-        "Orc": 93049,
-        "Pandaren": 93156,
-        "Troll": 93691,
-        "Undead": 93180,
-        "Void Elf": 93633,
-        "Worgen": 93213,
-        "Zandalari Troll Bwonsamdi": 92969,
-        "Zandalari Troll Kimbul": 93004,
-        "Zandalari Troll Paku": 93356
+        "Blood Elf": 94268,
+        "Dark Iron Dwarf": 93724,
+        "Dwarf": 94412,
+        "Gnome": 94424,
+        "Goblin": 94430,
+        "Human": 94701,
+        "Kul Tiran": 94191,
+        "Maghar Orc": 94388,
+        "Mechagnome": 94363,
+        "Night Elf": 93966,
+        "Nightborne": 93952,
+        "Orc": 93604,
+        "Pandaren": 93822,
+        "Troll": 94382,
+        "Undead": 93874,
+        "Void Elf": 94344,
+        "Worgen": 94074,
+        "Zandalari Troll Bwonsamdi": 93728,
+        "Zandalari Troll Kimbul": 93671,
+        "Zandalari Troll Paku": 94170
     },
     "data_type": "races",
     "languages": {
@@ -102,6 +103,16 @@
             "it_IT": "Orco Mag'har",
             "ko_KR": "마그하르 오크",
             "ru_RU": "Маг'хар"
+        },
+        "Mechagnome": {
+            "cn_CN": "Mechagnome",
+            "de_DE": "Mechagnome",
+            "en_US": "Mechagnome",
+            "es_ES": "Mechagnome",
+            "fr_FR": "Mechagnome",
+            "it_IT": "Mechagnome",
+            "ko_KR": "Mechagnome",
+            "ru_RU": "Mechagnome"
         },
         "Night Elf": {
             "cn_CN": "暗夜精灵",
@@ -225,7 +236,7 @@
             "class": "rogue",
             "level": "120",
             "position": "back",
-            "race": "troll",
+            "race": "human",
             "role": "attack",
             "spec": "assassination",
             "talents": "2310021"
@@ -241,17 +252,17 @@
         },
         "finger1": {
             "bonus_id": "4824/1517",
-            "enchant": "accord_of_haste",
-            "id": "174530"
+            "enchant": "accord_of_mastery",
+            "id": "174532"
         },
         "finger2": {
             "bonus_id": "4824/1517",
-            "enchant": "accord_of_haste",
-            "id": "174531"
+            "enchant": "accord_of_mastery",
+            "id": "174533"
         },
         "hands": {
             "bonus_id": "4824/1517/6552",
-            "id": "174137"
+            "id": "174146"
         },
         "head": {
             "azerite_powers": "136/249/30/13",
@@ -274,17 +285,17 @@
             },
             "finger1": {
                 "bonus_id": "4824/1517",
-                "enchant": "accord_of_haste",
-                "id": "174530"
+                "enchant": "accord_of_mastery",
+                "id": "174532"
             },
             "finger2": {
                 "bonus_id": "4824/1517",
-                "enchant": "accord_of_haste",
-                "id": "174531"
+                "enchant": "accord_of_mastery",
+                "id": "174533"
             },
             "hands": {
                 "bonus_id": "4824/1517/6552",
-                "id": "174137"
+                "id": "174146"
             },
             "head": {
                 "azerite_powers": "136/249/30/13",
@@ -293,7 +304,7 @@
             },
             "legs": {
                 "bonus_id": "4824/1517",
-                "id": "174143"
+                "id": "174139"
             },
             "main_hand": {
                 "bonus_id": "4824/1517",
@@ -308,7 +319,7 @@
             "off_hand": {
                 "bonus_id": "4824/1517",
                 "enchant": "masterful_navigation",
-                "id": "172185"
+                "id": "172227"
             },
             "shoulders": {
                 "azerite_powers": "136/193/30/13",
@@ -316,8 +327,8 @@
                 "id": "159339"
             },
             "trinket1": {
-                "bonus_id": "4800/1517",
-                "id": "169314"
+                "bonus_id": "4824/1517",
+                "id": "174500"
             },
             "trinket2": {
                 "bonus_id": "4800/1517",
@@ -334,7 +345,7 @@
         },
         "legs": {
             "bonus_id": "4824/1517",
-            "id": "174143"
+            "id": "174139"
         },
         "level": "120",
         "main_hand": {
@@ -350,10 +361,10 @@
         "off_hand": {
             "bonus_id": "4824/1517",
             "enchant": "masterful_navigation",
-            "id": "172185"
+            "id": "172227"
         },
         "position": "back",
-        "race": "troll",
+        "race": "human",
         "role": "attack",
         "shoulders": {
             "azerite_powers": "136/193/30/13",
@@ -363,8 +374,8 @@
         "spec": "assassination",
         "talents": "2310021",
         "trinket1": {
-            "bonus_id": "4800/1517",
-            "id": "169314"
+            "bonus_id": "4824/1517",
+            "id": "174500"
         },
         "trinket2": {
             "bonus_id": "4800/1517",
@@ -384,34 +395,35 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "c8c8a05a8e",
+        "simc_hash": "4fbf72f6b7",
         "spec": "assassination",
         "target_error": "0.1",
         "tier": "25"
     },
     "sorted_data_keys": [
         "Human",
+        "Goblin",
         "Gnome",
         "Dwarf",
-        "Troll",
-        "Goblin",
         "Maghar Orc",
+        "Troll",
+        "Mechagnome",
         "Void Elf",
-        "Kul Tiran",
         "Blood Elf",
-        "Nightborne",
-        "Night Elf",
+        "Kul Tiran",
         "Zandalari Troll Paku",
         "Worgen",
+        "Night Elf",
+        "Nightborne",
         "Undead",
         "Pandaren",
-        "Orc",
+        "Zandalari Troll Bwonsamdi",
         "Dark Iron Dwarf",
         "Zandalari Troll Kimbul",
-        "Zandalari Troll Bwonsamdi"
+        "Orc"
     ],
     "spec_id": 259,
-    "subtitle": "UTC 2020-01-15 07:24 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c8c8a05a8e\" target=\"blank\">c8c8a05</a>",
+    "subtitle": "UTC 2020-01-16 07:24 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/4fbf72f6b7\" target=\"blank\">4fbf72f</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -512,6 +524,6 @@
             }
         }
     },
-    "timestamp": "2020-01-15 07:24",
+    "timestamp": "2020-01-16 07:24",
     "title": "Races | Assassination Rogue | Patchwerk"
 }

@@ -1,27 +1,29 @@
 {
     "class_id": 8,
     "data": {
-        "Blood Elf": 104970,
-        "Dark Iron Dwarf": 105385,
-        "Draenei": 104862,
-        "Dwarf": 105888,
-        "Gnome": 105503,
-        "Goblin": 105394,
-        "Human": 106092,
-        "Kul Tiran": 105489,
-        "Lightforged Draenei": 103325,
-        "Maghar Orc": 106340,
-        "Night Elf": 105054,
-        "Nightborne": 105568,
-        "Orc": 105479,
-        "Pandaren": 105475,
-        "Troll": 106606,
-        "Undead": 105120,
-        "Void Elf": 105977,
-        "Worgen": 104856,
-        "Zandalari Troll Bwonsamdi": 104932,
-        "Zandalari Troll Kimbul": 104970,
-        "Zandalari Troll Paku": 105024
+        "Blood Elf": 104751,
+        "Dark Iron Dwarf": 105522,
+        "Draenei": 105037,
+        "Dwarf": 106156,
+        "Gnome": 105351,
+        "Goblin": 105576,
+        "Human": 106310,
+        "Kul Tiran": 105512,
+        "Lightforged Draenei": 103308,
+        "Maghar Orc": 106466,
+        "Mechagnome": 105448,
+        "Night Elf": 105264,
+        "Nightborne": 105522,
+        "Orc": 105266,
+        "Pandaren": 105358,
+        "Troll": 106566,
+        "Undead": 104988,
+        "Void Elf": 106032,
+        "Vulpera": 101929,
+        "Worgen": 105064,
+        "Zandalari Troll Bwonsamdi": 104993,
+        "Zandalari Troll Kimbul": 105152,
+        "Zandalari Troll Paku": 105027
     },
     "data_type": "races",
     "languages": {
@@ -125,6 +127,16 @@
             "ko_KR": "마그하르 오크",
             "ru_RU": "Маг'хар"
         },
+        "Mechagnome": {
+            "cn_CN": "Mechagnome",
+            "de_DE": "Mechagnome",
+            "en_US": "Mechagnome",
+            "es_ES": "Mechagnome",
+            "fr_FR": "Mechagnome",
+            "it_IT": "Mechagnome",
+            "ko_KR": "Mechagnome",
+            "ru_RU": "Mechagnome"
+        },
         "Night Elf": {
             "cn_CN": "暗夜精灵",
             "de_DE": "Nachtelf",
@@ -194,6 +206,16 @@
             "it_IT": "Elfo del Vuoto",
             "ko_KR": "공허 엘프",
             "ru_RU": "Эльф Бездны"
+        },
+        "Vulpera": {
+            "cn_CN": "Vulpera",
+            "de_DE": "Vulpera",
+            "en_US": "Vulpera",
+            "es_ES": "Vulpera",
+            "fr_FR": "Vulpera",
+            "it_IT": "Vulpera",
+            "ko_KR": "Vulpera",
+            "ru_RU": "Vulpera"
         },
         "Worgen": {
             "cn_CN": "狼人",
@@ -404,7 +426,7 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "c8c8a05a8e",
+        "simc_hash": "4fbf72f6b7",
         "spec": "fire",
         "target_error": "0.2",
         "tier": "25"
@@ -413,27 +435,29 @@
         "Troll",
         "Maghar Orc",
         "Human",
-        "Void Elf",
         "Dwarf",
-        "Nightborne",
-        "Gnome",
-        "Kul Tiran",
-        "Orc",
-        "Pandaren",
+        "Void Elf",
         "Goblin",
         "Dark Iron Dwarf",
-        "Undead",
+        "Nightborne",
+        "Kul Tiran",
+        "Mechagnome",
+        "Pandaren",
+        "Gnome",
+        "Orc",
         "Night Elf",
-        "Zandalari Troll Paku",
-        "Blood Elf",
         "Zandalari Troll Kimbul",
-        "Zandalari Troll Bwonsamdi",
-        "Draenei",
         "Worgen",
-        "Lightforged Draenei"
+        "Draenei",
+        "Zandalari Troll Paku",
+        "Zandalari Troll Bwonsamdi",
+        "Undead",
+        "Blood Elf",
+        "Lightforged Draenei",
+        "Vulpera"
     ],
     "spec_id": 63,
-    "subtitle": "UTC 2020-01-15 07:30 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c8c8a05a8e\" target=\"blank\">c8c8a05</a>",
+    "subtitle": "UTC 2020-01-16 07:31 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/4fbf72f6b7\" target=\"blank\">4fbf72f</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -534,6 +558,6 @@
             }
         }
     },
-    "timestamp": "2020-01-15 07:30",
+    "timestamp": "2020-01-16 07:31",
     "title": "Races | Fire Mage | Hecticaddcleave"
 }

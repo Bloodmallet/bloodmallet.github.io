@@ -1,29 +1,31 @@
 {
     "class_id": 6,
     "data": {
-        "Blood Elf": 92107,
-        "Dark Iron Dwarf": 91441,
-        "Draenei": 91444,
-        "Dwarf": 92148,
-        "Gnome": 92270,
-        "Goblin": 92191,
-        "Highmountain Tauren": 92030,
-        "Human": 92691,
-        "Kul Tiran": 92032,
-        "Lightforged Draenei": 92001,
-        "Maghar Orc": 91964,
-        "Night Elf": 91837,
-        "Nightborne": 91569,
-        "Orc": 91843,
-        "Pandaren": 92482,
-        "Tauren": 91976,
-        "Troll": 92510,
-        "Undead": 91735,
-        "Void Elf": 91691,
-        "Worgen": 91959,
-        "Zandalari Troll Bwonsamdi": 91798,
-        "Zandalari Troll Kimbul": 91877,
-        "Zandalari Troll Paku": 92183
+        "Blood Elf": 88447,
+        "Dark Iron Dwarf": 87754,
+        "Draenei": 87794,
+        "Dwarf": 88378,
+        "Gnome": 88557,
+        "Goblin": 88493,
+        "Highmountain Tauren": 88330,
+        "Human": 88922,
+        "Kul Tiran": 88356,
+        "Lightforged Draenei": 88288,
+        "Maghar Orc": 88278,
+        "Mechagnome": 88377,
+        "Night Elf": 88210,
+        "Nightborne": 88007,
+        "Orc": 88087,
+        "Pandaren": 88696,
+        "Tauren": 88253,
+        "Troll": 88798,
+        "Undead": 88074,
+        "Void Elf": 88008,
+        "Vulpera": 87481,
+        "Worgen": 88253,
+        "Zandalari Troll Bwonsamdi": 88040,
+        "Zandalari Troll Kimbul": 88246,
+        "Zandalari Troll Paku": 88523
     },
     "data_type": "races",
     "languages": {
@@ -137,6 +139,16 @@
             "ko_KR": "마그하르 오크",
             "ru_RU": "Маг'хар"
         },
+        "Mechagnome": {
+            "cn_CN": "Mechagnome",
+            "de_DE": "Mechagnome",
+            "en_US": "Mechagnome",
+            "es_ES": "Mechagnome",
+            "fr_FR": "Mechagnome",
+            "it_IT": "Mechagnome",
+            "ko_KR": "Mechagnome",
+            "ru_RU": "Mechagnome"
+        },
         "Night Elf": {
             "cn_CN": "暗夜精灵",
             "de_DE": "Nachtelf",
@@ -216,6 +228,16 @@
             "it_IT": "Elfo del Vuoto",
             "ko_KR": "공허 엘프",
             "ru_RU": "Эльф Бездны"
+        },
+        "Vulpera": {
+            "cn_CN": "Vulpera",
+            "de_DE": "Vulpera",
+            "en_US": "Vulpera",
+            "es_ES": "Vulpera",
+            "fr_FR": "Vulpera",
+            "it_IT": "Vulpera",
+            "ko_KR": "Vulpera",
+            "ru_RU": "Vulpera"
         },
         "Worgen": {
             "cn_CN": "狼人",
@@ -418,7 +440,7 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "c8c8a05a8e",
+        "simc_hash": "4fbf72f6b7",
         "spec": "unholy",
         "target_error": "0.1",
         "tier": "25"
@@ -428,28 +450,30 @@
         "Troll",
         "Pandaren",
         "Gnome",
-        "Goblin",
         "Zandalari Troll Paku",
-        "Dwarf",
+        "Goblin",
         "Blood Elf",
+        "Dwarf",
+        "Mechagnome",
         "Kul Tiran",
         "Highmountain Tauren",
         "Lightforged Draenei",
-        "Tauren",
         "Maghar Orc",
         "Worgen",
+        "Tauren",
         "Zandalari Troll Kimbul",
-        "Orc",
         "Night Elf",
-        "Zandalari Troll Bwonsamdi",
+        "Orc",
         "Undead",
+        "Zandalari Troll Bwonsamdi",
         "Void Elf",
         "Nightborne",
         "Draenei",
-        "Dark Iron Dwarf"
+        "Dark Iron Dwarf",
+        "Vulpera"
     ],
     "spec_id": 252,
-    "subtitle": "UTC 2020-01-15 07:21 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c8c8a05a8e\" target=\"blank\">c8c8a05</a>",
+    "subtitle": "UTC 2020-01-16 07:20 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/4fbf72f6b7\" target=\"blank\">4fbf72f</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -550,6 +574,6 @@
             }
         }
     },
-    "timestamp": "2020-01-15 07:21",
+    "timestamp": "2020-01-16 07:20",
     "title": "Races | Unholy Death Knight | Patchwerk"
 }

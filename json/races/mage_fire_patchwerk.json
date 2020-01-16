@@ -1,27 +1,29 @@
 {
     "class_id": 8,
     "data": {
-        "Blood Elf": 76223,
-        "Dark Iron Dwarf": 76529,
-        "Draenei": 76151,
-        "Dwarf": 77035,
-        "Gnome": 76660,
-        "Goblin": 76617,
-        "Human": 76966,
-        "Kul Tiran": 76650,
-        "Lightforged Draenei": 76301,
-        "Maghar Orc": 76941,
-        "Night Elf": 76282,
-        "Nightborne": 76753,
-        "Orc": 76500,
-        "Pandaren": 76686,
-        "Troll": 77474,
-        "Undead": 76361,
-        "Void Elf": 77086,
-        "Worgen": 76315,
-        "Zandalari Troll Bwonsamdi": 76299,
-        "Zandalari Troll Kimbul": 76389,
-        "Zandalari Troll Paku": 76311
+        "Blood Elf": 76297,
+        "Dark Iron Dwarf": 76518,
+        "Draenei": 76100,
+        "Dwarf": 77089,
+        "Gnome": 76618,
+        "Goblin": 76629,
+        "Human": 76975,
+        "Kul Tiran": 76615,
+        "Lightforged Draenei": 76355,
+        "Maghar Orc": 76966,
+        "Mechagnome": 76607,
+        "Night Elf": 76331,
+        "Nightborne": 76695,
+        "Orc": 76359,
+        "Pandaren": 76643,
+        "Troll": 77477,
+        "Undead": 76415,
+        "Void Elf": 77164,
+        "Vulpera": 74824,
+        "Worgen": 76270,
+        "Zandalari Troll Bwonsamdi": 76226,
+        "Zandalari Troll Kimbul": 76401,
+        "Zandalari Troll Paku": 76342
     },
     "data_type": "races",
     "languages": {
@@ -125,6 +127,16 @@
             "ko_KR": "마그하르 오크",
             "ru_RU": "Маг'хар"
         },
+        "Mechagnome": {
+            "cn_CN": "Mechagnome",
+            "de_DE": "Mechagnome",
+            "en_US": "Mechagnome",
+            "es_ES": "Mechagnome",
+            "fr_FR": "Mechagnome",
+            "it_IT": "Mechagnome",
+            "ko_KR": "Mechagnome",
+            "ru_RU": "Mechagnome"
+        },
         "Night Elf": {
             "cn_CN": "暗夜精灵",
             "de_DE": "Nachtelf",
@@ -194,6 +206,16 @@
             "it_IT": "Elfo del Vuoto",
             "ko_KR": "공허 엘프",
             "ru_RU": "Эльф Бездны"
+        },
+        "Vulpera": {
+            "cn_CN": "Vulpera",
+            "de_DE": "Vulpera",
+            "en_US": "Vulpera",
+            "es_ES": "Vulpera",
+            "fr_FR": "Vulpera",
+            "it_IT": "Vulpera",
+            "ko_KR": "Vulpera",
+            "ru_RU": "Vulpera"
         },
         "Worgen": {
             "cn_CN": "狼人",
@@ -404,7 +426,7 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "c8c8a05a8e",
+        "simc_hash": "4fbf72f6b7",
         "spec": "fire",
         "target_error": "0.1",
         "tier": "25"
@@ -417,23 +439,25 @@
         "Maghar Orc",
         "Nightborne",
         "Pandaren",
+        "Goblin",
         "Gnome",
         "Kul Tiran",
-        "Goblin",
+        "Mechagnome",
         "Dark Iron Dwarf",
-        "Orc",
-        "Zandalari Troll Kimbul",
         "Undead",
-        "Worgen",
-        "Zandalari Troll Paku",
+        "Zandalari Troll Kimbul",
+        "Orc",
         "Lightforged Draenei",
-        "Zandalari Troll Bwonsamdi",
+        "Zandalari Troll Paku",
         "Night Elf",
         "Blood Elf",
-        "Draenei"
+        "Worgen",
+        "Zandalari Troll Bwonsamdi",
+        "Draenei",
+        "Vulpera"
     ],
     "spec_id": 63,
-    "subtitle": "UTC 2020-01-15 07:22 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c8c8a05a8e\" target=\"blank\">c8c8a05</a>",
+    "subtitle": "UTC 2020-01-16 07:22 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/4fbf72f6b7\" target=\"blank\">4fbf72f</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -534,6 +558,6 @@
             }
         }
     },
-    "timestamp": "2020-01-15 07:22",
+    "timestamp": "2020-01-16 07:22",
     "title": "Races | Fire Mage | Patchwerk"
 }

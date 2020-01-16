@@ -1,25 +1,26 @@
 {
     "class_id": 4,
     "data": {
-        "Blood Elf": 102500,
-        "Dark Iron Dwarf": 102232,
-        "Dwarf": 103243,
-        "Gnome": 102793,
-        "Goblin": 102526,
-        "Human": 103226,
-        "Kul Tiran": 102791,
-        "Maghar Orc": 102999,
-        "Night Elf": 102883,
-        "Nightborne": 102366,
-        "Orc": 102279,
-        "Pandaren": 102451,
-        "Troll": 102596,
-        "Undead": 102513,
-        "Void Elf": 102804,
-        "Worgen": 102833,
-        "Zandalari Troll Bwonsamdi": 102422,
-        "Zandalari Troll Kimbul": 102202,
-        "Zandalari Troll Paku": 102788
+        "Blood Elf": 102812,
+        "Dark Iron Dwarf": 102097,
+        "Dwarf": 103128,
+        "Gnome": 102736,
+        "Goblin": 102489,
+        "Human": 103296,
+        "Kul Tiran": 103072,
+        "Maghar Orc": 102763,
+        "Mechagnome": 103165,
+        "Night Elf": 102859,
+        "Nightborne": 102632,
+        "Orc": 102439,
+        "Pandaren": 102820,
+        "Troll": 102692,
+        "Undead": 102506,
+        "Void Elf": 103181,
+        "Worgen": 102690,
+        "Zandalari Troll Bwonsamdi": 102352,
+        "Zandalari Troll Kimbul": 102220,
+        "Zandalari Troll Paku": 102802
     },
     "data_type": "races",
     "languages": {
@@ -102,6 +103,16 @@
             "it_IT": "Orco Mag'har",
             "ko_KR": "마그하르 오크",
             "ru_RU": "Маг'хар"
+        },
+        "Mechagnome": {
+            "cn_CN": "Mechagnome",
+            "de_DE": "Mechagnome",
+            "en_US": "Mechagnome",
+            "es_ES": "Mechagnome",
+            "fr_FR": "Mechagnome",
+            "it_IT": "Mechagnome",
+            "ko_KR": "Mechagnome",
+            "ru_RU": "Mechagnome"
         },
         "Night Elf": {
             "cn_CN": "暗夜精灵",
@@ -225,7 +236,7 @@
             "class": "rogue",
             "level": "120",
             "position": "back",
-            "race": "troll",
+            "race": "human",
             "role": "attack",
             "spec": "assassination",
             "talents": "2310021"
@@ -241,17 +252,17 @@
         },
         "finger1": {
             "bonus_id": "4824/1517",
-            "enchant": "accord_of_haste",
-            "id": "174530"
+            "enchant": "accord_of_mastery",
+            "id": "174532"
         },
         "finger2": {
             "bonus_id": "4824/1517",
-            "enchant": "accord_of_haste",
-            "id": "174531"
+            "enchant": "accord_of_mastery",
+            "id": "174533"
         },
         "hands": {
             "bonus_id": "4824/1517/6552",
-            "id": "174137"
+            "id": "174146"
         },
         "head": {
             "azerite_powers": "136/249/30/13",
@@ -274,17 +285,17 @@
             },
             "finger1": {
                 "bonus_id": "4824/1517",
-                "enchant": "accord_of_haste",
-                "id": "174530"
+                "enchant": "accord_of_mastery",
+                "id": "174532"
             },
             "finger2": {
                 "bonus_id": "4824/1517",
-                "enchant": "accord_of_haste",
-                "id": "174531"
+                "enchant": "accord_of_mastery",
+                "id": "174533"
             },
             "hands": {
                 "bonus_id": "4824/1517/6552",
-                "id": "174137"
+                "id": "174146"
             },
             "head": {
                 "azerite_powers": "136/249/30/13",
@@ -293,7 +304,7 @@
             },
             "legs": {
                 "bonus_id": "4824/1517",
-                "id": "174143"
+                "id": "174139"
             },
             "main_hand": {
                 "bonus_id": "4824/1517",
@@ -308,7 +319,7 @@
             "off_hand": {
                 "bonus_id": "4824/1517",
                 "enchant": "masterful_navigation",
-                "id": "172185"
+                "id": "172227"
             },
             "shoulders": {
                 "azerite_powers": "136/193/30/13",
@@ -316,8 +327,8 @@
                 "id": "159339"
             },
             "trinket1": {
-                "bonus_id": "4800/1517",
-                "id": "169314"
+                "bonus_id": "4824/1517",
+                "id": "174500"
             },
             "trinket2": {
                 "bonus_id": "4800/1517",
@@ -334,7 +345,7 @@
         },
         "legs": {
             "bonus_id": "4824/1517",
-            "id": "174143"
+            "id": "174139"
         },
         "level": "120",
         "main_hand": {
@@ -350,10 +361,10 @@
         "off_hand": {
             "bonus_id": "4824/1517",
             "enchant": "masterful_navigation",
-            "id": "172185"
+            "id": "172227"
         },
         "position": "back",
-        "race": "troll",
+        "race": "human",
         "role": "attack",
         "shoulders": {
             "azerite_powers": "136/193/30/13",
@@ -363,8 +374,8 @@
         "spec": "assassination",
         "talents": "2310021",
         "trinket1": {
-            "bonus_id": "4800/1517",
-            "id": "169314"
+            "bonus_id": "4824/1517",
+            "id": "174500"
         },
         "trinket2": {
             "bonus_id": "4800/1517",
@@ -384,34 +395,35 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "c8c8a05a8e",
+        "simc_hash": "4fbf72f6b7",
         "spec": "assassination",
         "target_error": "0.2",
         "tier": "25"
     },
     "sorted_data_keys": [
-        "Dwarf",
         "Human",
-        "Maghar Orc",
-        "Night Elf",
-        "Worgen",
         "Void Elf",
-        "Gnome",
+        "Mechagnome",
+        "Dwarf",
         "Kul Tiran",
-        "Zandalari Troll Paku",
-        "Troll",
-        "Goblin",
-        "Undead",
-        "Blood Elf",
+        "Night Elf",
         "Pandaren",
-        "Zandalari Troll Bwonsamdi",
+        "Blood Elf",
+        "Zandalari Troll Paku",
+        "Maghar Orc",
+        "Gnome",
+        "Troll",
+        "Worgen",
         "Nightborne",
+        "Undead",
+        "Goblin",
         "Orc",
-        "Dark Iron Dwarf",
-        "Zandalari Troll Kimbul"
+        "Zandalari Troll Bwonsamdi",
+        "Zandalari Troll Kimbul",
+        "Dark Iron Dwarf"
     ],
     "spec_id": 259,
-    "subtitle": "UTC 2020-01-15 07:32 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c8c8a05a8e\" target=\"blank\">c8c8a05</a>",
+    "subtitle": "UTC 2020-01-16 07:34 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/4fbf72f6b7\" target=\"blank\">4fbf72f</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -512,6 +524,6 @@
             }
         }
     },
-    "timestamp": "2020-01-15 07:32",
+    "timestamp": "2020-01-16 07:34",
     "title": "Races | Assassination Rogue | Hecticaddcleave"
 }
