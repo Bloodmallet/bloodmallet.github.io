@@ -1,26 +1,26 @@
 {
     "class_id": 4,
     "data": {
-        "Blood Elf": 91044,
-        "Dark Iron Dwarf": 90387,
-        "Dwarf": 91355,
-        "Gnome": 91031,
-        "Goblin": 90821,
-        "Human": 91285,
-        "Kul Tiran": 90931,
-        "Maghar Orc": 90773,
-        "Mechagnome": 91153,
-        "Night Elf": 90878,
-        "Nightborne": 90643,
-        "Orc": 90316,
-        "Pandaren": 90739,
-        "Troll": 90708,
-        "Undead": 90620,
-        "Void Elf": 91211,
-        "Worgen": 90763,
-        "Zandalari Troll Bwonsamdi": 90572,
-        "Zandalari Troll Kimbul": 90718,
-        "Zandalari Troll Paku": 90851
+        "Blood Elf": 84926,
+        "Dark Iron Dwarf": 84306,
+        "Dwarf": 85357,
+        "Gnome": 85018,
+        "Goblin": 84928,
+        "Human": 85269,
+        "Kul Tiran": 85012,
+        "Maghar Orc": 84690,
+        "Mechagnome": 85150,
+        "Night Elf": 84968,
+        "Nightborne": 84563,
+        "Orc": 84436,
+        "Pandaren": 84725,
+        "Troll": 84830,
+        "Undead": 84836,
+        "Void Elf": 85151,
+        "Worgen": 84973,
+        "Zandalari Troll Bwonsamdi": 84728,
+        "Zandalari Troll Kimbul": 84682,
+        "Zandalari Troll Paku": 84960
     },
     "data_type": "races",
     "languages": {
@@ -317,9 +317,9 @@
                 "id": "158075"
             },
             "off_hand": {
-                "bonus_id": "4824/1517",
+                "bonus_id": "3536/4786/1637",
                 "enchant": "versatile_navigation",
-                "id": "172185"
+                "id": "159653"
             },
             "shoulders": {
                 "azerite_powers": "411/129/21/13",
@@ -331,8 +331,8 @@
                 "id": "169311"
             },
             "trinket2": {
-                "bonus_id": "4824/1517",
-                "id": "174044"
+                "bonus_id": "3536/4786/1637",
+                "id": "159623"
             },
             "waist": {
                 "bonus_id": "4824/1517",
@@ -359,9 +359,9 @@
             "id": "158075"
         },
         "off_hand": {
-            "bonus_id": "4824/1517",
+            "bonus_id": "3536/4786/1637",
             "enchant": "versatile_navigation",
-            "id": "172185"
+            "id": "159653"
         },
         "position": "back",
         "race": "human",
@@ -378,8 +378,8 @@
             "id": "169311"
         },
         "trinket2": {
-            "bonus_id": "4824/1517",
-            "id": "174044"
+            "bonus_id": "3536/4786/1637",
+            "id": "159623"
         },
         "waist": {
             "bonus_id": "4824/1517",
@@ -395,7 +395,7 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "20725a50fc",
+        "simc_hash": "93f04e1c2a",
         "spec": "outlaw",
         "target_error": "0.1",
         "tier": "25"
@@ -405,25 +405,25 @@
         "Human",
         "Void Elf",
         "Mechagnome",
-        "Blood Elf",
         "Gnome",
         "Kul Tiran",
+        "Worgen",
         "Night Elf",
         "Zandalari Troll Paku",
         "Goblin",
-        "Maghar Orc",
-        "Worgen",
-        "Pandaren",
-        "Zandalari Troll Kimbul",
-        "Troll",
-        "Nightborne",
+        "Blood Elf",
         "Undead",
+        "Troll",
         "Zandalari Troll Bwonsamdi",
-        "Dark Iron Dwarf",
-        "Orc"
+        "Pandaren",
+        "Maghar Orc",
+        "Zandalari Troll Kimbul",
+        "Nightborne",
+        "Orc",
+        "Dark Iron Dwarf"
     ],
     "spec_id": 260,
-    "subtitle": "UTC 2020-01-18 07:26 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/20725a50fc\" target=\"blank\">20725a5</a>",
+    "subtitle": "UTC 2020-01-19 07:26 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/93f04e1c2a\" target=\"blank\">93f04e1</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -524,6 +524,6 @@
             }
         }
     },
-    "timestamp": "2020-01-18 07:26",
+    "timestamp": "2020-01-19 07:26",
     "title": "Races | Outlaw Rogue | Patchwerk"
 }

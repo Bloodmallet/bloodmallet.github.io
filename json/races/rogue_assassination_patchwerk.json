@@ -1,26 +1,26 @@
 {
     "class_id": 4,
     "data": {
-        "Blood Elf": 94164,
-        "Dark Iron Dwarf": 93644,
-        "Dwarf": 94471,
-        "Gnome": 94466,
-        "Goblin": 94393,
-        "Human": 94699,
-        "Kul Tiran": 94216,
-        "Maghar Orc": 94396,
-        "Mechagnome": 94392,
-        "Night Elf": 94060,
-        "Nightborne": 94101,
-        "Orc": 93748,
-        "Pandaren": 93880,
-        "Troll": 94442,
-        "Undead": 93955,
-        "Void Elf": 94412,
-        "Worgen": 94026,
-        "Zandalari Troll Bwonsamdi": 93693,
-        "Zandalari Troll Kimbul": 93698,
-        "Zandalari Troll Paku": 94175
+        "Blood Elf": 89821,
+        "Dark Iron Dwarf": 89315,
+        "Dwarf": 90110,
+        "Gnome": 90009,
+        "Goblin": 89963,
+        "Human": 90252,
+        "Kul Tiran": 89814,
+        "Maghar Orc": 90036,
+        "Mechagnome": 89989,
+        "Night Elf": 89666,
+        "Nightborne": 89688,
+        "Orc": 89380,
+        "Pandaren": 89490,
+        "Troll": 90118,
+        "Undead": 89603,
+        "Void Elf": 90051,
+        "Worgen": 89747,
+        "Zandalari Troll Bwonsamdi": 89380,
+        "Zandalari Troll Kimbul": 89419,
+        "Zandalari Troll Paku": 89892
     },
     "data_type": "races",
     "languages": {
@@ -251,14 +251,14 @@
             "id": "174144"
         },
         "finger1": {
-            "bonus_id": "4824/1517",
+            "bonus_id": "3536/4786/1522",
             "enchant": "accord_of_mastery",
-            "id": "174532"
+            "id": "169157"
         },
         "finger2": {
-            "bonus_id": "4824/1517",
+            "bonus_id": "3536/4786/1522",
             "enchant": "accord_of_mastery",
-            "id": "174533"
+            "id": "169159"
         },
         "hands": {
             "bonus_id": "4824/1517/6552",
@@ -284,14 +284,14 @@
                 "id": "174144"
             },
             "finger1": {
-                "bonus_id": "4824/1517",
+                "bonus_id": "3536/4786/1522",
                 "enchant": "accord_of_mastery",
-                "id": "174532"
+                "id": "169157"
             },
             "finger2": {
-                "bonus_id": "4824/1517",
+                "bonus_id": "3536/4786/1522",
                 "enchant": "accord_of_mastery",
-                "id": "174533"
+                "id": "169159"
             },
             "hands": {
                 "bonus_id": "4824/1517/6552",
@@ -395,35 +395,35 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "20725a50fc",
+        "simc_hash": "93f04e1c2a",
         "spec": "assassination",
         "target_error": "0.1",
         "tier": "25"
     },
     "sorted_data_keys": [
         "Human",
-        "Dwarf",
-        "Gnome",
         "Troll",
+        "Dwarf",
         "Void Elf",
         "Maghar Orc",
-        "Goblin",
+        "Gnome",
         "Mechagnome",
-        "Kul Tiran",
+        "Goblin",
         "Zandalari Troll Paku",
         "Blood Elf",
+        "Kul Tiran",
+        "Worgen",
         "Nightborne",
         "Night Elf",
-        "Worgen",
         "Undead",
         "Pandaren",
-        "Orc",
         "Zandalari Troll Kimbul",
+        "Orc",
         "Zandalari Troll Bwonsamdi",
         "Dark Iron Dwarf"
     ],
     "spec_id": 259,
-    "subtitle": "UTC 2020-01-18 07:24 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/20725a50fc\" target=\"blank\">20725a5</a>",
+    "subtitle": "UTC 2020-01-19 07:25 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/93f04e1c2a\" target=\"blank\">93f04e1</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -524,6 +524,6 @@
             }
         }
     },
-    "timestamp": "2020-01-18 07:24",
+    "timestamp": "2020-01-19 07:25",
     "title": "Races | Assassination Rogue | Patchwerk"
 }

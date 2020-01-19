@@ -1,26 +1,26 @@
 {
     "class_id": 4,
     "data": {
-        "Blood Elf": 111786,
-        "Dark Iron Dwarf": 110908,
-        "Dwarf": 112356,
-        "Gnome": 111692,
-        "Goblin": 111531,
-        "Human": 111859,
-        "Kul Tiran": 111733,
-        "Maghar Orc": 111471,
-        "Mechagnome": 112182,
-        "Night Elf": 112235,
-        "Nightborne": 111216,
-        "Orc": 111162,
-        "Pandaren": 111402,
-        "Troll": 111440,
-        "Undead": 111377,
-        "Void Elf": 111650,
-        "Worgen": 111850,
-        "Zandalari Troll Bwonsamdi": 111163,
-        "Zandalari Troll Kimbul": 111438,
-        "Zandalari Troll Paku": 111819
+        "Blood Elf": 108334,
+        "Dark Iron Dwarf": 107783,
+        "Dwarf": 109129,
+        "Gnome": 108442,
+        "Goblin": 108387,
+        "Human": 108867,
+        "Kul Tiran": 108573,
+        "Maghar Orc": 108223,
+        "Mechagnome": 108712,
+        "Night Elf": 109063,
+        "Nightborne": 108179,
+        "Orc": 108112,
+        "Pandaren": 108339,
+        "Troll": 108007,
+        "Undead": 108227,
+        "Void Elf": 108330,
+        "Worgen": 108407,
+        "Zandalari Troll Bwonsamdi": 107918,
+        "Zandalari Troll Kimbul": 108047,
+        "Zandalari Troll Paku": 108686
     },
     "data_type": "races",
     "languages": {
@@ -317,9 +317,9 @@
                 "id": "158075"
             },
             "off_hand": {
-                "bonus_id": "4824/1517",
+                "bonus_id": "3536/4786/1637",
                 "enchant": "versatile_navigation",
-                "id": "172185"
+                "id": "159653"
             },
             "shoulders": {
                 "azerite_powers": "411/129/21/13",
@@ -331,8 +331,8 @@
                 "id": "169311"
             },
             "trinket2": {
-                "bonus_id": "4824/1517",
-                "id": "174044"
+                "bonus_id": "3536/4786/1637",
+                "id": "159623"
             },
             "waist": {
                 "bonus_id": "4824/1517",
@@ -359,9 +359,9 @@
             "id": "158075"
         },
         "off_hand": {
-            "bonus_id": "4824/1517",
+            "bonus_id": "3536/4786/1637",
             "enchant": "versatile_navigation",
-            "id": "172185"
+            "id": "159653"
         },
         "position": "back",
         "race": "human",
@@ -378,8 +378,8 @@
             "id": "169311"
         },
         "trinket2": {
-            "bonus_id": "4824/1517",
-            "id": "174044"
+            "bonus_id": "3536/4786/1637",
+            "id": "159623"
         },
         "waist": {
             "bonus_id": "4824/1517",
@@ -395,7 +395,7 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "20725a50fc",
+        "simc_hash": "93f04e1c2a",
         "spec": "outlaw",
         "target_error": "0.2",
         "tier": "25"
@@ -403,27 +403,27 @@
     "sorted_data_keys": [
         "Dwarf",
         "Night Elf",
-        "Mechagnome",
         "Human",
-        "Worgen",
+        "Mechagnome",
         "Zandalari Troll Paku",
-        "Blood Elf",
         "Kul Tiran",
         "Gnome",
-        "Void Elf",
+        "Worgen",
         "Goblin",
-        "Maghar Orc",
-        "Troll",
-        "Zandalari Troll Kimbul",
         "Pandaren",
+        "Blood Elf",
+        "Void Elf",
         "Undead",
+        "Maghar Orc",
         "Nightborne",
-        "Zandalari Troll Bwonsamdi",
         "Orc",
+        "Zandalari Troll Kimbul",
+        "Troll",
+        "Zandalari Troll Bwonsamdi",
         "Dark Iron Dwarf"
     ],
     "spec_id": 260,
-    "subtitle": "UTC 2020-01-18 07:35 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/20725a50fc\" target=\"blank\">20725a5</a>",
+    "subtitle": "UTC 2020-01-19 07:35 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/93f04e1c2a\" target=\"blank\">93f04e1</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -524,6 +524,6 @@
             }
         }
     },
-    "timestamp": "2020-01-18 07:35",
+    "timestamp": "2020-01-19 07:35",
     "title": "Races | Outlaw Rogue | Hecticaddcleave"
 }

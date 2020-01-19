@@ -1,26 +1,26 @@
 {
     "class_id": 4,
     "data": {
-        "Blood Elf": 98224,
-        "Dark Iron Dwarf": 97748,
-        "Dwarf": 98542,
-        "Gnome": 98435,
-        "Goblin": 98047,
-        "Human": 98733,
-        "Kul Tiran": 98466,
-        "Maghar Orc": 98098,
-        "Mechagnome": 98779,
-        "Night Elf": 98364,
-        "Nightborne": 97906,
-        "Orc": 97860,
-        "Pandaren": 97993,
-        "Troll": 98024,
-        "Undead": 98093,
-        "Void Elf": 98521,
-        "Worgen": 98444,
-        "Zandalari Troll Bwonsamdi": 97965,
-        "Zandalari Troll Kimbul": 97883,
-        "Zandalari Troll Paku": 98328
+        "Blood Elf": 95785,
+        "Dark Iron Dwarf": 95362,
+        "Dwarf": 96083,
+        "Gnome": 95768,
+        "Goblin": 95401,
+        "Human": 96112,
+        "Kul Tiran": 95842,
+        "Maghar Orc": 95626,
+        "Mechagnome": 96117,
+        "Night Elf": 95837,
+        "Nightborne": 95384,
+        "Orc": 95165,
+        "Pandaren": 95579,
+        "Troll": 95266,
+        "Undead": 95506,
+        "Void Elf": 96140,
+        "Worgen": 95891,
+        "Zandalari Troll Bwonsamdi": 95578,
+        "Zandalari Troll Kimbul": 95514,
+        "Zandalari Troll Paku": 95878
     },
     "data_type": "races",
     "languages": {
@@ -251,14 +251,14 @@
             "id": "174144"
         },
         "finger1": {
-            "bonus_id": "4824/1517",
-            "enchant": "accord_of_mastery",
-            "id": "174532"
+            "bonus_id": "3536/4786/1522",
+            "enchant": "accord_of_versatility",
+            "id": "169157"
         },
         "finger2": {
-            "bonus_id": "4824/1517",
-            "enchant": "accord_of_mastery",
-            "id": "174531"
+            "bonus_id": "3536/4786/1522",
+            "enchant": "accord_of_versatility",
+            "id": "169159"
         },
         "hands": {
             "bonus_id": "4824/1517/6552",
@@ -284,14 +284,14 @@
                 "id": "174144"
             },
             "finger1": {
-                "bonus_id": "4824/1517",
-                "enchant": "accord_of_mastery",
-                "id": "174532"
+                "bonus_id": "3536/4786/1522",
+                "enchant": "accord_of_versatility",
+                "id": "169157"
             },
             "finger2": {
-                "bonus_id": "4824/1517",
-                "enchant": "accord_of_mastery",
-                "id": "174531"
+                "bonus_id": "3536/4786/1522",
+                "enchant": "accord_of_versatility",
+                "id": "169159"
             },
             "hands": {
                 "bonus_id": "4824/1517/6552",
@@ -331,8 +331,8 @@
                 "id": "169311"
             },
             "trinket2": {
-                "bonus_id": "4824/1517",
-                "id": "174500"
+                "bonus_id": "3536/4786/1637",
+                "id": "159623"
             },
             "waist": {
                 "bonus_id": "4824/1517",
@@ -378,8 +378,8 @@
             "id": "169311"
         },
         "trinket2": {
-            "bonus_id": "4824/1517",
-            "id": "174500"
+            "bonus_id": "3536/4786/1637",
+            "id": "159623"
         },
         "waist": {
             "bonus_id": "4824/1517",
@@ -395,35 +395,35 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "20725a50fc",
+        "simc_hash": "93f04e1c2a",
         "spec": "subtlety",
         "target_error": "0.2",
         "tier": "25"
     },
     "sorted_data_keys": [
+        "Void Elf",
         "Mechagnome",
         "Human",
         "Dwarf",
-        "Void Elf",
-        "Kul Tiran",
         "Worgen",
-        "Gnome",
-        "Night Elf",
         "Zandalari Troll Paku",
+        "Kul Tiran",
+        "Night Elf",
         "Blood Elf",
+        "Gnome",
         "Maghar Orc",
-        "Undead",
-        "Goblin",
-        "Troll",
         "Pandaren",
         "Zandalari Troll Bwonsamdi",
-        "Nightborne",
         "Zandalari Troll Kimbul",
-        "Orc",
-        "Dark Iron Dwarf"
+        "Undead",
+        "Goblin",
+        "Nightborne",
+        "Dark Iron Dwarf",
+        "Troll",
+        "Orc"
     ],
     "spec_id": 261,
-    "subtitle": "UTC 2020-01-18 07:35 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/20725a50fc\" target=\"blank\">20725a5</a>",
+    "subtitle": "UTC 2020-01-19 07:35 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/93f04e1c2a\" target=\"blank\">93f04e1</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -524,6 +524,6 @@
             }
         }
     },
-    "timestamp": "2020-01-18 07:35",
+    "timestamp": "2020-01-19 07:35",
     "title": "Races | Subtlety Rogue | Hecticaddcleave"
 }

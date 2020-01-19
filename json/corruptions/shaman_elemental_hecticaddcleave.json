@@ -88,91 +88,91 @@
     },
     "data": {
         "Deadly Momentum": {
-            "1": 103288,
-            "2": 103573,
-            "3": 104561
+            "1": 103494,
+            "2": 103712,
+            "3": 104509
         },
         "Echoing Void": {
-            "1": 107992,
-            "2": 110952,
-            "3": 116414
+            "1": 107236,
+            "2": 109697,
+            "3": 114122
         },
         "Expedient": {
-            "1": 104005,
-            "2": 104775,
-            "3": 105819
+            "1": 104292,
+            "2": 104825,
+            "3": 105757
         },
         "Flash of Insight": {
-            "1": 102637
+            "1": 106652
         },
         "Glimpse of Clarity": {
-            "1": 102432,
-            "2": 102645
+            "1": 102299,
+            "2": 102375
         },
         "Gushing Wound": {
-            "1": 105196
+            "1": 105462
         },
         "Honed Mind": {
-            "1": 103636,
-            "2": 103925,
-            "3": 105024
+            "1": 103724,
+            "2": 104184,
+            "3": 105087
         },
         "Ineffable Truth": {
-            "1": 102083,
-            "2": 101333
+            "1": 102142,
+            "2": 101349
         },
         "Infinite Stars": {
-            "1": 105752,
-            "2": 110813,
-            "3": 114965
+            "1": 105020,
+            "2": 108908,
+            "3": 112030
         },
         "Masterful": {
-            "1": 102901,
-            "2": 102990,
-            "3": 103242
+            "1": 102993,
+            "2": 103014,
+            "3": 103446
         },
         "Racing Pulse": {
-            "1": 104379,
-            "2": 105136,
-            "3": 106847
+            "1": 104508,
+            "2": 105102,
+            "3": 106741
         },
         "Severe": {
-            "1": 104224,
-            "2": 104943,
-            "3": 105638
+            "1": 104087,
+            "2": 104800,
+            "3": 105585
         },
         "Strikethrough": {
-            "1": 103913,
-            "2": 104763,
-            "3": 105472
+            "1": 103881,
+            "2": 104668,
+            "3": 105414
         },
         "Surging Vitality": {
-            "1": 104266,
-            "2": 105042,
-            "3": 106565
+            "1": 104380,
+            "2": 105072,
+            "3": 106778
         },
         "Twilight Devastation": {
-            "1": 107317,
-            "2": 112116,
-            "3": 116782
+            "1": 107496,
+            "2": 112121,
+            "3": 117294
         },
         "Twisted Appendage": {
-            "1": 103323,
-            "2": 105233,
-            "3": 107650
+            "1": 103415,
+            "2": 105098,
+            "3": 107763
         },
         "Versatile": {
-            "1": 103399,
-            "2": 103543,
-            "3": 103996
+            "1": 103387,
+            "2": 103527,
+            "3": 103890
         },
         "Void Ritual": {
-            "1": 103264,
-            "2": 104363,
-            "3": 105933
+            "1": 103355,
+            "2": 104331,
+            "3": 105981
         },
         "baseline": {
-            "1": 102517
+            "1": 102469
         }
     },
     "data_type": "corruptions",
@@ -347,7 +347,7 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "20725a50fc",
+        "simc_hash": "93f04e1c2a",
         "spec": "elemental",
         "target_error": "0.2",
         "tier": "25"
@@ -362,39 +362,39 @@
         "Echoing Void",
         "Infinite Stars",
         "Twisted Appendage",
-        "Racing Pulse",
         "Surging Vitality",
+        "Racing Pulse",
+        "Flash of Insight",
         "Void Ritual",
         "Expedient",
         "Severe",
-        "Strikethrough",
         "Gushing Wound",
+        "Strikethrough",
         "Honed Mind",
         "Deadly Momentum",
         "Versatile",
         "Masterful",
         "Glimpse of Clarity",
-        "Flash of Insight",
         "Ineffable Truth"
     ],
     "sorted_data_keys_2": [
-        "Echoing Void",
-        "Twilight Devastation",
+        "Flash of Insight",
         "Gushing Wound",
-        "Infinite Stars",
+        "Twilight Devastation",
+        "Echoing Void",
         "Expedient",
         "Severe",
         "Strikethrough",
-        "Racing Pulse",
+        "Infinite Stars",
         "Surging Vitality",
+        "Racing Pulse",
         "Twisted Appendage",
-        "Versatile",
         "Honed Mind",
+        "Versatile",
         "Deadly Momentum",
         "Void Ritual",
         "Masterful",
         "Glimpse of Clarity",
-        "Flash of Insight",
         "Ineffable Truth"
     ],
     "spec_id": 262,
@@ -484,7 +484,7 @@
             "3": 318480
         }
     },
-    "subtitle": "UTC 2020-01-18 16:21 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/20725a50fc\" target=\"blank\">20725a5</a>",
+    "subtitle": "UTC 2020-01-19 16:25 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/93f04e1c2a\" target=\"blank\">93f04e1</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -585,6 +585,6 @@
             }
         }
     },
-    "timestamp": "2020-01-18 16:21",
+    "timestamp": "2020-01-19 16:25",
     "title": "Corruptions | Elemental Shaman | Hecticaddcleave"
 }

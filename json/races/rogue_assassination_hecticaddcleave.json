@@ -1,26 +1,26 @@
 {
     "class_id": 4,
     "data": {
-        "Blood Elf": 102922,
-        "Dark Iron Dwarf": 102228,
-        "Dwarf": 103067,
-        "Gnome": 102749,
-        "Goblin": 102717,
-        "Human": 103183,
-        "Kul Tiran": 102973,
-        "Maghar Orc": 102867,
-        "Mechagnome": 103232,
-        "Night Elf": 102869,
-        "Nightborne": 102275,
-        "Orc": 102334,
-        "Pandaren": 102628,
-        "Troll": 102596,
-        "Undead": 102471,
-        "Void Elf": 102863,
-        "Worgen": 102929,
-        "Zandalari Troll Bwonsamdi": 102172,
-        "Zandalari Troll Kimbul": 102324,
-        "Zandalari Troll Paku": 102966
+        "Blood Elf": 99182,
+        "Dark Iron Dwarf": 98679,
+        "Dwarf": 99579,
+        "Gnome": 99017,
+        "Goblin": 99124,
+        "Human": 99605,
+        "Kul Tiran": 99295,
+        "Maghar Orc": 99175,
+        "Mechagnome": 99494,
+        "Night Elf": 99496,
+        "Nightborne": 98787,
+        "Orc": 98685,
+        "Pandaren": 99036,
+        "Troll": 99191,
+        "Undead": 98903,
+        "Void Elf": 99366,
+        "Worgen": 99223,
+        "Zandalari Troll Bwonsamdi": 98755,
+        "Zandalari Troll Kimbul": 98795,
+        "Zandalari Troll Paku": 99185
     },
     "data_type": "races",
     "languages": {
@@ -251,14 +251,14 @@
             "id": "174144"
         },
         "finger1": {
-            "bonus_id": "4824/1517",
+            "bonus_id": "3536/4786/1522",
             "enchant": "accord_of_mastery",
-            "id": "174532"
+            "id": "169157"
         },
         "finger2": {
-            "bonus_id": "4824/1517",
+            "bonus_id": "3536/4786/1522",
             "enchant": "accord_of_mastery",
-            "id": "174533"
+            "id": "169159"
         },
         "hands": {
             "bonus_id": "4824/1517/6552",
@@ -284,14 +284,14 @@
                 "id": "174144"
             },
             "finger1": {
-                "bonus_id": "4824/1517",
+                "bonus_id": "3536/4786/1522",
                 "enchant": "accord_of_mastery",
-                "id": "174532"
+                "id": "169157"
             },
             "finger2": {
-                "bonus_id": "4824/1517",
+                "bonus_id": "3536/4786/1522",
                 "enchant": "accord_of_mastery",
-                "id": "174533"
+                "id": "169159"
             },
             "hands": {
                 "bonus_id": "4824/1517/6552",
@@ -395,35 +395,35 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "20725a50fc",
+        "simc_hash": "93f04e1c2a",
         "spec": "assassination",
         "target_error": "0.2",
         "tier": "25"
     },
     "sorted_data_keys": [
-        "Mechagnome",
         "Human",
         "Dwarf",
-        "Kul Tiran",
-        "Zandalari Troll Paku",
-        "Worgen",
-        "Blood Elf",
         "Night Elf",
-        "Maghar Orc",
+        "Mechagnome",
         "Void Elf",
-        "Gnome",
+        "Kul Tiran",
+        "Worgen",
+        "Troll",
+        "Zandalari Troll Paku",
+        "Blood Elf",
+        "Maghar Orc",
         "Goblin",
         "Pandaren",
-        "Troll",
+        "Gnome",
         "Undead",
-        "Orc",
         "Zandalari Troll Kimbul",
         "Nightborne",
-        "Dark Iron Dwarf",
-        "Zandalari Troll Bwonsamdi"
+        "Zandalari Troll Bwonsamdi",
+        "Orc",
+        "Dark Iron Dwarf"
     ],
     "spec_id": 259,
-    "subtitle": "UTC 2020-01-18 07:34 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/20725a50fc\" target=\"blank\">20725a5</a>",
+    "subtitle": "UTC 2020-01-19 07:34 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/93f04e1c2a\" target=\"blank\">93f04e1</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -524,6 +524,6 @@
             }
         }
     },
-    "timestamp": "2020-01-18 07:34",
+    "timestamp": "2020-01-19 07:34",
     "title": "Races | Assassination Rogue | Hecticaddcleave"
 }
