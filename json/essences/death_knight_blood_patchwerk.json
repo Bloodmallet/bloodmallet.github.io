@@ -1,99 +1,109 @@
 {
-    "azerite_weight_patchwerk": "( AzeritePowerWeights:2:\"Patchwerk Blood Death_Knight essences\":6:250: : 4=2112/1103, 7=422/12, 12=3593/1470, 15=793/11, 22=215/183, 25=138/137, 27=242/483, 32=689/723, )",
+    "azerite_weight_patchwerk": "( AzeritePowerWeights:2:\"Patchwerk Blood Death_Knight essences\":6:250: : 4=3127/1685, 7=1396/571, 12=4964/1919, 13=2991/2992, 15=1255/27, 22=699/462, 25=384/376, 27=1646/1390, 32=1830/1773, )",
     "class_id": 6,
     "data": {
         "Aegis of the Deep": {
-            "1": 17987,
-            "2": 17988,
-            "3": 17993
+            "1": 39809,
+            "2": 39812,
+            "3": 39830
         },
         "Aegis of the Deep minor": {
-            "1": 17991,
-            "2": 17995,
-            "3": 17992
+            "1": 39802,
+            "2": 39780,
+            "3": 39822
         },
         "Anima of Death": {
-            "1": 18201,
-            "2": 18273,
-            "3": 18277
+            "1": 40719,
+            "2": 40809,
+            "3": 40842
         },
         "Anima of Death minor": {
-            "1": 17849,
-            "2": 17857,
-            "3": 17867
+            "1": 39983,
+            "2": 40017,
+            "3": 40017
         },
         "Conflict and Strife": {
-            "1": 18129,
-            "2": 18314,
-            "3": 18544
+            "1": 40205,
+            "2": 40659,
+            "3": 41276
         },
         "Conflict and Strife minor": {
-            "1": 18151,
-            "2": 18317,
-            "3": 18578
+            "1": 40179,
+            "2": 40634,
+            "3": 41219
+        },
+        "Empowered Null Barrier": {
+            "1": 39481,
+            "2": 39510,
+            "3": 42437
+        },
+        "Empowered Null Barrier minor": {
+            "1": 39447,
+            "2": 39475,
+            "3": 42438
         },
         "Memory of Lucid Dreams": {
-            "1": 17811,
-            "2": 17845,
-            "3": 18097
+            "1": 40256,
+            "2": 40335,
+            "3": 41092
         },
         "Memory of Lucid Dreams minor": {
-            "1": 18084,
-            "2": 18068,
-            "3": 18338
+            "1": 40109,
+            "2": 40107,
+            "3": 40836
         },
         "Ripple in Space": {
-            "1": 18583,
-            "2": 18670,
-            "3": 18648
+            "1": 40503,
+            "2": 40671,
+            "3": 40701
         },
         "Ripple in Space minor": {
-            "1": 17859,
-            "2": 17849,
-            "3": 17866
+            "1": 39498,
+            "2": 39445,
+            "3": 39473
         },
         "The Crucible of Flame": {
-            "1": 19687,
-            "2": 20609,
-            "3": 21448
+            "1": 42103,
+            "2": 43291,
+            "3": 44410
         },
         "The Crucible of Flame minor": {
-            "1": 18554,
-            "2": 18711,
-            "3": 19325
+            "1": 40384,
+            "2": 40517,
+            "3": 41365
         },
         "Vision of Perfection": {
-            "1": 17862,
-            "2": 17858,
-            "3": 18070
+            "1": 39565,
+            "2": 39581,
+            "3": 40145
         },
         "Vision of Perfection minor": {
-            "1": 17859,
-            "2": 17874,
-            "3": 18038
+            "1": 39464,
+            "2": 39466,
+            "3": 39908
         },
         "Worldvein Resonance": {
-            "1": 18567,
-            "2": 19349,
-            "3": 19504
+            "1": 40521,
+            "2": 41563,
+            "3": 41791
         },
         "Worldvein Resonance +3": {
-            "1": 19392,
-            "2": 19889,
-            "3": 19967
+            "1": 41689,
+            "2": 42383,
+            "3": 42573
         },
         "Worldvein Resonance minor": {
-            "1": 18043,
-            "2": 18085,
-            "3": 18261
+            "1": 39704,
+            "2": 39814,
+            "3": 40045
         },
         "Worldvein Resonance minor +3": {
-            "1": 18507,
-            "2": 18808,
-            "3": 18958
+            "1": 40432,
+            "2": 40935,
+            "3": 41131
         },
         "baseline": {
-            "1": 17855
+            "1": 39446
         }
     },
     "data_type": "essences",
@@ -105,6 +115,8 @@
         "Anima of Death minor": 24,
         "Conflict and Strife": 123,
         "Conflict and Strife minor": 123,
+        "Empowered Null Barrier": 51,
+        "Empowered Null Barrier minor": 51,
         "Memory of Lucid Dreams": 104,
         "Memory of Lucid Dreams minor": 104,
         "Ripple in Space": 59,
@@ -119,11 +131,13 @@
         "Worldvein Resonance minor +3": 15
     },
     "profile": {
+        "azerite_essences": "12:4:1/37:4:0/32:4:0/4:4:0",
         "back": {
-            "bonus_id": "4824/1537",
-            "id": "165512"
+            "bonus_id": "6286",
+            "id": "169223"
         },
         "character": {
+            "azerite_essences": "12:4:1/37:4:0/32:4:0/4:4:0",
             "class": "death_knight",
             "level": "120",
             "position": "front",
@@ -133,153 +147,153 @@
             "talents": "2220022"
         },
         "chest": {
-            "azerite_powers": "106/562/462/13",
-            "bonus_id": "4824/1537/4775",
-            "id": "165550"
+            "azerite_powers": "243/582/459/13",
+            "bonus_id": "1517/4824/4775",
+            "id": "174164"
         },
         "feet": {
-            "bonus_id": "4824/1537",
-            "id": "165561"
+            "bonus_id": "4824/1517",
+            "id": "174176"
         },
         "finger1": {
-            "bonus_id": "4824/1537",
-            "enchant": "pact_of_versatility",
-            "id": "165565"
+            "bonus_id": "4824/1522",
+            "enchant": "accord_of_critical_strike",
+            "id": "169159"
         },
         "finger2": {
-            "bonus_id": "4824/1537",
-            "enchant": "pact_of_versatility",
-            "id": "165567"
+            "bonus_id": "4824/1522",
+            "enchant": "accord_of_critical_strike",
+            "id": "169157"
         },
         "hands": {
-            "bonus_id": "4824/1537",
-            "id": "165549"
+            "bonus_id": "4824/1517/6476",
+            "id": "174178"
         },
         "head": {
-            "azerite_powers": "348/561/31/13",
-            "bonus_id": "4824/1537/4775",
-            "id": "165823"
+            "azerite_powers": "140/582/21/13",
+            "bonus_id": "4824/1517/4775",
+            "id": "174167"
         },
         "items": {
             "back": {
-                "bonus_id": "4824/1537",
-                "id": "165512"
+                "bonus_id": "6286",
+                "id": "169223"
             },
             "chest": {
-                "azerite_powers": "106/562/462/13",
-                "bonus_id": "4824/1537/4775",
-                "id": "165550"
+                "azerite_powers": "243/582/459/13",
+                "bonus_id": "1517/4824/4775",
+                "id": "174164"
             },
             "feet": {
-                "bonus_id": "4824/1537",
-                "id": "165561"
+                "bonus_id": "4824/1517",
+                "id": "174176"
             },
             "finger1": {
-                "bonus_id": "4824/1537",
-                "enchant": "pact_of_versatility",
-                "id": "165565"
+                "bonus_id": "4824/1522",
+                "enchant": "accord_of_critical_strike",
+                "id": "169159"
             },
             "finger2": {
-                "bonus_id": "4824/1537",
-                "enchant": "pact_of_versatility",
-                "id": "165567"
+                "bonus_id": "4824/1522",
+                "enchant": "accord_of_critical_strike",
+                "id": "169157"
             },
             "hands": {
-                "bonus_id": "4824/1537",
-                "id": "165549"
+                "bonus_id": "4824/1517/6476",
+                "id": "174178"
             },
             "head": {
-                "azerite_powers": "348/561/31/13",
-                "bonus_id": "4824/1537/4775",
-                "id": "165823"
+                "azerite_powers": "140/582/21/13",
+                "bonus_id": "4824/1517/4775",
+                "id": "174167"
             },
             "legs": {
-                "bonus_id": "4824/1537",
-                "id": "165560"
+                "bonus_id": "4824/1517",
+                "id": "174172"
             },
             "main_hand": {
-                "bonus_id": "4800/1537",
+                "bonus_id": "1637",
                 "enchant": "rune_of_the_fallen_crusader",
-                "id": "165586"
+                "id": "159644"
             },
             "neck": {
-                "azerite_level": "65",
-                "bonus_id": "4929/5814/4936/1600",
+                "azerite_level": "80",
+                "bonus_id": "4929/5814/4936/1630",
                 "id": "158075"
             },
             "shoulders": {
-                "azerite_powers": "243/562/459/13",
-                "bonus_id": "4824/1537/4775",
-                "id": "165825"
+                "azerite_powers": "349/582/31/13",
+                "bonus_id": "1517/4824/4775",
+                "id": "174166"
             },
             "trinket1": {
-                "bonus_id": "4824/1537",
-                "id": "165574"
+                "bonus_id": "4800/1517",
+                "id": "169319"
             },
             "trinket2": {
-                "bonus_id": "4824/1537",
-                "id": "165570"
+                "bonus_id": "4800/1517",
+                "id": "169311"
             },
             "waist": {
-                "bonus_id": "4824/1537",
-                "id": "165559"
+                "bonus_id": "4824/1517",
+                "id": "174171"
             },
             "wrists": {
-                "bonus_id": "4824/1537",
-                "id": "165551"
+                "bonus_id": "4824/1517/6550",
+                "id": "174170"
             }
         },
         "legs": {
-            "bonus_id": "4824/1537",
-            "id": "165560"
+            "bonus_id": "4824/1517",
+            "id": "174172"
         },
         "level": "120",
         "main_hand": {
-            "bonus_id": "4800/1537",
+            "bonus_id": "1637",
             "enchant": "rune_of_the_fallen_crusader",
-            "id": "165586"
+            "id": "159644"
         },
         "neck": {
-            "azerite_level": "65",
-            "bonus_id": "4929/5814/4936/1600",
+            "azerite_level": "80",
+            "bonus_id": "4929/5814/4936/1630",
             "id": "158075"
         },
         "position": "front",
         "race": "undead",
         "role": "tank",
         "shoulders": {
-            "azerite_powers": "243/562/459/13",
-            "bonus_id": "4824/1537/4775",
-            "id": "165825"
+            "azerite_powers": "349/582/31/13",
+            "bonus_id": "1517/4824/4775",
+            "id": "174166"
         },
         "spec": "blood",
         "talents": "2220022",
         "trinket1": {
-            "bonus_id": "4824/1537",
-            "id": "165574"
+            "bonus_id": "4800/1517",
+            "id": "169319"
         },
         "trinket2": {
-            "bonus_id": "4824/1537",
-            "id": "165570"
+            "bonus_id": "4800/1517",
+            "id": "169311"
         },
         "waist": {
-            "bonus_id": "4824/1537",
-            "id": "165559"
+            "bonus_id": "4824/1517",
+            "id": "174171"
         },
         "wrists": {
-            "bonus_id": "4824/1537",
-            "id": "165551"
+            "bonus_id": "4824/1517/6550",
+            "id": "174170"
         }
     },
     "simc_settings": {
         "class": "death_knight",
         "fight_style": "patchwerk",
         "iterations": "20000",
-        "ptr": "1",
-        "simc_hash": "dc28297456",
+        "ptr": "0",
+        "simc_hash": "b5e06eac74",
         "spec": "blood",
         "target_error": "0.1",
-        "tier": "24"
+        "tier": "25"
     },
     "simulated_steps": [
         3,
@@ -289,21 +303,23 @@
     "sorted_data_keys": [
         "The Crucible of Flame",
         "Worldvein Resonance +3",
+        "Empowered Null Barrier minor",
+        "Empowered Null Barrier",
         "Worldvein Resonance",
         "The Crucible of Flame minor",
-        "Worldvein Resonance minor +3",
-        "Ripple in Space",
-        "Conflict and Strife minor",
         "Conflict and Strife",
-        "Memory of Lucid Dreams minor",
-        "Anima of Death",
-        "Worldvein Resonance minor",
+        "Conflict and Strife minor",
+        "Worldvein Resonance minor +3",
         "Memory of Lucid Dreams",
+        "Anima of Death",
+        "Memory of Lucid Dreams minor",
+        "Ripple in Space",
         "Vision of Perfection",
+        "Worldvein Resonance minor",
+        "Anima of Death minor",
         "Vision of Perfection minor",
         "Aegis of the Deep",
         "Aegis of the Deep minor",
-        "Anima of Death minor",
         "Ripple in Space minor"
     ],
     "spec_id": 250,
@@ -314,6 +330,8 @@
         "Anima of Death minor": 300005,
         "Conflict and Strife": 304121,
         "Conflict and Strife minor": 304123,
+        "Empowered Null Barrier": 300016,
+        "Empowered Null Barrier minor": 300020,
         "Memory of Lucid Dreams": 299374,
         "Memory of Lucid Dreams minor": 299373,
         "Ripple in Space": 302983,
@@ -327,7 +345,7 @@
         "Worldvein Resonance minor": 299333,
         "Worldvein Resonance minor +3": 299333
     },
-    "subtitle": "UTC 2020-01-13 17:19 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/dc28297456\" target=\"blank\">dc28297</a>",
+    "subtitle": "UTC 2020-01-20 18:07 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/b5e06eac74\" target=\"blank\">b5e06ea</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -428,6 +446,6 @@
             }
         }
     },
-    "timestamp": "2020-01-13 17:19",
+    "timestamp": "2020-01-20 18:07",
     "title": "Essences | Blood Death Knight | Patchwerk"
 }

@@ -1,11 +1,6 @@
 {
     "class_id": 9,
     "corruption_rating": {
-        "Avoidant": {
-            "1": 10,
-            "2": 15,
-            "3": 20
-        },
         "Deadly Momentum": {
             "1": 15,
             "2": 20,
@@ -89,106 +84,101 @@
         }
     },
     "data": {
-        "Avoidant": {
-            "1": 50340,
-            "2": 50365,
-            "3": 50382
-        },
         "Deadly Momentum": {
-            "1": 50763,
-            "2": 50954,
-            "3": 51328
+            "1": 79991,
+            "2": 79959,
+            "3": 80753
         },
         "Echoing Void": {
-            "1": 53710,
-            "2": 55362,
-            "3": 58728
+            "1": 83552,
+            "2": 85800,
+            "3": 90194
         },
         "Expedient": {
-            "1": 51264,
-            "2": 51726,
-            "3": 52218
+            "1": 80876,
+            "2": 81849,
+            "3": 82738
         },
         "Glimpse of Clarity": {
-            "1": 50319,
-            "2": 50245
+            "1": 79319,
+            "2": 79318
         },
         "Gushing Wound": {
-            "1": 52328
+            "1": 82329
         },
         "Honed Mind": {
-            "1": 51553,
-            "2": 51931,
-            "3": 53219
+            "1": 81018,
+            "2": 81642,
+            "3": 83358
         },
         "Ineffable Truth": {
-            "1": 50858,
-            "2": 50835
+            "1": 80161,
+            "2": 80093
         },
         "Infinite Stars": {
-            "1": 52925,
-            "2": 56573,
-            "3": 59723
+            "1": 82376,
+            "2": 86731,
+            "3": 90432
         },
         "Masterful": {
-            "1": 50799,
-            "2": 51081,
-            "3": 51268
+            "1": 79986,
+            "2": 80182,
+            "3": 80493
         },
         "Racing Pulse": {
-            "1": 51405,
-            "2": 51755,
-            "3": 52819
+            "1": 81111,
+            "2": 81790,
+            "3": 83630
         },
         "Severe": {
-            "1": 50791,
-            "2": 51023,
-            "3": 51159
+            "1": 80234,
+            "2": 80614,
+            "3": 81142
         },
         "Strikethrough": {
-            "1": 50710,
-            "2": 50726,
-            "3": 50880
+            "1": 79821,
+            "2": 80162,
+            "3": 80496
         },
         "Surging Vitality": {
-            "1": 51407,
-            "2": 51572,
-            "3": 52450
+            "1": 80813,
+            "2": 81193,
+            "3": 82868
         },
         "Twilight Devastation": {
-            "1": 51582,
-            "2": 52689,
-            "3": 53742
+            "1": 84267,
+            "2": 88789,
+            "3": 93754
         },
         "Twisted Appendage": {
-            "1": 50902,
-            "2": 52368,
-            "3": 53950
+            "1": 79976,
+            "2": 81832,
+            "3": 84261
         },
         "Versatile": {
-            "1": 50585,
-            "2": 50663,
-            "3": 50815
+            "1": 79586,
+            "2": 79712,
+            "3": 79938
         },
         "Void Ritual": {
-            "1": 50867,
-            "2": 51456,
-            "3": 52513
+            "1": 79937,
+            "2": 80854,
+            "3": 82393
         },
         "baseline": {
-            "1": 50381
+            "1": 79313
         }
     },
     "data_type": "corruptions",
     "languages": {},
     "profile": {
-        "azerite_essences": "14:3:1/12:3:0/4:3:0",
+        "azerite_essences": "14:3/5:3/32:3/35:3",
         "back": {
-            "bonus_id": "4800/1517",
-            "id": "168391"
+            "bonus_id": "6286",
+            "id": "169223"
         },
         "character": {
-            "azerite_essences": "14:3:1/12:3:0/4:3:0",
+            "azerite_essences": "14:3/5:3/32:3/35:3",
             "class": "warlock",
             "level": "120",
             "position": "ranged_back",
@@ -198,161 +188,161 @@
             "talents": "3302023"
         },
         "chest": {
-            "azerite_powers": "123/230/30/13",
+            "azerite_powers": "230/582/31",
             "bonus_id": "4824/1517/4775",
-            "id": "168337"
+            "id": "174119"
         },
         "feet": {
-            "bonus_id": "1512",
-            "id": "170140"
+            "bonus_id": "4824/1517",
+            "id": "174123"
         },
         "finger1": {
-            "bonus_id": "4800/1517",
-            "enchant": "accord_of_mastery",
-            "id": "168891"
+            "bonus_id": "4779/1522",
+            "enchant": "accord_of_critical_strike",
+            "id": "169157"
         },
         "finger2": {
-            "bonus_id": "4800/1517",
-            "enchant": "accord_of_mastery",
-            "id": "168889"
+            "bonus_id": "4779/1522",
+            "enchant": "accord_of_haste",
+            "id": "169159"
         },
         "hands": {
-            "bonus_id": "1512",
-            "id": "170333"
+            "bonus_id": "4824/1517",
+            "id": "174125"
         },
         "head": {
-            "azerite_powers": "123/230/30/13",
-            "bonus_id": "5062/1617/4786/4775/6448",
-            "id": "159236"
+            "azerite_powers": "123/230/31",
+            "bonus_id": "4824/1517/4775/6448",
+            "id": "174118"
         },
         "items": {
             "back": {
-                "bonus_id": "4800/1517",
-                "id": "168391"
+                "bonus_id": "6286",
+                "id": "169223"
             },
             "chest": {
-                "azerite_powers": "123/230/30/13",
+                "azerite_powers": "230/582/31",
                 "bonus_id": "4824/1517/4775",
-                "id": "168337"
+                "id": "174119"
             },
             "feet": {
-                "bonus_id": "1512",
-                "id": "170140"
+                "bonus_id": "4824/1517",
+                "id": "174123"
             },
             "finger1": {
-                "bonus_id": "4800/1517",
-                "enchant": "accord_of_mastery",
-                "id": "168891"
+                "bonus_id": "4779/1522",
+                "enchant": "accord_of_critical_strike",
+                "id": "169157"
             },
             "finger2": {
-                "bonus_id": "4800/1517",
-                "enchant": "accord_of_mastery",
-                "id": "168889"
+                "bonus_id": "4779/1522",
+                "enchant": "accord_of_haste",
+                "id": "169159"
             },
             "hands": {
-                "bonus_id": "1512",
-                "id": "170333"
+                "bonus_id": "4824/1517",
+                "id": "174125"
             },
             "head": {
-                "azerite_powers": "123/230/30/13",
-                "bonus_id": "5062/1617/4786/4775",
-                "id": "159236"
+                "azerite_powers": "123/230/31",
+                "bonus_id": "4824/1517/4775",
+                "id": "174118"
             },
             "legs": {
-                "bonus_id": "4800/1517",
-                "id": "168371"
+                "bonus_id": "4824/1517",
+                "id": "174121"
             },
             "main_hand": {
-                "bonus_id": "4800/1517",
+                "bonus_id": "4824/1517",
                 "enchant": "machinists_brilliance",
-                "id": "168898"
+                "id": "174108"
             },
             "neck": {
-                "azerite_level": "65",
-                "bonus_id": "4929/5814/4936/1600",
+                "azerite_level": "80",
+                "bonus_id": "4929/5814/4936/1630",
                 "id": "158075"
             },
             "off_hand": {
-                "bonus_id": "4800/1517",
-                "id": "168896"
+                "bonus_id": "4824/1517",
+                "id": "172190"
             },
             "shoulders": {
-                "azerite_powers": "123/230/30/13",
-                "bonus_id": "5062/1617/4786/4775",
-                "id": "159273"
+                "azerite_powers": "123/230/30",
+                "bonus_id": "4824/1517/4775",
+                "id": "174117"
             },
             "trinket1": {
-                "bonus_id": "4800/1517",
-                "id": "169304"
+                "bonus_id": "4824/1517",
+                "id": "174060"
             },
             "trinket2": {
-                "bonus_id": "4800/1517",
-                "id": "169314"
+                "bonus_id": "4824/1517",
+                "id": "173944"
             },
             "waist": {
-                "bonus_id": "1512",
-                "id": "170367"
+                "bonus_id": "4824/1517",
+                "id": "174124"
             },
             "wrists": {
-                "bonus_id": "1512",
-                "id": "170306"
+                "bonus_id": "4824/1517",
+                "id": "174122"
             }
         },
         "legs": {
-            "bonus_id": "4800/1517",
-            "id": "168371"
+            "bonus_id": "4824/1517",
+            "id": "174121"
         },
         "level": "120",
         "main_hand": {
-            "bonus_id": "4800/1517",
+            "bonus_id": "4824/1517/6554",
             "enchant": "machinists_brilliance",
-            "id": "168898"
+            "id": "174108"
         },
         "neck": {
-            "azerite_level": "65",
-            "bonus_id": "4929/5814/4936/1600",
+            "azerite_level": "80",
+            "bonus_id": "4929/5814/4936/1630",
             "id": "158075"
         },
         "off_hand": {
-            "bonus_id": "4800/1517",
-            "id": "168896"
+            "bonus_id": "4824/1517/6552",
+            "id": "172190"
         },
         "position": "ranged_back",
         "race": "troll",
         "role": "spell",
         "shoulders": {
-            "azerite_powers": "123/230/30/13",
-            "bonus_id": "5062/1617/4786/4775",
-            "id": "159273"
+            "azerite_powers": "123/230/30",
+            "bonus_id": "4824/1517/4775",
+            "id": "174117"
         },
         "spec": "affliction",
         "talents": "3302023",
         "trinket1": {
-            "bonus_id": "4800/1517",
-            "id": "169304"
+            "bonus_id": "4824/1517",
+            "id": "174060"
         },
         "trinket2": {
-            "bonus_id": "4800/1517",
-            "id": "169314"
+            "bonus_id": "4824/1517",
+            "id": "173944"
         },
         "waist": {
-            "bonus_id": "1512",
-            "id": "170367"
+            "bonus_id": "4824/1517",
+            "id": "174124"
         },
         "wrists": {
-            "bonus_id": "1512",
-            "id": "170306"
+            "bonus_id": "4824/1517",
+            "id": "174122"
         }
     },
     "simc_settings": {
         "class": "warlock",
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
-        "ptr": "1",
-        "simc_hash": "c8c8a05a8e",
+        "ptr": "0",
+        "simc_hash": "b5e06eac74",
         "spec": "affliction",
         "target_error": "0.2",
-        "tier": "24"
+        "tier": "25"
     },
     "simulated_steps": [
         "3",
@@ -360,84 +350,45 @@
         "1"
     ],
     "sorted_data_keys": [
+        "Twilight Devastation",
         "Infinite Stars",
         "Echoing Void",
         "Twisted Appendage",
-        "Twilight Devastation",
-        "Honed Mind",
         "Racing Pulse",
-        "Void Ritual",
+        "Honed Mind",
         "Surging Vitality",
-        "Gushing Wound",
         "Expedient",
-        "Deadly Momentum",
-        "Masterful",
+        "Void Ritual",
+        "Gushing Wound",
         "Severe",
+        "Deadly Momentum",
         "Strikethrough",
+        "Masterful",
         "Ineffable Truth",
         "Versatile",
-        "Avoidant",
         "Glimpse of Clarity"
     ],
     "sorted_data_keys_2": [
-        "Echoing Void 2",
-        "Echoing Void 3",
-        "Echoing Void 1",
-        "Gushing Wound 1",
-        "Infinite Stars 1",
-        "Infinite Stars 3",
-        "Infinite Stars 2",
-        "Expedient 3",
-        "Expedient 2",
-        "Expedient 1",
-        "Honed Mind 3",
-        "Honed Mind 1",
-        "Honed Mind 2",
-        "Racing Pulse 3",
-        "Racing Pulse 2",
-        "Surging Vitality 1",
-        "Racing Pulse 1",
-        "Surging Vitality 2",
-        "Surging Vitality 3",
-        "Twisted Appendage 2",
-        "Twisted Appendage 3",
-        "Twisted Appendage 1",
-        "Twilight Devastation 1",
-        "Masterful 2",
-        "Twilight Devastation 2",
-        "Twilight Devastation 3",
-        "Masterful 3",
-        "Severe 2",
-        "Masterful 1",
-        "Severe 1",
-        "Severe 3",
-        "Strikethrough 1",
-        "Void Ritual 1",
-        "Void Ritual 3",
-        "Ineffable Truth 1",
-        "Void Ritual 2",
-        "Deadly Momentum 2",
-        "Deadly Momentum 3",
-        "Deadly Momentum 1",
-        "Strikethrough 3",
-        "Strikethrough 2",
-        "Versatile 3",
-        "Versatile 1",
-        "Versatile 2",
-        "Ineffable Truth 2",
-        "Avoidant 3",
-        "Avoidant 2",
-        "Avoidant 1",
-        "Glimpse of Clarity 1",
-        "Glimpse of Clarity 2"
+        "Gushing Wound",
+        "Twilight Devastation",
+        "Echoing Void",
+        "Expedient",
+        "Infinite Stars",
+        "Racing Pulse",
+        "Honed Mind",
+        "Surging Vitality",
+        "Severe",
+        "Twisted Appendage",
+        "Strikethrough",
+        "Masterful",
+        "Void Ritual",
+        "Deadly Momentum",
+        "Versatile",
+        "Ineffable Truth",
+        "Glimpse of Clarity"
     ],
     "spec_id": 265,
     "spell_ids": {
-        "Avoidant": {
-            "1": 315607,
-            "2": 315608,
-            "3": 315609
-        },
         "Deadly Momentum": {
             "1": 318268,
             "2": 318493,
@@ -520,7 +471,7 @@
             "3": 318480
         }
     },
-    "subtitle": "UTC 2020-01-14 21:49 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c8c8a05a8e\" target=\"blank\">c8c8a05</a>",
+    "subtitle": "UTC 2020-01-20 23:32 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/b5e06eac74\" target=\"blank\">b5e06ea</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -621,6 +572,6 @@
             }
         }
     },
-    "timestamp": "2020-01-14 21:49",
+    "timestamp": "2020-01-20 23:32",
     "title": "Corruptions | Affliction Warlock | Hecticaddcleave"
 }

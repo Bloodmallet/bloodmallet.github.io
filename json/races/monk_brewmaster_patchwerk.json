@@ -1,26 +1,28 @@
 {
     "class_id": 10,
     "data": {
-        "Blood Elf": 31555,
-        "Dark Iron Dwarf": 31396,
-        "Draenei": 31403,
-        "Dwarf": 31630,
-        "Gnome": 31488,
-        "Highmountain Tauren": 31579,
-        "Human": 31602,
-        "Kul Tiran": 31613,
-        "Maghar Orc": 31510,
-        "Night Elf": 31509,
-        "Nightborne": 31491,
-        "Orc": 31393,
-        "Pandaren": 31497,
-        "Tauren": 31633,
-        "Troll": 31371,
-        "Undead": 31762,
-        "Void Elf": 31700,
-        "Zandalari Troll Bwonsamdi": 31574,
-        "Zandalari Troll Kimbul": 31568,
-        "Zandalari Troll Paku": 31506
+        "Blood Elf": 66119,
+        "Dark Iron Dwarf": 65757,
+        "Draenei": 65819,
+        "Dwarf": 66355,
+        "Gnome": 65999,
+        "Highmountain Tauren": 66260,
+        "Human": 66302,
+        "Kul Tiran": 66223,
+        "Maghar Orc": 65964,
+        "Mechagnome": 66105,
+        "Night Elf": 66166,
+        "Nightborne": 66137,
+        "Orc": 65790,
+        "Pandaren": 65918,
+        "Tauren": 66568,
+        "Troll": 65927,
+        "Undead": 66373,
+        "Void Elf": 66375,
+        "Vulpera": 66381,
+        "Zandalari Troll Bwonsamdi": 66072,
+        "Zandalari Troll Kimbul": 66150,
+        "Zandalari Troll Paku": 66122
     },
     "data_type": "races",
     "languages": {
@@ -114,6 +116,16 @@
             "ko_KR": "마그하르 오크",
             "ru_RU": "Маг'хар"
         },
+        "Mechagnome": {
+            "cn_CN": "Mechagnome",
+            "de_DE": "Mechagnome",
+            "en_US": "Mechagnome",
+            "es_ES": "Mechagnome",
+            "fr_FR": "Mechagnome",
+            "it_IT": "Mechagnome",
+            "ko_KR": "Mechagnome",
+            "ru_RU": "Mechagnome"
+        },
         "Night Elf": {
             "cn_CN": "暗夜精灵",
             "de_DE": "Nachtelf",
@@ -194,6 +206,16 @@
             "ko_KR": "공허 엘프",
             "ru_RU": "Эльф Бездны"
         },
+        "Vulpera": {
+            "cn_CN": "Vulpera",
+            "de_DE": "Vulpera",
+            "en_US": "Vulpera",
+            "es_ES": "Vulpera",
+            "fr_FR": "Vulpera",
+            "it_IT": "Vulpera",
+            "ko_KR": "Vulpera",
+            "ru_RU": "Vulpera"
+        },
         "Zandalari Troll Bwonsamdi": {
             "cn_CN": "Zandalari Troll Bwonsamdi",
             "de_DE": "Zandalari Troll Bwonsamdi",
@@ -226,13 +248,13 @@
         }
     },
     "profile": {
-        "azerite_essences": "12:3/300573/13:3/300575/300576/32:3",
+        "azerite_essences": "12:3:1/13:3:0/32:3:0/37:3:0",
         "back": {
-            "bonus_id": "4800/1517",
-            "id": "168604"
+            "bonus_id": "6286",
+            "id": "169223"
         },
         "character": {
-            "azerite_essences": "12:3/300573/13:3/300575/300576/32:3",
+            "azerite_essences": "12:3:1/13:3:0/32:3:0/37:3:0",
             "class": "monk",
             "level": "120",
             "position": "front",
@@ -242,115 +264,115 @@
             "talents": "1010021"
         },
         "chest": {
-            "azerite_powers": "116/575/31/85/13",
+            "azerite_powers": "116/582/31/85/13",
             "bonus_id": "4824/1517/4775",
-            "id": "168350"
+            "id": "174136"
         },
         "feet": {
-            "bonus_id": "6300/1512",
-            "id": "170141"
+            "bonus_id": "1674/5010/1637/6552",
+            "id": "159320"
         },
         "finger1": {
-            "bonus_id": "1537/4786",
+            "bonus_id": "4824/1517",
             "enchant": "accord_of_versatility",
-            "id": "165565"
+            "id": "174533"
         },
         "finger2": {
-            "bonus_id": "5010/1602/4786",
+            "bonus_id": "1674/5010/1637",
             "enchant": "accord_of_versatility",
             "id": "158362"
         },
         "hands": {
-            "bonus_id": "4800/1517",
-            "id": "168887"
+            "bonus_id": "1674/5010/1637",
+            "id": "159337"
         },
         "head": {
-            "azerite_powers": "383/575/18/83/13",
+            "azerite_powers": "383/582/22/83/13",
             "bonus_id": "4824/1517/4775",
-            "id": "168345"
+            "id": "174132"
         },
         "items": {
             "back": {
-                "bonus_id": "4800/1517",
-                "id": "168604"
+                "bonus_id": "6286",
+                "id": "169223"
             },
             "chest": {
-                "azerite_powers": "116/575/31/85/13",
+                "azerite_powers": "116/582/31/85/13",
                 "bonus_id": "4824/1517/4775",
-                "id": "168350"
+                "id": "174136"
             },
             "feet": {
-                "bonus_id": "6300/1512",
-                "id": "170141"
+                "bonus_id": "1674/5010/1637/6552",
+                "id": "159320"
             },
             "finger1": {
-                "bonus_id": "1537/4786",
+                "bonus_id": "4824/1517",
                 "enchant": "accord_of_versatility",
-                "id": "165565"
+                "id": "174533"
             },
             "finger2": {
-                "bonus_id": "5010/1602/4786",
+                "bonus_id": "1674/5010/1637",
                 "enchant": "accord_of_versatility",
                 "id": "158362"
             },
             "hands": {
-                "bonus_id": "4800/1517",
-                "id": "168887"
+                "bonus_id": "1674/5010/1637",
+                "id": "159337"
             },
             "head": {
-                "azerite_powers": "383/575/18/83/13",
+                "azerite_powers": "383/582/22/83/13",
                 "bonus_id": "4824/1517/4775",
-                "id": "168345"
+                "id": "174132"
             },
             "legs": {
-                "bonus_id": "4800/1517/4786",
-                "id": "168378"
+                "bonus_id": "4824/1517/6550",
+                "id": "174143"
             },
             "main_hand": {
-                "bonus_id": "4800/1517",
+                "bonus_id": "4824/1517/6550",
                 "enchant": "versatile_navigation",
-                "id": "168306"
+                "id": "174106"
             },
             "neck": {
-                "azerite_level": "65",
-                "bonus_id": "4929/5814/4936/1600",
+                "azerite_level": "80",
+                "bonus_id": "4929/5814/4936/1630",
                 "id": "158075"
             },
             "shoulders": {
                 "azerite_powers": "384/193/459/87/13",
-                "bonus_id": "1617/4786/5480/4775",
+                "bonus_id": "1647/4786/5480/4775",
                 "id": "159339"
             },
             "trinket1": {
-                "id": "167555",
-                "ilevel": "415"
+                "bonus_id": "4824/1517",
+                "id": "173946"
             },
             "trinket2": {
-                "bonus_id": "4800/1517",
-                "id": "169311"
+                "bonus_id": "4824/1517",
+                "id": "174060"
             },
             "waist": {
-                "bonus_id": "6300/1512",
-                "id": "170368"
+                "bonus_id": "1674/5010/1637",
+                "id": "159333"
             },
             "wrists": {
-                "bonus_id": "6300/1512",
-                "id": "170305"
+                "bonus_id": "4824/1517",
+                "id": "174138"
             }
         },
         "legs": {
-            "bonus_id": "4800/1517/4786",
-            "id": "168378"
+            "bonus_id": "4824/1517/6550",
+            "id": "174143"
         },
         "level": "120",
         "main_hand": {
-            "bonus_id": "4800/1517",
+            "bonus_id": "4824/1517/6550",
             "enchant": "versatile_navigation",
-            "id": "168306"
+            "id": "174106"
         },
         "neck": {
-            "azerite_level": "65",
-            "bonus_id": "4929/5814/4936/1600",
+            "azerite_level": "80",
+            "bonus_id": "4929/5814/4936/1630",
             "id": "158075"
         },
         "position": "front",
@@ -358,62 +380,64 @@
         "role": "tank",
         "shoulders": {
             "azerite_powers": "384/193/459/87/13",
-            "bonus_id": "1617/4786/5480/4775",
+            "bonus_id": "1647/4786/5480/4775",
             "id": "159339"
         },
         "spec": "brewmaster",
         "talents": "1010021",
         "trinket1": {
-            "id": "167555",
-            "ilevel": "415"
+            "bonus_id": "4824/1517",
+            "id": "173946"
         },
         "trinket2": {
-            "bonus_id": "4800/1517",
-            "id": "169311"
+            "bonus_id": "4824/1517",
+            "id": "174060"
         },
         "waist": {
-            "bonus_id": "6300/1512",
-            "id": "170368"
+            "bonus_id": "1674/5010/1637",
+            "id": "159333"
         },
         "wrists": {
-            "bonus_id": "6300/1512",
-            "id": "170305"
+            "bonus_id": "4824/1517",
+            "id": "174138"
         }
     },
     "simc_settings": {
         "class": "monk",
         "fight_style": "patchwerk",
         "iterations": "20000",
-        "ptr": "1",
-        "simc_hash": "a72074e253",
+        "ptr": "0",
+        "simc_hash": "b5e06eac74",
         "spec": "brewmaster",
         "target_error": "0.1",
-        "tier": "24"
+        "tier": "25"
     },
     "sorted_data_keys": [
-        "Undead",
-        "Void Elf",
         "Tauren",
+        "Vulpera",
+        "Void Elf",
+        "Undead",
         "Dwarf",
-        "Kul Tiran",
         "Human",
         "Highmountain Tauren",
-        "Zandalari Troll Bwonsamdi",
-        "Zandalari Troll Kimbul",
-        "Blood Elf",
-        "Maghar Orc",
+        "Kul Tiran",
         "Night Elf",
-        "Zandalari Troll Paku",
-        "Pandaren",
+        "Zandalari Troll Kimbul",
         "Nightborne",
+        "Zandalari Troll Paku",
+        "Blood Elf",
+        "Mechagnome",
+        "Zandalari Troll Bwonsamdi",
         "Gnome",
+        "Maghar Orc",
+        "Troll",
+        "Pandaren",
         "Draenei",
-        "Dark Iron Dwarf",
         "Orc",
-        "Troll"
+        "Dark Iron Dwarf"
     ],
     "spec_id": 268,
-    "subtitle": "UTC 2020-01-14 07:26 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/a72074e253\" target=\"blank\">a72074e</a>",
+    "subtitle": "UTC 2020-01-20 07:27 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/b5e06eac74\" target=\"blank\">b5e06ea</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -514,6 +538,6 @@
             }
         }
     },
-    "timestamp": "2020-01-14 07:26",
+    "timestamp": "2020-01-20 07:27",
     "title": "Races | Brewmaster Monk | Patchwerk"
 }

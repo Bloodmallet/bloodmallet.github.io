@@ -1,18 +1,20 @@
 {
     "class_id": 9,
     "data": {
-        "Blood Elf": 53783,
-        "Dark Iron Dwarf": 53724,
-        "Dwarf": 53992,
-        "Gnome": 54053,
-        "Goblin": 54180,
-        "Human": 54095,
-        "Nightborne": 53823,
-        "Orc": 53944,
-        "Troll": 54823,
-        "Undead": 53751,
-        "Void Elf": 53723,
-        "Worgen": 53864
+        "Blood Elf": 100876,
+        "Dark Iron Dwarf": 100513,
+        "Dwarf": 101430,
+        "Gnome": 101249,
+        "Goblin": 101495,
+        "Human": 101437,
+        "Mechagnome": 101183,
+        "Nightborne": 100786,
+        "Orc": 100679,
+        "Troll": 102636,
+        "Undead": 100383,
+        "Void Elf": 100648,
+        "Vulpera": 99916,
+        "Worgen": 100559
     },
     "data_type": "races",
     "languages": {
@@ -76,6 +78,16 @@
             "ko_KR": "인간",
             "ru_RU": "Человек"
         },
+        "Mechagnome": {
+            "cn_CN": "Mechagnome",
+            "de_DE": "Mechagnome",
+            "en_US": "Mechagnome",
+            "es_ES": "Mechagnome",
+            "fr_FR": "Mechagnome",
+            "it_IT": "Mechagnome",
+            "ko_KR": "Mechagnome",
+            "ru_RU": "Mechagnome"
+        },
         "Nightborne": {
             "cn_CN": "夜之子",
             "de_DE": "Nachtgeborener",
@@ -126,6 +138,16 @@
             "ko_KR": "공허 엘프",
             "ru_RU": "Эльф Бездны"
         },
+        "Vulpera": {
+            "cn_CN": "Vulpera",
+            "de_DE": "Vulpera",
+            "en_US": "Vulpera",
+            "es_ES": "Vulpera",
+            "fr_FR": "Vulpera",
+            "it_IT": "Vulpera",
+            "ko_KR": "Vulpera",
+            "ru_RU": "Vulpera"
+        },
         "Worgen": {
             "cn_CN": "狼人",
             "de_DE": "Worgen",
@@ -138,13 +160,13 @@
         }
     },
     "profile": {
-        "azerite_essences": "27:3:1/22:3:0/4:3:0",
+        "azerite_essences": "27:3:1/22:3:0/35:3:0/5:3:0",
         "back": {
-            "bonus_id": "4800/1517",
-            "id": "168391"
+            "bonus_id": "6286",
+            "id": "169223"
         },
         "character": {
-            "azerite_essences": "27:3:1/22:3:0/4:3:0",
+            "azerite_essences": "27:3:1/22:3:0/35:3:0/5:3:0",
             "class": "warlock",
             "level": "120",
             "position": "ranged_back",
@@ -154,170 +176,180 @@
             "talents": "2103023"
         },
         "chest": {
-            "azerite_powers": "432/576/30/13",
+            "azerite_powers": "131/582/459",
             "bonus_id": "4824/1517/4775",
-            "id": "168337"
+            "id": "174115"
         },
         "feet": {
-            "bonus_id": "1512",
-            "id": "170140"
+            "bonus_id": "4824/1517",
+            "id": "174123"
         },
         "finger1": {
-            "bonus_id": "4800/1517",
+            "bonus_id": "4779/1522",
             "enchant": "accord_of_critical_strike",
-            "id": "168891"
+            "id": "169157"
         },
         "finger2": {
-            "bonus_id": "4800/1517",
+            "bonus_id": "4779/1522",
             "enchant": "accord_of_mastery",
-            "id": "168890"
+            "id": "169159"
         },
         "hands": {
-            "bonus_id": "1512",
-            "id": "170333"
+            "bonus_id": "4824/1517",
+            "id": "174125"
         },
         "head": {
-            "azerite_powers": "444/576/30/13",
+            "azerite_powers": "444/582/31",
             "bonus_id": "4824/1517/4775",
-            "id": "168336"
+            "id": "174118"
         },
         "items": {
             "back": {
-                "bonus_id": "4800/1517",
-                "id": "168391"
+                "bonus_id": "6286",
+                "id": "169223"
             },
             "chest": {
-                "azerite_powers": "432/576/30/13",
+                "azerite_powers": "131/582/459",
                 "bonus_id": "4824/1517/4775",
-                "id": "168337"
+                "id": "174115"
             },
             "feet": {
-                "bonus_id": "1512",
-                "id": "170140"
+                "bonus_id": "4824/1517",
+                "id": "174123"
             },
             "finger1": {
-                "bonus_id": "4800/1517",
+                "bonus_id": "4779/1522",
                 "enchant": "accord_of_critical_strike",
-                "id": "168891"
+                "id": "169157"
             },
             "finger2": {
-                "bonus_id": "4800/1517",
+                "bonus_id": "4779/1522",
                 "enchant": "accord_of_mastery",
-                "id": "168890"
+                "id": "169159"
             },
             "hands": {
-                "bonus_id": "1512",
-                "id": "170333"
+                "bonus_id": "4824/1517",
+                "id": "174125"
             },
             "head": {
-                "azerite_powers": "444/576/30/13",
+                "azerite_powers": "444/582/31",
                 "bonus_id": "4824/1517/4775",
-                "id": "168336"
+                "id": "174118"
             },
             "legs": {
-                "bonus_id": "4800/1517",
-                "id": "168876"
+                "bonus_id": "4824/1517",
+                "id": "174127"
             },
             "main_hand": {
-                "bonus_id": "4800/1517",
+                "bonus_id": "4824/1517/6554",
                 "enchant": "machinists_brilliance",
-                "id": "168275"
+                "id": "174108"
             },
             "neck": {
-                "azerite_level": "65",
-                "bonus_id": "4929/5814/4936/1600",
+                "azerite_level": "80",
+                "bonus_id": "4929/5814/4936/1630",
                 "id": "158075"
             },
+            "off_hand": {
+                "bonus_id": "4824/1517/6552",
+                "id": "172190"
+            },
             "shoulders": {
-                "azerite_powers": "432/460/30/13",
+                "azerite_powers": "432/582/30",
                 "bonus_id": "4824/1517/4775",
-                "id": "168338"
+                "id": "174117"
             },
             "trinket1": {
                 "bonus_id": "4800/1517",
-                "id": "169304"
-            },
-            "trinket2": {
-                "bonus_id": "4800/1517",
                 "id": "169314"
             },
+            "trinket2": {
+                "bonus_id": "4824/1517",
+                "id": "174060"
+            },
             "waist": {
-                "bonus_id": "1512",
-                "id": "170367"
+                "bonus_id": "4824/1517",
+                "id": "174124"
             },
             "wrists": {
-                "bonus_id": "1512",
-                "id": "170306"
+                "bonus_id": "4824/1517",
+                "id": "174129"
             }
         },
         "legs": {
-            "bonus_id": "4800/1517",
-            "id": "168876"
+            "bonus_id": "4824/1517",
+            "id": "174127"
         },
         "level": "120",
         "main_hand": {
-            "bonus_id": "4800/1517",
+            "bonus_id": "4824/1517/6554",
             "enchant": "machinists_brilliance",
-            "id": "168275"
+            "id": "174108"
         },
         "neck": {
-            "azerite_level": "65",
-            "bonus_id": "4929/5814/4936/1600",
+            "azerite_level": "80",
+            "bonus_id": "4929/5814/4936/1630",
             "id": "158075"
+        },
+        "off_hand": {
+            "bonus_id": "4824/1517/6552",
+            "id": "172190"
         },
         "position": "ranged_back",
         "race": "troll",
         "role": "spell",
         "shoulders": {
-            "azerite_powers": "432/460/30/13",
+            "azerite_powers": "432/582/30",
             "bonus_id": "4824/1517/4775",
-            "id": "168338"
+            "id": "174117"
         },
         "spec": "destruction",
         "talents": "2103023",
         "trinket1": {
             "bonus_id": "4800/1517",
-            "id": "169304"
-        },
-        "trinket2": {
-            "bonus_id": "4800/1517",
             "id": "169314"
         },
+        "trinket2": {
+            "bonus_id": "4824/1517",
+            "id": "174060"
+        },
         "waist": {
-            "bonus_id": "1512",
-            "id": "170367"
+            "bonus_id": "4824/1517",
+            "id": "174124"
         },
         "wrists": {
-            "bonus_id": "1512",
-            "id": "170306"
+            "bonus_id": "4824/1517",
+            "id": "174129"
         }
     },
     "simc_settings": {
         "class": "warlock",
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
-        "ptr": "1",
-        "simc_hash": "a72074e253",
+        "ptr": "0",
+        "simc_hash": "b5e06eac74",
         "spec": "destruction",
         "target_error": "0.2",
-        "tier": "24"
+        "tier": "25"
     },
     "sorted_data_keys": [
         "Troll",
         "Goblin",
         "Human",
-        "Gnome",
         "Dwarf",
-        "Orc",
-        "Worgen",
-        "Nightborne",
+        "Gnome",
+        "Mechagnome",
         "Blood Elf",
-        "Undead",
+        "Nightborne",
+        "Orc",
+        "Void Elf",
+        "Worgen",
         "Dark Iron Dwarf",
-        "Void Elf"
+        "Undead",
+        "Vulpera"
     ],
     "spec_id": 267,
-    "subtitle": "UTC 2020-01-14 07:46 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/a72074e253\" target=\"blank\">a72074e</a>",
+    "subtitle": "UTC 2020-01-20 07:45 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/b5e06eac74\" target=\"blank\">b5e06ea</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -418,6 +450,6 @@
             }
         }
     },
-    "timestamp": "2020-01-14 07:46",
+    "timestamp": "2020-01-20 07:45",
     "title": "Races | Destruction Warlock | Hecticaddcleave"
 }
