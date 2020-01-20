@@ -1,29 +1,31 @@
 {
     "class_id": 3,
     "data": {
-        "Blood Elf": 50577,
-        "Dark Iron Dwarf": 50453,
-        "Draenei": 50438,
-        "Dwarf": 50797,
-        "Gnome": 50687,
-        "Goblin": 50552,
-        "Highmountain Tauren": 50626,
-        "Human": 50886,
-        "Kul Tiran": 50620,
-        "Lightforged Draenei": 50594,
-        "Maghar Orc": 50754,
-        "Night Elf": 50589,
-        "Nightborne": 50375,
-        "Orc": 50538,
-        "Pandaren": 50619,
-        "Tauren": 50802,
-        "Troll": 50799,
-        "Undead": 50624,
-        "Void Elf": 50746,
-        "Worgen": 50570,
-        "Zandalari Troll Bwonsamdi": 50463,
-        "Zandalari Troll Kimbul": 50542,
-        "Zandalari Troll Paku": 50564
+        "Blood Elf": 91454,
+        "Dark Iron Dwarf": 91179,
+        "Draenei": 91423,
+        "Dwarf": 91747,
+        "Gnome": 91767,
+        "Goblin": 91620,
+        "Highmountain Tauren": 91471,
+        "Human": 92229,
+        "Kul Tiran": 91488,
+        "Lightforged Draenei": 91089,
+        "Maghar Orc": 91655,
+        "Mechagnome": 91742,
+        "Night Elf": 91519,
+        "Nightborne": 91219,
+        "Orc": 91153,
+        "Pandaren": 91838,
+        "Tauren": 91797,
+        "Troll": 91953,
+        "Undead": 91459,
+        "Void Elf": 91853,
+        "Vulpera": 90855,
+        "Worgen": 91543,
+        "Zandalari Troll Bwonsamdi": 91278,
+        "Zandalari Troll Kimbul": 91245,
+        "Zandalari Troll Paku": 91664
     },
     "data_type": "races",
     "languages": {
@@ -137,6 +139,16 @@
             "ko_KR": "마그하르 오크",
             "ru_RU": "Маг'хар"
         },
+        "Mechagnome": {
+            "cn_CN": "Mechagnome",
+            "de_DE": "Mechagnome",
+            "en_US": "Mechagnome",
+            "es_ES": "Mechagnome",
+            "fr_FR": "Mechagnome",
+            "it_IT": "Mechagnome",
+            "ko_KR": "Mechagnome",
+            "ru_RU": "Mechagnome"
+        },
         "Night Elf": {
             "cn_CN": "暗夜精灵",
             "de_DE": "Nachtelf",
@@ -217,6 +229,16 @@
             "ko_KR": "공허 엘프",
             "ru_RU": "Эльф Бездны"
         },
+        "Vulpera": {
+            "cn_CN": "Vulpera",
+            "de_DE": "Vulpera",
+            "en_US": "Vulpera",
+            "es_ES": "Vulpera",
+            "fr_FR": "Vulpera",
+            "it_IT": "Vulpera",
+            "ko_KR": "Vulpera",
+            "ru_RU": "Vulpera"
+        },
         "Worgen": {
             "cn_CN": "狼人",
             "de_DE": "Worgen",
@@ -259,13 +281,13 @@
         }
     },
     "profile": {
-        "azerite_essences": "14:3/4:3/32:3",
+        "azerite_essences": "4:3/5:3/12:3/35:3",
         "back": {
-            "bonus_id": "4800/1517",
-            "id": "168391"
+            "bonus_id": "6286",
+            "id": "169223"
         },
         "character": {
-            "azerite_essences": "14:3/4:3/32:3",
+            "azerite_essences": "4:3/5:3/12:3/35:3",
             "class": "hunter",
             "level": "120",
             "position": "ranged_back",
@@ -275,84 +297,84 @@
             "talents": "1103031"
         },
         "chest": {
-            "azerite_powers": "36/370/30/14/13",
-            "bonus_id": "4786/1617/4819/4775",
-            "id": "159370"
+            "azerite_powers": "370/582/30/203/13",
+            "bonus_id": "4824/1517/4775",
+            "id": "174147"
         },
         "feet": {
-            "bonus_id": "1512",
-            "id": "170142"
+            "bonus_id": "4824/1517",
+            "id": "174157"
         },
         "finger1": {
-            "bonus_id": "4800/1517",
+            "bonus_id": "4824/1517/6554",
             "enchant": "accord_of_mastery",
-            "id": "168891"
+            "id": "174533"
         },
         "finger2": {
-            "bonus_id": "4800/1517",
-            "enchant": "accord_of_versatility",
-            "id": "168889"
+            "bonus_id": "4824/1517/6573",
+            "enchant": "accord_of_mastery",
+            "id": "174531"
         },
         "hands": {
-            "bonus_id": "1512",
-            "id": "170335"
+            "bonus_id": "4824/1517",
+            "id": "174153"
         },
         "head": {
-            "azerite_powers": "212/36/459/15/13",
-            "bonus_id": "4786/1617/4819/4775",
-            "id": "159398"
+            "azerite_powers": "36/582/30/15/13",
+            "bonus_id": "4824/1517/4775",
+            "id": "174151"
         },
         "items": {
             "back": {
-                "bonus_id": "4800/1517",
-                "id": "168391"
+                "bonus_id": "6286",
+                "id": "169223"
             },
             "chest": {
-                "azerite_powers": "36/370/30/14/13",
-                "bonus_id": "4786/1617/4819/4775",
-                "id": "159370"
+                "azerite_powers": "370/582/30/203/13",
+                "bonus_id": "4824/1517/4775",
+                "id": "174147"
             },
             "feet": {
-                "bonus_id": "1512",
-                "id": "170142"
+                "bonus_id": "4824/1517",
+                "id": "174157"
             },
             "finger1": {
-                "bonus_id": "4800/1517",
+                "bonus_id": "4824/1517/6554",
                 "enchant": "accord_of_mastery",
-                "id": "168891"
+                "id": "174533"
             },
             "finger2": {
-                "bonus_id": "4800/1517",
-                "enchant": "accord_of_versatility",
-                "id": "168889"
+                "bonus_id": "4824/1517/6573",
+                "enchant": "accord_of_mastery",
+                "id": "174531"
             },
             "hands": {
-                "bonus_id": "1512",
-                "id": "170335"
+                "bonus_id": "4824/1517",
+                "id": "174153"
             },
             "head": {
-                "azerite_powers": "212/36/459/15/13",
-                "bonus_id": "4786/1617/4819/4775",
-                "id": "159398"
+                "azerite_powers": "36/582/30/15/13",
+                "bonus_id": "4824/1517/4775",
+                "id": "174151"
             },
             "legs": {
-                "bonus_id": "4800/1517",
-                "id": "168874"
+                "bonus_id": "4824/1517",
+                "id": "174159"
             },
             "main_hand": {
-                "bonus_id": "4800/1517",
+                "bonus_id": "4824/1517/6448",
                 "enchant": "versatile_navigation",
-                "id": "168273"
+                "id": "172229"
             },
             "neck": {
-                "azerite_level": "65",
-                "bonus_id": "4929/5814/4936/1600",
+                "azerite_level": "80",
+                "bonus_id": "4929/5814/4936/1630",
                 "id": "158075"
             },
             "shoulders": {
-                "azerite_powers": "36/212/30/15/13",
+                "azerite_powers": "36/582/30/44/13",
                 "bonus_id": "4824/1517/4775",
-                "id": "169588"
+                "id": "174149"
             },
             "trinket1": {
                 "bonus_id": "4800/1517",
@@ -363,36 +385,36 @@
                 "id": "169314"
             },
             "waist": {
-                "bonus_id": "1512",
-                "id": "170369"
+                "bonus_id": "4824/1517",
+                "id": "174158"
             },
             "wrists": {
-                "bonus_id": "1512",
-                "id": "170304"
+                "bonus_id": "4824/1517",
+                "id": "174161"
             }
         },
         "legs": {
-            "bonus_id": "4800/1517",
-            "id": "168874"
+            "bonus_id": "4824/1517",
+            "id": "174159"
         },
         "level": "120",
         "main_hand": {
-            "bonus_id": "4800/1517",
+            "bonus_id": "4824/1517/6448",
             "enchant": "versatile_navigation",
-            "id": "168273"
+            "id": "172229"
         },
         "neck": {
-            "azerite_level": "65",
-            "bonus_id": "4929/5814/4936/1600",
+            "azerite_level": "80",
+            "bonus_id": "4929/5814/4936/1630",
             "id": "158075"
         },
         "position": "ranged_back",
         "race": "human",
         "role": "attack",
         "shoulders": {
-            "azerite_powers": "36/212/30/15/13",
+            "azerite_powers": "36/582/30/44/13",
             "bonus_id": "4824/1517/4775",
-            "id": "169588"
+            "id": "174149"
         },
         "spec": "marksmanship",
         "talents": "1103031",
@@ -405,51 +427,53 @@
             "id": "169314"
         },
         "waist": {
-            "bonus_id": "1512",
-            "id": "170369"
+            "bonus_id": "4824/1517",
+            "id": "174158"
         },
         "wrists": {
-            "bonus_id": "1512",
-            "id": "170304"
+            "bonus_id": "4824/1517",
+            "id": "174161"
         }
     },
     "simc_settings": {
         "class": "hunter",
         "fight_style": "patchwerk",
         "iterations": "20000",
-        "ptr": "1",
-        "simc_hash": "a72074e253",
+        "ptr": "0",
+        "simc_hash": "62b5386ee4702c84df2388b54c69cf39f136a0b8",
         "spec": "marksmanship",
         "target_error": "0.1",
-        "tier": "24"
+        "tier": "25"
     },
     "sorted_data_keys": [
         "Human",
-        "Tauren",
         "Troll",
-        "Dwarf",
-        "Maghar Orc",
         "Void Elf",
+        "Pandaren",
+        "Tauren",
         "Gnome",
+        "Dwarf",
+        "Mechagnome",
+        "Zandalari Troll Paku",
+        "Maghar Orc",
+        "Goblin",
+        "Worgen",
+        "Night Elf",
+        "Kul Tiran",
         "Highmountain Tauren",
         "Undead",
-        "Kul Tiran",
-        "Pandaren",
-        "Lightforged Draenei",
-        "Night Elf",
         "Blood Elf",
-        "Worgen",
-        "Zandalari Troll Paku",
-        "Goblin",
-        "Zandalari Troll Kimbul",
-        "Orc",
-        "Zandalari Troll Bwonsamdi",
-        "Dark Iron Dwarf",
         "Draenei",
-        "Nightborne"
+        "Zandalari Troll Bwonsamdi",
+        "Zandalari Troll Kimbul",
+        "Nightborne",
+        "Dark Iron Dwarf",
+        "Orc",
+        "Lightforged Draenei",
+        "Vulpera"
     ],
     "spec_id": 254,
-    "subtitle": "UTC 2020-01-14 07:23 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/a72074e253\" target=\"blank\">a72074e</a>",
+    "subtitle": "UTC 2020-01-19 14:48 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/62b5386ee4702c84df2388b54c69cf39f136a0b8\" target=\"blank\">62b5386</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -550,6 +574,6 @@
             }
         }
     },
-    "timestamp": "2020-01-14 07:23",
+    "timestamp": "2020-01-19 14:48",
     "title": "Races | Marksmanship Hunter | Patchwerk"
 }
