@@ -1,20 +1,21 @@
 {
     "class_id": 7,
     "data": {
-        "Dark Iron Dwarf": 71529,
-        "Draenei": 71459,
-        "Dwarf": 71791,
-        "Goblin": 71875,
-        "Highmountain Tauren": 71777,
-        "Kul Tiran": 71842,
-        "Maghar Orc": 71750,
-        "Orc": 71623,
-        "Pandaren": 71955,
-        "Tauren": 71931,
-        "Troll": 71951,
-        "Zandalari Troll Bwonsamdi": 71368,
-        "Zandalari Troll Kimbul": 71661,
-        "Zandalari Troll Paku": 71862
+        "Dark Iron Dwarf": 121859,
+        "Draenei": 122207,
+        "Dwarf": 122978,
+        "Goblin": 123064,
+        "Highmountain Tauren": 123184,
+        "Kul Tiran": 122905,
+        "Maghar Orc": 122381,
+        "Orc": 122022,
+        "Pandaren": 122740,
+        "Tauren": 123386,
+        "Troll": 123328,
+        "Vulpera": 121161,
+        "Zandalari Troll Bwonsamdi": 122249,
+        "Zandalari Troll Kimbul": 121998,
+        "Zandalari Troll Paku": 122618
     },
     "data_type": "races",
     "languages": {
@@ -128,6 +129,16 @@
             "ko_KR": "트롤",
             "ru_RU": "Тролль"
         },
+        "Vulpera": {
+            "cn_CN": "Vulpera",
+            "de_DE": "Vulpera",
+            "en_US": "Vulpera",
+            "es_ES": "Vulpera",
+            "fr_FR": "Vulpera",
+            "it_IT": "Vulpera",
+            "ko_KR": "Vulpera",
+            "ru_RU": "Vulpera"
+        },
         "Zandalari Troll Bwonsamdi": {
             "cn_CN": "Zandalari Troll Bwonsamdi",
             "de_DE": "Zandalari Troll Bwonsamdi",
@@ -160,13 +171,13 @@
         }
     },
     "profile": {
-        "azerite_essences": "14:3/5:3/4:3",
+        "azerite_essences": "4:3/35:3/5:3/23:3",
         "back": {
-            "bonus_id": "4800/1517",
-            "id": "168604"
+            "bonus_id": "6286",
+            "id": "169223"
         },
         "character": {
-            "azerite_essences": "14:3/5:3/4:3",
+            "azerite_essences": "4:3/35:3/5:3/23:3",
             "class": "shaman",
             "level": "120",
             "position": "back",
@@ -176,134 +187,134 @@
             "talents": "3202033"
         },
         "chest": {
-            "azerite_powers": "447/416/22/474/13",
-            "bonus_id": "4786/1617/4819/4775",
-            "id": "158307"
+            "azerite_powers": "420/416/21/14/13",
+            "bonus_id": "4824/1517/4819/4775",
+            "id": "174147"
         },
         "feet": {
-            "bonus_id": "1512",
-            "id": "170142"
+            "bonus_id": "4824/1517",
+            "id": "174160"
         },
         "finger1": {
-            "bonus_id": "4800/1517",
+            "bonus_id": "4824/1522",
             "enchant": "accord_of_haste",
-            "id": "168891"
+            "id": "169159"
         },
         "finger2": {
-            "bonus_id": "4800/1517",
+            "bonus_id": "4824/1522",
             "enchant": "accord_of_haste",
-            "id": "168890"
+            "id": "169157"
         },
         "hands": {
-            "bonus_id": "1512",
-            "id": "170335"
+            "bonus_id": "4824/1517",
+            "id": "174153"
         },
         "head": {
-            "azerite_powers": "530/420/30/83/13",
-            "bonus_id": "4786/1617/4819/4775",
-            "id": "159374"
+            "azerite_powers": "416/530/30/15/13",
+            "bonus_id": "4824/1517/4819/4775",
+            "id": "174151"
         },
         "items": {
             "back": {
-                "bonus_id": "4800/1517",
-                "id": "168604"
+                "bonus_id": "6286",
+                "id": "169223"
             },
             "chest": {
-                "azerite_powers": "447/416/22/474/13",
-                "bonus_id": "4786/1617/4819/4775",
-                "id": "158307"
+                "azerite_powers": "420/416/21/14/13",
+                "bonus_id": "4824/1517/4819/4775",
+                "id": "174147"
             },
             "feet": {
-                "bonus_id": "1512",
-                "id": "170142"
+                "bonus_id": "4824/1517",
+                "id": "174160"
             },
             "finger1": {
-                "bonus_id": "4800/1517",
+                "bonus_id": "4824/1522",
                 "enchant": "accord_of_haste",
-                "id": "168891"
+                "id": "169159"
             },
             "finger2": {
-                "bonus_id": "4800/1517",
+                "bonus_id": "4824/1522",
                 "enchant": "accord_of_haste",
-                "id": "168890"
+                "id": "169157"
             },
             "hands": {
-                "bonus_id": "1512",
-                "id": "170335"
+                "bonus_id": "4824/1517",
+                "id": "174153"
             },
             "head": {
-                "azerite_powers": "530/420/30/83/13",
-                "bonus_id": "4786/1617/4819/4775",
-                "id": "159374"
+                "azerite_powers": "416/530/30/15/13",
+                "bonus_id": "4824/1517/4819/4775",
+                "id": "174151"
             },
             "legs": {
-                "bonus_id": "4800/1517",
-                "id": "168383"
+                "bonus_id": "4824/1517",
+                "id": "174159"
             },
             "main_hand": {
-                "bonus_id": "4800/1517",
+                "bonus_id": "4824/1517/6554",
                 "enchant": "force_multiplier",
-                "id": "168900"
+                "id": "172186"
             },
             "neck": {
-                "azerite_level": "65",
-                "bonus_id": "4929/5814/4936/1600",
+                "azerite_level": "80",
+                "bonus_id": "4929/5814/4936/1630",
                 "id": "158075"
             },
             "off_hand": {
-                "bonus_id": "4800/1517",
+                "bonus_id": "4824/1517/6552",
                 "enchant": "quick_navigation",
-                "id": "168900"
+                "id": "172186"
             },
             "shoulders": {
-                "azerite_powers": "416/575/18/83/13",
-                "bonus_id": "4824/1517/4775",
-                "id": "168359"
+                "azerite_powers": "416/447/30/44/13",
+                "bonus_id": "4824/1517/4819/4775",
+                "id": "174149"
             },
             "trinket1": {
                 "bonus_id": "4800/1517",
                 "id": "169311"
             },
             "trinket2": {
-                "bonus_id": "4800/1517",
-                "id": "169319"
+                "bonus_id": "3536/1637/4786",
+                "id": "159623"
             },
             "waist": {
-                "bonus_id": "4800/1517",
-                "id": "168870"
+                "bonus_id": "4824/1517",
+                "id": "174158"
             },
             "wrists": {
-                "bonus_id": "1512",
-                "id": "170304"
+                "bonus_id": "4824/1517",
+                "id": "174154"
             }
         },
         "legs": {
-            "bonus_id": "4800/1517",
-            "id": "168383"
+            "bonus_id": "4824/1517",
+            "id": "174159"
         },
         "level": "120",
         "main_hand": {
-            "bonus_id": "4800/1517",
+            "bonus_id": "4824/1517/6554",
             "enchant": "force_multiplier",
-            "id": "168900"
+            "id": "172186"
         },
         "neck": {
-            "azerite_level": "65",
-            "bonus_id": "4929/5814/4936/1600",
+            "azerite_level": "80",
+            "bonus_id": "4929/5814/4936/1630",
             "id": "158075"
         },
         "off_hand": {
-            "bonus_id": "4800/1517",
+            "bonus_id": "4824/1517/6552",
             "enchant": "quick_navigation",
-            "id": "168900"
+            "id": "172186"
         },
         "position": "back",
         "race": "troll",
         "role": "attack",
         "shoulders": {
-            "azerite_powers": "416/575/18/83/13",
-            "bonus_id": "4824/1517/4775",
-            "id": "168359"
+            "azerite_powers": "416/447/30/44/13",
+            "bonus_id": "4824/1517/4819/4775",
+            "id": "174149"
         },
         "spec": "enhancement",
         "talents": "3202033",
@@ -312,46 +323,47 @@
             "id": "169311"
         },
         "trinket2": {
-            "bonus_id": "4800/1517",
-            "id": "169319"
+            "bonus_id": "3536/1637/4786",
+            "id": "159623"
         },
         "waist": {
-            "bonus_id": "4800/1517",
-            "id": "168870"
+            "bonus_id": "4824/1517",
+            "id": "174158"
         },
         "wrists": {
-            "bonus_id": "1512",
-            "id": "170304"
+            "bonus_id": "4824/1517",
+            "id": "174154"
         }
     },
     "simc_settings": {
         "class": "shaman",
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
-        "ptr": "1",
-        "simc_hash": "a72074e253",
+        "ptr": "0",
+        "simc_hash": "f8f9e13ace8d48717498528a43d62aad08c075cc",
         "spec": "enhancement",
         "target_error": "0.2",
-        "tier": "24"
+        "tier": "25"
     },
     "sorted_data_keys": [
-        "Pandaren",
-        "Troll",
         "Tauren",
-        "Goblin",
-        "Zandalari Troll Paku",
-        "Kul Tiran",
-        "Dwarf",
+        "Troll",
         "Highmountain Tauren",
+        "Goblin",
+        "Dwarf",
+        "Kul Tiran",
+        "Pandaren",
+        "Zandalari Troll Paku",
         "Maghar Orc",
-        "Zandalari Troll Kimbul",
-        "Orc",
-        "Dark Iron Dwarf",
+        "Zandalari Troll Bwonsamdi",
         "Draenei",
-        "Zandalari Troll Bwonsamdi"
+        "Orc",
+        "Zandalari Troll Kimbul",
+        "Dark Iron Dwarf",
+        "Vulpera"
     ],
     "spec_id": 263,
-    "subtitle": "UTC 2020-01-14 07:44 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/a72074e253\" target=\"blank\">a72074e</a>",
+    "subtitle": "UTC 2020-01-21 19:01 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/f8f9e13ace8d48717498528a43d62aad08c075cc\" target=\"blank\">f8f9e13</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -452,6 +464,6 @@
             }
         }
     },
-    "timestamp": "2020-01-14 07:44",
+    "timestamp": "2020-01-21 19:01",
     "title": "Races | Enhancement Shaman | Hecticaddcleave"
 }
