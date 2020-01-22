@@ -1,26 +1,26 @@
 {
     "class_id": 4,
     "data": {
-        "Blood Elf": 84906,
-        "Dark Iron Dwarf": 84383,
-        "Dwarf": 85405,
-        "Gnome": 85045,
-        "Goblin": 84907,
-        "Human": 85236,
-        "Kul Tiran": 85002,
-        "Maghar Orc": 84779,
-        "Mechagnome": 85090,
-        "Night Elf": 84953,
-        "Nightborne": 84510,
-        "Orc": 84395,
-        "Pandaren": 84758,
-        "Troll": 84873,
-        "Undead": 84802,
-        "Void Elf": 85168,
-        "Worgen": 84886,
-        "Zandalari Troll Bwonsamdi": 84704,
-        "Zandalari Troll Kimbul": 84788,
-        "Zandalari Troll Paku": 84921
+        "Blood Elf": 86879,
+        "Dark Iron Dwarf": 86451,
+        "Dwarf": 87379,
+        "Gnome": 87005,
+        "Goblin": 86961,
+        "Human": 87464,
+        "Kul Tiran": 86891,
+        "Maghar Orc": 86748,
+        "Mechagnome": 87218,
+        "Night Elf": 86823,
+        "Nightborne": 86599,
+        "Orc": 86414,
+        "Pandaren": 86616,
+        "Troll": 86853,
+        "Undead": 86830,
+        "Void Elf": 87095,
+        "Worgen": 86893,
+        "Zandalari Troll Bwonsamdi": 86744,
+        "Zandalari Troll Kimbul": 86658,
+        "Zandalari Troll Paku": 86934
     },
     "data_type": "races",
     "languages": {
@@ -242,7 +242,7 @@
             "talents": "2020022"
         },
         "chest": {
-            "azerite_powers": "446/129/31/13",
+            "azerite_powers": "446/582/31/13",
             "bonus_id": "4824/1517/4775",
             "id": "174136"
         },
@@ -265,7 +265,7 @@
             "id": "174137"
         },
         "head": {
-            "azerite_powers": "411/129/30/13",
+            "azerite_powers": "446/582/30/13",
             "bonus_id": "4824/1517/4775",
             "id": "174134"
         },
@@ -275,7 +275,7 @@
                 "id": "169223"
             },
             "chest": {
-                "azerite_powers": "446/129/31/13",
+                "azerite_powers": "446/582/31/13",
                 "bonus_id": "4824/1517/4775",
                 "id": "174136"
             },
@@ -298,7 +298,7 @@
                 "id": "174137"
             },
             "head": {
-                "azerite_powers": "411/129/30/13",
+                "azerite_powers": "446/582/30/13",
                 "bonus_id": "4824/1517/4775",
                 "id": "174134"
             },
@@ -307,7 +307,7 @@
                 "id": "174143"
             },
             "main_hand": {
-                "bonus_id": "4824/1517",
+                "bonus_id": "4824/1517/6569",
                 "enchant": "deadly_navigation",
                 "id": "172197"
             },
@@ -322,9 +322,9 @@
                 "id": "159653"
             },
             "shoulders": {
-                "azerite_powers": "411/129/21/13",
+                "azerite_powers": "446/582/21/13",
                 "bonus_id": "4824/1517/4775",
-                "id": "174133"
+                "id": "174135"
             },
             "trinket1": {
                 "bonus_id": "4800/1517",
@@ -339,7 +339,7 @@
                 "id": "174142"
             },
             "wrists": {
-                "bonus_id": "4824/1517/6554",
+                "bonus_id": "4824/1517/6553",
                 "id": "174138"
             }
         },
@@ -349,7 +349,7 @@
         },
         "level": "120",
         "main_hand": {
-            "bonus_id": "4824/1517",
+            "bonus_id": "4824/1517/6569",
             "enchant": "deadly_navigation",
             "id": "172197"
         },
@@ -367,9 +367,9 @@
         "race": "human",
         "role": "attack",
         "shoulders": {
-            "azerite_powers": "411/129/21/13",
+            "azerite_powers": "446/582/21/13",
             "bonus_id": "4824/1517/4775",
-            "id": "174133"
+            "id": "174135"
         },
         "spec": "outlaw",
         "talents": "2020022",
@@ -386,7 +386,7 @@
             "id": "174142"
         },
         "wrists": {
-            "bonus_id": "4824/1517/6554",
+            "bonus_id": "4824/1517/6553",
             "id": "174138"
         }
     },
@@ -395,35 +395,35 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "b5e06eac74",
+        "simc_hash": "cdcac21122",
         "spec": "outlaw",
         "target_error": "0.1",
         "tier": "25"
     },
     "sorted_data_keys": [
-        "Dwarf",
         "Human",
-        "Void Elf",
+        "Dwarf",
         "Mechagnome",
+        "Void Elf",
         "Gnome",
-        "Kul Tiran",
-        "Night Elf",
-        "Zandalari Troll Paku",
         "Goblin",
-        "Blood Elf",
+        "Zandalari Troll Paku",
         "Worgen",
+        "Kul Tiran",
+        "Blood Elf",
         "Troll",
         "Undead",
-        "Zandalari Troll Kimbul",
+        "Night Elf",
         "Maghar Orc",
-        "Pandaren",
         "Zandalari Troll Bwonsamdi",
+        "Zandalari Troll Kimbul",
+        "Pandaren",
         "Nightborne",
-        "Orc",
-        "Dark Iron Dwarf"
+        "Dark Iron Dwarf",
+        "Orc"
     ],
     "spec_id": 260,
-    "subtitle": "UTC 2020-01-20 07:29 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/b5e06eac74\" target=\"blank\">b5e06ea</a>",
+    "subtitle": "UTC 2020-01-21 07:30 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/cdcac21122\" target=\"blank\">cdcac21</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -524,6 +524,6 @@
             }
         }
     },
-    "timestamp": "2020-01-20 07:29",
+    "timestamp": "2020-01-21 07:30",
     "title": "Races | Outlaw Rogue | Patchwerk"
 }

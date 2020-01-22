@@ -1,26 +1,26 @@
 {
     "class_id": 4,
     "data": {
-        "Blood Elf": 99093,
-        "Dark Iron Dwarf": 98490,
-        "Dwarf": 99539,
-        "Gnome": 98972,
-        "Goblin": 99077,
-        "Human": 99810,
-        "Kul Tiran": 99338,
-        "Maghar Orc": 99196,
-        "Mechagnome": 99430,
-        "Night Elf": 99419,
-        "Nightborne": 98750,
-        "Orc": 98737,
-        "Pandaren": 99117,
-        "Troll": 99175,
-        "Undead": 98916,
-        "Void Elf": 99598,
-        "Worgen": 99272,
-        "Zandalari Troll Bwonsamdi": 98726,
-        "Zandalari Troll Kimbul": 98906,
-        "Zandalari Troll Paku": 99246
+        "Blood Elf": 102708,
+        "Dark Iron Dwarf": 102508,
+        "Dwarf": 103277,
+        "Gnome": 102954,
+        "Goblin": 102986,
+        "Human": 103592,
+        "Kul Tiran": 103076,
+        "Maghar Orc": 102973,
+        "Mechagnome": 103298,
+        "Night Elf": 102994,
+        "Nightborne": 102609,
+        "Orc": 102266,
+        "Pandaren": 102997,
+        "Troll": 102886,
+        "Undead": 102817,
+        "Void Elf": 102988,
+        "Worgen": 103085,
+        "Zandalari Troll Bwonsamdi": 102474,
+        "Zandalari Troll Kimbul": 102602,
+        "Zandalari Troll Paku": 102990
     },
     "data_type": "races",
     "languages": {
@@ -242,9 +242,9 @@
             "talents": "2310021"
         },
         "chest": {
-            "azerite_powers": "136/181/30/13",
-            "bonus_id": "1647/4819/4775",
-            "id": "159314"
+            "azerite_powers": "181/582/21/13",
+            "bonus_id": "4824/1517/4775",
+            "id": "174136"
         },
         "feet": {
             "bonus_id": "4824/1517",
@@ -265,7 +265,7 @@
             "id": "174146"
         },
         "head": {
-            "azerite_powers": "136/249/30/13",
+            "azerite_powers": "136/582/30/13",
             "bonus_id": "4824/1517/4775",
             "id": "174134"
         },
@@ -275,9 +275,9 @@
                 "id": "169223"
             },
             "chest": {
-                "azerite_powers": "136/181/30/13",
-                "bonus_id": "1647/4819/4775",
-                "id": "159314"
+                "azerite_powers": "181/582/21/13",
+                "bonus_id": "4824/1517/4775",
+                "id": "174136"
             },
             "feet": {
                 "bonus_id": "4824/1517",
@@ -298,7 +298,7 @@
                 "id": "174146"
             },
             "head": {
-                "azerite_powers": "136/249/30/13",
+                "azerite_powers": "136/582/30/13",
                 "bonus_id": "4824/1517/4775",
                 "id": "174134"
             },
@@ -395,35 +395,35 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "b5e06eac74",
+        "simc_hash": "cdcac21122",
         "spec": "assassination",
         "target_error": "0.2",
         "tier": "25"
     },
     "sorted_data_keys": [
         "Human",
-        "Void Elf",
-        "Dwarf",
         "Mechagnome",
-        "Night Elf",
-        "Kul Tiran",
+        "Dwarf",
         "Worgen",
-        "Zandalari Troll Paku",
-        "Maghar Orc",
-        "Troll",
+        "Kul Tiran",
         "Pandaren",
-        "Blood Elf",
+        "Night Elf",
+        "Zandalari Troll Paku",
+        "Void Elf",
         "Goblin",
+        "Maghar Orc",
         "Gnome",
+        "Troll",
         "Undead",
-        "Zandalari Troll Kimbul",
+        "Blood Elf",
         "Nightborne",
-        "Orc",
+        "Zandalari Troll Kimbul",
+        "Dark Iron Dwarf",
         "Zandalari Troll Bwonsamdi",
-        "Dark Iron Dwarf"
+        "Orc"
     ],
     "spec_id": 259,
-    "subtitle": "UTC 2020-01-20 07:42 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/b5e06eac74\" target=\"blank\">b5e06ea</a>",
+    "subtitle": "UTC 2020-01-21 07:43 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/cdcac21122\" target=\"blank\">cdcac21</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -524,6 +524,6 @@
             }
         }
     },
-    "timestamp": "2020-01-20 07:42",
+    "timestamp": "2020-01-21 07:43",
     "title": "Races | Assassination Rogue | Hecticaddcleave"
 }
