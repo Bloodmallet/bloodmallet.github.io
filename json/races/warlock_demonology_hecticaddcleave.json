@@ -1,20 +1,20 @@
 {
     "class_id": 9,
     "data": {
-        "Blood Elf": 108648,
-        "Dark Iron Dwarf": 108060,
-        "Dwarf": 108363,
+        "Blood Elf": 108714,
+        "Dark Iron Dwarf": 107937,
+        "Dwarf": 108348,
         "Gnome": 108965,
-        "Goblin": 109047,
-        "Human": 109407,
-        "Mechagnome": 108922,
-        "Nightborne": 108337,
-        "Orc": 108499,
-        "Troll": 109657,
-        "Undead": 108176,
-        "Void Elf": 107918,
-        "Vulpera": 107654,
-        "Worgen": 108570
+        "Goblin": 108696,
+        "Human": 109437,
+        "Mechagnome": 108838,
+        "Nightborne": 108157,
+        "Orc": 108559,
+        "Troll": 109611,
+        "Undead": 107799,
+        "Void Elf": 107986,
+        "Vulpera": 107806,
+        "Worgen": 108326
     },
     "data_type": "races",
     "languages": {
@@ -176,7 +176,7 @@
             "talents": "3302032"
         },
         "chest": {
-            "azerite_powers": "231/582/31",
+            "azerite_powers": "231/582/31/13",
             "bonus_id": "4824/1517/4775",
             "id": "174119"
         },
@@ -199,7 +199,7 @@
             "id": "174130"
         },
         "head": {
-            "azerite_powers": "429/231/31",
+            "azerite_powers": "429/231/31/13",
             "bonus_id": "4824/1517/4775",
             "id": "174118"
         },
@@ -209,7 +209,7 @@
                 "id": "169223"
             },
             "chest": {
-                "azerite_powers": "231/582/31",
+                "azerite_powers": "231/582/31/13",
                 "bonus_id": "4824/1517/4775",
                 "id": "174119"
             },
@@ -232,7 +232,7 @@
                 "id": "174130"
             },
             "head": {
-                "azerite_powers": "429/231/31",
+                "azerite_powers": "429/231/31/13",
                 "bonus_id": "4824/1517/4775",
                 "id": "174118"
             },
@@ -255,7 +255,7 @@
                 "id": "172190"
             },
             "shoulders": {
-                "azerite_powers": "429/231/30",
+                "azerite_powers": "429/231/30/13",
                 "bonus_id": "4824/1517/4775",
                 "id": "174117"
             },
@@ -299,7 +299,7 @@
         "race": "troll",
         "role": "spell",
         "shoulders": {
-            "azerite_powers": "429/231/30",
+            "azerite_powers": "429/231/30/13",
             "bonus_id": "4824/1517/4775",
             "id": "174117"
         },
@@ -327,7 +327,7 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "cdcac21122",
+        "simc_hash": "a15d2239c1",
         "spec": "demonology",
         "target_error": "0.2",
         "tier": "25"
@@ -335,21 +335,21 @@
     "sorted_data_keys": [
         "Troll",
         "Human",
-        "Goblin",
         "Gnome",
         "Mechagnome",
         "Blood Elf",
-        "Worgen",
+        "Goblin",
         "Orc",
         "Dwarf",
+        "Worgen",
         "Nightborne",
-        "Undead",
-        "Dark Iron Dwarf",
         "Void Elf",
-        "Vulpera"
+        "Dark Iron Dwarf",
+        "Vulpera",
+        "Undead"
     ],
     "spec_id": 266,
-    "subtitle": "UTC 2020-01-21 07:45 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/cdcac21122\" target=\"blank\">cdcac21</a>",
+    "subtitle": "UTC 2020-01-22 07:47 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/a15d2239c1\" target=\"blank\">a15d223</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -450,6 +450,6 @@
             }
         }
     },
-    "timestamp": "2020-01-21 07:45",
+    "timestamp": "2020-01-22 07:47",
     "title": "Races | Demonology Warlock | Hecticaddcleave"
 }

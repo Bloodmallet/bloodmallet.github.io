@@ -1,31 +1,31 @@
 {
     "class_id": 6,
     "data": {
-        "Blood Elf": 84720,
-        "Dark Iron Dwarf": 83868,
-        "Draenei": 83954,
-        "Dwarf": 84987,
-        "Gnome": 84729,
-        "Goblin": 84551,
-        "Highmountain Tauren": 84421,
-        "Human": 85154,
-        "Kul Tiran": 84329,
-        "Lightforged Draenei": 84520,
-        "Maghar Orc": 84333,
-        "Mechagnome": 84557,
-        "Night Elf": 84302,
-        "Nightborne": 84246,
-        "Orc": 83844,
-        "Pandaren": 84483,
-        "Tauren": 85023,
-        "Troll": 84292,
-        "Undead": 84746,
-        "Void Elf": 84537,
-        "Vulpera": 84149,
-        "Worgen": 84244,
-        "Zandalari Troll Bwonsamdi": 84233,
-        "Zandalari Troll Kimbul": 84428,
-        "Zandalari Troll Paku": 84269
+        "Blood Elf": 101560,
+        "Dark Iron Dwarf": 100273,
+        "Draenei": 100553,
+        "Dwarf": 101343,
+        "Gnome": 101511,
+        "Goblin": 101340,
+        "Highmountain Tauren": 101033,
+        "Human": 101960,
+        "Kul Tiran": 100991,
+        "Lightforged Draenei": 100501,
+        "Maghar Orc": 100846,
+        "Mechagnome": 101149,
+        "Night Elf": 101109,
+        "Nightborne": 100791,
+        "Orc": 100332,
+        "Pandaren": 100713,
+        "Tauren": 101399,
+        "Troll": 101009,
+        "Undead": 100923,
+        "Void Elf": 101082,
+        "Vulpera": 100176,
+        "Worgen": 101224,
+        "Zandalari Troll Bwonsamdi": 100613,
+        "Zandalari Troll Kimbul": 100749,
+        "Zandalari Troll Paku": 101244
     },
     "data_type": "races",
     "languages": {
@@ -302,7 +302,7 @@
             "id": "174164"
         },
         "feet": {
-            "bonus_id": "4824/1517/6481/6462",
+            "bonus_id": "4824/1517",
             "id": "174176"
         },
         "finger1": {
@@ -316,7 +316,7 @@
             "id": "169157"
         },
         "hands": {
-            "bonus_id": "4824/1517/6482/6465",
+            "bonus_id": "4824/1517/6552",
             "id": "174178"
         },
         "head": {
@@ -335,7 +335,7 @@
                 "id": "174164"
             },
             "feet": {
-                "bonus_id": "4824/1517/6481/6462",
+                "bonus_id": "4824/1517",
                 "id": "174176"
             },
             "finger1": {
@@ -349,7 +349,7 @@
                 "id": "169157"
             },
             "hands": {
-                "bonus_id": "4824/1517/6482/6465",
+                "bonus_id": "4824/1517/6552",
                 "id": "174178"
             },
             "head": {
@@ -358,7 +358,7 @@
                 "id": "174163"
             },
             "legs": {
-                "bonus_id": "4824/1517/6482/6465",
+                "bonus_id": "4824/1517",
                 "id": "174172"
             },
             "main_hand": {
@@ -390,16 +390,16 @@
                 "id": "174500"
             },
             "waist": {
-                "bonus_id": "4824/1517/6482/6465",
+                "bonus_id": "4824/1517",
                 "id": "174171"
             },
             "wrists": {
-                "bonus_id": "4824/1517/6482/6465",
+                "bonus_id": "4824/1517/6554",
                 "id": "174177"
             }
         },
         "legs": {
-            "bonus_id": "4824/1517/6482/6465",
+            "bonus_id": "4824/1517",
             "id": "174172"
         },
         "level": "120",
@@ -437,11 +437,11 @@
             "id": "174500"
         },
         "waist": {
-            "bonus_id": "4824/1517/6482/6465",
+            "bonus_id": "4824/1517",
             "id": "174171"
         },
         "wrists": {
-            "bonus_id": "4824/1517/6482/6465",
+            "bonus_id": "4824/1517/6554",
             "id": "174177"
         }
     },
@@ -450,40 +450,40 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "cdcac21122",
+        "simc_hash": "a15d2239c1",
         "spec": "frost",
         "target_error": "0.1",
         "tier": "25"
     },
     "sorted_data_keys": [
         "Human",
+        "Blood Elf",
+        "Gnome",
         "Tauren",
         "Dwarf",
-        "Undead",
-        "Gnome",
-        "Blood Elf",
-        "Mechagnome",
         "Goblin",
-        "Void Elf",
-        "Lightforged Draenei",
-        "Pandaren",
-        "Zandalari Troll Kimbul",
-        "Highmountain Tauren",
-        "Maghar Orc",
-        "Kul Tiran",
-        "Night Elf",
-        "Troll",
         "Zandalari Troll Paku",
-        "Nightborne",
         "Worgen",
+        "Mechagnome",
+        "Night Elf",
+        "Void Elf",
+        "Highmountain Tauren",
+        "Troll",
+        "Kul Tiran",
+        "Undead",
+        "Maghar Orc",
+        "Nightborne",
+        "Zandalari Troll Kimbul",
+        "Pandaren",
         "Zandalari Troll Bwonsamdi",
-        "Vulpera",
         "Draenei",
+        "Lightforged Draenei",
+        "Orc",
         "Dark Iron Dwarf",
-        "Orc"
+        "Vulpera"
     ],
     "spec_id": 251,
-    "subtitle": "UTC 2020-01-21 07:20 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/cdcac21122\" target=\"blank\">cdcac21</a>",
+    "subtitle": "UTC 2020-01-22 07:20 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/a15d2239c1\" target=\"blank\">a15d223</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -584,6 +584,6 @@
             }
         }
     },
-    "timestamp": "2020-01-21 07:20",
+    "timestamp": "2020-01-22 07:20",
     "title": "Races | Frost Death Knight | Patchwerk"
 }

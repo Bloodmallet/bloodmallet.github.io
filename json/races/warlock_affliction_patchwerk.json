@@ -1,20 +1,20 @@
 {
     "class_id": 9,
     "data": {
-        "Blood Elf": 101884,
-        "Dark Iron Dwarf": 101278,
-        "Dwarf": 101991,
-        "Gnome": 102327,
-        "Goblin": 102205,
-        "Human": 102494,
-        "Mechagnome": 102019,
-        "Nightborne": 102014,
-        "Orc": 101559,
-        "Troll": 102826,
-        "Undead": 101613,
-        "Void Elf": 102077,
-        "Vulpera": 101069,
-        "Worgen": 101915
+        "Blood Elf": 101820,
+        "Dark Iron Dwarf": 101388,
+        "Dwarf": 101935,
+        "Gnome": 102182,
+        "Goblin": 102281,
+        "Human": 102600,
+        "Mechagnome": 102059,
+        "Nightborne": 101891,
+        "Orc": 101414,
+        "Troll": 102787,
+        "Undead": 101626,
+        "Void Elf": 102151,
+        "Vulpera": 101084,
+        "Worgen": 101850
     },
     "data_type": "races",
     "languages": {
@@ -176,7 +176,7 @@
             "talents": "3302023"
         },
         "chest": {
-            "azerite_powers": "230/582/31",
+            "azerite_powers": "230/582/31/13",
             "bonus_id": "4824/1517/4775",
             "id": "174119"
         },
@@ -199,7 +199,7 @@
             "id": "174125"
         },
         "head": {
-            "azerite_powers": "123/230/31",
+            "azerite_powers": "123/230/31/13",
             "bonus_id": "4824/1517/4775",
             "id": "174118"
         },
@@ -209,7 +209,7 @@
                 "id": "169223"
             },
             "chest": {
-                "azerite_powers": "230/582/31",
+                "azerite_powers": "230/582/31/13",
                 "bonus_id": "4824/1517/4775",
                 "id": "174119"
             },
@@ -232,7 +232,7 @@
                 "id": "174125"
             },
             "head": {
-                "azerite_powers": "123/230/31",
+                "azerite_powers": "123/230/31/13",
                 "bonus_id": "4824/1517/4775",
                 "id": "174118"
             },
@@ -255,7 +255,7 @@
                 "id": "172190"
             },
             "shoulders": {
-                "azerite_powers": "123/230/30",
+                "azerite_powers": "123/230/30/13",
                 "bonus_id": "4824/1517/4775",
                 "id": "174117"
             },
@@ -299,7 +299,7 @@
         "race": "troll",
         "role": "spell",
         "shoulders": {
-            "azerite_powers": "123/230/30",
+            "azerite_powers": "123/230/30/13",
             "bonus_id": "4824/1517/4775",
             "id": "174117"
         },
@@ -327,7 +327,7 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "cdcac21122",
+        "simc_hash": "a15d2239c1",
         "spec": "affliction",
         "target_error": "0.1",
         "tier": "25"
@@ -335,12 +335,12 @@
     "sorted_data_keys": [
         "Troll",
         "Human",
-        "Gnome",
         "Goblin",
+        "Gnome",
         "Void Elf",
         "Mechagnome",
-        "Nightborne",
         "Dwarf",
+        "Nightborne",
         "Worgen",
         "Blood Elf",
         "Undead",
@@ -349,7 +349,7 @@
         "Vulpera"
     ],
     "spec_id": 265,
-    "subtitle": "UTC 2020-01-21 07:32 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/cdcac21122\" target=\"blank\">cdcac21</a>",
+    "subtitle": "UTC 2020-01-22 07:34 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/a15d2239c1\" target=\"blank\">a15d223</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -450,6 +450,6 @@
             }
         }
     },
-    "timestamp": "2020-01-21 07:32",
+    "timestamp": "2020-01-22 07:34",
     "title": "Races | Affliction Warlock | Patchwerk"
 }

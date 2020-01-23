@@ -85,88 +85,88 @@
     },
     "data": {
         "Deadly Momentum": {
-            "1": 68514,
-            "2": 68654,
-            "3": 69197
+            "1": 68564,
+            "2": 68644,
+            "3": 69153
         },
         "Echoing Void": {
-            "1": 71125,
-            "2": 72461,
-            "3": 75438
+            "1": 71121,
+            "2": 72502,
+            "3": 75418
         },
         "Expedient": {
-            "1": 69117,
-            "2": 69584,
-            "3": 70139
+            "1": 69062,
+            "2": 69613,
+            "3": 70205
         },
         "Glimpse of Clarity": {
-            "1": 68558,
-            "2": 68178
+            "1": 68567,
+            "2": 68198
         },
         "Gushing Wound": {
-            "1": 70794
+            "1": 70855
         },
         "Honed Mind": {
-            "1": 69332,
-            "2": 69749,
-            "3": 71033
+            "1": 69342,
+            "2": 69730,
+            "3": 70983
         },
         "Ineffable Truth": {
-            "1": 67973,
-            "2": 66955
+            "1": 67961,
+            "2": 66895
         },
         "Infinite Stars": {
-            "1": 71477,
-            "2": 76721,
-            "3": 80912
+            "1": 71513,
+            "2": 76654,
+            "3": 80947
         },
         "Masterful": {
-            "1": 68612,
-            "2": 68848,
-            "3": 69188
+            "1": 68528,
+            "2": 68876,
+            "3": 69145
         },
         "Racing Pulse": {
-            "1": 69459,
-            "2": 69946,
-            "3": 71399
+            "1": 69457,
+            "2": 69942,
+            "3": 71277
         },
         "Severe": {
-            "1": 68792,
-            "2": 69084,
-            "3": 69382
+            "1": 68750,
+            "2": 69145,
+            "3": 69411
         },
         "Strikethrough": {
-            "1": 68906,
-            "2": 69389,
-            "3": 69764
+            "1": 68862,
+            "2": 69327,
+            "3": 69776
         },
         "Surging Vitality": {
-            "1": 69230,
-            "2": 69657,
-            "3": 70814
+            "1": 69200,
+            "2": 69686,
+            "3": 70834
         },
         "Twilight Devastation": {
-            "1": 69285,
-            "2": 70510,
-            "3": 71749
+            "1": 69244,
+            "2": 70509,
+            "3": 71767
         },
         "Twisted Appendage": {
-            "1": 68667,
-            "2": 70269,
-            "3": 72380
+            "1": 68689,
+            "2": 70331,
+            "3": 72453
         },
         "Versatile": {
-            "1": 68298,
-            "2": 68461,
-            "3": 68526
+            "1": 68251,
+            "2": 68437,
+            "3": 68514
         },
         "Void Ritual": {
-            "1": 68564,
-            "2": 69319,
-            "3": 70574
+            "1": 68492,
+            "2": 69341,
+            "3": 70566
         },
         "baseline": {
-            "1": 68089
+            "1": 68051
         }
     },
     "data_type": "corruptions",
@@ -188,7 +188,7 @@
             "talents": "2103023"
         },
         "chest": {
-            "azerite_powers": "131/582/459",
+            "azerite_powers": "131/582/459/13",
             "bonus_id": "4824/1517/4775",
             "id": "174115"
         },
@@ -211,7 +211,7 @@
             "id": "174125"
         },
         "head": {
-            "azerite_powers": "444/582/31",
+            "azerite_powers": "444/582/31/13",
             "bonus_id": "4824/1517/4775/6448",
             "id": "174118"
         },
@@ -221,7 +221,7 @@
                 "id": "169223"
             },
             "chest": {
-                "azerite_powers": "131/582/459",
+                "azerite_powers": "131/582/459/13",
                 "bonus_id": "4824/1517/4775",
                 "id": "174115"
             },
@@ -244,7 +244,7 @@
                 "id": "174125"
             },
             "head": {
-                "azerite_powers": "444/582/31",
+                "azerite_powers": "444/582/31/13",
                 "bonus_id": "4824/1517/4775",
                 "id": "174118"
             },
@@ -267,7 +267,7 @@
                 "id": "172190"
             },
             "shoulders": {
-                "azerite_powers": "432/582/30",
+                "azerite_powers": "432/582/30/13",
                 "bonus_id": "4824/1517/4775",
                 "id": "174117"
             },
@@ -311,7 +311,7 @@
         "race": "troll",
         "role": "spell",
         "shoulders": {
-            "azerite_powers": "432/582/30",
+            "azerite_powers": "432/582/30/13",
             "bonus_id": "4824/1517/4775",
             "id": "174117"
         },
@@ -339,7 +339,7 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "cdcac21122",
+        "simc_hash": "a15d2239c1",
         "spec": "destruction",
         "target_error": "0.1",
         "tier": "25"
@@ -356,8 +356,8 @@
         "Twilight Devastation",
         "Racing Pulse",
         "Honed Mind",
-        "Surging Vitality",
         "Gushing Wound",
+        "Surging Vitality",
         "Void Ritual",
         "Expedient",
         "Strikethrough",
@@ -374,11 +374,11 @@
         "Echoing Void",
         "Expedient",
         "Racing Pulse",
-        "Honed Mind",
         "Strikethrough",
+        "Honed Mind",
         "Surging Vitality",
-        "Twisted Appendage",
         "Severe",
+        "Twisted Appendage",
         "Masterful",
         "Twilight Devastation",
         "Void Ritual",
@@ -471,7 +471,7 @@
             "3": 318480
         }
     },
-    "subtitle": "UTC 2020-01-21 23:38 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/cdcac21122\" target=\"blank\">cdcac21</a>",
+    "subtitle": "UTC 2020-01-23 01:28 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/a15d2239c1\" target=\"blank\">a15d223</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -572,6 +572,6 @@
             }
         }
     },
-    "timestamp": "2020-01-21 23:38",
+    "timestamp": "2020-01-23 01:28",
     "title": "Corruptions | Destruction Warlock | Patchwerk"
 }

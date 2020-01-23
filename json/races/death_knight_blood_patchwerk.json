@@ -1,31 +1,31 @@
 {
     "class_id": 6,
     "data": {
-        "Blood Elf": 46899,
-        "Dark Iron Dwarf": 46556,
-        "Draenei": 46578,
-        "Dwarf": 46991,
-        "Gnome": 46811,
-        "Goblin": 46858,
-        "Highmountain Tauren": 46907,
-        "Human": 46940,
-        "Kul Tiran": 46905,
-        "Lightforged Draenei": 47244,
-        "Maghar Orc": 46789,
-        "Mechagnome": 46800,
-        "Night Elf": 46816,
-        "Nightborne": 46744,
-        "Orc": 46640,
-        "Pandaren": 46959,
-        "Tauren": 47044,
-        "Troll": 46759,
-        "Undead": 47078,
-        "Void Elf": 46969,
-        "Vulpera": 47102,
-        "Worgen": 46791,
-        "Zandalari Troll Bwonsamdi": 46879,
-        "Zandalari Troll Kimbul": 46968,
-        "Zandalari Troll Paku": 46856
+        "Blood Elf": 66439,
+        "Dark Iron Dwarf": 65997,
+        "Draenei": 65938,
+        "Dwarf": 66572,
+        "Gnome": 66250,
+        "Goblin": 66310,
+        "Highmountain Tauren": 66451,
+        "Human": 66558,
+        "Kul Tiran": 66466,
+        "Lightforged Draenei": 66625,
+        "Maghar Orc": 66220,
+        "Mechagnome": 66306,
+        "Night Elf": 66285,
+        "Nightborne": 66330,
+        "Orc": 65969,
+        "Pandaren": 66520,
+        "Tauren": 66921,
+        "Troll": 66215,
+        "Undead": 66542,
+        "Void Elf": 66558,
+        "Vulpera": 66583,
+        "Worgen": 66345,
+        "Zandalari Troll Bwonsamdi": 66374,
+        "Zandalari Troll Kimbul": 66421,
+        "Zandalari Troll Paku": 66387
     },
     "data_type": "races",
     "languages": {
@@ -316,7 +316,7 @@
             "id": "169157"
         },
         "hands": {
-            "bonus_id": "4824/1517/6476",
+            "bonus_id": "4824/1517/6550",
             "id": "174178"
         },
         "head": {
@@ -349,7 +349,7 @@
                 "id": "169157"
             },
             "hands": {
-                "bonus_id": "4824/1517/6476",
+                "bonus_id": "4824/1517/6550",
                 "id": "174178"
             },
             "head": {
@@ -389,7 +389,7 @@
                 "id": "174171"
             },
             "wrists": {
-                "bonus_id": "4824/1517/6550",
+                "bonus_id": "4824/1517/6551",
                 "id": "174170"
             }
         },
@@ -431,7 +431,7 @@
             "id": "174171"
         },
         "wrists": {
-            "bonus_id": "4824/1517/6550",
+            "bonus_id": "4824/1517/6551",
             "id": "174170"
         }
     },
@@ -440,40 +440,40 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "77c37e1c412434ead9603cc4d504f64e4253fe06",
+        "simc_hash": "a15d2239c1750a37fa8ae0d368f76a227cc3e217",
         "spec": "blood",
         "target_error": "0.1",
         "tier": "25"
     },
     "sorted_data_keys": [
+        "Tauren",
         "Lightforged Draenei",
         "Vulpera",
-        "Undead",
-        "Tauren",
         "Dwarf",
-        "Void Elf",
-        "Zandalari Troll Kimbul",
-        "Pandaren",
         "Human",
-        "Highmountain Tauren",
+        "Void Elf",
+        "Undead",
+        "Pandaren",
         "Kul Tiran",
+        "Highmountain Tauren",
         "Blood Elf",
-        "Zandalari Troll Bwonsamdi",
-        "Goblin",
+        "Zandalari Troll Kimbul",
         "Zandalari Troll Paku",
+        "Zandalari Troll Bwonsamdi",
+        "Worgen",
+        "Nightborne",
+        "Goblin",
+        "Mechagnome",
         "Night Elf",
         "Gnome",
-        "Mechagnome",
-        "Worgen",
         "Maghar Orc",
         "Troll",
-        "Nightborne",
+        "Dark Iron Dwarf",
         "Orc",
-        "Draenei",
-        "Dark Iron Dwarf"
+        "Draenei"
     ],
     "spec_id": 250,
-    "subtitle": "UTC 2020-01-21 07:20 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/77c37e1c412434ead9603cc4d504f64e4253fe06\" target=\"blank\">77c37e1</a>",
+    "subtitle": "UTC 2020-01-22 07:20 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/a15d2239c1750a37fa8ae0d368f76a227cc3e217\" target=\"blank\">a15d223</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -574,6 +574,6 @@
             }
         }
     },
-    "timestamp": "2020-01-21 07:20",
+    "timestamp": "2020-01-22 07:20",
     "title": "Races | Blood Death Knight | Patchwerk"
 }

@@ -88,91 +88,91 @@
     },
     "data": {
         "Deadly Momentum": {
-            "1": 70537,
-            "2": 70642,
-            "3": 71150
+            "1": 72289,
+            "2": 72506,
+            "3": 73022
         },
         "Devour Vitality": {
-            "1": 71575
+            "1": 73422
         },
         "Echoing Void": {
-            "1": 74253,
-            "2": 76306,
-            "3": 80392
+            "1": 76047,
+            "2": 78172,
+            "3": 82313
         },
         "Expedient": {
-            "1": 71692,
-            "2": 72629,
-            "3": 73623
+            "1": 73747,
+            "2": 74683,
+            "3": 75569
         },
         "Glimpse of Clarity": {
-            "1": 70094,
-            "2": 70045
+            "1": 71996,
+            "2": 71940
         },
         "Gushing Wound": {
-            "1": 72964
+            "1": 74874
         },
         "Honed Mind": {
-            "1": 71233,
-            "2": 71726,
-            "3": 72867
+            "1": 73144,
+            "2": 73486,
+            "3": 74809
         },
         "Ineffable Truth": {
-            "1": 70042,
-            "2": 70076
+            "1": 71909,
+            "2": 71936
         },
         "Infinite Stars": {
-            "1": 74350,
-            "2": 80933,
-            "3": 86375
+            "1": 76318,
+            "2": 83161,
+            "3": 88727
         },
         "Masterful": {
-            "1": 70384,
-            "2": 70604,
-            "3": 70813
+            "1": 72218,
+            "2": 72481,
+            "3": 72664
         },
         "Racing Pulse": {
-            "1": 71706,
-            "2": 72313,
-            "3": 73955
+            "1": 73556,
+            "2": 74088,
+            "3": 75728
         },
         "Severe": {
-            "1": 70687,
-            "2": 71042,
-            "3": 71367
+            "1": 72514,
+            "2": 72840,
+            "3": 73260
         },
         "Strikethrough": {
-            "1": 70507,
-            "2": 70757,
-            "3": 71037
+            "1": 72358,
+            "2": 72595,
+            "3": 72947
         },
         "Surging Vitality": {
-            "1": 71145,
-            "2": 71548,
-            "3": 72772
+            "1": 73012,
+            "2": 73460,
+            "3": 74614
         },
         "Twilight Devastation": {
-            "1": 71429,
-            "2": 72759,
-            "3": 74191
+            "1": 73269,
+            "2": 74729,
+            "3": 76184
         },
         "Twisted Appendage": {
-            "1": 70816,
-            "2": 72994,
-            "3": 75698
+            "1": 72653,
+            "2": 74902,
+            "3": 77659
         },
         "Versatile": {
-            "1": 70503,
-            "2": 70648,
-            "3": 70874
+            "1": 72275,
+            "2": 72467,
+            "3": 72773
         },
         "Void Ritual": {
-            "1": 70561,
-            "2": 71325,
-            "3": 72601
+            "1": 72430,
+            "2": 73236,
+            "3": 74476
         },
         "baseline": {
-            "1": 69973
+            "1": 71860
         }
     },
     "data_type": "corruptions",
@@ -260,6 +260,7 @@
             },
             "main_hand": {
                 "bonus_id": "4824/1517/6448",
+                "enchant": "quick_navigation",
                 "id": "174106"
             },
             "neck": {
@@ -296,6 +297,7 @@
         "level": "120",
         "main_hand": {
             "bonus_id": "4824/1517/6448",
+            "enchant": "quick_navigation",
             "id": "174106"
         },
         "neck": {
@@ -335,7 +337,7 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "cdcac21122",
+        "simc_hash": "a15d2239c1",
         "spec": "survival",
         "target_error": "0.1",
         "tier": "25"
@@ -362,8 +364,8 @@
         "Strikethrough",
         "Versatile",
         "Masterful",
-        "Ineffable Truth",
-        "Glimpse of Clarity"
+        "Glimpse of Clarity",
+        "Ineffable Truth"
     ],
     "sorted_data_keys_2": [
         "Infinite Stars",
@@ -377,8 +379,8 @@
         "Severe",
         "Twilight Devastation",
         "Strikethrough",
-        "Devour Vitality",
         "Versatile",
+        "Devour Vitality",
         "Masterful",
         "Void Ritual",
         "Deadly Momentum",
@@ -472,7 +474,7 @@
             "3": 318480
         }
     },
-    "subtitle": "UTC 2020-01-21 23:27 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/cdcac21122\" target=\"blank\">cdcac21</a>",
+    "subtitle": "UTC 2020-01-23 01:15 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/a15d2239c1\" target=\"blank\">a15d223</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -573,6 +575,6 @@
             }
         }
     },
-    "timestamp": "2020-01-21 23:27",
+    "timestamp": "2020-01-23 01:15",
     "title": "Corruptions | Survival Hunter | Patchwerk"
 }

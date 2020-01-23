@@ -85,88 +85,88 @@
     },
     "data": {
         "Deadly Momentum": {
-            "1": 81727,
-            "2": 81922,
-            "3": 82496
+            "1": 81660,
+            "2": 82017,
+            "3": 82418
         },
         "Echoing Void": {
-            "1": 85030,
-            "2": 86844,
-            "3": 90478
+            "1": 85054,
+            "2": 86829,
+            "3": 90555
         },
         "Expedient": {
-            "1": 82837,
-            "2": 83702,
-            "3": 84282
+            "1": 82667,
+            "2": 83617,
+            "3": 84342
         },
         "Glimpse of Clarity": {
-            "1": 81815,
-            "2": 81543
+            "1": 81616,
+            "2": 81426
         },
         "Gushing Wound": {
-            "1": 83994
+            "1": 84004
         },
         "Honed Mind": {
-            "1": 82670,
-            "2": 83076,
-            "3": 84410
+            "1": 82519,
+            "2": 83001,
+            "3": 84356
         },
         "Ineffable Truth": {
-            "1": 81095,
-            "2": 80875
+            "1": 81187,
+            "2": 80699
         },
         "Infinite Stars": {
-            "1": 83081,
-            "2": 86610,
-            "3": 89111
+            "1": 83258,
+            "2": 86373,
+            "3": 88867
         },
         "Masterful": {
-            "1": 81822,
-            "2": 82020,
-            "3": 82466
+            "1": 81629,
+            "2": 82227,
+            "3": 82364
         },
         "Racing Pulse": {
-            "1": 83218,
-            "2": 84048,
-            "3": 85703
+            "1": 83416,
+            "2": 84072,
+            "3": 85838
         },
         "Severe": {
-            "1": 82099,
-            "2": 82372,
-            "3": 82825
+            "1": 81908,
+            "2": 82427,
+            "3": 82786
         },
         "Strikethrough": {
-            "1": 81989,
-            "2": 82376,
-            "3": 82903
+            "1": 81996,
+            "2": 82401,
+            "3": 82861
         },
         "Surging Vitality": {
-            "1": 82598,
-            "2": 83187,
-            "3": 84461
+            "1": 82624,
+            "2": 83025,
+            "3": 84589
         },
         "Twilight Devastation": {
-            "1": 85541,
-            "2": 89923,
-            "3": 94256
+            "1": 85585,
+            "2": 89895,
+            "3": 94366
         },
         "Twisted Appendage": {
-            "1": 81816,
-            "2": 83218,
-            "3": 84938
+            "1": 81628,
+            "2": 83324,
+            "3": 84894
         },
         "Versatile": {
-            "1": 81436,
-            "2": 81606,
-            "3": 81634
+            "1": 81475,
+            "2": 81492,
+            "3": 81698
         },
         "Void Ritual": {
-            "1": 81797,
-            "2": 82781,
-            "3": 84353
+            "1": 81938,
+            "2": 82798,
+            "3": 84191
         },
         "baseline": {
-            "1": 81142
+            "1": 81093
         }
     },
     "data_type": "corruptions",
@@ -188,7 +188,7 @@
             "talents": "2103023"
         },
         "chest": {
-            "azerite_powers": "131/582/459",
+            "azerite_powers": "131/582/459/13",
             "bonus_id": "4824/1517/4775",
             "id": "174115"
         },
@@ -211,7 +211,7 @@
             "id": "174125"
         },
         "head": {
-            "azerite_powers": "444/582/31",
+            "azerite_powers": "444/582/31/13",
             "bonus_id": "4824/1517/4775/6448",
             "id": "174118"
         },
@@ -221,7 +221,7 @@
                 "id": "169223"
             },
             "chest": {
-                "azerite_powers": "131/582/459",
+                "azerite_powers": "131/582/459/13",
                 "bonus_id": "4824/1517/4775",
                 "id": "174115"
             },
@@ -244,7 +244,7 @@
                 "id": "174125"
             },
             "head": {
-                "azerite_powers": "444/582/31",
+                "azerite_powers": "444/582/31/13",
                 "bonus_id": "4824/1517/4775",
                 "id": "174118"
             },
@@ -267,7 +267,7 @@
                 "id": "172190"
             },
             "shoulders": {
-                "azerite_powers": "432/582/30",
+                "azerite_powers": "432/582/30/13",
                 "bonus_id": "4824/1517/4775",
                 "id": "174117"
             },
@@ -311,7 +311,7 @@
         "race": "troll",
         "role": "spell",
         "shoulders": {
-            "azerite_powers": "432/582/30",
+            "azerite_powers": "432/582/30/13",
             "bonus_id": "4824/1517/4775",
             "id": "174117"
         },
@@ -339,7 +339,7 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "cdcac21122",
+        "simc_hash": "a15d2239c1",
         "spec": "destruction",
         "target_error": "0.2",
         "tier": "25"
@@ -357,8 +357,8 @@
         "Twisted Appendage",
         "Surging Vitality",
         "Honed Mind",
-        "Void Ritual",
         "Expedient",
+        "Void Ritual",
         "Gushing Wound",
         "Strikethrough",
         "Severe",
@@ -383,8 +383,8 @@
         "Twisted Appendage",
         "Void Ritual",
         "Deadly Momentum",
-        "Glimpse of Clarity",
         "Versatile",
+        "Glimpse of Clarity",
         "Ineffable Truth"
     ],
     "spec_id": 267,
@@ -471,7 +471,7 @@
             "3": 318480
         }
     },
-    "subtitle": "UTC 2020-01-21 23:56 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/cdcac21122\" target=\"blank\">cdcac21</a>",
+    "subtitle": "UTC 2020-01-23 01:48 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/a15d2239c1\" target=\"blank\">a15d223</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -572,6 +572,6 @@
             }
         }
     },
-    "timestamp": "2020-01-21 23:56",
+    "timestamp": "2020-01-23 01:48",
     "title": "Corruptions | Destruction Warlock | Hecticaddcleave"
 }

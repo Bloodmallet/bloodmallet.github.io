@@ -1,31 +1,31 @@
 {
     "class_id": 1,
     "data": {
-        "Blood Elf": 136755,
-        "Dark Iron Dwarf": 136327,
-        "Draenei": 136572,
-        "Dwarf": 138303,
-        "Gnome": 137548,
-        "Goblin": 137297,
-        "Highmountain Tauren": 137565,
-        "Human": 138369,
-        "Kul Tiran": 137416,
-        "Lightforged Draenei": 137118,
-        "Maghar Orc": 136935,
-        "Mechagnome": 137180,
-        "Night Elf": 136859,
-        "Nightborne": 136135,
-        "Orc": 136340,
-        "Pandaren": 138321,
-        "Tauren": 138228,
-        "Troll": 137030,
-        "Undead": 136856,
-        "Void Elf": 137347,
-        "Vulpera": 134349,
-        "Worgen": 137051,
-        "Zandalari Troll Bwonsamdi": 136531,
-        "Zandalari Troll Kimbul": 136727,
-        "Zandalari Troll Paku": 137488
+        "Blood Elf": 138664,
+        "Dark Iron Dwarf": 137619,
+        "Draenei": 138021,
+        "Dwarf": 140007,
+        "Gnome": 139234,
+        "Goblin": 138357,
+        "Highmountain Tauren": 138680,
+        "Human": 139723,
+        "Kul Tiran": 138582,
+        "Lightforged Draenei": 138587,
+        "Maghar Orc": 138475,
+        "Mechagnome": 138782,
+        "Night Elf": 138350,
+        "Nightborne": 137532,
+        "Orc": 137908,
+        "Pandaren": 139728,
+        "Tauren": 139770,
+        "Troll": 138371,
+        "Undead": 138075,
+        "Void Elf": 139036,
+        "Vulpera": 135464,
+        "Worgen": 138592,
+        "Zandalari Troll Bwonsamdi": 137803,
+        "Zandalari Troll Kimbul": 138028,
+        "Zandalari Troll Paku": 139049
     },
     "data_type": "races",
     "languages": {
@@ -297,7 +297,7 @@
             "talents": "2133123"
         },
         "chest": {
-            "azerite_powers": "176/119/459",
+            "azerite_powers": "176/119/459/13",
             "bonus_id": "4824/1517/4775",
             "id": "174164"
         },
@@ -307,10 +307,12 @@
         },
         "finger1": {
             "bonus_id": "1522/4778",
+            "enchant": "accord_of_haste",
             "id": "169159"
         },
         "finger2": {
             "bonus_id": "1522/4778",
+            "enchant": "accord_of_haste",
             "id": "169158"
         },
         "hands": {
@@ -318,7 +320,7 @@
             "id": "174178"
         },
         "head": {
-            "azerite_powers": "437/176/21",
+            "azerite_powers": "437/176/21/13",
             "bonus_id": "4824/1517/4775",
             "id": "174167"
         },
@@ -328,7 +330,7 @@
                 "id": "169223"
             },
             "chest": {
-                "azerite_powers": "176/119/459",
+                "azerite_powers": "176/119/459/13",
                 "bonus_id": "4824/1517/4775",
                 "id": "174164"
             },
@@ -338,10 +340,12 @@
             },
             "finger1": {
                 "bonus_id": "1522/4778",
+                "enchant": "accord_of_haste",
                 "id": "169159"
             },
             "finger2": {
                 "bonus_id": "1522/4778",
+                "enchant": "accord_of_haste",
                 "id": "169158"
             },
             "hands": {
@@ -349,7 +353,7 @@
                 "id": "174178"
             },
             "head": {
-                "azerite_powers": "437/176/21",
+                "azerite_powers": "437/176/21/13",
                 "bonus_id": "4824/1517/4775",
                 "id": "174167"
             },
@@ -373,7 +377,7 @@
                 "id": "159644"
             },
             "shoulders": {
-                "azerite_powers": "176/196/30",
+                "azerite_powers": "176/196/30/13",
                 "bonus_id": "1647/4775",
                 "id": "159439"
             },
@@ -418,7 +422,7 @@
         "race": "gnome",
         "role": "attack",
         "shoulders": {
-            "azerite_powers": "176/196/30",
+            "azerite_powers": "176/196/30/13",
             "bonus_id": "1647/4775",
             "id": "159439"
         },
@@ -446,40 +450,40 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "cdcac21122",
+        "simc_hash": "a15d2239c1",
         "spec": "fury",
         "target_error": "0.2",
         "tier": "25"
     },
     "sorted_data_keys": [
-        "Human",
-        "Pandaren",
         "Dwarf",
         "Tauren",
-        "Highmountain Tauren",
+        "Pandaren",
+        "Human",
         "Gnome",
         "Zandalari Troll Paku",
-        "Kul Tiran",
         "Void Elf",
-        "Goblin",
         "Mechagnome",
-        "Lightforged Draenei",
+        "Highmountain Tauren",
+        "Blood Elf",
         "Worgen",
-        "Troll",
+        "Lightforged Draenei",
+        "Kul Tiran",
         "Maghar Orc",
+        "Troll",
+        "Goblin",
         "Night Elf",
         "Undead",
-        "Blood Elf",
         "Zandalari Troll Kimbul",
         "Draenei",
-        "Zandalari Troll Bwonsamdi",
         "Orc",
+        "Zandalari Troll Bwonsamdi",
         "Dark Iron Dwarf",
         "Nightborne",
         "Vulpera"
     ],
     "spec_id": 72,
-    "subtitle": "UTC 2020-01-21 07:46 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/cdcac21122\" target=\"blank\">cdcac21</a>",
+    "subtitle": "UTC 2020-01-22 07:48 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/a15d2239c1\" target=\"blank\">a15d223</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -580,6 +584,6 @@
             }
         }
     },
-    "timestamp": "2020-01-21 07:46",
+    "timestamp": "2020-01-22 07:48",
     "title": "Races | Fury Warrior | Hecticaddcleave"
 }
