@@ -1,29 +1,29 @@
 {
     "class_id": 5,
     "data": {
-        "Blood Elf": 86692,
-        "Dark Iron Dwarf": 86082,
-        "Draenei": 86292,
-        "Dwarf": 87065,
-        "Gnome": 87061,
-        "Goblin": 87063,
-        "Human": 87670,
-        "Kul Tiran": 86767,
-        "Lightforged Draenei": 86352,
-        "Maghar Orc": 86534,
-        "Mechagnome": 86862,
-        "Night Elf": 86780,
-        "Nightborne": 86835,
-        "Pandaren": 87115,
-        "Tauren": 87046,
-        "Troll": 86685,
-        "Undead": 86484,
-        "Void Elf": 86855,
-        "Vulpera": 85525,
-        "Worgen": 86708,
-        "Zandalari Troll Bwonsamdi": 86437,
-        "Zandalari Troll Kimbul": 86546,
-        "Zandalari Troll Paku": 87020
+        "Blood Elf": 86717,
+        "Dark Iron Dwarf": 86097,
+        "Draenei": 86262,
+        "Dwarf": 86996,
+        "Gnome": 87024,
+        "Goblin": 87047,
+        "Human": 87602,
+        "Kul Tiran": 86790,
+        "Lightforged Draenei": 86406,
+        "Maghar Orc": 86572,
+        "Mechagnome": 86891,
+        "Night Elf": 86777,
+        "Nightborne": 86694,
+        "Pandaren": 87105,
+        "Tauren": 87002,
+        "Troll": 86698,
+        "Undead": 86501,
+        "Void Elf": 86991,
+        "Vulpera": 85335,
+        "Worgen": 86773,
+        "Zandalari Troll Bwonsamdi": 86433,
+        "Zandalari Troll Kimbul": 86577,
+        "Zandalari Troll Paku": 86981
     },
     "data_type": "races",
     "languages": {
@@ -426,7 +426,7 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "e324279709",
+        "simc_hash": "4d973ee35d",
         "spec": "shadow",
         "target_error": "0.1",
         "tier": "25"
@@ -434,19 +434,19 @@
     "sorted_data_keys": [
         "Human",
         "Pandaren",
-        "Dwarf",
         "Goblin",
         "Gnome",
         "Tauren",
+        "Dwarf",
+        "Void Elf",
         "Zandalari Troll Paku",
         "Mechagnome",
-        "Void Elf",
-        "Nightborne",
-        "Night Elf",
         "Kul Tiran",
+        "Night Elf",
         "Worgen",
         "Blood Elf",
         "Troll",
+        "Nightborne",
         "Zandalari Troll Kimbul",
         "Maghar Orc",
         "Undead",
@@ -457,7 +457,7 @@
         "Vulpera"
     ],
     "spec_id": 258,
-    "subtitle": "UTC 2020-01-23 07:29 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/e324279709\" target=\"blank\">e324279</a>",
+    "subtitle": "UTC 2020-01-24 07:29 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/4d973ee35d\" target=\"blank\">4d973ee</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -558,6 +558,6 @@
             }
         }
     },
-    "timestamp": "2020-01-23 07:29",
+    "timestamp": "2020-01-24 07:29",
     "title": "Races | Shadow Priest | Patchwerk"
 }

@@ -85,88 +85,88 @@
     },
     "data": {
         "Deadly Momentum": {
-            "1": 107355,
-            "2": 107394,
-            "3": 108482
+            "1": 107031,
+            "2": 107099,
+            "3": 107958
         },
         "Echoing Void": {
-            "1": 111804,
-            "2": 114301,
-            "3": 119253
+            "1": 111535,
+            "2": 114014,
+            "3": 118931
         },
         "Expedient": {
-            "1": 108397,
-            "2": 109458,
-            "3": 109824
+            "1": 108045,
+            "2": 108838,
+            "3": 109627
         },
         "Glimpse of Clarity": {
-            "1": 109160,
-            "2": 107638
+            "1": 108643,
+            "2": 107144
         },
         "Gushing Wound": {
-            "1": 109432
+            "1": 110702
         },
         "Honed Mind": {
-            "1": 108569,
-            "2": 109316,
-            "3": 111155
+            "1": 108347,
+            "2": 108970,
+            "3": 110895
         },
         "Ineffable Truth": {
-            "1": 104371,
-            "2": 104349
+            "1": 103980,
+            "2": 103976
         },
         "Infinite Stars": {
-            "1": 109176,
-            "2": 112382,
-            "3": 115272
+            "1": 108547,
+            "2": 111339,
+            "3": 115039
         },
         "Masterful": {
-            "1": 108982,
-            "2": 110359,
-            "3": 111450
+            "1": 108767,
+            "2": 109898,
+            "3": 111340
         },
         "Racing Pulse": {
-            "1": 108553,
-            "2": 109252,
-            "3": 111028
+            "1": 108280,
+            "2": 109277,
+            "3": 110448
         },
         "Severe": {
-            "1": 107567,
-            "2": 107994,
-            "3": 108487
+            "1": 107349,
+            "2": 107769,
+            "3": 108188
         },
         "Strikethrough": {
-            "1": 108403,
-            "2": 109250,
-            "3": 109865
+            "1": 108011,
+            "2": 108730,
+            "3": 109597
         },
         "Surging Vitality": {
-            "1": 108459,
-            "2": 109020,
-            "3": 110721
+            "1": 108018,
+            "2": 108803,
+            "3": 110211
         },
         "Twilight Devastation": {
-            "1": 111644,
-            "2": 116183,
-            "3": 121064
+            "1": 111084,
+            "2": 116021,
+            "3": 121072
         },
         "Twisted Appendage": {
-            "1": 107464,
-            "2": 110257,
-            "3": 113301
+            "1": 107472,
+            "2": 110151,
+            "3": 113460
         },
         "Versatile": {
-            "1": 107288,
-            "2": 107477,
-            "3": 107927
+            "1": 106751,
+            "2": 107462,
+            "3": 107461
         },
         "Void Ritual": {
-            "1": 107611,
-            "2": 108345,
-            "3": 110050
+            "1": 106897,
+            "2": 107977,
+            "3": 109723
         },
         "baseline": {
-            "1": 106639
+            "1": 106363
         }
     },
     "data_type": "corruptions",
@@ -339,7 +339,7 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "ac4ff311f7",
+        "simc_hash": "db5b049d03",
         "spec": "fire",
         "target_error": "0.2",
         "tier": "25"
@@ -356,12 +356,12 @@
         "Twisted Appendage",
         "Masterful",
         "Honed Mind",
+        "Gushing Wound",
         "Racing Pulse",
         "Surging Vitality",
         "Void Ritual",
-        "Strikethrough",
         "Expedient",
-        "Gushing Wound",
+        "Strikethrough",
         "Severe",
         "Deadly Momentum",
         "Versatile",
@@ -369,22 +369,22 @@
         "Ineffable Truth"
     ],
     "sorted_data_keys_2": [
+        "Gushing Wound",
         "Masterful",
         "Echoing Void",
         "Twilight Devastation",
-        "Gushing Wound",
-        "Strikethrough",
         "Expedient",
+        "Strikethrough",
         "Honed Mind",
         "Racing Pulse",
-        "Surging Vitality",
         "Infinite Stars",
+        "Surging Vitality",
         "Twisted Appendage",
         "Severe",
-        "Glimpse of Clarity",
         "Versatile",
-        "Deadly Momentum",
+        "Glimpse of Clarity",
         "Void Ritual",
+        "Deadly Momentum",
         "Ineffable Truth"
     ],
     "spec_id": 63,
@@ -471,7 +471,7 @@
             "3": 318480
         }
     },
-    "subtitle": "UTC 2020-01-24 01:55 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/ac4ff311f7\" target=\"blank\">ac4ff31</a>",
+    "subtitle": "UTC 2020-01-24 23:56 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/db5b049d03\" target=\"blank\">db5b049</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -572,6 +572,6 @@
             }
         }
     },
-    "timestamp": "2020-01-24 01:55",
+    "timestamp": "2020-01-24 23:56",
     "title": "Corruptions | Fire Mage | Hecticaddcleave"
 }
