@@ -66,7 +66,6 @@ var wow_classes_specs = [
   [
     "priest", [
       "shadow",
-      "holy"
     ],
     "#FFFFFF"
   ],
@@ -82,6 +81,7 @@ var wow_classes_specs = [
     "shaman", [
       "elemental",
       "enhancement",
+      "restoration",
     ],
     "#0070DE"
   ],
