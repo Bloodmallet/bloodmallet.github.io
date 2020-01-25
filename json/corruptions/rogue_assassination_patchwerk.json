@@ -85,88 +85,88 @@
     },
     "data": {
         "Deadly Momentum": {
-            "1": 67378,
-            "2": 67547,
-            "3": 67999
+            "1": 67615,
+            "2": 67941,
+            "3": 68312
         },
         "Echoing Void": {
-            "1": 70639,
-            "2": 72465,
-            "3": 76290
+            "1": 70936,
+            "2": 72856,
+            "3": 76586
         },
         "Expedient": {
-            "1": 68236,
-            "2": 68859,
-            "3": 69534
+            "1": 68505,
+            "2": 69178,
+            "3": 69828
         },
         "Glimpse of Clarity": {
-            "1": 66845,
-            "2": 66891
+            "1": 67220,
+            "2": 67171
         },
         "Gushing Wound": {
-            "1": 70985
+            "1": 71304
         },
         "Honed Mind": {
-            "1": 68121,
-            "2": 68576,
-            "3": 69803
+            "1": 68486,
+            "2": 68876,
+            "3": 70074
         },
         "Ineffable Truth": {
-            "1": 66982,
-            "2": 67032
+            "1": 67298,
+            "2": 67323
         },
         "Infinite Stars": {
-            "1": 70297,
-            "2": 75415,
-            "3": 81314
+            "1": 70640,
+            "2": 75808,
+            "3": 81720
         },
         "Masterful": {
-            "1": 67548,
-            "2": 67913,
-            "3": 68296
+            "1": 67847,
+            "2": 68246,
+            "3": 68618
         },
         "Racing Pulse": {
-            "1": 68073,
-            "2": 68447,
-            "3": 69603
+            "1": 68333,
+            "2": 68782,
+            "3": 69931
         },
         "Severe": {
-            "1": 67704,
-            "2": 68110,
-            "3": 68548
+            "1": 68041,
+            "2": 68362,
+            "3": 68789
         },
         "Strikethrough": {
-            "1": 67667,
-            "2": 68065,
-            "3": 68467
+            "1": 67964,
+            "2": 68361,
+            "3": 68823
         },
         "Surging Vitality": {
-            "1": 68058,
-            "2": 68537,
-            "3": 69754
+            "1": 68476,
+            "2": 68880,
+            "3": 70024
         },
         "Twilight Devastation": {
-            "1": 68215,
-            "2": 69491,
-            "3": 70871
+            "1": 68470,
+            "2": 69858,
+            "3": 71086
         },
         "Twisted Appendage": {
-            "1": 67998,
-            "2": 70852,
-            "3": 74357
+            "1": 68335,
+            "2": 71179,
+            "3": 74639
         },
         "Versatile": {
-            "1": 67052,
-            "2": 67133,
-            "3": 67192
+            "1": 67309,
+            "2": 67428,
+            "3": 67521
         },
         "Void Ritual": {
-            "1": 67382,
-            "2": 68040,
-            "3": 69300
+            "1": 67636,
+            "2": 68436,
+            "3": 69517
         },
         "baseline": {
-            "1": 66867
+            "1": 67176
         }
     },
     "data_type": "corruptions",
@@ -193,11 +193,11 @@
             "id": "174136"
         },
         "feet": {
-            "bonus_id": "4824/1517",
+            "bonus_id": "4824/1517/6573",
             "id": "174144"
         },
         "finger1": {
-            "bonus_id": "3536/4786/1522",
+            "bonus_id": "3536/4786/1522/6573",
             "enchant": "accord_of_mastery",
             "id": "169157"
         },
@@ -207,7 +207,7 @@
             "id": "169159"
         },
         "hands": {
-            "bonus_id": "4824/1517/6552",
+            "bonus_id": "4824/1517/6573",
             "id": "174146"
         },
         "head": {
@@ -290,7 +290,7 @@
             }
         },
         "legs": {
-            "bonus_id": "4824/1517",
+            "bonus_id": "4824/1517/6573",
             "id": "174139"
         },
         "level": "120",
@@ -328,11 +328,11 @@
             "id": "169311"
         },
         "waist": {
-            "bonus_id": "4824/1517",
+            "bonus_id": "4824/1517/6573",
             "id": "174140"
         },
         "wrists": {
-            "bonus_id": "4824/1517/6554",
+            "bonus_id": "4824/1517/6573",
             "id": "174145"
         }
     },
@@ -341,7 +341,7 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "db5b049d03",
+        "simc_hash": "92faf4032c",
         "spec": "assassination",
         "target_error": "0.1",
         "tier": "25"
@@ -362,8 +362,8 @@
         "Racing Pulse",
         "Expedient",
         "Void Ritual",
-        "Severe",
         "Strikethrough",
+        "Severe",
         "Masterful",
         "Deadly Momentum",
         "Versatile",
@@ -376,10 +376,10 @@
         "Echoing Void",
         "Expedient",
         "Twisted Appendage",
-        "Severe",
         "Honed Mind",
-        "Surging Vitality",
         "Strikethrough",
+        "Surging Vitality",
+        "Severe",
         "Racing Pulse",
         "Masterful",
         "Twilight Devastation",
@@ -473,7 +473,7 @@
             "3": 318480
         }
     },
-    "subtitle": "UTC 2020-01-24 23:40 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/db5b049d03\" target=\"blank\">db5b049</a>",
+    "subtitle": "UTC 2020-01-25 21:44 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/92faf4032c\" target=\"blank\">92faf40</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -574,6 +574,6 @@
             }
         }
     },
-    "timestamp": "2020-01-24 23:40",
+    "timestamp": "2020-01-25 21:44",
     "title": "Corruptions | Assassination Rogue | Patchwerk"
 }

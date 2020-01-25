@@ -1,29 +1,29 @@
 {
     "class_id": 5,
     "data": {
-        "Blood Elf": 100554,
-        "Dark Iron Dwarf": 99962,
-        "Draenei": 100313,
-        "Dwarf": 101263,
-        "Gnome": 101021,
-        "Goblin": 101097,
-        "Human": 101569,
-        "Kul Tiran": 100821,
-        "Lightforged Draenei": 102029,
-        "Maghar Orc": 100417,
-        "Mechagnome": 101075,
-        "Night Elf": 100941,
-        "Nightborne": 100696,
-        "Pandaren": 101009,
-        "Tauren": 101148,
-        "Troll": 100490,
-        "Undead": 100217,
-        "Void Elf": 100533,
-        "Vulpera": 97909,
-        "Worgen": 100352,
-        "Zandalari Troll Bwonsamdi": 100316,
-        "Zandalari Troll Kimbul": 100356,
-        "Zandalari Troll Paku": 100896
+        "Blood Elf": 100200,
+        "Dark Iron Dwarf": 99365,
+        "Draenei": 99757,
+        "Dwarf": 100622,
+        "Gnome": 100503,
+        "Goblin": 100444,
+        "Human": 101160,
+        "Kul Tiran": 100244,
+        "Lightforged Draenei": 101553,
+        "Maghar Orc": 99894,
+        "Mechagnome": 100491,
+        "Night Elf": 100508,
+        "Nightborne": 100273,
+        "Pandaren": 100396,
+        "Tauren": 100647,
+        "Troll": 100202,
+        "Undead": 99765,
+        "Void Elf": 100303,
+        "Vulpera": 98711,
+        "Worgen": 100089,
+        "Zandalari Troll Bwonsamdi": 99725,
+        "Zandalari Troll Kimbul": 99768,
+        "Zandalari Troll Paku": 100429
     },
     "data_type": "races",
     "languages": {
@@ -294,7 +294,7 @@
             "id": "174533"
         },
         "hands": {
-            "bonus_id": "4824/1517/6476",
+            "bonus_id": "4824/1517/6465/6476",
             "id": "174125"
         },
         "head": {
@@ -327,7 +327,7 @@
                 "id": "174533"
             },
             "hands": {
-                "bonus_id": "4824/1517/6476",
+                "bonus_id": "4824/1517/6465/6476",
                 "id": "174125"
             },
             "head": {
@@ -367,8 +367,8 @@
                 "id": "173944"
             },
             "waist": {
-                "bonus_id": "4824/1517/6482",
-                "id": "174124"
+                "bonus_id": "4824/1517/6465/6482",
+                "id": "174126"
             },
             "wrists": {
                 "bonus_id": "4824/1517",
@@ -413,8 +413,8 @@
             "id": "173944"
         },
         "waist": {
-            "bonus_id": "4824/1517/6482",
-            "id": "174124"
+            "bonus_id": "4824/1517/6465/6482",
+            "id": "174126"
         },
         "wrists": {
             "bonus_id": "4824/1517",
@@ -426,7 +426,7 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "4d973ee35d",
+        "simc_hash": "92faf4032c",
         "spec": "shadow",
         "target_error": "0.2",
         "tier": "25"
@@ -434,30 +434,30 @@
     "sorted_data_keys": [
         "Lightforged Draenei",
         "Human",
-        "Dwarf",
         "Tauren",
-        "Goblin",
-        "Mechagnome",
-        "Gnome",
-        "Pandaren",
+        "Dwarf",
         "Night Elf",
+        "Gnome",
+        "Mechagnome",
+        "Goblin",
         "Zandalari Troll Paku",
-        "Kul Tiran",
-        "Nightborne",
-        "Blood Elf",
+        "Pandaren",
         "Void Elf",
+        "Nightborne",
+        "Kul Tiran",
         "Troll",
+        "Blood Elf",
+        "Worgen",
         "Maghar Orc",
         "Zandalari Troll Kimbul",
-        "Worgen",
-        "Zandalari Troll Bwonsamdi",
-        "Draenei",
         "Undead",
+        "Draenei",
+        "Zandalari Troll Bwonsamdi",
         "Dark Iron Dwarf",
         "Vulpera"
     ],
     "spec_id": 258,
-    "subtitle": "UTC 2020-01-24 07:44 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/4d973ee35d\" target=\"blank\">4d973ee</a>",
+    "subtitle": "UTC 2020-01-25 07:39 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/92faf4032c\" target=\"blank\">92faf40</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -558,6 +558,6 @@
             }
         }
     },
-    "timestamp": "2020-01-24 07:44",
+    "timestamp": "2020-01-25 07:39",
     "title": "Races | Shadow Priest | Hecticaddcleave"
 }

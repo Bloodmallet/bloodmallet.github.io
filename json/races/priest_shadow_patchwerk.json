@@ -1,29 +1,29 @@
 {
     "class_id": 5,
     "data": {
-        "Blood Elf": 86717,
-        "Dark Iron Dwarf": 86097,
-        "Draenei": 86262,
-        "Dwarf": 86996,
-        "Gnome": 87024,
-        "Goblin": 87047,
-        "Human": 87602,
-        "Kul Tiran": 86790,
-        "Lightforged Draenei": 86406,
-        "Maghar Orc": 86572,
-        "Mechagnome": 86891,
-        "Night Elf": 86777,
-        "Nightborne": 86694,
-        "Pandaren": 87105,
-        "Tauren": 87002,
-        "Troll": 86698,
-        "Undead": 86501,
-        "Void Elf": 86991,
-        "Vulpera": 85335,
-        "Worgen": 86773,
-        "Zandalari Troll Bwonsamdi": 86433,
-        "Zandalari Troll Kimbul": 86577,
-        "Zandalari Troll Paku": 86981
+        "Blood Elf": 85607,
+        "Dark Iron Dwarf": 85030,
+        "Draenei": 85170,
+        "Dwarf": 85956,
+        "Gnome": 85846,
+        "Goblin": 86020,
+        "Human": 86512,
+        "Kul Tiran": 85700,
+        "Lightforged Draenei": 85260,
+        "Maghar Orc": 85338,
+        "Mechagnome": 85725,
+        "Night Elf": 85663,
+        "Nightborne": 85776,
+        "Pandaren": 85957,
+        "Tauren": 85927,
+        "Troll": 85581,
+        "Undead": 85355,
+        "Void Elf": 85775,
+        "Vulpera": 84810,
+        "Worgen": 85577,
+        "Zandalari Troll Bwonsamdi": 85357,
+        "Zandalari Troll Kimbul": 85521,
+        "Zandalari Troll Paku": 85906
     },
     "data_type": "races",
     "languages": {
@@ -294,7 +294,7 @@
             "id": "174533"
         },
         "hands": {
-            "bonus_id": "4824/1517/6476",
+            "bonus_id": "4824/1517/6465/6476",
             "id": "174125"
         },
         "head": {
@@ -327,7 +327,7 @@
                 "id": "174533"
             },
             "hands": {
-                "bonus_id": "4824/1517/6476",
+                "bonus_id": "4824/1517/6465/6476",
                 "id": "174125"
             },
             "head": {
@@ -367,8 +367,8 @@
                 "id": "173944"
             },
             "waist": {
-                "bonus_id": "4824/1517/6482",
-                "id": "174124"
+                "bonus_id": "4824/1517/6465/6482",
+                "id": "174126"
             },
             "wrists": {
                 "bonus_id": "4824/1517",
@@ -413,8 +413,8 @@
             "id": "173944"
         },
         "waist": {
-            "bonus_id": "4824/1517/6482",
-            "id": "174124"
+            "bonus_id": "4824/1517/6465/6482",
+            "id": "174126"
         },
         "wrists": {
             "bonus_id": "4824/1517",
@@ -426,38 +426,38 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "4d973ee35d",
+        "simc_hash": "92faf4032c",
         "spec": "shadow",
         "target_error": "0.1",
         "tier": "25"
     },
     "sorted_data_keys": [
         "Human",
-        "Pandaren",
         "Goblin",
-        "Gnome",
-        "Tauren",
+        "Pandaren",
         "Dwarf",
-        "Void Elf",
+        "Tauren",
         "Zandalari Troll Paku",
+        "Gnome",
+        "Nightborne",
+        "Void Elf",
         "Mechagnome",
         "Kul Tiran",
         "Night Elf",
-        "Worgen",
         "Blood Elf",
         "Troll",
-        "Nightborne",
+        "Worgen",
         "Zandalari Troll Kimbul",
-        "Maghar Orc",
-        "Undead",
         "Zandalari Troll Bwonsamdi",
+        "Undead",
+        "Maghar Orc",
         "Lightforged Draenei",
         "Draenei",
         "Dark Iron Dwarf",
         "Vulpera"
     ],
     "spec_id": 258,
-    "subtitle": "UTC 2020-01-24 07:29 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/4d973ee35d\" target=\"blank\">4d973ee</a>",
+    "subtitle": "UTC 2020-01-25 07:27 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/92faf4032c\" target=\"blank\">92faf40</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -558,6 +558,6 @@
             }
         }
     },
-    "timestamp": "2020-01-24 07:29",
+    "timestamp": "2020-01-25 07:27",
     "title": "Races | Shadow Priest | Patchwerk"
 }

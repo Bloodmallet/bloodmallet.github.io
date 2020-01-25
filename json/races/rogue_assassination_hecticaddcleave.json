@@ -1,26 +1,26 @@
 {
     "class_id": 4,
     "data": {
-        "Blood Elf": 102922,
-        "Dark Iron Dwarf": 102514,
-        "Dwarf": 103157,
-        "Gnome": 102920,
-        "Goblin": 102784,
-        "Human": 103597,
-        "Kul Tiran": 103165,
-        "Maghar Orc": 103120,
-        "Mechagnome": 103417,
-        "Night Elf": 103165,
-        "Nightborne": 102318,
-        "Orc": 102272,
-        "Pandaren": 102857,
-        "Troll": 102894,
-        "Undead": 102671,
-        "Void Elf": 103192,
-        "Worgen": 102941,
-        "Zandalari Troll Bwonsamdi": 102657,
-        "Zandalari Troll Kimbul": 102499,
-        "Zandalari Troll Paku": 103163
+        "Blood Elf": 110397,
+        "Dark Iron Dwarf": 110101,
+        "Dwarf": 111045,
+        "Gnome": 110630,
+        "Goblin": 110628,
+        "Human": 111306,
+        "Kul Tiran": 110642,
+        "Maghar Orc": 110539,
+        "Mechagnome": 111028,
+        "Night Elf": 110802,
+        "Nightborne": 110158,
+        "Orc": 110466,
+        "Pandaren": 110438,
+        "Troll": 110315,
+        "Undead": 110472,
+        "Void Elf": 110829,
+        "Worgen": 110650,
+        "Zandalari Troll Bwonsamdi": 110065,
+        "Zandalari Troll Kimbul": 110186,
+        "Zandalari Troll Paku": 110755
     },
     "data_type": "races",
     "languages": {
@@ -247,11 +247,11 @@
             "id": "174136"
         },
         "feet": {
-            "bonus_id": "4824/1517",
+            "bonus_id": "4824/1517/6573",
             "id": "174144"
         },
         "finger1": {
-            "bonus_id": "3536/4786/1522",
+            "bonus_id": "3536/4786/1522/6573",
             "enchant": "accord_of_mastery",
             "id": "169157"
         },
@@ -261,7 +261,7 @@
             "id": "169159"
         },
         "hands": {
-            "bonus_id": "4824/1517/6552",
+            "bonus_id": "4824/1517/6573",
             "id": "174146"
         },
         "head": {
@@ -280,11 +280,11 @@
                 "id": "174136"
             },
             "feet": {
-                "bonus_id": "4824/1517",
+                "bonus_id": "4824/1517/6573",
                 "id": "174144"
             },
             "finger1": {
-                "bonus_id": "3536/4786/1522",
+                "bonus_id": "3536/4786/1522/6573",
                 "enchant": "accord_of_mastery",
                 "id": "169157"
             },
@@ -294,7 +294,7 @@
                 "id": "169159"
             },
             "hands": {
-                "bonus_id": "4824/1517/6552",
+                "bonus_id": "4824/1517/6573",
                 "id": "174146"
             },
             "head": {
@@ -303,7 +303,7 @@
                 "id": "174134"
             },
             "legs": {
-                "bonus_id": "4824/1517",
+                "bonus_id": "4824/1517/6573",
                 "id": "174139"
             },
             "main_hand": {
@@ -335,16 +335,16 @@
                 "id": "169311"
             },
             "waist": {
-                "bonus_id": "4824/1517",
+                "bonus_id": "4824/1517/6573",
                 "id": "174140"
             },
             "wrists": {
-                "bonus_id": "4824/1517/6554",
+                "bonus_id": "4824/1517/6573",
                 "id": "174145"
             }
         },
         "legs": {
-            "bonus_id": "4824/1517",
+            "bonus_id": "4824/1517/6573",
             "id": "174139"
         },
         "level": "120",
@@ -382,11 +382,11 @@
             "id": "169311"
         },
         "waist": {
-            "bonus_id": "4824/1517",
+            "bonus_id": "4824/1517/6573",
             "id": "174140"
         },
         "wrists": {
-            "bonus_id": "4824/1517/6554",
+            "bonus_id": "4824/1517/6573",
             "id": "174145"
         }
     },
@@ -395,35 +395,35 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "4d973ee35d",
+        "simc_hash": "92faf4032c",
         "spec": "assassination",
         "target_error": "0.2",
         "tier": "25"
     },
     "sorted_data_keys": [
         "Human",
+        "Dwarf",
         "Mechagnome",
         "Void Elf",
         "Night Elf",
-        "Kul Tiran",
         "Zandalari Troll Paku",
-        "Dwarf",
-        "Maghar Orc",
         "Worgen",
-        "Blood Elf",
+        "Kul Tiran",
         "Gnome",
-        "Troll",
-        "Pandaren",
         "Goblin",
+        "Maghar Orc",
         "Undead",
-        "Zandalari Troll Bwonsamdi",
-        "Dark Iron Dwarf",
+        "Orc",
+        "Pandaren",
+        "Blood Elf",
+        "Troll",
         "Zandalari Troll Kimbul",
         "Nightborne",
-        "Orc"
+        "Dark Iron Dwarf",
+        "Zandalari Troll Bwonsamdi"
     ],
     "spec_id": 259,
-    "subtitle": "UTC 2020-01-24 07:44 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/4d973ee35d\" target=\"blank\">4d973ee</a>",
+    "subtitle": "UTC 2020-01-25 07:39 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/92faf4032c\" target=\"blank\">92faf40</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -524,6 +524,6 @@
             }
         }
     },
-    "timestamp": "2020-01-24 07:44",
+    "timestamp": "2020-01-25 07:39",
     "title": "Races | Assassination Rogue | Hecticaddcleave"
 }

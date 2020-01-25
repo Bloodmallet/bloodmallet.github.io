@@ -1,26 +1,26 @@
 {
     "class_id": 4,
     "data": {
-        "Blood Elf": 89305,
-        "Dark Iron Dwarf": 88758,
-        "Dwarf": 89574,
-        "Gnome": 89305,
-        "Goblin": 89279,
-        "Human": 89779,
-        "Kul Tiran": 89297,
-        "Maghar Orc": 89209,
-        "Mechagnome": 89409,
-        "Night Elf": 89588,
-        "Nightborne": 88869,
-        "Orc": 88799,
-        "Pandaren": 89012,
-        "Troll": 89171,
-        "Undead": 89161,
-        "Void Elf": 89758,
-        "Worgen": 89208,
-        "Zandalari Troll Bwonsamdi": 88929,
-        "Zandalari Troll Kimbul": 88961,
-        "Zandalari Troll Paku": 89233
+        "Blood Elf": 88224,
+        "Dark Iron Dwarf": 87696,
+        "Dwarf": 88323,
+        "Gnome": 88130,
+        "Goblin": 88072,
+        "Human": 88568,
+        "Kul Tiran": 88160,
+        "Maghar Orc": 88052,
+        "Mechagnome": 88079,
+        "Night Elf": 88386,
+        "Nightborne": 87780,
+        "Orc": 87640,
+        "Pandaren": 87769,
+        "Troll": 87788,
+        "Undead": 87954,
+        "Void Elf": 88538,
+        "Worgen": 88024,
+        "Zandalari Troll Bwonsamdi": 87764,
+        "Zandalari Troll Kimbul": 87845,
+        "Zandalari Troll Paku": 88158
     },
     "data_type": "races",
     "languages": {
@@ -247,11 +247,11 @@
             "id": "174136"
         },
         "feet": {
-            "bonus_id": "4824/1517",
+            "bonus_id": "4824/1517/6573",
             "id": "174144"
         },
         "finger1": {
-            "bonus_id": "3536/4786/1522",
+            "bonus_id": "3536/4786/1522/6573",
             "enchant": "accord_of_versatility",
             "id": "169157"
         },
@@ -261,7 +261,7 @@
             "id": "169159"
         },
         "hands": {
-            "bonus_id": "4824/1517/6552",
+            "bonus_id": "4824/1517/6573",
             "id": "174137"
         },
         "head": {
@@ -280,11 +280,11 @@
                 "id": "174136"
             },
             "feet": {
-                "bonus_id": "4824/1517",
+                "bonus_id": "4824/1517/6573",
                 "id": "174144"
             },
             "finger1": {
-                "bonus_id": "3536/4786/1522",
+                "bonus_id": "3536/4786/1522/6573",
                 "enchant": "accord_of_versatility",
                 "id": "169157"
             },
@@ -294,7 +294,7 @@
                 "id": "169159"
             },
             "hands": {
-                "bonus_id": "4824/1517/6552",
+                "bonus_id": "4824/1517/6573",
                 "id": "174137"
             },
             "head": {
@@ -303,7 +303,7 @@
                 "id": "174134"
             },
             "legs": {
-                "bonus_id": "4824/1517",
+                "bonus_id": "4824/1517/6573",
                 "id": "174143"
             },
             "main_hand": {
@@ -335,16 +335,16 @@
                 "id": "159623"
             },
             "waist": {
-                "bonus_id": "4824/1517",
+                "bonus_id": "4824/1517/6573",
                 "id": "174142"
             },
             "wrists": {
-                "bonus_id": "4824/1517/6554",
+                "bonus_id": "4824/1517/6573",
                 "id": "174138"
             }
         },
         "legs": {
-            "bonus_id": "4824/1517",
+            "bonus_id": "4824/1517/6573",
             "id": "174143"
         },
         "level": "120",
@@ -382,11 +382,11 @@
             "id": "159623"
         },
         "waist": {
-            "bonus_id": "4824/1517",
+            "bonus_id": "4824/1517/6573",
             "id": "174142"
         },
         "wrists": {
-            "bonus_id": "4824/1517/6554",
+            "bonus_id": "4824/1517/6573",
             "id": "174138"
         }
     },
@@ -395,7 +395,7 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "4d973ee35d",
+        "simc_hash": "92faf4032c",
         "spec": "subtlety",
         "target_error": "0.1",
         "tier": "25"
@@ -405,25 +405,25 @@
         "Void Elf",
         "Night Elf",
         "Dwarf",
-        "Mechagnome",
-        "Gnome",
         "Blood Elf",
         "Kul Tiran",
-        "Goblin",
         "Zandalari Troll Paku",
+        "Gnome",
+        "Mechagnome",
+        "Goblin",
         "Maghar Orc",
         "Worgen",
-        "Troll",
         "Undead",
-        "Pandaren",
         "Zandalari Troll Kimbul",
-        "Zandalari Troll Bwonsamdi",
+        "Troll",
         "Nightborne",
-        "Orc",
-        "Dark Iron Dwarf"
+        "Pandaren",
+        "Zandalari Troll Bwonsamdi",
+        "Dark Iron Dwarf",
+        "Orc"
     ],
     "spec_id": 261,
-    "subtitle": "UTC 2020-01-24 07:32 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/4d973ee35d\" target=\"blank\">4d973ee</a>",
+    "subtitle": "UTC 2020-01-25 07:28 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/92faf4032c\" target=\"blank\">92faf40</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -524,6 +524,6 @@
             }
         }
     },
-    "timestamp": "2020-01-24 07:32",
+    "timestamp": "2020-01-25 07:28",
     "title": "Races | Subtlety Rogue | Patchwerk"
 }
