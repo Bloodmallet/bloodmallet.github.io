@@ -386,7 +386,7 @@ function bloodmallet_chart_import() {
     try {
       var spec_data = loaded_data[data_type][fight_style][wow_class][wow_spec];
     } catch (error) {
-      console.warn("Data for ", data_type, fight_style, wow_class, wow_spec, " wasn't loaded yet. Either chart setup is wrong, connection to bloodmallet.com is slow or failed.");
+      // console.warn("Data for ", data_type, fight_style, wow_class, wow_spec, " wasn't loaded yet. Either chart setup is wrong, connection to bloodmallet.com is slow or failed.");
       if (count < 10) {
         setTimeout(update_chart, 100, state, html_element, chart, count + 1);
       }
@@ -852,11 +852,11 @@ function bloodmallet_chart_import() {
           if (state.data_type === "essence_combinations") {
             a.href += "spells/" + data["spell_ids"][key.split(" +")[0]];
           } else if (state.data_type === "corruptions" && state.corruption_representation === "dps/rating") {
-            let corruption_name = key.slice(0, key.length - 2);
-            let corruption_rank = key.slice(key.length - 1, key.length);
-            a.href += "spell/" + data["spell_ids"][corruption_name][corruption_rank];
+            let corruption_name = key;
+            let corruption_rank = Object.keys(data["data"][key])[Object.keys(data["data"][key]).length - 1];
+            a.href += "spells/" + data["spell_ids"][corruption_name][corruption_rank];
           } else if (state.data_type === "corruptions" && state.corruption_representation === "dps") {
-            a.href += "spell/" + data["spell_ids"][key]["1"];
+            a.href += "spells/" + data["spell_ids"][key]["1"];
           } else {
             a.href += "spells/" + data["spell_ids"][key]; // spell id
           }
