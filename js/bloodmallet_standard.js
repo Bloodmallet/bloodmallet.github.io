@@ -2167,26 +2167,7 @@ function update_chart() {
               portion_spell_id = spell_id;
             }
           } else {
-            if (chosen_corruption_representation === "dps") {
-              portion_spell_id = loaded_data[chosen_class][chosen_spec][data_name][fight_style]["spell_ids"][trait_name]["1"];
-            } else {
-
-
-              let rank = '';
-              let name = '';
-              if (isNaN(parseInt(trait_name.slice(trait_name.length - 1, trait_name.length)))) {
-                // new format
-                name = trait_name;
-                let ranks = Object.keys(loaded_data[chosen_class][chosen_spec][data_view][fight_style]["corruption_rating"][name]);
-                rank = ranks.sort()[ranks.length - 1];
-              } else {
-                // old format
-                name = trait_name.slice(0, trait_name.length - 2);
-                rank = trait_name.slice(trait_name.length - 1, trait_name.length);
-              }
-
-              portion_spell_id = loaded_data[chosen_class][chosen_spec][data_name][fight_style]["spell_ids"][name][rank];
-            }
+            portion_spell_id = loaded_data[chosen_class][chosen_spec][data_name][fight_style]["spell_ids"][trait_name];
           }
 
           if (data_view === "essences") {
@@ -2403,7 +2384,7 @@ function update_chart() {
     standard_chart.series[0].remove(false);
   }
   // basically: if something was simmed with multiple itemlevels
-  if ("simulated_steps" in loaded_data[chosen_class][chosen_spec][data_name][fight_style] && !(data_view === "corruptions" && chosen_corruption_representation === "dps_corruption_rating")) {
+  if ("simulated_steps" in loaded_data[chosen_class][chosen_spec][data_name][fight_style]) {
 
     if (debug) {
       console.log("simulated_steps in data found.");
@@ -2424,6 +2405,10 @@ function update_chart() {
         let max_ilevel = chosen_step_list[0];
         let baseline_dps = loaded_data[chosen_class][chosen_spec][data_name][fight_style]["data"]["baseline"][loaded_data[chosen_class][chosen_spec][data_name][fight_style]["simulated_steps"][loaded_data[chosen_class][chosen_spec][data_name][fight_style]["simulated_steps"].length - 1]]
 
+        if (data_view === "corruptions") {
+          baseline_dps = loaded_data[chosen_class][chosen_spec][data_name][fight_style]["data"]["baseline"][itemlevel];
+        }
+
         // check for zero dps values and don't change them
         if (dps > 0) {
 
@@ -2432,9 +2417,17 @@ function update_chart() {
 
             if (itemlevel in loaded_data[chosen_class][chosen_spec][data_name][fight_style]["data"][data]) {
               if (chosen_value_style === "absolute_gain") {
-                itemlevel_dps_values.push(dps - baseline_dps);
+                if (data_view === "corruptions" && chosen_corruption_representation === "dps_corruption_rating") {
+                  itemlevel_dps_values.push((dps - baseline_dps) / loaded_data[chosen_class][chosen_spec][data_name][fight_style]["corruption_rating"][data]);
+                } else {
+                  itemlevel_dps_values.push(dps - baseline_dps);
+                }
               } else if (chosen_value_style === "relative_gain") {
-                itemlevel_dps_values.push(Math.round((dps - baseline_dps) * 10000 / baseline_dps) / 100);
+                if (data_view === "corruptions" && chosen_corruption_representation === "dps_corruption_rating") {
+                  itemlevel_dps_values.push(Math.round((dps - baseline_dps) / loaded_data[chosen_class][chosen_spec][data_name][fight_style]["corruption_rating"][data] * 10000 / baseline_dps) / 100);
+                } else {
+                  itemlevel_dps_values.push(Math.round((dps - baseline_dps) * 10000 / baseline_dps) / 100);
+                }
               } else if (chosen_value_style === "absolute_value") {
                 itemlevel_dps_values.push(dps);
               }
@@ -2452,7 +2445,6 @@ function update_chart() {
 
             // if lower itemlevel is zero we have to assume that this item needs to be compared now to the baseline
             if (loaded_data[chosen_class][chosen_spec][data_name][fight_style]["data"][data][chosen_step_list[String(Number(itemlevel_position) + 1)]] == 0 || !(chosen_step_list[String(Number(itemlevel_position) + 1)] in loaded_data[chosen_class][chosen_spec][data_name][fight_style]["data"][data])) {
-
               if (chosen_value_style === "absolute_gain") {
                 itemlevel_dps_values.push(dps - baseline_dps);
               } else if (chosen_value_style === "relative_gain") {
@@ -2461,11 +2453,40 @@ function update_chart() {
                 itemlevel_dps_values.push(dps);
               }
             } else { // standard case, next itemlevel is not zero and can be used to substract from the current value
-
               if (chosen_value_style === "absolute_gain") {
-                itemlevel_dps_values.push(dps - loaded_data[chosen_class][chosen_spec][data_name][fight_style]["data"][data][chosen_step_list[String(Number(itemlevel_position) + 1)]]);
+                if (data_view === "corruptions" && chosen_corruption_representation === "dps_corruption_rating") {
+                  let full_value = (dps - baseline_dps) / loaded_data[chosen_class][chosen_spec][data_name][fight_style]["corruption_rating"][data];
+                  let next_itemlevel = chosen_step_list[String(Number(itemlevel_position) + 1)];
+                  let lower_value = (loaded_data[chosen_class][chosen_spec][data_name][fight_style]["data"][data][next_itemlevel] - loaded_data[chosen_class][chosen_spec][data_name][fight_style]["data"]["baseline"][next_itemlevel]) / loaded_data[chosen_class][chosen_spec][data_name][fight_style]["corruption_rating"][data];
+
+                  itemlevel_dps_values.push(full_value - lower_value);
+
+                } else if (data_view === "corruptions") {
+                  let full_value = dps - baseline_dps;
+                  let next_itemlevel = chosen_step_list[String(Number(itemlevel_position) + 1)];
+                  let lower_value = loaded_data[chosen_class][chosen_spec][data_name][fight_style]["data"][data][next_itemlevel] - loaded_data[chosen_class][chosen_spec][data_name][fight_style]["data"]["baseline"][next_itemlevel];
+
+                  itemlevel_dps_values.push(full_value - lower_value);
+                } else {
+                  itemlevel_dps_values.push(dps - loaded_data[chosen_class][chosen_spec][data_name][fight_style]["data"][data][chosen_step_list[String(Number(itemlevel_position) + 1)]]);
+                }
               } else if (chosen_value_style === "relative_gain") {
-                itemlevel_dps_values.push(Math.round((dps - loaded_data[chosen_class][chosen_spec][data_name][fight_style]["data"][data][chosen_step_list[String(Number(itemlevel_position) + 1)]]) * 10000 / baseline_dps) / 100);
+                if (data_view === "corruptions" && chosen_corruption_representation === "dps_corruption_rating") {
+                  let full_value = (dps - baseline_dps) / loaded_data[chosen_class][chosen_spec][data_name][fight_style]["corruption_rating"][data];
+                  let next_itemlevel = chosen_step_list[String(Number(itemlevel_position) + 1)];
+                  let lower_value = (loaded_data[chosen_class][chosen_spec][data_name][fight_style]["data"][data][next_itemlevel] - loaded_data[chosen_class][chosen_spec][data_name][fight_style]["data"]["baseline"][next_itemlevel]) / loaded_data[chosen_class][chosen_spec][data_name][fight_style]["corruption_rating"][data];
+
+                  itemlevel_dps_values.push(Math.round((full_value - lower_value) * 10000 / baseline_dps) / 100);
+
+                } else if (data_view === "corruptions") {
+                  let full_value = dps - baseline_dps;
+                  let next_itemlevel = chosen_step_list[String(Number(itemlevel_position) + 1)];
+                  let lower_value = loaded_data[chosen_class][chosen_spec][data_name][fight_style]["data"][data][next_itemlevel] - loaded_data[chosen_class][chosen_spec][data_name][fight_style]["data"]["baseline"][next_itemlevel];
+
+                  itemlevel_dps_values.push(Math.round((full_value - lower_value) * 10000 / baseline_dps) / 100);
+                } else {
+                  itemlevel_dps_values.push(Math.round((dps - loaded_data[chosen_class][chosen_spec][data_name][fight_style]["data"][data][chosen_step_list[String(Number(itemlevel_position) + 1)]]) * 10000 / baseline_dps) / 100);
+                }
               } else if (chosen_value_style === "absolute_value") {
                 itemlevel_dps_values.push(dps - loaded_data[chosen_class][chosen_spec][data_name][fight_style]["data"][data][chosen_step_list[String(Number(itemlevel_position) + 1)]]);
               }
@@ -2475,7 +2496,23 @@ function update_chart() {
         } else { // if dps is undefined or 0
           if (itemlevel in loaded_data[chosen_class][chosen_spec][data_name][fight_style]["data"][data]) {
             if (chosen_value_style === "absolute_gain") {
-              itemlevel_dps_values.push(dps);
+              if (data_view === "corruptions" && chosen_corruption_representation === "dps_corruption_rating") {
+                let full_value = (dps - baseline_dps) / loaded_data[chosen_class][chosen_spec][data_name][fight_style]["corruption_rating"][data];
+                let next_itemlevel = chosen_step_list[String(Number(itemlevel_position) + 1)];
+                let lower_value = (dps_key_values[next_itemlevel] - loaded_data[chosen_class][chosen_spec][data_name][fight_style]["data"]["baseline"][next_itemlevel]) / loaded_data[chosen_class][chosen_spec][data_name][fight_style]["corruption_rating"][data];
+
+                itemlevel_dps_values.push(full_value - lower_value);
+
+              } else if (data_view === "corruptions") {
+                let full_value = dps - baseline_dps;
+                let next_itemlevel = chosen_step_list[String(Number(itemlevel_position) + 1)];
+                let lower_value = dps_key_values[next_itemlevel] - loaded_data[chosen_class][chosen_spec][data_name][fight_style]["data"]["baseline"][next_itemlevel];
+                console.log("what");
+
+                itemlevel_dps_values.push(full_value - lower_value);
+              } else {
+                itemlevel_dps_values.push(dps);
+              }
             } else if (chosen_value_style === "relative_gain") {
               itemlevel_dps_values.push(Math.round((dps * 100 / baseline_dps - 100) * 100) / 100);
             } else if (chosen_value_style === "absolute_value") {
@@ -2523,30 +2560,6 @@ function update_chart() {
           dps_values.push(dps);
         }
 
-      } else if (data_view === "corruptions" && chosen_corruption_representation === "dps_corruption_rating") {
-        let name = "";
-        let rank = "";
-        if (isNaN(parseInt(category.slice(category.length - 1, category.length)))) {
-          // new format
-          name = category;
-          let ranks = Object.keys(loaded_data[chosen_class][chosen_spec][data_view][fight_style]["corruption_rating"][name]);
-          rank = ranks.sort()[ranks.length - 1];
-        } else {
-          // old format
-          name = category.slice(0, category.length - 2);
-          rank = category.slice(category.length - 1, category.length);
-        }
-
-
-        let corruption = loaded_data[chosen_class][chosen_spec][data_view][fight_style]["corruption_rating"][name][rank];
-        let dps = loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"][name][rank];
-        let baseline_dps = loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"]["baseline"]["1"];
-
-        if (chosen_value_style === "relative_gain") {
-          dps_values.push(Math.round((dps - baseline_dps) * 10000 / baseline_dps) / 100 / corruption);
-        } else {
-          dps_values.push((dps - baseline_dps) / corruption);
-        }
       } else {
         dps_values.push(loaded_data[chosen_class][chosen_spec][data_view][fight_style]["data"][category]);
       }

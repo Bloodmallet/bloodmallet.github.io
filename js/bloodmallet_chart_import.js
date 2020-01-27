@@ -429,7 +429,7 @@ function bloodmallet_chart_import() {
 
     } else if (data_type === "corruptions" && state.corruption_representation === "dps/rating") {
       dps_ordered_keys = data["sorted_data_keys_2"].slice(0, data["sorted_data_keys_2"].length);
-      baseline_dps = data["data"]["baseline"]["1"];
+      baseline_dps = data["data"]["baseline"][data["simulated_steps"][0]];
     } else {
       dps_ordered_keys = data["sorted_data_keys"].slice(0, data["sorted_data_keys"].length);
       if (data_type === "races") {
@@ -520,12 +520,14 @@ function bloodmallet_chart_import() {
       chart.xAxis[0].setCategories(category_list, false);
     }
 
-    if (simulated_steps && !(data_type === "corruptions" && state.corruption_representation === "dps/rating")) {
+    if (simulated_steps) {
+      // all itemlevels/stacks/simulated steps
       for (let simulation_step_position = 0; simulation_step_position < simulated_steps.length; simulation_step_position++) {
 
         let simulation_step = simulated_steps[simulation_step_position];
         var dps_array = [];
 
+        // all items/traits/ordered keys
         for (let i = 0; i < dps_ordered_keys.length; i++) {
           simulation_step = simulated_steps[simulation_step_position];
           // create copy of simulated_steps to work with internally (some traits don't have the max simulated_step)
@@ -534,11 +536,15 @@ function bloodmallet_chart_import() {
 
           let dps_key_values = data["data"][dps_key];
 
-          baseline_dps = data["data"]["baseline"][data["simulated_steps"][data["simulated_steps"].length - 1]];
-
           // use max simulation_step for the trait stacking chart
           if (data_type === "azerite_traits_stacking") {
             baseline_dps = data["data"]["baseline"][data["simulated_steps"][0]];
+          }
+          // use current simulation step as baseline for corruptions
+          else if (data_type === "corruptions") {
+            baseline_dps = data["data"]["baseline"][simulation_step];
+          } else {
+            baseline_dps = data["data"]["baseline"][data["simulated_steps"][data["simulated_steps"].length - 1]];
           }
 
           // special handling of azerite_stacking chart to account for traits not simmed at max simulation_step or without max stacks
@@ -576,22 +582,39 @@ function bloodmallet_chart_import() {
           if (Number(dps_key_values[simulation_step]) > 0) {
 
             // if lowest simulation_step is looked at, substract baseline
-            if (simulation_step_position == simulated_steps.length - 1) {
+            if (simulation_step_position === simulated_steps.length - 1) {
 
               if (simulation_step in dps_key_values) {
-                dps_array.push(dps_key_values[simulation_step] - baseline_dps);
+                if (data_type === "corruptions" && state.corruption_representation === "dps/rating") {
+                  dps_array.push((dps_key_values[simulation_step] - baseline_dps) / data["corruption_rating"][dps_key]);
+                } else {
+                  dps_array.push(dps_key_values[simulation_step] - baseline_dps);
+                }
               } else {
                 dps_array.push(0);
               }
 
             } else { // else substract lower simulation_step value of same item
 
+              if (data_type === "corruptions" && state.corruption_representation === "dps/rating") {
+                let full_value = (dps_key_values[simulation_step] - baseline_dps) / data["corruption_rating"][dps_key];
+                let next_itemlevel = tmp_simulation_steps[String(Number(simulation_step_position) + 1)];
+                let lower_value = (dps_key_values[next_itemlevel] - data["data"]["baseline"][next_itemlevel]) / data["corruption_rating"][dps_key];
+
+                dps_array.push(full_value - lower_value);
+
+              } else if (data_type === "corruptions") {
+                let full_value = dps_key_values[simulation_step] - baseline_dps;
+                let next_itemlevel = tmp_simulation_steps[String(Number(simulation_step_position) + 1)];
+                let lower_value = dps_key_values[next_itemlevel] - data["data"]["baseline"][next_itemlevel];
+
+                dps_array.push(full_value - lower_value);
+              }
               // if lower simulation_step is zero we have to assume that this item needs to be compared now to the baseline
-              if (dps_key_values[tmp_simulation_steps[String(Number(simulation_step_position) + 1)]] === 0 || !(tmp_simulation_steps[String(Number(simulation_step_position) + 1)] in dps_key_values)) {
+              else if (dps_key_values[tmp_simulation_steps[String(Number(simulation_step_position) + 1)]] === 0 || !(tmp_simulation_steps[String(Number(simulation_step_position) + 1)] in dps_key_values)) {
                 dps_array.push(dps_key_values[simulation_step] - baseline_dps);
 
               } else { // standard case, next simulation_step is not zero and can be used to substract from the current value
-
                 dps_array.push(dps_key_values[simulation_step] - dps_key_values[tmp_simulation_steps[String(Number(simulation_step_position) + 1)]]);
               }
 
@@ -794,15 +817,12 @@ function bloodmallet_chart_import() {
           }
         }
         a.href += "&ilvl=" + ilvl;
-      } else if (data.hasOwnProperty("spell_ids") && (data["spell_ids"].hasOwnProperty(key) || data["spell_ids"].hasOwnProperty(key.slice(0, key.length - 2)))) {
+      } else if (data.hasOwnProperty("spell_ids") && (data["spell_ids"].hasOwnProperty(key))) {
 
         // special handling
-        if (state.data_type === "corruptions" && state.corruption_representation === "dps/rating") {
-          let corruption_name = key.slice(0, key.length - 2);
-          let corruption_rank = key.slice(key.length - 1, key.length);
-          a.href += "spell=" + data["spell_ids"][corruption_name][corruption_rank] + '/' + slugify(key);
-        } else if (state.data_type === "corruptions" && state.corruption_representation === "dps") {
-          a.href += "spell=" + data["spell_ids"][key]["1"] + '/' + slugify(key);
+        if (state.data_type === "corruptions") {
+          let corruption_name = key;
+          a.href += "spell=" + data["spell_ids"][corruption_name] + '/' + slugify(key);
         } else {
           a.href += "spell=" + data["spell_ids"][key] + '/' + slugify(key);
         }
@@ -853,8 +873,7 @@ function bloodmallet_chart_import() {
             a.href += "spells/" + data["spell_ids"][key.split(" +")[0]];
           } else if (state.data_type === "corruptions" && state.corruption_representation === "dps/rating") {
             let corruption_name = key;
-            let corruption_rank = Object.keys(data["data"][key])[Object.keys(data["data"][key]).length - 1];
-            a.href += "spells/" + data["spell_ids"][corruption_name][corruption_rank];
+            a.href += "spells/" + data["spell_ids"][corruption_name];
           } else if (state.data_type === "corruptions" && state.corruption_representation === "dps") {
             a.href += "spells/" + data["spell_ids"][key]["1"];
           } else {
