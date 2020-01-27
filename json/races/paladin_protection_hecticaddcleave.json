@@ -1,16 +1,16 @@
 {
     "class_id": 2,
     "data": {
-        "Blood Elf": 86072,
-        "Dark Iron Dwarf": 85731,
-        "Draenei": 85701,
-        "Dwarf": 86408,
-        "Human": 86954,
-        "Lightforged Draenei": 88446,
-        "Tauren": 86467,
-        "Zandalari Troll Bwonsamdi": 86121,
-        "Zandalari Troll Kimbul": 86013,
-        "Zandalari Troll Paku": 86156
+        "Blood Elf": 86038,
+        "Dark Iron Dwarf": 85620,
+        "Draenei": 85823,
+        "Dwarf": 86519,
+        "Human": 86937,
+        "Lightforged Draenei": 88413,
+        "Tauren": 86413,
+        "Zandalari Troll Bwonsamdi": 86008,
+        "Zandalari Troll Kimbul": 86030,
+        "Zandalari Troll Paku": 86152
     },
     "data_type": "races",
     "languages": {
@@ -283,7 +283,7 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "7da6665db3",
+        "simc_hash": "e8564eaff4",
         "spec": "protection",
         "target_error": "0.2",
         "tier": "25"
@@ -291,17 +291,17 @@
     "sorted_data_keys": [
         "Lightforged Draenei",
         "Human",
-        "Tauren",
         "Dwarf",
+        "Tauren",
         "Zandalari Troll Paku",
-        "Zandalari Troll Bwonsamdi",
         "Blood Elf",
         "Zandalari Troll Kimbul",
-        "Dark Iron Dwarf",
-        "Draenei"
+        "Zandalari Troll Bwonsamdi",
+        "Draenei",
+        "Dark Iron Dwarf"
     ],
     "spec_id": 66,
-    "subtitle": "UTC 2020-01-26 08:15 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7da6665db3\" target=\"blank\">7da6665</a>",
+    "subtitle": "UTC 2020-01-27 07:40 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/e8564eaff4\" target=\"blank\">e8564ea</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -402,6 +402,6 @@
             }
         }
     },
-    "timestamp": "2020-01-26 08:15",
+    "timestamp": "2020-01-27 07:40",
     "title": "Races | Protection Paladin | Hecticaddcleave"
 }

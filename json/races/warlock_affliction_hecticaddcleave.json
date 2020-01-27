@@ -1,20 +1,20 @@
 {
     "class_id": 9,
     "data": {
-        "Blood Elf": 91913,
-        "Dark Iron Dwarf": 91566,
-        "Dwarf": 92006,
-        "Gnome": 92244,
-        "Goblin": 92192,
-        "Human": 92520,
-        "Mechagnome": 91843,
-        "Nightborne": 92001,
-        "Orc": 91624,
-        "Troll": 93025,
-        "Undead": 91635,
-        "Void Elf": 92156,
-        "Vulpera": 91136,
-        "Worgen": 91992
+        "Blood Elf": 90606,
+        "Dark Iron Dwarf": 89934,
+        "Dwarf": 90433,
+        "Gnome": 90819,
+        "Goblin": 90681,
+        "Human": 91075,
+        "Mechagnome": 90312,
+        "Nightborne": 90615,
+        "Orc": 90252,
+        "Troll": 91688,
+        "Undead": 90472,
+        "Void Elf": 90651,
+        "Vulpera": 89727,
+        "Worgen": 90315
     },
     "data_type": "races",
     "languages": {
@@ -327,7 +327,7 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "7da6665db3",
+        "simc_hash": "e8564eaff4",
         "spec": "affliction",
         "target_error": "0.2",
         "tier": "25"
@@ -338,18 +338,18 @@
         "Gnome",
         "Goblin",
         "Void Elf",
-        "Dwarf",
         "Nightborne",
-        "Worgen",
         "Blood Elf",
-        "Mechagnome",
         "Undead",
+        "Dwarf",
+        "Worgen",
+        "Mechagnome",
         "Orc",
         "Dark Iron Dwarf",
         "Vulpera"
     ],
     "spec_id": 265,
-    "subtitle": "UTC 2020-01-26 08:18 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7da6665db3\" target=\"blank\">7da6665</a>",
+    "subtitle": "UTC 2020-01-27 07:43 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/e8564eaff4\" target=\"blank\">e8564ea</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -450,6 +450,6 @@
             }
         }
     },
-    "timestamp": "2020-01-26 08:18",
+    "timestamp": "2020-01-27 07:43",
     "title": "Races | Affliction Warlock | Hecticaddcleave"
 }
