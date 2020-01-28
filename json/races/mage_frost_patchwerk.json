@@ -1,29 +1,29 @@
 {
     "class_id": 8,
     "data": {
-        "Blood Elf": 65969,
-        "Dark Iron Dwarf": 65560,
-        "Draenei": 65684,
-        "Dwarf": 66399,
-        "Gnome": 66057,
-        "Goblin": 66018,
-        "Human": 66387,
-        "Kul Tiran": 66135,
-        "Lightforged Draenei": 65431,
-        "Maghar Orc": 65889,
-        "Mechagnome": 66099,
-        "Night Elf": 66059,
-        "Nightborne": 66021,
-        "Orc": 65731,
-        "Pandaren": 66105,
-        "Troll": 66212,
-        "Undead": 65821,
-        "Void Elf": 66206,
-        "Vulpera": 65096,
-        "Worgen": 66018,
-        "Zandalari Troll Bwonsamdi": 65827,
-        "Zandalari Troll Kimbul": 65895,
-        "Zandalari Troll Paku": 66075
+        "Blood Elf": 90416,
+        "Dark Iron Dwarf": 89971,
+        "Draenei": 89968,
+        "Dwarf": 90960,
+        "Gnome": 90624,
+        "Goblin": 90592,
+        "Human": 91053,
+        "Kul Tiran": 90556,
+        "Lightforged Draenei": 89782,
+        "Maghar Orc": 90378,
+        "Mechagnome": 90458,
+        "Night Elf": 90429,
+        "Nightborne": 90610,
+        "Orc": 90053,
+        "Pandaren": 90324,
+        "Troll": 90570,
+        "Undead": 90162,
+        "Void Elf": 90792,
+        "Vulpera": 89422,
+        "Worgen": 90442,
+        "Zandalari Troll Bwonsamdi": 90058,
+        "Zandalari Troll Kimbul": 90151,
+        "Zandalari Troll Paku": 90548
     },
     "data_type": "races",
     "languages": {
@@ -259,13 +259,13 @@
         }
     },
     "profile": {
-        "azerite_essences": "14:3/4:3/5:3/27:3",
+        "azerite_essences": "14:3/32:3/5:3/35:3",
         "back": {
             "bonus_id": "6286",
             "id": "169223"
         },
         "character": {
-            "azerite_essences": "14:3/4:3/5:3/27:3",
+            "azerite_essences": "14:3/32:3/5:3/35:3",
             "class": "mage",
             "level": "120",
             "position": "back",
@@ -280,7 +280,7 @@
             "id": "158301"
         },
         "feet": {
-            "bonus_id": "4824/1517",
+            "bonus_id": "4824/1517/6573",
             "id": "174123"
         },
         "finger1": {
@@ -290,11 +290,11 @@
         },
         "finger2": {
             "bonus_id": "4824/1517",
-            "enchant": "accord_of_mastery",
+            "enchant": "accord_of_critical_strike",
             "id": "174532"
         },
         "hands": {
-            "bonus_id": "4824/1517",
+            "bonus_id": "4824/1517/6573",
             "id": "174125"
         },
         "head": {
@@ -313,7 +313,7 @@
                 "id": "158301"
             },
             "feet": {
-                "bonus_id": "4824/1517",
+                "bonus_id": "4824/1517/6573",
                 "id": "174123"
             },
             "finger1": {
@@ -323,11 +323,11 @@
             },
             "finger2": {
                 "bonus_id": "4824/1517",
-                "enchant": "accord_of_mastery",
+                "enchant": "accord_of_critical_strike",
                 "id": "174532"
             },
             "hands": {
-                "bonus_id": "4824/1517",
+                "bonus_id": "4824/1517/6573",
                 "id": "174125"
             },
             "head": {
@@ -336,7 +336,7 @@
                 "id": "174116"
             },
             "legs": {
-                "bonus_id": "4824/1517",
+                "bonus_id": "4824/1517/6573",
                 "id": "174127"
             },
             "main_hand": {
@@ -350,7 +350,7 @@
                 "id": "158075"
             },
             "off_hand": {
-                "bonus_id": "4824/1517",
+                "bonus_id": "4824/1517/6573",
                 "id": "175009"
             },
             "shoulders": {
@@ -367,16 +367,16 @@
                 "id": "174060"
             },
             "waist": {
-                "bonus_id": "4824/1517",
+                "bonus_id": "4824/1517/6573",
                 "id": "174124"
             },
             "wrists": {
-                "bonus_id": "4824/1517",
+                "bonus_id": "4824/1517/6573",
                 "id": "174129"
             }
         },
         "legs": {
-            "bonus_id": "4824/1517",
+            "bonus_id": "4824/1517/6573",
             "id": "174127"
         },
         "level": "120",
@@ -391,7 +391,7 @@
             "id": "158075"
         },
         "off_hand": {
-            "bonus_id": "4824/1517",
+            "bonus_id": "4824/1517/6573",
             "id": "175009"
         },
         "position": "back",
@@ -413,11 +413,11 @@
             "id": "174060"
         },
         "waist": {
-            "bonus_id": "4824/1517",
+            "bonus_id": "4824/1517/6573",
             "id": "174124"
         },
         "wrists": {
-            "bonus_id": "4824/1517",
+            "bonus_id": "4824/1517/6573",
             "id": "174129"
         }
     },
@@ -426,38 +426,38 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "e8564eaff4",
+        "simc_hash": "e1f8506f36",
         "spec": "frost",
         "target_error": "0.1",
         "tier": "25"
     },
     "sorted_data_keys": [
-        "Dwarf",
         "Human",
-        "Troll",
+        "Dwarf",
         "Void Elf",
-        "Kul Tiran",
-        "Pandaren",
-        "Mechagnome",
-        "Zandalari Troll Paku",
-        "Night Elf",
         "Gnome",
         "Nightborne",
-        "Worgen",
         "Goblin",
+        "Troll",
+        "Kul Tiran",
+        "Zandalari Troll Paku",
+        "Mechagnome",
+        "Worgen",
+        "Night Elf",
         "Blood Elf",
-        "Zandalari Troll Kimbul",
         "Maghar Orc",
-        "Zandalari Troll Bwonsamdi",
+        "Pandaren",
         "Undead",
+        "Zandalari Troll Kimbul",
+        "Zandalari Troll Bwonsamdi",
         "Orc",
-        "Draenei",
         "Dark Iron Dwarf",
+        "Draenei",
         "Lightforged Draenei",
         "Vulpera"
     ],
     "spec_id": 64,
-    "subtitle": "UTC 2020-01-27 07:26 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/e8564eaff4\" target=\"blank\">e8564ea</a>",
+    "subtitle": "UTC 2020-01-28 07:27 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/e1f8506f36\" target=\"blank\">e1f8506</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -558,6 +558,6 @@
             }
         }
     },
-    "timestamp": "2020-01-27 07:26",
+    "timestamp": "2020-01-28 07:27",
     "title": "Races | Frost Mage | Patchwerk"
 }

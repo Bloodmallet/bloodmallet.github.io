@@ -1,20 +1,20 @@
 {
     "class_id": 9,
     "data": {
-        "Blood Elf": 90759,
-        "Dark Iron Dwarf": 90327,
-        "Dwarf": 90893,
-        "Gnome": 90957,
-        "Goblin": 91029,
-        "Human": 91522,
-        "Mechagnome": 90739,
-        "Nightborne": 90639,
-        "Orc": 90857,
-        "Troll": 91611,
-        "Undead": 90454,
-        "Void Elf": 90462,
-        "Vulpera": 90002,
-        "Worgen": 90861
+        "Blood Elf": 90746,
+        "Dark Iron Dwarf": 90300,
+        "Dwarf": 90803,
+        "Gnome": 91014,
+        "Goblin": 91050,
+        "Human": 91418,
+        "Mechagnome": 90797,
+        "Nightborne": 90567,
+        "Orc": 90749,
+        "Troll": 91517,
+        "Undead": 90492,
+        "Void Elf": 90433,
+        "Vulpera": 90069,
+        "Worgen": 90724
     },
     "data_type": "races",
     "languages": {
@@ -327,7 +327,7 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "e8564eaff4",
+        "simc_hash": "e1f8506f36",
         "spec": "demonology",
         "target_error": "0.1",
         "tier": "25"
@@ -338,18 +338,18 @@
         "Goblin",
         "Gnome",
         "Dwarf",
-        "Worgen",
+        "Mechagnome",
         "Orc",
         "Blood Elf",
-        "Mechagnome",
+        "Worgen",
         "Nightborne",
-        "Void Elf",
         "Undead",
+        "Void Elf",
         "Dark Iron Dwarf",
         "Vulpera"
     ],
     "spec_id": 266,
-    "subtitle": "UTC 2020-01-27 07:31 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/e8564eaff4\" target=\"blank\">e8564ea</a>",
+    "subtitle": "UTC 2020-01-28 07:33 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/e1f8506f36\" target=\"blank\">e1f8506</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -450,6 +450,6 @@
             }
         }
     },
-    "timestamp": "2020-01-27 07:31",
+    "timestamp": "2020-01-28 07:33",
     "title": "Races | Demonology Warlock | Patchwerk"
 }
