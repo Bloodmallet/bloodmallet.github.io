@@ -1,20 +1,20 @@
 {
     "class_id": 9,
     "data": {
-        "Blood Elf": 88802,
-        "Dark Iron Dwarf": 88376,
+        "Blood Elf": 88695,
+        "Dark Iron Dwarf": 88374,
         "Dwarf": 89240,
-        "Gnome": 88952,
-        "Goblin": 89001,
-        "Human": 89255,
-        "Mechagnome": 88853,
-        "Nightborne": 88801,
-        "Orc": 88584,
-        "Troll": 89680,
-        "Undead": 88451,
-        "Void Elf": 88577,
-        "Vulpera": 88003,
-        "Worgen": 88728
+        "Gnome": 89032,
+        "Goblin": 89024,
+        "Human": 89343,
+        "Mechagnome": 88768,
+        "Nightborne": 88808,
+        "Orc": 88514,
+        "Troll": 89675,
+        "Undead": 88472,
+        "Void Elf": 88606,
+        "Vulpera": 88028,
+        "Worgen": 88656
     },
     "data_type": "races",
     "languages": {
@@ -327,7 +327,7 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "e1f8506f36",
+        "simc_hash": "7d4c887d06",
         "spec": "destruction",
         "target_error": "0.1",
         "tier": "25"
@@ -336,20 +336,20 @@
         "Troll",
         "Human",
         "Dwarf",
-        "Goblin",
         "Gnome",
+        "Goblin",
+        "Nightborne",
         "Mechagnome",
         "Blood Elf",
-        "Nightborne",
         "Worgen",
-        "Orc",
         "Void Elf",
+        "Orc",
         "Undead",
         "Dark Iron Dwarf",
         "Vulpera"
     ],
     "spec_id": 267,
-    "subtitle": "UTC 2020-01-28 07:34 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/e1f8506f36\" target=\"blank\">e1f8506</a>",
+    "subtitle": "UTC 2020-01-29 07:33 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7d4c887d06\" target=\"blank\">7d4c887</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -450,6 +450,6 @@
             }
         }
     },
-    "timestamp": "2020-01-28 07:34",
+    "timestamp": "2020-01-29 07:33",
     "title": "Races | Destruction Warlock | Patchwerk"
 }

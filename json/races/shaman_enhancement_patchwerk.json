@@ -1,21 +1,21 @@
 {
     "class_id": 7,
     "data": {
-        "Dark Iron Dwarf": 91370,
-        "Draenei": 91443,
-        "Dwarf": 92329,
-        "Goblin": 92151,
-        "Highmountain Tauren": 92063,
-        "Kul Tiran": 92026,
-        "Maghar Orc": 91789,
-        "Orc": 91379,
-        "Pandaren": 91999,
-        "Tauren": 92354,
-        "Troll": 92236,
-        "Vulpera": 91499,
-        "Zandalari Troll Bwonsamdi": 91621,
-        "Zandalari Troll Kimbul": 91796,
-        "Zandalari Troll Paku": 91838
+        "Dark Iron Dwarf": 98564,
+        "Draenei": 98684,
+        "Dwarf": 99676,
+        "Goblin": 99354,
+        "Highmountain Tauren": 99367,
+        "Kul Tiran": 99336,
+        "Maghar Orc": 99158,
+        "Orc": 98715,
+        "Pandaren": 99323,
+        "Tauren": 99604,
+        "Troll": 99327,
+        "Vulpera": 98824,
+        "Zandalari Troll Bwonsamdi": 98950,
+        "Zandalari Troll Kimbul": 99146,
+        "Zandalari Troll Paku": 99378
     },
     "data_type": "races",
     "languages": {
@@ -171,20 +171,20 @@
         }
     },
     "profile": {
-        "azerite_essences": "4:3/35:3/5:3/23:3",
+        "azerite_essences": "4:3/35:3/27:3/23:3",
         "back": {
             "bonus_id": "6286",
             "id": "169223"
         },
         "character": {
-            "azerite_essences": "4:3/35:3/5:3/23:3",
+            "azerite_essences": "4:3/35:3/27:3/23:3",
             "class": "shaman",
             "level": "120",
             "position": "back",
             "race": "troll",
             "role": "attack",
             "spec": "enhancement",
-            "talents": "3202033"
+            "talents": "3202023"
         },
         "chest": {
             "azerite_powers": "420/416/21/14/13",
@@ -192,7 +192,7 @@
             "id": "174147"
         },
         "feet": {
-            "bonus_id": "4824/1517",
+            "bonus_id": "4824/1517/6573",
             "id": "174160"
         },
         "finger1": {
@@ -206,7 +206,7 @@
             "id": "169157"
         },
         "hands": {
-            "bonus_id": "4824/1517",
+            "bonus_id": "4824/1517/6465/6476",
             "id": "174153"
         },
         "head": {
@@ -225,7 +225,7 @@
                 "id": "174147"
             },
             "feet": {
-                "bonus_id": "4824/1517",
+                "bonus_id": "4824/1517/6573",
                 "id": "174160"
             },
             "finger1": {
@@ -239,7 +239,7 @@
                 "id": "169157"
             },
             "hands": {
-                "bonus_id": "4824/1517",
+                "bonus_id": "4824/1517/6465/6476",
                 "id": "174153"
             },
             "head": {
@@ -248,11 +248,11 @@
                 "id": "174151"
             },
             "legs": {
-                "bonus_id": "4824/1517",
+                "bonus_id": "4824/1517/6573",
                 "id": "174159"
             },
             "main_hand": {
-                "bonus_id": "4824/1517/6554",
+                "bonus_id": "4824/1517/6573",
                 "enchant": "force_multiplier",
                 "id": "172186"
             },
@@ -262,7 +262,7 @@
                 "id": "158075"
             },
             "off_hand": {
-                "bonus_id": "4824/1517/6552",
+                "bonus_id": "4824/1517/6573",
                 "enchant": "quick_navigation",
                 "id": "172186"
             },
@@ -276,11 +276,11 @@
                 "id": "169311"
             },
             "trinket2": {
-                "bonus_id": "3536/1637/4786",
-                "id": "159623"
+                "bonus_id": "4824/1517",
+                "id": "174500"
             },
             "waist": {
-                "bonus_id": "4824/1517",
+                "bonus_id": "4824/1517/6573",
                 "id": "174158"
             },
             "wrists": {
@@ -289,12 +289,12 @@
             }
         },
         "legs": {
-            "bonus_id": "4824/1517",
+            "bonus_id": "4824/1517/6573",
             "id": "174159"
         },
         "level": "120",
         "main_hand": {
-            "bonus_id": "4824/1517/6554",
+            "bonus_id": "4824/1517/6573",
             "enchant": "force_multiplier",
             "id": "172186"
         },
@@ -304,7 +304,7 @@
             "id": "158075"
         },
         "off_hand": {
-            "bonus_id": "4824/1517/6552",
+            "bonus_id": "4824/1517/6573",
             "enchant": "quick_navigation",
             "id": "172186"
         },
@@ -317,17 +317,17 @@
             "id": "174149"
         },
         "spec": "enhancement",
-        "talents": "3202033",
+        "talents": "3202023",
         "trinket1": {
             "bonus_id": "4800/1517",
             "id": "169311"
         },
         "trinket2": {
-            "bonus_id": "3536/1637/4786",
-            "id": "159623"
+            "bonus_id": "4824/1517",
+            "id": "174500"
         },
         "waist": {
-            "bonus_id": "4824/1517",
+            "bonus_id": "4824/1517/6573",
             "id": "174158"
         },
         "wrists": {
@@ -340,30 +340,30 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "e1f8506f36",
+        "simc_hash": "7d4c887d06",
         "spec": "enhancement",
         "target_error": "0.1",
         "tier": "25"
     },
     "sorted_data_keys": [
-        "Tauren",
         "Dwarf",
-        "Troll",
-        "Goblin",
-        "Highmountain Tauren",
-        "Kul Tiran",
-        "Pandaren",
+        "Tauren",
         "Zandalari Troll Paku",
-        "Zandalari Troll Kimbul",
+        "Highmountain Tauren",
+        "Goblin",
+        "Kul Tiran",
+        "Troll",
+        "Pandaren",
         "Maghar Orc",
+        "Zandalari Troll Kimbul",
         "Zandalari Troll Bwonsamdi",
         "Vulpera",
-        "Draenei",
         "Orc",
+        "Draenei",
         "Dark Iron Dwarf"
     ],
     "spec_id": 263,
-    "subtitle": "UTC 2020-01-28 07:31 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/e1f8506f36\" target=\"blank\">e1f8506</a>",
+    "subtitle": "UTC 2020-01-29 07:30 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7d4c887d06\" target=\"blank\">7d4c887</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -464,6 +464,6 @@
             }
         }
     },
-    "timestamp": "2020-01-28 07:31",
+    "timestamp": "2020-01-29 07:30",
     "title": "Races | Enhancement Shaman | Patchwerk"
 }

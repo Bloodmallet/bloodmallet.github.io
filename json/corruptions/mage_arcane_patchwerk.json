@@ -10,6 +10,7 @@
         "Expedient_1": 10,
         "Expedient_2": 15,
         "Expedient_3": 20,
+        "Flash of Insight_1": 20,
         "Glimpse of Clarity_1": 10,
         "Glimpse of Clarity_2": 15,
         "Gushing Wound_1": 15,
@@ -21,12 +22,15 @@
         "Infinite Stars_1": 20,
         "Infinite Stars_2": 50,
         "Infinite Stars_3": 75,
+        "Lash of the Void_1": 25,
         "Masterful_1": 10,
         "Masterful_2": 15,
         "Masterful_3": 20,
+        "Obsidian Skin_1": 50,
         "Racing Pulse_1": 15,
         "Racing Pulse_2": 20,
         "Racing Pulse_3": 35,
+        "Searing Flames_1": 30,
         "Severe_1": 10,
         "Severe_2": 15,
         "Severe_3": 20,
@@ -51,163 +55,178 @@
     },
     "data": {
         "Deadly Momentum_1": {
-            "430": 79125
+            "430": 79098
         },
         "Deadly Momentum_2": {
-            "430": 79279
+            "430": 79344
         },
         "Deadly Momentum_3": {
-            "430": 79840
+            "430": 79826
         },
         "Echoing Void_1": {
-            "430": 81468
+            "430": 81379
         },
         "Echoing Void_2": {
-            "430": 82680
+            "430": 82754
         },
         "Echoing Void_3": {
-            "430": 85475
+            "430": 85506
         },
         "Expedient_1": {
-            "430": 79445
+            "430": 79464
         },
         "Expedient_2": {
-            "430": 79788
+            "430": 79823
         },
         "Expedient_3": {
-            "430": 80136
+            "430": 80146
+        },
+        "Flash of Insight_1": {
+            "430": 81315
         },
         "Glimpse of Clarity_1": {
-            "430": 78681
+            "430": 78726
         },
         "Glimpse of Clarity_2": {
-            "430": 78671
+            "430": 78670
         },
         "Gushing Wound_1": {
-            "430": 80279,
-            "445": 81443,
-            "460": 82554,
-            "475": 83838
+            "430": 80288,
+            "445": 81424,
+            "460": 82572,
+            "475": 83925
         },
         "Honed Mind_1": {
-            "430": 79873
+            "430": 79897
         },
         "Honed Mind_2": {
-            "430": 80272
+            "430": 80300
         },
         "Honed Mind_3": {
-            "430": 81537
+            "430": 81454
         },
         "Ineffable Truth_1": {
-            "430": 79196
-        },
-        "Ineffable Truth_2": {
-            "430": 79139
-        },
-        "Infinite Stars_1": {
-            "430": 80205,
-            "445": 81133,
-            "460": 82157,
-            "475": 83330
-        },
-        "Infinite Stars_2": {
-            "430": 82676,
-            "445": 84021,
-            "460": 85366,
-            "475": 87001
-        },
-        "Infinite Stars_3": {
-            "430": 93107,
-            "445": 95271,
-            "460": 97557,
-            "475": 100381
-        },
-        "Masterful_1": {
-            "430": 78982
-        },
-        "Masterful_2": {
-            "430": 79117
-        },
-        "Masterful_3": {
-            "430": 79233
-        },
-        "Racing Pulse_1": {
-            "430": 79871
-        },
-        "Racing Pulse_2": {
-            "430": 80341
-        },
-        "Racing Pulse_3": {
-            "430": 81450
-        },
-        "Severe_1": {
-            "430": 79584
-        },
-        "Severe_2": {
-            "430": 80045
-        },
-        "Severe_3": {
-            "430": 80537
-        },
-        "Strikethrough_1": {
-            "430": 79463
-        },
-        "Strikethrough_2": {
-            "430": 79883
-        },
-        "Strikethrough_3": {
-            "430": 80224
-        },
-        "Surging Vitality_1": {
-            "430": 79990
-        },
-        "Surging Vitality_2": {
-            "430": 80403
-        },
-        "Surging Vitality_3": {
-            "430": 81559
-        },
-        "Twilight Devastation_1": {
-            "430": 79869
-        },
-        "Twilight Devastation_2": {
-            "430": 81057
-        },
-        "Twilight Devastation_3": {
-            "430": 91283
-        },
-        "Twisted Appendage_1": {
             "430": 79146
         },
+        "Ineffable Truth_2": {
+            "430": 79202
+        },
+        "Infinite Stars_1": {
+            "430": 80197,
+            "445": 81193,
+            "460": 82151,
+            "475": 83250
+        },
+        "Infinite Stars_2": {
+            "430": 82691,
+            "445": 83914,
+            "460": 85341,
+            "475": 86936
+        },
+        "Infinite Stars_3": {
+            "430": 93019,
+            "445": 95322,
+            "460": 97584,
+            "475": 100295
+        },
+        "Lash of the Void_1": {
+            "430": 78621,
+            "445": 79258,
+            "460": 79975,
+            "475": 80883
+        },
+        "Masterful_1": {
+            "430": 79004
+        },
+        "Masterful_2": {
+            "430": 79150
+        },
+        "Masterful_3": {
+            "430": 79330
+        },
+        "Obsidian Skin_1": {
+            "430": 79506
+        },
+        "Racing Pulse_1": {
+            "430": 79951
+        },
+        "Racing Pulse_2": {
+            "430": 80334
+        },
+        "Racing Pulse_3": {
+            "430": 81442
+        },
+        "Searing Flames_1": {
+            "430": 79382
+        },
+        "Severe_1": {
+            "430": 79553
+        },
+        "Severe_2": {
+            "430": 80061
+        },
+        "Severe_3": {
+            "430": 80547
+        },
+        "Strikethrough_1": {
+            "430": 79411
+        },
+        "Strikethrough_2": {
+            "430": 79811
+        },
+        "Strikethrough_3": {
+            "430": 80311
+        },
+        "Surging Vitality_1": {
+            "430": 79904
+        },
+        "Surging Vitality_2": {
+            "430": 80381
+        },
+        "Surging Vitality_3": {
+            "430": 81648
+        },
+        "Twilight Devastation_1": {
+            "430": 79876
+        },
+        "Twilight Devastation_2": {
+            "430": 81131
+        },
+        "Twilight Devastation_3": {
+            "430": 91338
+        },
+        "Twisted Appendage_1": {
+            "430": 79057
+        },
         "Twisted Appendage_2": {
-            "430": 80264
+            "430": 80246
         },
         "Twisted Appendage_3": {
-            "430": 81614
+            "430": 81690
         },
         "Versatile_1": {
-            "430": 79075
+            "430": 79074
         },
         "Versatile_2": {
-            "430": 79360
+            "430": 79336
         },
         "Versatile_3": {
-            "430": 79594
+            "430": 79617
         },
         "Void Ritual_1": {
-            "430": 79207
+            "430": 79147
         },
         "Void Ritual_2": {
-            "430": 79867
+            "430": 79843
         },
         "Void Ritual_3": {
-            "430": 81106
+            "430": 80945
         },
         "baseline": {
-            "430": 78622,
-            "445": 79258,
-            "460": 80040,
-            "475": 80844
+            "430": 78601,
+            "445": 79362,
+            "460": 79975,
+            "475": 80822
         }
     },
     "data_type": "corruptions",
@@ -380,7 +399,7 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "4f6b1d1d45",
+        "simc_hash": "d4164ed0a6",
         "spec": "arcane",
         "target_error": "0.1",
         "tier": "25"
@@ -401,93 +420,101 @@
         "Twisted Appendage_3",
         "Surging Vitality_3",
         "Honed Mind_3",
-        "Echoing Void_1",
         "Racing Pulse_3",
+        "Echoing Void_1",
+        "Flash of Insight_1",
+        "Twilight Devastation_2",
         "Infinite Stars_1",
         "Void Ritual_3",
-        "Twilight Devastation_2",
         "Severe_3",
         "Surging Vitality_2",
         "Racing Pulse_2",
+        "Strikethrough_3",
         "Honed Mind_2",
         "Twisted Appendage_2",
-        "Strikethrough_3",
         "Expedient_3",
         "Severe_2",
-        "Surging Vitality_1",
-        "Strikethrough_2",
-        "Honed Mind_1",
         "Racing Pulse_1",
+        "Surging Vitality_1",
+        "Honed Mind_1",
         "Twilight Devastation_1",
         "Void Ritual_2",
         "Deadly Momentum_3",
         "Expedient_2",
+        "Strikethrough_2",
         "Versatile_3",
         "Severe_1",
-        "Strikethrough_1",
+        "Obsidian Skin_1",
         "Expedient_1",
-        "Versatile_2",
+        "Strikethrough_1",
+        "Searing Flames_1",
         "Deadly Momentum_2",
+        "Versatile_2",
         "Masterful_3",
+        "Ineffable Truth_2",
+        "Masterful_2",
         "Void Ritual_1",
         "Ineffable Truth_1",
-        "Twisted Appendage_1",
-        "Ineffable Truth_2",
         "Deadly Momentum_1",
-        "Masterful_2",
         "Versatile_1",
+        "Twisted Appendage_1",
         "Masterful_1",
         "Glimpse of Clarity_1",
-        "Glimpse of Clarity_2"
+        "Glimpse of Clarity_2",
+        "Lash of the Void_1"
     ],
     "sorted_data_keys_2": [
         "Infinite Stars_3",
         "Gushing Wound_1",
         "Twilight Devastation_3",
-        "Infinite Stars_1",
+        "Flash of Insight_1",
         "Infinite Stars_2",
+        "Infinite Stars_1",
         "Echoing Void_2",
         "Echoing Void_3",
         "Echoing Void_1",
-        "Severe_1",
-        "Severe_3",
         "Severe_2",
-        "Surging Vitality_1",
+        "Severe_3",
+        "Severe_1",
+        "Racing Pulse_1",
         "Surging Vitality_2",
+        "Surging Vitality_3",
+        "Surging Vitality_1",
         "Racing Pulse_2",
+        "Honed Mind_1",
+        "Expedient_1",
+        "Strikethrough_3",
+        "Honed Mind_2",
+        "Honed Mind_3",
+        "Expedient_2",
+        "Racing Pulse_3",
         "Strikethrough_1",
         "Strikethrough_2",
-        "Surging Vitality_3",
-        "Honed Mind_1",
-        "Honed Mind_3",
-        "Racing Pulse_1",
-        "Honed Mind_2",
-        "Expedient_1",
-        "Racing Pulse_3",
-        "Strikethrough_3",
-        "Expedient_2",
         "Expedient_3",
-        "Twisted Appendage_1",
         "Twilight Devastation_1",
-        "Versatile_2",
-        "Twilight Devastation_2",
         "Versatile_3",
+        "Twilight Devastation_2",
+        "Versatile_2",
+        "Versatile_1",
         "Twisted Appendage_2",
         "Twisted Appendage_3",
-        "Versatile_1",
+        "Twisted Appendage_1",
+        "Masterful_1",
+        "Deadly Momentum_2",
+        "Masterful_2",
+        "Masterful_3",
         "Void Ritual_1",
         "Ineffable Truth_1",
         "Void Ritual_3",
-        "Masterful_1",
         "Void Ritual_2",
         "Deadly Momentum_3",
         "Deadly Momentum_1",
-        "Masterful_2",
-        "Deadly Momentum_2",
-        "Masterful_3",
+        "Searing Flames_1",
         "Ineffable Truth_2",
+        "Obsidian Skin_1",
         "Glimpse of Clarity_1",
-        "Glimpse of Clarity_2"
+        "Glimpse of Clarity_2",
+        "Lash of the Void_1"
     ],
     "spec_id": 62,
     "spell_ids": {
@@ -500,6 +527,7 @@
         "Expedient_1": 315544,
         "Expedient_2": 315545,
         "Expedient_3": 315546,
+        "Flash of Insight_1": 318299,
         "Glimpse of Clarity_1": 315574,
         "Glimpse of Clarity_2": 318239,
         "Gushing Wound_1": 318272,
@@ -511,12 +539,15 @@
         "Infinite Stars_1": 318274,
         "Infinite Stars_2": 318487,
         "Infinite Stars_3": 318488,
+        "Lash of the Void_1": 317290,
         "Masterful_1": 315529,
         "Masterful_2": 315530,
         "Masterful_3": 315531,
+        "Obsidian Skin_1": 316651,
         "Racing Pulse_1": 318266,
         "Racing Pulse_2": 318492,
         "Racing Pulse_3": 318496,
+        "Searing Flames_1": 318293,
         "Severe_1": 315554,
         "Severe_2": 315557,
         "Severe_3": 315558,
@@ -539,7 +570,7 @@
         "Void Ritual_2": 318479,
         "Void Ritual_3": 318480
     },
-    "subtitle": "UTC 2020-01-28 23:02 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/4f6b1d1d45\" target=\"blank\">4f6b1d1</a>",
+    "subtitle": "UTC 2020-01-29 22:09 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/d4164ed0a6\" target=\"blank\">d4164ed</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -640,6 +671,6 @@
             }
         }
     },
-    "timestamp": "2020-01-28 23:02",
+    "timestamp": "2020-01-29 22:09",
     "title": "Corruptions | Arcane Mage | Patchwerk"
 }
