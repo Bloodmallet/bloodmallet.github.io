@@ -1,31 +1,31 @@
 {
     "class_id": 6,
     "data": {
-        "Blood Elf": 87709,
-        "Dark Iron Dwarf": 86610,
-        "Draenei": 86614,
-        "Dwarf": 87601,
-        "Gnome": 87534,
-        "Goblin": 87490,
-        "Highmountain Tauren": 87173,
-        "Human": 87875,
-        "Kul Tiran": 87097,
-        "Lightforged Draenei": 87077,
-        "Maghar Orc": 87070,
-        "Mechagnome": 87128,
-        "Night Elf": 87245,
-        "Nightborne": 87134,
-        "Orc": 86648,
-        "Pandaren": 87133,
-        "Tauren": 87500,
-        "Troll": 87132,
-        "Undead": 87253,
-        "Void Elf": 87356,
-        "Vulpera": 86909,
-        "Worgen": 87230,
-        "Zandalari Troll Bwonsamdi": 87016,
-        "Zandalari Troll Kimbul": 87066,
-        "Zandalari Troll Paku": 87426
+        "Blood Elf": 83902,
+        "Dark Iron Dwarf": 82640,
+        "Draenei": 82723,
+        "Dwarf": 83472,
+        "Gnome": 83293,
+        "Goblin": 83211,
+        "Highmountain Tauren": 83206,
+        "Human": 83605,
+        "Kul Tiran": 83256,
+        "Lightforged Draenei": 83286,
+        "Maghar Orc": 83427,
+        "Mechagnome": 83180,
+        "Night Elf": 82977,
+        "Nightborne": 83247,
+        "Orc": 82640,
+        "Pandaren": 83210,
+        "Tauren": 83456,
+        "Troll": 83276,
+        "Undead": 83234,
+        "Void Elf": 83145,
+        "Vulpera": 83241,
+        "Worgen": 82995,
+        "Zandalari Troll Bwonsamdi": 82927,
+        "Zandalari Troll Kimbul": 82952,
+        "Zandalari Troll Paku": 83039
     },
     "data_type": "races",
     "languages": {
@@ -281,20 +281,20 @@
         }
     },
     "profile": {
-        "azerite_essences": "4:4:1/27:4:0/5:4:0/35:4:0",
+        "azerite_essences": "4:4:1/27:4:0/32:4:0/35:4:0",
         "back": {
             "bonus_id": "6286",
             "id": "169223"
         },
         "character": {
-            "azerite_essences": "4:4:1/27:4:0/5:4:0/35:4:0",
+            "azerite_essences": "4:4:1/27:4:0/32:4:0/35:4:0",
             "class": "death_knight",
             "level": "120",
             "position": "back",
-            "race": "human",
+            "race": "blood_elf",
             "role": "attack",
             "spec": "frost",
-            "talents": "3202011"
+            "talents": "3102013"
         },
         "chest": {
             "azerite_powers": "108/582/459/13",
@@ -303,21 +303,21 @@
         },
         "feet": {
             "bonus_id": "4824/1517",
-            "id": "174176"
+            "id": "174173"
         },
         "finger1": {
             "bonus_id": "4824/1522",
-            "enchant": "accord_of_critical_strike",
+            "enchant": "accord_of_mastery",
             "id": "169159"
         },
         "finger2": {
             "bonus_id": "4824/1522",
-            "enchant": "accord_of_critical_strike",
+            "enchant": "accord_of_mastery",
             "id": "169157"
         },
         "hands": {
             "bonus_id": "4824/1517/6552",
-            "id": "174178"
+            "id": "174169"
         },
         "head": {
             "azerite_powers": "108/582/459/13",
@@ -336,21 +336,21 @@
             },
             "feet": {
                 "bonus_id": "4824/1517",
-                "id": "174176"
+                "id": "174173"
             },
             "finger1": {
                 "bonus_id": "4824/1522",
-                "enchant": "accord_of_critical_strike",
+                "enchant": "accord_of_mastery",
                 "id": "169159"
             },
             "finger2": {
                 "bonus_id": "4824/1522",
-                "enchant": "accord_of_critical_strike",
+                "enchant": "accord_of_mastery",
                 "id": "169157"
             },
             "hands": {
                 "bonus_id": "4824/1517/6552",
-                "id": "174178"
+                "id": "174169"
             },
             "head": {
                 "azerite_powers": "108/582/459/13",
@@ -382,16 +382,16 @@
                 "id": "174165"
             },
             "trinket1": {
-                "bonus_id": "4824/1517",
-                "id": "174528"
+                "bonus_id": "4800/1517",
+                "id": "169311"
             },
             "trinket2": {
-                "bonus_id": "4824/1517",
-                "id": "174500"
+                "bonus_id": "4800/1517",
+                "id": "169314"
             },
             "waist": {
                 "bonus_id": "4824/1517",
-                "id": "174171"
+                "id": "174174"
             },
             "wrists": {
                 "bonus_id": "4824/1517/6554",
@@ -419,7 +419,7 @@
             "id": "174109"
         },
         "position": "back",
-        "race": "human",
+        "race": "blood_elf",
         "role": "attack",
         "shoulders": {
             "azerite_powers": "108/582/459/13",
@@ -427,18 +427,18 @@
             "id": "174165"
         },
         "spec": "frost",
-        "talents": "3202011",
+        "talents": "3102013",
         "trinket1": {
-            "bonus_id": "4824/1517",
-            "id": "174528"
+            "bonus_id": "4800/1517",
+            "id": "169311"
         },
         "trinket2": {
-            "bonus_id": "4824/1517",
-            "id": "174500"
+            "bonus_id": "4800/1517",
+            "id": "169314"
         },
         "waist": {
             "bonus_id": "4824/1517",
-            "id": "174171"
+            "id": "174174"
         },
         "wrists": {
             "bonus_id": "4824/1517/6554",
@@ -450,40 +450,40 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "dea5454c87",
+        "simc_hash": "1d11585b2a",
         "spec": "frost",
         "target_error": "0.1",
         "tier": "25"
     },
     "sorted_data_keys": [
-        "Human",
         "Blood Elf",
+        "Human",
         "Dwarf",
-        "Gnome",
         "Tauren",
-        "Goblin",
-        "Zandalari Troll Paku",
-        "Void Elf",
-        "Undead",
-        "Night Elf",
-        "Worgen",
-        "Highmountain Tauren",
-        "Nightborne",
-        "Pandaren",
-        "Troll",
-        "Mechagnome",
-        "Kul Tiran",
-        "Lightforged Draenei",
         "Maghar Orc",
+        "Gnome",
+        "Lightforged Draenei",
+        "Troll",
+        "Kul Tiran",
+        "Nightborne",
+        "Vulpera",
+        "Undead",
+        "Goblin",
+        "Pandaren",
+        "Highmountain Tauren",
+        "Mechagnome",
+        "Void Elf",
+        "Zandalari Troll Paku",
+        "Worgen",
+        "Night Elf",
         "Zandalari Troll Kimbul",
         "Zandalari Troll Bwonsamdi",
-        "Vulpera",
-        "Orc",
         "Draenei",
-        "Dark Iron Dwarf"
+        "Dark Iron Dwarf",
+        "Orc"
     ],
     "spec_id": 251,
-    "subtitle": "UTC 2020-01-30 07:20 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/dea5454c87\" target=\"blank\">dea5454</a>",
+    "subtitle": "UTC 2020-01-31 07:20 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/1d11585b2a\" target=\"blank\">1d11585</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -584,6 +584,6 @@
             }
         }
     },
-    "timestamp": "2020-01-30 07:20",
+    "timestamp": "2020-01-31 07:20",
     "title": "Races | Frost Death Knight | Patchwerk"
 }
