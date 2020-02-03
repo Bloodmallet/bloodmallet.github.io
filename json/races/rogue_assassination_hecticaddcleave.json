@@ -1,26 +1,26 @@
 {
     "class_id": 4,
     "data": {
-        "Blood Elf": 110450,
-        "Dark Iron Dwarf": 109976,
-        "Dwarf": 111120,
-        "Gnome": 110507,
-        "Goblin": 110406,
-        "Human": 111353,
-        "Kul Tiran": 110840,
-        "Maghar Orc": 110442,
-        "Mechagnome": 111096,
-        "Night Elf": 110800,
-        "Nightborne": 110552,
-        "Orc": 110297,
-        "Pandaren": 110345,
-        "Troll": 110646,
-        "Undead": 110172,
-        "Void Elf": 110927,
-        "Worgen": 110700,
-        "Zandalari Troll Bwonsamdi": 110119,
-        "Zandalari Troll Kimbul": 110220,
-        "Zandalari Troll Paku": 110589
+        "Blood Elf": 112262,
+        "Dark Iron Dwarf": 111800,
+        "Dwarf": 113028,
+        "Gnome": 112491,
+        "Goblin": 112630,
+        "Human": 113423,
+        "Kul Tiran": 112753,
+        "Maghar Orc": 112462,
+        "Mechagnome": 112966,
+        "Night Elf": 112692,
+        "Nightborne": 112022,
+        "Orc": 112185,
+        "Pandaren": 112121,
+        "Troll": 112531,
+        "Undead": 112178,
+        "Void Elf": 113077,
+        "Worgen": 112667,
+        "Zandalari Troll Bwonsamdi": 112059,
+        "Zandalari Troll Kimbul": 111979,
+        "Zandalari Troll Paku": 112927
     },
     "data_type": "races",
     "languages": {
@@ -226,13 +226,13 @@
         }
     },
     "profile": {
-        "azerite_essences": "4:3:1/27:3:0/5:3:0/35:3:0",
+        "azerite_essences": "4:3:1/27:3:0/32:3:0/35:3:0",
         "back": {
             "bonus_id": "6286",
             "id": "169223"
         },
         "character": {
-            "azerite_essences": "4:3:1/27:3:0/5:3:0/35:3:0",
+            "azerite_essences": "4:3:1/27:3:0/32:3:0/35:3:0",
             "class": "rogue",
             "level": "120",
             "position": "back",
@@ -395,35 +395,35 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "4497835c4d",
+        "simc_hash": "087d0f4a96",
         "spec": "assassination",
         "target_error": "0.2",
         "tier": "25"
     },
     "sorted_data_keys": [
         "Human",
+        "Void Elf",
         "Dwarf",
         "Mechagnome",
-        "Void Elf",
+        "Zandalari Troll Paku",
         "Kul Tiran",
         "Night Elf",
         "Worgen",
-        "Troll",
-        "Zandalari Troll Paku",
-        "Nightborne",
-        "Gnome",
-        "Blood Elf",
-        "Maghar Orc",
         "Goblin",
-        "Pandaren",
+        "Troll",
+        "Gnome",
+        "Maghar Orc",
+        "Blood Elf",
         "Orc",
-        "Zandalari Troll Kimbul",
         "Undead",
+        "Pandaren",
         "Zandalari Troll Bwonsamdi",
+        "Nightborne",
+        "Zandalari Troll Kimbul",
         "Dark Iron Dwarf"
     ],
     "spec_id": 259,
-    "subtitle": "UTC 2020-02-01 07:43 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/4497835c4d\" target=\"blank\">4497835</a>",
+    "subtitle": "UTC 2020-02-02 07:43 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/087d0f4a96\" target=\"blank\">087d0f4</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -524,6 +524,6 @@
             }
         }
     },
-    "timestamp": "2020-02-01 07:43",
+    "timestamp": "2020-02-02 07:43",
     "title": "Races | Assassination Rogue | Hecticaddcleave"
 }

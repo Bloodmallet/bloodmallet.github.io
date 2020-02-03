@@ -1,20 +1,20 @@
 {
     "class_id": 9,
     "data": {
-        "Blood Elf": 90714,
-        "Dark Iron Dwarf": 90269,
-        "Dwarf": 90853,
-        "Gnome": 91003,
-        "Goblin": 91010,
-        "Human": 91473,
-        "Mechagnome": 90699,
-        "Nightborne": 90505,
-        "Orc": 90744,
-        "Troll": 91538,
-        "Undead": 90455,
-        "Void Elf": 90482,
-        "Vulpera": 90047,
-        "Worgen": 90754
+        "Blood Elf": 90822,
+        "Dark Iron Dwarf": 90329,
+        "Dwarf": 90756,
+        "Gnome": 90974,
+        "Goblin": 90960,
+        "Human": 91494,
+        "Mechagnome": 90764,
+        "Nightborne": 90508,
+        "Orc": 90771,
+        "Troll": 91534,
+        "Undead": 90406,
+        "Void Elf": 90357,
+        "Vulpera": 90101,
+        "Worgen": 90717
     },
     "data_type": "races",
     "languages": {
@@ -327,7 +327,7 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "4497835c4d",
+        "simc_hash": "087d0f4a96",
         "spec": "demonology",
         "target_error": "0.1",
         "tier": "25"
@@ -335,21 +335,21 @@
     "sorted_data_keys": [
         "Troll",
         "Human",
-        "Goblin",
         "Gnome",
+        "Goblin",
+        "Blood Elf",
+        "Orc",
+        "Mechagnome",
         "Dwarf",
         "Worgen",
-        "Orc",
-        "Blood Elf",
-        "Mechagnome",
         "Nightborne",
-        "Void Elf",
         "Undead",
+        "Void Elf",
         "Dark Iron Dwarf",
         "Vulpera"
     ],
     "spec_id": 266,
-    "subtitle": "UTC 2020-02-01 07:33 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/4497835c4d\" target=\"blank\">4497835</a>",
+    "subtitle": "UTC 2020-02-02 07:33 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/087d0f4a96\" target=\"blank\">087d0f4</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -450,6 +450,6 @@
             }
         }
     },
-    "timestamp": "2020-02-01 07:33",
+    "timestamp": "2020-02-02 07:33",
     "title": "Races | Demonology Warlock | Patchwerk"
 }

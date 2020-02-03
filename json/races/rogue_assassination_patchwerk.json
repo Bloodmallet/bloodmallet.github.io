@@ -1,26 +1,26 @@
 {
     "class_id": 4,
     "data": {
-        "Blood Elf": 91022,
-        "Dark Iron Dwarf": 90462,
-        "Dwarf": 91403,
-        "Gnome": 91213,
-        "Goblin": 91039,
-        "Human": 91548,
-        "Kul Tiran": 91130,
-        "Maghar Orc": 91163,
-        "Mechagnome": 91000,
-        "Night Elf": 90987,
-        "Nightborne": 90929,
-        "Orc": 90535,
-        "Pandaren": 90728,
-        "Troll": 91146,
-        "Undead": 90843,
-        "Void Elf": 91248,
-        "Worgen": 90876,
-        "Zandalari Troll Bwonsamdi": 90622,
-        "Zandalari Troll Kimbul": 90752,
-        "Zandalari Troll Paku": 91044
+        "Blood Elf": 91569,
+        "Dark Iron Dwarf": 90974,
+        "Dwarf": 91790,
+        "Gnome": 91752,
+        "Goblin": 91660,
+        "Human": 92124,
+        "Kul Tiran": 91545,
+        "Maghar Orc": 91541,
+        "Mechagnome": 91531,
+        "Night Elf": 91425,
+        "Nightborne": 91483,
+        "Orc": 91082,
+        "Pandaren": 91219,
+        "Troll": 91611,
+        "Undead": 91393,
+        "Void Elf": 91701,
+        "Worgen": 91409,
+        "Zandalari Troll Bwonsamdi": 91179,
+        "Zandalari Troll Kimbul": 91196,
+        "Zandalari Troll Paku": 91491
     },
     "data_type": "races",
     "languages": {
@@ -226,13 +226,13 @@
         }
     },
     "profile": {
-        "azerite_essences": "4:3:1/27:3:0/5:3:0/35:3:0",
+        "azerite_essences": "4:3:1/27:3:0/32:3:0/35:3:0",
         "back": {
             "bonus_id": "6286",
             "id": "169223"
         },
         "character": {
-            "azerite_essences": "4:3:1/27:3:0/5:3:0/35:3:0",
+            "azerite_essences": "4:3:1/27:3:0/32:3:0/35:3:0",
             "class": "rogue",
             "level": "120",
             "position": "back",
@@ -395,7 +395,7 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "4497835c4d",
+        "simc_hash": "087d0f4a96",
         "spec": "assassination",
         "target_error": "0.1",
         "tier": "25"
@@ -403,27 +403,27 @@
     "sorted_data_keys": [
         "Human",
         "Dwarf",
-        "Void Elf",
         "Gnome",
-        "Maghar Orc",
-        "Troll",
-        "Kul Tiran",
-        "Zandalari Troll Paku",
+        "Void Elf",
         "Goblin",
+        "Troll",
         "Blood Elf",
+        "Kul Tiran",
+        "Maghar Orc",
         "Mechagnome",
-        "Night Elf",
+        "Zandalari Troll Paku",
         "Nightborne",
+        "Night Elf",
         "Worgen",
         "Undead",
-        "Zandalari Troll Kimbul",
         "Pandaren",
+        "Zandalari Troll Kimbul",
         "Zandalari Troll Bwonsamdi",
         "Orc",
         "Dark Iron Dwarf"
     ],
     "spec_id": 259,
-    "subtitle": "UTC 2020-02-01 07:29 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/4497835c4d\" target=\"blank\">4497835</a>",
+    "subtitle": "UTC 2020-02-02 07:29 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/087d0f4a96\" target=\"blank\">087d0f4</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -524,6 +524,6 @@
             }
         }
     },
-    "timestamp": "2020-02-01 07:29",
+    "timestamp": "2020-02-02 07:29",
     "title": "Races | Assassination Rogue | Patchwerk"
 }
