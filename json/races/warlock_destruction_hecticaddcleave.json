@@ -1,20 +1,20 @@
 {
     "class_id": 9,
     "data": {
-        "Blood Elf": 97743,
-        "Dark Iron Dwarf": 97212,
-        "Dwarf": 98249,
-        "Gnome": 98275,
-        "Goblin": 98215,
-        "Human": 98443,
-        "Mechagnome": 97803,
-        "Nightborne": 97901,
-        "Orc": 97541,
-        "Troll": 99379,
-        "Undead": 97483,
-        "Void Elf": 97615,
-        "Vulpera": 96987,
-        "Worgen": 97629
+        "Blood Elf": 97718,
+        "Dark Iron Dwarf": 97363,
+        "Dwarf": 98292,
+        "Gnome": 97991,
+        "Goblin": 98186,
+        "Human": 98255,
+        "Mechagnome": 97996,
+        "Nightborne": 97873,
+        "Orc": 97542,
+        "Troll": 99330,
+        "Undead": 97388,
+        "Void Elf": 97568,
+        "Vulpera": 96904,
+        "Worgen": 97647
     },
     "data_type": "races",
     "languages": {
@@ -327,19 +327,19 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "087d0f4a96",
+        "simc_hash": "8d9434fd58",
         "spec": "destruction",
         "target_error": "0.2",
         "tier": "25"
     },
     "sorted_data_keys": [
         "Troll",
-        "Human",
-        "Gnome",
         "Dwarf",
+        "Human",
         "Goblin",
-        "Nightborne",
         "Mechagnome",
+        "Gnome",
+        "Nightborne",
         "Blood Elf",
         "Worgen",
         "Void Elf",
@@ -349,7 +349,7 @@
         "Vulpera"
     ],
     "spec_id": 267,
-    "subtitle": "UTC 2020-02-02 07:46 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/087d0f4a96\" target=\"blank\">087d0f4</a>",
+    "subtitle": "UTC 2020-02-03 07:47 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/8d9434fd58\" target=\"blank\">8d9434f</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -450,6 +450,6 @@
             }
         }
     },
-    "timestamp": "2020-02-02 07:46",
+    "timestamp": "2020-02-03 07:47",
     "title": "Races | Destruction Warlock | Hecticaddcleave"
 }
