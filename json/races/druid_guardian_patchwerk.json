@@ -1,15 +1,15 @@
 {
     "class_id": 11,
     "data": {
-        "Highmountain Tauren": 64972,
-        "Kul Tiran": 64945,
-        "Night Elf": 64830,
-        "Tauren": 65268,
-        "Troll": 64928,
-        "Worgen": 64952,
-        "Zandalari Troll Bwonsamdi": 64999,
-        "Zandalari Troll Kimbul": 65091,
-        "Zandalari Troll Paku": 64889
+        "Highmountain Tauren": 71805,
+        "Kul Tiran": 71876,
+        "Night Elf": 71655,
+        "Tauren": 72147,
+        "Troll": 71746,
+        "Worgen": 71756,
+        "Zandalari Troll Bwonsamdi": 71804,
+        "Zandalari Troll Kimbul": 71929,
+        "Zandalari Troll Paku": 71801
     },
     "data_type": "races",
     "languages": {
@@ -186,9 +186,9 @@
                 "id": "174143"
             },
             "main_hand": {
-                "bonus_id": "4824/1517/6567",
+                "bonus_id": "4824/1517/6550",
                 "enchant": "force_multiplier",
-                "id": "172191"
+                "id": "174106"
             },
             "neck": {
                 "azerite_level": "80",
@@ -223,9 +223,9 @@
         },
         "level": "120",
         "main_hand": {
-            "bonus_id": "4824/1517/6567",
+            "bonus_id": "4824/1517/6550",
             "enchant": "force_multiplier",
-            "id": "172191"
+            "id": "174106"
         },
         "neck": {
             "azerite_level": "80",
@@ -264,7 +264,7 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "92e8193c09",
+        "simc_hash": "d3454a4755",
         "spec": "guardian",
         "target_error": "0.1",
         "tier": "25"
@@ -272,16 +272,16 @@
     "sorted_data_keys": [
         "Tauren",
         "Zandalari Troll Kimbul",
-        "Zandalari Troll Bwonsamdi",
-        "Highmountain Tauren",
-        "Worgen",
         "Kul Tiran",
-        "Troll",
+        "Highmountain Tauren",
+        "Zandalari Troll Bwonsamdi",
         "Zandalari Troll Paku",
+        "Worgen",
+        "Troll",
         "Night Elf"
     ],
     "spec_id": 104,
-    "subtitle": "UTC 2020-02-04 07:24 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/92e8193c09\" target=\"blank\">92e8193</a>",
+    "subtitle": "UTC 2020-02-05 07:24 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/d3454a4755\" target=\"blank\">d3454a4</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -382,6 +382,6 @@
             }
         }
     },
-    "timestamp": "2020-02-04 07:24",
+    "timestamp": "2020-02-05 07:24",
     "title": "Races | Guardian Druid | Patchwerk"
 }

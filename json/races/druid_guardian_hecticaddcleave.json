@@ -1,15 +1,15 @@
 {
     "class_id": 11,
     "data": {
-        "Highmountain Tauren": 107926,
-        "Kul Tiran": 108173,
-        "Night Elf": 108144,
-        "Tauren": 108394,
-        "Troll": 108167,
-        "Worgen": 108220,
-        "Zandalari Troll Bwonsamdi": 107813,
-        "Zandalari Troll Kimbul": 107881,
-        "Zandalari Troll Paku": 108049
+        "Highmountain Tauren": 117265,
+        "Kul Tiran": 117225,
+        "Night Elf": 117000,
+        "Tauren": 117411,
+        "Troll": 116987,
+        "Worgen": 117043,
+        "Zandalari Troll Bwonsamdi": 117131,
+        "Zandalari Troll Kimbul": 116707,
+        "Zandalari Troll Paku": 117220
     },
     "data_type": "races",
     "languages": {
@@ -186,9 +186,9 @@
                 "id": "174143"
             },
             "main_hand": {
-                "bonus_id": "4824/1517/6567",
+                "bonus_id": "4824/1517/6550",
                 "enchant": "force_multiplier",
-                "id": "172191"
+                "id": "174106"
             },
             "neck": {
                 "azerite_level": "80",
@@ -223,9 +223,9 @@
         },
         "level": "120",
         "main_hand": {
-            "bonus_id": "4824/1517/6567",
+            "bonus_id": "4824/1517/6550",
             "enchant": "force_multiplier",
-            "id": "172191"
+            "id": "174106"
         },
         "neck": {
             "azerite_level": "80",
@@ -264,24 +264,24 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "92e8193c09",
+        "simc_hash": "d3454a4755",
         "spec": "guardian",
         "target_error": "0.2",
         "tier": "25"
     },
     "sorted_data_keys": [
         "Tauren",
-        "Worgen",
-        "Kul Tiran",
-        "Troll",
-        "Night Elf",
-        "Zandalari Troll Paku",
         "Highmountain Tauren",
-        "Zandalari Troll Kimbul",
-        "Zandalari Troll Bwonsamdi"
+        "Kul Tiran",
+        "Zandalari Troll Paku",
+        "Zandalari Troll Bwonsamdi",
+        "Worgen",
+        "Night Elf",
+        "Troll",
+        "Zandalari Troll Kimbul"
     ],
     "spec_id": 104,
-    "subtitle": "UTC 2020-02-04 07:38 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/92e8193c09\" target=\"blank\">92e8193</a>",
+    "subtitle": "UTC 2020-02-05 07:38 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/d3454a4755\" target=\"blank\">d3454a4</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -382,6 +382,6 @@
             }
         }
     },
-    "timestamp": "2020-02-04 07:38",
+    "timestamp": "2020-02-05 07:38",
     "title": "Races | Guardian Druid | Hecticaddcleave"
 }
