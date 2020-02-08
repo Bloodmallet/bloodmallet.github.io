@@ -1,20 +1,20 @@
 {
     "class_id": 9,
     "data": {
-        "Blood Elf": 93585,
-        "Dark Iron Dwarf": 92951,
-        "Dwarf": 93618,
-        "Gnome": 93925,
-        "Goblin": 93964,
-        "Human": 94193,
-        "Mechagnome": 93489,
-        "Nightborne": 93711,
-        "Orc": 93115,
-        "Troll": 94449,
-        "Undead": 93476,
-        "Void Elf": 93905,
-        "Vulpera": 92773,
-        "Worgen": 93663
+        "Blood Elf": 93581,
+        "Dark Iron Dwarf": 93034,
+        "Dwarf": 93560,
+        "Gnome": 93940,
+        "Goblin": 93848,
+        "Human": 94194,
+        "Mechagnome": 93463,
+        "Nightborne": 93545,
+        "Orc": 93135,
+        "Troll": 94415,
+        "Undead": 93420,
+        "Void Elf": 93826,
+        "Vulpera": 92852,
+        "Worgen": 93576
     },
     "data_type": "races",
     "languages": {
@@ -327,7 +327,7 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "b8425cbacc",
+        "simc_hash": "29dc367050",
         "spec": "affliction",
         "target_error": "0.1",
         "tier": "25"
@@ -335,13 +335,13 @@
     "sorted_data_keys": [
         "Troll",
         "Human",
-        "Goblin",
         "Gnome",
+        "Goblin",
         "Void Elf",
-        "Nightborne",
+        "Blood Elf",
         "Worgen",
         "Dwarf",
-        "Blood Elf",
+        "Nightborne",
         "Mechagnome",
         "Undead",
         "Orc",
@@ -349,7 +349,7 @@
         "Vulpera"
     ],
     "spec_id": 265,
-    "subtitle": "UTC 2020-02-06 07:32 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/b8425cbacc\" target=\"blank\">b8425cb</a>",
+    "subtitle": "UTC 2020-02-07 07:33 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/29dc367050\" target=\"blank\">29dc367</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -450,6 +450,6 @@
             }
         }
     },
-    "timestamp": "2020-02-06 07:32",
+    "timestamp": "2020-02-07 07:33",
     "title": "Races | Affliction Warlock | Patchwerk"
 }
