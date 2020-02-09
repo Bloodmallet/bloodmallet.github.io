@@ -2244,7 +2244,6 @@ function update_chart() {
           string += language.toLowerCase();
         }
 
-        string += ".wowhead.com/item=";
 
         let item_id = loaded_data[chosen_class][chosen_spec][data_name][fight_style]["item_ids"][dps_ordered_data[i]];
         let item_name = dps_ordered_data[i];
@@ -2259,7 +2258,14 @@ function update_chart() {
           }
         }
 
-        string += item_id;
+
+        if (item_id !== undefined) {
+          string += ".wowhead.com/item=";
+          string += item_id;
+        } else {
+          string += ".wowhead.com/spell=";
+          string += loaded_data[chosen_class][chosen_spec][data_name][fight_style]["spell_ids"][dps_ordered_data[i]];
+        }
 
         // add slug name
         string += "/" + slugify(item_name);
@@ -2277,13 +2283,15 @@ function update_chart() {
 
         }
         let ilevel = get_minimum_step_of(loaded_data[chosen_class][chosen_spec][data_name][fight_style]["data"][dps_ordered_data[i]]);
-        if (data_view === "trinkets") {
+        if (data_view === "trinkets" && item_id !== undefined) {
           if (ilevel !== undefined) {
             string += "&ilvl=" + ilevel;
           }
         } else {
-          if (ilevel !== undefined) {
+          if (ilevel !== undefined && item_id !== undefined) {
             string += "&ilvl=" + ilevel.split("1_")[1];
+          } else {
+            string += "&ilvl=120";
           }
         }
 
