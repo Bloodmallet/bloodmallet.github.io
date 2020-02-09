@@ -1,8 +1,8 @@
 {
     "class_id": 12,
     "data": {
-        "Blood Elf": 44734,
-        "Night Elf": 44746
+        "Blood Elf": 64623,
+        "Night Elf": 64667
     },
     "data_type": "races",
     "languages": {
@@ -44,7 +44,7 @@
             "talents": "1213321"
         },
         "chest": {
-            "azerite_powers": "134/160/22/85/13",
+            "azerite_powers": "134/582/31/85/13",
             "bonus_id": "4824/1517/4775",
             "id": "174136"
         },
@@ -54,17 +54,17 @@
         },
         "finger1": {
             "bonus_id": "4824/1517",
-            "enchant": "accord_of_haste",
+            "enchant": "accord_of_versatility",
             "id": "174533"
         },
         "finger2": {
             "bonus_id": "4824/1517",
-            "enchant": "accord_of_haste",
-            "id": "174531"
+            "enchant": "accord_of_versatility",
+            "id": "174530"
         },
         "hands": {
-            "bonus_id": "4824/1517/6549",
-            "id": "174146"
+            "bonus_id": "4824/1637",
+            "id": "159337"
         },
         "head": {
             "azerite_powers": "134/160/30/202/13",
@@ -77,7 +77,7 @@
                 "id": "169223"
             },
             "chest": {
-                "azerite_powers": "134/160/22/85/13",
+                "azerite_powers": "134/582/31/85/13",
                 "bonus_id": "4824/1517/4775",
                 "id": "174136"
             },
@@ -87,17 +87,17 @@
             },
             "finger1": {
                 "bonus_id": "4824/1517",
-                "enchant": "accord_of_haste",
+                "enchant": "accord_of_versatility",
                 "id": "174533"
             },
             "finger2": {
                 "bonus_id": "4824/1517",
-                "enchant": "accord_of_haste",
-                "id": "174531"
+                "enchant": "accord_of_versatility",
+                "id": "174530"
             },
             "hands": {
-                "bonus_id": "4824/1517/6549",
-                "id": "174146"
+                "bonus_id": "4824/1637",
+                "id": "159337"
             },
             "head": {
                 "azerite_powers": "134/160/30/202/13",
@@ -106,12 +106,12 @@
             },
             "legs": {
                 "bonus_id": "4824/1517",
-                "id": "174139"
+                "id": "174143"
             },
             "main_hand": {
-                "bonus_id": "4824/1517",
-                "enchant": "force_multiplier",
-                "id": "174105"
+                "bonus_id": "4824/1637",
+                "enchant": "deadly_navigation",
+                "id": "159653"
             },
             "neck": {
                 "azerite_level": "80",
@@ -119,41 +119,41 @@
                 "id": "158075"
             },
             "off_hand": {
-                "bonus_id": "4824/1517",
+                "bonus_id": "4824/1637",
                 "enchant": "versatile_navigation",
-                "id": "174105"
+                "id": "159653"
             },
             "shoulders": {
-                "azerite_powers": "134/246/21/202/13",
+                "azerite_powers": "134/193/459/202/13",
                 "bonus_id": "1647/4775",
                 "id": "159339"
             },
             "trinket1": {
                 "bonus_id": "4824/1517",
-                "id": "173940"
+                "id": "174500"
             },
             "trinket2": {
-                "bonus_id": "4824/1517",
-                "id": "174044"
+                "bonus_id": "4800/1517",
+                "id": "169311"
             },
             "waist": {
-                "bonus_id": "4824/1517",
+                "bonus_id": "4824/1517/6551",
                 "id": "174142"
             },
             "wrists": {
-                "bonus_id": "4824/1517/6549",
-                "id": "174145"
+                "bonus_id": "4824/1517/6550",
+                "id": "174138"
             }
         },
         "legs": {
             "bonus_id": "4824/1517",
-            "id": "174139"
+            "id": "174143"
         },
         "level": "120",
         "main_hand": {
-            "bonus_id": "4824/1517",
-            "enchant": "force_multiplier",
-            "id": "174105"
+            "bonus_id": "4824/1637",
+            "enchant": "deadly_navigation",
+            "id": "159653"
         },
         "neck": {
             "azerite_level": "80",
@@ -161,15 +161,15 @@
             "id": "158075"
         },
         "off_hand": {
-            "bonus_id": "4824/1517",
+            "bonus_id": "4824/1637",
             "enchant": "versatile_navigation",
-            "id": "174105"
+            "id": "159653"
         },
         "position": "front",
         "race": "blood_elf",
         "role": "tank",
         "shoulders": {
-            "azerite_powers": "134/246/21/202/13",
+            "azerite_powers": "134/193/459/202/13",
             "bonus_id": "1647/4775",
             "id": "159339"
         },
@@ -177,19 +177,19 @@
         "talents": "1213321",
         "trinket1": {
             "bonus_id": "4824/1517",
-            "id": "173940"
+            "id": "174500"
         },
         "trinket2": {
-            "bonus_id": "4824/1517",
-            "id": "174044"
+            "bonus_id": "4800/1517",
+            "id": "169311"
         },
         "waist": {
-            "bonus_id": "4824/1517",
+            "bonus_id": "4824/1517/6551",
             "id": "174142"
         },
         "wrists": {
-            "bonus_id": "4824/1517/6549",
-            "id": "174145"
+            "bonus_id": "4824/1517/6550",
+            "id": "174138"
         }
     },
     "simc_settings": {
@@ -197,7 +197,7 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "29dc367050",
+        "simc_hash": "8da93ac3e4",
         "spec": "vengeance",
         "target_error": "0.1",
         "tier": "25"
@@ -207,7 +207,7 @@
         "Blood Elf"
     ],
     "spec_id": 581,
-    "subtitle": "UTC 2020-02-07 07:23 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/29dc367050\" target=\"blank\">29dc367</a>",
+    "subtitle": "UTC 2020-02-08 07:23 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/8da93ac3e4\" target=\"blank\">8da93ac</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -308,6 +308,6 @@
             }
         }
     },
-    "timestamp": "2020-02-07 07:23",
+    "timestamp": "2020-02-08 07:23",
     "title": "Races | Vengeance Demon Hunter | Patchwerk"
 }
