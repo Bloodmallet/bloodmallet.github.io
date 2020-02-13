@@ -1,20 +1,20 @@
 {
     "class_id": 9,
     "data": {
-        "Blood Elf": 90601,
-        "Dark Iron Dwarf": 90011,
-        "Dwarf": 90644,
-        "Gnome": 90781,
-        "Goblin": 90693,
-        "Human": 90983,
-        "Mechagnome": 90673,
-        "Nightborne": 90773,
-        "Orc": 90164,
-        "Troll": 91773,
-        "Undead": 90443,
-        "Void Elf": 90596,
-        "Vulpera": 89764,
-        "Worgen": 90567
+        "Blood Elf": 90563,
+        "Dark Iron Dwarf": 90146,
+        "Dwarf": 90683,
+        "Gnome": 90857,
+        "Goblin": 90700,
+        "Human": 91090,
+        "Mechagnome": 90512,
+        "Nightborne": 90525,
+        "Orc": 90245,
+        "Troll": 91827,
+        "Undead": 90281,
+        "Void Elf": 90660,
+        "Vulpera": 89748,
+        "Worgen": 90343
     },
     "data_type": "races",
     "languages": {
@@ -327,7 +327,7 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "198f283f78",
+        "simc_hash": "54330788dd",
         "spec": "affliction",
         "target_error": "0.2",
         "tier": "25"
@@ -336,12 +336,12 @@
         "Troll",
         "Human",
         "Gnome",
-        "Nightborne",
         "Goblin",
-        "Mechagnome",
         "Dwarf",
-        "Blood Elf",
         "Void Elf",
+        "Blood Elf",
+        "Nightborne",
+        "Mechagnome",
         "Worgen",
         "Undead",
         "Orc",
@@ -349,7 +349,7 @@
         "Vulpera"
     ],
     "spec_id": 265,
-    "subtitle": "UTC 2020-02-11 07:47 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/198f283f78\" target=\"blank\">198f283</a>",
+    "subtitle": "UTC 2020-02-12 07:46 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/54330788dd\" target=\"blank\">5433078</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -450,6 +450,6 @@
             }
         }
     },
-    "timestamp": "2020-02-11 07:47",
+    "timestamp": "2020-02-12 07:46",
     "title": "Races | Affliction Warlock | Hecticaddcleave"
 }
