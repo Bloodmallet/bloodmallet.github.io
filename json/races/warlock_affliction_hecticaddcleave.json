@@ -1,20 +1,20 @@
 {
     "class_id": 9,
     "data": {
-        "Blood Elf": 90554,
-        "Dark Iron Dwarf": 90173,
-        "Dwarf": 90626,
-        "Gnome": 90801,
-        "Goblin": 90677,
-        "Human": 91026,
-        "Mechagnome": 90505,
-        "Nightborne": 90570,
-        "Orc": 90161,
-        "Troll": 91664,
-        "Undead": 90333,
-        "Void Elf": 90744,
-        "Vulpera": 89794,
-        "Worgen": 90369
+        "Blood Elf": 90585,
+        "Dark Iron Dwarf": 90130,
+        "Dwarf": 90578,
+        "Gnome": 90785,
+        "Goblin": 90773,
+        "Human": 91016,
+        "Mechagnome": 90383,
+        "Nightborne": 90499,
+        "Orc": 90068,
+        "Troll": 91603,
+        "Undead": 90462,
+        "Void Elf": 90777,
+        "Vulpera": 90005,
+        "Worgen": 90604
     },
     "data_type": "races",
     "languages": {
@@ -327,7 +327,7 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "371efb916c",
+        "simc_hash": "f04b415131",
         "spec": "affliction",
         "target_error": "0.2",
         "tier": "25"
@@ -338,18 +338,18 @@
         "Gnome",
         "Void Elf",
         "Goblin",
+        "Worgen",
+        "Blood Elf",
         "Dwarf",
         "Nightborne",
-        "Blood Elf",
-        "Mechagnome",
-        "Worgen",
         "Undead",
+        "Mechagnome",
         "Dark Iron Dwarf",
         "Orc",
         "Vulpera"
     ],
     "spec_id": 265,
-    "subtitle": "UTC 2020-02-13 07:47 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/371efb916c\" target=\"blank\">371efb9</a>",
+    "subtitle": "UTC 2020-02-14 07:47 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/f04b415131\" target=\"blank\">f04b415</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -450,6 +450,6 @@
             }
         }
     },
-    "timestamp": "2020-02-13 07:47",
+    "timestamp": "2020-02-14 07:47",
     "title": "Races | Affliction Warlock | Hecticaddcleave"
 }

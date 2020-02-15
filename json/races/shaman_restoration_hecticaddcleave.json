@@ -1,21 +1,21 @@
 {
     "class_id": 7,
     "data": {
-        "Dark Iron Dwarf": 65887,
-        "Draenei": 65831,
-        "Dwarf": 66753,
-        "Goblin": 66411,
-        "Highmountain Tauren": 66363,
-        "Kul Tiran": 66288,
-        "Maghar Orc": 66068,
-        "Orc": 65951,
-        "Pandaren": 66529,
-        "Tauren": 66626,
-        "Troll": 66533,
-        "Vulpera": 66287,
-        "Zandalari Troll Bwonsamdi": 66233,
-        "Zandalari Troll Kimbul": 66234,
-        "Zandalari Troll Paku": 66137
+        "Dark Iron Dwarf": 65800,
+        "Draenei": 65969,
+        "Dwarf": 66785,
+        "Goblin": 66455,
+        "Highmountain Tauren": 66289,
+        "Kul Tiran": 66370,
+        "Maghar Orc": 66246,
+        "Orc": 65926,
+        "Pandaren": 66342,
+        "Tauren": 66593,
+        "Troll": 66344,
+        "Vulpera": 66382,
+        "Zandalari Troll Bwonsamdi": 66266,
+        "Zandalari Troll Kimbul": 66324,
+        "Zandalari Troll Paku": 66194
     },
     "data_type": "races",
     "languages": {
@@ -338,7 +338,7 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "371efb916c",
+        "simc_hash": "f04b415131",
         "spec": "restoration",
         "target_error": "0.2",
         "tier": "25"
@@ -346,22 +346,22 @@
     "sorted_data_keys": [
         "Dwarf",
         "Tauren",
+        "Goblin",
+        "Vulpera",
+        "Kul Tiran",
         "Troll",
         "Pandaren",
-        "Goblin",
-        "Highmountain Tauren",
-        "Kul Tiran",
-        "Vulpera",
         "Zandalari Troll Kimbul",
+        "Highmountain Tauren",
         "Zandalari Troll Bwonsamdi",
-        "Zandalari Troll Paku",
         "Maghar Orc",
+        "Zandalari Troll Paku",
+        "Draenei",
         "Orc",
-        "Dark Iron Dwarf",
-        "Draenei"
+        "Dark Iron Dwarf"
     ],
     "spec_id": 264,
-    "subtitle": "UTC 2020-02-13 07:47 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/371efb916c\" target=\"blank\">371efb9</a>",
+    "subtitle": "UTC 2020-02-14 07:47 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/f04b415131\" target=\"blank\">f04b415</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -462,6 +462,6 @@
             }
         }
     },
-    "timestamp": "2020-02-13 07:47",
+    "timestamp": "2020-02-14 07:47",
     "title": "Races | Restoration Shaman | Hecticaddcleave"
 }
