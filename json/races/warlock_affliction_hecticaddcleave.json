@@ -1,20 +1,20 @@
 {
     "class_id": 9,
     "data": {
-        "Blood Elf": 90574,
-        "Dark Iron Dwarf": 90044,
-        "Dwarf": 90515,
-        "Gnome": 90650,
-        "Goblin": 90787,
-        "Human": 91189,
-        "Mechagnome": 90484,
-        "Nightborne": 90577,
-        "Orc": 90263,
-        "Troll": 91718,
-        "Undead": 90433,
-        "Void Elf": 90596,
-        "Vulpera": 89812,
-        "Worgen": 90361
+        "Blood Elf": 90471,
+        "Dark Iron Dwarf": 90075,
+        "Dwarf": 90450,
+        "Gnome": 90783,
+        "Goblin": 90702,
+        "Human": 91074,
+        "Mechagnome": 90537,
+        "Nightborne": 90763,
+        "Orc": 90111,
+        "Troll": 91620,
+        "Undead": 90310,
+        "Void Elf": 90624,
+        "Vulpera": 89854,
+        "Worgen": 90441
     },
     "data_type": "races",
     "languages": {
@@ -327,7 +327,7 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "0f5f7b822a",
+        "simc_hash": "ab9de34282",
         "spec": "affliction",
         "target_error": "0.2",
         "tier": "25"
@@ -335,21 +335,21 @@
     "sorted_data_keys": [
         "Troll",
         "Human",
-        "Goblin",
         "Gnome",
-        "Void Elf",
         "Nightborne",
+        "Goblin",
+        "Void Elf",
+        "Mechagnome",
         "Blood Elf",
         "Dwarf",
-        "Mechagnome",
-        "Undead",
         "Worgen",
+        "Undead",
         "Orc",
         "Dark Iron Dwarf",
         "Vulpera"
     ],
     "spec_id": 265,
-    "subtitle": "UTC 2020-02-18 07:48 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/0f5f7b822a\" target=\"blank\">0f5f7b8</a>",
+    "subtitle": "UTC 2020-02-19 07:46 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/ab9de34282\" target=\"blank\">ab9de34</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -450,6 +450,6 @@
             }
         }
     },
-    "timestamp": "2020-02-18 07:48",
+    "timestamp": "2020-02-19 07:46",
     "title": "Races | Affliction Warlock | Hecticaddcleave"
 }
