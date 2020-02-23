@@ -1,20 +1,20 @@
 {
     "class_id": 9,
     "data": {
-        "Blood Elf": 104655,
-        "Dark Iron Dwarf": 104220,
-        "Dwarf": 104701,
-        "Gnome": 105219,
-        "Goblin": 105325,
-        "Human": 105509,
-        "Mechagnome": 105055,
-        "Nightborne": 104290,
-        "Orc": 104656,
-        "Troll": 105424,
-        "Undead": 104155,
-        "Void Elf": 104408,
-        "Vulpera": 103839,
-        "Worgen": 104934
+        "Blood Elf": 104630,
+        "Dark Iron Dwarf": 103948,
+        "Dwarf": 104750,
+        "Gnome": 105221,
+        "Goblin": 105376,
+        "Human": 105621,
+        "Mechagnome": 104818,
+        "Nightborne": 104369,
+        "Orc": 104783,
+        "Troll": 105536,
+        "Undead": 104343,
+        "Void Elf": 104100,
+        "Vulpera": 103986,
+        "Worgen": 104632
     },
     "data_type": "races",
     "languages": {
@@ -327,7 +327,7 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "c33cfbc084",
+        "simc_hash": "a29ea205ad",
         "spec": "demonology",
         "target_error": "0.2",
         "tier": "25"
@@ -338,18 +338,18 @@
         "Goblin",
         "Gnome",
         "Mechagnome",
-        "Worgen",
-        "Dwarf",
         "Orc",
+        "Dwarf",
+        "Worgen",
         "Blood Elf",
-        "Void Elf",
         "Nightborne",
-        "Dark Iron Dwarf",
         "Undead",
-        "Vulpera"
+        "Void Elf",
+        "Vulpera",
+        "Dark Iron Dwarf"
     ],
     "spec_id": 266,
-    "subtitle": "UTC 2020-02-21 07:49 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c33cfbc084\" target=\"blank\">c33cfbc</a>",
+    "subtitle": "UTC 2020-02-22 07:47 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/a29ea205ad\" target=\"blank\">a29ea20</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -450,6 +450,6 @@
             }
         }
     },
-    "timestamp": "2020-02-21 07:49",
+    "timestamp": "2020-02-22 07:47",
     "title": "Races | Demonology Warlock | Hecticaddcleave"
 }

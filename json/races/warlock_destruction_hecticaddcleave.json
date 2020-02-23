@@ -1,20 +1,20 @@
 {
     "class_id": 9,
     "data": {
-        "Blood Elf": 97819,
-        "Dark Iron Dwarf": 97364,
-        "Dwarf": 98258,
-        "Gnome": 98169,
-        "Goblin": 98234,
-        "Human": 98393,
-        "Mechagnome": 97899,
-        "Nightborne": 97809,
-        "Orc": 97730,
-        "Troll": 99419,
-        "Undead": 97474,
-        "Void Elf": 97478,
-        "Vulpera": 97033,
-        "Worgen": 97677
+        "Blood Elf": 97940,
+        "Dark Iron Dwarf": 97526,
+        "Dwarf": 98228,
+        "Gnome": 98267,
+        "Goblin": 98124,
+        "Human": 98581,
+        "Mechagnome": 97857,
+        "Nightborne": 97755,
+        "Orc": 97643,
+        "Troll": 99300,
+        "Undead": 97589,
+        "Void Elf": 97485,
+        "Vulpera": 96947,
+        "Worgen": 97607
     },
     "data_type": "races",
     "languages": {
@@ -327,7 +327,7 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "c33cfbc084",
+        "simc_hash": "a29ea205ad",
         "spec": "destruction",
         "target_error": "0.2",
         "tier": "25"
@@ -335,21 +335,21 @@
     "sorted_data_keys": [
         "Troll",
         "Human",
+        "Gnome",
         "Dwarf",
         "Goblin",
-        "Gnome",
-        "Mechagnome",
         "Blood Elf",
+        "Mechagnome",
         "Nightborne",
         "Orc",
         "Worgen",
-        "Void Elf",
         "Undead",
         "Dark Iron Dwarf",
+        "Void Elf",
         "Vulpera"
     ],
     "spec_id": 267,
-    "subtitle": "UTC 2020-02-21 07:50 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c33cfbc084\" target=\"blank\">c33cfbc</a>",
+    "subtitle": "UTC 2020-02-22 07:48 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/a29ea205ad\" target=\"blank\">a29ea20</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -450,6 +450,6 @@
             }
         }
     },
-    "timestamp": "2020-02-21 07:50",
+    "timestamp": "2020-02-22 07:48",
     "title": "Races | Destruction Warlock | Hecticaddcleave"
 }
