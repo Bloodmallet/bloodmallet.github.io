@@ -1,26 +1,27 @@
 {
     "class_id": 4,
     "data": {
-        "Blood Elf": 108279,
-        "Dark Iron Dwarf": 107851,
-        "Dwarf": 109011,
-        "Gnome": 108581,
-        "Goblin": 108444,
-        "Human": 109221,
-        "Kul Tiran": 108942,
-        "Maghar Orc": 108719,
-        "Mechagnome": 108748,
-        "Night Elf": 108598,
-        "Nightborne": 108184,
-        "Orc": 107965,
-        "Pandaren": 108251,
-        "Troll": 108557,
-        "Undead": 108286,
-        "Void Elf": 108861,
-        "Worgen": 108857,
-        "Zandalari Troll Bwonsamdi": 108182,
-        "Zandalari Troll Kimbul": 108216,
-        "Zandalari Troll Paku": 108790
+        "Blood Elf": 108520,
+        "Dark Iron Dwarf": 107962,
+        "Dwarf": 109039,
+        "Gnome": 108741,
+        "Goblin": 108428,
+        "Human": 109385,
+        "Kul Tiran": 108527,
+        "Maghar Orc": 108733,
+        "Mechagnome": 108909,
+        "Night Elf": 108699,
+        "Nightborne": 108251,
+        "Orc": 108058,
+        "Pandaren": 108393,
+        "Troll": 108462,
+        "Undead": 108377,
+        "Void Elf": 108899,
+        "Vulpera": 108213,
+        "Worgen": 108693,
+        "Zandalari Troll Bwonsamdi": 108265,
+        "Zandalari Troll Kimbul": 108147,
+        "Zandalari Troll Paku": 108781
     },
     "data_type": "races",
     "languages": {
@@ -183,6 +184,16 @@
             "it_IT": "Elfo del Vuoto",
             "ko_KR": "공허 엘프",
             "ru_RU": "Эльф Бездны"
+        },
+        "Vulpera": {
+            "cn_CN": "Vulpera",
+            "de_DE": "Vulpera",
+            "en_US": "Vulpera",
+            "es_ES": "Vulpera",
+            "fr_FR": "Vulpera",
+            "it_IT": "Vulpera",
+            "ko_KR": "Vulpera",
+            "ru_RU": "Vulpera"
         },
         "Worgen": {
             "cn_CN": "狼人",
@@ -395,7 +406,7 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "a29ea205ad",
+        "simc_hash": "a58e8a2891",
         "spec": "assassination",
         "target_error": "0.2",
         "tier": "25"
@@ -403,27 +414,28 @@
     "sorted_data_keys": [
         "Human",
         "Dwarf",
-        "Kul Tiran",
-        "Void Elf",
-        "Worgen",
-        "Zandalari Troll Paku",
         "Mechagnome",
+        "Void Elf",
+        "Zandalari Troll Paku",
+        "Gnome",
         "Maghar Orc",
         "Night Elf",
-        "Gnome",
+        "Worgen",
+        "Kul Tiran",
+        "Blood Elf",
         "Troll",
         "Goblin",
-        "Undead",
-        "Blood Elf",
         "Pandaren",
-        "Zandalari Troll Kimbul",
-        "Nightborne",
+        "Undead",
         "Zandalari Troll Bwonsamdi",
+        "Nightborne",
+        "Vulpera",
+        "Zandalari Troll Kimbul",
         "Orc",
         "Dark Iron Dwarf"
     ],
     "spec_id": 259,
-    "subtitle": "UTC 2020-02-22 07:44 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/a29ea205ad\" target=\"blank\">a29ea20</a>",
+    "subtitle": "UTC 2020-02-24 07:33 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/a58e8a2891\" target=\"blank\">a58e8a2</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -524,6 +536,6 @@
             }
         }
     },
-    "timestamp": "2020-02-22 07:44",
+    "timestamp": "2020-02-24 07:33",
     "title": "Races | Assassination Rogue | Hecticaddcleave"
 }
