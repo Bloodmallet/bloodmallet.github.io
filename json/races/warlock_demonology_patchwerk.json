@@ -1,20 +1,20 @@
 {
     "class_id": 9,
     "data": {
-        "Blood Elf": 93268,
-        "Dark Iron Dwarf": 92755,
-        "Dwarf": 93324,
-        "Gnome": 93509,
-        "Goblin": 93413,
-        "Human": 93957,
-        "Mechagnome": 93220,
-        "Nightborne": 92962,
-        "Orc": 93270,
-        "Troll": 94105,
-        "Undead": 92976,
-        "Void Elf": 92925,
-        "Vulpera": 92490,
-        "Worgen": 93381
+        "Blood Elf": 92906,
+        "Dark Iron Dwarf": 92507,
+        "Dwarf": 93035,
+        "Gnome": 93211,
+        "Goblin": 93134,
+        "Human": 93566,
+        "Mechagnome": 93060,
+        "Nightborne": 92717,
+        "Orc": 92938,
+        "Troll": 93820,
+        "Undead": 92732,
+        "Void Elf": 92662,
+        "Vulpera": 92202,
+        "Worgen": 93016
     },
     "data_type": "races",
     "languages": {
@@ -327,7 +327,7 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "d7e90ea712",
+        "simc_hash": "1612fd9f20",
         "spec": "demonology",
         "target_error": "0.1",
         "tier": "25"
@@ -337,11 +337,11 @@
         "Human",
         "Gnome",
         "Goblin",
-        "Worgen",
+        "Mechagnome",
         "Dwarf",
+        "Worgen",
         "Orc",
         "Blood Elf",
-        "Mechagnome",
         "Undead",
         "Nightborne",
         "Void Elf",
@@ -349,7 +349,7 @@
         "Vulpera"
     ],
     "spec_id": 266,
-    "subtitle": "UTC 2020-03-06 07:18 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/d7e90ea712\" target=\"blank\">d7e90ea</a>",
+    "subtitle": "UTC 2020-03-07 07:25 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/1612fd9f20\" target=\"blank\">1612fd9</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -450,6 +450,6 @@
             }
         }
     },
-    "timestamp": "2020-03-06 07:18",
+    "timestamp": "2020-03-07 07:25",
     "title": "Races | Demonology Warlock | Patchwerk"
 }
