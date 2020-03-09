@@ -1,21 +1,21 @@
 {
     "class_id": 7,
     "data": {
-        "Dark Iron Dwarf": 95969,
-        "Draenei": 96050,
-        "Dwarf": 96933,
-        "Goblin": 96735,
-        "Highmountain Tauren": 96555,
-        "Kul Tiran": 96637,
-        "Maghar Orc": 96477,
-        "Orc": 95963,
-        "Pandaren": 96654,
-        "Tauren": 96970,
-        "Troll": 96691,
-        "Vulpera": 96125,
-        "Zandalari Troll Bwonsamdi": 96207,
-        "Zandalari Troll Kimbul": 96372,
-        "Zandalari Troll Paku": 96697
+        "Dark Iron Dwarf": 96001,
+        "Draenei": 96115,
+        "Dwarf": 96909,
+        "Goblin": 96763,
+        "Highmountain Tauren": 96649,
+        "Kul Tiran": 96570,
+        "Maghar Orc": 96459,
+        "Orc": 96074,
+        "Pandaren": 96615,
+        "Tauren": 97030,
+        "Troll": 96787,
+        "Vulpera": 96084,
+        "Zandalari Troll Bwonsamdi": 96368,
+        "Zandalari Troll Kimbul": 96422,
+        "Zandalari Troll Paku": 96764
     },
     "data_type": "races",
     "languages": {
@@ -340,7 +340,7 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "1612fd9f20",
+        "simc_hash": "9bd9ba23b3",
         "spec": "enhancement",
         "target_error": "0.1",
         "tier": "25"
@@ -348,22 +348,22 @@
     "sorted_data_keys": [
         "Tauren",
         "Dwarf",
-        "Goblin",
-        "Zandalari Troll Paku",
         "Troll",
+        "Zandalari Troll Paku",
+        "Goblin",
+        "Highmountain Tauren",
         "Pandaren",
         "Kul Tiran",
-        "Highmountain Tauren",
         "Maghar Orc",
         "Zandalari Troll Kimbul",
         "Zandalari Troll Bwonsamdi",
-        "Vulpera",
         "Draenei",
-        "Dark Iron Dwarf",
-        "Orc"
+        "Vulpera",
+        "Orc",
+        "Dark Iron Dwarf"
     ],
     "spec_id": 263,
-    "subtitle": "UTC 2020-03-07 07:23 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/1612fd9f20\" target=\"blank\">1612fd9</a>",
+    "subtitle": "UTC 2020-03-08 07:16 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/9bd9ba23b3\" target=\"blank\">9bd9ba2</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -464,6 +464,6 @@
             }
         }
     },
-    "timestamp": "2020-03-07 07:23",
+    "timestamp": "2020-03-08 07:16",
     "title": "Races | Enhancement Shaman | Patchwerk"
 }
