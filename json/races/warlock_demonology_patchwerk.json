@@ -1,20 +1,20 @@
 {
     "class_id": 9,
     "data": {
-        "Blood Elf": 93004,
-        "Dark Iron Dwarf": 92475,
-        "Dwarf": 92940,
-        "Gnome": 93230,
-        "Goblin": 93237,
-        "Human": 93629,
-        "Mechagnome": 92989,
-        "Nightborne": 92793,
-        "Orc": 93065,
-        "Troll": 93763,
-        "Undead": 92734,
-        "Void Elf": 92663,
-        "Vulpera": 92220,
-        "Worgen": 92981
+        "Blood Elf": 78376,
+        "Dark Iron Dwarf": 77835,
+        "Dwarf": 78299,
+        "Gnome": 78605,
+        "Goblin": 78561,
+        "Human": 78894,
+        "Mechagnome": 78301,
+        "Nightborne": 78259,
+        "Orc": 78236,
+        "Troll": 79126,
+        "Undead": 78179,
+        "Void Elf": 78075,
+        "Vulpera": 77687,
+        "Worgen": 78444
     },
     "data_type": "races",
     "languages": {
@@ -327,7 +327,7 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "9bd9ba23b3",
+        "simc_hash": "095fb6102d",
         "spec": "demonology",
         "target_error": "0.1",
         "tier": "25"
@@ -335,21 +335,21 @@
     "sorted_data_keys": [
         "Troll",
         "Human",
-        "Goblin",
         "Gnome",
-        "Orc",
+        "Goblin",
+        "Worgen",
         "Blood Elf",
         "Mechagnome",
-        "Worgen",
         "Dwarf",
         "Nightborne",
+        "Orc",
         "Undead",
         "Void Elf",
         "Dark Iron Dwarf",
         "Vulpera"
     ],
     "spec_id": 266,
-    "subtitle": "UTC 2020-03-08 07:18 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/9bd9ba23b3\" target=\"blank\">9bd9ba2</a>",
+    "subtitle": "UTC 2020-03-09 07:18 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/095fb6102d\" target=\"blank\">095fb61</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -450,6 +450,6 @@
             }
         }
     },
-    "timestamp": "2020-03-08 07:18",
+    "timestamp": "2020-03-09 07:18",
     "title": "Races | Demonology Warlock | Patchwerk"
 }
