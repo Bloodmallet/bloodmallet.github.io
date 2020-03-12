@@ -1,20 +1,20 @@
 {
     "class_id": 9,
     "data": {
-        "Blood Elf": 90089,
-        "Dark Iron Dwarf": 89598,
-        "Dwarf": 89922,
-        "Gnome": 90227,
-        "Goblin": 90203,
-        "Human": 90615,
-        "Mechagnome": 89982,
-        "Nightborne": 90060,
-        "Orc": 89594,
-        "Troll": 91065,
-        "Undead": 89779,
-        "Void Elf": 90014,
-        "Vulpera": 89193,
-        "Worgen": 89936
+        "Blood Elf": 90007,
+        "Dark Iron Dwarf": 89524,
+        "Dwarf": 90108,
+        "Gnome": 90306,
+        "Goblin": 90097,
+        "Human": 90349,
+        "Mechagnome": 90056,
+        "Nightborne": 90055,
+        "Orc": 89676,
+        "Troll": 91119,
+        "Undead": 89886,
+        "Void Elf": 90087,
+        "Vulpera": 89123,
+        "Worgen": 89960
     },
     "data_type": "races",
     "languages": {
@@ -327,7 +327,7 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "02a00193c6",
+        "simc_hash": "25ba2df768",
         "spec": "affliction",
         "target_error": "0.2",
         "tier": "25"
@@ -336,20 +336,20 @@
         "Troll",
         "Human",
         "Gnome",
+        "Dwarf",
         "Goblin",
-        "Blood Elf",
-        "Nightborne",
         "Void Elf",
         "Mechagnome",
+        "Nightborne",
+        "Blood Elf",
         "Worgen",
-        "Dwarf",
         "Undead",
-        "Dark Iron Dwarf",
         "Orc",
+        "Dark Iron Dwarf",
         "Vulpera"
     ],
     "spec_id": 265,
-    "subtitle": "UTC 2020-03-10 07:33 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/02a00193c6\" target=\"blank\">02a0019</a>",
+    "subtitle": "UTC 2020-03-11 07:31 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/25ba2df768\" target=\"blank\">25ba2df</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -450,6 +450,6 @@
             }
         }
     },
-    "timestamp": "2020-03-10 07:33",
+    "timestamp": "2020-03-11 07:31",
     "title": "Races | Affliction Warlock | Hecticaddcleave"
 }
