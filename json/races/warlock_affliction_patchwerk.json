@@ -1,20 +1,20 @@
 {
     "class_id": 9,
     "data": {
-        "Blood Elf": 92819,
+        "Blood Elf": 92895,
         "Dark Iron Dwarf": 92327,
-        "Dwarf": 92972,
-        "Gnome": 93301,
-        "Goblin": 93102,
-        "Human": 93475,
-        "Mechagnome": 92782,
-        "Nightborne": 92894,
-        "Orc": 92484,
-        "Troll": 93821,
-        "Undead": 92703,
-        "Void Elf": 93133,
-        "Vulpera": 92108,
-        "Worgen": 92865
+        "Dwarf": 92937,
+        "Gnome": 93158,
+        "Goblin": 93187,
+        "Human": 93470,
+        "Mechagnome": 92887,
+        "Nightborne": 92897,
+        "Orc": 92600,
+        "Troll": 93722,
+        "Undead": 92704,
+        "Void Elf": 93111,
+        "Vulpera": 92195,
+        "Worgen": 92749
     },
     "data_type": "races",
     "languages": {
@@ -327,7 +327,7 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "25ba2df768",
+        "simc_hash": "5a095cc815",
         "spec": "affliction",
         "target_error": "0.1",
         "tier": "25"
@@ -335,21 +335,21 @@
     "sorted_data_keys": [
         "Troll",
         "Human",
+        "Goblin",
         "Gnome",
         "Void Elf",
-        "Goblin",
         "Dwarf",
         "Nightborne",
-        "Worgen",
         "Blood Elf",
         "Mechagnome",
+        "Worgen",
         "Undead",
         "Orc",
         "Dark Iron Dwarf",
         "Vulpera"
     ],
     "spec_id": 265,
-    "subtitle": "UTC 2020-03-11 07:17 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/25ba2df768\" target=\"blank\">25ba2df</a>",
+    "subtitle": "UTC 2020-03-12 07:17 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/5a095cc815\" target=\"blank\">5a095cc</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -450,6 +450,6 @@
             }
         }
     },
-    "timestamp": "2020-03-11 07:17",
+    "timestamp": "2020-03-12 07:17",
     "title": "Races | Affliction Warlock | Patchwerk"
 }
