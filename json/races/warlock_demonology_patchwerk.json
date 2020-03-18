@@ -1,20 +1,20 @@
 {
     "class_id": 9,
     "data": {
-        "Blood Elf": 93095,
-        "Dark Iron Dwarf": 92416,
-        "Dwarf": 93044,
+        "Blood Elf": 92997,
+        "Dark Iron Dwarf": 92509,
+        "Dwarf": 92953,
         "Gnome": 93237,
-        "Goblin": 93223,
-        "Human": 93700,
-        "Mechagnome": 93021,
-        "Nightborne": 92695,
-        "Orc": 92997,
-        "Troll": 93697,
-        "Undead": 92597,
-        "Void Elf": 92676,
-        "Vulpera": 92227,
-        "Worgen": 92969
+        "Goblin": 93151,
+        "Human": 93566,
+        "Mechagnome": 93081,
+        "Nightborne": 92714,
+        "Orc": 93020,
+        "Troll": 93800,
+        "Undead": 92715,
+        "Void Elf": 92709,
+        "Vulpera": 92254,
+        "Worgen": 92974
     },
     "data_type": "races",
     "languages": {
@@ -327,29 +327,29 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "56fc95dec9",
+        "simc_hash": "31dca4cda2",
         "spec": "demonology",
         "target_error": "0.1",
         "tier": "25"
     },
     "sorted_data_keys": [
-        "Human",
         "Troll",
+        "Human",
         "Gnome",
         "Goblin",
-        "Blood Elf",
-        "Dwarf",
         "Mechagnome",
         "Orc",
+        "Blood Elf",
         "Worgen",
+        "Dwarf",
+        "Undead",
         "Nightborne",
         "Void Elf",
-        "Undead",
         "Dark Iron Dwarf",
         "Vulpera"
     ],
     "spec_id": 266,
-    "subtitle": "UTC 2020-03-16 07:19 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/56fc95dec9\" target=\"blank\">56fc95d</a>",
+    "subtitle": "UTC 2020-03-17 07:18 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/31dca4cda2\" target=\"blank\">31dca4c</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -450,6 +450,6 @@
             }
         }
     },
-    "timestamp": "2020-03-16 07:19",
+    "timestamp": "2020-03-17 07:18",
     "title": "Races | Demonology Warlock | Patchwerk"
 }
