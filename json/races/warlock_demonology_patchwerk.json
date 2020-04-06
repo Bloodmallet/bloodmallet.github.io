@@ -1,20 +1,20 @@
 {
     "class_id": 9,
     "data": {
-        "Blood Elf": 92937,
-        "Dark Iron Dwarf": 92438,
-        "Dwarf": 92973,
-        "Gnome": 93163,
-        "Goblin": 93229,
-        "Human": 93619,
-        "Mechagnome": 93025,
-        "Nightborne": 92729,
-        "Orc": 93004,
-        "Troll": 93848,
-        "Undead": 92649,
-        "Void Elf": 92762,
-        "Vulpera": 92167,
-        "Worgen": 92955
+        "Blood Elf": 92994,
+        "Dark Iron Dwarf": 92484,
+        "Dwarf": 93021,
+        "Gnome": 93236,
+        "Goblin": 93255,
+        "Human": 93614,
+        "Mechagnome": 93088,
+        "Nightborne": 92698,
+        "Orc": 93000,
+        "Troll": 93809,
+        "Undead": 92751,
+        "Void Elf": 92716,
+        "Vulpera": 92286,
+        "Worgen": 93096
     },
     "data_type": "races",
     "languages": {
@@ -327,7 +327,7 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "267c901565",
+        "simc_hash": "a07bd1929c",
         "spec": "demonology",
         "target_error": "0.1",
         "tier": "25"
@@ -337,19 +337,19 @@
         "Human",
         "Goblin",
         "Gnome",
-        "Mechagnome",
-        "Orc",
-        "Dwarf",
         "Worgen",
+        "Mechagnome",
+        "Dwarf",
+        "Orc",
         "Blood Elf",
+        "Undead",
         "Void Elf",
         "Nightborne",
-        "Undead",
         "Dark Iron Dwarf",
         "Vulpera"
     ],
     "spec_id": 266,
-    "subtitle": "UTC 2020-04-05 17:06 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/267c901565\" target=\"blank\">267c901</a>",
+    "subtitle": "UTC 2020-04-06 17:14 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/a07bd1929c\" target=\"blank\">a07bd19</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -450,6 +450,6 @@
             }
         }
     },
-    "timestamp": "2020-04-05 17:06",
+    "timestamp": "2020-04-06 17:14",
     "title": "Races | Demonology Warlock | Patchwerk"
 }
