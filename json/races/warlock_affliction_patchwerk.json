@@ -1,20 +1,20 @@
 {
     "class_id": 9,
     "data": {
-        "Blood Elf": 92827,
-        "Dark Iron Dwarf": 92312,
-        "Dwarf": 92964,
-        "Gnome": 93093,
-        "Goblin": 93146,
-        "Human": 93442,
-        "Mechagnome": 92742,
-        "Nightborne": 92900,
-        "Orc": 92546,
-        "Troll": 93765,
-        "Undead": 92686,
-        "Void Elf": 93218,
-        "Vulpera": 92162,
-        "Worgen": 92815
+        "Blood Elf": 92880,
+        "Dark Iron Dwarf": 92372,
+        "Dwarf": 93021,
+        "Gnome": 93271,
+        "Goblin": 93149,
+        "Human": 93390,
+        "Mechagnome": 92680,
+        "Nightborne": 92970,
+        "Orc": 92435,
+        "Troll": 93702,
+        "Undead": 92734,
+        "Void Elf": 93172,
+        "Vulpera": 92180,
+        "Worgen": 92780
     },
     "data_type": "races",
     "languages": {
@@ -327,7 +327,7 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "45814f0293",
+        "simc_hash": "0dec38354d",
         "spec": "affliction",
         "target_error": "0.1",
         "tier": "25"
@@ -335,21 +335,21 @@
     "sorted_data_keys": [
         "Troll",
         "Human",
+        "Gnome",
         "Void Elf",
         "Goblin",
-        "Gnome",
         "Dwarf",
         "Nightborne",
         "Blood Elf",
         "Worgen",
-        "Mechagnome",
         "Undead",
+        "Mechagnome",
         "Orc",
         "Dark Iron Dwarf",
         "Vulpera"
     ],
     "spec_id": 265,
-    "subtitle": "UTC 2020-04-14 06:12 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/45814f0293\" target=\"blank\">45814f0</a>",
+    "subtitle": "UTC 2020-04-15 06:12 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/0dec38354d\" target=\"blank\">0dec383</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -450,6 +450,6 @@
             }
         }
     },
-    "timestamp": "2020-04-14 06:12",
+    "timestamp": "2020-04-15 06:12",
     "title": "Races | Affliction Warlock | Patchwerk"
 }
