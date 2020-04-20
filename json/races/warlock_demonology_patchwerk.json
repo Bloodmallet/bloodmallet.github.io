@@ -1,20 +1,20 @@
 {
     "class_id": 9,
     "data": {
-        "Blood Elf": 92966,
-        "Dark Iron Dwarf": 92495,
-        "Dwarf": 92972,
-        "Gnome": 93260,
-        "Goblin": 93197,
-        "Human": 93575,
-        "Mechagnome": 92959,
-        "Nightborne": 92785,
-        "Orc": 92906,
-        "Troll": 93827,
-        "Undead": 92700,
-        "Void Elf": 92627,
-        "Vulpera": 92342,
-        "Worgen": 93000
+        "Blood Elf": 93079,
+        "Dark Iron Dwarf": 92486,
+        "Dwarf": 92985,
+        "Gnome": 93213,
+        "Goblin": 93213,
+        "Human": 93634,
+        "Mechagnome": 92883,
+        "Nightborne": 92772,
+        "Orc": 93010,
+        "Troll": 93735,
+        "Undead": 92685,
+        "Void Elf": 92703,
+        "Vulpera": 92198,
+        "Worgen": 93024
     },
     "data_type": "races",
     "languages": {
@@ -327,7 +327,7 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "d66526c277",
+        "simc_hash": "633ec19281",
         "spec": "demonology",
         "target_error": "0.1",
         "tier": "25"
@@ -337,19 +337,19 @@
         "Human",
         "Gnome",
         "Goblin",
-        "Worgen",
-        "Dwarf",
         "Blood Elf",
-        "Mechagnome",
+        "Worgen",
         "Orc",
+        "Dwarf",
+        "Mechagnome",
         "Nightborne",
-        "Undead",
         "Void Elf",
+        "Undead",
         "Dark Iron Dwarf",
         "Vulpera"
     ],
     "spec_id": 266,
-    "subtitle": "UTC 2020-04-17 22:06 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/d66526c277\" target=\"blank\">d66526c</a>",
+    "subtitle": "UTC 2020-04-19 10:39 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/633ec19281\" target=\"blank\">633ec19</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -450,6 +450,6 @@
             }
         }
     },
-    "timestamp": "2020-04-17 22:06",
+    "timestamp": "2020-04-19 10:39",
     "title": "Races | Demonology Warlock | Patchwerk"
 }
