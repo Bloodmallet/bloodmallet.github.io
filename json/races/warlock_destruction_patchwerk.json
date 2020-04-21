@@ -1,20 +1,20 @@
 {
     "class_id": 9,
     "data": {
-        "Blood Elf": 88184,
-        "Dark Iron Dwarf": 87724,
-        "Dwarf": 88734,
-        "Gnome": 88454,
-        "Goblin": 88412,
-        "Human": 88785,
-        "Mechagnome": 88329,
-        "Nightborne": 88282,
-        "Orc": 87989,
-        "Troll": 89066,
-        "Undead": 87882,
-        "Void Elf": 88160,
-        "Vulpera": 87475,
-        "Worgen": 88089
+        "Blood Elf": 88067,
+        "Dark Iron Dwarf": 87740,
+        "Dwarf": 88745,
+        "Gnome": 88468,
+        "Goblin": 88484,
+        "Human": 88673,
+        "Mechagnome": 88247,
+        "Nightborne": 88281,
+        "Orc": 87964,
+        "Troll": 89081,
+        "Undead": 87915,
+        "Void Elf": 88046,
+        "Vulpera": 87460,
+        "Worgen": 88143
     },
     "data_type": "races",
     "languages": {
@@ -327,29 +327,29 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "633ec19281",
+        "simc_hash": "cd57a4df32",
         "spec": "destruction",
         "target_error": "0.1",
         "tier": "25"
     },
     "sorted_data_keys": [
         "Troll",
-        "Human",
         "Dwarf",
-        "Gnome",
+        "Human",
         "Goblin",
-        "Mechagnome",
+        "Gnome",
         "Nightborne",
+        "Mechagnome",
+        "Worgen",
         "Blood Elf",
         "Void Elf",
-        "Worgen",
         "Orc",
         "Undead",
         "Dark Iron Dwarf",
         "Vulpera"
     ],
     "spec_id": 267,
-    "subtitle": "UTC 2020-04-19 10:39 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/633ec19281\" target=\"blank\">633ec19</a>",
+    "subtitle": "UTC 2020-04-20 06:39 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/cd57a4df32\" target=\"blank\">cd57a4d</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -450,6 +450,6 @@
             }
         }
     },
-    "timestamp": "2020-04-19 10:39",
+    "timestamp": "2020-04-20 06:39",
     "title": "Races | Destruction Warlock | Patchwerk"
 }
