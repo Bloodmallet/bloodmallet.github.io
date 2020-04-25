@@ -1,20 +1,20 @@
 {
     "class_id": 9,
     "data": {
-        "Blood Elf": 107636,
-        "Dark Iron Dwarf": 107268,
-        "Dwarf": 107779,
-        "Gnome": 108079,
-        "Goblin": 108500,
-        "Human": 108783,
-        "Mechagnome": 107922,
-        "Nightborne": 107422,
-        "Orc": 107623,
-        "Troll": 108592,
-        "Undead": 107195,
-        "Void Elf": 107081,
-        "Vulpera": 106971,
-        "Worgen": 107499
+        "Blood Elf": 107668,
+        "Dark Iron Dwarf": 107252,
+        "Dwarf": 107713,
+        "Gnome": 108316,
+        "Goblin": 108320,
+        "Human": 108671,
+        "Mechagnome": 107934,
+        "Nightborne": 107508,
+        "Orc": 107820,
+        "Troll": 108595,
+        "Undead": 107343,
+        "Void Elf": 107140,
+        "Vulpera": 106752,
+        "Worgen": 107907
     },
     "data_type": "races",
     "languages": {
@@ -327,7 +327,7 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "5c34735b34",
+        "simc_hash": "85052f3275",
         "spec": "demonology",
         "target_error": "0.2",
         "tier": "25"
@@ -338,18 +338,18 @@
         "Goblin",
         "Gnome",
         "Mechagnome",
+        "Worgen",
+        "Orc",
         "Dwarf",
         "Blood Elf",
-        "Orc",
-        "Worgen",
         "Nightborne",
-        "Dark Iron Dwarf",
         "Undead",
+        "Dark Iron Dwarf",
         "Void Elf",
         "Vulpera"
     ],
     "spec_id": 266,
-    "subtitle": "UTC 2020-04-23 07:21 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/5c34735b34\" target=\"blank\">5c34735</a>",
+    "subtitle": "UTC 2020-04-24 06:54 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/85052f3275\" target=\"blank\">85052f3</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -450,6 +450,6 @@
             }
         }
     },
-    "timestamp": "2020-04-23 07:21",
+    "timestamp": "2020-04-24 06:54",
     "title": "Races | Demonology Warlock | Hecticaddcleave"
 }
