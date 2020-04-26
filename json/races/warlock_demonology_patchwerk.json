@@ -1,20 +1,20 @@
 {
     "class_id": 9,
     "data": {
-        "Blood Elf": 93035,
-        "Dark Iron Dwarf": 92510,
-        "Dwarf": 93024,
-        "Gnome": 93152,
-        "Goblin": 93197,
-        "Human": 93672,
-        "Mechagnome": 93008,
-        "Nightborne": 92628,
-        "Orc": 93077,
-        "Troll": 93755,
-        "Undead": 92709,
-        "Void Elf": 92694,
-        "Vulpera": 92269,
-        "Worgen": 92969
+        "Blood Elf": 93030,
+        "Dark Iron Dwarf": 92610,
+        "Dwarf": 93018,
+        "Gnome": 93241,
+        "Goblin": 93246,
+        "Human": 93595,
+        "Mechagnome": 93053,
+        "Nightborne": 92664,
+        "Orc": 92996,
+        "Troll": 93778,
+        "Undead": 92621,
+        "Void Elf": 92704,
+        "Vulpera": 92263,
+        "Worgen": 93016
     },
     "data_type": "races",
     "languages": {
@@ -327,7 +327,7 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "85052f3275",
+        "simc_hash": "44a65b63e6",
         "spec": "demonology",
         "target_error": "0.1",
         "tier": "25"
@@ -337,19 +337,19 @@
         "Human",
         "Goblin",
         "Gnome",
-        "Orc",
+        "Mechagnome",
         "Blood Elf",
         "Dwarf",
-        "Mechagnome",
         "Worgen",
-        "Undead",
+        "Orc",
         "Void Elf",
         "Nightborne",
+        "Undead",
         "Dark Iron Dwarf",
         "Vulpera"
     ],
     "spec_id": 266,
-    "subtitle": "UTC 2020-04-24 06:39 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/85052f3275\" target=\"blank\">85052f3</a>",
+    "subtitle": "UTC 2020-04-25 06:37 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/44a65b63e6\" target=\"blank\">44a65b6</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -450,6 +450,6 @@
             }
         }
     },
-    "timestamp": "2020-04-24 06:39",
+    "timestamp": "2020-04-25 06:37",
     "title": "Races | Demonology Warlock | Patchwerk"
 }
