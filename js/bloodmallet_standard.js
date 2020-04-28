@@ -851,10 +851,6 @@ function search_value_style_cookie() {
 ---------------------------------------------------------*/
 const patrons_epic = [
   {
-    "name": "Tumi",
-    "text": "Tumi"
-  },
-  {
     "name": "Xss",
     "text": "Xss"
   },
@@ -875,16 +871,8 @@ const patrons_uncommon = [
     "text": "👻"
   },
   {
-    "name": "Barokoshama",
-    "text": "(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧"
-  },
-  {
-    "name": "kaymancutoff",
-    "text": "Keg Smash"
-  },
-  {
     "name": "tmb",
-    "text": "HotS > LoL"
+    "text": "buff Mistweaver"
   }
 ];
 const patrons = patrons_uncommon.concat(
