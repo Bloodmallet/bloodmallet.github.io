@@ -1,20 +1,20 @@
 {
     "class_id": 9,
     "data": {
-        "Blood Elf": 90034,
-        "Dark Iron Dwarf": 89429,
-        "Dwarf": 89988,
-        "Gnome": 90257,
-        "Goblin": 90143,
-        "Human": 90439,
-        "Mechagnome": 90063,
-        "Nightborne": 90026,
-        "Orc": 89664,
-        "Troll": 91038,
-        "Undead": 89775,
-        "Void Elf": 90090,
-        "Vulpera": 89251,
-        "Worgen": 89975
+        "Blood Elf": 90003,
+        "Dark Iron Dwarf": 89382,
+        "Dwarf": 89964,
+        "Gnome": 90218,
+        "Goblin": 90197,
+        "Human": 90462,
+        "Mechagnome": 90087,
+        "Nightborne": 89871,
+        "Orc": 89581,
+        "Troll": 91008,
+        "Undead": 89912,
+        "Void Elf": 90198,
+        "Vulpera": 89056,
+        "Worgen": 89957
     },
     "data_type": "races",
     "languages": {
@@ -327,7 +327,7 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "44a65b63e6",
+        "simc_hash": "033ed5718c",
         "spec": "affliction",
         "target_error": "0.2",
         "tier": "25"
@@ -336,20 +336,20 @@
         "Troll",
         "Human",
         "Gnome",
-        "Goblin",
         "Void Elf",
+        "Goblin",
         "Mechagnome",
         "Blood Elf",
-        "Nightborne",
         "Dwarf",
         "Worgen",
         "Undead",
+        "Nightborne",
         "Orc",
         "Dark Iron Dwarf",
         "Vulpera"
     ],
     "spec_id": 265,
-    "subtitle": "UTC 2020-04-27 07:21 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/44a65b63e6\" target=\"blank\">44a65b6</a>",
+    "subtitle": "UTC 2020-04-28 06:51 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/033ed5718c\" target=\"blank\">033ed57</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -450,6 +450,6 @@
             }
         }
     },
-    "timestamp": "2020-04-27 07:21",
+    "timestamp": "2020-04-28 06:51",
     "title": "Races | Affliction Warlock | Hecticaddcleave"
 }
