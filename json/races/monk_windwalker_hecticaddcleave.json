@@ -1,28 +1,28 @@
 {
     "class_id": 10,
     "data": {
-        "Blood Elf": 127364,
-        "Dark Iron Dwarf": 124823,
-        "Draenei": 125147,
-        "Dwarf": 125879,
-        "Gnome": 125465,
-        "Highmountain Tauren": 125561,
-        "Human": 126134,
-        "Kul Tiran": 125658,
-        "Maghar Orc": 125394,
-        "Mechagnome": 125937,
-        "Night Elf": 125611,
-        "Nightborne": 124780,
-        "Orc": 125002,
-        "Pandaren": 125670,
-        "Tauren": 125969,
-        "Troll": 125186,
-        "Undead": 125182,
-        "Void Elf": 125901,
-        "Vulpera": 125994,
-        "Zandalari Troll Bwonsamdi": 124963,
-        "Zandalari Troll Kimbul": 125010,
-        "Zandalari Troll Paku": 125817
+        "Blood Elf": 126476,
+        "Dark Iron Dwarf": 125748,
+        "Draenei": 125694,
+        "Dwarf": 126853,
+        "Gnome": 126336,
+        "Highmountain Tauren": 126290,
+        "Human": 127046,
+        "Kul Tiran": 126488,
+        "Maghar Orc": 125764,
+        "Mechagnome": 126476,
+        "Night Elf": 126276,
+        "Nightborne": 125916,
+        "Orc": 125758,
+        "Pandaren": 126315,
+        "Tauren": 126770,
+        "Troll": 122092,
+        "Undead": 126015,
+        "Void Elf": 126636,
+        "Vulpera": 125861,
+        "Zandalari Troll Bwonsamdi": 125703,
+        "Zandalari Troll Kimbul": 126033,
+        "Zandalari Troll Paku": 126325
     },
     "data_type": "races",
     "languages": {
@@ -248,20 +248,20 @@
         }
     },
     "profile": {
-        "azerite_essences": "32:3:1/35:3:0/4:3:0/5:3:0",
+        "azerite_essences": "32:3:1/35:3:0/37:3:0/5:3:0",
         "back": {
             "bonus_id": "6286",
             "id": "169223"
         },
         "character": {
-            "azerite_essences": "32:3:1/35:3:0/4:3:0/5:3:0",
+            "azerite_essences": "32:3:1/35:3:0/37:3:0/5:3:0",
             "class": "monk",
             "level": "120",
             "position": "back",
             "race": "human",
             "role": "dps",
             "spec": "windwalker",
-            "talents": "2022012"
+            "talents": "2010012"
         },
         "chest": {
             "azerite_powers": "389/569/31/44/13",
@@ -326,7 +326,7 @@
             },
             "legs": {
                 "bonus_id": "4824/1517/6573",
-                "id": "174139"
+                "id": "174143"
             },
             "main_hand": {
                 "bonus_id": "4824/1517",
@@ -339,9 +339,9 @@
                 "id": "158075"
             },
             "off_hand": {
-                "bonus_id": "4824/1517",
+                "bonus_id": "6536/1637/4786",
                 "enchant": "versatile_navigation",
-                "id": "174105"
+                "id": "159653"
             },
             "shoulders": {
                 "azerite_powers": "117/389/21/85/13",
@@ -361,13 +361,13 @@
                 "id": "174142"
             },
             "wrists": {
-                "bonus_id": "4824/1517/6573",
+                "bonus_id": "4824/1517/6552",
                 "id": "174138"
             }
         },
         "legs": {
             "bonus_id": "4824/1517/6573",
-            "id": "174139"
+            "id": "174143"
         },
         "level": "120",
         "main_hand": {
@@ -381,9 +381,9 @@
             "id": "158075"
         },
         "off_hand": {
-            "bonus_id": "4824/1517",
+            "bonus_id": "6536/1637/4786",
             "enchant": "versatile_navigation",
-            "id": "174105"
+            "id": "159653"
         },
         "position": "back",
         "race": "human",
@@ -394,7 +394,7 @@
             "id": "174133"
         },
         "spec": "windwalker",
-        "talents": "2022012",
+        "talents": "2010012",
         "trinket1": {
             "bonus_id": "6536/1637/4786",
             "id": "159623"
@@ -408,7 +408,7 @@
             "id": "174142"
         },
         "wrists": {
-            "bonus_id": "4824/1517/6573",
+            "bonus_id": "4824/1517/6552",
             "id": "174138"
         }
     },
@@ -417,37 +417,37 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "8c91f71325",
+        "simc_hash": "a72e0ac0c9",
         "spec": "windwalker",
         "target_error": "0.2",
         "tier": "25"
     },
     "sorted_data_keys": [
-        "Blood Elf",
         "Human",
-        "Vulpera",
-        "Tauren",
-        "Mechagnome",
-        "Void Elf",
         "Dwarf",
+        "Tauren",
+        "Void Elf",
+        "Kul Tiran",
+        "Mechagnome",
+        "Blood Elf",
+        "Gnome",
         "Zandalari Troll Paku",
         "Pandaren",
-        "Kul Tiran",
-        "Night Elf",
         "Highmountain Tauren",
-        "Gnome",
-        "Maghar Orc",
-        "Troll",
-        "Undead",
-        "Draenei",
+        "Night Elf",
         "Zandalari Troll Kimbul",
+        "Undead",
+        "Nightborne",
+        "Vulpera",
+        "Maghar Orc",
         "Orc",
-        "Zandalari Troll Bwonsamdi",
         "Dark Iron Dwarf",
-        "Nightborne"
+        "Zandalari Troll Bwonsamdi",
+        "Draenei",
+        "Troll"
     ],
     "spec_id": 269,
-    "subtitle": "UTC 2020-04-29 06:48 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/8c91f71325\" target=\"blank\">8c91f71</a>",
+    "subtitle": "UTC 2020-05-01 06:48 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/a72e0ac0c9\" target=\"blank\">a72e0ac</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -548,6 +548,6 @@
             }
         }
     },
-    "timestamp": "2020-04-29 06:48",
+    "timestamp": "2020-05-01 06:48",
     "title": "Races | Windwalker Monk | Hecticaddcleave"
 }
