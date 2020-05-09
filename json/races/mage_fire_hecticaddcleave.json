@@ -1,29 +1,29 @@
 {
     "class_id": 8,
     "data": {
-        "Blood Elf": 123849,
-        "Dark Iron Dwarf": 124114,
-        "Draenei": 123401,
-        "Dwarf": 125208,
-        "Gnome": 124467,
-        "Goblin": 124294,
-        "Human": 125402,
-        "Kul Tiran": 124286,
-        "Lightforged Draenei": 121557,
-        "Maghar Orc": 125206,
-        "Mechagnome": 124233,
-        "Night Elf": 123939,
-        "Nightborne": 124185,
-        "Orc": 123959,
-        "Pandaren": 124463,
-        "Troll": 125632,
-        "Undead": 123746,
-        "Void Elf": 124995,
-        "Vulpera": 121168,
-        "Worgen": 123738,
-        "Zandalari Troll Bwonsamdi": 123370,
-        "Zandalari Troll Kimbul": 123572,
-        "Zandalari Troll Paku": 123724
+        "Blood Elf": 124955,
+        "Dark Iron Dwarf": 125700,
+        "Draenei": 124532,
+        "Dwarf": 126519,
+        "Gnome": 125751,
+        "Goblin": 125518,
+        "Human": 126690,
+        "Kul Tiran": 125418,
+        "Lightforged Draenei": 123913,
+        "Maghar Orc": 126708,
+        "Mechagnome": 125417,
+        "Night Elf": 125326,
+        "Nightborne": 125465,
+        "Orc": 125094,
+        "Pandaren": 125592,
+        "Troll": 127237,
+        "Undead": 124929,
+        "Void Elf": 126186,
+        "Vulpera": 123909,
+        "Worgen": 124845,
+        "Zandalari Troll Bwonsamdi": 124789,
+        "Zandalari Troll Kimbul": 124761,
+        "Zandalari Troll Paku": 125050
     },
     "data_type": "races",
     "languages": {
@@ -359,8 +359,8 @@
                 "id": "174117"
             },
             "trinket1": {
-                "bonus_id": "4824/1517",
-                "id": "174060"
+                "bonus_id": "4800/1517",
+                "id": "169314"
             },
             "trinket2": {
                 "id": "172669",
@@ -405,8 +405,8 @@
         "spec": "fire",
         "talents": "3031022",
         "trinket1": {
-            "bonus_id": "4824/1517",
-            "id": "174060"
+            "bonus_id": "4800/1517",
+            "id": "169314"
         },
         "trinket2": {
             "id": "172669",
@@ -426,38 +426,38 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "8b38943285",
+        "simc_hash": "413edb4a2b",
         "spec": "fire",
         "target_error": "0.2",
         "tier": "25"
     },
     "sorted_data_keys": [
         "Troll",
+        "Maghar Orc",
         "Human",
         "Dwarf",
-        "Maghar Orc",
         "Void Elf",
         "Gnome",
+        "Dark Iron Dwarf",
         "Pandaren",
         "Goblin",
+        "Nightborne",
         "Kul Tiran",
         "Mechagnome",
-        "Nightborne",
-        "Dark Iron Dwarf",
-        "Orc",
         "Night Elf",
+        "Orc",
+        "Zandalari Troll Paku",
         "Blood Elf",
         "Undead",
         "Worgen",
-        "Zandalari Troll Paku",
+        "Zandalari Troll Bwonsamdi",
         "Zandalari Troll Kimbul",
         "Draenei",
-        "Zandalari Troll Bwonsamdi",
         "Lightforged Draenei",
         "Vulpera"
     ],
     "spec_id": 63,
-    "subtitle": "UTC 2020-05-07 06:48 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/8b38943285\" target=\"blank\">8b38943</a>",
+    "subtitle": "UTC 2020-05-08 06:47 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/413edb4a2b\" target=\"blank\">413edb4</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -558,6 +558,6 @@
             }
         }
     },
-    "timestamp": "2020-05-07 06:48",
+    "timestamp": "2020-05-08 06:47",
     "title": "Races | Fire Mage | Hecticaddcleave"
 }
