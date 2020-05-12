@@ -1,20 +1,20 @@
 {
     "class_id": 9,
     "data": {
-        "Blood Elf": 88149,
-        "Dark Iron Dwarf": 87726,
-        "Dwarf": 88726,
-        "Gnome": 88384,
-        "Goblin": 88346,
-        "Human": 88731,
-        "Mechagnome": 88318,
-        "Nightborne": 88228,
-        "Orc": 87965,
-        "Troll": 89143,
-        "Undead": 87940,
-        "Void Elf": 88071,
-        "Vulpera": 87577,
-        "Worgen": 88132
+        "Blood Elf": 88104,
+        "Dark Iron Dwarf": 87788,
+        "Dwarf": 88664,
+        "Gnome": 88454,
+        "Goblin": 80316,
+        "Human": 88817,
+        "Mechagnome": 88211,
+        "Nightborne": 80182,
+        "Orc": 79899,
+        "Troll": 80657,
+        "Undead": 79864,
+        "Void Elf": 88037,
+        "Vulpera": 79419,
+        "Worgen": 88058
     },
     "data_type": "races",
     "languages": {
@@ -327,29 +327,29 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "f37f1767eb",
+        "simc_hash": "70c68da89a",
         "spec": "destruction",
         "target_error": "0.1",
         "tier": "25"
     },
     "sorted_data_keys": [
-        "Troll",
         "Human",
         "Dwarf",
         "Gnome",
-        "Goblin",
         "Mechagnome",
-        "Nightborne",
         "Blood Elf",
         "Worgen",
         "Void Elf",
+        "Dark Iron Dwarf",
+        "Troll",
+        "Goblin",
+        "Nightborne",
         "Orc",
         "Undead",
-        "Dark Iron Dwarf",
         "Vulpera"
     ],
     "spec_id": 267,
-    "subtitle": "UTC 2020-05-10 06:39 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/f37f1767eb\" target=\"blank\">f37f176</a>",
+    "subtitle": "UTC 2020-05-11 06:38 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/70c68da89a\" target=\"blank\">70c68da</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -450,6 +450,6 @@
             }
         }
     },
-    "timestamp": "2020-05-10 06:39",
+    "timestamp": "2020-05-11 06:38",
     "title": "Races | Destruction Warlock | Patchwerk"
 }
