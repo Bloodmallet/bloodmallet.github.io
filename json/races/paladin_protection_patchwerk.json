@@ -1,16 +1,16 @@
 {
     "class_id": 2,
     "data": {
-        "Blood Elf": 52993,
-        "Dark Iron Dwarf": 52684,
-        "Draenei": 52803,
-        "Dwarf": 53149,
-        "Human": 53467,
-        "Lightforged Draenei": 53455,
-        "Tauren": 66577,
-        "Zandalari Troll Bwonsamdi": 66449,
-        "Zandalari Troll Kimbul": 66582,
-        "Zandalari Troll Paku": 66320
+        "Blood Elf": 66283,
+        "Dark Iron Dwarf": 66022,
+        "Draenei": 66047,
+        "Dwarf": 66533,
+        "Human": 66931,
+        "Lightforged Draenei": 66806,
+        "Tauren": 66531,
+        "Zandalari Troll Bwonsamdi": 66455,
+        "Zandalari Troll Kimbul": 66545,
+        "Zandalari Troll Paku": 66359
     },
     "data_type": "races",
     "languages": {
@@ -283,25 +283,25 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "70c68da89a",
+        "simc_hash": "8687fad9ff",
         "spec": "protection",
         "target_error": "0.1",
         "tier": "25"
     },
     "sorted_data_keys": [
+        "Human",
+        "Lightforged Draenei",
         "Zandalari Troll Kimbul",
+        "Dwarf",
         "Tauren",
         "Zandalari Troll Bwonsamdi",
         "Zandalari Troll Paku",
-        "Human",
-        "Lightforged Draenei",
-        "Dwarf",
         "Blood Elf",
         "Draenei",
         "Dark Iron Dwarf"
     ],
     "spec_id": 66,
-    "subtitle": "UTC 2020-05-11 06:33 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/70c68da89a\" target=\"blank\">70c68da</a>",
+    "subtitle": "UTC 2020-05-12 06:33 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/8687fad9ff\" target=\"blank\">8687fad</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -402,6 +402,6 @@
             }
         }
     },
-    "timestamp": "2020-05-11 06:33",
+    "timestamp": "2020-05-12 06:33",
     "title": "Races | Protection Paladin | Patchwerk"
 }
