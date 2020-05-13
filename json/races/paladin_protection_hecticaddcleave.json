@@ -1,16 +1,16 @@
 {
     "class_id": 2,
     "data": {
-        "Blood Elf": 86101,
-        "Dark Iron Dwarf": 85640,
-        "Draenei": 85766,
-        "Dwarf": 86282,
-        "Human": 86906,
-        "Lightforged Draenei": 88332,
-        "Tauren": 86457,
-        "Zandalari Troll Bwonsamdi": 86104,
-        "Zandalari Troll Kimbul": 86068,
-        "Zandalari Troll Paku": 86043
+        "Blood Elf": 86014,
+        "Dark Iron Dwarf": 85586,
+        "Draenei": 85652,
+        "Dwarf": 86422,
+        "Human": 86775,
+        "Lightforged Draenei": 88281,
+        "Tauren": 86378,
+        "Zandalari Troll Bwonsamdi": 85981,
+        "Zandalari Troll Kimbul": 86102,
+        "Zandalari Troll Paku": 86200
     },
     "data_type": "races",
     "languages": {
@@ -283,7 +283,7 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "8687fad9ff",
+        "simc_hash": "6e2913610c",
         "spec": "protection",
         "target_error": "0.2",
         "tier": "25"
@@ -291,17 +291,17 @@
     "sorted_data_keys": [
         "Lightforged Draenei",
         "Human",
-        "Tauren",
         "Dwarf",
-        "Zandalari Troll Bwonsamdi",
-        "Blood Elf",
-        "Zandalari Troll Kimbul",
+        "Tauren",
         "Zandalari Troll Paku",
+        "Zandalari Troll Kimbul",
+        "Blood Elf",
+        "Zandalari Troll Bwonsamdi",
         "Draenei",
         "Dark Iron Dwarf"
     ],
     "spec_id": 66,
-    "subtitle": "UTC 2020-05-12 06:49 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/8687fad9ff\" target=\"blank\">8687fad</a>",
+    "subtitle": "UTC 2020-05-13 06:49 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/6e2913610c\" target=\"blank\">6e29136</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -402,6 +402,6 @@
             }
         }
     },
-    "timestamp": "2020-05-12 06:49",
+    "timestamp": "2020-05-13 06:49",
     "title": "Races | Protection Paladin | Hecticaddcleave"
 }

@@ -1,20 +1,20 @@
 {
     "class_id": 9,
     "data": {
-        "Blood Elf": 89972,
+        "Blood Elf": 89850,
         "Dark Iron Dwarf": 89478,
-        "Dwarf": 90068,
-        "Gnome": 90220,
-        "Goblin": 90280,
-        "Human": 90413,
-        "Mechagnome": 89932,
-        "Nightborne": 90072,
-        "Orc": 89701,
-        "Troll": 91019,
-        "Undead": 89702,
-        "Void Elf": 90103,
-        "Vulpera": 89108,
-        "Worgen": 89973
+        "Dwarf": 89961,
+        "Gnome": 90250,
+        "Goblin": 90285,
+        "Human": 90538,
+        "Mechagnome": 90122,
+        "Nightborne": 89971,
+        "Orc": 89503,
+        "Troll": 91202,
+        "Undead": 89894,
+        "Void Elf": 90040,
+        "Vulpera": 89216,
+        "Worgen": 89953
     },
     "data_type": "races",
     "languages": {
@@ -327,7 +327,7 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "8687fad9ff",
+        "simc_hash": "6e2913610c",
         "spec": "affliction",
         "target_error": "0.2",
         "tier": "25"
@@ -337,19 +337,19 @@
         "Human",
         "Goblin",
         "Gnome",
+        "Mechagnome",
         "Void Elf",
         "Nightborne",
         "Dwarf",
         "Worgen",
-        "Blood Elf",
-        "Mechagnome",
         "Undead",
+        "Blood Elf",
         "Orc",
         "Dark Iron Dwarf",
         "Vulpera"
     ],
     "spec_id": 265,
-    "subtitle": "UTC 2020-05-12 06:53 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/8687fad9ff\" target=\"blank\">8687fad</a>",
+    "subtitle": "UTC 2020-05-13 06:53 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/6e2913610c\" target=\"blank\">6e29136</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -450,6 +450,6 @@
             }
         }
     },
-    "timestamp": "2020-05-12 06:53",
+    "timestamp": "2020-05-13 06:53",
     "title": "Races | Affliction Warlock | Hecticaddcleave"
 }
