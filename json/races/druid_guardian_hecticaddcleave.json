@@ -1,15 +1,15 @@
 {
     "class_id": 11,
     "data": {
-        "Highmountain Tauren": 104405,
-        "Kul Tiran": 104259,
-        "Night Elf": 104234,
-        "Tauren": 104533,
-        "Troll": 104273,
-        "Worgen": 104459,
-        "Zandalari Troll Bwonsamdi": 104057,
-        "Zandalari Troll Kimbul": 104049,
-        "Zandalari Troll Paku": 104145
+        "Highmountain Tauren": 104365,
+        "Kul Tiran": 104449,
+        "Night Elf": 104100,
+        "Tauren": 104331,
+        "Troll": 104079,
+        "Worgen": 104223,
+        "Zandalari Troll Bwonsamdi": 104190,
+        "Zandalari Troll Kimbul": 104213,
+        "Zandalari Troll Paku": 104344
     },
     "data_type": "races",
     "languages": {
@@ -264,24 +264,24 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "40fb636f2b",
+        "simc_hash": "53f0e6a508",
         "spec": "guardian",
         "target_error": "0.2",
         "tier": "25"
     },
     "sorted_data_keys": [
+        "Kul Tiran",
+        "Highmountain Tauren",
+        "Zandalari Troll Paku",
         "Tauren",
         "Worgen",
-        "Highmountain Tauren",
-        "Troll",
-        "Kul Tiran",
-        "Night Elf",
-        "Zandalari Troll Paku",
+        "Zandalari Troll Kimbul",
         "Zandalari Troll Bwonsamdi",
-        "Zandalari Troll Kimbul"
+        "Night Elf",
+        "Troll"
     ],
     "spec_id": 104,
-    "subtitle": "UTC 2020-05-19 06:45 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/40fb636f2b\" target=\"blank\">40fb636</a>",
+    "subtitle": "UTC 2020-05-20 06:45 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/53f0e6a508\" target=\"blank\">53f0e6a</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -382,6 +382,6 @@
             }
         }
     },
-    "timestamp": "2020-05-19 06:45",
+    "timestamp": "2020-05-20 06:45",
     "title": "Races | Guardian Druid | Hecticaddcleave"
 }
