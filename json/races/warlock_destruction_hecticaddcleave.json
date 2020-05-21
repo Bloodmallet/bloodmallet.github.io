@@ -1,20 +1,20 @@
 {
     "class_id": 9,
     "data": {
-        "Blood Elf": 97069,
-        "Dark Iron Dwarf": 96761,
-        "Dwarf": 97540,
-        "Gnome": 97571,
-        "Goblin": 97432,
-        "Human": 97881,
-        "Mechagnome": 97308,
-        "Nightborne": 96923,
-        "Orc": 97060,
-        "Troll": 98527,
+        "Blood Elf": 97010,
+        "Dark Iron Dwarf": 96734,
+        "Dwarf": 97677,
+        "Gnome": 97481,
+        "Goblin": 97469,
+        "Human": 97808,
+        "Mechagnome": 97281,
+        "Nightborne": 97038,
+        "Orc": 96936,
+        "Troll": 98625,
         "Undead": 96703,
-        "Void Elf": 96763,
-        "Vulpera": 96309,
-        "Worgen": 96903
+        "Void Elf": 96922,
+        "Vulpera": 96212,
+        "Worgen": 97048
     },
     "data_type": "races",
     "languages": {
@@ -327,7 +327,7 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "53f0e6a508",
+        "simc_hash": "5f442ba76f",
         "spec": "destruction",
         "target_error": "0.2",
         "tier": "25"
@@ -335,21 +335,21 @@
     "sorted_data_keys": [
         "Troll",
         "Human",
-        "Gnome",
         "Dwarf",
+        "Gnome",
         "Goblin",
         "Mechagnome",
+        "Worgen",
+        "Nightborne",
         "Blood Elf",
         "Orc",
-        "Nightborne",
-        "Worgen",
         "Void Elf",
         "Dark Iron Dwarf",
         "Undead",
         "Vulpera"
     ],
     "spec_id": 267,
-    "subtitle": "UTC 2020-05-20 06:53 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/53f0e6a508\" target=\"blank\">53f0e6a</a>",
+    "subtitle": "UTC 2020-05-21 06:53 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/5f442ba76f\" target=\"blank\">5f442ba</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -450,6 +450,6 @@
             }
         }
     },
-    "timestamp": "2020-05-20 06:53",
+    "timestamp": "2020-05-21 06:53",
     "title": "Races | Destruction Warlock | Hecticaddcleave"
 }
