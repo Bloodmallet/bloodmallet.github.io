@@ -864,6 +864,10 @@ const patrons_rare = [
     "name": "Hekili",
     "text": "⚡"
   },
+  {
+    "name": "Dex",
+    "text": "Dexrodar"
+  },
 ];
 const patrons_uncommon = [
   {
@@ -877,6 +881,10 @@ const patrons_uncommon = [
   {
     "name": "Decap",
     "text": "Decap"
+  },
+  {
+    "name": "Nyalota",
+    "text": "Divine Shield"
   },
   {
     "name": "tmb",
