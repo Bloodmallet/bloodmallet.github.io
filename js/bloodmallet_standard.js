@@ -875,6 +875,10 @@ const patrons_uncommon = [
     "text": "Stork"
   },
   {
+    "name": "Decap",
+    "text": "Decap"
+  },
+  {
     "name": "tmb",
     "text": "buff Mistweaver"
   }
