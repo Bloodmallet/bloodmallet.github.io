@@ -1,27 +1,27 @@
 {
     "class_id": 4,
     "data": {
-        "Blood Elf": 100442,
-        "Dark Iron Dwarf": 99924,
-        "Dwarf": 100958,
-        "Gnome": 100571,
-        "Goblin": 100233,
-        "Human": 100870,
-        "Kul Tiran": 100751,
-        "Maghar Orc": 100308,
-        "Mechagnome": 100584,
-        "Night Elf": 100573,
-        "Nightborne": 100022,
-        "Orc": 99985,
-        "Pandaren": 100124,
-        "Troll": 100004,
-        "Undead": 100381,
-        "Void Elf": 100861,
-        "Vulpera": 100346,
-        "Worgen": 100443,
-        "Zandalari Troll Bwonsamdi": 100185,
-        "Zandalari Troll Kimbul": 100066,
-        "Zandalari Troll Paku": 100392
+        "Blood Elf": 102753,
+        "Dark Iron Dwarf": 102138,
+        "Dwarf": 103110,
+        "Gnome": 102746,
+        "Goblin": 102257,
+        "Human": 103114,
+        "Kul Tiran": 102773,
+        "Maghar Orc": 102512,
+        "Mechagnome": 103031,
+        "Night Elf": 102774,
+        "Nightborne": 102274,
+        "Orc": 102310,
+        "Pandaren": 102459,
+        "Troll": 102274,
+        "Undead": 102682,
+        "Void Elf": 103040,
+        "Vulpera": 102624,
+        "Worgen": 102540,
+        "Zandalari Troll Bwonsamdi": 102317,
+        "Zandalari Troll Kimbul": 102301,
+        "Zandalari Troll Paku": 102825
     },
     "data_type": "races",
     "languages": {
@@ -253,7 +253,7 @@
             "talents": "2120031"
         },
         "chest": {
-            "azerite_powers": "414/413/31/13",
+            "azerite_powers": "414/582/21/13",
             "bonus_id": "4824/1517/4775",
             "id": "174136"
         },
@@ -286,7 +286,7 @@
                 "id": "169223"
             },
             "chest": {
-                "azerite_powers": "414/413/31/13",
+                "azerite_powers": "414/582/21/13",
                 "bonus_id": "4824/1517/4775",
                 "id": "174136"
             },
@@ -333,7 +333,7 @@
                 "id": "172185"
             },
             "shoulders": {
-                "azerite_powers": "175/413/21/13",
+                "azerite_powers": "175/582/21/13",
                 "bonus_id": "4824/1517/4775",
                 "id": "174133"
             },
@@ -378,7 +378,7 @@
         "race": "night_elf",
         "role": "attack",
         "shoulders": {
-            "azerite_powers": "175/413/21/13",
+            "azerite_powers": "175/582/21/13",
             "bonus_id": "4824/1517/4775",
             "id": "174133"
         },
@@ -406,36 +406,36 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "53f0e6a508",
+        "simc_hash": "5f442ba76f",
         "spec": "subtlety",
         "target_error": "0.2",
         "tier": "25"
     },
     "sorted_data_keys": [
-        "Dwarf",
         "Human",
+        "Dwarf",
         "Void Elf",
-        "Kul Tiran",
         "Mechagnome",
-        "Night Elf",
-        "Gnome",
-        "Worgen",
-        "Blood Elf",
         "Zandalari Troll Paku",
+        "Night Elf",
+        "Kul Tiran",
+        "Blood Elf",
+        "Gnome",
         "Undead",
         "Vulpera",
+        "Worgen",
         "Maghar Orc",
-        "Goblin",
-        "Zandalari Troll Bwonsamdi",
         "Pandaren",
-        "Zandalari Troll Kimbul",
-        "Nightborne",
-        "Troll",
+        "Zandalari Troll Bwonsamdi",
         "Orc",
+        "Zandalari Troll Kimbul",
+        "Troll",
+        "Nightborne",
+        "Goblin",
         "Dark Iron Dwarf"
     ],
     "spec_id": 261,
-    "subtitle": "UTC 2020-05-20 06:51 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/53f0e6a508\" target=\"blank\">53f0e6a</a>",
+    "subtitle": "UTC 2020-05-21 06:50 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/5f442ba76f\" target=\"blank\">5f442ba</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -536,6 +536,6 @@
             }
         }
     },
-    "timestamp": "2020-05-20 06:51",
+    "timestamp": "2020-05-21 06:50",
     "title": "Races | Subtlety Rogue | Hecticaddcleave"
 }

@@ -1,27 +1,27 @@
 {
     "class_id": 4,
     "data": {
-        "Blood Elf": 84662,
-        "Dark Iron Dwarf": 83995,
-        "Dwarf": 84849,
-        "Gnome": 84539,
-        "Goblin": 84519,
-        "Human": 85047,
-        "Kul Tiran": 84502,
-        "Maghar Orc": 84496,
-        "Mechagnome": 84484,
-        "Night Elf": 84947,
-        "Nightborne": 84257,
-        "Orc": 84088,
-        "Pandaren": 84263,
-        "Troll": 84351,
-        "Undead": 84455,
-        "Void Elf": 84984,
-        "Vulpera": 84536,
-        "Worgen": 84563,
-        "Zandalari Troll Bwonsamdi": 84297,
-        "Zandalari Troll Kimbul": 84385,
-        "Zandalari Troll Paku": 84642
+        "Blood Elf": 85164,
+        "Dark Iron Dwarf": 84511,
+        "Dwarf": 85319,
+        "Gnome": 85183,
+        "Goblin": 84925,
+        "Human": 85445,
+        "Kul Tiran": 84976,
+        "Maghar Orc": 85041,
+        "Mechagnome": 84940,
+        "Night Elf": 85299,
+        "Nightborne": 84604,
+        "Orc": 84512,
+        "Pandaren": 84713,
+        "Troll": 84835,
+        "Undead": 84914,
+        "Void Elf": 85412,
+        "Vulpera": 84948,
+        "Worgen": 84895,
+        "Zandalari Troll Bwonsamdi": 84648,
+        "Zandalari Troll Kimbul": 84718,
+        "Zandalari Troll Paku": 84940
     },
     "data_type": "races",
     "languages": {
@@ -253,7 +253,7 @@
             "talents": "2120031"
         },
         "chest": {
-            "azerite_powers": "414/413/31/13",
+            "azerite_powers": "414/582/21/13",
             "bonus_id": "4824/1517/4775",
             "id": "174136"
         },
@@ -286,7 +286,7 @@
                 "id": "169223"
             },
             "chest": {
-                "azerite_powers": "414/413/31/13",
+                "azerite_powers": "414/582/21/13",
                 "bonus_id": "4824/1517/4775",
                 "id": "174136"
             },
@@ -333,7 +333,7 @@
                 "id": "172185"
             },
             "shoulders": {
-                "azerite_powers": "175/413/21/13",
+                "azerite_powers": "175/582/21/13",
                 "bonus_id": "4824/1517/4775",
                 "id": "174133"
             },
@@ -378,7 +378,7 @@
         "race": "night_elf",
         "role": "attack",
         "shoulders": {
-            "azerite_powers": "175/413/21/13",
+            "azerite_powers": "175/582/21/13",
             "bonus_id": "4824/1517/4775",
             "id": "174133"
         },
@@ -406,7 +406,7 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "53f0e6a508",
+        "simc_hash": "5f442ba76f",
         "spec": "subtlety",
         "target_error": "0.1",
         "tier": "25"
@@ -414,28 +414,28 @@
     "sorted_data_keys": [
         "Human",
         "Void Elf",
-        "Night Elf",
         "Dwarf",
-        "Blood Elf",
-        "Zandalari Troll Paku",
-        "Worgen",
+        "Night Elf",
         "Gnome",
-        "Vulpera",
-        "Goblin",
-        "Kul Tiran",
+        "Blood Elf",
         "Maghar Orc",
+        "Kul Tiran",
+        "Vulpera",
         "Mechagnome",
+        "Zandalari Troll Paku",
+        "Goblin",
         "Undead",
-        "Zandalari Troll Kimbul",
+        "Worgen",
         "Troll",
-        "Zandalari Troll Bwonsamdi",
+        "Zandalari Troll Kimbul",
         "Pandaren",
+        "Zandalari Troll Bwonsamdi",
         "Nightborne",
         "Orc",
         "Dark Iron Dwarf"
     ],
     "spec_id": 261,
-    "subtitle": "UTC 2020-05-20 06:36 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/53f0e6a508\" target=\"blank\">53f0e6a</a>",
+    "subtitle": "UTC 2020-05-21 06:35 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/5f442ba76f\" target=\"blank\">5f442ba</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -536,6 +536,6 @@
             }
         }
     },
-    "timestamp": "2020-05-20 06:36",
+    "timestamp": "2020-05-21 06:35",
     "title": "Races | Subtlety Rogue | Patchwerk"
 }
