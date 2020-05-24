@@ -2389,7 +2389,9 @@ function update_chart() {
   document.getElementById("chart_title").hidden = false;
   add_profile_information();
   document.getElementById("chart_subtitle").innerHTML = subtitle;
-  document.getElementById("chart_simc_hash").innerHTML = `SimulationCraft build: <a href=\"https://github.com/simulationcraft/simc/commit/${loaded_data[chosen_class][chosen_spec][data_name][fight_style]["simc_settings"]["simc_hash"]}\" target=\"blank\">#${loaded_data[chosen_class][chosen_spec][data_name][fight_style]["simc_settings"]["simc_hash"].substring(0, 5)}</a>`;
+  try {
+    document.getElementById("chart_simc_hash").innerHTML = `SimulationCraft build: <a href=\"https://github.com/simulationcraft/simc/commit/${loaded_data[chosen_class][chosen_spec][data_name][fight_style]["simc_settings"]["simc_hash"]}\" target=\"blank\">#${loaded_data[chosen_class][chosen_spec][data_name][fight_style]["simc_settings"]["simc_hash"].substring(0, 5)}</a>`;
+  } catch (error) { };
 
   // delete all old series data
   while (standard_chart.series[0]) {
@@ -2923,8 +2925,9 @@ function update_trait_stacking_chart() {
   document.getElementById("chart_title").hidden = false;
   add_profile_information();
   document.getElementById("chart_subtitle").innerHTML = subtitle;
-  document.getElementById("chart_simc_hash").innerHTML = `SimulationCraft build: <a href=\"https://github.com/simulationcraft/simc/commit/${loaded_data[chosen_class][chosen_spec][data_view][fight_style]["simc_settings"]["simc_hash"]}\" target=\"blank\">#${loaded_data[chosen_class][chosen_spec][data_view][fight_style]["simc_settings"]["simc_hash"].substring(0, 5)}</a>`;
-
+  try {
+    document.getElementById("chart_simc_hash").innerHTML = `SimulationCraft build: <a href=\"https://github.com/simulationcraft/simc/commit/${loaded_data[chosen_class][chosen_spec][data_view][fight_style]["simc_settings"]["simc_hash"]}\" target=\"blank\">#${loaded_data[chosen_class][chosen_spec][data_view][fight_style]["simc_settings"]["simc_hash"].substring(0, 5)}</a>`;
+  } catch (error) { };
 
   // delete all old series data
   while (standard_chart.series[0]) {
@@ -3802,7 +3805,9 @@ function update_scatter_chart() {
   document.getElementById("chart_title").hidden = true;
   add_profile_information();
   document.getElementById("chart_subtitle").innerHTML = subtitle;
-  document.getElementById("chart_simc_hash").innerHTML = `SimulationCraft build: <a href=\"https://github.com/simulationcraft/simc/commit/${loaded_data[chosen_class][chosen_spec][data_view][fight_style]["simc_settings"]["simc_hash"]}\" target=\"blank\">#${loaded_data[chosen_class][chosen_spec][data_view][fight_style]["simc_settings"]["simc_hash"].substring(0, 5)}</a>`;
+  try {
+    document.getElementById("chart_simc_hash").innerHTML = `SimulationCraft build: <a href=\"https://github.com/simulationcraft/simc/commit/${loaded_data[chosen_class][chosen_spec][data_view][fight_style]["simc_settings"]["simc_hash"]}\" target=\"blank\">#${loaded_data[chosen_class][chosen_spec][data_view][fight_style]["simc_settings"]["simc_hash"].substring(0, 5)}</a>`;
+  } catch (error) { };
 
 
   scatter_chart.redraw();
