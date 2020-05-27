@@ -1,20 +1,20 @@
 {
     "class_id": 9,
     "data": {
-        "Blood Elf": 107866,
-        "Dark Iron Dwarf": 107035,
-        "Dwarf": 107797,
-        "Gnome": 108367,
-        "Goblin": 108034,
-        "Human": 108674,
-        "Mechagnome": 107918,
-        "Nightborne": 107461,
-        "Orc": 107846,
-        "Troll": 108501,
-        "Undead": 107506,
-        "Void Elf": 107218,
-        "Vulpera": 106940,
-        "Worgen": 107703
+        "Blood Elf": 107672,
+        "Dark Iron Dwarf": 107101,
+        "Dwarf": 107812,
+        "Gnome": 108402,
+        "Goblin": 108359,
+        "Human": 108495,
+        "Mechagnome": 107865,
+        "Nightborne": 107336,
+        "Orc": 107675,
+        "Troll": 108519,
+        "Undead": 107362,
+        "Void Elf": 107137,
+        "Vulpera": 106827,
+        "Worgen": 107631
     },
     "data_type": "races",
     "languages": {
@@ -327,20 +327,20 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "2dfda970d2",
+        "simc_hash": "63dfa01912",
         "spec": "demonology",
         "target_error": "0.2",
         "tier": "25"
     },
     "sorted_data_keys": [
-        "Human",
         "Troll",
+        "Human",
         "Gnome",
         "Goblin",
         "Mechagnome",
-        "Blood Elf",
-        "Orc",
         "Dwarf",
+        "Orc",
+        "Blood Elf",
         "Worgen",
         "Undead",
         "Nightborne",
@@ -349,7 +349,7 @@
         "Vulpera"
     ],
     "spec_id": 266,
-    "subtitle": "UTC 2020-05-26 06:53 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/2dfda970d2\" target=\"blank\">2dfda97</a>",
+    "subtitle": "UTC 2020-05-27 06:52 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/63dfa01912\" target=\"blank\">63dfa01</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -450,6 +450,6 @@
             }
         }
     },
-    "timestamp": "2020-05-26 06:53",
+    "timestamp": "2020-05-27 06:52",
     "title": "Races | Demonology Warlock | Hecticaddcleave"
 }
