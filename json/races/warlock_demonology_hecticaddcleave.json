@@ -1,20 +1,20 @@
 {
     "class_id": 9,
     "data": {
-        "Blood Elf": 107672,
-        "Dark Iron Dwarf": 107101,
-        "Dwarf": 107812,
-        "Gnome": 108402,
-        "Goblin": 108359,
-        "Human": 108495,
-        "Mechagnome": 107865,
-        "Nightborne": 107336,
-        "Orc": 107675,
-        "Troll": 108519,
-        "Undead": 107362,
-        "Void Elf": 107137,
-        "Vulpera": 106827,
-        "Worgen": 107631
+        "Blood Elf": 107850,
+        "Dark Iron Dwarf": 106958,
+        "Dwarf": 107827,
+        "Gnome": 108393,
+        "Goblin": 108335,
+        "Human": 108671,
+        "Mechagnome": 107900,
+        "Nightborne": 107283,
+        "Orc": 107893,
+        "Troll": 108543,
+        "Undead": 107379,
+        "Void Elf": 107110,
+        "Vulpera": 106659,
+        "Worgen": 107748
     },
     "data_type": "races",
     "languages": {
@@ -327,20 +327,20 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "63dfa01912",
+        "simc_hash": "80d3f8a87a",
         "spec": "demonology",
         "target_error": "0.2",
         "tier": "25"
     },
     "sorted_data_keys": [
-        "Troll",
         "Human",
+        "Troll",
         "Gnome",
         "Goblin",
         "Mechagnome",
-        "Dwarf",
         "Orc",
         "Blood Elf",
+        "Dwarf",
         "Worgen",
         "Undead",
         "Nightborne",
@@ -349,7 +349,7 @@
         "Vulpera"
     ],
     "spec_id": 266,
-    "subtitle": "UTC 2020-05-27 06:52 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/63dfa01912\" target=\"blank\">63dfa01</a>",
+    "subtitle": "UTC 2020-05-28 06:52 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/80d3f8a87a\" target=\"blank\">80d3f8a</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -450,6 +450,6 @@
             }
         }
     },
-    "timestamp": "2020-05-27 06:52",
+    "timestamp": "2020-05-28 06:52",
     "title": "Races | Demonology Warlock | Hecticaddcleave"
 }
