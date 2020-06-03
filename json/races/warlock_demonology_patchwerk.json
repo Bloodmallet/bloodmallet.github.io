@@ -1,20 +1,20 @@
 {
     "class_id": 9,
     "data": {
-        "Blood Elf": 92981,
-        "Dark Iron Dwarf": 92555,
-        "Dwarf": 92998,
-        "Gnome": 93231,
-        "Goblin": 93144,
-        "Human": 93711,
-        "Mechagnome": 93001,
-        "Nightborne": 92773,
-        "Orc": 92995,
-        "Troll": 93805,
-        "Undead": 92697,
-        "Void Elf": 92645,
-        "Vulpera": 92328,
-        "Worgen": 92986
+        "Blood Elf": 93017,
+        "Dark Iron Dwarf": 92523,
+        "Dwarf": 92965,
+        "Gnome": 93309,
+        "Goblin": 93224,
+        "Human": 93674,
+        "Mechagnome": 93013,
+        "Nightborne": 92842,
+        "Orc": 93082,
+        "Troll": 93838,
+        "Undead": 92656,
+        "Void Elf": 92679,
+        "Vulpera": 92256,
+        "Worgen": 92965
     },
     "data_type": "races",
     "languages": {
@@ -327,7 +327,7 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "ab7c685bdf",
+        "simc_hash": "c7888967b7",
         "spec": "demonology",
         "target_error": "0.1",
         "tier": "25"
@@ -337,19 +337,19 @@
         "Human",
         "Gnome",
         "Goblin",
+        "Orc",
+        "Blood Elf",
         "Mechagnome",
         "Dwarf",
-        "Orc",
         "Worgen",
-        "Blood Elf",
         "Nightborne",
-        "Undead",
         "Void Elf",
+        "Undead",
         "Dark Iron Dwarf",
         "Vulpera"
     ],
     "spec_id": 266,
-    "subtitle": "UTC 2020-06-02 06:38 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/ab7c685bdf\" target=\"blank\">ab7c685</a>",
+    "subtitle": "UTC 2020-06-03 06:38 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c7888967b7\" target=\"blank\">c788896</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -450,6 +450,6 @@
             }
         }
     },
-    "timestamp": "2020-06-02 06:38",
+    "timestamp": "2020-06-03 06:38",
     "title": "Races | Demonology Warlock | Patchwerk"
 }
