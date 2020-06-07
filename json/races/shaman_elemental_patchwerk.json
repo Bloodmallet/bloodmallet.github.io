@@ -1,21 +1,21 @@
 {
     "class_id": 7,
     "data": {
-        "Dark Iron Dwarf": 86963,
-        "Draenei": 87010,
-        "Dwarf": 88100,
-        "Goblin": 87617,
-        "Highmountain Tauren": 87452,
-        "Kul Tiran": 87477,
-        "Maghar Orc": 87303,
-        "Orc": 87038,
-        "Pandaren": 87526,
-        "Tauren": 87992,
+        "Dark Iron Dwarf": 86997,
+        "Draenei": 87086,
+        "Dwarf": 88073,
+        "Goblin": 87570,
+        "Highmountain Tauren": 87512,
+        "Kul Tiran": 87448,
+        "Maghar Orc": 87287,
+        "Orc": 87106,
+        "Pandaren": 87618,
+        "Tauren": 88072,
         "Troll": 87556,
-        "Vulpera": 87028,
-        "Zandalari Troll Bwonsamdi": 87290,
-        "Zandalari Troll Kimbul": 87442,
-        "Zandalari Troll Paku": 87528
+        "Vulpera": 87107,
+        "Zandalari Troll Bwonsamdi": 87222,
+        "Zandalari Troll Kimbul": 87491,
+        "Zandalari Troll Paku": 87379
     },
     "data_type": "races",
     "languages": {
@@ -338,7 +338,7 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "8c9f866bfd",
+        "simc_hash": "4b25a374d2",
         "spec": "elemental",
         "target_error": "0.1",
         "tier": "25"
@@ -346,22 +346,22 @@
     "sorted_data_keys": [
         "Dwarf",
         "Tauren",
+        "Pandaren",
         "Goblin",
         "Troll",
-        "Zandalari Troll Paku",
-        "Pandaren",
-        "Kul Tiran",
         "Highmountain Tauren",
         "Zandalari Troll Kimbul",
+        "Kul Tiran",
+        "Zandalari Troll Paku",
         "Maghar Orc",
         "Zandalari Troll Bwonsamdi",
-        "Orc",
         "Vulpera",
+        "Orc",
         "Draenei",
         "Dark Iron Dwarf"
     ],
     "spec_id": 262,
-    "subtitle": "UTC 2020-06-06 06:36 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/8c9f866bfd\" target=\"blank\">8c9f866</a>",
+    "subtitle": "UTC 2020-06-07 06:37 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/4b25a374d2\" target=\"blank\">4b25a37</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -462,6 +462,6 @@
             }
         }
     },
-    "timestamp": "2020-06-06 06:36",
+    "timestamp": "2020-06-07 06:37",
     "title": "Races | Elemental Shaman | Patchwerk"
 }
