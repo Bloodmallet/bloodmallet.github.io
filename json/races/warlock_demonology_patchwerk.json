@@ -1,20 +1,20 @@
 {
     "class_id": 9,
     "data": {
-        "Blood Elf": 93039,
-        "Dark Iron Dwarf": 92451,
-        "Dwarf": 93039,
-        "Gnome": 93251,
-        "Goblin": 93185,
-        "Human": 93601,
-        "Mechagnome": 92984,
-        "Nightborne": 92708,
-        "Orc": 92992,
-        "Troll": 93739,
-        "Undead": 92775,
-        "Void Elf": 92608,
-        "Vulpera": 92272,
-        "Worgen": 92862
+        "Blood Elf": 92953,
+        "Dark Iron Dwarf": 92492,
+        "Dwarf": 92965,
+        "Gnome": 93184,
+        "Goblin": 93151,
+        "Human": 93627,
+        "Mechagnome": 93024,
+        "Nightborne": 92748,
+        "Orc": 93019,
+        "Troll": 93838,
+        "Undead": 92722,
+        "Void Elf": 92653,
+        "Vulpera": 92267,
+        "Worgen": 93030
     },
     "data_type": "races",
     "languages": {
@@ -327,7 +327,7 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "3ab7c1855b",
+        "simc_hash": "86b19e5c87",
         "spec": "demonology",
         "target_error": "0.1",
         "tier": "25"
@@ -337,19 +337,19 @@
         "Human",
         "Gnome",
         "Goblin",
+        "Worgen",
+        "Mechagnome",
+        "Orc",
         "Dwarf",
         "Blood Elf",
-        "Orc",
-        "Mechagnome",
-        "Worgen",
-        "Undead",
         "Nightborne",
+        "Undead",
         "Void Elf",
         "Dark Iron Dwarf",
         "Vulpera"
     ],
     "spec_id": 266,
-    "subtitle": "UTC 2020-06-15 06:38 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/3ab7c1855b\" target=\"blank\">3ab7c18</a>",
+    "subtitle": "UTC 2020-06-16 06:38 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/86b19e5c87\" target=\"blank\">86b19e5</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -450,6 +450,6 @@
             }
         }
     },
-    "timestamp": "2020-06-15 06:38",
+    "timestamp": "2020-06-16 06:38",
     "title": "Races | Demonology Warlock | Patchwerk"
 }

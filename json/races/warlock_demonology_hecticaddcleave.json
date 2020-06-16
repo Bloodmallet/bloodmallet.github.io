@@ -1,20 +1,20 @@
 {
     "class_id": 9,
     "data": {
-        "Blood Elf": 107592,
-        "Dark Iron Dwarf": 107070,
-        "Dwarf": 107619,
-        "Gnome": 108191,
-        "Goblin": 108389,
-        "Human": 108744,
-        "Mechagnome": 107711,
-        "Nightborne": 107582,
-        "Orc": 107710,
-        "Troll": 108513,
-        "Undead": 107124,
-        "Void Elf": 107246,
-        "Vulpera": 106822,
-        "Worgen": 107635
+        "Blood Elf": 107768,
+        "Dark Iron Dwarf": 107035,
+        "Dwarf": 107852,
+        "Gnome": 108263,
+        "Goblin": 108173,
+        "Human": 108647,
+        "Mechagnome": 107834,
+        "Nightborne": 107489,
+        "Orc": 107683,
+        "Troll": 108526,
+        "Undead": 107258,
+        "Void Elf": 107177,
+        "Vulpera": 106954,
+        "Worgen": 107625
     },
     "data_type": "races",
     "languages": {
@@ -327,7 +327,7 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "3ab7c1855b",
+        "simc_hash": "86b19e5c87",
         "spec": "demonology",
         "target_error": "0.2",
         "tier": "25"
@@ -335,21 +335,21 @@
     "sorted_data_keys": [
         "Human",
         "Troll",
-        "Goblin",
         "Gnome",
+        "Goblin",
+        "Dwarf",
         "Mechagnome",
+        "Blood Elf",
         "Orc",
         "Worgen",
-        "Dwarf",
-        "Blood Elf",
         "Nightborne",
-        "Void Elf",
         "Undead",
+        "Void Elf",
         "Dark Iron Dwarf",
         "Vulpera"
     ],
     "spec_id": 266,
-    "subtitle": "UTC 2020-06-15 06:53 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/3ab7c1855b\" target=\"blank\">3ab7c18</a>",
+    "subtitle": "UTC 2020-06-16 06:54 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/86b19e5c87\" target=\"blank\">86b19e5</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -450,6 +450,6 @@
             }
         }
     },
-    "timestamp": "2020-06-15 06:53",
+    "timestamp": "2020-06-16 06:54",
     "title": "Races | Demonology Warlock | Hecticaddcleave"
 }
