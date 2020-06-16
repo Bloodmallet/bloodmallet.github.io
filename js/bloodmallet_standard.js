@@ -141,6 +141,8 @@ const translation_classes = [
   "translate_azerite_traits",
   "translate_races",
   "translate_secondary_distributions",
+  "translate_essences",
+  "translate_corruptions",
   "translate_patchwerk",
   "translate_hecticaddcleave",
   "translate_itemlevel",
@@ -1579,7 +1581,7 @@ function update_advanced_chart_options() {
 
   let apply_changes_button = document.createElement("button");
   button.appendChild(apply_changes_button);
-  apply_changes_button.className = "btn-data " + chosen_class + "-button";
+  apply_changes_button.className = "btn-data " + chosen_class + "-button translate_apply_changes";
   apply_changes_button.type = "button";
   apply_changes_button.setAttribute("data-toggle", "collapse");
   apply_changes_button.setAttribute("data-target", "#advanced_chart_options_area");
