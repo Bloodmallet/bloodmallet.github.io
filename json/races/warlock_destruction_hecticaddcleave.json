@@ -1,20 +1,20 @@
 {
     "class_id": 9,
     "data": {
-        "Blood Elf": 96974,
-        "Dark Iron Dwarf": 96692,
-        "Dwarf": 97637,
-        "Gnome": 97383,
-        "Goblin": 97392,
-        "Human": 97676,
-        "Mechagnome": 97387,
-        "Nightborne": 97185,
-        "Orc": 96810,
-        "Troll": 98659,
-        "Undead": 96895,
-        "Void Elf": 96765,
-        "Vulpera": 96490,
-        "Worgen": 96911
+        "Blood Elf": 97172,
+        "Dark Iron Dwarf": 96659,
+        "Dwarf": 97596,
+        "Gnome": 97431,
+        "Goblin": 97562,
+        "Human": 97713,
+        "Mechagnome": 97341,
+        "Nightborne": 97096,
+        "Orc": 96913,
+        "Troll": 98761,
+        "Undead": 96811,
+        "Void Elf": 96910,
+        "Vulpera": 96309,
+        "Worgen": 96916
     },
     "data_type": "races",
     "languages": {
@@ -327,7 +327,7 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "7bd51a3b9b",
+        "simc_hash": "ac32016fc3",
         "spec": "destruction",
         "target_error": "0.2",
         "tier": "25"
@@ -337,19 +337,19 @@
         "Human",
         "Dwarf",
         "Goblin",
-        "Mechagnome",
         "Gnome",
-        "Nightborne",
+        "Mechagnome",
         "Blood Elf",
+        "Nightborne",
         "Worgen",
-        "Undead",
         "Orc",
         "Void Elf",
+        "Undead",
         "Dark Iron Dwarf",
         "Vulpera"
     ],
     "spec_id": 267,
-    "subtitle": "UTC 2020-06-25 06:53 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/7bd51a3b9b\" target=\"blank\">7bd51a3</a>",
+    "subtitle": "UTC 2020-06-26 06:53 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/ac32016fc3\" target=\"blank\">ac32016</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -450,6 +450,6 @@
             }
         }
     },
-    "timestamp": "2020-06-25 06:53",
+    "timestamp": "2020-06-26 06:53",
     "title": "Races | Destruction Warlock | Hecticaddcleave"
 }
