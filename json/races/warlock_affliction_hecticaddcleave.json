@@ -1,19 +1,19 @@
 {
     "class_id": 9,
     "data": {
-        "Blood Elf": 89551,
-        "Dark Iron Dwarf": 89161,
-        "Dwarf": 89697,
-        "Gnome": 89744,
-        "Goblin": 89724,
-        "Human": 90105,
-        "Mechagnome": 89510,
-        "Nightborne": 89598,
-        "Orc": 89335,
-        "Troll": 90422,
-        "Undead": 89385,
-        "Void Elf": 89665,
-        "Vulpera": 88871,
+        "Blood Elf": 89556,
+        "Dark Iron Dwarf": 89022,
+        "Dwarf": 89645,
+        "Gnome": 89637,
+        "Goblin": 89744,
+        "Human": 90025,
+        "Mechagnome": 89453,
+        "Nightborne": 89754,
+        "Orc": 89273,
+        "Troll": 90474,
+        "Undead": 89328,
+        "Void Elf": 89650,
+        "Vulpera": 88760,
         "Worgen": 89513
     },
     "data_type": "races",
@@ -327,7 +327,7 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "63139ba790",
+        "simc_hash": "c5f7e668ad",
         "spec": "affliction",
         "target_error": "0.2",
         "tier": "25"
@@ -335,11 +335,11 @@
     "sorted_data_keys": [
         "Troll",
         "Human",
-        "Gnome",
-        "Goblin",
-        "Dwarf",
-        "Void Elf",
         "Nightborne",
+        "Goblin",
+        "Void Elf",
+        "Dwarf",
+        "Gnome",
         "Blood Elf",
         "Worgen",
         "Mechagnome",
@@ -349,7 +349,7 @@
         "Vulpera"
     ],
     "spec_id": 265,
-    "subtitle": "UTC 2020-07-10 06:53 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/63139ba790\" target=\"blank\">63139ba</a>",
+    "subtitle": "UTC 2020-07-11 06:53 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c5f7e668ad\" target=\"blank\">c5f7e66</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -450,6 +450,6 @@
             }
         }
     },
-    "timestamp": "2020-07-10 06:53",
+    "timestamp": "2020-07-11 06:53",
     "title": "Races | Affliction Warlock | Hecticaddcleave"
 }
