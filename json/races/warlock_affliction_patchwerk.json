@@ -1,20 +1,20 @@
 {
     "class_id": 9,
     "data": {
-        "Blood Elf": 92156,
-        "Dark Iron Dwarf": 91696,
-        "Dwarf": 92289,
-        "Gnome": 92618,
-        "Goblin": 92485,
-        "Human": 92814,
-        "Mechagnome": 92073,
-        "Nightborne": 92332,
-        "Orc": 91807,
-        "Troll": 93078,
-        "Undead": 92090,
+        "Blood Elf": 92239,
+        "Dark Iron Dwarf": 91713,
+        "Dwarf": 92353,
+        "Gnome": 92443,
+        "Goblin": 92509,
+        "Human": 92889,
+        "Mechagnome": 92152,
+        "Nightborne": 92407,
+        "Orc": 91808,
+        "Troll": 93177,
+        "Undead": 92083,
         "Void Elf": 92510,
-        "Vulpera": 91517,
-        "Worgen": 92177
+        "Vulpera": 91600,
+        "Worgen": 92167
     },
     "data_type": "races",
     "languages": {
@@ -327,7 +327,7 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "24aa9d28de",
+        "simc_hash": "162d75ef40",
         "spec": "affliction",
         "target_error": "0.1",
         "tier": "25"
@@ -335,21 +335,21 @@
     "sorted_data_keys": [
         "Troll",
         "Human",
-        "Gnome",
         "Void Elf",
         "Goblin",
+        "Gnome",
         "Nightborne",
         "Dwarf",
-        "Worgen",
         "Blood Elf",
-        "Undead",
+        "Worgen",
         "Mechagnome",
+        "Undead",
         "Orc",
         "Dark Iron Dwarf",
         "Vulpera"
     ],
     "spec_id": 265,
-    "subtitle": "UTC 2020-07-24 06:38 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/24aa9d28de\" target=\"blank\">24aa9d2</a>",
+    "subtitle": "UTC 2020-07-25 06:37 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/162d75ef40\" target=\"blank\">162d75e</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -450,6 +450,6 @@
             }
         }
     },
-    "timestamp": "2020-07-24 06:38",
+    "timestamp": "2020-07-25 06:37",
     "title": "Races | Affliction Warlock | Patchwerk"
 }
