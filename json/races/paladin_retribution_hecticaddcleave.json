@@ -1,16 +1,16 @@
 {
     "class_id": 2,
     "data": {
-        "Blood Elf": 130177,
-        "Dark Iron Dwarf": 129662,
-        "Draenei": 129811,
-        "Dwarf": 131035,
-        "Human": 131285,
-        "Lightforged Draenei": 132300,
-        "Tauren": 130960,
-        "Zandalari Troll Bwonsamdi": 129831,
-        "Zandalari Troll Kimbul": 129896,
-        "Zandalari Troll Paku": 130556
+        "Blood Elf": 129911,
+        "Dark Iron Dwarf": 129779,
+        "Draenei": 129807,
+        "Dwarf": 131005,
+        "Human": 131451,
+        "Lightforged Draenei": 131860,
+        "Tauren": 131071,
+        "Zandalari Troll Bwonsamdi": 129711,
+        "Zandalari Troll Kimbul": 130059,
+        "Zandalari Troll Paku": 130452
     },
     "data_type": "races",
     "languages": {
@@ -275,7 +275,7 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "162d75ef40",
+        "simc_hash": "205865b60a",
         "spec": "retribution",
         "target_error": "0.2",
         "tier": "25"
@@ -283,17 +283,17 @@
     "sorted_data_keys": [
         "Lightforged Draenei",
         "Human",
-        "Dwarf",
         "Tauren",
+        "Dwarf",
         "Zandalari Troll Paku",
-        "Blood Elf",
         "Zandalari Troll Kimbul",
-        "Zandalari Troll Bwonsamdi",
+        "Blood Elf",
         "Draenei",
-        "Dark Iron Dwarf"
+        "Dark Iron Dwarf",
+        "Zandalari Troll Bwonsamdi"
     ],
     "spec_id": 70,
-    "subtitle": "UTC 2020-07-28 06:48 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/162d75ef40\" target=\"blank\">162d75e</a>",
+    "subtitle": "UTC 2020-07-29 06:48 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/205865b60a\" target=\"blank\">205865b</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -394,6 +394,6 @@
             }
         }
     },
-    "timestamp": "2020-07-28 06:48",
+    "timestamp": "2020-07-29 06:48",
     "title": "Races | Retribution Paladin | Hecticaddcleave"
 }
