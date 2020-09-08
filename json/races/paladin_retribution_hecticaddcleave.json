@@ -1,16 +1,16 @@
 {
     "class_id": 2,
     "data": {
-        "Blood Elf": 129873,
-        "Dark Iron Dwarf": 129805,
-        "Draenei": 129653,
-        "Dwarf": 130870,
-        "Human": 131639,
-        "Lightforged Draenei": 131751,
-        "Tauren": 131098,
-        "Zandalari Troll Bwonsamdi": 129673,
-        "Zandalari Troll Kimbul": 129965,
-        "Zandalari Troll Paku": 130358
+        "Blood Elf": 130152,
+        "Dark Iron Dwarf": 129420,
+        "Draenei": 129463,
+        "Dwarf": 130999,
+        "Human": 131552,
+        "Lightforged Draenei": 131812,
+        "Tauren": 130880,
+        "Zandalari Troll Bwonsamdi": 129890,
+        "Zandalari Troll Kimbul": 129887,
+        "Zandalari Troll Paku": 130637
     },
     "data_type": "races",
     "languages": {
@@ -275,7 +275,7 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "2e438b4513",
+        "simc_hash": "0b0a41249a",
         "spec": "retribution",
         "target_error": "0.2",
         "tier": "25"
@@ -283,17 +283,17 @@
     "sorted_data_keys": [
         "Lightforged Draenei",
         "Human",
-        "Tauren",
         "Dwarf",
+        "Tauren",
         "Zandalari Troll Paku",
-        "Zandalari Troll Kimbul",
         "Blood Elf",
-        "Dark Iron Dwarf",
         "Zandalari Troll Bwonsamdi",
-        "Draenei"
+        "Zandalari Troll Kimbul",
+        "Draenei",
+        "Dark Iron Dwarf"
     ],
     "spec_id": 70,
-    "subtitle": "UTC 2020-09-07 06:48 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/2e438b4513\" target=\"blank\">2e438b4</a>",
+    "subtitle": "UTC 2020-09-08 06:48 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/0b0a41249a\" target=\"blank\">0b0a412</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -394,6 +394,6 @@
             }
         }
     },
-    "timestamp": "2020-09-07 06:48",
+    "timestamp": "2020-09-08 06:48",
     "title": "Races | Retribution Paladin | Hecticaddcleave"
 }
