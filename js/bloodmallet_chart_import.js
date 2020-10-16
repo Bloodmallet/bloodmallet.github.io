@@ -95,7 +95,7 @@ function bloodmallet_chart_import() {
 
   const debug = false;
 
-  const path_to_data = "https://bloodmallet.com/json/";
+  const path_to_data = "https://bfa.bloodmallet.com/json/";
 
 
   /**
