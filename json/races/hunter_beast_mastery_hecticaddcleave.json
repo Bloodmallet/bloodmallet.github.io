@@ -1,31 +1,31 @@
 {
     "class_id": 3,
     "data": {
-        "Blood Elf": 6801,
-        "Dark Iron Dwarf": 6742,
-        "Draenei": 6755,
-        "Dwarf": 6799,
-        "Gnome": 6816,
-        "Goblin": 6821,
-        "Highmountain Tauren": 6777,
-        "Human": 6857,
-        "Kul Tiran": 6766,
-        "Lightforged Draenei": 6831,
-        "Maghar Orc": 6738,
-        "Mechagnome": 6829,
-        "Night Elf": 6823,
-        "Nightborne": 6736,
-        "Orc": 6796,
-        "Pandaren": 6826,
-        "Tauren": 6802,
-        "Troll": 6812,
-        "Undead": 6757,
-        "Void Elf": 6728,
-        "Vulpera": 6778,
-        "Worgen": 6813,
-        "Zandalari Troll Bwonsamdi": 6765,
-        "Zandalari Troll Kimbul": 6767,
-        "Zandalari Troll Paku": 6837
+        "Blood Elf": 8172,
+        "Dark Iron Dwarf": 8067,
+        "Draenei": 8104,
+        "Dwarf": 8171,
+        "Gnome": 8177,
+        "Goblin": 8161,
+        "Highmountain Tauren": 8128,
+        "Human": 8214,
+        "Kul Tiran": 8126,
+        "Lightforged Draenei": 8193,
+        "Maghar Orc": 8094,
+        "Mechagnome": 8166,
+        "Night Elf": 8176,
+        "Nightborne": 8083,
+        "Orc": 8161,
+        "Pandaren": 8163,
+        "Tauren": 8185,
+        "Troll": 8146,
+        "Undead": 8104,
+        "Void Elf": 8102,
+        "Vulpera": 8141,
+        "Worgen": 8176,
+        "Zandalari Troll Bwonsamdi": 8108,
+        "Zandalari Troll Kimbul": 8108,
+        "Zandalari Troll Paku": 8190
     },
     "data_type": "races",
     "languages": {
@@ -304,23 +304,27 @@
         },
         "feet": {
             "bonus_id": "1808",
+            "gem_id": "168639",
             "id": "174160",
             "ilevel": "130"
         },
         "finger1": {
             "bonus_id": "4802",
             "enchant": "pact_of_critical_strike",
+            "gem_id": "168639",
             "id": "169157",
             "ilevel": "120"
         },
         "finger2": {
             "bonus_id": "4802",
             "enchant": "pact_of_critical_strike",
+            "gem_id": "168639",
             "id": "169159",
             "ilevel": "120"
         },
         "hands": {
             "bonus_id": "1808",
+            "gem_id": "168639",
             "id": "174162",
             "ilevel": "130"
         },
@@ -343,23 +347,27 @@
             },
             "feet": {
                 "bonus_id": "1808",
+                "gem_id": "168639",
                 "id": "174160",
                 "ilevel": "130"
             },
             "finger1": {
                 "bonus_id": "4802",
                 "enchant": "pact_of_critical_strike",
+                "gem_id": "168639",
                 "id": "169157",
                 "ilevel": "120"
             },
             "finger2": {
                 "bonus_id": "4802",
                 "enchant": "pact_of_critical_strike",
+                "gem_id": "168639",
                 "id": "169159",
                 "ilevel": "120"
             },
             "hands": {
                 "bonus_id": "1808",
+                "gem_id": "168639",
                 "id": "174162",
                 "ilevel": "130"
             },
@@ -371,12 +379,14 @@
             },
             "legs": {
                 "bonus_id": "1808",
+                "gem_id": "168639",
                 "id": "174155",
                 "ilevel": "130"
             },
             "main_hand": {
                 "bonus_id": "1808",
                 "enchant": "incendiary_ammunition",
+                "gem_id": "168639",
                 "id": "172229",
                 "ilevel": "140"
             },
@@ -387,32 +397,39 @@
                 "ilevel": "153"
             },
             "shoulders": {
-                "azerite_powers": "479/30/13",
+                "azerite_powers": "211/569/18/13",
                 "bonus_id": "4779/1512/4786/4775",
-                "id": "159376"
+                "id": "169074",
+                "ilevel": "135"
             },
             "trinket1": {
                 "bonus_id": "1808",
+                "gem_id": "168639",
                 "id": "174500",
                 "ilevel": "130"
             },
             "trinket2": {
                 "bonus_id": "1808",
+                "gem_id": "168639",
                 "id": "159623",
                 "ilevel": "120"
             },
             "waist": {
                 "bonus_id": "1808",
+                "gem_id": "168639",
                 "id": "174158",
                 "ilevel": "140"
             },
             "wrists": {
-                "bonus_id": "4779/1512/4786",
-                "id": "159397"
+                "bonus_id": "1808",
+                "gem_id": "168639",
+                "id": "159380",
+                "ilevel": "120"
             }
         },
         "legs": {
             "bonus_id": "1808",
+            "gem_id": "168639",
             "id": "174155",
             "ilevel": "130"
         },
@@ -420,6 +437,7 @@
         "main_hand": {
             "bonus_id": "1808",
             "enchant": "incendiary_ammunition",
+            "gem_id": "168639",
             "id": "172229",
             "ilevel": "140"
         },
@@ -433,30 +451,36 @@
         "race": "human",
         "role": "attack",
         "shoulders": {
-            "azerite_powers": "479/30/13",
+            "azerite_powers": "211/569/18/13",
             "bonus_id": "4779/1512/4786/4775",
-            "id": "159376"
+            "id": "169074",
+            "ilevel": "135"
         },
         "spec": "beast_mastery",
         "talents": "2202012",
         "trinket1": {
             "bonus_id": "1808",
+            "gem_id": "168639",
             "id": "174500",
             "ilevel": "130"
         },
         "trinket2": {
             "bonus_id": "1808",
+            "gem_id": "168639",
             "id": "159623",
             "ilevel": "120"
         },
         "waist": {
             "bonus_id": "1808",
+            "gem_id": "168639",
             "id": "174158",
             "ilevel": "140"
         },
         "wrists": {
-            "bonus_id": "4779/1512/4786",
-            "id": "159397"
+            "bonus_id": "1808",
+            "gem_id": "168639",
+            "id": "159380",
+            "ilevel": "120"
         }
     },
     "simc_settings": {
@@ -471,33 +495,33 @@
     },
     "sorted_data_keys": [
         "Human",
-        "Zandalari Troll Paku",
         "Lightforged Draenei",
-        "Mechagnome",
-        "Pandaren",
-        "Night Elf",
-        "Goblin",
-        "Gnome",
-        "Worgen",
-        "Troll",
+        "Zandalari Troll Paku",
         "Tauren",
+        "Gnome",
+        "Night Elf",
+        "Worgen",
         "Blood Elf",
         "Dwarf",
+        "Mechagnome",
+        "Pandaren",
+        "Goblin",
         "Orc",
+        "Troll",
         "Vulpera",
         "Highmountain Tauren",
-        "Zandalari Troll Kimbul",
         "Kul Tiran",
+        "Zandalari Troll Kimbul",
         "Zandalari Troll Bwonsamdi",
-        "Undead",
         "Draenei",
-        "Dark Iron Dwarf",
+        "Undead",
+        "Void Elf",
         "Maghar Orc",
         "Nightborne",
-        "Void Elf"
+        "Dark Iron Dwarf"
     ],
     "spec_id": 253,
-    "subtitle": "UTC 2020-10-16 15:57 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/acf9c57b2e\" target=\"blank\">acf9c57</a>",
+    "subtitle": "UTC 2020-10-16 18:13 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/acf9c57b2e\" target=\"blank\">acf9c57</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -598,6 +622,6 @@
             }
         }
     },
-    "timestamp": "2020-10-16 15:57",
+    "timestamp": "2020-10-16 18:13",
     "title": "Races | Beast Mastery Hunter | Hecticaddcleave"
 }

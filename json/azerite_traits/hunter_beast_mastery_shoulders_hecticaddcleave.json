@@ -2,9 +2,9 @@
     "class_id": 3,
     "data": {
         "baseline": {
-            "1_100": 4492,
-            "1_115": 4532,
-            "1_130": 4568
+            "1_100": 4835,
+            "1_115": 4868,
+            "1_130": 4923
         }
     },
     "data_type": "azerite_items_shoulders",
@@ -836,23 +836,27 @@
         },
         "feet": {
             "bonus_id": "1808",
+            "gem_id": "168639",
             "id": "174160",
             "ilevel": "130"
         },
         "finger1": {
             "bonus_id": "4802",
             "enchant": "pact_of_critical_strike",
+            "gem_id": "168639",
             "id": "169157",
             "ilevel": "120"
         },
         "finger2": {
             "bonus_id": "4802",
             "enchant": "pact_of_critical_strike",
+            "gem_id": "168639",
             "id": "169159",
             "ilevel": "120"
         },
         "hands": {
             "bonus_id": "1808",
+            "gem_id": "168639",
             "id": "174162",
             "ilevel": "130"
         },
@@ -873,23 +877,27 @@
             },
             "feet": {
                 "bonus_id": "1808",
+                "gem_id": "168639",
                 "id": "174160",
                 "ilevel": "130"
             },
             "finger1": {
                 "bonus_id": "4802",
                 "enchant": "pact_of_critical_strike",
+                "gem_id": "168639",
                 "id": "169157",
                 "ilevel": "120"
             },
             "finger2": {
                 "bonus_id": "4802",
                 "enchant": "pact_of_critical_strike",
+                "gem_id": "168639",
                 "id": "169159",
                 "ilevel": "120"
             },
             "hands": {
                 "bonus_id": "1808",
+                "gem_id": "168639",
                 "id": "174162",
                 "ilevel": "130"
             },
@@ -900,12 +908,14 @@
             },
             "legs": {
                 "bonus_id": "1808",
+                "gem_id": "168639",
                 "id": "174155",
                 "ilevel": "130"
             },
             "main_hand": {
                 "bonus_id": "1808",
                 "enchant": "incendiary_ammunition",
+                "gem_id": "168639",
                 "id": "172229",
                 "ilevel": "140"
             },
@@ -917,30 +927,37 @@
             },
             "shoulders": {
                 "bonus_id": "4779/1512/4786/4775",
-                "id": "159376"
+                "id": "169074",
+                "ilevel": "135"
             },
             "trinket1": {
                 "bonus_id": "1808",
+                "gem_id": "168639",
                 "id": "174500",
                 "ilevel": "130"
             },
             "trinket2": {
                 "bonus_id": "1808",
+                "gem_id": "168639",
                 "id": "159623",
                 "ilevel": "120"
             },
             "waist": {
                 "bonus_id": "1808",
+                "gem_id": "168639",
                 "id": "174158",
                 "ilevel": "140"
             },
             "wrists": {
-                "bonus_id": "4779/1512/4786",
-                "id": "159397"
+                "bonus_id": "1808",
+                "gem_id": "168639",
+                "id": "159380",
+                "ilevel": "120"
             }
         },
         "legs": {
             "bonus_id": "1808",
+            "gem_id": "168639",
             "id": "174155",
             "ilevel": "130"
         },
@@ -948,6 +965,7 @@
         "main_hand": {
             "bonus_id": "1808",
             "enchant": "incendiary_ammunition",
+            "gem_id": "168639",
             "id": "172229",
             "ilevel": "140"
         },
@@ -962,28 +980,34 @@
         "role": "attack",
         "shoulders": {
             "bonus_id": "4779/1512/4786/4775",
-            "id": "159376"
+            "id": "169074",
+            "ilevel": "135"
         },
         "spec": "beast_mastery",
         "talents": "2202012",
         "trinket1": {
             "bonus_id": "1808",
+            "gem_id": "168639",
             "id": "174500",
             "ilevel": "130"
         },
         "trinket2": {
             "bonus_id": "1808",
+            "gem_id": "168639",
             "id": "159623",
             "ilevel": "120"
         },
         "waist": {
             "bonus_id": "1808",
+            "gem_id": "168639",
             "id": "174158",
             "ilevel": "140"
         },
         "wrists": {
-            "bonus_id": "4779/1512/4786",
-            "id": "159397"
+            "bonus_id": "1808",
+            "gem_id": "168639",
+            "id": "159380",
+            "ilevel": "120"
         }
     },
     "simc_settings": {
@@ -1003,7 +1027,7 @@
     ],
     "sorted_data_keys": [],
     "spec_id": 253,
-    "subtitle": "UTC 2020-10-16 16:39 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/acf9c57b2e\" target=\"blank\">acf9c57</a>",
+    "subtitle": "UTC 2020-10-16 18:54 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/acf9c57b2e\" target=\"blank\">acf9c57</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -1104,7 +1128,7 @@
             }
         }
     },
-    "timestamp": "2020-10-16 16:39",
+    "timestamp": "2020-10-16 18:54",
     "title": "Azerite Items Shoulders | Beast Mastery Hunter | Hecticaddcleave",
     "used_azerite_traits_per_item": {}
 }

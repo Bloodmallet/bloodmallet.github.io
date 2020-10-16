@@ -1,21 +1,21 @@
 {
     "class_id": 7,
     "data": {
-        "Dark Iron Dwarf": 3246,
-        "Draenei": 3263,
-        "Dwarf": 3267,
-        "Goblin": 3275,
-        "Highmountain Tauren": 3260,
-        "Kul Tiran": 3260,
-        "Maghar Orc": 3240,
-        "Orc": 3261,
-        "Pandaren": 3234,
-        "Tauren": 3269,
-        "Troll": 3226,
-        "Vulpera": 3244,
-        "Zandalari Troll Bwonsamdi": 3237,
-        "Zandalari Troll Kimbul": 3241,
-        "Zandalari Troll Paku": 3254
+        "Dark Iron Dwarf": 3370,
+        "Draenei": 3397,
+        "Dwarf": 3396,
+        "Goblin": 3399,
+        "Highmountain Tauren": 3381,
+        "Kul Tiran": 3377,
+        "Maghar Orc": 3362,
+        "Orc": 3385,
+        "Pandaren": 3353,
+        "Tauren": 3390,
+        "Troll": 3352,
+        "Vulpera": 3366,
+        "Zandalari Troll Bwonsamdi": 3364,
+        "Zandalari Troll Kimbul": 3363,
+        "Zandalari Troll Paku": 3375
     },
     "data_type": "races",
     "languages": {
@@ -193,11 +193,13 @@
         },
         "feet": {
             "bonus_id": "4824/1808/6515/1517/4786/6547",
+            "gem_id": "154129",
             "id": "174157"
         },
         "finger1": {
             "bonus_id": "6536/4802/6578/6513/1543/4786/6547",
             "enchant": "pact_of_haste",
+            "gem_id": "168641",
             "id": "159458"
         },
         "finger2": {
@@ -207,6 +209,7 @@
         },
         "hands": {
             "bonus_id": "6536/4802/6578/6579/6547/6513/1543/4786",
+            "gem_id": "168641",
             "id": "159390"
         },
         "head": {
@@ -226,11 +229,13 @@
             },
             "feet": {
                 "bonus_id": "4824/1808/6515/1517/4786/6547",
+                "gem_id": "154129",
                 "id": "174157"
             },
             "finger1": {
                 "bonus_id": "6536/4802/6578/6513/1543/4786/6547",
                 "enchant": "pact_of_haste",
+                "gem_id": "168641",
                 "id": "159458"
             },
             "finger2": {
@@ -240,6 +245,7 @@
             },
             "hands": {
                 "bonus_id": "6536/4802/6578/6579/6547/6513/1543/4786",
+                "gem_id": "168641",
                 "id": "159390"
             },
             "head": {
@@ -249,6 +255,7 @@
             },
             "legs": {
                 "bonus_id": "6530/4802/6578/6513/1538/4786/6547",
+                "gem_id": "168639",
                 "id": "159384"
             },
             "main_hand": {
@@ -266,12 +273,13 @@
                 "id": "159664"
             },
             "shoulders": {
-                "azerite_powers": "479/21/474/13",
-                "bonus_id": "4819/1512/4786/4775",
-                "id": "159376"
+                "azerite_powers": "457/178/18/87/13",
+                "bonus_id": "5448/1543/4786/6512/4775",
+                "id": "159352"
             },
             "trinket1": {
                 "bonus_id": "4824/1808/6515/1517/4786",
+                "gem_id": "168639",
                 "id": "174044"
             },
             "trinket2": {
@@ -283,12 +291,14 @@
                 "id": "174158"
             },
             "wrists": {
-                "bonus_id": "4779/1512/4786",
-                "id": "159356"
+                "bonus_id": "4824/1808/6515/1517/4786/6547",
+                "gem_id": "168642",
+                "id": "174161"
             }
         },
         "legs": {
             "bonus_id": "6530/4802/6578/6513/1538/4786/6547",
+            "gem_id": "168639",
             "id": "159384"
         },
         "level": "50",
@@ -310,14 +320,15 @@
         "race": "dwarf",
         "role": "spell",
         "shoulders": {
-            "azerite_powers": "479/21/474/13",
-            "bonus_id": "4819/1512/4786/4775",
-            "id": "159376"
+            "azerite_powers": "457/178/18/87/13",
+            "bonus_id": "5448/1543/4786/6512/4775",
+            "id": "159352"
         },
         "spec": "elemental",
         "talents": "2301022",
         "trinket1": {
             "bonus_id": "4824/1808/6515/1517/4786",
+            "gem_id": "168639",
             "id": "174044"
         },
         "trinket2": {
@@ -329,8 +340,9 @@
             "id": "174158"
         },
         "wrists": {
-            "bonus_id": "4779/1512/4786",
-            "id": "159356"
+            "bonus_id": "4824/1808/6515/1517/4786/6547",
+            "gem_id": "168642",
+            "id": "174161"
         }
     },
     "simc_settings": {
@@ -345,23 +357,23 @@
     },
     "sorted_data_keys": [
         "Goblin",
-        "Tauren",
-        "Dwarf",
         "Draenei",
+        "Dwarf",
+        "Tauren",
         "Orc",
-        "Kul Tiran",
         "Highmountain Tauren",
+        "Kul Tiran",
         "Zandalari Troll Paku",
         "Dark Iron Dwarf",
         "Vulpera",
+        "Zandalari Troll Bwonsamdi",
         "Zandalari Troll Kimbul",
         "Maghar Orc",
-        "Zandalari Troll Bwonsamdi",
         "Pandaren",
         "Troll"
     ],
     "spec_id": 262,
-    "subtitle": "UTC 2020-10-16 15:59 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/acf9c57b2e\" target=\"blank\">acf9c57</a>",
+    "subtitle": "UTC 2020-10-16 18:15 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/acf9c57b2e\" target=\"blank\">acf9c57</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -462,6 +474,6 @@
             }
         }
     },
-    "timestamp": "2020-10-16 15:59",
+    "timestamp": "2020-10-16 18:15",
     "title": "Races | Elemental Shaman | Hecticaddcleave"
 }

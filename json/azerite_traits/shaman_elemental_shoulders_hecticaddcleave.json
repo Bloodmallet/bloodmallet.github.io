@@ -2,9 +2,9 @@
     "class_id": 7,
     "data": {
         "baseline": {
-            "1_100": 3021,
-            "1_115": 3051,
-            "1_130": 3084
+            "1_100": 3178,
+            "1_115": 3208,
+            "1_130": 3245
         }
     },
     "data_type": "azerite_items_shoulders",
@@ -835,11 +835,13 @@
         },
         "feet": {
             "bonus_id": "4824/1808/6515/1517/4786/6547",
+            "gem_id": "154129",
             "id": "174157"
         },
         "finger1": {
             "bonus_id": "6536/4802/6578/6513/1543/4786/6547",
             "enchant": "pact_of_haste",
+            "gem_id": "168641",
             "id": "159458"
         },
         "finger2": {
@@ -849,6 +851,7 @@
         },
         "hands": {
             "bonus_id": "6536/4802/6578/6579/6547/6513/1543/4786",
+            "gem_id": "168641",
             "id": "159390"
         },
         "head": {
@@ -866,11 +869,13 @@
             },
             "feet": {
                 "bonus_id": "4824/1808/6515/1517/4786/6547",
+                "gem_id": "154129",
                 "id": "174157"
             },
             "finger1": {
                 "bonus_id": "6536/4802/6578/6513/1543/4786/6547",
                 "enchant": "pact_of_haste",
+                "gem_id": "168641",
                 "id": "159458"
             },
             "finger2": {
@@ -880,6 +885,7 @@
             },
             "hands": {
                 "bonus_id": "6536/4802/6578/6579/6547/6513/1543/4786",
+                "gem_id": "168641",
                 "id": "159390"
             },
             "head": {
@@ -888,6 +894,7 @@
             },
             "legs": {
                 "bonus_id": "6530/4802/6578/6513/1538/4786/6547",
+                "gem_id": "168639",
                 "id": "159384"
             },
             "main_hand": {
@@ -905,11 +912,12 @@
                 "id": "159664"
             },
             "shoulders": {
-                "bonus_id": "4819/1512/4786/4775",
-                "id": "159376"
+                "bonus_id": "5448/1543/4786/6512/4775",
+                "id": "159352"
             },
             "trinket1": {
                 "bonus_id": "4824/1808/6515/1517/4786",
+                "gem_id": "168639",
                 "id": "174044"
             },
             "trinket2": {
@@ -921,12 +929,14 @@
                 "id": "174158"
             },
             "wrists": {
-                "bonus_id": "4779/1512/4786",
-                "id": "159356"
+                "bonus_id": "4824/1808/6515/1517/4786/6547",
+                "gem_id": "168642",
+                "id": "174161"
             }
         },
         "legs": {
             "bonus_id": "6530/4802/6578/6513/1538/4786/6547",
+            "gem_id": "168639",
             "id": "159384"
         },
         "level": "50",
@@ -948,13 +958,14 @@
         "race": "dwarf",
         "role": "spell",
         "shoulders": {
-            "bonus_id": "4819/1512/4786/4775",
-            "id": "159376"
+            "bonus_id": "5448/1543/4786/6512/4775",
+            "id": "159352"
         },
         "spec": "elemental",
         "talents": "2301022",
         "trinket1": {
             "bonus_id": "4824/1808/6515/1517/4786",
+            "gem_id": "168639",
             "id": "174044"
         },
         "trinket2": {
@@ -966,8 +977,9 @@
             "id": "174158"
         },
         "wrists": {
-            "bonus_id": "4779/1512/4786",
-            "id": "159356"
+            "bonus_id": "4824/1808/6515/1517/4786/6547",
+            "gem_id": "168642",
+            "id": "174161"
         }
     },
     "simc_settings": {
@@ -975,7 +987,7 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "acf9c57b2e",
+        "simc_hash": "8ea0094aea",
         "spec": "elemental",
         "target_error": "0.2",
         "tier": "PR"
@@ -987,7 +999,7 @@
     ],
     "sorted_data_keys": [],
     "spec_id": 262,
-    "subtitle": "UTC 2020-10-16 16:51 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/acf9c57b2e\" target=\"blank\">acf9c57</a>",
+    "subtitle": "UTC 2020-10-16 19:06 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/8ea0094aea\" target=\"blank\">8ea0094</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -1088,7 +1100,7 @@
             }
         }
     },
-    "timestamp": "2020-10-16 16:51",
+    "timestamp": "2020-10-16 19:06",
     "title": "Azerite Items Shoulders | Elemental Shaman | Hecticaddcleave",
     "used_azerite_traits_per_item": {}
 }
