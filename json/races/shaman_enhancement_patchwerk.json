@@ -1,21 +1,21 @@
 {
     "class_id": 7,
     "data": {
-        "Dark Iron Dwarf": 91061,
-        "Draenei": 91176,
-        "Dwarf": 91905,
-        "Goblin": 91666,
-        "Highmountain Tauren": 91636,
-        "Kul Tiran": 91606,
-        "Maghar Orc": 91428,
-        "Orc": 91083,
-        "Pandaren": 91673,
-        "Tauren": 91846,
-        "Troll": 91801,
-        "Vulpera": 91232,
-        "Zandalari Troll Bwonsamdi": 91442,
-        "Zandalari Troll Kimbul": 91418,
-        "Zandalari Troll Paku": 91616
+        "Dark Iron Dwarf": 5080,
+        "Draenei": 5081,
+        "Dwarf": 5117,
+        "Goblin": 5113,
+        "Highmountain Tauren": 5102,
+        "Kul Tiran": 5095,
+        "Maghar Orc": 5067,
+        "Orc": 5090,
+        "Pandaren": 5052,
+        "Tauren": 5118,
+        "Troll": 5112,
+        "Vulpera": 5078,
+        "Zandalari Troll Bwonsamdi": 5096,
+        "Zandalari Troll Kimbul": 5090,
+        "Zandalari Troll Paku": 5107
     },
     "data_type": "races",
     "languages": {
@@ -171,20 +171,20 @@
         }
     },
     "profile": {
-        "azerite_essences": "4:3/35:3/27:3/23:3",
+        "azerite_essences": "14:3/23:3/12:3/35:3",
         "back": {
             "bonus_id": "6286",
             "id": "169223"
         },
         "character": {
-            "azerite_essences": "4:3/35:3/27:3/23:3",
+            "azerite_essences": "14:3/23:3/12:3/35:3",
             "class": "shaman",
-            "level": "120",
+            "level": "50",
             "position": "back",
             "race": "troll",
             "role": "attack",
             "spec": "enhancement",
-            "talents": "3202023"
+            "talents": "1101023"
         },
         "chest": {
             "azerite_powers": "420/416/21/14/13",
@@ -292,7 +292,7 @@
             "bonus_id": "4824/1517/6573",
             "id": "174159"
         },
-        "level": "120",
+        "level": "50",
         "main_hand": {
             "bonus_id": "4824/1517/6573",
             "enchant": "force_multiplier",
@@ -317,7 +317,7 @@
             "id": "174149"
         },
         "spec": "enhancement",
-        "talents": "3202023",
+        "talents": "1101023",
         "trinket1": {
             "bonus_id": "4800/1517",
             "id": "169311"
@@ -340,30 +340,30 @@
         "fight_style": "patchwerk",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "8790a08271",
+        "simc_hash": "c11ec5002f",
         "spec": "enhancement",
         "target_error": "0.1",
-        "tier": "25"
+        "tier": "PR"
     },
     "sorted_data_keys": [
-        "Dwarf",
         "Tauren",
-        "Troll",
-        "Pandaren",
+        "Dwarf",
         "Goblin",
-        "Highmountain Tauren",
+        "Troll",
         "Zandalari Troll Paku",
-        "Kul Tiran",
+        "Highmountain Tauren",
         "Zandalari Troll Bwonsamdi",
-        "Maghar Orc",
-        "Zandalari Troll Kimbul",
-        "Vulpera",
-        "Draenei",
+        "Kul Tiran",
         "Orc",
-        "Dark Iron Dwarf"
+        "Zandalari Troll Kimbul",
+        "Draenei",
+        "Dark Iron Dwarf",
+        "Vulpera",
+        "Maghar Orc",
+        "Pandaren"
     ],
     "spec_id": 263,
-    "subtitle": "UTC 2020-09-27 06:36 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/8790a08271\" target=\"blank\">8790a08</a>",
+    "subtitle": "UTC 2020-10-20 18:24 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c11ec5002f\" target=\"blank\">c11ec50</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -464,6 +464,6 @@
             }
         }
     },
-    "timestamp": "2020-09-27 06:36",
+    "timestamp": "2020-10-20 18:24",
     "title": "Races | Enhancement Shaman | Patchwerk"
 }
