@@ -1,31 +1,31 @@
 {
     "class_id": 1,
     "data": {
-        "Blood Elf": 137187,
-        "Dark Iron Dwarf": 136323,
-        "Draenei": 136464,
-        "Dwarf": 138272,
-        "Gnome": 137901,
-        "Goblin": 137270,
-        "Highmountain Tauren": 137536,
-        "Human": 138468,
-        "Kul Tiran": 137586,
-        "Lightforged Draenei": 137382,
-        "Maghar Orc": 136881,
-        "Mechagnome": 137294,
-        "Night Elf": 137392,
-        "Nightborne": 136314,
-        "Orc": 136392,
-        "Pandaren": 138507,
-        "Tauren": 138297,
-        "Troll": 136903,
-        "Undead": 136847,
-        "Void Elf": 137485,
-        "Vulpera": 135368,
-        "Worgen": 137565,
-        "Zandalari Troll Bwonsamdi": 136725,
-        "Zandalari Troll Kimbul": 136605,
-        "Zandalari Troll Paku": 137774
+        "Blood Elf": 5579,
+        "Dark Iron Dwarf": 5541,
+        "Draenei": 5567,
+        "Dwarf": 5594,
+        "Gnome": 5561,
+        "Goblin": 5549,
+        "Highmountain Tauren": 5582,
+        "Human": 5595,
+        "Kul Tiran": 5572,
+        "Lightforged Draenei": 5526,
+        "Maghar Orc": 5550,
+        "Mechagnome": 5583,
+        "Night Elf": 5573,
+        "Nightborne": 5516,
+        "Orc": 5556,
+        "Pandaren": 5523,
+        "Tauren": 5602,
+        "Troll": 5551,
+        "Undead": 5561,
+        "Void Elf": 5561,
+        "Vulpera": 5493,
+        "Worgen": 5586,
+        "Zandalari Troll Bwonsamdi": 5556,
+        "Zandalari Troll Kimbul": 5546,
+        "Zandalari Troll Paku": 5613
     },
     "data_type": "races",
     "languages": {
@@ -281,168 +281,204 @@
         }
     },
     "profile": {
-        "azerite_essences": "14:3/12:3/32:3/35:3",
+        "azerite_essences": "14:4/300573/23:3/300575/300576/35:4/300577/312927/32:3/312928",
         "back": {
-            "bonus_id": "6286",
+            "bonus_id": "6600/1472",
             "id": "169223"
         },
         "character": {
-            "azerite_essences": "14:3/12:3/32:3/35:3",
+            "azerite_essences": "14:4/300573/23:3/300575/300576/35:4/300577/312927/32:3/312928",
             "class": "warrior",
-            "level": "120",
+            "level": "50",
             "position": "back",
-            "race": "gnome",
+            "race": "human",
             "role": "attack",
             "spec": "fury",
-            "talents": "2133123"
+            "talents": "2123323"
         },
         "chest": {
-            "azerite_powers": "176/119/459/13",
-            "bonus_id": "4824/1517/4775",
-            "id": "174164"
+            "azerite_powers": "176/193/31/44/13",
+            "bonus_id": "5448/1543/4786/6510/4775",
+            "id": "159448"
         },
         "feet": {
-            "bonus_id": "4824/1517/6482",
-            "id": "174176"
+            "bonus_id": "4779/1512/4786",
+            "gem_id": "168641",
+            "id": "173455",
+            "ilevel": "125"
         },
         "finger1": {
-            "bonus_id": "1522/4778",
-            "enchant": "accord_of_haste",
-            "id": "169159"
+            "bonus_id": "4779/1512/4786",
+            "enchant": "pact_of_haste",
+            "gem_id": "168641",
+            "id": "169157",
+            "ilevel": "120"
         },
         "finger2": {
-            "bonus_id": "1522/4778",
-            "enchant": "accord_of_haste",
-            "id": "169158"
+            "bonus_id": "4779/1512/4786",
+            "enchant": "pact_of_haste",
+            "gem_id": "168641",
+            "id": "169159",
+            "ilevel": "120"
         },
         "hands": {
-            "bonus_id": "4824/1517/6482",
-            "id": "174178"
+            "bonus_id": "4779/1512/4786",
+            "gem_id": "168641",
+            "id": "175006",
+            "ilevel": "130"
         },
         "head": {
-            "azerite_powers": "437/176/21/13",
-            "bonus_id": "4824/1517/4775",
-            "id": "174167"
+            "azerite_powers": "176/582/459/15/13",
+            "bonus_id": "4824/1517/4786/6511/4775",
+            "id": "174163"
         },
         "items": {
             "back": {
-                "bonus_id": "6286",
+                "bonus_id": "6600/1472",
                 "id": "169223"
             },
             "chest": {
-                "azerite_powers": "176/119/459/13",
-                "bonus_id": "4824/1517/4775",
-                "id": "174164"
+                "azerite_powers": "176/193/31/44/13",
+                "bonus_id": "5448/1543/4786/6510/4775",
+                "id": "159448"
             },
             "feet": {
-                "bonus_id": "4824/1517/6482",
-                "id": "174176"
+                "bonus_id": "4779/1512/4786",
+                "gem_id": "168641",
+                "id": "173455",
+                "ilevel": "125"
             },
             "finger1": {
-                "bonus_id": "1522/4778",
-                "enchant": "accord_of_haste",
-                "id": "169159"
+                "bonus_id": "4779/1512/4786",
+                "enchant": "pact_of_haste",
+                "gem_id": "168641",
+                "id": "169157",
+                "ilevel": "120"
             },
             "finger2": {
-                "bonus_id": "1522/4778",
-                "enchant": "accord_of_haste",
-                "id": "169158"
+                "bonus_id": "4779/1512/4786",
+                "enchant": "pact_of_haste",
+                "gem_id": "168641",
+                "id": "169159",
+                "ilevel": "120"
             },
             "hands": {
-                "bonus_id": "4824/1517/6482",
-                "id": "174178"
+                "bonus_id": "4779/1512/4786",
+                "gem_id": "168641",
+                "id": "175006",
+                "ilevel": "130"
             },
             "head": {
-                "azerite_powers": "437/176/21/13",
-                "bonus_id": "4824/1517/4775",
-                "id": "174167"
+                "azerite_powers": "176/582/459/15/13",
+                "bonus_id": "4824/1517/4786/6511/4775",
+                "id": "174163"
             },
             "legs": {
-                "bonus_id": "4824/1517/6482",
-                "id": "174172"
+                "bonus_id": "4779/1512/4786",
+                "gem_id": "168641",
+                "id": "174175",
+                "ilevel": "130"
             },
             "main_hand": {
-                "bonus_id": "4824/1517",
-                "enchant": "masterful_navigation",
-                "id": "172187"
+                "bonus_id": "4779/1512/4786",
+                "enchant": "quick_navigation",
+                "gem_id": "168641",
+                "id": "172187",
+                "ilevel": "140"
             },
             "neck": {
-                "azerite_level": "80",
-                "bonus_id": "4929/5814/4936/1630",
+                "azerite_level": "90",
+                "bonus_id": "6316/4932/4933/1558",
                 "id": "158075"
             },
             "off_hand": {
-                "bonus_id": "1637",
-                "enchant": "deadly_navigation",
-                "id": "159644"
+                "bonus_id": "4779/1512/4786",
+                "enchant": "masterful_navigation",
+                "gem_id": "168639",
+                "id": "172187",
+                "ilevel": "140"
             },
             "shoulders": {
-                "azerite_powers": "176/196/30/13",
-                "bonus_id": "1647/4775",
-                "id": "159439"
+                "azerite_powers": "438/176/22/15/13",
+                "bonus_id": "4824/1517/4786/6512/4775",
+                "id": "174166"
             },
             "trinket1": {
-                "bonus_id": "4800/1517/4786",
+                "bonus_id": "4800/1500/4786",
                 "id": "169311"
             },
             "trinket2": {
-                "bonus_id": "4824/1517/6448",
+                "bonus_id": "4824/1517/4786/6514",
+                "gem_id": "168641",
                 "id": "174500"
             },
             "waist": {
-                "bonus_id": "4824/1517/6482",
-                "id": "174174"
+                "bonus_id": "4779/1512/4786",
+                "gem_id": "168641",
+                "id": "159426",
+                "ilevel": "130"
             },
             "wrists": {
-                "bonus_id": "4824/1517/6481",
-                "id": "174177"
+                "bonus_id": "4779/1512/4786",
+                "id": "173482",
+                "ilevel": "115"
             }
         },
         "legs": {
-            "bonus_id": "4824/1517/6482",
-            "id": "174172"
+            "bonus_id": "4779/1512/4786",
+            "gem_id": "168641",
+            "id": "174175",
+            "ilevel": "130"
         },
-        "level": "120",
+        "level": "50",
         "main_hand": {
-            "bonus_id": "4824/1517",
-            "enchant": "masterful_navigation",
-            "id": "172187"
+            "bonus_id": "4779/1512/4786",
+            "enchant": "quick_navigation",
+            "gem_id": "168641",
+            "id": "172187",
+            "ilevel": "140"
         },
         "neck": {
-            "azerite_level": "80",
-            "bonus_id": "4929/5814/4936/1630",
+            "azerite_level": "90",
+            "bonus_id": "6316/4932/4933/1558",
             "id": "158075"
         },
         "off_hand": {
-            "bonus_id": "1637",
-            "enchant": "deadly_navigation",
-            "id": "159644"
+            "bonus_id": "4779/1512/4786",
+            "enchant": "masterful_navigation",
+            "gem_id": "168639",
+            "id": "172187",
+            "ilevel": "140"
         },
         "position": "back",
-        "race": "gnome",
+        "race": "human",
         "role": "attack",
         "shoulders": {
-            "azerite_powers": "176/196/30/13",
-            "bonus_id": "1647/4775",
-            "id": "159439"
+            "azerite_powers": "438/176/22/15/13",
+            "bonus_id": "4824/1517/4786/6512/4775",
+            "id": "174166"
         },
         "spec": "fury",
-        "talents": "2133123",
+        "talents": "2123323",
         "trinket1": {
-            "bonus_id": "4800/1517/4786",
+            "bonus_id": "4800/1500/4786",
             "id": "169311"
         },
         "trinket2": {
-            "bonus_id": "4824/1517/6448",
+            "bonus_id": "4824/1517/4786/6514",
+            "gem_id": "168641",
             "id": "174500"
         },
         "waist": {
-            "bonus_id": "4824/1517/6482",
-            "id": "174174"
+            "bonus_id": "4779/1512/4786",
+            "gem_id": "168641",
+            "id": "159426",
+            "ilevel": "130"
         },
         "wrists": {
-            "bonus_id": "4824/1517/6481",
-            "id": "174177"
+            "bonus_id": "4779/1512/4786",
+            "id": "173482",
+            "ilevel": "115"
         }
     },
     "simc_settings": {
@@ -450,40 +486,40 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "8790a08271",
+        "simc_hash": "c11ec5002f",
         "spec": "fury",
         "target_error": "0.2",
-        "tier": "25"
+        "tier": "PR"
     },
     "sorted_data_keys": [
-        "Pandaren",
-        "Human",
-        "Tauren",
-        "Dwarf",
-        "Gnome",
         "Zandalari Troll Paku",
-        "Kul Tiran",
+        "Tauren",
+        "Human",
+        "Dwarf",
         "Worgen",
-        "Highmountain Tauren",
-        "Void Elf",
-        "Night Elf",
-        "Lightforged Draenei",
         "Mechagnome",
-        "Goblin",
+        "Highmountain Tauren",
         "Blood Elf",
+        "Night Elf",
+        "Kul Tiran",
+        "Draenei",
+        "Gnome",
+        "Void Elf",
+        "Undead",
+        "Orc",
+        "Zandalari Troll Bwonsamdi",
         "Troll",
         "Maghar Orc",
-        "Undead",
-        "Zandalari Troll Bwonsamdi",
+        "Goblin",
         "Zandalari Troll Kimbul",
-        "Draenei",
-        "Orc",
         "Dark Iron Dwarf",
+        "Lightforged Draenei",
+        "Pandaren",
         "Nightborne",
         "Vulpera"
     ],
     "spec_id": 72,
-    "subtitle": "UTC 2020-09-27 06:53 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/8790a08271\" target=\"blank\">8790a08</a>",
+    "subtitle": "UTC 2020-10-20 18:15 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/c11ec5002f\" target=\"blank\">c11ec50</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -584,6 +620,6 @@
             }
         }
     },
-    "timestamp": "2020-09-27 06:53",
+    "timestamp": "2020-10-20 18:15",
     "title": "Races | Fury Warrior | Hecticaddcleave"
 }
