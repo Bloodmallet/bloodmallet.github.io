@@ -1,15 +1,15 @@
 {
     "class_id": 11,
     "data": {
-        "Highmountain Tauren": 86847,
-        "Kul Tiran": 86788,
-        "Night Elf": 87411,
-        "Tauren": 87391,
-        "Troll": 86579,
-        "Worgen": 86670,
-        "Zandalari Troll Bwonsamdi": 86547,
-        "Zandalari Troll Kimbul": 86461,
-        "Zandalari Troll Paku": 86740
+        "Highmountain Tauren": 3234,
+        "Kul Tiran": 3232,
+        "Night Elf": 3300,
+        "Tauren": 3250,
+        "Troll": 3255,
+        "Worgen": 3250,
+        "Zandalari Troll Bwonsamdi": 3247,
+        "Zandalari Troll Kimbul": 3245,
+        "Zandalari Troll Paku": 3249
     },
     "data_type": "races",
     "languages": {
@@ -105,157 +105,171 @@
         }
     },
     "profile": {
-        "azerite_essences": "32:3/4:3/27:3/35:3/300573/300575/300576/300577",
+        "azerite_essences": "23:3/300573/35:3/300575/300576/32:3/300577/312927/27:3/312928",
         "back": {
-            "bonus_id": "6286",
+            "bonus_id": "6603/1472",
             "id": "169223"
         },
         "character": {
-            "azerite_essences": "32:3/4:3/27:3/35:3/300573/300575/300576/300577",
+            "azerite_essences": "23:3/300573/35:3/300575/300576/32:3/300577/312927/27:3/312928",
             "class": "druid",
-            "level": "120",
+            "level": "50",
             "position": "back",
-            "race": "night_elf",
+            "race": "highmountain_tauren",
             "role": "attack",
             "spec": "feral",
-            "talents": "2331122"
+            "talents": "2313123"
         },
         "chest": {
-            "azerite_powers": "209/582/30/15/13",
-            "bonus_id": "4824/1517/4775",
-            "id": "174131"
+            "azerite_powers": "209/359/459/14/13",
+            "bonus_id": "5448/1543/4786/6510/4775",
+            "id": "159298"
         },
         "feet": {
-            "bonus_id": "4824/1517/6573",
-            "id": "174144"
+            "bonus_id": "4824/1808/6513/1517/4786/6516",
+            "gem_id": "168641",
+            "id": "174141"
         },
         "finger1": {
-            "bonus_id": "1532/4779/6573",
-            "enchant": "accord_of_versatility",
-            "id": "169158"
+            "bonus_id": "6536/4802/6578/6515/1543/4786/6516",
+            "enchant": "pact_of_haste",
+            "gem_id": "168641",
+            "id": "159460"
         },
         "finger2": {
-            "bonus_id": "1532/4779",
-            "enchant": "accord_of_versatility",
-            "id": "169159"
+            "bonus_id": "6536/4802/6578/6579/6438/6462/6513/1543/4786",
+            "enchant": "pact_of_haste",
+            "gem_id": "168641",
+            "id": "159462"
         },
         "hands": {
-            "bonus_id": "1532/4779/6573",
-            "id": "168985"
+            "bonus_id": "6536/4802/6578/6513/1543/4786/6516",
+            "gem_id": "168637",
+            "id": "155889"
         },
         "head": {
-            "azerite_powers": "209/582/20/467/13",
-            "bonus_id": "4824/1517/4775",
+            "azerite_powers": "209/582/22/83/13",
+            "bonus_id": "4824/1517/4786/6511/4775",
             "id": "174132"
         },
         "items": {
             "back": {
-                "bonus_id": "6286",
+                "bonus_id": "6603/1472",
                 "id": "169223"
             },
             "chest": {
-                "azerite_powers": "209/582/30/15/13",
-                "bonus_id": "4824/1517/4775",
-                "id": "174131"
+                "azerite_powers": "209/359/459/14/13",
+                "bonus_id": "5448/1543/4786/6510/4775",
+                "id": "159298"
             },
             "feet": {
-                "bonus_id": "4824/1517/6573",
-                "id": "174144"
+                "bonus_id": "4824/1808/6513/1517/4786/6516",
+                "gem_id": "168641",
+                "id": "174141"
             },
             "finger1": {
-                "bonus_id": "1532/4779/6573",
-                "enchant": "accord_of_versatility",
-                "id": "169158"
+                "bonus_id": "6536/4802/6578/6515/1543/4786/6516",
+                "enchant": "pact_of_haste",
+                "gem_id": "168641",
+                "id": "159460"
             },
             "finger2": {
-                "bonus_id": "1532/4779",
-                "enchant": "accord_of_versatility",
-                "id": "169159"
+                "bonus_id": "6536/4802/6578/6579/6438/6462/6513/1543/4786",
+                "enchant": "pact_of_haste",
+                "gem_id": "168641",
+                "id": "159462"
             },
             "hands": {
-                "bonus_id": "1532/4779/6573",
-                "id": "168985"
+                "bonus_id": "6536/4802/6578/6513/1543/4786/6516",
+                "gem_id": "168637",
+                "id": "155889"
             },
             "head": {
-                "azerite_powers": "209/582/20/467/13",
-                "bonus_id": "4824/1517/4775",
+                "azerite_powers": "209/582/22/83/13",
+                "bonus_id": "4824/1517/4786/6511/4775",
                 "id": "174132"
             },
             "legs": {
-                "bonus_id": "1532/4779/6573",
-                "id": "169070"
+                "bonus_id": "4824/1808/6515/1517/4786/6516",
+                "gem_id": "153708",
+                "id": "174139"
             },
             "main_hand": {
-                "bonus_id": "4824/1517",
-                "enchant": "versatile_navigation",
+                "bonus_id": "4824/6567/6578/6579/1517/4786/6514",
+                "enchant": "quick_navigation",
+                "gem_id": "168641",
                 "id": "172191"
             },
             "neck": {
-                "azerite_level": "80",
-                "bonus_id": "4929/5814/4936/1630",
+                "azerite_level": "92",
+                "bonus_id": "6316/4932/4933/1560",
                 "id": "158075"
             },
             "shoulders": {
-                "azerite_powers": "209/582/31/14/13",
-                "bonus_id": "4824/1517/4775",
-                "id": "174135"
+                "azerite_powers": "111/209/22/44/13",
+                "bonus_id": "5448/1543/4786/6512/4775",
+                "id": "159299"
             },
             "trinket1": {
-                "bonus_id": "1647/4779",
-                "id": "159623"
+                "bonus_id": "6536/6515/1533/4786",
+                "id": "159614"
             },
             "trinket2": {
-                "bonus_id": "4800/1517",
-                "id": "169311"
+                "bonus_id": "6883",
+                "id": "169328"
             },
             "waist": {
-                "bonus_id": "1532/4779/6573",
-                "id": "168957"
+                "bonus_id": "6412/4802/6515/6578/1514/4786/6516",
+                "gem_id": "168639",
+                "id": "173816"
             },
             "wrists": {
-                "bonus_id": "4824/1517/6573",
+                "bonus_id": "4824/6516/6515/1517/4786",
                 "id": "174138"
             }
         },
         "legs": {
-            "bonus_id": "1532/4779/6573",
-            "id": "169070"
+            "bonus_id": "4824/1808/6515/1517/4786/6516",
+            "gem_id": "153708",
+            "id": "174139"
         },
-        "level": "120",
+        "level": "50",
         "main_hand": {
-            "bonus_id": "4824/1517",
-            "enchant": "versatile_navigation",
+            "bonus_id": "4824/6567/6578/6579/1517/4786/6514",
+            "enchant": "quick_navigation",
+            "gem_id": "168641",
             "id": "172191"
         },
         "neck": {
-            "azerite_level": "80",
-            "bonus_id": "4929/5814/4936/1630",
+            "azerite_level": "92",
+            "bonus_id": "6316/4932/4933/1560",
             "id": "158075"
         },
         "position": "back",
-        "race": "night_elf",
+        "race": "highmountain_tauren",
         "role": "attack",
         "shoulders": {
-            "azerite_powers": "209/582/31/14/13",
-            "bonus_id": "4824/1517/4775",
-            "id": "174135"
+            "azerite_powers": "111/209/22/44/13",
+            "bonus_id": "5448/1543/4786/6512/4775",
+            "id": "159299"
         },
         "spec": "feral",
-        "talents": "2331122",
+        "talents": "2313123",
         "trinket1": {
-            "bonus_id": "1647/4779",
-            "id": "159623"
+            "bonus_id": "6536/6515/1533/4786",
+            "id": "159614"
         },
         "trinket2": {
-            "bonus_id": "4800/1517",
-            "id": "169311"
+            "bonus_id": "6883",
+            "id": "169328"
         },
         "waist": {
-            "bonus_id": "1532/4779/6573",
-            "id": "168957"
+            "bonus_id": "6412/4802/6515/6578/1514/4786/6516",
+            "gem_id": "168639",
+            "id": "173816"
         },
         "wrists": {
-            "bonus_id": "4824/1517/6573",
+            "bonus_id": "4824/6516/6515/1517/4786",
             "id": "174138"
         }
     },
@@ -264,24 +278,24 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "8790a08271",
+        "simc_hash": "3434656499",
         "spec": "feral",
         "target_error": "0.2",
-        "tier": "25"
+        "tier": "PR"
     },
     "sorted_data_keys": [
         "Night Elf",
-        "Tauren",
-        "Highmountain Tauren",
-        "Kul Tiran",
-        "Zandalari Troll Paku",
-        "Worgen",
         "Troll",
+        "Worgen",
+        "Tauren",
+        "Zandalari Troll Paku",
         "Zandalari Troll Bwonsamdi",
-        "Zandalari Troll Kimbul"
+        "Zandalari Troll Kimbul",
+        "Highmountain Tauren",
+        "Kul Tiran"
     ],
     "spec_id": 103,
-    "subtitle": "UTC 2020-09-27 06:45 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/8790a08271\" target=\"blank\">8790a08</a>",
+    "subtitle": "UTC 2020-10-24 06:27 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/3434656499\" target=\"blank\">3434656</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -382,6 +396,6 @@
             }
         }
     },
-    "timestamp": "2020-09-27 06:45",
+    "timestamp": "2020-10-24 06:27",
     "title": "Races | Feral Druid | Hecticaddcleave"
 }
