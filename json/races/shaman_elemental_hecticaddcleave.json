@@ -1,21 +1,21 @@
 {
     "class_id": 7,
     "data": {
-        "Dark Iron Dwarf": 3375,
-        "Draenei": 3394,
-        "Dwarf": 3398,
-        "Goblin": 3399,
-        "Highmountain Tauren": 3385,
+        "Dark Iron Dwarf": 3368,
+        "Draenei": 3395,
+        "Dwarf": 3397,
+        "Goblin": 3396,
+        "Highmountain Tauren": 3382,
         "Kul Tiran": 3383,
-        "Maghar Orc": 3364,
-        "Orc": 3380,
+        "Maghar Orc": 3367,
+        "Orc": 3383,
         "Pandaren": 3356,
-        "Tauren": 3386,
-        "Troll": 3346,
-        "Vulpera": 3369,
-        "Zandalari Troll Bwonsamdi": 3366,
-        "Zandalari Troll Kimbul": 3364,
-        "Zandalari Troll Paku": 3375
+        "Tauren": 3392,
+        "Troll": 3349,
+        "Vulpera": 3368,
+        "Zandalari Troll Bwonsamdi": 3369,
+        "Zandalari Troll Kimbul": 3361,
+        "Zandalari Troll Paku": 3372
     },
     "data_type": "races",
     "languages": {
@@ -350,30 +350,30 @@
         "fight_style": "hecticaddcleave",
         "iterations": "20000",
         "ptr": "0",
-        "simc_hash": "a73a816297",
+        "simc_hash": "1d19610dcd",
         "spec": "elemental",
         "target_error": "0.2",
         "tier": "PR"
     },
     "sorted_data_keys": [
-        "Goblin",
         "Dwarf",
+        "Goblin",
         "Draenei",
         "Tauren",
-        "Highmountain Tauren",
         "Kul Tiran",
         "Orc",
-        "Dark Iron Dwarf",
+        "Highmountain Tauren",
         "Zandalari Troll Paku",
-        "Vulpera",
         "Zandalari Troll Bwonsamdi",
+        "Dark Iron Dwarf",
+        "Vulpera",
         "Maghar Orc",
         "Zandalari Troll Kimbul",
         "Pandaren",
         "Troll"
     ],
     "spec_id": 262,
-    "subtitle": "UTC 2020-10-26 07:27 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/a73a816297\" target=\"blank\">a73a816</a>",
+    "subtitle": "UTC 2020-10-27 07:28 | SimC build: <a href=\"https://github.com/simulationcraft/simc/commit/1d19610dcd\" target=\"blank\">1d19610</a>",
     "talent_data": {
         "1": {
             "1": {
@@ -474,6 +474,6 @@
             }
         }
     },
-    "timestamp": "2020-10-26 07:27",
+    "timestamp": "2020-10-27 07:28",
     "title": "Races | Elemental Shaman | Hecticaddcleave"
 }
